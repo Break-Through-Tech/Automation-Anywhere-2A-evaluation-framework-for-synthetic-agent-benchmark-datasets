@@ -23,16 +23,16 @@
 
 | Check | Status | Notes |
 |-------|--------|-------|
-| Python Compatibility | GREEN | The tech stack is centered on Python, in line with ML foundations. |
-| Data Readiness | YELLOW | The data readiness is questionable as the size of the dataset is unknown; students may face challenges if it exceeds accessible thresholds. |
-| Resource Check | GREEN | No specialized hardware or proprietary software constraints specified, indicating accessibility for students. |
+| Python Compatibility | 🟢 | The tech stack is centered on Python, in line with ML foundations. |
+| Data Readiness | 🟡 | Data readiness is questionable, as the dataset size is unknown; students may face challenges if it exceeds accessible thresholds. |
+| Resource Check | 🟢 | No specialized hardware or proprietary software constraints are specified, indicating accessibility for students. |
 
 **Student Fit Score:** 7/10  
 **Technical Depth Score:** 6/10  
 **Overall Recommendation:** REVISE
 
 **Advisor Feedback Draft:**
-The project has solid potential for real-world relevance and applicability. However, I recommend clarifying data size to ensure adequate preparation time for the students. Additionally, providing a clearer breakdown of success metrics would aid in maintaining the focus throughout the project timeline. Finally, ensure that the context and requirements for LLM usage are covered in preliminary sessions to prevent knowledge gaps. This will strengthen the learning experience significantly.
+The project has solid potential for real-world relevance and applicability. However, I recommend clarifying the data size to ensure adequate preparation time for the students. Additionally, providing a clearer breakdown of success metrics would help maintain focus throughout the project timeline. Finally, ensure that the context and requirements for LLM usage are covered in preliminary sessions to prevent knowledge gaps. This will significantly strengthen the learning experience.
 
 ---
 
