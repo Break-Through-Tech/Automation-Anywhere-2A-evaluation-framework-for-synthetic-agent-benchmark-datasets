@@ -39,7 +39,7 @@ The project has solid potential for real-world relevance and applicability. Howe
 # Project Proposal 1: Evaluation Framework for Agent Benchmark Datasets
 
 **Company / Org:** Automation Anywhere  
-**Challenge Advisor:** Sandra Wang, sandra.wang@automationanywhere.com  
+**Challenge Advisor:** Sandra Wang  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
