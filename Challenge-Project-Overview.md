@@ -98,10 +98,11 @@ A lower-quality synthetic benchmark provided for comparison and validation.
 - **Location:** `/data` folder in this repository
 - **Purpose:** Serves as a comparison baseline to demonstrate the framework's ability to identify and quantify quality gaps
 - **Domains and Coverage:**
-  - **Banking:** Customer onboarding (6 cases), fraud monitoring (13 cases)
-  - **Healthcare:** Patient onboarding (9 cases), prior authorization (9 cases), claims intake (10 cases)
-  - **Insurance:** Policy endorsements (21 cases), document processing (8 cases)
-  - **Total:** 76 test cases across 8 task categories
+  - **Banking:** customer onboarding (6 cases), fraud monitoring (13 cases), account_deposit (8 cases)
+  - **Healthcare:** Patient onboarding (9 cases), prior authorization (9 cases)
+  - **Insurance:** claims intake (10 cases)
+  - **Manufacturing:** purchase to pay (9 cases),
+  - **Total:** 64 test cases across 7 task categories
 
 ### Dataset Strategy
 
