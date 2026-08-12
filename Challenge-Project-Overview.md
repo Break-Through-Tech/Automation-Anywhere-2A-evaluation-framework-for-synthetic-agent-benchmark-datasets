@@ -21,7 +21,7 @@ The project has solid potential for real-world relevance and applicability. Howe
 # Project Proposal 1: Evaluation Framework for Synthetic Agent Benchmark Datasets
 
 **Company / Org:** Automation Anywhere  
-**Challenge Advisor:** Sandra Wang, sandra.wang@automationanywhere.com  
+**Challenge Advisor:** Sandra Wang  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
@@ -243,9 +243,10 @@ This context will be covered in preliminary sessions so the team can execute LLM
 
 ## �🤝 How We'll Work Together
 
-**Check-ins:** Biweekly 60-minute AI Studio Lab Section meetings (2nd and 4th week of every month)  
-**Communication:** Break Through Tech Slack and email  
+**Check-ins:** Biweekly 45-minute AI Studio Lab Section meetings (2nd and 4th week of every month)  
+**Communication:** Break Through Tech Discord and email
 - Email: sandra.wang@automationanywhere.com
+
 **Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
@@ -269,6 +270,6 @@ This context will be covered in preliminary sessions so the team can execute LLM
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session C).
 
 ---
