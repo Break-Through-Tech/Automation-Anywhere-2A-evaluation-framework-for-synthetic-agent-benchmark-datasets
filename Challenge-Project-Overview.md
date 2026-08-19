@@ -1,24 +1,4 @@
-
-
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff only — remove before sharing with students)*
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | 🟢 | The tech stack is centered on Python, in line with ML foundations. |
-| Data Readiness | 🟡 | Data readiness is questionable, as the dataset size is unknown; students may face challenges if it exceeds accessible thresholds. |
-| Resource Check | 🟢 | No specialized hardware or proprietary software constraints are specified, indicating accessibility for students. |
-
-**Student Fit Score:** 7/10  
-**Technical Depth Score:** 6/10  
-**Overall Recommendation:** REVISE
-
-**Advisor Feedback Draft:**
-The project has solid potential for real-world relevance and applicability. However, I recommend clarifying the data size to ensure adequate preparation time for the students. Additionally, providing a clearer breakdown of success metrics would help maintain focus throughout the project timeline. Finally, ensure that the context and requirements for LLM usage are covered in preliminary sessions to prevent knowledge gaps. This will significantly strengthen the learning experience.
-
----
-
-# Project Proposal 1: Evaluation Framework for Synthetic Agent Benchmark Datasets
+# Evaluation Framework for Synthetic Agent Benchmark Datasets
 
 **Company / Org:** Automation Anywhere  
 **Challenge Advisor:** Sandra Wang  
@@ -189,7 +169,7 @@ Documented iteration cycle with before/after metric comparisons and lessons on d
 
 ---
 
-## � Deliverables Summary
+## 📝 Deliverables Summary
 
 | Deliverable | Due | Contents |
 |---|---|---|
@@ -201,7 +181,7 @@ Documented iteration cycle with before/after metric comparisons and lessons on d
 
 ---
 
-## ��📚 Resources to Get Started
+## 📚 Resources to Get Started
 
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
@@ -217,7 +197,7 @@ The following resources will help your team understand the problem space and pot
 
 ---
 
-## � LLM and Baseline Agent Expectations
+## 🔗 LLM and Baseline Agent Expectations
 
 The project includes a baseline agent run to validate the **Difficulty** metric.
 
@@ -242,7 +222,7 @@ This context will be covered in preliminary sessions so the team can execute LLM
 
 ---
 
-## �🤝 How We'll Work Together
+## 🤝 How We'll Work Together
 
 **Check-ins:** Biweekly 45-minute AI Studio Lab Section meetings (2nd and 4th week of every month)  
 **Communication:** Break Through Tech Discord and email
