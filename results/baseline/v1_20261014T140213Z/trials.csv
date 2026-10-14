@@ -1,0 +1,2 @@
+domain,task_id,trial,seed,reward,passed,termination_reason,duration_s,agent_cost,user_cost
+airline,0,0,670487,1.0,1,user_stop,12.29981358407531,0.022206,0.0092
