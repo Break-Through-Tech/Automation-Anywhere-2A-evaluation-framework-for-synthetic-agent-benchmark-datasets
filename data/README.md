@@ -70,6 +70,42 @@ The following agent test cases are available in this directory:
 - `insurance_claims_intake`
 - `manufacturing_purchase_to_pay`
 
+## Dataset Loaders (`loaders.py`)
+
+Loads τ²-bench and the synthetic dataset into one format so the same metric code runs on both.
+No API key needed.
+
+```bash
+# one-time, from the repo root (same path baseline/ uses)
+git clone https://github.com/sierra-research/tau2-bench.git
+
+python data/loaders.py        # writes data/processed/tasks.jsonl (342 tasks)
+```
+
+```python
+from loaders import load_tasks   # with data/ on sys.path
+tasks = load_tasks()                         # both datasets
+tasks = load_tasks(datasets=["synthetic"])   # one dataset
+```
+
+Each task:
+
+| Field | Description |
+|-------|-------------|
+| `dataset` | `tau2` or `synthetic` |
+| `domain` | e.g. `retail`, `airline`, `telecom`, `banking_fraud_monitoring` |
+| `task_id` | τ²: task id · synthetic: `test_case_id` from `test_cases.py` |
+| `description` | τ²: user's `reason_for_call` · synthetic: class docstring (title + rationale) |
+| `actions` | ground-truth tool calls in order: `{name, arguments, requestor}` (`requestor` is `user` only in telecom) |
+| `meta` | τ²: `reward_basis` · synthetic: `workflow`, `title`, `difficulty_label` (easy/medium/hard) |
+
+Notes:
+- τ² uses the `base` split (retail 114, airline 50, telecom 114), the default for `tau2 run`.
+- Synthetic `SUCCESS` / `FAILED` / `CANCELLED` are status signals, not tools, so they are dropped.
+  `HUMAN_IN_THE_LOOP` is kept (it matches τ²'s `transfer_to_human_agents`).
+- Some τ² tasks have `actions == []` (the correct behavior is to refuse or take no action).
+- Synthetic tasks come from `test_cases.py`, not `test_cases.json`: the JSON has no expected tool calls and its ids differ.
+
 ## Script Output
 
 The script will display:

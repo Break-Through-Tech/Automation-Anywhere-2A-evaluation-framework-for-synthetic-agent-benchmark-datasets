@@ -14,3 +14,5 @@ langsmith>=0.1.0
 
 # Additional utilities
 PyYAML>=6.0.0
+numpy
+sentence-transformers

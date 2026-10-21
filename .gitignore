@@ -5,3 +5,4 @@
 *.pyc
 
 /data/__pycache__
+tau2-bench/
