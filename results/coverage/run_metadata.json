@@ -1,0 +1,21 @@
+{
+  "dataset": "tau2",
+  "split": "base",
+  "model": "all-MiniLM-L6-v2",
+  "task_file": "data/processed/tasks.jsonl",
+  "task_file_sha256": "da86fa5e65ca10599e98f9e70ebc5cf75db0b8db80c9022b8368d15ab319b7f1",
+  "task_count": 278,
+  "domains": {
+    "retail": 114,
+    "airline": 50,
+    "telecom": 114
+  },
+  "matched_samples_per_domain": 5,
+  "seed": 42,
+  "packages": {
+    "numpy": "2.5.4",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.14.1",
+    "transformers": "5.20.2"
+  }
+}
