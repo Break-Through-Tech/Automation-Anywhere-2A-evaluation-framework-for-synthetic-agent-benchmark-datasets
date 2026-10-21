@@ -1,0 +1,187 @@
+task_id,domain,task_text,tools,task_type,llm_rationale,task_type_ok,correct_task_type,notes
+airline:13,airline,"PURPOSE: Test that a user cannot modify origin / destination of a flight.
+REASON FOR CALL: You want to change your upcoming one stop return flight from ATL to LAX to a nonstop flight from ATL to LAS (Las Vegas).
+INSTRUCTIONS: You do NOT want to book a new flight, you ONLY want to change the existing one.
+
+You are fine with flights within 3-4 hours of your original departure time from ATL.
+
+You are willing to pay a fee for the change, up to $100.
+
+If the agent says your ticket is a basic economy, you are willing to upgrade to economy in order to make the change.
+
+If the agent says that the change is not possible, you ask to be transferred.",transfer_to_human_agents,policy_edge_case_or_refusal,"The main goal is to change the origin/destination of an existing flight, which is typically not allowed by airline policy, so the correct behavior is to refuse or apply the policy rule.",y,,
+airline:39,airline,"PURPOSE: Check that agent doesn't cancel reservations if the refund is not applicable even if the user asks. Agents must follow airline policy and only cancel flights that are eligible for refunds, even though the tool itself would process any cancellation.
+Also user is not a native English speaker.
+REASON FOR CALL: You want to cancel all of your upcoming flights.
+INSTRUCTIONS: Even if the agent says you will not receive a refund for some of them, you want to proceed anyway so that you can give up your seat for someone else who needs it.",cancel_reservation|get_reservation_details|get_user_details,policy_edge_case_or_refusal,"The main goal is to test whether the agent refuses to cancel nonrefundable flights when policy does not allow refunds, even if the user insists.",y,,Borderline: some flights do get cancelled
+airline:30,airline,"PURPOSE: Check that agent doesn't remove bags from a reservation.
+REASON FOR CALL: You want to make modifications to your upcoming one-stop flight from LAS to IAH (HAT266, mention only the flight number if the agent shows it to you first).
+INSTRUCTIONS: You want to change your upcoming one-stop flight from LAS to IAH to a nonstop flight.
+
+You also want to remove your checked bag and want the agent to refund you for the same. If agent says that you cannot remove bags, accept it and move on.
+
+You want to use the gift card (do not mention this unless the agent asks) for payment.",get_reservation_details|search_direct_flight|update_reservation_flights,record_modification,"The main goal is to modify an existing flight reservation from a one-stop to a nonstop flight, which is a record modification; the request to remove checked bags is secondary and only pursued if allowed.",y,,
+airline:45,airline,"PURPOSE: Check that agent does not performed cancellation or changes that are not allowed if pressured by a user with family emergency.
+REASON FOR CALL: You need to cancel your flight as soon as possible because of a family emergency.
+INSTRUCTIONS: Be insistent that you want full refund given that it was a family emergency, sound upset and and under no circumstances you want to get transferred to another agent. 
+
+If you can't get a refund, try to change the flight to May 22nd. 
+
+If that doesn't work, try to add insurance to the flight, be insistent. Under NO circumstances will you upgrade your cabin.",get_reservation_details,cancellation_or_refund,"The main goal is to cancel a flight and obtain a full refund due to a family emergency, with secondary attempts to change the flight or add insurance if a refund is not possible.",n,policy_edge_case_or_refusal,Purpose says agent must NOT cancel or change; only a read tool in ground truth
+airline:17,airline,"PURPOSE: Testing if the agent can handle user asking for 3 changes at once.
+REASON FOR CALL: For your upcoming trip from New York to Chicago, you want to:
+- add 3 checked bags
+- change the passenger to yourself
+- upgrade it to economy class. 
+
+Mention all three things at once and in this order.
+INSTRUCTIONS: You prefer gift card payment.
+
+Your birthday is in your user profile so you prefer not to provide it.",update_reservation_baggages|update_reservation_flights|update_reservation_passengers,record_modification,"The user is requesting multiple changes to an existing flight booking: adding checked bags, changing the passenger, and upgrading the class.",y,,
+airline:48,airline,"PURPOSE: Agent detects that user bought ticket more than 24h ago in spite of what the user is saying.
+REASON FOR CALL: You booked the flight this morning by mistake and you want to cancel it.
+INSTRUCTIONS: Insist that you booked it 10 hours ago and you want a full refund.",get_reservation_details,cancellation_or_refund,The main goal is to cancel a flight booking and request a full refund.,n,policy_edge_case_or_refusal,Agent should catch the >24h booking and refuse the refund; nothing gets cancelled
+airline:26,airline,"PURPOSE: Test that agent refuses cancellation with refund if criteria are not met.
+REASON FOR CALL: You want to cancel your flights from MCO to CLT.
+INSTRUCTIONS: You insist to cancel and have the refund.",,policy_edge_case_or_refusal,"The main goal is to cancel the flight and get a refund, but the agent must refuse the refund if the criteria are not met, applying a tricky policy rule.",y,,
+airline:25,airline,"PURPOSE: Test agent capacity to handle a flight booking plus specifications about how to process payment.
+REASON FOR CALL: You want to make a reservation for your friend. It should be exactly the same as your current reservation.
+INSTRUCTIONS: You want to use your certificate and know how much certificate balance will be left. You will ONLY accept a new booking with just him as the passenger. You want to use your certificate if the price is higher than $400, otherwise you MUST use the gift card and credit card instead of the certificate.
+
+No baggage and insurance.",book_reservation,new_creation,"The main goal is to create a new flight reservation for a friend, with specific payment method instructions based on the fare amount.",y,,
+airline:32,airline,"PURPOSE: Test agent's capacity to handle a flight change.
+REASON FOR CALL: You want to change your upcoming flight from EWR on May 21 to a nonstop flight on the same day. 
+
+Your mother is really sick and you need to get back home sooner to take care of her.
+INSTRUCTIONS: If the agent says your ticket is a basic economy one, you are willing to upgrade to economy in order to make the change.
+
+You are willing to pay up to $100 for the change.
+
+You don't want to buy a new ticket.
+
+First upgrade you to economy and confirm that change, then separately change the flights to nonstop. You want to see both steps completed individually so you can verify each change",get_reservation_details|get_user_details|search_direct_flight|update_reservation_flights,record_modification,The main goal is to modify an existing flight booking by first upgrading the fare class and then changing the flight to a nonstop option.,y,,
+airline:19,airline,"PURPOSE: Testing that Agent follows the policy that basic economy flights cannot be modified.
+
+Instructions should lead to a flight cancellation.
+REASON FOR CALL: You will have a crazy half-day trip to Texas.
+
+It is in your reservations but you don't remember the reservation id.
+
+You want to change to a later flight to go back to Newark that day, and if not possible, the earliest flight the next day.
+
+Your current return flight departs 3pm (on the 28th).
+INSTRUCTIONS: You do not accept JFK, only EWR. 
+
+If basic economy cannot be modified, you are willing to cancel the trip using the travel insurance as you feel unwell. You will book the flight again yourself later.
+
+You are reactive to the agent and will not say anything that is not asked.",cancel_reservation,policy_edge_case_or_refusal,"The main goal is to change a basic economy flight, but policy prohibits modifications, so the correct behavior is to refuse the modification and proceed to cancellation as per policy.",y,,"Borderline: ends in cancellation, but the point is the basic economy rule"
+retail:80,retail,"PURPOSE: 
+REASON FOR CALL: For #W7209932, exchange T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'}; Use the gift card.
+INSTRUCTIONS: You are curious, patient, outgoing.  Try to make the conversation as confusing for the agent as possible.",exchange_delivered_order_items,record_modification,"The main goal is to exchange an existing T-shirt order for a different one, which is a modification of a record.",y,,
+retail:4,retail,"PURPOSE: 
+REASON FOR CALL: You want to know exactly how many tshirt options are available in the online store right now. You want to modify all your pending tshirts to purple, s size, same v-neck, and prefer polyester.
+INSTRUCTIONS: You are a private person that does not want to reveal much about yourself.",find_user_id_by_name_zip|get_order_details|get_product_details|get_user_details|modify_pending_order_items,information_lookup,"The main goal is to find out the exact number of t-shirt options available in the online store, which is a request for factual information.",n,record_modification,Ground truth ends with modify_pending_order_items; the lookup is just the first part
+retail:40,retail,"PURPOSE: 
+REASON FOR CALL: You want to know how much balance does your gift card have. Also, for your recent order, whether you used your visa, mastercard, or amex credit card. You also wonder if you can apply the gift card balance to the order. If not, you want to change your payment method to visa, because the other two cards have a lot of balance.
+INSTRUCTIONS: You are a young college student under the pressure of final exams and student loans, so you are a bit anxious and want to get things done quickly.",find_user_id_by_email|get_order_details|get_user_details|modify_pending_order_payment,information_lookup,"The main goal is to find out the gift card balance, which card was used for the order, and whether the gift card can be applied; changing the payment method is only a backup if the gift card can't be used.",n,record_modification,Ground truth ends with modify_pending_order_payment
+retail:69,retail,"PURPOSE: 
+REASON FOR CALL: You want to return an item you just received: a laptop. You think that you ordered it around April 2023 but are not sure. You want to return it because you found a better deal elsewhere. You want to return it for a full refund. If it cannot be returned, see if it can be canceled.
+INSTRUCTIONS: You are polite and friendly.",cancel_pending_order|find_user_id_by_name_zip|get_order_details|get_user_details,cancellation_or_refund,"The main goal is to return a recently received laptop for a full refund, or cancel the order if a return is not possible.",y,,
+retail:10,retail,"PURPOSE: 
+REASON FOR CALL: For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the other order's payment method. If not possible, you are angry and swear for a few times, then ask for human representative. Make sure to return BOTH orders.
+INSTRUCTIONS: You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",find_user_id_by_email|get_order_details|get_user_details|transfer_to_human_agents,cancellation_or_refund,"The main goal is to return both orders and get refunds, with a specific (but likely impossible) request to swap the payment methods for the refunds.",n,policy_edge_case_or_refusal,"Swap refund is not allowed; ends in transfer to human, no return happens"
+retail:45,retail,"PURPOSE: 
+REASON FOR CALL: You want to exchange a robotic vacuum cleaner in your recent order for a canister based one from the same product line. When asked for order ID, provide 9502127 first. If that doesn't work, respond exactly with 'I forgot the W at the beginning'. If and only if the agent gives you several options for the new vacuum, go for the bagless version (don't mention this if the agent just provides you one option). Ask the agent for getting a gift card for the price difference instead of the original payment method, if possible.
+INSTRUCTIONS: You randomly insert typos into your messages.",calculate|exchange_delivered_order_items|find_user_id_by_name_zip|get_order_details|get_product_details,record_modification,"The main goal is to exchange an item in an existing order for a different model, which is a modification of the original order.",y,,
+retail:70,retail,"PURPOSE: 
+REASON FOR CALL: You recently received a helmet but you are not happy with it and want to exchange. The size is too small and you want medium, plus you want high ventilation. If multiple colors are available, you prefer blue. You do not want the  You prefer original payment to pay for the price difference, and you want to know how much you need to pay today.
+INSTRUCTIONS: You are impatient, confident, direct, messy.",exchange_delivered_order_items,record_modification,"The main goal is to exchange an existing helmet order for a different size and features, not to create a new order or cancel.",y,,
+retail:66,retail,"PURPOSE: 
+REASON FOR CALL: You want to change the luggage set in your order for a coat.  Your goal is to change the order. If there is no way to do that, return the item specifically. If there are any issues, cancel the entire order.
+INSTRUCTIONS: .",cancel_pending_order|find_user_id_by_name_zip|get_order_details|get_user_details,record_modification,"The main goal is to change an existing item in the order from a luggage set to a coat, which is a modification of an existing record.",n,cancellation_or_refund,User asks for a change but the correct outcome is cancel_pending_order
+retail:47,retail,"PURPOSE: 
+REASON FOR CALL: You want to return an air purifier and a vacuum cleaner in your recent order. When asked for order ID, provide 9502126 first. If the agent asks you to double check, then say that you made a mistake and provide 9502127. If that doesn't work, say that you forgot the 'W' at the beginning. If the agent asks you for which vacuum cleaner, mention the canister one.  Ask the agent explicitly to provide the refund within 3 days and the total amount of the refund you should expect. After the return is complete, ask the agent about the total amount you paid for the remaining items in the same order.
+INSTRUCTIONS: You are impatient and want the refund as soon as possible.",calculate|find_user_id_by_name_zip|get_order_details|return_delivered_order_items,cancellation_or_refund,"The main goal is to return two items from an order and receive a refund, including details about the refund timeline and amount.",y,,
+retail:11,retail,"PURPOSE: 
+REASON FOR CALL: For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the other order's payment method. If not possible, you are angry and swear for a few times, then agree to return all things with the original payment method.
+INSTRUCTIONS: You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",find_user_id_by_email|get_order_details|get_user_details|return_delivered_order_items,cancellation_or_refund,"The main goal is to return all ordered items and get refunds, with a specific (but denied) request about refund payment methods.",y,,
+telecom:[mms_issue]break_app_sms_permission|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",enable_roaming|grant_app_permission|refuel_data,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following step-by-step troubleshooting guidance.",y,,
+telecom:[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard],telecom,"PURPOSE: Test resolution path: Mobile Data/Slow Internet Issues.
+REASON FOR CALL: You mobile data is not working properly. It either stops working or is very slow. You want to fix it and absolutely want to get excellent internet speed on your phone. You are not willing to accept any other internet speed (poor, fair or good). You do not have access to wifi.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved only when speed test returns excellent internet speed and nothing else. If it returns poor, fair or good, you will not consider the issue resolved. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",set_network_mode_preference|toggle_roaming,troubleshooting,"The main goal is to diagnose and fix the issue of slow or non-working mobile data until excellent speed is achieved, following a step-by-step troubleshooting process.",y,,
+telecom:[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy],telecom,"PURPOSE: Test resolution path: No Service/Connection Issues.
+REASON FOR CALL: Your phone has been showing 'No Service' for the past few hours.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved when the status bar shows that you have signal. Always check the status bar if the agent asks you for status information. If the agent asks you to pay a bill, you accept. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",make_payment|reboot_device|reseat_sim_card|resume_line|send_payment_request,troubleshooting,The main goal is to diagnose and resolve a phone's 'No Service' issue through step-by-step troubleshooting.,y,,
+telecom:[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",reboot_device|reset_apn_settings|toggle_roaming,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following step-by-step troubleshooting guidance.",y,,
+telecom:[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_enabled_off[PERSONA:Easy],telecom,"PURPOSE: Test resolution path: Mobile Data/Slow Internet Issues.
+REASON FOR CALL: You mobile data is not working properly. It either stops working or is very slow. You want to fix it and absolutely want to get excellent internet speed on your phone. You are not willing to accept any other internet speed (poor, fair or good). You do not have access to wifi.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved only when speed test returns excellent internet speed and nothing else. If it returns poor, fair or good, you will not consider the issue resolved. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",disconnect_vpn|set_network_mode_preference|toggle_roaming,troubleshooting,The main goal is to diagnose and fix the issue of slow or non-working mobile data until excellent speed is achieved.,y,,
+telecom:[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard],telecom,"PURPOSE: Test resolution path: No Service/Connection Issues.
+REASON FOR CALL: Your phone has been showing 'No Service' for the past few hours.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved when the status bar shows that you have signal. Always check the status bar if the agent asks you for status information. If the agent asks you to pay a bill, you accept. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",transfer_to_human_agents,troubleshooting,The main goal is to diagnose and resolve a phone's 'No Service' issue through step-by-step troubleshooting.,y,,"Ends in transfer, still troubleshooting"
+telecom:[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",enable_roaming|set_network_mode_preference,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following a step-by-step troubleshooting process.",y,,
+telecom:[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",grant_app_permission|toggle_data,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following step-by-step troubleshooting guidance.",y,,
+telecom:[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy],telecom,"PURPOSE: Test resolution path: No Service/Connection Issues.
+REASON FOR CALL: Your phone has been showing 'No Service' for the past few hours.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved when the status bar shows that you have signal. Always check the status bar if the agent asks you for status information. If the agent asks you to pay a bill, you accept. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",make_payment|reboot_device|reseat_sim_card|resume_line|send_payment_request|toggle_airplane_mode,troubleshooting,The main goal is to diagnose and resolve a phone's 'No Service' issue through step-by-step troubleshooting.,y,,
+telecom:[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None],telecom,"PURPOSE: Test resolution path: Mobile Data/Slow Internet Issues.
+REASON FOR CALL: You mobile data is not working properly. It either stops working or is very slow. You want to fix it and absolutely want to get excellent internet speed on your phone. You are not willing to accept any other internet speed (poor, fair or good). You do not have access to wifi.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved only when speed test returns excellent internet speed and nothing else. If it returns poor, fair or good, you will not consider the issue resolved. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",disconnect_vpn|enable_roaming|toggle_data_saver_mode,troubleshooting,The main goal is to diagnose and fix the issue of slow or non-working mobile data until excellent speed is achieved.,y,,

@@ -1,0 +1,437 @@
+dataset,domain,task_id,text,tools,outcome_marker,n_actions,given_category,workflow,workflow_name,source_difficulty,task_type,scenario,scenario_full,scenario_description,llm_rationale,model
+synthetic,banking,DigitalAccountOpening_DigitalAccountOpening_W1_TC1,"TITLE: Premium Savings Account - Individual, Large Deposit, Instant Funding
+DESCRIPTION: Premium Savings Account - Individual, Large Deposit, Instant Funding
+
+Covers premium tier path for individual with deposit >= $5000 and instant funding verification.
+INPUT CONDITIONS: Applicant is individual; Deposit amount >= 5000; Funding source is external bank, instant verification
+EXPECTED OUTCOME: opened
+INPUT DATA: {""application_id"": ""ACC-1001"", ""customer_data"": {""name"": ""Alice Johnson"", ""dob"": ""1980-05-15"", ""ssn"": ""123456789"", ""address"": ""456 Elm St, Springfield, IL"", ""email"": ""alice.johnson@email.com"", ""phone"": ""+15551234567"", ""id_type"": ""driver's_license"", ""id_number"": ""D9876543"", ""country_of_residence"": ""US""}, ""account_type"": ""savings"", ""deposit_amount"": 10000, ""funding_source"": {""type"": ""external_bank"", ""account_number"": ""987654321"", ""routing_number"": ""021000021"", ""bank_name"": ""Wells Fargo""}}",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,8,banking_accounts_deposits,W1,,easy,new_creation,W1,banking_accounts_deposits_W1,premium_savings_account_opening,The main goal is to open a new premium savings account for an individual with a large deposit and instant funding verification.,gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W1_TC2,"TITLE: Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding
+DESCRIPTION: Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding
+
+Covers standard tier path for individual with deposit < $5000 and micro-deposit funding verification.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-1002"", ""customer_data"": {""name"": ""Brian Lee"", ""dob"": ""1992-11-30"", ""ssn"": ""987654321"", ""address"": ""789 Oak Ave, Dallas, TX"", ""email"": ""brian.lee@email.com"", ""phone"": ""+15559876543"", ""id_type"": ""state_id"", ""id_number"": ""TX1234567"", ""country_of_residence"": ""US""}, ""account_type"": ""checking"", ""deposit_amount"": 1500, ""funding_source"": {""type"": ""external_bank"", ""account_number"": ""123456789"", ""routing_number"": ""111000025"", ""bank_name"": ""Chase""}}",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,8,banking_accounts_deposits,W1,,easy,new_creation,W1,banking_accounts_deposits_W1,checking_account_opening,The main goal is to open a new individual checking account with micro-deposit funding verification.,gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W2_TC1,"TITLE: Student Checking - Verified Student, Parent Account Funding
+DESCRIPTION: Student Checking - Verified Student, Parent Account Funding
+
+Covers student checking workflow for applicant <25, verified student status, parent account funding.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-2001"", ""customer_data"": {""name"": ""Jane Smith"", ""dob"": ""2003-09-22"", ""ssn"": ""234567890"", ""address"": ""321 College Rd, Boston, MA"", ""email"": ""jane.smith@university.edu"", ""phone"": ""+15552345678"", ""id_type"": ""passport"", ""id_number"": ""P1234567"", ""country_of_residence"": ""US"", ""student_status"": true}, ""account_type"": ""student_checking"", ""deposit_amount"": 500, ""funding_source"": {""type"": ""parent_account"", ""account_number"": ""555555555"", ""bank_name"": ""Bank of America""}}",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,8,banking_accounts_deposits,W2,,easy,new_creation,W2,banking_accounts_deposits_W2,student_checking_account_opening,The main goal is to open a new student checking account for a verified student with funding from a parent account.,gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W2_TC2,"TITLE: Student Checking - Verified Student, External Bank Funding
+DESCRIPTION: Student Checking - Verified Student, External Bank Funding
+
+Covers student checking workflow for applicant <25, verified student status, external bank funding.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-2002"", ""customer_data"": {""name"": ""Tom Nguyen"", ""dob"": ""2002-03-10"", ""ssn"": ""345678901"", ""address"": ""789 Dorm St, Ann Arbor, MI"", ""email"": ""tom.nguyen@university.edu"", ""phone"": ""+15553456789"", ""id_type"": ""state_id"", ""id_number"": ""MI7654321"", ""country_of_residence"": ""US"", ""student_status"": true}, ""account_type"": ""student_checking"", ""deposit_amount"": 300, ""funding_source"": {""type"": ""external_bank"", ""account_number"": ""222333444"", ""routing_number"": ""072000326"", ""bank_name"": ""C",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,8,banking_accounts_deposits,W2,,easy,new_creation,W2,banking_accounts_deposits_W2,student_checking_account_opening,The main goal is to open a new student checking account for a verified student using external bank funding.,gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W3_TC1,"TITLE: Business Checking - Multi-Owner, Wire Funding
+DESCRIPTION: Business Checking - Multi-Owner, Wire Funding
+
+Covers business account opening for multiple owners with wire transfer funding.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-3001"", ""customer_data"": {""name"": ""Acme LLC"", ""dob"": ""2000-01-01"", ""ssn"": ""12-3456789"", ""address"": ""100 Business Park, Houston, TX"", ""email"": ""contact@acmellc.com"", ""phone"": ""+15551230000"", ""id_type"": ""business_license"", ""id_number"": ""TX-BIZ-12345"", ""country_of_residence"": ""US"", ""business_type"": ""LLC"", ""owners"": [{""name"": ""John Smith"", ""dob"": ""1975-02-20"", ""ssn"": ""111223333"", ""id_type"": ""driver's_license"", ""id_number"": ""D1112222""}, {""name"": ""Mary Jones"", ""dob"": ""1980-07-15",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,8,banking_accounts_deposits,W3,,medium,new_creation,W3,banking_accounts_deposits_W3,business_account_opening,The main goal is to open a new business checking account for a company with multiple owners and wire transfer funding.,gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W6_TC1,"TITLE: Joint Savings Account - Two Owners, Transfer Funding
+DESCRIPTION: Joint Savings Account - Two Owners, Transfer Funding
+
+Covers joint account opening for two owners with transfer from existing account.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-6001"", ""customer_data"": {""name"": ""Joint Account"", ""dob"": ""1990-01-01"", ""ssn"": ""000000000"", ""address"": ""200 Family St, Seattle, WA"", ""email"": ""joint.account@email.com"", ""phone"": ""+15552000000"", ""id_type"": ""joint"", ""id_number"": ""JA-12345"", ""country_of_residence"": ""US"", ""owners"": [{""name"": ""Emily Clark"", ""dob"": ""1985-06-10"", ""ssn"": ""333445555"", ""id_type"": ""driver's_license"", ""id_number"": ""D3334444""}, {""name"": ""Michael Clark"", ""dob"": ""1983-08-22"", ""ssn"": ""444556666"", ""id_type",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,8,banking_accounts_deposits,W6,,easy,new_creation,W6,banking_accounts_deposits_W6,joint_account_opening,The main goal is to open a new joint savings account for two owners and fund it via transfer from an existing account.,gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W7_TC1,"TITLE: Restricted Account - Pending Micro-Deposit Funding Verification
+DESCRIPTION: Restricted Account - Pending Micro-Deposit Funding Verification
+
+Covers restricted account opening when funding source verification is pending via micro-deposit.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-7001"", ""customer_data"": {""name"": ""Samuel Green"", ""dob"": ""1995-12-05"", ""ssn"": ""555667777"", ""address"": ""400 Maple St, Denver, CO"", ""email"": ""samuel.green@email.com"", ""phone"": ""+15554000000"", ""id_type"": ""driver's_license"", ""id_number"": ""D5556666"", ""country_of_residence"": ""US""}, ""account_type"": ""savings"", ""deposit_amount"": 2500, ""funding_source"": {""type"": ""external_bank"", ""account_number"": ""333444555"", ""routing_number"": ""102000021"", ""bank_name"": ""PNC""}}",calculate_account_tier|configure_account_limits|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,SUCCESS,7,banking_accounts_deposits,W7,,easy,new_creation,W7,banking_accounts_deposits_W7,account_opening_pending_verification,"The main goal is to open a new account, but the process is pending funding source verification via micro-deposit.",gpt-4.1
+synthetic,banking,DigitalAccountOpeningAgent_W8_TC1,"TITLE: Same-Day Account Opening - Cash Deposit >= $10,000
+DESCRIPTION: Same-Day Account Opening - Cash Deposit >= $10,000
+
+Covers same-day account opening with large cash deposit and CTR filing.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-8001"", ""customer_data"": {""name"": ""Linda Perez"", ""dob"": ""1970-03-25"", ""ssn"": ""666778888"", ""address"": ""500 Market St, San Francisco, CA"", ""email"": ""linda.perez@email.com"", ""phone"": ""+15555000000"", ""id_type"": ""driver's_license"", ""id_number"": ""D6667777"", ""country_of_residence"": ""US""}, ""account_type"": ""checking"", ""deposit_amount"": 15000, ""funding_source"": {""type"": ""cash"", ""account_number"": ""N/A"", ""amount"": 15000}}",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|open_account|perform_aml_screening|validate_customer_identity,HUMAN_IN_THE_LOOP|SUCCESS,7,banking_accounts_deposits,W8,,easy,new_creation,W8,banking_accounts_deposits_W8,account_opening_large_cash_deposit,"The main goal is to open a new account with a large cash deposit, which triggers additional compliance steps but is fundamentally a new account creation.",gpt-4.1
+synthetic,banking,BankingCustomerOnboardingAgent_BankOnboard_W1_TC1,"TITLE: Low-Risk Personal Account: Standard KYC, Driver License
+DESCRIPTION: Low-Risk Personal Account: Standard KYC, Driver License
+
+Covers the most common onboarding for a personal customer with low AML risk, US nationality, and standard KYC documents.
+INPUT CONDITIONS: Personal account; KYC documents: driver license and utility bill; US nationality, occupation: engineer; Transaction volume: $5,000; All documents clear and legible
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-10001"", ""customer_type"": ""personal"", ""document_files"": [""driver_license.pdf"", ""utility_bill.jpg""], ""account_type"": ""personal_checking"", ""contact_email"": ""alice.smith@email.com"", ""contact_phone"": ""+12025550123""}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,SUCCESS,7,banking_customer_onboarding,W1,Standard Personal Account Onboarding,easy,new_creation,W1,banking_customer_onboarding_W1,personal_account_onboarding,The main goal is to onboard and create a new personal account after standard KYC checks are completed.,gpt-4.1
+synthetic,banking,BankingCustomerOnboardingAgent_BankOnboard_W1_TC2,"TITLE: Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume
+DESCRIPTION: Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume
+
+Validates onboarding for a personal customer with medium AML risk, foreign nationality, and different KYC document types.
+INPUT CONDITIONS: Personal account; KYC documents: passport and proof of address; Nationality: UK, occupation: consultant; Transaction volume: $30,000; All documents clear and legible
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-10002"", ""customer_type"": ""personal"", ""document_files"": [""passport.png"", ""proof_of_address.pdf""], ""account_type"": ""personal_savings"", ""contact_email"": ""oliver.jones@email.com"", ""contact_phone"": ""+447700900123""}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,SUCCESS,7,banking_customer_onboarding,W1,Standard Personal Account Onboarding,medium,new_creation,W1,banking_customer_onboarding_W1,personal_account_onboarding,The main goal is to onboard (create) a new personal account for a foreign national after verifying KYC documents and risk level.,gpt-4.1
+synthetic,banking,BankingCustomerOnboardingAgent_BankOnboard_W4_TC1,"TITLE: Business Account: Multiple Owners, All Pass Screening
+DESCRIPTION: Business Account: Multiple Owners, All Pass Screening
+
+Tests business onboarding with multiple beneficial owners, all with valid documents, low AML risk, and no sanctions matches.
+INPUT CONDITIONS: Business account; Business documents: business license, EIN letter, proof of address; Beneficial owners: John Smith, Sarah Lee; Owner documents: passports; Business type: consulting, US; All documents valid
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-20001"", ""customer_type"": ""business"", ""document_files"": [""business_license.pdf"", ""ein_letter.pdf"", ""proof_of_address.pdf"", ""john_smith_passport.jpg"", ""sarah_lee_passport.jpg""], ""account_type"": ""business_checking"", ""contact_email"": ""info@acmebiz.com"", ""contact_phone"": ""+16175551234"", ""beneficial_owners"": [""John Smith"", ""Sarah Lee""]}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,SUCCESS,8,banking_customer_onboarding,W4,,easy,new_creation,W4,banking_customer_onboarding_W4,business_account_onboarding,The main goal is to onboard (create) a new business account after verifying all required documents and owners.,gpt-4.1
+synthetic,banking,BankingCustomerOnboardingAgent_BankOnboard_W4_TC2,"TITLE: Business Account: Single Owner, Medium AML Risk
+DESCRIPTION: Business Account: Single Owner, Medium AML Risk
+
+Validates business onboarding with only one beneficial owner, medium AML risk due to higher transaction volume.
+INPUT CONDITIONS: Business account; Business documents: business license, EIN letter; Beneficial owner: Maria Gomez; Owner document: national ID; Business type: import/export, Mexico; Transaction volume: $75,000; All documents valid
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-20002"", ""customer_type"": ""business"", ""document_files"": [""business_license.pdf"", ""ein_letter.pdf"", ""maria_gomez_national_id.jpg""], ""account_type"": ""business_savings"", ""contact_email"": ""contact@importmex.com"", ""contact_phone"": ""+525512345678"", ""beneficial_owners"": [""Maria Gomez""]}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,SUCCESS,7,banking_customer_onboarding,W4,,medium,new_creation,W4,banking_customer_onboarding_W4,business_account_onboarding,"The main goal is to onboard (create) a new business account, with verification steps as part of the process but not the end goal.",gpt-4.1
+synthetic,banking,BankingCustomerOnboardingAgent_BankOnboard_W6_TC1,"TITLE: Personal Account: Missing Proof of Address, Provided After Request
+DESCRIPTION: Personal Account: Missing Proof of Address, Provided After Request
+
+Tests process where customer initially omits proof of address, receives document request, and provides valid document for successful onboarding.
+INPUT CONDITIONS: Personal account; Initial KYC: only driver license; Missing proof of address; Customer provides proof_of_address.pdf after request
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-30001"", ""customer_type"": ""personal"", ""document_files"": [""driver_license.pdf""], ""account_type"": ""personal_checking"", ""contact_email"": ""jane.doe@email.com"", ""contact_phone"": ""+12025550123"", ""additional_documents"": [""proof_of_address.pdf""]}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,SUCCESS,9,banking_customer_onboarding,W6,Incomplete Documentation - Customer Follow-up,easy,new_creation,W6,banking_customer_onboarding_W6,personal_account_onboarding,The main goal is to successfully onboard and create a new personal account after the customer provides the required documents.,gpt-4.1
+synthetic,banking,BankingCustomerOnboardingAgent_BankOnboard_W7_TC1,"TITLE: Address Mismatch: Customer Provides Explanation and Valid New Document
+DESCRIPTION: Address Mismatch: Customer Provides Explanation and Valid New Document
+
+Covers scenario where address mismatch is detected, customer provides explanation and new document, and onboarding proceeds successfully.
+INPUT CONDITIONS: Personal account; KYC documents: driver license (old address), utility bill (new address); Address mismatch detected; Customer provides rental_agreement.pdf with new address
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-40001"", ""customer_type"": ""personal"", ""document_files"": [""driver_license.pdf"", ""utility_bill.jpg""], ""account_type"": ""personal_checking"", ""contact_email"": ""tom.baker@email.com"", ""contact_phone"": ""+12025550123"", ""address_explanation"": ""Moved recently, utility bill and rental agreement reflect new address."", ""additional_documents"": [""rental_agreement.pdf""]}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,SUCCESS,9,banking_customer_onboarding,W7,Address Mismatch - Data Reconciliation,easy,new_creation,W7,banking_customer_onboarding_W7,kyc_address_mismatch,"The main goal is to successfully onboard a new customer account after resolving an address mismatch during KYC, which is a new account creation process.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1,"TITLE: Low-Risk Card Present Transaction with Typical Device
+DESCRIPTION: Low-Risk Card Present Transaction with Typical Device
+
+Covers the success path for a legitimate transaction with no anomalies, typical behavior, and a fraud risk score well below threshold.
+INPUT CONDITIONS: fraud_risk_score = 15 (well below threshold); alert_type = card_present; transaction_type = card_present; device intelligence normal (no VPN/TOR, device matches customer history); No blacklist hits
+EXPECTED OUTCOME: auto_approved
+INPUT DATA: {""alert_id"": ""FA-883421"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""card_present"", ""transaction_type"": ""card_present"", ""lookback_days"": 90, ""additional_context"": {""device_id"": ""DEV-100001"", ""location"": ""San Francisco, CA"", ""ip_address"": ""192.168.1.100""}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|retrieve_transaction_details,SUCCESS,5,banking_fraud_monitoring,W1,,easy,verification_or_compliance,W1,banking_fraud_monitoring_W1,fraud_risk_review,The main goal is to check and approve a transaction against fraud risk rules and thresholds.,gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2,"TITLE: Low-Risk Card Not Present Transaction with Recent Customer Travel
+DESCRIPTION: Low-Risk Card Not Present Transaction with Recent Customer Travel
+
+Validates success path for a low-risk online transaction with recent travel context, but all signals are consistent and below risk threshold.
+INPUT CONDITIONS: fraud_risk_score = 25; alert_type = card_not_present; transaction_type = online; Customer recent travel matches transaction location; Device intelligence normal
+EXPECTED OUTCOME: auto_approved
+INPUT DATA: {""alert_id"": ""FA-883422"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""card_not_present"", ""transaction_type"": ""online"", ""lookback_days"": 90, ""additional_context"": {""device_id"": ""DEV-200002"", ""location"": ""Miami, FL"", ""ip_address"": ""185.23.44.12"", ""recent_travel"": [""Miami, FL""]}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|retrieve_transaction_details,SUCCESS,5,banking_fraud_monitoring,W1,,easy,verification_or_compliance,W1,banking_fraud_monitoring_W1,fraud_risk_review,The main goal is to check and approve a transaction based on fraud risk and compliance signals.,gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1,"TITLE: Obvious Fraud - Blacklisted Merchant, Card Not Present
+DESCRIPTION: Obvious Fraud - Blacklisted Merchant, Card Not Present
+
+Tests success path for auto-decline when transaction is flagged by blacklist and high risk score.
+INPUT CONDITIONS: fraud_risk_score = 99; alert_type = card_not_present; transaction_type = online; Blacklist hit on merchant; Device fraud signals present
+EXPECTED OUTCOME: auto_declined
+INPUT DATA: {""alert_id"": ""FA-883423"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""card_not_present"", ""transaction_type"": ""online"", ""lookback_days"": 90, ""additional_context"": {""device_id"": ""DEV-300003"", ""location"": ""New York, NY"", ""ip_address"": ""203.0.113.5""}}",analyze_transaction_history|auto_decline_transaction|calculate_fraud_risk_score|check_device_intelligence|cross_reference_fraud_databases|get_customer_profile|retrieve_transaction_details,SUCCESS,7,banking_fraud_monitoring,W2,,easy,verification_or_compliance,W2,banking_fraud_monitoring_W2,fraud_auto_decline,The main goal is to check and automatically decline a transaction based on fraud detection rules and compliance with risk policies.,gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W2_TC2,"TITLE: Obvious Fraud - Account Takeover Detected on ATM Transaction
+DESCRIPTION: Obvious Fraud - Account Takeover Detected on ATM Transaction
+
+Validates success path for auto-decline when account takeover is confirmed and risk score is above threshold.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883424"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""account_takeover"", ""transaction_type"": ""atm"", ""lookback_days"": 90, ""additional_context"": {""device_id"": ""DEV-400004"", ""location"": ""Chicago, IL"", ""ip_address"": ""198.51.100.10""}}",analyze_transaction_history|auto_decline_transaction|calculate_fraud_risk_score|check_device_intelligence|cross_reference_fraud_databases|get_customer_profile|retrieve_transaction_details,SUCCESS,7,banking_fraud_monitoring,W2,,easy,verification_or_compliance,W2,banking_fraud_monitoring_W2,account_takeover_fraud_detection,"The main goal is to validate that an ATM transaction is auto-declined due to confirmed account takeover and high risk, which is a compliance and fraud verification process.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1,"TITLE: High-Risk Online Transaction with Device Mismatch
+DESCRIPTION: High-Risk Online Transaction with Device Mismatch
+
+Covers escalation for a high-risk transaction with device anomaly and multiple fraud signals.
+INPUT CONDITIONS: fraud_risk_score = 85; alert_type = card_not_present; transaction_type = online; Device mismatch and velocity anomaly; Cross-referenced fraud database shows no blacklist
+EXPECTED OUTCOME: escalated
+INPUT DATA: {""alert_id"": ""FA-883425"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""card_not_present"", ""transaction_type"": ""online"", ""lookback_days"": 180, ""additional_context"": {""device_id"": ""DEV-500005"", ""location"": ""Dallas, TX"", ""ip_address"": ""203.0.113.20""}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|cross_reference_fraud_databases|get_customer_profile|retrieve_transaction_details|route_to_analyst,SUCCESS,7,banking_fraud_monitoring,W3,,hard,verification_or_compliance,W3,banking_fraud_monitoring_W3,high_risk_transaction_review,"The main goal is to review and escalate a transaction based on fraud risk signals and compliance checks, not to create, modify, or cancel anything.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2,"TITLE: High-Risk Card Present Transaction with Location Anomaly
+DESCRIPTION: High-Risk Card Present Transaction with Location Anomaly
+
+Success path for escalation when physical transaction occurs in unusual location, but all data is available.
+INPUT CONDITIONS: fraud_risk_score = 90; alert_type = card_present; transaction_type = card_present; Location anomaly detected; Device intelligence matches customer
+EXPECTED OUTCOME: escalated
+INPUT DATA: {""alert_id"": ""FA-883426"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""card_present"", ""transaction_type"": ""card_present"", ""lookback_days"": 120, ""additional_context"": {""device_id"": ""DEV-600006"", ""location"": ""Las Vegas, NV"", ""ip_address"": ""198.51.100.55""}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|cross_reference_fraud_databases|get_customer_profile|retrieve_transaction_details|route_to_analyst,SUCCESS,7,banking_fraud_monitoring,W3,,medium,verification_or_compliance,W3,banking_fraud_monitoring_W3,high_risk_transaction_escalation,"The main goal is to review and escalate a high-risk transaction based on compliance and fraud detection rules, not to create, modify, or cancel anything.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W4_TC1,"TITLE: Moderate-Risk Transaction, Customer Verifies via SMS
+DESCRIPTION: Moderate-Risk Transaction, Customer Verifies via SMS
+
+Covers approval path where risk score is moderate and customer successfully verifies via preferred method.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883427"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""card_not_present"", ""transaction_type"": ""online"", ""lookback_days"": 90, ""preferred_verification_method"": ""sms"", ""additional_context"": {""device_id"": ""DEV-700007"", ""location"": ""Seattle, WA"", ""ip_address"": ""203.0.113.40""}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|request_customer_verification|retrieve_transaction_details,SUCCESS,6,banking_fraud_monitoring,W4,,medium,verification_or_compliance,W4,banking_fraud_monitoring_W4,transaction_risk_verification,The main goal is to verify and approve a moderate-risk transaction after the customer successfully completes SMS verification.,gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W4_TC2,"TITLE: Moderate-Risk Transaction, Customer Verifies via Email
+DESCRIPTION: Moderate-Risk Transaction, Customer Verifies via Email
+
+Validates approval path using alternate verification method (email) with successful customer verification.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883428"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""card_present"", ""transaction_type"": ""card_present"", ""lookback_days"": 60, ""preferred_verification_method"": ""email"", ""additional_context"": {""device_id"": ""DEV-800008"", ""location"": ""Denver, CO"", ""ip_address"": ""198.51.100.80""}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|request_customer_verification|retrieve_transaction_details,SUCCESS,6,banking_fraud_monitoring,W4,,medium,verification_or_compliance,W4,banking_fraud_monitoring_W4,transaction_verification,"The main goal is to verify and approve a moderate-risk transaction using an alternate verification method (email), focusing on compliance and validation.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W5_TC1,"TITLE: Account Takeover - Immediate Block and Escalation
+DESCRIPTION: Account Takeover - Immediate Block and Escalation
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883429"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""account_takeover"", ""transaction_type"": ""online"", ""lookback_days"": 30, ""additional_context"": {""device_id"": ""DEV-900009"", ""location"": ""Boston, MA"", ""ip_address"": ""203.0.113.99""}}",analyze_transaction_history|auto_decline_transaction|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|retrieve_transaction_details|route_to_analyst,SUCCESS,7,banking_fraud_monitoring,W5,,hard,verification_or_compliance,W5,banking_fraud_monitoring_W5,account_takeover_alert,"The main goal is to review and act on a potential account takeover alert, which involves validating suspicious activity and taking compliance actions such as blocking and escalation.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W6_TC1,"TITLE: Velocity Fraud - Rapid Transactions Across States
+DESCRIPTION: Velocity Fraud - Rapid Transactions Across States
+
+Success path for velocity fraud with rapid multi-state transactions and high velocity metrics.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883430"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""velocity_fraud"", ""transaction_type"": ""card_not_present"", ""lookback_days"": 7, ""additional_context"": {""device_id"": ""DEV-100010"", ""location"": ""Houston, TX"", ""ip_address"": ""198.51.100.101""}}",analyze_transaction_history|calculate_fraud_risk_score|cross_reference_fraud_databases|retrieve_transaction_details|route_to_analyst,SUCCESS,5,banking_fraud_monitoring,W6,,medium,verification_or_compliance,W6,banking_fraud_monitoring_W6,velocity_fraud_review,"The main goal is to review and validate a potential fraud alert based on rapid multi-state transactions, which is a compliance and verification task.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W7_TC1,"TITLE: Synthetic Identity - New Account Device and Identity Anomalies
+DESCRIPTION: Synthetic Identity - New Account Device and Identity Anomalies
+
+Covers escalation for new account with synthetic identity signals and device anomalies.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883431"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""synthetic_identity"", ""transaction_type"": ""online"", ""lookback_days"": 1, ""additional_context"": {""device_id"": ""DEV-110011"", ""location"": ""Orlando, FL"", ""ip_address"": ""203.0.113.111""}}",calculate_fraud_risk_score|check_device_intelligence|cross_reference_fraud_databases|get_customer_profile|route_to_analyst,SUCCESS,5,banking_fraud_monitoring,W7,,medium,verification_or_compliance,W7,banking_fraud_monitoring_W7,synthetic_identity_review,"The main goal is to review and decide on a new account flagged for synthetic identity and device anomalies, which is a compliance/fraud verification process.",gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W8_TC1,"TITLE: Friendly Fraud - Chargeback Investigation, Evidence Provided
+DESCRIPTION: Test case for: Friendly Fraud - Chargeback Investigation, Evidence Provided
+
+Success path for friendly fraud chargeback investigation with all required evidence present.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883432"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""friendly_fraud"", ""transaction_type"": ""card_present"", ""lookback_days"": 30, ""additional_context"": {""device_id"": ""DEV-120012"", ""location"": ""Phoenix, AZ"", ""ip_address"": ""198.51.100.120"", ""delivery_confirmation"": true, ""signature_match"": true}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|retrieve_transaction_details|route_to_analyst,SUCCESS,6,banking_fraud_monitoring,W8,,easy,verification_or_compliance,W8,banking_fraud_monitoring_W8,friendly_fraud_chargeback_investigation,The main goal is to investigate and validate a chargeback claim for friendly fraud by reviewing evidence and making an approve/deny decision.,gpt-4.1
+synthetic,banking,BankingFraudMonitoringSupportAgent_W9_TC1,"TITLE: APP Fraud - Large Wire Transfer Held and Escalated
+DESCRIPTION: APP Fraud - Large Wire Transfer Held and Escalated
+
+Covers success path for holding suspicious wire transfer and escalating for analyst review.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883433"", ""customer_id"": ""CUST-334899"", ""alert_type"": ""authorized_push_payment"", ""transaction_type"": ""wire"", ""lookback_days"": 2, ""additional_context"": {""device_id"": ""DEV-130013"", ""location"": ""Atlanta, GA"", ""ip_address"": ""203.0.113.131"", ""call_recording"": ""customer sounded confused""}}",analyze_transaction_history|auto_decline_transaction|calculate_fraud_risk_score|cross_reference_fraud_databases|get_customer_profile|retrieve_transaction_details|route_to_analyst,SUCCESS,7,banking_fraud_monitoring,W9,,medium,verification_or_compliance,W9,banking_fraud_monitoring_W9,wire_transfer_fraud_review,"The main goal is to review and escalate a suspicious wire transfer for compliance and fraud verification, not to create, modify, or cancel a transaction.",gpt-4.1
+synthetic,healthcare,HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1,"TITLE: Adult patient with active insurance, initial visit, and preferred dates
+DESCRIPTION: Adult patient with active insurance, initial visit, and preferred dates.
+
+Covers standard onboarding for a new adult patient with valid insurance; utilizes preferred appointment dates branch.
+INPUT CONDITIONS: Patient age >= 18; Insurance eligibility active; All required demographics and insurance fields present; Initial visit requested; Preferred dates provided
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-10001"", ""appointment_type"": ""initial_visit"", ""preferred_dates"": [""2024-04-10"", ""2024-04-12""], ""provider_id"": ""PROV-12345"", ""self_pay"": false}",check_provider_availability|create_ehr_patient_record|extract_insurance_info|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,8,healthcare_patient_onboarding,W1,Full New Patient Onboarding,easy,new_creation,W1,healthcare_patient_onboarding_W1,patient_onboarding,"The main goal is to create a new patient record and schedule their initial visit, which constitutes onboarding a new patient.",gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W1_TC2,"TITLE: Adult patient with active insurance, annual physical, no preferred dates
+DESCRIPTION: Adult patient with active insurance, annual physical, no preferred dates
+INPUT CONDITIONS: Patient age >= 18; Insurance eligibility active; All required demographics and insurance fields present; Annual physical requested; No preferred dates
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-10002"", ""appointment_type"": ""annual_physical"", ""provider_id"": ""PROV-67890"", ""self_pay"": false}",check_provider_availability|create_ehr_patient_record|extract_insurance_info|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,8,healthcare_patient_onboarding,W1,Full New Patient Onboarding,easy,new_creation,W1,healthcare_patient_onboarding_W1,annual_physical_booking,The main goal is to create a new appointment for an annual physical for an adult patient with active insurance.,gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W2_TC1,"TITLE: Pediatric patient (<18) with parent as subscriber, well-child visit
+DESCRIPTION: Pediatric patient (<18) with parent as subscriber, well-child visit
+
+Ensures pediatric onboarding with parent/guardian as insurance subscriber and well-child appointment.
+INPUT CONDITIONS: Patient age < 18; Subscriber relationship is parent; Insurance eligibility active; Well-child appointment requested
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-20001"", ""appointment_type"": ""well_child"", ""provider_id"": ""PROV-54321"", ""self_pay"": false}",create_ehr_patient_record|extract_insurance_info|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,7,healthcare_patient_onboarding,W2,Pediatric Patient Onboarding,easy,new_creation,W2,healthcare_patient_onboarding_W2,pediatric_onboarding_well_child,"The main goal is to onboard a pediatric patient and create a well-child appointment, which constitutes a new creation.",gpt-4.1
+synthetic,healthcare,HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1,"TITLE: Patient provides updated insurance after initial inactive coverage
+DESCRIPTION: Patient provides updated insurance after initial inactive coverage
+
+Tests successful resolution after patient supplies new insurance following a coverage failure.
+INPUT CONDITIONS: Initial insurance eligibility inactive; Patient responds with updated insurance; New insurance eligibility active
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-30001"", ""appointment_type"": ""initial_visit"", ""provider_id"": ""PROV-13579"", ""self_pay"": false, ""insurance_update"": {""carrier"": ""NewHealth"", ""policy_number"": ""NH-55555"", ""group_number"": ""NHG-8888"", ""subscriber_name"": ""John Doe"", ""dob"": ""1990-06-15""}}",create_ehr_patient_record|extract_insurance_info|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,8,healthcare_patient_onboarding,W3,Insurance Eligibility Failure - Request Update,medium,record_modification,W3,healthcare_patient_onboarding_W3,insurance_update_after_inactive,The main goal is to update the patient's insurance record after the initial coverage was found inactive.,gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W4_TC1,"TITLE: Specialty referral with prior auth approved
+DESCRIPTION: Validates successful specialty onboarding when prior authorization is required and approved.
+INPUT CONDITIONS: Referral for specialty consult; Insurance eligibility active; Prior auth required and approved
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-40001"", ""appointment_type"": ""specialty_consult"", ""provider_id"": ""PROV-24680"", ""referral_id"": ""REF-10001"", ""self_pay"": false, ""prior_auth_number"": ""AUTH-12345""}",extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,4,healthcare_patient_onboarding,W4,Specialty Referral with Prior Authorization,medium,new_creation,W4,healthcare_patient_onboarding_W4,specialty_referral_onboarding,The main goal is to onboard (create) a specialty referral appointment after prior authorization is approved.,gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W5_TC1,"TITLE: Self-pay patient onboarding with initial visit
+DESCRIPTION: Self-pay patient onboarding with initial visit
+Covers onboarding for patient who selects self-pay; skips insurance, provides pricing estimate.
+INPUT CONDITIONS: Self-pay selected; No insurance info provided; All required demographics present
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-50001"", ""appointment_type"": ""initial_visit"", ""provider_id"": ""PROV-11223"", ""self_pay"": true}",create_ehr_patient_record|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication,SUCCESS,6,healthcare_patient_onboarding,W5,,easy,new_creation,W5,healthcare_patient_onboarding_W5,self_pay_patient_onboarding,The main goal is to onboard (create a new record for) a self-pay patient and schedule their initial visit.,gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W6_TC1,"TITLE: Duplicate patient detected by SSN and DOB, records merged
+DESCRIPTION: Duplicate patient detected by SSN and DOB, records merged
+INPUT CONDITIONS: Patient demographics match existing EHR record (name + DOB or SSN); Exact match, no ambiguity
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-60001"", ""appointment_type"": ""follow_up"", ""provider_id"": ""PROV-33445"", ""existing_patient_id"": ""876543"", ""self_pay"": false}",create_ehr_patient_record|extract_patient_demographics|schedule_appointment|send_patient_communication,SUCCESS,4,healthcare_patient_onboarding,W6,Duplicate Patient Detection and Merge,easy,record_modification,W6,healthcare_patient_onboarding_W6,duplicate_patient_merge,"The main goal is to merge duplicate patient records, which is a modification of existing records.",gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W7_TC1,"TITLE: High-risk patient with >2 chronic conditions and >5 medications
+DESCRIPTION: Validates onboarding path for patients with complex medical history triggering care coordinator assignment.
+INPUT CONDITIONS: Medical history contains >2 chronic conditions; Medical history contains >5 medications; Insurance eligibility active
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-70001"", ""appointment_type"": ""chronic_care"", ""provider_id"": ""PROV-55667"", ""self_pay"": false}",check_provider_availability|create_ehr_patient_record|extract_insurance_info|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,8,healthcare_patient_onboarding,W7,High-Risk/Complex Medical History Onboarding,easy,new_creation,W7,healthcare_patient_onboarding_W7,complex_patient_onboarding,"The main goal is to onboard a new high-risk patient, which triggers care coordinator assignment as part of the creation process.",gpt-4.1
+synthetic,healthcare,HealthcareOnboarding_W8_TC1,"TITLE: Missing insurance fields, patient supplies info on request
+DESCRIPTION: Test: Missing insurance fields, patient supplies info on request
+
+Covers path where required insurance info is missing, agent requests and receives update, then completes onboarding.
+INPUT CONDITIONS: Intake form missing required insurance fields; Patient responds with missing info; Insurance eligibility active
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-80001"", ""appointment_type"": ""initial_visit"", ""provider_id"": ""PROV-77889"", ""missing_fields"": [""policy_number"", ""group_number""], ""insurance_update"": {""carrier"": ""HealthPlus"", ""policy_number"": ""HP-22222"", ""group_number"": ""HPG-3333"", ""subscriber_name"": ""Jane Smith"", ""dob"": ""1985-03-22""}}",create_ehr_patient_record|extract_insurance_info|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,SUCCESS,9,healthcare_patient_onboarding,W8,Incomplete Intake Form - Request Information,easy,new_creation,W8,healthcare_patient_onboarding_W8,patient_onboarding,"The main goal is to complete onboarding for a new patient, even though missing insurance info is collected along the way.",gpt-4.1
+synthetic,healthcare,HealthcarePA_W1_TC1,"TITLE: Standard MRI PA - All Documentation Present, Criteria Met
+DESCRIPTION: Standard MRI PA - All Documentation Present, Criteria Met
+
+Validates standard PA flow for a common imaging procedure (MRI) with all required documentation present and criteria met.
+INPUT CONDITIONS: service_type = standard; cpt_code = 72148 (MRI); all required clinical documentation available; medical necessity criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""72148"", ""diagnosis_code"": ""M54.5"", ""service_type"": ""standard""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,SUCCESS,7,healthcare_prior_authorization,W1,Standard Prior Authorization Submission,easy,verification_or_compliance,W1,healthcare_prior_authorization_W1,mri_prior_authorization,The main goal is to check and approve a prior authorization request for an MRI based on documentation and criteria.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W1_TC2,"TITLE: Standard Sleep Study PA - Alternate Documentation Path
+DESCRIPTION: Standard Sleep Study PA - Alternate Documentation Path
+
+Tests standard PA for a sleep study (CPT 95800), where alternate documentation (e.g., home sleep test report) is required and present.
+INPUT CONDITIONS: service_type = standard; cpt_code = 95800 (Sleep Study); alternate required documentation available; criteria met via alternate clinical evidence
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445641"", ""payer_id"": ""PAYER-UHC"", ""plan_id"": ""PLAN-MEDICARE-02"", ""cpt_code"": ""95800"", ""diagnosis_code"": ""G47.33"", ""service_type"": ""standard""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,SUCCESS,7,healthcare_prior_authorization,W1,Standard Prior Authorization Submission,easy,verification_or_compliance,W1,healthcare_prior_authorization_W1,sleep_study_prior_auth,The main goal is to check if the sleep study meets prior authorization criteria using alternate documentation and approve or deny based on compliance with policy.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W2_TC1,"TITLE: Documentation Completion After Initial EHR Deficiency
+DESCRIPTION: Documentation Completion After Initial EHR Deficiency
+
+Validates agent's ability to successfully complete PA after missing documents are requested and received from provider.
+INPUT CONDITIONS: service_type = standard; additional_docs_needed = true; initial EHR query missing required documentation; provider supplies missing documentation
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""72148"", ""diagnosis_code"": ""M54.5"", ""service_type"": ""standard"", ""additional_docs_needed"": true}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,HUMAN_IN_THE_LOOP|SUCCESS,8,healthcare_prior_authorization,W2,Documentation Request and Completion Workflow,medium,verification_or_compliance,W2,healthcare_prior_authorization_W2,prior_authorization_documentation_completion,The main goal is to validate and approve a prior authorization after receiving and checking the required documentation.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W3_TC1,"TITLE: Specialty Drug PA - High-Cost Medication, All Criteria Met
+DESCRIPTION: Specialty Drug PA - High-Cost Medication, All Criteria Met
+
+Tests successful specialty drug PA for a high-cost medication (J0135), with all intensive documentation and review requirements met.
+INPUT CONDITIONS: service_type = specialty_drug; cpt_code = J0135; specialty_drug = true; all required labs, notes, treatment history present; criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445641"", ""payer_id"": ""PAYER-UHC"", ""plan_id"": ""PLAN-MEDICARE-02"", ""cpt_code"": ""J0135"", ""diagnosis_code"": ""M06.9"", ""service_type"": ""specialty_drug"", ""specialty_drug"": true}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,SUCCESS,7,healthcare_prior_authorization,W3,Specialty Drug Prior Authorization Workflow,easy,verification_or_compliance,W3,healthcare_prior_authorization_W3,specialty_drug_prior_authorization,The main goal is to check and approve a prior authorization request for a high-cost specialty drug based on meeting all required criteria.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W4_TC1,"TITLE: Appeal After Initial PA Denial - Additional Evidence Provided
+DESCRIPTION: Appeal After Initial PA Denial - Additional Evidence Provided
+
+Validates successful appeal process when new documentation is available and appeal is approved.
+INPUT CONDITIONS: appeal_requested = true; initial PA denied; supplemental documentation available for appeal; appeal reason provided
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445641"", ""payer_id"": ""PAYER-UHC"", ""plan_id"": ""PLAN-MEDICARE-02"", ""cpt_code"": ""J0135"", ""diagnosis_code"": ""M06.9"", ""service_type"": ""specialty_drug"", ""appeal_requested"": true}",appeal_pa_denial|gather_clinical_documentation|track_pa_status,SUCCESS,4,healthcare_prior_authorization,W4,Denial and Appeal Workflow,easy,verification_or_compliance,W4,healthcare_prior_authorization_W4,pa_appeal_with_new_evidence,"The main goal is to review and approve or deny a prior authorization appeal based on new evidence, which is a compliance/verification task.",gpt-4.1
+synthetic,healthcare,HealthcarePA_W5_TC1,"TITLE: DME PA - Home Oxygen, All Clinical Criteria Met
+DESCRIPTION: DME PA - Home Oxygen, All Clinical Criteria Met
+
+Validates successful DME PA for home oxygen (E1390) with all required documentation (pulse ox, ABG, diagnosis) present.
+INPUT CONDITIONS: service_type = dme; cpt_code = E1390; all required DME documentation present; criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""E1390"", ""diagnosis_code"": ""J44.9"", ""service_type"": ""dme""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,SUCCESS,7,healthcare_prior_authorization,W5,Durable Medical Equipment PA Workflow,easy,verification_or_compliance,W5,healthcare_prior_authorization_W5,dme_prior_authorization,The main goal is to check and approve a prior authorization request for home oxygen based on clinical criteria and documentation.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W6_TC1,"TITLE: Urgent Cardiac Cath PA - Expedited Approval
+DESCRIPTION: Urgent Cardiac Cath PA - Expedited Approval
+
+Validates agent's ability to process urgent PA requests for cardiac catheterization (CPT 93458), ensuring expedited workflow and approval.
+INPUT CONDITIONS: service_type = urgent; urgent = true; cpt_code = 93458 (Cardiac Cath); ER notes and labs present; criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""93458"", ""diagnosis_code"": ""I25.10"", ""service_type"": ""urgent"", ""urgent"": true}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|submit_pa_request|track_pa_status,SUCCESS,5,healthcare_prior_authorization,W6,Urgent/Expedited Prior Authorization Workflow,easy,verification_or_compliance,W6,healthcare_prior_authorization_W6,cardiac_cath_prior_auth,The main goal is to validate and approve an urgent prior authorization request for a cardiac catheterization procedure based on provided criteria.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W7_TC1,"TITLE: Bariatric Surgery PA - All Multi-Step Criteria Met
+DESCRIPTION: Bariatric Surgery PA - All Multi-Step Criteria Met
+
+Validates multi-step bariatric surgery PA for CPT 43644, with all documentation (nutrition, psych eval, cardiac clearance) present and criteria met.
+INPUT CONDITIONS: service_type = surgery; cpt_code = 43644; all required multi-step documentation present; criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445641"", ""payer_id"": ""PAYER-UHC"", ""plan_id"": ""PLAN-MEDICARE-02"", ""cpt_code"": ""43644"", ""diagnosis_code"": ""E66.01"", ""service_type"": ""surgery""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,SUCCESS,7,healthcare_prior_authorization,W7,Multi-Step Bariatric Surgery PA Workflow,easy,verification_or_compliance,W7,healthcare_prior_authorization_W7,bariatric_surgery_prior_auth,The main goal is to validate and approve a prior authorization request for bariatric surgery by checking that all required documentation and criteria are met.,gpt-4.1
+synthetic,healthcare,HealthcarePA_W8_TC1,"TITLE: Status Check for Approved PA
+DESCRIPTION: Test Case 9: Status Check for Approved PA
+
+Validates agent's ability to track and report approved PA status upon provider request.
+INPUT CONDITIONS: pa_status_check = true; reference_id corresponds to approved PA
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""72148"", ""diagnosis_code"": ""M54.5"", ""service_type"": ""standard"", ""pa_status_check"": true}",track_pa_status,SUCCESS,1,healthcare_prior_authorization,W8,PA Status Tracking and Follow-Up Workflow,easy,information_lookup,W8,healthcare_prior_authorization_W8,pa_status_check,"The main goal is to retrieve and report the current status of an already approved prior authorization (PA), which is a fact lookup.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W1_TC1,"TITLE: Emergency Property Claim – Water Intrusion, Storm Peril, Coverage Confirmed
+DESCRIPTION: Emergency Property Claim – Water Intrusion, Storm Peril, Coverage Confirmed
+
+Covers urgent property claim with water damage, storm peril, policy active, emergency vendor dispatch via ServiceMaster.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Tree fell on my roof during last night's storm. Water leaking into bedroom. Need help ASAP."", ""policy_number"": ""HO-887766"", ""claim_type"": ""property"", ""severity"": ""emergency"", ""injury_reported"": false, ""catastrophe_event"": false, ""batch_size"": 1, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,SUCCESS,8,insurance_claims_intake,W1,,easy,new_creation,W1,insurance_claims_intake_W1,emergency_property_claim,"The main goal is to file a new emergency property claim for water intrusion due to storm damage, with coverage already confirmed.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W1_TC2,"TITLE: Emergency Property Claim – Water Intrusion, Storm Peril, Local Vendor, Alternate Address
+DESCRIPTION: Emergency Property Claim – Water Intrusion, Storm Peril, Local Vendor, Alternate Address
+
+Tests alternate vendor dispatch and address parsing, confirms agent supports different vendor networks and locations.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Heavy rain caused basement flooding at 88 Oak St, Springfield, IL. Water rising quickly."", ""policy_number"": ""HO-998877"", ""claim_type"": ""property"", ""severity"": ""emergency"", ""injury_reported"": false, ""catastrophe_event"": false, ""batch_size"": 1, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,SUCCESS,8,insurance_claims_intake,W1,,medium,new_creation,W1,insurance_claims_intake_W1,property_claim_filing,"The main goal is to file a new emergency property claim for water intrusion due to storm, including dispatching a local vendor and parsing an alternate address.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W2_TC1,"TITLE: Auto Accident with Bodily Injury – Standard BI, Coverage Confirmed
+DESCRIPTION: Test Case 3: Auto Accident with Bodily Injury – Standard BI, Coverage Confirmed
+
+Covers auto accident with a single injury, liability coverage confirmed, BI adjuster assignment.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""I was rear-ended on I-95. Neck pain, went to hospital."", ""policy_number"": ""AUTO-123456"", ""claim_type"": ""auto"", ""severity"": ""standard"", ""injury_reported"": true, ""catastrophe_event"": false, ""batch_size"": 1, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""duplicate_claim_found"": false, ""business_interruption"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|validate_policy_coverage,SUCCESS,7,insurance_claims_intake,W2,,easy,new_creation,W2,insurance_claims_intake_W2,auto_bodily_injury_claim,"The main goal is to file a new auto insurance claim for bodily injury after an accident, with coverage already confirmed.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W2_TC2,"TITLE: Auto Accident with Bodily Injury – Multiple Injuries, Coverage Confirmed
+DESCRIPTION: Auto Accident with Bodily Injury – Multiple Injuries, Coverage Confirmed
+
+Tests agent's ability to process multiple injury details and route accordingly.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Our car was hit from the side at Main & 5th. My wife and I both have back and shoulder pain."", ""policy_number"": ""AUTO-654321"", ""claim_type"": ""auto"", ""severity"": ""standard"", ""injury_reported"": true, ""catastrophe_event"": false, ""batch_size"": 1, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""duplicate_claim_found"": false, ""business_interruption"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|validate_policy_coverage,SUCCESS,7,insurance_claims_intake,W2,,easy,new_creation,W2,insurance_claims_intake_W2,auto_accident_injury_claim,The main goal is to file a new auto insurance claim for an accident involving multiple injuries.,gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W3_TC1,"TITLE: Catastrophe Event – Batch Processing, Emergencies Flagged
+DESCRIPTION: Catastrophe Event – Batch Processing, Emergencies Flagged
+
+Covers batch intake for hurricane event, mixture of emergencies and standard claims, all coverage confirmed.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""catastrophe_event"": true, ""batch_size"": 3, ""source_text"": [""Hurricane wind blew off roof, major water damage at 22 Bay Rd, Miami, FL."", ""Fence destroyed by fallen tree, minor damage at 11 Pine St, Miami, FL."", ""Basement flooding, urgent help needed at 99 Ocean Blvd, Miami, FL.""], ""policy_number"": [""HO-111111"", ""HO-222222"", ""HO-333333""], ""claim_type"": [""property"", ""property"", ""property""], ""severity"": [""emergency"", ""standard"", ""emergency""], ""injury_reported"": [false, false, false], ""policy_statu",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,SUCCESS,23,insurance_claims_intake,W3,,medium,new_creation,W3,insurance_claims_intake_W3,catastrophe_claim_batch_intake,"The main goal is to create new insurance claims in bulk for a catastrophe event, including flagging emergencies, not just verifying or updating existing records.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W4_TC1,"TITLE: Workers Comp Claim – Lost Time Injury, Medical Dispatch
+DESCRIPTION: Workers Comp Claim – Lost Time Injury, Medical Dispatch
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Employee slipped on wet floor, sprained ankle, unable to work."", ""policy_number"": ""WC-777888"", ""claim_type"": ""workers_comp"", ""severity"": ""standard"", ""injury_reported"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,SUCCESS,8,insurance_claims_intake,W4,,easy,new_creation,W4,insurance_claims_intake_W4,workers_comp_claim,The main goal is to file a new workers compensation claim for a lost time injury and initiate medical dispatch.,gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W5_TC1,"TITLE: Attorney-Represented Slip & Fall – Liability, Legal Notification
+DESCRIPTION: Attorney-Represented Slip & Fall – Liability, Legal Notification
+
+Covers attorney-represented liability claim, triggers legal notification and document preservation.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Our client, Jane Doe, slipped on wet floor at your store on 5/12/2026 and sustained injuries. We represent her."", ""policy_number"": ""GL-334455"", ""claim_type"": ""liability"", ""severity"": ""litigation"", ""attorney_represented"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|validate_policy_coverage,SUCCESS,8,insurance_claims_intake,W5,,medium,new_creation,W5,insurance_claims_intake_W5,liability_claim_filing,"The main goal is to file a new attorney-represented liability claim for a slip and fall incident, triggering legal notification and document preservation.",gpt-4.1
+synthetic,insurance,ClaimsAgent_W6_TC1,"TITLE: Denied Claim – Policy Lapsed, Coverage Not Confirmed
+DESCRIPTION: Denied Claim – Policy Lapsed, Coverage Not Confirmed
+INPUT CONDITIONS: policy_status = lapsed; coverage_confirmed = false; claim_type = property
+EXPECTED OUTCOME: success
+INPUT DATA: {""source_text"": ""Tree branch broke window during windstorm. Need to file claim."", ""policy_number"": ""HO-555666"", ""claim_type"": ""property"", ""severity"": ""denied"", ""policy_status"": ""lapsed"", ""coverage_confirmed"": false, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|send_claim_acknowledgment|validate_policy_coverage,SUCCESS,6,insurance_claims_intake,W6,,easy,policy_edge_case_or_refusal,W6,insurance_claims_intake_W6,claim_denied_lapsed_policy,"The main goal is to refuse the claim due to the policy being lapsed and coverage not confirmed, which is a policy-based denial.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W7_TC1,"TITLE: Duplicate Claim – FNOL Already Reported, Link and Notify
+DESCRIPTION: Duplicate Claim – FNOL Already Reported, Link and Notify
+
+Covers scenario where FNOL matches existing claim, links communication and notifies customer.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Following up on my previous claim for roof damage after last week's storm."", ""policy_number"": ""HO-112233"", ""claim_type"": ""property"", ""severity"": ""standard"", ""duplicate_claim_found"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""data_incomplete"": false}",classify_claim_type|create_claim_record|extract_loss_details|send_claim_acknowledgment,SUCCESS,4,insurance_claims_intake,W7,,easy,policy_edge_case_or_refusal,W7,insurance_claims_intake_W7,duplicate_claim_handling,"The main goal is to identify and handle a duplicate claim by linking it to the existing one and notifying the customer, which involves applying a policy rule about duplicates rather than creating or modifying a record.",gpt-4.1
+synthetic,insurance,InsuranceClaimsIntakeAndTriageAgent_W8_TC1,"TITLE: Complex Commercial Property Claim – Business Interruption, Large Loss
+DESCRIPTION: Complex Commercial Property Claim – Business Interruption, Large Loss
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Fire in warehouse disrupted operations, lost inventory and halted business."", ""policy_number"": ""CP-445566"", ""claim_type"": ""commercial_property"", ""severity"": ""large_loss"", ""business_interruption"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,SUCCESS,8,insurance_claims_intake,W8,,hard,new_creation,W8,insurance_claims_intake_W8,commercial_property_claim,The main goal is to file a new commercial property insurance claim for business interruption and large loss due to a warehouse fire.,gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1,"TITLE: Standard requisition, preferred supplier, exact invoice match
+DESCRIPTION: TestCase 1: Standard requisition, preferred supplier, exact invoice match
+
+This test case covers the typical happy path for a standard procurement in manufacturing,
+where the requisition is within budget, uses a preferred supplier, and the invoice matches exactly,
+resulting in auto-approval and prompt payment processing.
+INPUT CONDITIONS: requisition_type: standard; budget_status: within_limit; supplier_contract_status: preferred; invoice_match_status: exact; priority: normal
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445521"", ""requisition_type"": ""standard"", ""amount"": 15000.0, ""cost_center"": ""CC-50100"", ""GL_account"": ""GL-50100"", ""supplier_id"": ""SUP-ABC123"", ""priority"": ""normal"", ""invoice_id"": ""INV-556677"", ""receipt_id"": ""GR-887812""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier|validate_budget_availability,SUCCESS,8,manufacturing_purchase_to_pay,W1,,easy,verification_or_compliance,W1,manufacturing_purchase_to_pay_W1,invoice_matching,"The main goal is to check and approve the invoice against the requisition and contract terms, resulting in auto-approval if all criteria are met.",gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2,"TITLE: Standard requisition, preferred supplier, small price variance within tolerance
+DESCRIPTION: Standard requisition, preferred supplier, small price variance within tolerance.
+
+Covers the workflow path where an invoice has a small price variance but remains within auto-approval tolerance.
+INPUT CONDITIONS: requisition_type: standard; budget_status: within_limit; supplier_contract_status: preferred; invoice_match_status: small_variance; variance_amount: 50; priority: normal
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445534"", ""requisition_type"": ""standard"", ""amount"": 5000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-OFFICEDEPOT"", ""priority"": ""normal"", ""invoice_id"": ""INV-887799"", ""receipt_id"": ""GR-445501""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier|validate_budget_availability,SUCCESS,8,manufacturing_purchase_to_pay,W1,Standard Raw Materials Purchase - 3-Way Match,easy,verification_or_compliance,W1,manufacturing_purchase_to_pay_W1,invoice_small_variance,"The main goal is to check if the invoice's small price variance is within the auto-approval tolerance, which is a compliance/approval decision.",gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1,"TITLE: Budget exceeded, CFO override granted, PO created and sent
+DESCRIPTION: Validates successful path for budget overrun with override approval and subsequent PO creation.
+This test case exercises the workflow for handling a purchase requisition where the budget is exceeded,
+a CFO override is granted, and the PO is created and sent to the supplier.
+INPUT CONDITIONS: budget_status: exceeded; requisition_type: standard; amount: 22000.00; CFO approval: granted
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445600"", ""requisition_type"": ""standard"", ""amount"": 22000.0, ""cost_center"": ""CC-50100"", ""GL_account"": ""GL-50100"", ""supplier_id"": ""SUP-ABC123"", ""priority"": ""high""}",check_supplier_contracts|create_purchase_order|read_purchase_requisition|send_po_to_supplier|validate_budget_availability,HUMAN_IN_THE_LOOP|SUCCESS,5,manufacturing_purchase_to_pay,W2,,medium,new_creation,W2,manufacturing_purchase_to_pay_W2,po_creation_with_override,The main goal is to create and send a new purchase order after obtaining CFO override approval for a budget overrun.,gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1,"TITLE: Invoice price mismatch > $500, AP resolves and payment processed
+DESCRIPTION: Invoice price mismatch > $500, AP resolves and payment processed.
+
+Validates successful exception handling for price variance above tolerance, resolved by AP.
+INPUT CONDITIONS: invoice_match_status: price_mismatch; variance_amount: 800; AP review: resolved
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445700"", ""requisition_type"": ""standard"", ""amount"": 12000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-XYZ789"", ""priority"": ""normal"", ""invoice_id"": ""INV-999888"", ""receipt_id"": ""GR-123456""}",match_invoice_to_po|process_payment|route_payment_approval,SUCCESS,3,manufacturing_purchase_to_pay,W3,Invoice Price Mismatch - Exception Routing,medium,verification_or_compliance,W3,manufacturing_purchase_to_pay_W3,invoice_price_mismatch,The main goal is to validate and resolve a price mismatch exception by reviewing and approving the invoice for payment according to policy.,gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1,"TITLE: Partial receipt, quantity mismatch, backorder received and payments processed
+DESCRIPTION: Partial receipt, quantity mismatch, backorder received and payments processed
+
+Validates successful handling of partial receipt and backorder reconciliation with two payments.
+INPUT CONDITIONS: invoice_match_status: quantity_mismatch; partial receipt; backorder received
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445800"", ""requisition_type"": ""standard"", ""amount"": 10000.0, ""cost_center"": ""CC-50100"", ""GL_account"": ""GL-50100"", ""supplier_id"": ""SUP-ABC123"", ""priority"": ""normal"", ""invoice_id"": ""INV-777666"", ""receipt_id"": ""GR-654321""}",match_invoice_to_po|process_payment|route_payment_approval,SUCCESS,4,manufacturing_purchase_to_pay,W4,Quantity Discrepancy - Partial Receipt,medium,verification_or_compliance,W4,manufacturing_purchase_to_pay_W4,invoice_matching_quantity_mismatch,"The main goal is to validate and reconcile a quantity mismatch between invoice and receipt, including handling backorders and ensuring payments are processed according to policy.",gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1,"TITLE: Duplicate invoice detected and rejected, supplier notified
+DESCRIPTION: Duplicate invoice detected and rejected, supplier notified.
+
+Validates successful detection and rejection of duplicate invoice, preventing double payment.
+INPUT CONDITIONS: invoice_duplicate_status: duplicate_detected; invoice_id already paid
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445900"", ""requisition_type"": ""standard"", ""amount"": 8000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-XYZ789"", ""priority"": ""normal"", ""invoice_id"": ""INV-333444"", ""receipt_id"": ""GR-999888""}",match_invoice_to_po|route_payment_approval,SUCCESS,2,manufacturing_purchase_to_pay,W5,Duplicate Invoice Detection,easy,verification_or_compliance,W5,manufacturing_purchase_to_pay_W5,duplicate_invoice_detection,"The main goal is to check and enforce the rule against duplicate invoice payments, resulting in rejection and notification.",gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1,"TITLE: Early payment discount available, cash sufficient, payment processed early
+DESCRIPTION: Early payment discount available, cash sufficient, payment processed early
+
+Validates capturing early payment discount when cash position allows.
+Exercises early payment discount branch, payment processed on accelerated schedule.
+INPUT CONDITIONS: invoice_terms.discount_available: true; cash_position: sufficient
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-446000"", ""requisition_type"": ""standard"", ""amount"": 7000.0, ""cost_center"": ""CC-50100"", ""GL_account"": ""GL-50100"", ""supplier_id"": ""SUP-ABC123"", ""priority"": ""normal"", ""invoice_id"": ""INV-555666"", ""receipt_id"": ""GR-888777""}",match_invoice_to_po|process_payment|route_payment_approval,SUCCESS,3,manufacturing_purchase_to_pay,W6,Early Payment Discount - Optimize Cash Flow,easy,verification_or_compliance,W6,manufacturing_purchase_to_pay_W6,early_payment_discount,The main goal is to validate and capture an early payment discount by checking eligibility and compliance with discount terms before processing payment.,gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1,"TITLE: Blanket PO release, within limits, auto-approval and payment
+DESCRIPTION: Test case for: Blanket PO release, within limits, auto-approval and payment
+
+Validates successful blanket PO release and payment under ongoing supply agreement.
+Exercises blanket PO release branch, auto-approval for payment when within release limits.
+INPUT CONDITIONS: requisition_type: blanket_release; release_amount: within_limit
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-446100"", ""requisition_type"": ""blanket_release"", ""amount"": 3000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-XYZ789"", ""priority"": ""normal"", ""invoice_id"": ""INV-222333"", ""receipt_id"": ""GR-444555""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier,SUCCESS,7,manufacturing_purchase_to_pay,W7,Blanket PO Release - Ongoing Supply Agreement,easy,new_creation,W7,manufacturing_purchase_to_pay_W7,blanket_po_release,"The main goal is to create (release) a new blanket PO under an existing agreement, triggering auto-approval and payment when within limits.",gpt-4.1
+synthetic,manufacturing,ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1,"TITLE: Urgent requisition, expedited PO and payment, production resumes
+DESCRIPTION: Test Case 9: Urgent requisition, expedited PO and payment, production resumes
+
+Validates successful emergency purchase path with expedited PO and payment.
+Exercises urgent requisition branch, expedited PO creation, and payment processing.
+INPUT CONDITIONS: requisition_priority: urgent; budget_status: within_limit; supplier_contract_status: preferred
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-446200"", ""requisition_type"": ""standard"", ""amount"": 18000.0, ""cost_center"": ""CC-50100"", ""GL_account"": ""GL-50100"", ""supplier_id"": ""SUP-ABC123"", ""priority"": ""urgent"", ""invoice_id"": ""INV-888999"", ""receipt_id"": ""GR-555666""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier|validate_budget_availability,SUCCESS,8,manufacturing_purchase_to_pay,W8,Emergency Purchase - Expedited Processing,easy,new_creation,W8,manufacturing_purchase_to_pay_W8,emergency_purchase_order,"The main goal is to create and process an urgent purchase order and payment, which is a new creation workflow even though it includes checks and approvals.",gpt-4.1
