@@ -1,0 +1,194 @@
+task_id,domain,given_category,task_text,tools,task_type,llm_rationale,task_type_ok,correct_task_type,notes
+DigitalAccountOpeningAgent_W1_TC2,banking,banking_accounts_deposits,"TITLE: Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding
+DESCRIPTION: Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding
+
+Covers standard tier path for individual with deposit < $5000 and micro-deposit funding verification.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-1002"", ""customer_data"": {""name"": ""Brian Lee"", ""dob"": ""1992-11-30"", ""ssn"": ""987654321"", ""address"": ""789 Oak Ave, Dallas, TX"", ""email"": ""brian.lee@email.com"", ""phone"": ""+15559876543"", ""id_type"": ""state_id"", ""id_number"": ""TX1234567"", ""country_of_residence"": ""US""}, ""account_type"": ""checking"", ""deposit_amount"": 1500, ""funding_source"": {""type"": ""external_bank"", ""account_number"": ""123456789"", ""routing_number"": ""111000025"", ""bank_name"": ""Chase""}}",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,new_creation,The main goal is to open a new individual checking account with micro-deposit funding verification.,y,,
+DigitalAccountOpeningAgent_W6_TC1,banking,banking_accounts_deposits,"TITLE: Joint Savings Account - Two Owners, Transfer Funding
+DESCRIPTION: Joint Savings Account - Two Owners, Transfer Funding
+
+Covers joint account opening for two owners with transfer from existing account.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""application_id"": ""ACC-6001"", ""customer_data"": {""name"": ""Joint Account"", ""dob"": ""1990-01-01"", ""ssn"": ""000000000"", ""address"": ""200 Family St, Seattle, WA"", ""email"": ""joint.account@email.com"", ""phone"": ""+15552000000"", ""id_type"": ""joint"", ""id_number"": ""JA-12345"", ""country_of_residence"": ""US"", ""owners"": [{""name"": ""Emily Clark"", ""dob"": ""1985-06-10"", ""ssn"": ""333445555"", ""id_type"": ""driver's_license"", ""id_number"": ""D3334444""}, {""name"": ""Michael Clark"", ""dob"": ""1983-08-22"", ""ssn"": ""444556666"", ""id_type",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,new_creation,The main goal is to open a new joint savings account for two owners and fund it via transfer from an existing account.,y,,
+DigitalAccountOpening_DigitalAccountOpening_W1_TC1,banking,banking_accounts_deposits,"TITLE: Premium Savings Account - Individual, Large Deposit, Instant Funding
+DESCRIPTION: Premium Savings Account - Individual, Large Deposit, Instant Funding
+
+Covers premium tier path for individual with deposit >= $5000 and instant funding verification.
+INPUT CONDITIONS: Applicant is individual; Deposit amount >= 5000; Funding source is external bank, instant verification
+EXPECTED OUTCOME: opened
+INPUT DATA: {""application_id"": ""ACC-1001"", ""customer_data"": {""name"": ""Alice Johnson"", ""dob"": ""1980-05-15"", ""ssn"": ""123456789"", ""address"": ""456 Elm St, Springfield, IL"", ""email"": ""alice.johnson@email.com"", ""phone"": ""+15551234567"", ""id_type"": ""driver's_license"", ""id_number"": ""D9876543"", ""country_of_residence"": ""US""}, ""account_type"": ""savings"", ""deposit_amount"": 10000, ""funding_source"": {""type"": ""external_bank"", ""account_number"": ""987654321"", ""routing_number"": ""021000021"", ""bank_name"": ""Wells Fargo""}}",calculate_account_tier|configure_account_limits|configure_fee_schedule|generate_account_disclosures|link_funding_source|open_account|perform_aml_screening|validate_customer_identity,new_creation,The main goal is to open a new premium savings account for an individual with a large deposit and instant funding verification.,y,,
+BankingCustomerOnboardingAgent_BankOnboard_W1_TC1,banking,banking_customer_onboarding,"TITLE: Low-Risk Personal Account: Standard KYC, Driver License
+DESCRIPTION: Low-Risk Personal Account: Standard KYC, Driver License
+
+Covers the most common onboarding for a personal customer with low AML risk, US nationality, and standard KYC documents.
+INPUT CONDITIONS: Personal account; KYC documents: driver license and utility bill; US nationality, occupation: engineer; Transaction volume: $5,000; All documents clear and legible
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-10001"", ""customer_type"": ""personal"", ""document_files"": [""driver_license.pdf"", ""utility_bill.jpg""], ""account_type"": ""personal_checking"", ""contact_email"": ""alice.smith@email.com"", ""contact_phone"": ""+12025550123""}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,new_creation,The main goal is to onboard and create a new personal account after standard KYC checks are completed.,y,,
+BankingCustomerOnboardingAgent_BankOnboard_W1_TC2,banking,banking_customer_onboarding,"TITLE: Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume
+DESCRIPTION: Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume
+
+Validates onboarding for a personal customer with medium AML risk, foreign nationality, and different KYC document types.
+INPUT CONDITIONS: Personal account; KYC documents: passport and proof of address; Nationality: UK, occupation: consultant; Transaction volume: $30,000; All documents clear and legible
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-10002"", ""customer_type"": ""personal"", ""document_files"": [""passport.png"", ""proof_of_address.pdf""], ""account_type"": ""personal_savings"", ""contact_email"": ""oliver.jones@email.com"", ""contact_phone"": ""+447700900123""}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,new_creation,The main goal is to onboard (create) a new personal account for a foreign national after verifying KYC documents and risk level.,y,,
+BankingCustomerOnboardingAgent_BankOnboard_W7_TC1,banking,banking_customer_onboarding,"TITLE: Address Mismatch: Customer Provides Explanation and Valid New Document
+DESCRIPTION: Address Mismatch: Customer Provides Explanation and Valid New Document
+
+Covers scenario where address mismatch is detected, customer provides explanation and new document, and onboarding proceeds successfully.
+INPUT CONDITIONS: Personal account; KYC documents: driver license (old address), utility bill (new address); Address mismatch detected; Customer provides rental_agreement.pdf with new address
+EXPECTED OUTCOME: success
+INPUT DATA: {""application_id"": ""APP-40001"", ""customer_type"": ""personal"", ""document_files"": [""driver_license.pdf"", ""utility_bill.jpg""], ""account_type"": ""personal_checking"", ""contact_email"": ""tom.baker@email.com"", ""contact_phone"": ""+12025550123"", ""address_explanation"": ""Moved recently, utility bill and rental agreement reflect new address."", ""additional_documents"": [""rental_agreement.pdf""]}",calculate_aml_risk_score|create_core_banking_customer|create_crm_profile|extract_kyc_documents|screen_sanctions_lists|send_welcome_communication|validate_identity,new_creation,"The main goal is to successfully onboard a new customer account after resolving an address mismatch during KYC, which is a new account creation process.",y,,
+BankingFraudMonitoringSupportAgent_W8_TC1,banking,banking_fraud_monitoring,"TITLE: Friendly Fraud - Chargeback Investigation, Evidence Provided
+DESCRIPTION: Test case for: Friendly Fraud - Chargeback Investigation, Evidence Provided
+
+Success path for friendly fraud chargeback investigation with all required evidence present.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883432"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""friendly_fraud"", ""transaction_type"": ""card_present"", ""lookback_days"": 30, ""additional_context"": {""device_id"": ""DEV-120012"", ""location"": ""Phoenix, AZ"", ""ip_address"": ""198.51.100.120"", ""delivery_confirmation"": true, ""signature_match"": true}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|retrieve_transaction_details|route_to_analyst,verification_or_compliance,The main goal is to investigate and validate a chargeback claim for friendly fraud by reviewing evidence and making an approve/deny decision.,y,,
+BankingFraudMonitoringSupportAgent_W6_TC1,banking,banking_fraud_monitoring,"TITLE: Velocity Fraud - Rapid Transactions Across States
+DESCRIPTION: Velocity Fraud - Rapid Transactions Across States
+
+Success path for velocity fraud with rapid multi-state transactions and high velocity metrics.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""alert_id"": ""FA-883430"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""velocity_fraud"", ""transaction_type"": ""card_not_present"", ""lookback_days"": 7, ""additional_context"": {""device_id"": ""DEV-100010"", ""location"": ""Houston, TX"", ""ip_address"": ""198.51.100.101""}}",analyze_transaction_history|calculate_fraud_risk_score|cross_reference_fraud_databases|retrieve_transaction_details|route_to_analyst,verification_or_compliance,"The main goal is to review and validate a potential fraud alert based on rapid multi-state transactions, which is a compliance and verification task.",y,,
+BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1,banking,banking_fraud_monitoring,"TITLE: Low-Risk Card Present Transaction with Typical Device
+DESCRIPTION: Low-Risk Card Present Transaction with Typical Device
+
+Covers the success path for a legitimate transaction with no anomalies, typical behavior, and a fraud risk score well below threshold.
+INPUT CONDITIONS: fraud_risk_score = 15 (well below threshold); alert_type = card_present; transaction_type = card_present; device intelligence normal (no VPN/TOR, device matches customer history); No blacklist hits
+EXPECTED OUTCOME: auto_approved
+INPUT DATA: {""alert_id"": ""FA-883421"", ""customer_id"": ""CUST-102345"", ""alert_type"": ""card_present"", ""transaction_type"": ""card_present"", ""lookback_days"": 90, ""additional_context"": {""device_id"": ""DEV-100001"", ""location"": ""San Francisco, CA"", ""ip_address"": ""192.168.1.100""}}",analyze_transaction_history|calculate_fraud_risk_score|check_device_intelligence|get_customer_profile|retrieve_transaction_details,verification_or_compliance,The main goal is to check and approve a transaction against fraud risk rules and thresholds.,y,,
+HealthcareOnboarding_W7_TC1,healthcare,healthcare_patient_onboarding,"TITLE: High-risk patient with >2 chronic conditions and >5 medications
+DESCRIPTION: Validates onboarding path for patients with complex medical history triggering care coordinator assignment.
+INPUT CONDITIONS: Medical history contains >2 chronic conditions; Medical history contains >5 medications; Insurance eligibility active
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-70001"", ""appointment_type"": ""chronic_care"", ""provider_id"": ""PROV-55667"", ""self_pay"": false}",check_provider_availability|create_ehr_patient_record|extract_insurance_info|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,new_creation,"The main goal is to onboard a new high-risk patient, which triggers care coordinator assignment as part of the creation process.",y,,
+HealthcareOnboarding_W1_TC2,healthcare,healthcare_patient_onboarding,"TITLE: Adult patient with active insurance, annual physical, no preferred dates
+DESCRIPTION: Adult patient with active insurance, annual physical, no preferred dates
+INPUT CONDITIONS: Patient age >= 18; Insurance eligibility active; All required demographics and insurance fields present; Annual physical requested; No preferred dates
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-10002"", ""appointment_type"": ""annual_physical"", ""provider_id"": ""PROV-67890"", ""self_pay"": false}",check_provider_availability|create_ehr_patient_record|extract_insurance_info|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,new_creation,The main goal is to create a new appointment for an annual physical for an adult patient with active insurance.,y,,
+HealthcareOnboarding_W5_TC1,healthcare,healthcare_patient_onboarding,"TITLE: Self-pay patient onboarding with initial visit
+DESCRIPTION: Self-pay patient onboarding with initial visit
+Covers onboarding for patient who selects self-pay; skips insurance, provides pricing estimate.
+INPUT CONDITIONS: Self-pay selected; No insurance info provided; All required demographics present
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-50001"", ""appointment_type"": ""initial_visit"", ""provider_id"": ""PROV-11223"", ""self_pay"": true}",create_ehr_patient_record|extract_medical_history|extract_patient_demographics|schedule_appointment|send_patient_communication,new_creation,The main goal is to onboard (create a new record for) a self-pay patient and schedule their initial visit.,y,,
+HealthcarePA_W7_TC1,healthcare,healthcare_prior_authorization,"TITLE: Bariatric Surgery PA - All Multi-Step Criteria Met
+DESCRIPTION: Bariatric Surgery PA - All Multi-Step Criteria Met
+
+Validates multi-step bariatric surgery PA for CPT 43644, with all documentation (nutrition, psych eval, cardiac clearance) present and criteria met.
+INPUT CONDITIONS: service_type = surgery; cpt_code = 43644; all required multi-step documentation present; criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445641"", ""payer_id"": ""PAYER-UHC"", ""plan_id"": ""PLAN-MEDICARE-02"", ""cpt_code"": ""43644"", ""diagnosis_code"": ""E66.01"", ""service_type"": ""surgery""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,verification_or_compliance,The main goal is to validate and approve a prior authorization request for bariatric surgery by checking that all required documentation and criteria are met.,y,,"borderline: files a PA request (new_creation?), but the point is validating criteria."
+HealthcarePA_W1_TC2,healthcare,healthcare_prior_authorization,"TITLE: Standard Sleep Study PA - Alternate Documentation Path
+DESCRIPTION: Standard Sleep Study PA - Alternate Documentation Path
+
+Tests standard PA for a sleep study (CPT 95800), where alternate documentation (e.g., home sleep test report) is required and present.
+INPUT CONDITIONS: service_type = standard; cpt_code = 95800 (Sleep Study); alternate required documentation available; criteria met via alternate clinical evidence
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445641"", ""payer_id"": ""PAYER-UHC"", ""plan_id"": ""PLAN-MEDICARE-02"", ""cpt_code"": ""95800"", ""diagnosis_code"": ""G47.33"", ""service_type"": ""standard""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,verification_or_compliance,The main goal is to check if the sleep study meets prior authorization criteria using alternate documentation and approve or deny based on compliance with policy.,y,,
+HealthcarePA_W5_TC1,healthcare,healthcare_prior_authorization,"TITLE: DME PA - Home Oxygen, All Clinical Criteria Met
+DESCRIPTION: DME PA - Home Oxygen, All Clinical Criteria Met
+
+Validates successful DME PA for home oxygen (E1390) with all required documentation (pulse ox, ABG, diagnosis) present.
+INPUT CONDITIONS: service_type = dme; cpt_code = E1390; all required DME documentation present; criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""E1390"", ""diagnosis_code"": ""J44.9"", ""service_type"": ""dme""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,verification_or_compliance,The main goal is to check and approve a prior authorization request for home oxygen based on clinical criteria and documentation.,y,,
+InsuranceClaimsIntakeAndTriageAgent_W7_TC1,insurance,insurance_claims_intake,"TITLE: Duplicate Claim – FNOL Already Reported, Link and Notify
+DESCRIPTION: Duplicate Claim – FNOL Already Reported, Link and Notify
+
+Covers scenario where FNOL matches existing claim, links communication and notifies customer.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Following up on my previous claim for roof damage after last week's storm."", ""policy_number"": ""HO-112233"", ""claim_type"": ""property"", ""severity"": ""standard"", ""duplicate_claim_found"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""data_incomplete"": false}",classify_claim_type|create_claim_record|extract_loss_details|send_claim_acknowledgment,policy_edge_case_or_refusal,"The main goal is to identify and handle a duplicate claim by linking it to the existing one and notifying the customer, which involves applying a policy rule about duplicates rather than creating or modifying a record.",y,,
+InsuranceClaimsIntakeAndTriageAgent_W1_TC2,insurance,insurance_claims_intake,"TITLE: Emergency Property Claim – Water Intrusion, Storm Peril, Local Vendor, Alternate Address
+DESCRIPTION: Emergency Property Claim – Water Intrusion, Storm Peril, Local Vendor, Alternate Address
+
+Tests alternate vendor dispatch and address parsing, confirms agent supports different vendor networks and locations.
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Heavy rain caused basement flooding at 88 Oak St, Springfield, IL. Water rising quickly."", ""policy_number"": ""HO-998877"", ""claim_type"": ""property"", ""severity"": ""emergency"", ""injury_reported"": false, ""catastrophe_event"": false, ""batch_size"": 1, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,new_creation,"The main goal is to file a new emergency property claim for water intrusion due to storm, including dispatching a local vendor and parsing an alternate address.",y,,
+InsuranceClaimsIntakeAndTriageAgent_W4_TC1,insurance,insurance_claims_intake,"TITLE: Workers Comp Claim – Lost Time Injury, Medical Dispatch
+DESCRIPTION: Workers Comp Claim – Lost Time Injury, Medical Dispatch
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Employee slipped on wet floor, sprained ankle, unable to work."", ""policy_number"": ""WC-777888"", ""claim_type"": ""workers_comp"", ""severity"": ""standard"", ""injury_reported"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,new_creation,The main goal is to file a new workers compensation claim for a lost time injury and initiate medical dispatch.,y,,
+ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1,manufacturing,manufacturing_purchase_to_pay,"TITLE: Blanket PO release, within limits, auto-approval and payment
+DESCRIPTION: Test case for: Blanket PO release, within limits, auto-approval and payment
+
+Validates successful blanket PO release and payment under ongoing supply agreement.
+Exercises blanket PO release branch, auto-approval for payment when within release limits.
+INPUT CONDITIONS: requisition_type: blanket_release; release_amount: within_limit
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-446100"", ""requisition_type"": ""blanket_release"", ""amount"": 3000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-XYZ789"", ""priority"": ""normal"", ""invoice_id"": ""INV-222333"", ""receipt_id"": ""GR-444555""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier,new_creation,"The main goal is to create (release) a new blanket PO under an existing agreement, triggering auto-approval and payment when within limits.",y,,borderline: creates PO but also approves and pays
+ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2,manufacturing,manufacturing_purchase_to_pay,"TITLE: Standard requisition, preferred supplier, small price variance within tolerance
+DESCRIPTION: Standard requisition, preferred supplier, small price variance within tolerance.
+
+Covers the workflow path where an invoice has a small price variance but remains within auto-approval tolerance.
+INPUT CONDITIONS: requisition_type: standard; budget_status: within_limit; supplier_contract_status: preferred; invoice_match_status: small_variance; variance_amount: 50; priority: normal
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445534"", ""requisition_type"": ""standard"", ""amount"": 5000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-OFFICEDEPOT"", ""priority"": ""normal"", ""invoice_id"": ""INV-887799"", ""receipt_id"": ""GR-445501""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier|validate_budget_availability,verification_or_compliance,"The main goal is to check if the invoice's small price variance is within the auto-approval tolerance, which is a compliance/approval decision.",y,,
+ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1,manufacturing,manufacturing_purchase_to_pay,"TITLE: Duplicate invoice detected and rejected, supplier notified
+DESCRIPTION: Duplicate invoice detected and rejected, supplier notified.
+
+Validates successful detection and rejection of duplicate invoice, preventing double payment.
+INPUT CONDITIONS: invoice_duplicate_status: duplicate_detected; invoice_id already paid
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445900"", ""requisition_type"": ""standard"", ""amount"": 8000.0, ""cost_center"": ""CC-60500"", ""GL_account"": ""GL-60500"", ""supplier_id"": ""SUP-XYZ789"", ""priority"": ""normal"", ""invoice_id"": ""INV-333444"", ""receipt_id"": ""GR-999888""}",match_invoice_to_po|route_payment_approval,verification_or_compliance,"The main goal is to check and enforce the rule against duplicate invoice payments, resulting in rejection and notification.",y,,also arguably refusal
+ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1,manufacturing,manufacturing_purchase_to_pay,"TITLE: Standard requisition, preferred supplier, exact invoice match
+DESCRIPTION: TestCase 1: Standard requisition, preferred supplier, exact invoice match
+
+This test case covers the typical happy path for a standard procurement in manufacturing,
+where the requisition is within budget, uses a preferred supplier, and the invoice matches exactly,
+resulting in auto-approval and prompt payment processing.
+INPUT CONDITIONS: requisition_type: standard; budget_status: within_limit; supplier_contract_status: preferred; invoice_match_status: exact; priority: normal
+EXPECTED OUTCOME: completed
+INPUT DATA: {""requisition_id"": ""REQ-445521"", ""requisition_type"": ""standard"", ""amount"": 15000.0, ""cost_center"": ""CC-50100"", ""GL_account"": ""GL-50100"", ""supplier_id"": ""SUP-ABC123"", ""priority"": ""normal"", ""invoice_id"": ""INV-556677"", ""receipt_id"": ""GR-887812""}",check_supplier_contracts|create_purchase_order|match_invoice_to_po|process_payment|read_purchase_requisition|route_payment_approval|send_po_to_supplier|validate_budget_availability,verification_or_compliance,"The main goal is to check and approve the invoice against the requisition and contract terms, resulting in auto-approval if all criteria are met.",n,new_creation,full P2P cycle; no category fits well.
+HealthcarePA_W1_TC1,healthcare,healthcare_prior_authorization,"TITLE: Standard MRI PA - All Documentation Present, Criteria Met
+DESCRIPTION: Standard MRI PA - All Documentation Present, Criteria Met
+
+Validates standard PA flow for a common imaging procedure (MRI) with all required documentation present and criteria met.
+INPUT CONDITIONS: service_type = standard; cpt_code = 72148 (MRI); all required clinical documentation available; medical necessity criteria met
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""72148"", ""diagnosis_code"": ""M54.5"", ""service_type"": ""standard""}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,verification_or_compliance,The main goal is to check and approve a prior authorization request for an MRI based on documentation and criteria.,y,,
+HealthcarePA_W2_TC1,healthcare,healthcare_prior_authorization,"TITLE: Documentation Completion After Initial EHR Deficiency
+DESCRIPTION: Documentation Completion After Initial EHR Deficiency
+
+Validates agent's ability to successfully complete PA after missing documents are requested and received from provider.
+INPUT CONDITIONS: service_type = standard; additional_docs_needed = true; initial EHR query missing required documentation; provider supplies missing documentation
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""72148"", ""diagnosis_code"": ""M54.5"", ""service_type"": ""standard"", ""additional_docs_needed"": true}",check_pa_requirements|gather_clinical_documentation|prepare_pa_submission|retrieve_medical_necessity_criteria|submit_pa_request|track_pa_status|validate_clinical_criteria,verification_or_compliance,The main goal is to validate and approve a prior authorization after receiving and checking the required documentation.,y,,"missing docs added to the PA, but no existing record is changed."
+InsuranceClaimsIntakeAndTriageAgent_W8_TC1,insurance,insurance_claims_intake,"TITLE: Complex Commercial Property Claim – Business Interruption, Large Loss
+DESCRIPTION: Complex Commercial Property Claim – Business Interruption, Large Loss
+INPUT CONDITIONS: 
+EXPECTED OUTCOME: 
+INPUT DATA: {""source_text"": ""Fire in warehouse disrupted operations, lost inventory and halted business."", ""policy_number"": ""CP-445566"", ""claim_type"": ""commercial_property"", ""severity"": ""large_loss"", ""business_interruption"": true, ""policy_status"": ""active"", ""coverage_confirmed"": true, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|route_to_adjuster|send_claim_acknowledgment|trigger_emergency_services|validate_policy_coverage,new_creation,The main goal is to file a new commercial property insurance claim for business interruption and large loss due to a warehouse fire.,y,,
+HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1,healthcare,healthcare_patient_onboarding,"TITLE: Patient provides updated insurance after initial inactive coverage
+DESCRIPTION: Patient provides updated insurance after initial inactive coverage
+
+Tests successful resolution after patient supplies new insurance following a coverage failure.
+INPUT CONDITIONS: Initial insurance eligibility inactive; Patient responds with updated insurance; New insurance eligibility active
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-30001"", ""appointment_type"": ""initial_visit"", ""provider_id"": ""PROV-13579"", ""self_pay"": false, ""insurance_update"": {""carrier"": ""NewHealth"", ""policy_number"": ""NH-55555"", ""group_number"": ""NHG-8888"", ""subscriber_name"": ""John Doe"", ""dob"": ""1990-06-15""}}",create_ehr_patient_record|extract_insurance_info|extract_patient_demographics|schedule_appointment|send_patient_communication|verify_insurance_eligibility,record_modification,The main goal is to update the patient's insurance record after the initial coverage was found inactive.,y,,
+HealthcareOnboarding_W6_TC1,healthcare,healthcare_patient_onboarding,"TITLE: Duplicate patient detected by SSN and DOB, records merged
+DESCRIPTION: Duplicate patient detected by SSN and DOB, records merged
+INPUT CONDITIONS: Patient demographics match existing EHR record (name + DOB or SSN); Exact match, no ambiguity
+EXPECTED OUTCOME: success
+INPUT DATA: {""form_id"": ""PAT-60001"", ""appointment_type"": ""follow_up"", ""provider_id"": ""PROV-33445"", ""existing_patient_id"": ""876543"", ""self_pay"": false}",create_ehr_patient_record|extract_patient_demographics|schedule_appointment|send_patient_communication,record_modification,"The main goal is to merge duplicate patient records, which is a modification of existing records.",y,,
+HealthcarePA_W8_TC1,healthcare,healthcare_prior_authorization,"TITLE: Status Check for Approved PA
+DESCRIPTION: Test Case 9: Status Check for Approved PA
+
+Validates agent's ability to track and report approved PA status upon provider request.
+INPUT CONDITIONS: pa_status_check = true; reference_id corresponds to approved PA
+EXPECTED OUTCOME: approved
+INPUT DATA: {""patient_id"": ""PAT-445566"", ""payer_id"": ""PAYER-ANTHEM"", ""plan_id"": ""PLAN-BCBS-01"", ""cpt_code"": ""72148"", ""diagnosis_code"": ""M54.5"", ""service_type"": ""standard"", ""pa_status_check"": true}",track_pa_status,information_lookup,"The main goal is to retrieve and report the current status of an already approved prior authorization (PA), which is a fact lookup.",y,,
+ClaimsAgent_W6_TC1,insurance,insurance_claims_intake,"TITLE: Denied Claim – Policy Lapsed, Coverage Not Confirmed
+DESCRIPTION: Denied Claim – Policy Lapsed, Coverage Not Confirmed
+INPUT CONDITIONS: policy_status = lapsed; coverage_confirmed = false; claim_type = property
+EXPECTED OUTCOME: success
+INPUT DATA: {""source_text"": ""Tree branch broke window during windstorm. Need to file claim."", ""policy_number"": ""HO-555666"", ""claim_type"": ""property"", ""severity"": ""denied"", ""policy_status"": ""lapsed"", ""coverage_confirmed"": false, ""business_interruption"": false, ""duplicate_claim_found"": false, ""data_incomplete"": false}",assess_claim_severity|classify_claim_type|create_claim_record|extract_loss_details|send_claim_acknowledgment|validate_policy_coverage,policy_edge_case_or_refusal,"The main goal is to refuse the claim due to the policy being lapsed and coverage not confirmed, which is a policy-based denial.",y,,
