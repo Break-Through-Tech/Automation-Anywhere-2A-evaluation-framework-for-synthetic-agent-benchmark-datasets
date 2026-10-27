@@ -3,7 +3,7 @@
 # If you change anything below (or the prompt in react_agent.py), bump
 # baseline_version so old results are never mixed with new ones.
 
-baseline_version: v2   # v1 = tau2 llm_agent on GPT-4.1; v2 = ReAct agent on GPT-6
+baseline_version: v2   # v1 = tau2 llm_agent on GPT-4.1; v2 = ReAct agent on gpt-6.1-terra
 
 # Path to your clone of https://github.com/sierra-research/tau2-bench,
 # relative to this baseline/ folder. Check out the commit below.
@@ -17,17 +17,26 @@ tau2_cmd: ["uv", "run", "python", "../baseline/react_agent.py"]
 # Agent implementation (registered by baseline/react_agent.py).
 agent: react_agent
 
-# Pin a dated model snapshot (not just an alias) so results can't drift if the
-# alias is repointed. Same model for the agent and the user simulator.
-# Per Sandra (10/14): use the GPT-6 series. Fill in the exact snapshot name.
+# Model for the agent and the user simulator (same for both).
+# Per Sandra (10/14): use the GPT-6 series. gpt-6.1-terra is the mid tier.
+# No dated snapshot of it exists yet; the model version actually served is
+# saved in each run's results.json.
 model: gpt-6.1-terra
 user_model: gpt-6.1-terra
 
-# Decoding settings (passed to the model as JSON)
+# Decoding settings (passed to the model as JSON).
+# gpt-6.1-terra only allows temperature 0 (and tool use) with reasoning turned
+# off, so reasoning_effort is "none". It goes through extra_body because tau2's
+# litellm version is older than this model and would otherwise block it.
+# The ReAct agent still reasons: it writes a Thought before every Action.
 decoding:
   temperature: 0.0
+  extra_body:
+    reasoning_effort: "none"
 user_decoding:
   temperature: 0.0
+  extra_body:
+    reasoning_effort: "none"
 
 seed: 42
 max_steps: 30        # cap on agent/user steps per task
