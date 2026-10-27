@@ -39,7 +39,7 @@ user_decoding:
     reasoning_effort: "none"
 
 seed: 42
-max_steps: 30        # cap on agent/user steps per task
+max_steps: 200       # tau2 default; a lower cap makes long (write-heavy) tasks fail by cutoff
 num_trials: 4        # trials per task (the "n" in 1 - c/n); set from the pilot run
 max_concurrency: 4   # simulations run at once; makes runs faster, doesn't change results
 
