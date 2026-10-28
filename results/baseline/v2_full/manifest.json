@@ -1,0 +1,66 @@
+{
+  "run_id": "v2_full",
+  "started_utc": "20261027T200049Z",
+  "baseline_version": "v2",
+  "config": {
+    "baseline_version": "v2",
+    "tau2_repo": "../tau2-bench",
+    "tau2_commit": "dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd",
+    "tau2_cmd": [
+      "uv",
+      "run",
+      "python",
+      "../baseline/react_agent.py"
+    ],
+    "agent": "react_agent",
+    "model": "gpt-6.1-terra",
+    "user_model": "gpt-6.1-terra",
+    "decoding": {
+      "temperature": 0.0,
+      "extra_body": {
+        "reasoning_effort": "none"
+      }
+    },
+    "user_decoding": {
+      "temperature": 0.0,
+      "extra_body": {
+        "reasoning_effort": "none"
+      }
+    },
+    "seed": 42,
+    "max_steps": 200,
+    "num_trials": 4,
+    "max_concurrency": 4,
+    "domains": [
+      "retail",
+      "airline",
+      "telecom"
+    ]
+  },
+  "domains": [
+    "retail",
+    "airline",
+    "telecom"
+  ],
+  "num_tasks_per_domain": "all",
+  "tau2_git_commit": "dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd",
+  "repo_git_commit": "53de0334a539b6189afdada3be49e453d01e4266",
+  "repo_has_uncommitted_changes": true,
+  "agent_source_sha256": "05f2a310865c8e3bef9891bd309c8825177c063d12362346a8c2b597104f85df",
+  "prompt_file": "prompt.txt",
+  "config_sha256": "efe6e42850030102f9f372f6483d4363d671eebb69842aab70d2710577372ea3",
+  "versions": {
+    "python_runner": "3.14.4",
+    "litellm": "1.81.11"
+  },
+  "commands": [
+    "uv run python ../baseline/react_agent.py run --domain retail --agent react_agent --agent-llm gpt-6.1-terra --agent-llm-args {\"temperature\": 0.0, \"extra_body\": {\"reasoning_effort\": \"none\"}} --user-llm gpt-6.1-terra --user-llm-args {\"temperature\": 0.0, \"extra_body\": {\"reasoning_effort\": \"none\"}} --num-trials 4 --max-steps 200 --seed 42 --save-to v2_full_retail --max-concurrency 4",
+    "uv run python ../baseline/react_agent.py run --domain airline --agent react_agent --agent-llm gpt-6.1-terra --agent-llm-args {\"temperature\": 0.0, \"extra_body\": {\"reasoning_effort\": \"none\"}} --user-llm gpt-6.1-terra --user-llm-args {\"temperature\": 0.0, \"extra_body\": {\"reasoning_effort\": \"none\"}} --num-trials 4 --max-steps 200 --seed 42 --save-to v2_full_airline --max-concurrency 4",
+    "uv run python ../baseline/react_agent.py run --domain telecom --agent react_agent --agent-llm gpt-6.1-terra --agent-llm-args {\"temperature\": 0.0, \"extra_body\": {\"reasoning_effort\": \"none\"}} --user-llm gpt-6.1-terra --user-llm-args {\"temperature\": 0.0, \"extra_body\": {\"reasoning_effort\": \"none\"}} --num-trials 4 --max-steps 200 --seed 42 --save-to v2_full_telecom --max-concurrency 4"
+  ],
+  "result_files": [
+    "/Users/sana/Desktop/automationAnywhere2A/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/tau2-bench/data/simulations/v2_full_retail/results.json",
+    "/Users/sana/Desktop/automationAnywhere2A/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/tau2-bench/data/simulations/v2_full_airline/results.json",
+    "/Users/sana/Desktop/automationAnywhere2A/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/tau2-bench/data/simulations/v2_full_telecom/results.json"
+  ]
+}

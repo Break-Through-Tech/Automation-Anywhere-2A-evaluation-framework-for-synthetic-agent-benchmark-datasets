@@ -1,34 +1,46 @@
 # Baseline agent configuration for the Difficulty metric.
 # These settings are FIXED for every run and for both datasets.
-# If you change anything below, bump baseline_version so old results are never
-# mixed with new ones.
+# If you change anything below (or the prompt in react_agent.py), bump
+# baseline_version so old results are never mixed with new ones.
 
-baseline_version: v1
+baseline_version: v2   # v1 = tau2 llm_agent on GPT-4.1; v2 = ReAct agent on gpt-6.1-terra
 
-# Path to your clone of https://github.com/sierra-research/tau2-bench
+# Path to your clone of https://github.com/sierra-research/tau2-bench,
+# relative to this baseline/ folder. Check out the commit below.
 tau2_repo: ../tau2-bench
+tau2_commit: dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd
 
-# How to invoke tau2. tau2-bench installs with `uv sync`, so `uv run tau2` works
-# without activating a virtualenv. Use ["tau2"] if tau2 is already on your PATH.
-tau2_cmd: ["uv", "run", "tau2"]
+# How to invoke tau2. This runs tau2's normal CLI through react_agent.py, which
+# registers our ReAct agent first. The script path is relative to tau2_repo.
+tau2_cmd: ["uv", "run", "python", "../baseline/react_agent.py"]
 
-# Agent implementation. "llm_agent" is tau2's built-in agent. Swap this for a
-# custom ReAct agent once one is registered with tau2.
-agent: llm_agent
+# Agent implementation (registered by baseline/react_agent.py).
+agent: react_agent
 
-# Pin a dated model snapshot (not just "gpt-4.1") so results can't drift if the
-# alias is repointed. Use the same model for agent and user simulator.
-model: gpt-4.1-2025-04-14
-user_model: gpt-4.1-2025-04-14
+# Model for the agent and the user simulator (same for both).
+# Per Sandra (10/14): use the GPT-6 series. gpt-6.1-terra is the mid tier.
+# No dated snapshot of it exists yet; the model version actually served is
+# saved in each run's results.json.
+model: gpt-6.1-terra
+user_model: gpt-6.1-terra
 
-# Decoding settings (passed to the model as JSON)
+# Decoding settings (passed to the model as JSON).
+# gpt-6.1-terra only allows temperature 0 (and tool use) with reasoning turned
+# off, so reasoning_effort is "none". It goes through extra_body because tau2's
+# litellm version is older than this model and would otherwise block it.
+# The ReAct agent still reasons: it writes a Thought before every Action.
 decoding:
   temperature: 0.0
+  extra_body:
+    reasoning_effort: "none"
 user_decoding:
   temperature: 0.0
+  extra_body:
+    reasoning_effort: "none"
 
 seed: 42
-max_steps: 30      # cap on agent/user steps per task
-num_trials: 4      # trials per task (the "n" in 1 - c/n); set from the pilot run
+max_steps: 200       # tau2 default; a lower cap makes long (write-heavy) tasks fail by cutoff
+num_trials: 4        # trials per task (the "n" in 1 - c/n); set from the pilot run
+max_concurrency: 4   # simulations run at once; makes runs faster, doesn't change results
 
 domains: [retail, airline, telecom]

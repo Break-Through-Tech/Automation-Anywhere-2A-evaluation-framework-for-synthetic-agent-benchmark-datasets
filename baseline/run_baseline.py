@@ -36,10 +36,11 @@ RESULTS_ROOT = HERE.parent / "results" / "baseline"
 FLAGS_USED = [
     "--domain", "--agent", "--agent-llm", "--agent-llm-args", "--user-llm",
     "--user-llm-args", "--num-trials", "--num-tasks", "--max-steps", "--seed",
-    "--save-to",
+    "--save-to", "--max-concurrency",
 ]
-# Files holding the agent's prompt text; hashed into the manifest so the prompt is pinned.
-PROMPT_SOURCE_FILES = ["src/tau2/agent/llm_agent.py"]
+# The ReAct agent (and its fixed prompt) lives in this repo, not in tau2-bench.
+AGENT_SOURCE = HERE / "react_agent.py"
+PLACEHOLDER = "FILL_IN"
 
 
 def sha256_file(path):
@@ -75,6 +76,8 @@ def build_command(cfg, domain, num_tasks, save_to):
         "--seed", str(cfg["seed"]),
         "--save-to", save_to,
     ]
+    if cfg.get("max_concurrency"):
+        cmd += ["--max-concurrency", str(cfg["max_concurrency"])]
     if num_tasks is not None:
         cmd += ["--num-tasks", str(num_tasks)]
     return cmd
@@ -169,6 +172,21 @@ def main():
     run_id = args.run_id or f"{cfg['baseline_version']}_{stamp}"
     out_dir = RESULTS_ROOT / run_id
 
+    # Preflight: refuse to run with an unfilled model name.
+    unfilled = [k for k in ("model", "user_model") if PLACEHOLDER in str(cfg.get(k))]
+    if unfilled and not args.dry_run:
+        sys.exit(f"Set {unfilled} in baseline_config.yaml to a real model snapshot before running.")
+
+    # Preflight: everyone must use the same tau2 version.
+    tau2_commit = run_quiet(["git", "rev-parse", "HEAD"], cwd=tau2_repo)
+    if cfg.get("tau2_commit") and tau2_commit and tau2_commit != cfg["tau2_commit"]:
+        msg = (f"tau2-bench is at {tau2_commit[:7]} but the config pins {cfg['tau2_commit'][:7]}. "
+               f"Run: cd {tau2_repo} && git checkout {cfg['tau2_commit']}")
+        if args.dry_run:
+            print("WARNING:", msg)
+        else:
+            sys.exit(msg)
+
     # Preflight: confirm tau2 exists and supports the flags we use.
     help_text = run_quiet([*cfg["tau2_cmd"], "run", "--help"], cwd=tau2_repo) or ""
     if not help_text:
@@ -189,15 +207,27 @@ def main():
         "config": cfg,
         "domains": domains,
         "num_tasks_per_domain": "all" if args.full else num_tasks,
-        "tau2_git_commit": run_quiet(["git", "rev-parse", "HEAD"], cwd=tau2_repo),
-        "prompt_source_sha256": {
-            f: sha256_file(tau2_repo / f) for f in PROMPT_SOURCE_FILES if (tau2_repo / f).exists()
-        },
+        "tau2_git_commit": tau2_commit,
+        "repo_git_commit": run_quiet(["git", "rev-parse", "HEAD"], cwd=HERE),
+        "repo_has_uncommitted_changes": bool(run_quiet(["git", "status", "--porcelain"], cwd=HERE)),
+        "agent_source_sha256": sha256_file(AGENT_SOURCE),
+        "prompt_file": "prompt.txt",
         "config_sha256": sha256_file(CONFIG_PATH),
-        "versions": {"python": platform.python_version(), "litellm": pkg_version("litellm")},
+        "versions": {
+            "python_runner": platform.python_version(),
+            # litellm runs inside tau2's environment, so ask that environment.
+            "litellm": run_quiet(["uv", "run", "python", "-c",
+                                  "import importlib.metadata as m; print(m.version('litellm'))"],
+                                 cwd=tau2_repo),
+        },
         "commands": [],
         "result_files": [],
     }
+    # Save the exact prompt template the agent uses (policy and tools fill in per domain).
+    prompt_text = run_quiet([*cfg["tau2_cmd"], "--print-prompt"], cwd=tau2_repo)
+    if not args.dry_run:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / "prompt.txt").write_text(prompt_text or "COULD NOT RENDER PROMPT; see react_agent.py")
 
     all_rows = []
     for domain in domains:
