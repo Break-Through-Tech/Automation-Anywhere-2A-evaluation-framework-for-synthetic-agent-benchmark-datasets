@@ -2,7 +2,7 @@
 """Empirical difficulty = 1 - c/n for each task, from saved baseline trial results.
 
   c = number of trials the baseline agent passed
-  n = number of VALID trials (trials that produced a reward; infra errors are excluded)
+  n = number of VALID trials (trials that produced a reward; API errors and invalid references are excluded)
 
 Input:  one or more trials.csv files written by run_baseline.py
         (columns: domain, task_id, trial, seed, reward, passed, ...)
@@ -90,7 +90,8 @@ def summarize(results):
 
 def run(trials_paths, out_dir):
     """Compute and save empirical difficulty. Returns the summary dict."""
-    results = compute_difficulty(load_trials(trials_paths))
+    trials = load_trials(trials_paths)
+    results = compute_difficulty(trials)
     if not results:
         raise ValueError(f"No trial rows found in {list(map(str, trials_paths))}")
     out_dir = Path(out_dir)
@@ -102,6 +103,15 @@ def run(trials_paths, out_dir):
         w.writerows(results)
 
     summary = summarize(results)
+    for domain, info in summary.items():
+        selected = [r for r in trials if domain == "ALL" or r["domain"] == domain]
+        invalid = {r["task_id"] if domain != "ALL" else (r["domain"], r["task_id"])
+                   for r in selected if r.get("evaluation_status") == "invalid_reference"}
+        infra = {r["task_id"] if domain != "ALL" else (r["domain"], r["task_id"])
+                 for r in selected if r.get("reward") in (None, "", "None")
+                 and r.get("evaluation_status") != "invalid_reference"}
+        info["tasks_with_invalid_references"] = len(invalid)
+        info["tasks_with_infra_errors"] = len(infra)
     (out_dir / "empirical_difficulty_summary.json").write_text(json.dumps(summary, indent=2))
     return summary
 
@@ -120,6 +130,8 @@ def main():
               f"mixed {s['mixed']}")
         if s["tasks_with_infra_errors"]:
             print(f"    WARNING: {s['tasks_with_infra_errors']} task(s) had infra-error trials excluded from n")
+        if s["tasks_with_invalid_references"]:
+            print(f"    WARNING: {s['tasks_with_invalid_references']} task(s) have invalid references and are unscored")
 
 
 if __name__ == "__main__":

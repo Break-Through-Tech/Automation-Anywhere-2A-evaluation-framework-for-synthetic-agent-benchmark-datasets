@@ -1,0 +1,513 @@
+{
+  "dataset_version": "onboarding_state_pilot_v1",
+  "source_domain": "banking_customer_onboarding",
+  "provenance": "New controlled stateful fixtures authored from source scenario inputs, narratives, and declared customer/document facts. Original mocked responses and reference trajectories are not used for grading. This is a revised pilot dataset, not a regrade of the original 64-task benchmark.",
+  "authored_assumptions": [
+    "All listed documents are valid unless a test explicitly corrupts them.",
+    "AML service results use the declared scenario risk fixtures, not a claim of real-world risk scoring.",
+    "Requested follow-up documents arrive deterministically in the simulated secure portal.",
+    "The prior address for the mismatch scenario is an explicitly authored pilot fact.",
+    "Business date-of-birth fields may be null; personal identity records require a date.",
+    "All generated customer/account/CRM/message IDs are deterministic service IDs, not original expected IDs."
+  ],
+  "cases": [
+    {
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "application": {
+        "application_id": "APP-10001",
+        "customer_type": "personal",
+        "document_files": [
+          "driver_license.pdf",
+          "utility_bill.jpg"
+        ],
+        "account_type": "personal_checking",
+        "contact_email": "alice.smith@email.com",
+        "contact_phone": "+12025550123"
+      },
+      "title": "Low-Risk Personal Account: Standard KYC, Driver License",
+      "description": "Covers the most common onboarding for a personal customer with low AML risk, US nationality, and standard KYC documents.",
+      "customer": {
+        "name": "Alice Smith",
+        "dob": "1990-04-15",
+        "address": "123 Main St, Springfield, USA"
+      },
+      "identities": [
+        {
+          "name": "Alice Smith",
+          "dob": "1990-04-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": "driver_license",
+          "id_number": "D12345678"
+        }
+      ],
+      "risk_profile": {
+        "nationality": "US",
+        "occupation": "engineer",
+        "transaction_volume": 5000,
+        "geography": "US"
+      },
+      "risk_result": {
+        "score": 25,
+        "risk_level": "low"
+      },
+      "documents": [
+        {
+          "file_id": "driver_license.pdf",
+          "document_type": "driver_license",
+          "name": "Alice Smith",
+          "dob": "1990-04-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": "driver_license",
+          "id_number": "D12345678",
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "utility_bill.jpg",
+          "document_type": "utility_bill",
+          "name": "Alice Smith",
+          "dob": "1990-04-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        }
+      ],
+      "address_reconciliation_required": false,
+      "sanctions": {
+        "Alice Smith": "none"
+      },
+      "preferred_channel": "email"
+    },
+    {
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "application": {
+        "application_id": "APP-10002",
+        "customer_type": "personal",
+        "document_files": [
+          "passport.png",
+          "proof_of_address.pdf"
+        ],
+        "account_type": "personal_savings",
+        "contact_email": "oliver.jones@email.com",
+        "contact_phone": "+447700900123"
+      },
+      "title": "Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume",
+      "description": "Validates onboarding for a personal customer with medium AML risk, foreign nationality, and different KYC document types. Success path differs due to medium risk score (from higher transaction volume and foreign nationality) but remains eligible for automated onboarding.",
+      "customer": {
+        "name": "Oliver Jones",
+        "dob": "1984-07-23",
+        "address": "22 Regent Street, London, UK"
+      },
+      "identities": [
+        {
+          "name": "Oliver Jones",
+          "dob": "1984-07-23",
+          "address": "22 Regent Street, London, UK",
+          "id_type": "passport",
+          "id_number": "UK1234567"
+        }
+      ],
+      "risk_profile": {
+        "nationality": "UK",
+        "occupation": "consultant",
+        "transaction_volume": 30000,
+        "geography": "UK"
+      },
+      "risk_result": {
+        "score": 55,
+        "risk_level": "medium"
+      },
+      "documents": [
+        {
+          "file_id": "passport.png",
+          "document_type": "passport",
+          "name": "Oliver Jones",
+          "dob": "1984-07-23",
+          "address": "22 Regent Street, London, UK",
+          "id_type": "passport",
+          "id_number": "UK1234567",
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "proof_of_address.pdf",
+          "document_type": "proof_of_address",
+          "name": "Oliver Jones",
+          "dob": "1984-07-23",
+          "address": "22 Regent Street, London, UK",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        }
+      ],
+      "address_reconciliation_required": false,
+      "sanctions": {
+        "Oliver Jones": "none"
+      },
+      "preferred_channel": "email"
+    },
+    {
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "application": {
+        "application_id": "APP-20001",
+        "customer_type": "business",
+        "document_files": [
+          "business_license.pdf",
+          "ein_letter.pdf",
+          "proof_of_address.pdf",
+          "john_smith_passport.jpg",
+          "sarah_lee_passport.jpg"
+        ],
+        "account_type": "business_checking",
+        "contact_email": "info@acmebiz.com",
+        "contact_phone": "+16175551234",
+        "beneficial_owners": [
+          "John Smith",
+          "Sarah Lee"
+        ]
+      },
+      "title": "Business Account: Multiple Owners, All Pass Screening",
+      "description": "Tests business onboarding with multiple beneficial owners, all with valid documents, low AML risk, and no sanctions matches. This case covers multi-owner KYC extraction, identity verification, sanctions screening, AML risk scoring, account creation, CRM update, and communication.",
+      "customer": {
+        "name": "Acme Biz LLC",
+        "dob": "2005-01-01",
+        "address": "789 Corporate Blvd, Springfield, USA"
+      },
+      "identities": [
+        {
+          "name": "John Smith",
+          "dob": "1980-04-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": "passport",
+          "id_number": "P12345678"
+        },
+        {
+          "name": "Sarah Lee",
+          "dob": "1985-09-21",
+          "address": "456 Oak Ave, Springfield, USA",
+          "id_type": "passport",
+          "id_number": "P87654321"
+        }
+      ],
+      "risk_profile": {
+        "nationality": "US",
+        "occupation": "consulting",
+        "business_type": "consulting",
+        "transaction_volume": 50000,
+        "geography": "US"
+      },
+      "risk_result": {
+        "score": 20,
+        "risk_level": "low"
+      },
+      "documents": [
+        {
+          "file_id": "business_license.pdf",
+          "document_type": "business_license",
+          "name": "Acme Biz LLC",
+          "dob": "2005-01-01",
+          "address": "789 Corporate Blvd, Springfield, USA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "ein_letter.pdf",
+          "document_type": "ein_letter",
+          "name": "Acme Biz LLC",
+          "dob": "2005-01-01",
+          "address": "789 Corporate Blvd, Springfield, USA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "proof_of_address.pdf",
+          "document_type": "proof_of_address",
+          "name": "Acme Biz LLC",
+          "dob": "2005-01-01",
+          "address": "789 Corporate Blvd, Springfield, USA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "john_smith_passport.jpg",
+          "document_type": "passport",
+          "name": "John Smith",
+          "dob": "1980-04-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": "passport",
+          "id_number": "P12345678",
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "sarah_lee_passport.jpg",
+          "document_type": "passport",
+          "name": "Sarah Lee",
+          "dob": "1985-09-21",
+          "address": "456 Oak Ave, Springfield, USA",
+          "id_type": "passport",
+          "id_number": "P87654321",
+          "valid": true,
+          "availability": "initial"
+        }
+      ],
+      "address_reconciliation_required": false,
+      "sanctions": {
+        "Acme Biz LLC": "none",
+        "John Smith": "none",
+        "Sarah Lee": "none"
+      },
+      "preferred_channel": "email"
+    },
+    {
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "application": {
+        "application_id": "APP-20002",
+        "customer_type": "business",
+        "document_files": [
+          "business_license.pdf",
+          "ein_letter.pdf",
+          "maria_gomez_national_id.jpg"
+        ],
+        "account_type": "business_savings",
+        "contact_email": "contact@importmex.com",
+        "contact_phone": "+525512345678",
+        "beneficial_owners": [
+          "Maria Gomez"
+        ]
+      },
+      "title": "Business Account: Single Owner, Medium AML Risk",
+      "description": "Validates business onboarding with only one beneficial owner, medium AML risk due to higher transaction volume.",
+      "customer": {
+        "name": "ImportMex S.A.",
+        "dob": null,
+        "address": "Av. Insurgentes 123, Mexico City, Mexico"
+      },
+      "identities": [
+        {
+          "name": "Maria Gomez",
+          "dob": "1982-03-14",
+          "address": "Av. Insurgentes 123, Mexico City, Mexico",
+          "id_type": "national_id",
+          "id_number": "MXNID-12345678"
+        }
+      ],
+      "risk_profile": {
+        "nationality": "Mexico",
+        "occupation": "import/export",
+        "business_type": "import/export",
+        "transaction_volume": 75000,
+        "geography": "Mexico"
+      },
+      "risk_result": {
+        "score": 60,
+        "risk_level": "medium"
+      },
+      "documents": [
+        {
+          "file_id": "business_license.pdf",
+          "document_type": "business_license",
+          "name": "ImportMex S.A.",
+          "dob": null,
+          "address": "Av. Insurgentes 123, Mexico City, Mexico",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "ein_letter.pdf",
+          "document_type": "ein_letter",
+          "name": "ImportMex S.A.",
+          "dob": null,
+          "address": "Av. Insurgentes 123, Mexico City, Mexico",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "maria_gomez_national_id.jpg",
+          "document_type": "national_id",
+          "name": "Maria Gomez",
+          "dob": "1982-03-14",
+          "address": "Av. Insurgentes 123, Mexico City, Mexico",
+          "id_type": "national_id",
+          "id_number": "MXNID-12345678",
+          "valid": true,
+          "availability": "initial"
+        }
+      ],
+      "address_reconciliation_required": false,
+      "sanctions": {
+        "ImportMex S.A.": "none",
+        "Maria Gomez": "none"
+      },
+      "preferred_channel": "email"
+    },
+    {
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "application": {
+        "application_id": "APP-30001",
+        "customer_type": "personal",
+        "document_files": [
+          "driver_license.pdf"
+        ],
+        "account_type": "personal_checking",
+        "contact_email": "jane.doe@email.com",
+        "contact_phone": "+12025550123",
+        "additional_documents": [
+          "proof_of_address.pdf"
+        ]
+      },
+      "title": "Personal Account: Missing Proof of Address, Provided After Request",
+      "description": "Tests process where customer initially omits proof of address, receives document request, and provides valid document for successful onboarding.",
+      "customer": {
+        "name": "Jane Doe",
+        "dob": "1990-01-15",
+        "address": "123 Main St, Springfield, USA"
+      },
+      "identities": [
+        {
+          "name": "Jane Doe",
+          "dob": "1990-01-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": "driver_license",
+          "id_number": "D1234567"
+        }
+      ],
+      "risk_profile": {
+        "nationality": "USA",
+        "occupation": "Engineer",
+        "transaction_volume": 10000,
+        "geography": "USA"
+      },
+      "risk_result": {
+        "score": 30,
+        "risk_level": "low"
+      },
+      "documents": [
+        {
+          "file_id": "driver_license.pdf",
+          "document_type": "driver_license",
+          "name": "Jane Doe",
+          "dob": "1990-01-15",
+          "address": null,
+          "id_type": "driver_license",
+          "id_number": "D1234567",
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "proof_of_address.pdf",
+          "document_type": "proof_of_address",
+          "name": "Jane Doe",
+          "dob": "1990-01-15",
+          "address": "123 Main St, Springfield, USA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "followup"
+        }
+      ],
+      "address_reconciliation_required": false,
+      "sanctions": {
+        "Jane Doe": "none"
+      },
+      "preferred_channel": "email"
+    },
+    {
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "application": {
+        "application_id": "APP-40001",
+        "customer_type": "personal",
+        "document_files": [
+          "driver_license.pdf",
+          "utility_bill.jpg"
+        ],
+        "account_type": "personal_checking",
+        "contact_email": "tom.baker@email.com",
+        "contact_phone": "+12025550123",
+        "address_explanation": "Moved recently, utility bill and rental agreement reflect new address.",
+        "additional_documents": [
+          "rental_agreement.pdf"
+        ]
+      },
+      "title": "Address Mismatch: Customer Provides Explanation and Valid New Document",
+      "description": "Covers scenario where address mismatch is detected, customer provides explanation and new document, and onboarding proceeds successfully.",
+      "customer": {
+        "name": "Tom Baker",
+        "dob": "1987-05-12",
+        "address": "123 Main St, Newtown, CA"
+      },
+      "identities": [
+        {
+          "name": "Tom Baker",
+          "dob": "1987-05-12",
+          "address": "123 Main St, Newtown, CA",
+          "id_type": "driver_license",
+          "id_number": "DL-9876543"
+        }
+      ],
+      "risk_profile": {
+        "nationality": "US",
+        "occupation": "Software Engineer",
+        "transaction_volume": 15000,
+        "geography": "US"
+      },
+      "risk_result": {
+        "score": 35,
+        "risk_level": "low"
+      },
+      "documents": [
+        {
+          "file_id": "driver_license.pdf",
+          "document_type": "driver_license",
+          "name": "Tom Baker",
+          "dob": "1987-05-12",
+          "address": "21 Cedar Road, Oldtown, CA",
+          "id_type": "driver_license",
+          "id_number": "DL-9876543",
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "utility_bill.jpg",
+          "document_type": "utility_bill",
+          "name": "Tom Baker",
+          "dob": "1987-05-12",
+          "address": "123 Main St, Newtown, CA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "initial"
+        },
+        {
+          "file_id": "rental_agreement.pdf",
+          "document_type": "rental_agreement",
+          "name": "Tom Baker",
+          "dob": "1987-05-12",
+          "address": "123 Main St, Newtown, CA",
+          "id_type": null,
+          "id_number": null,
+          "valid": true,
+          "availability": "followup"
+        }
+      ],
+      "address_reconciliation_required": true,
+      "sanctions": {
+        "Tom Baker": "none"
+      },
+      "preferred_channel": "email"
+    }
+  ]
+}
