@@ -1,0 +1,56 @@
+{
+  "difficulty_file": "results/difficulty/empirical_difficulty.csv",
+  "expected": "positive rho: more write actions -> higher empirical difficulty",
+  "n_tasks_scored": 278,
+  "n_tasks_unmatched": 0,
+  "overall": {
+    "num_write": {
+      "n": 278,
+      "rho": 0.1226,
+      "p_value": 0.04113603522629309
+    },
+    "num_write_agent": {
+      "n": 278,
+      "rho": 0.2372,
+      "p_value": 6.471713978628476e-05
+    }
+  },
+  "by_domain": {
+    "airline": {
+      "num_write": {
+        "n": 50,
+        "rho": 0.6507,
+        "p_value": 3.134164681201998e-07
+      },
+      "num_write_agent": {
+        "n": 50,
+        "rho": 0.6507,
+        "p_value": 3.134164681201998e-07
+      }
+    },
+    "retail": {
+      "num_write": {
+        "n": 114,
+        "rho": -0.098,
+        "p_value": 0.2997415349802332
+      },
+      "num_write_agent": {
+        "n": 114,
+        "rho": -0.098,
+        "p_value": 0.2997415349802332
+      }
+    },
+    "telecom": {
+      "num_write": {
+        "n": 114,
+        "rho": 0.3432,
+        "p_value": 0.00018511303856188322
+      },
+      "num_write_agent": {
+        "n": 114,
+        "rho": 0.2476,
+        "p_value": 0.007918968231986468
+      }
+    }
+  }
+}
