@@ -1,0 +1,20 @@
+{
+  "task_counts": {
+    "tau2": 278,
+    "synthetic": 64
+  },
+  "scope": "tau2 base split and synthetic tasks from the merged coverage labels",
+  "inputs": {
+    "coverage/attribute_scores.csv": "b44001af0a2e5ab6d1563ba02e41bad68e1a5850c57d53c369aa8045675a63c7",
+    "coverage/vendi_scores.csv": "3141dbff24319789d2c6c979475ad7afba8e951384d2d539645e25e58b403075",
+    "data/processed/tasks.jsonl": "da86fa5e65ca10599e98f9e70ebc5cf75db0b8db80c9022b8368d15ab319b7f1",
+    "coverage/labels/labels_tau2.csv": "fd57752732404e7e577a820f4baaa5eb0af3571f9be1f6fe379a026aac056bb7",
+    "coverage/labels/labels_synthetic.csv": "26e9f927a0ed6488c9d238e5c22ae65313dc882f6b89725d7fc4c515f59a364c",
+    "coverage/attribute_counts.csv": "fb407a7d42aec0bbff618c481269c3bb9ea0cbc6476775077636b62db8a63027"
+  },
+  "packages": {
+    "pandas": "3.1.0",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2"
+  }
+}

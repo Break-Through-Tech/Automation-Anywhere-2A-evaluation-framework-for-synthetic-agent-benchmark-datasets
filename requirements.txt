@@ -16,3 +16,6 @@ langsmith>=0.1.0
 PyYAML>=6.0.0
 numpy
 sentence-transformers
+pandas
+matplotlib
+seaborn

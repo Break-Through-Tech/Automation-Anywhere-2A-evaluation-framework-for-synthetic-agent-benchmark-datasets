@@ -1,0 +1,13 @@
+dataset,domain,n,vendi_score,vendi_score_norm
+tau2,all,278,23.0133,0.0828
+tau2,retail,114,27.0442,0.2372
+tau2,airline,50,15.4401,0.3088
+tau2,telecom,114,2.4987,0.0219
+synthetic,all,64,29.1359,0.4552
+synthetic,banking_accounts_deposits,8,4.7218,0.5902
+synthetic,banking_customer_onboarding,6,3.8656,0.6443
+synthetic,banking_fraud_monitoring,13,7.0064,0.539
+synthetic,healthcare_patient_onboarding,9,5.7995,0.6444
+synthetic,healthcare_prior_authorization,9,5.7809,0.6423
+synthetic,insurance_claims_intake,10,6.7396,0.674
+synthetic,manufacturing_purchase_to_pay,9,6.0284,0.6698
