@@ -1,0 +1,50 @@
+{
+  "airline": {
+    "n_tasks": 50,
+    "n_scored": 50,
+    "mean_difficulty": 0.225,
+    "never_solved (difficulty=1)": 8,
+    "always_solved (difficulty=0)": 36,
+    "mixed": 6,
+    "distinct_difficulty_values": 5,
+    "tasks_with_infra_errors": 0,
+    "min_valid_trials_per_task": 4,
+    "max_valid_trials_per_task": 4
+  },
+  "retail": {
+    "n_tasks": 114,
+    "n_scored": 114,
+    "mean_difficulty": 0.2675,
+    "never_solved (difficulty=1)": 15,
+    "always_solved (difficulty=0)": 66,
+    "mixed": 33,
+    "distinct_difficulty_values": 5,
+    "tasks_with_infra_errors": 0,
+    "min_valid_trials_per_task": 4,
+    "max_valid_trials_per_task": 4
+  },
+  "telecom": {
+    "n_tasks": 114,
+    "n_scored": 114,
+    "mean_difficulty": 0.1601,
+    "never_solved (difficulty=1)": 12,
+    "always_solved (difficulty=0)": 91,
+    "mixed": 11,
+    "distinct_difficulty_values": 5,
+    "tasks_with_infra_errors": 0,
+    "min_valid_trials_per_task": 4,
+    "max_valid_trials_per_task": 4
+  },
+  "ALL": {
+    "n_tasks": 278,
+    "n_scored": 278,
+    "mean_difficulty": 0.2158,
+    "never_solved (difficulty=1)": 35,
+    "always_solved (difficulty=0)": 193,
+    "mixed": 50,
+    "distinct_difficulty_values": 5,
+    "tasks_with_infra_errors": 0,
+    "min_valid_trials_per_task": 4,
+    "max_valid_trials_per_task": 4
+  }
+}
