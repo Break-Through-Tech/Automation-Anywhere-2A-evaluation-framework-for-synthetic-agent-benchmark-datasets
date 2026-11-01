@@ -1,5 +1,61 @@
 # AI Studio Challenge Project Title
 
+## Run the evaluation framework (issue #15)
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python run_all.py --seed 42
+```
+
+This computes **coverage** (normalized Vendi Score and Attribute Diversity)
+and **structural difficulty** (ground-truth write-action counts) for the
+committed 278-task τ²-bench base split and all 64 synthetic tasks.
+It also recomputes empirical difficulty and Spearman validation using the
+saved v2 τ²-bench baseline trials. It does not rerun agents or require an API key.
+The public sentence-transformer model downloads on first use; its revision
+is pinned and inference runs on CPU.
+
+Outputs are saved under `results/framework/`:
+
+- `metrics_summary.json`: overall scores, task counts, and limitations.
+- `metrics_by_domain.csv`: overall and per-domain/category scores.
+- `coverage_vendi.csv`, `coverage_attribute_scores.csv`,
+  `coverage_attribute_counts.csv`: coverage scores and counts.
+- `difficulty_tasks.csv`: structural and empirical scores for every task.
+- `difficulty_validation.json`, `difficulty_scatter.png`: validation results.
+- `run_metadata.json`: input/source hashes, seed, model revision, and versions.
+
+Use `--output-dir` to keep runs separate. For example:
+
+```bash
+python run_all.py --seed 42 --output-dir /tmp/framework-repeat
+```
+
+The synthetic baseline runner and evaluation protocol are documented in
+[`baseline/SYNTHETIC_BASELINE.md`](baseline/SYNTHETIC_BASELINE.md).
+When `results/baseline/v2_synthetic_full/trials.csv` exists, the framework
+automatically includes its empirical scores. Invalid-reference tasks remain
+unscored, not zero. `--synthetic-trials path/to/trials.csv` selects another
+saved run using the same fixed baseline settings.
+Trial columns are `domain,task_id,trial,reward,passed` (additional columns
+are allowed). Use the original synthetic agent-category domain and processed
+task ID. Only trials with rewards enter the empirical denominator; duplicate
+trials and unknown task IDs are rejected. Do not combine the old v1 pilot
+with the v2 full baseline. `--tau-trials` selects a different saved tau run.
+
+Synthetic Attribute Diversity uses four broad domains, while its Vendi and
+write-count breakdowns use seven agent categories. Tool entropy retains the
+existing observed-vocabulary definition. Vendi VS/n depends on sample size
+and repeated descriptions; higher difficulty does not imply higher quality.
+
+Run the focused checks with `python -m unittest discover -s tests -v`.
+The framework reads the committed task file, so a local tau2-bench clone
+is not needed for this command.
+
+---
+
 > 💡 **Note for the team:** This is just a template. Update the above title with your AI Studio Challenge Project name. Remove all guidance notes and example text in this template and populate this README with your own content. You can work on this README throughout AI Studio, and get feedback from your AI Studio Coach and Challenge Advisor before finalizing it.  
 
 ---

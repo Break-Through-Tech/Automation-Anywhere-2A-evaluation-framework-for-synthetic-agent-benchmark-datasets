@@ -16,3 +16,7 @@ langsmith>=0.1.0
 PyYAML>=6.0.0
 numpy
 sentence-transformers
+pandas
+scipy
+matplotlib
+openai>=1.0.0

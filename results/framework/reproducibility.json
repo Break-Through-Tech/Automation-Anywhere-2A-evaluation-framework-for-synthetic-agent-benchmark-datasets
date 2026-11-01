@@ -1,0 +1,17 @@
+{
+  "all_files_byte_identical": true,
+  "command": "python run_all.py --seed 42",
+  "files": {
+    "coverage_attribute_counts.csv": "fb407a7d42aec0bbff618c481269c3bb9ea0cbc6476775077636b62db8a63027",
+    "coverage_attribute_scores.csv": "b44001af0a2e5ab6d1563ba02e41bad68e1a5850c57d53c369aa8045675a63c7",
+    "coverage_vendi.csv": "68ee4d221b9fa04045128f37418564157deb3814cc741117b098662b5311abc0",
+    "difficulty_scatter.png": "c4d9049cbefb9f140662038369cdc640b909fab59cd39d91db9bc8cf43f94e92",
+    "difficulty_tasks.csv": "1c765362ab52d8f37f375233933b4928fcbae7e9f466e19305dd7a36f512f085",
+    "difficulty_validation.json": "a1b9a08f3fa2e8208bfbd3916cd478a0b3a84de4c7bd88291b1868536b6a8e07",
+    "metrics_by_domain.csv": "e9b1fbaa550673cbe419ce30e589ec32e447e6a10d5a2b43a1218c207a575ad2",
+    "metrics_summary.json": "d124e15b7063f27d348e126bb84de22d2eeaf9aab5237dd9d5e3ca296eda7850",
+    "run_metadata.json": "86fdefeb4d06c4c04f2d4056cb6906d4d54869c25b1a82bfa5d49590c3c1a978"
+  },
+  "independent_runs": 2,
+  "seed": 42
+}

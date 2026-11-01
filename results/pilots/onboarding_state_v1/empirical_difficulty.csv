@@ -1,0 +1,7 @@
+dataset_version,source_task_id,n_trials,n_valid,c_passed,difficulty
+onboarding_state_pilot_v1,BankingCustomerOnboardingAgent_BankOnboard_W1_TC1,4,4,4,0.0
+onboarding_state_pilot_v1,BankingCustomerOnboardingAgent_BankOnboard_W1_TC2,4,4,4,0.0
+onboarding_state_pilot_v1,BankingCustomerOnboardingAgent_BankOnboard_W4_TC1,4,4,4,0.0
+onboarding_state_pilot_v1,BankingCustomerOnboardingAgent_BankOnboard_W4_TC2,4,4,4,0.0
+onboarding_state_pilot_v1,BankingCustomerOnboardingAgent_BankOnboard_W6_TC1,4,4,4,0.0
+onboarding_state_pilot_v1,BankingCustomerOnboardingAgent_BankOnboard_W7_TC1,4,4,4,0.0

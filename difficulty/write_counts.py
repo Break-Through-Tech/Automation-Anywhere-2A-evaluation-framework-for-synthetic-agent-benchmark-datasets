@@ -5,8 +5,6 @@ from pathlib import Path
 path = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(path / "data"))
 
-from run_test_cases import load_test_case_classes
-
 DOMAINS = [
     "banking_accounts_deposits",
     "banking_customer_onboarding",
@@ -33,11 +31,15 @@ def load_labels():
 
 
 def count_writes(test_case, labels):
+    return count_actions(test_case.expected_tool_calls, labels)
+
+
+def count_actions(actions, labels):
     num_actions = 0
     num_write = 0
     unlabeled = []
 
-    for tool_call in test_case.expected_tool_calls:
+    for tool_call in actions:
         name = tool_call["name"]
         if name in END_TOOLS:
             continue
@@ -50,6 +52,8 @@ def count_writes(test_case, labels):
 
 
 if __name__ == "__main__":
+    from run_test_cases import load_test_case_classes
+
     labels = load_labels()
     print(f"Loaded {len(labels)} tool labels")
     rows = []

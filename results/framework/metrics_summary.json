@@ -1,0 +1,56 @@
+{
+  "datasets": {
+    "synthetic": {
+      "attribute_diversity": 0.797,
+      "dataset": "synthetic",
+      "domain": "all",
+      "empirical_tasks_scored": 47,
+      "empirical_tasks_unscored": 17,
+      "empirical_trials_valid": 188,
+      "mean_empirical_difficulty": 1.0,
+      "mean_write_count": 2.109375,
+      "median_write_count": 2.0,
+      "n_tasks": 64,
+      "vendi_score": 29.13591576,
+      "vendi_score_norm": 0.45524868
+    },
+    "tau2": {
+      "attribute_diversity": 0.8474,
+      "dataset": "tau2",
+      "domain": "all",
+      "empirical_tasks_scored": 278,
+      "empirical_tasks_unscored": 0,
+      "empirical_trials_valid": 1112,
+      "mean_empirical_difficulty": 0.21582734,
+      "mean_write_count": 2.59352518,
+      "median_write_count": 2.0,
+      "n_tasks": 278,
+      "vendi_score": 23.01329041,
+      "vendi_score_norm": 0.08278162
+    }
+  },
+  "empirical_status": "partial",
+  "limitations": [
+    "Vendi VS/n depends on sample size and repeated descriptions.",
+    "Attribute tool entropy uses each dataset's observed tool vocabulary.",
+    "Synthetic attributes use four broad domains; task/Vendi groups use seven agent categories.",
+    "Write counts measure structural difficulty; higher difficulty does not imply higher quality.",
+    "synthetic: empirical difficulty available for 47/64 tasks.",
+    "Synthetic empirical scores use a reference-trajectory/structured-outcome oracle, whereas tau2 uses its native evaluator; the scores are not strictly equivalent.",
+    "Missing scenario information and reference constraints can cause synthetic failures; the empirical score does not isolate intrinsic task difficulty."
+  ],
+  "metrics": [
+    "coverage",
+    "structural_difficulty"
+  ],
+  "scope": "committed tau2 base split and synthetic tasks",
+  "status": "complete_with_unscored_empirical_tasks",
+  "synthetic_evaluation_status_counts": {
+    "failed_reference": 188,
+    "invalid_reference": 68
+  },
+  "task_counts": {
+    "synthetic": 64,
+    "tau2": 278
+  }
+}

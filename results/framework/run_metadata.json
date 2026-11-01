@@ -1,0 +1,38 @@
+{
+  "embedding_device": "cpu",
+  "embedding_model": "all-MiniLM-L6-v2",
+  "inputs": {
+    "coverage/labels/labels_synthetic.csv": "26e9f927a0ed6488c9d238e5c22ae65313dc882f6b89725d7fc4c515f59a364c",
+    "coverage/labels/labels_tau2.csv": "fd57752732404e7e577a820f4baaa5eb0af3571f9be1f6fe379a026aac056bb7",
+    "data/processed/tasks.jsonl": "da86fa5e65ca10599e98f9e70ebc5cf75db0b8db80c9022b8368d15ab319b7f1",
+    "difficulty/synthetic_tool_labels.csv": "a30bba7c4e4caa065aa837bfd744ebb88733c0d14edb038761c2751d5485a4c1",
+    "difficulty/tau2_tool_labels.csv": "0c2e0ebb7a240fe347fc2c7710e36b43819997897f93b6f4ef02d6802df92ec8",
+    "results/baseline/v2_full/manifest.json": "c453f7b12834cc03605f421a55a6230f16178633f3947c242f3727b5b598f9fa",
+    "results/baseline/v2_full/trials.csv": "b3bbbaafaa4eb136d2536cb6aa98179bac9ed9264e1280e474722d1eaf7915d9",
+    "results/baseline/v2_synthetic_full/manifest.json": "7a233318afe7e582a432911c2458ea5624d86eacf8fbf7c9ae80d10fad386771",
+    "results/baseline/v2_synthetic_full/trials.csv": "67294ce684b69ba6e898fbd48029846faaa8a9262bdce65afd07297321d53fa0"
+  },
+  "model_revision_requested": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+  "packages": {
+    "PyYAML": "6.0.3",
+    "langchain-core": "1.6.10",
+    "matplotlib": "3.10.7",
+    "numpy": "2.3.4",
+    "openai": "3.29.0",
+    "pydantic": "2.11.9",
+    "scipy": "1.16.2",
+    "sentence-transformers": "6.2.0",
+    "torch": "2.15.0",
+    "transformers": "5.21.0"
+  },
+  "python": "3.13.7",
+  "seed": 42,
+  "sources": {
+    "baseline/compute_difficulty.py": "2593477326b3307045279a32ccff8a4a2948a34f93ebc132c99442b5a305902f",
+    "baseline/validate_difficulty.py": "3ede59a2b9b592a94258889a54676761e71d7b3f5a965336a7deaa857061bd02",
+    "coverage/attribute_diversity.py": "30ff28ddcb27771462b46c5c191b0fefa4dfe0bd063013939a7d9cf12a526e51",
+    "coverage/vendi_score.py": "b452e1869c7c12bf009f8f713667ed5ee4e1225caaf0c0aefb18cdeb5d014878",
+    "difficulty/write_counts.py": "b54bc374c419652a7d28cc6000bc3ad2e3acd9fac99ea4c643ad88661c18cc2c",
+    "run_all.py": "05cf71907b47166fcecbc2df259a3a861379ff5d59c1a2d112304e3a38a0ae74"
+  }
+}

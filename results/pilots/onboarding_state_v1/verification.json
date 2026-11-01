@@ -1,0 +1,18 @@
+{
+  "trials_verified": 24,
+  "unique_tasks": 6,
+  "trials_per_task": 4,
+  "all_tool_events_replayed_identically": true,
+  "tool_events": 239,
+  "tool_errors": 0,
+  "all_final_states_replayed_identically": true,
+  "returned_models": [
+    "gpt-6.1-terra"
+  ],
+  "source_hashes_match": true,
+  "existing_framework_output_hashes_unchanged": 9,
+  "existing_framework_input_hashes_unchanged": 9,
+  "unit_tests_passed": 31,
+  "known_valid_validation_paths_passed": 12,
+  "offline_regrade_rewards_identical": true
+}

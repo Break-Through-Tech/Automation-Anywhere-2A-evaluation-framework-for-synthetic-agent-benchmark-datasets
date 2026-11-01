@@ -1,0 +1,143 @@
+{
+  "baseline_version": "v2",
+  "config": {
+    "baseline_version": "v2",
+    "tau2_repo": "../tau2-bench",
+    "tau2_commit": "dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd",
+    "tau2_cmd": [
+      "uv",
+      "run",
+      "python",
+      "../baseline/react_agent.py"
+    ],
+    "agent": "react_agent",
+    "model": "gpt-6.1-terra",
+    "user_model": "gpt-6.1-terra",
+    "decoding": {
+      "temperature": 0.0,
+      "extra_body": {
+        "reasoning_effort": "none"
+      }
+    },
+    "user_decoding": {
+      "temperature": 0.0,
+      "extra_body": {
+        "reasoning_effort": "none"
+      }
+    },
+    "seed": 42,
+    "max_steps": 200,
+    "num_trials": 4,
+    "max_concurrency": 4,
+    "domains": [
+      "retail",
+      "airline",
+      "telecom"
+    ]
+  },
+  "adapter": "synthetic_reference_v2_schema_compat",
+  "dataset": "synthetic",
+  "run_id": "v2_synthetic_full",
+  "task_count": 64,
+  "num_trials": 4,
+  "planned_trials": 256,
+  "sources": {
+    "baseline/baseline_config.yaml": "efe6e42850030102f9f372f6483d4363d671eebb69842aab70d2710577372ea3",
+    "results/baseline/v2_full/prompt.txt": "b9ddd0cbf1792ad351a867f715b7f5c4aa019b1977c52283e0b29f8057875bc9",
+    "baseline/synthetic_user_guidelines.md": "740a29dfa64d7bc08eea3bf7493575b914a63f744acbaf7f199ee07eddaf72d3",
+    "baseline/run_synthetic_baseline.py": "e7b5aeb5ddc5ff30e706d8736f41cbb6c32ba1af1c302c5d2be2f06eefaa83bd",
+    "baseline/synthetic_environment.py": "cbea03d898c273e9bb4a43498c7eb91eecb8969661f9ce24d8627d6acb17ad7b",
+    "difficulty/synthetic_tool_labels.csv": "a30bba7c4e4caa065aa837bfd744ebb88733c0d14edb038761c2751d5485a4c1",
+    "data/banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "data/banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+    "data/banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "data/banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "data/banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+    "data/banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+    "data/healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "data/healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "data/healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "data/healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+    "data/insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "data/insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+    "data/manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "data/manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c"
+  },
+  "openai_version": "3.29.0",
+  "limitations": [
+    "Trajectory/structured-outcome oracle differs from tau2 database evaluation.",
+    "Expected calls/structured inputs are exact; descriptive text may be paraphrased.",
+    "Invalid reference tasks and infrastructure failures have no numeric reward.",
+    "Costs are unavailable from this endpoint; actual token usage is recorded.",
+    "HUMAN_IN_THE_LOOP returns a fixed acknowledgement."
+  ],
+  "started_utc": "2026-10-28T17:28:44.524678+00:00",
+  "source_migrations": [
+    {
+      "reason": "Match original runner acceptance of extra nested fields; no fixture changes.",
+      "old_sources": {
+        "baseline/baseline_config.yaml": "efe6e42850030102f9f372f6483d4363d671eebb69842aab70d2710577372ea3",
+        "results/baseline/v2_full/prompt.txt": "b9ddd0cbf1792ad351a867f715b7f5c4aa019b1977c52283e0b29f8057875bc9",
+        "baseline/synthetic_user_guidelines.md": "740a29dfa64d7bc08eea3bf7493575b914a63f744acbaf7f199ee07eddaf72d3",
+        "baseline/run_synthetic_baseline.py": "8ca2c6c360bcf4a185223920755a2392981aefb90ef61c24903875d6ae1f347a",
+        "baseline/synthetic_environment.py": "e61242dd0a6ceef15fcf33a47f437049e1b95059dccb23a7bdb9635c8f33a064",
+        "difficulty/synthetic_tool_labels.csv": "a30bba7c4e4caa065aa837bfd744ebb88733c0d14edb038761c2751d5485a4c1",
+        "data/banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+        "data/banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+        "data/banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+        "data/banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+        "data/banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+        "data/banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+        "data/healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+        "data/healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+        "data/healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+        "data/healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+        "data/insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+        "data/insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+        "data/manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+        "data/manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c"
+      },
+      "new_sources": {
+        "baseline/baseline_config.yaml": "efe6e42850030102f9f372f6483d4363d671eebb69842aab70d2710577372ea3",
+        "results/baseline/v2_full/prompt.txt": "b9ddd0cbf1792ad351a867f715b7f5c4aa019b1977c52283e0b29f8057875bc9",
+        "baseline/synthetic_user_guidelines.md": "740a29dfa64d7bc08eea3bf7493575b914a63f744acbaf7f199ee07eddaf72d3",
+        "baseline/run_synthetic_baseline.py": "e7b5aeb5ddc5ff30e706d8736f41cbb6c32ba1af1c302c5d2be2f06eefaa83bd",
+        "baseline/synthetic_environment.py": "cbea03d898c273e9bb4a43498c7eb91eecb8969661f9ce24d8627d6acb17ad7b",
+        "difficulty/synthetic_tool_labels.csv": "a30bba7c4e4caa065aa837bfd744ebb88733c0d14edb038761c2751d5485a4c1",
+        "data/banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+        "data/banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+        "data/banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+        "data/banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+        "data/banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+        "data/banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+        "data/healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+        "data/healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+        "data/healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+        "data/healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+        "data/insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+        "data/insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+        "data/manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+        "data/manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c"
+      },
+      "verified_checkpoint_trials": 110,
+      "verification": "All agent prompts are byte-identical; every executed tool event is unchanged.",
+      "interrupted_inflight_attempts_upper_bound": 4
+    }
+  ],
+  "completed_trials": 256,
+  "evaluation_status_counts": {
+    "failed_reference": 188,
+    "invalid_reference": 68
+  },
+  "completed_utc": "2026-10-28T18:16:12.312262+00:00",
+  "retry_rounds": [
+    {
+      "round": 1,
+      "trials_retried": 13,
+      "original_errors": "retries/round001",
+      "source_sha256": "15b64e3ec13346152982bc285e9a9779a34d9241f3d6adf6cac01b7ba7affda4",
+      "started_utc": "2026-10-28T19:33:25.716943+00:00",
+      "completed_utc": "2026-10-28T19:35:22.329977+00:00"
+    }
+  ]
+}

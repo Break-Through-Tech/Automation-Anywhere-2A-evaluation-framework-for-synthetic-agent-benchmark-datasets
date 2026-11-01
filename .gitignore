@@ -2,8 +2,12 @@
 .env
 .vscode/settings.json
 /venv
+/.venv/
+/.cache/
 *.pyc
 
 /data/__pycache__
 tau2-bench/
 .DS_Store
+TEAM_LEAD_DISCUSSION.md
+

@@ -1,0 +1,21 @@
+{
+  "dataset_version": "onboarding_state_pilot_v1",
+  "evaluator_version": "onboarding_business_outcomes_v1",
+  "limitations": [
+    "Pilot uses independent state assertions inspired by tau2, not tau2's evaluator implementation.",
+    "Fixtures and simulated services were revised; original traces cannot be regraded as these tasks.",
+    "AML results and follow-up uploads are simulated fixture services; free-text message meaning is not graded.",
+    "Team review of business rules and broader negative scenarios is needed before scaling."
+  ],
+  "mean_empirical_difficulty": 0.0,
+  "passed_trials": 24,
+  "planned_trials": 24,
+  "recorded_trials": 24,
+  "scope": "Six revised controlled onboarding scenarios; not original synthetic benchmark scores.",
+  "status": "complete",
+  "status_counts": {
+    "passed_outcome": 24
+  },
+  "tasks": 6,
+  "tasks_scored": 6
+}

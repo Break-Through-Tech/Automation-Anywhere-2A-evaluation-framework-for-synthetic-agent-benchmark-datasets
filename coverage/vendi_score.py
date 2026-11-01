@@ -26,10 +26,13 @@ output_path = path / "coverage" / "vendi_scores.csv"
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 
-def embed(texts, model_name=MODEL_NAME):
+def embed(texts, model_name=MODEL_NAME, seed=42, revision=None):
+    import torch
     from sentence_transformers import SentenceTransformer
 
-    return SentenceTransformer(model_name).encode(texts, normalize_embeddings=True)
+    torch.manual_seed(seed)
+    model = SentenceTransformer(model_name, device="cpu", revision=revision)
+    return model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
 
 
 def vendi_score(embeddings):
