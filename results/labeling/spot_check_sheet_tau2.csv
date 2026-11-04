@@ -1,0 +1,242 @@
+task_id,domain,task_text,tools,task_type,llm_rationale,task_type_ok,correct_task_type,notes
+airline:13,airline,"PURPOSE: Test that a user cannot modify origin / destination of a flight.
+REASON FOR CALL: You want to change your upcoming one stop return flight from ATL to LAX to a nonstop flight from ATL to LAS (Las Vegas).
+INSTRUCTIONS: You do NOT want to book a new flight, you ONLY want to change the existing one.
+
+You are fine with flights within 3-4 hours of your original departure time from ATL.
+
+You are willing to pay a fee for the change, up to $100.
+
+If the agent says your ticket is a basic economy, you are willing to upgrade to economy in order to make the change.
+
+If the agent says that the change is not possible, you ask to be transferred.",transfer_to_human_agents,policy_edge_case_or_refusal,"The main goal is to change the origin/destination of an existing flight, which is typically not allowed by airline policy, so the correct behavior is to refuse or apply the policy rule.",y,,
+airline:39,airline,"PURPOSE: Check that agent doesn't cancel reservations if the refund is not applicable even if the user asks. Agents must follow airline policy and only cancel flights that are eligible for refunds, even though the tool itself would process any cancellation.
+Also user is not a native English speaker.
+REASON FOR CALL: You want to cancel all of your upcoming flights.
+INSTRUCTIONS: Even if the agent says you will not receive a refund for some of them, you want to proceed anyway so that you can give up your seat for someone else who needs it.",cancel_reservation|get_reservation_details|get_user_details,policy_edge_case_or_refusal,"The main goal is to test whether the agent refuses to cancel nonrefundable flights against policy, even if the user insists.",n,cancellation_or_refund,
+airline:30,airline,"PURPOSE: Check that agent doesn't remove bags from a reservation.
+REASON FOR CALL: You want to make modifications to your upcoming one-stop flight from LAS to IAH (HAT266, mention only the flight number if the agent shows it to you first).
+INSTRUCTIONS: You want to change your upcoming one-stop flight from LAS to IAH to a nonstop flight.
+
+You also want to remove your checked bag and want the agent to refund you for the same. If agent says that you cannot remove bags, accept it and move on.
+
+You want to use the gift card (do not mention this unless the agent asks) for payment.",get_reservation_details|search_direct_flight|update_reservation_flights,record_modification,"The main goal is to modify an existing flight reservation from a one-stop to a nonstop flight, which is a record modification; the request to remove checked bags is secondary and only pursued if allowed.",y,,
+airline:45,airline,"PURPOSE: Check that agent does not performed cancellation or changes that are not allowed if pressured by a user with family emergency.
+REASON FOR CALL: You need to cancel your flight as soon as possible because of a family emergency.
+INSTRUCTIONS: Be insistent that you want full refund given that it was a family emergency, sound upset and and under no circumstances you want to get transferred to another agent. 
+
+If you can't get a refund, try to change the flight to May 22nd. 
+
+If that doesn't work, try to add insurance to the flight, be insistent. Under NO circumstances will you upgrade your cabin.",get_reservation_details,cancellation_or_refund,"The main goal is to cancel a flight and obtain a full refund due to a family emergency, with secondary attempts to change the flight or add insurance if a refund is not possible.",y,,
+airline:17,airline,"PURPOSE: Testing if the agent can handle user asking for 3 changes at once.
+REASON FOR CALL: For your upcoming trip from New York to Chicago, you want to:
+- add 3 checked bags
+- change the passenger to yourself
+- upgrade it to economy class. 
+
+Mention all three things at once and in this order.
+INSTRUCTIONS: You prefer gift card payment.
+
+Your birthday is in your user profile so you prefer not to provide it.",update_reservation_baggages|update_reservation_flights|update_reservation_passengers,record_modification,"The user is requesting multiple changes (adding bags, changing passenger, upgrading class) to an existing flight booking, which are all modifications to a current record.",y,,
+airline:48,airline,"PURPOSE: Agent detects that user bought ticket more than 24h ago in spite of what the user is saying.
+REASON FOR CALL: You booked the flight this morning by mistake and you want to cancel it.
+INSTRUCTIONS: Insist that you booked it 10 hours ago and you want a full refund.",get_reservation_details,cancellation_or_refund,"The main goal is to cancel a flight booking and request a full refund, regardless of the timing dispute.",y,,
+airline:26,airline,"PURPOSE: Test that agent refuses cancellation with refund if criteria are not met.
+REASON FOR CALL: You want to cancel your flights from MCO to CLT.
+INSTRUCTIONS: You insist to cancel and have the refund.",,policy_edge_case_or_refusal,"The main goal is to cancel the flight and get a refund, but the agent must refuse the refund if the criteria are not met, making this a policy enforcement scenario.",y,,
+banking_knowledge:task_068,banking_knowledge,"PURPOSE: Task: task_068
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are Riley Parker, a 34-year-old marketing coordinator from Portland, OR. You're analytical and detail-oriented - you want the absolute best deal and expect the agent to do the research.
+
+**Your situation:** You already have a Light Blue checking account with Rho-Bank. The account is basically empty now - you already moved your money out. You've saved up $25,000 and want to maximize the interest you'll earn on it in a savings account. You're planning to deposit the $25,000 into a savings account and keep it there for a year without any withdrawals or additional deposits. You want to also get a new checking account with better perks and benefits than the one you already have. After that, you want to close your old Light Blue checking account since you won't need it anymore.
+
+You ARE open to getting a credit card if it helps boost your savings rate - you're responsible with credit and always pay in full.
+
+**Your specific requirements (reveal these naturally during conversation):**
+1. **Travel insurance:** You travel frequently for work and NEED a credit card that includes travel insurance coverage. This is non-negotiable.
+2. **Early direct deposit:** You get pa",apply_for_credit_card|call_discoverable_agent_tool|log_verification|unlock_discoverable_agent_tool,new_creation,"The main goal is to open a new savings account to maximize interest and a new checking account with better perks, which are both new account creations.",y,,
+banking_knowledge:task_046,banking_knowledge,"PURPOSE: Task: task_046
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are Yuki Nakamura, a 33-year-old marketing manager from Portland, OR. You have a Business Silver Rewards Card with Rho-Bank that you've had for a couple of years, which you got when you started doing some freelance consulting work.
+
+**Your situation:** You've been looking at other credit card options and found the Pursuit Ink Business Preferred card, which offers 3x points on travel, shipping, and advertising purchases, plus no foreign transaction fees. It seems similar to your Business Silver Rewards Card but with slightly better perks for your consulting work. You don't use your Rho-Bank business card that much anymore and want to simplify your finances.
+
+**Your goal:** Express that you want to close your Business Silver Rewards Card because you found a better card elsewhere and don't use it much. If the agent mentions you have an outstanding balance, agree to pay it off. If the agent recommends the correct alternative Rho-Bank card (the Business Platinum Rewards Card), acknowledge it sounds good but politely decline because you've already made up your mind. If the agent offers any other card that doesn't match what you need, become frustrated because they",call_discoverable_agent_tool|log_verification|unlock_discoverable_agent_tool,cancellation_or_refund,The main goal is to close (cancel) the existing credit card account due to finding a better alternative elsewhere.,y,,
+banking_knowledge:task_099,banking_knowledge,"PURPOSE: Task: task_099
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are Kenji Yamamoto, a 42-year-old business consultant in San Francisco, CA. Your former colleague (you sometimes call him your 'business partner' but he actually runs his own separate consulting firm) just incorporated his new LLC and wants to open a business checking account. You want to refer him so YOU get the biggest possible referral bonus.
+
+**Verification info:**
+- Name: Kenji Yamamoto | Phone: 415-555-7723 | Email: kenji.yamamoto@consultpro.com
+- DOB: 07/15/1983 | Address: 1842 Lombard Street, Apt 5B, San Francisco, CA 94123
+
+**Tool usage:** You have access to `submit_referral`. Use it AFTER the agent has recommended which account to use for the referral and explained the bonus amounts. Call it with your user_id (ky83m9p2t6) and the account_type the agent recommended.
+
+IMPORTANT: The account_type parameter must be one of these EXACT values for business checking accounts:
+- Navy Blue Account
+- Cobalt Blue Account
+- Hunter Green Account
+- Lime Green Account
+- World Blue Account
+- True Blue Account
+- Beige Account
+- Sky Blue Account
+
+Use the value from this list that matches the agent's recommendation (e.g., if agent says ""World Blue International"", use ",call_discoverable_agent_tool|get_referrals_by_user|log_verification|submit_referral|unlock_discoverable_agent_tool,new_creation,"The main goal is to refer a new business checking account opening for a colleague, which is a new creation action.",y,,
+banking_knowledge:task_022,banking_knowledge,"PURPOSE: Task: task_022
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** Isabella Fernandez, a 32-year-old financial analyst from Miami who works part-time as a Rho-Bank customer service quality auditor. You're extremely detail-oriented and have been reviewing your own account as part of an internal audit exercise.
+
+**Your situation:** While auditing your own credit card transactions across your Diamond Elite Card, Business Platinum Rewards Card, Business Silver Rewards Card, and EcoCard, you've noticed discrepancies in your cash back rewards. Some transactions appear to have received too many points (possibly due to incorrect category assignments or promos applied incorrectly), while others received too few points (possibly missing bonus rates they should have qualified for). You want the agent to help you investigate all your transactions and identify every single error - whether the error is in your favor or against you. You believe in accuracy and want all discrepancies corrected. You are bad with technology so therefore you do not know how to, or want to access your transactions, and you need the agent to manage everything for you. Do not make up any information that you are not 100% certain of, such as any information about you",call_discoverable_user_tool|give_discoverable_user_tool|log_verification,troubleshooting,"The main goal is to investigate and resolve discrepancies in cash back rewards across multiple credit card transactions, which involves diagnosing and correcting errors rather than simply providing information or making a new request.",y,,
+banking_knowledge:task_087,banking_knowledge,"PURPOSE: Task: task_087
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are Marcus Thompson, a 35-year-old software engineer living in Seattle, Washington. You're frustrated because you've had THREE debit cards declined today.
+
+**Verification info:**
+- Name: Marcus Thompson | Phone: 206-555-3842 | Email: marcus.thompson@techdev.io
+- DOB: 03/15/1990 | Address: 2847 Pine Street, Apt 12B, Seattle, WA 98101
+
+## Conversation Flow (Respond reactively - only provide details when the agent asks):
+
+1. **Opening:** ""Hi, I'm having the worst day. I've had THREE different debit cards decline on me today! The first was at a restaurant, the second at a gas station, and the third at a grocery store. They all showed 'CODE 05' or 'Do Not Honor'. Can you help me figure out what's going on with all of them?""
+
+2. **When asked which card to start with:** ""Let's start with the restaurant one - that's my Blue Account card. I really need to pay for this business lunch!""
+
+3. **If asked about decline details for Blue Account card:**
+   - Decline code: ""It said CODE 05 or 'Do Not Honor'""
+   - Transaction type: ""It was at a restaurant, in-person with the card""
+   - Amount: ""About $85 for the lunch""
+   - Physical card: ""Yes, I have all three cards right her",call_discoverable_agent_tool|log_verification|unlock_discoverable_agent_tool,troubleshooting,"The main goal is to diagnose and resolve why multiple debit cards are being declined, which is a troubleshooting scenario.",y,,
+banking_knowledge:task_089,banking_knowledge,"PURPOSE: Task: task_089
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are David Martinez, a 42-year-old accountant living in Denver, Colorado. You are a terse person. You're frustrated because you just had THREE debit cards declined at the ATM - your Green Account card, your Blue Account card, and your 16-year-old daughter Sofia's Light Green Account (teen) card.
+
+**Verification info:**
+- Name: David Martinez | Phone: 303-555-7294 | Email: david.martinez.cpa@gmail.com
+- DOB: 06/18/1983 | Address: 4521 Mountain View Drive, Denver, CO 80203
+
+---
+
+## Conversation Flow (Respond reactively - only provide details when the agent asks)
+
+### OPENING & GENERAL RESPONSES
+
+**Opening:** ""Hi, I need help. I'm at an ATM right now and I've had THREE different debit cards decline on me. My Green Account card, my Blue Account card, and my daughter's teen account card. I really need cash - my car broke down and I need to pay the tow truck driver who only takes cash!""
+
+**If asked about the exact error message or code:** ""The screen just said 'transaction declined' or something like that. I don't remember seeing a specific code - I was too flustered to pay attention to the details.""
+
+**If asked to provide verification:** Give your name, phone, ema",call_discoverable_agent_tool|log_verification|unlock_discoverable_agent_tool,troubleshooting,The main goal is to diagnose and resolve why multiple debit cards are being declined at the ATM so the user can access cash.,y,,
+banking_knowledge:task_070,banking_knowledge,"PURPOSE: Task: task_070
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are Yuki Nakamura, a 34-year-old owner of a small digital marketing agency called ""Brightwave Digital"" based in Portland, OR. You've had a personal Green Account with Rho-Bank for about 3 years and have roughly $2,850 in it. Your business has grown and you need to separate personal and business finances. You're practical and want the agent to just tell you what to do.
+
+**Your goal:** Get ONE recommendation for a business checking account that meets all your requirements. You want the agent to recommend a single account - not give you options to choose from.
+
+**Verification info:**
+- Name: Yuki Nakamura | Phone: 503-555-0842 | Email: yuki.nakamura@simba.com
+- DOB: 05/12/1991 | Address: 3421 Sakura Avenue, Portland, OR 97205
+- Existing account: Green Account (personal checking, balance ~$2,850)
+
+## Conversation Flow:
+
+1. **Opening - State your goal clearly:** ""Hi there! I run a small digital marketing agency and I'm looking to open a business checking account that is the easiest to use and gives me the most perks. I also want stuff like no overdraft fees as well as some other requirements and I'm hoping you can tell me which account is the right fit for my nee",call_discoverable_agent_tool|log_verification|unlock_discoverable_agent_tool,information_lookup,"The user is asking for a single recommendation for a business checking account that meets specific requirements, seeking information rather than to open the account immediately.",y,,
+retail:80,retail,"PURPOSE: 
+REASON FOR CALL: For #W7209932, exchange T-Shirt {'color': 'blue', 'size': 'S', 'material': 'polyester', 'style': 'v-neck'} to {'color': 'red', 'size': 'XXL', 'material': 'cotton', 'style': 'crew neck'}; Use the gift card.
+INSTRUCTIONS: You are curious, patient, outgoing.  Try to make the conversation as confusing for the agent as possible.",exchange_delivered_order_items,record_modification,"The main goal is to exchange an existing T-shirt order for a different one, which is a modification of a record.",y,,
+retail:4,retail,"PURPOSE: 
+REASON FOR CALL: You want to know exactly how many tshirt options are available in the online store right now. You want to modify all your pending tshirts to purple, s size, same v-neck, and prefer polyester.
+INSTRUCTIONS: You are a private person that does not want to reveal much about yourself.",find_user_id_by_name_zip|get_order_details|get_product_details|get_user_details|modify_pending_order_items,information_lookup,"The main goal is to find out the exact number of t-shirt options available in the online store, which is a request for factual information.",y,,
+retail:40,retail,"PURPOSE: 
+REASON FOR CALL: You want to know how much balance does your gift card have. Also, for your recent order, whether you used your visa, mastercard, or amex credit card. You also wonder if you can apply the gift card balance to the order. If not, you want to change your payment method to visa, because the other two cards have a lot of balance.
+INSTRUCTIONS: You are a young college student under the pressure of final exams and student loans, so you are a bit anxious and want to get things done quickly.",find_user_id_by_email|get_order_details|get_user_details|modify_pending_order_payment,information_lookup,"The main goal is to find out the gift card balance, which card was used for the order, and whether the gift card can be applied; the request to change payment method is conditional and secondary.",y,,
+retail:69,retail,"PURPOSE: 
+REASON FOR CALL: You want to return an item you just received: a laptop. You think that you ordered it around April 2023 but are not sure. You want to return it because you found a better deal elsewhere. You want to return it for a full refund. If it cannot be returned, see if it can be canceled.
+INSTRUCTIONS: You are polite and friendly.",cancel_pending_order|find_user_id_by_name_zip|get_order_details|get_user_details,cancellation_or_refund,"The main goal is to return a recently received laptop for a full refund, and if not possible, to explore cancellation options.",y,,
+retail:10,retail,"PURPOSE: 
+REASON FOR CALL: For some reason, you want to return all things ordered. You have two payment methods and two orders, and you want to refund each order to the other order's payment method. If not possible, you are angry and swear for a few times, then ask for human representative. Make sure to return BOTH orders.
+INSTRUCTIONS: You are a mysterious person and do not want to reveal much about yourself or speak too many words at the same time.",find_user_id_by_email|get_order_details|get_user_details|transfer_to_human_agents,cancellation_or_refund,"The main goal is to return both orders and request refunds, with a specific (but likely impossible) request to swap the payment methods for the refunds.",y,,
+retail:45,retail,"PURPOSE: 
+REASON FOR CALL: You want to exchange a robotic vacuum cleaner in your recent order for a canister based one from the same product line. When asked for order ID, provide 9502127 first. If that doesn't work, respond exactly with 'I forgot the W at the beginning'. If and only if the agent gives you several options for the new vacuum, go for the bagless version (don't mention this if the agent just provides you one option). Ask the agent for getting a gift card for the price difference instead of the original payment method, if possible.
+INSTRUCTIONS: You randomly insert typos into your messages.",calculate|exchange_delivered_order_items|find_user_id_by_name_zip|get_order_details|get_product_details,record_modification,"The main goal is to exchange an existing robotic vacuum cleaner order for a different model, which is a modification of an existing order.",y,,
+retail:70,retail,"PURPOSE: 
+REASON FOR CALL: You recently received a helmet but you are not happy with it and want to exchange. The size is too small and you want medium, plus you want high ventilation. If multiple colors are available, you prefer blue. You do not want the  You prefer original payment to pay for the price difference, and you want to know how much you need to pay today.
+INSTRUCTIONS: You are impatient, confident, direct, messy.",exchange_delivered_order_items,record_modification,"The main goal is to exchange an existing helmet order for a different size and features, not to create a new order or simply request information.",y,,
+telecom:[mms_issue]break_app_sms_permission|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",enable_roaming|grant_app_permission|refuel_data,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following a step-by-step troubleshooting process.",y,,
+telecom:[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard],telecom,"PURPOSE: Test resolution path: Mobile Data/Slow Internet Issues.
+REASON FOR CALL: You mobile data is not working properly. It either stops working or is very slow. You want to fix it and absolutely want to get excellent internet speed on your phone. You are not willing to accept any other internet speed (poor, fair or good). You do not have access to wifi.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved only when speed test returns excellent internet speed and nothing else. If it returns poor, fair or good, you will not consider the issue resolved. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",set_network_mode_preference|toggle_roaming,troubleshooting,"The main goal is to diagnose and fix the issue of slow or non-working mobile data until excellent speed is achieved, following a step-by-step troubleshooting process.",y,,
+telecom:[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy],telecom,"PURPOSE: Test resolution path: No Service/Connection Issues.
+REASON FOR CALL: Your phone has been showing 'No Service' for the past few hours.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved when the status bar shows that you have signal. Always check the status bar if the agent asks you for status information. If the agent asks you to pay a bill, you accept. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",make_payment|reboot_device|reseat_sim_card|resume_line|send_payment_request,troubleshooting,The main goal is to diagnose and resolve a 'No Service' issue on the user's phone through step-by-step troubleshooting.,y,,
+telecom:[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",reboot_device|reset_apn_settings|toggle_roaming,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following a step-by-step troubleshooting process.",y,,
+telecom:[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_enabled_off[PERSONA:Easy],telecom,"PURPOSE: Test resolution path: Mobile Data/Slow Internet Issues.
+REASON FOR CALL: You mobile data is not working properly. It either stops working or is very slow. You want to fix it and absolutely want to get excellent internet speed on your phone. You are not willing to accept any other internet speed (poor, fair or good). You do not have access to wifi.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved only when speed test returns excellent internet speed and nothing else. If it returns poor, fair or good, you will not consider the issue resolved. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",disconnect_vpn|set_network_mode_preference|toggle_roaming,troubleshooting,"The main goal is to diagnose and fix the issue of slow or non-working mobile data until excellent speed is achieved, following a step-by-step troubleshooting process.",y,,
+telecom:[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard],telecom,"PURPOSE: Test resolution path: No Service/Connection Issues.
+REASON FOR CALL: Your phone has been showing 'No Service' for the past few hours.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved when the status bar shows that you have signal. Always check the status bar if the agent asks you for status information. If the agent asks you to pay a bill, you accept. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",transfer_to_human_agents,troubleshooting,The main goal is to diagnose and resolve a 'No Service' issue on the user's phone through step-by-step troubleshooting.,y,,
+telecom:[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None],telecom,"PURPOSE: Test resolution path: MMS (Picture/Group Messaging) Issues.
+REASON FOR CALL: You are unable to send MMS messages using your messaging app for the past few hours. You want to fix it and successfully send an MMS message.
+INSTRUCTIONS: If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You are willing to refuel 2.0 GB of data if necessary, but you do not want to change your mobile data plan. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. 
+Whenever the agent asks you about your device, always ground your responses on the results of tool calls. 
+For example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.
+Never make up the results of tool calls, always ground your responses on the results of tool calls.
+If you are unsure about whether an action is necessary, always ask the agent for clarification.
+",enable_roaming|set_network_mode_preference,troubleshooting,"The main goal is to diagnose and fix the issue preventing MMS messages from being sent, following a step-by-step troubleshooting process.",y,,
+banking_knowledge:task_075,banking_knowledge,"PURPOSE: Task: task_075
+REASON FOR CALL: 
+INSTRUCTIONS: **Your character:** You are Marco Vitiello, a 31-year-old freelance photographer from Austin, TX. You're meticulous about money and want to minimize bank fees, especially while traveling.
+
+**Your situation:** You're planning a 3-month photography assignment across Southeast Asia starting next month. You'll need to withdraw cash regularly from out of network ATMs abroad in a foreign currency. You want to open a new personal checking account specifically for this trip and want to pick whichever one will cost you the least in ATM fees.
+
+**Your usage pattern (be specific about this):**
+- Trip duration: 3 months
+- Expected ATM withdrawals: about 6 per month
+- Average withdrawal amount: $350 each
+
+**Verification info:**
+- Name: Marco Vitiello | Phone: 512-555-0847 | Email: marco.vitiello@gmail.com
+- DOB: 08/22/1993 | Address: 2847 South Lamar Boulevard, Austin, TX 78704
+
+## Conversation Flow:
+
+1. **Opening - State your goal and usage pattern clearly:** ""Hi! I'm planning a 3-month photography trip to Southeast Asia next month and I need to open a new checking account for it. I want whichever account will cost me the least in ATM fees while I'm abroad.""
+
+2. **Provide verification info when",call_discoverable_agent_tool|log_verification|unlock_discoverable_agent_tool,new_creation,"The main goal is to open a new checking account specifically for the upcoming trip, with a focus on minimizing ATM fees abroad.",y,,
+retail:77,retail,"PURPOSE: 
+REASON FOR CALL: You ordered a perfume and you just tried a little bit and you like it a lot. You want to get the maximum size available for it.
+INSTRUCTIONS: If the agent cannot help with placing a new order, ask to exchange your current bottle for the largest size available.",exchange_delivered_order_items,new_creation,"The main goal is to place a new order for the largest size of the perfume, which is a new creation task.",y,,

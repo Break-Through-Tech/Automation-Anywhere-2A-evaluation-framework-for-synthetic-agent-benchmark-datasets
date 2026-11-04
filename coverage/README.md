@@ -50,3 +50,44 @@ Standalone score exports also live under `results/coverage/`:
 `attribute_counts.csv`, `attribute_scores.csv`, and `vendi_scores.csv`.
 Run `python coverage/attribute_diversity.py` or `python coverage/vendi_score.py`
 to regenerate them. The combined report remains in `results/framework/`.
+
+## Coverage summaries (issue #18)
+
+With the virtual environment active and requirements installed, run:
+
+```bash
+python coverage/plot_coverage.py
+```
+
+This reads the merged `coverage/labels/labels_tau2.csv` and
+`coverage/labels/labels_synthetic.csv`, along with `attribute_scores.csv`
+and `vendi_scores.csv` in `results/coverage/`. It uses the existing scores and makes
+no API calls. The current inputs contain 278 tau2 base tasks and 64 synthetic
+tasks. Labels from other splits or expanded datasets should not be combined
+with these scores; update the task file, labels, and scores together first.
+
+The script checks task IDs, Vendi totals, and saved attribute counts before
+plotting. These checks do not establish whether embeddings were recomputed
+after a description edit, so rerun scoring when the source text changes.
+
+Outputs go to `results/coverage/summaries/`:
+
+- Nine charts in PNG and SVG: domain and task-type distributions, top 15
+  tools for each dataset, task-type and tool heatmaps within each domain,
+  overall scores side by side, and Vendi scores by group.
+- `distribution_counts.csv`: counts and percentages for every category,
+  including zero-count task types and all tools, not just the top 15.
+- Copies of `attribute_scores.csv` and `vendi_scores.csv` used in the plots.
+- `plot_metadata.json`: input checksums, dataset sizes, and plotting versions.
+- [README with findings](../results/coverage/summaries/README.md): interpretation
+  of the committed snapshot. Review this text when regenerating the charts.
+
+Use `--output-dir PATH` to save another run. Existing generated files in that
+directory are replaced. Domain/task-type percentages use the number of tasks
+in the group as the denominator. Each tool is counted once per task; tool
+percentages can add up to more than 100%.
+
+The synthetic labels use four broad domains, while the existing Vendi scores
+use seven agent categories. The figures retain those groupings explicitly.
+The two datasets also use different domain and tool vocabularies, so the
+shared task-type labels provide the most direct category comparison.
