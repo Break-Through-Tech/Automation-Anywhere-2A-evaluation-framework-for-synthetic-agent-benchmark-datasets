@@ -1,0 +1,40 @@
+{
+  "issue": 45,
+  "limitations": [
+    "Purposive sample is not representative and is not a calibrated human gold set.",
+    "Reference self-evaluation matches its own calls by construction; it is not independent proof of semantic correctness.",
+    "Reference replay continues after individual errors for diagnostics; it is not a viable completed workflow.",
+    "Direct mock invocation bypasses schema validation; acceptance does not prove an adapter bug.",
+    "No new outcome labels or empirical scores are assigned."
+  ],
+  "original_evaluation_counts": {
+    "failed_reference": 188,
+    "invalid_reference": 68
+  },
+  "recorded_attempts": 256,
+  "reference_errors_by_execution_layer": {
+    "raised": 9,
+    "returned_without_exception": 30
+  },
+  "reference_replay_counts": {
+    "invalid_reference": 17,
+    "passed_reference": 47
+  },
+  "rubric_version": "synthetic_milestones_v0.1_draft",
+  "sample_attempts": 16,
+  "sample_categories": 7,
+  "sample_unique_tasks": 15,
+  "selection": "Per category: lexicographically first invalid-reference attempt (or least tool-active failed-reference attempt if none); most tool-active failed-reference attempt. Ties: task ID then trial. Add every workflow-terminal attempt and deduplicate identities.",
+  "status": "draft_pending_team_adjudication",
+  "tasks": 64,
+  "termination_counts": {
+    "user_stop": 254,
+    "workflow_terminal": 2
+  },
+  "user_stop_marker_counts": {
+    "###OUT-OF-SCOPE###": 96,
+    "###STOP###": 55,
+    "###TRANSFER###": 103
+  },
+  "user_stop_without_known_marker": 0
+}

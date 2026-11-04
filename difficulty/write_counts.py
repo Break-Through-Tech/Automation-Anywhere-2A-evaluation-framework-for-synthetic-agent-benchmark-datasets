@@ -16,7 +16,7 @@ DOMAINS = [
 ]
 
 labels_path = path / "difficulty" / "synthetic_tool_labels.csv"
-output_path = path / "difficulty" / "write_counts.csv"
+output_path = path / "results" / "difficulty" / "write_counts.csv"
 END_TOOLS = {"SUCCESS", "FAILED", "CANCELLED", "HUMAN_IN_THE_LOOP"}
 
 
@@ -74,6 +74,7 @@ if __name__ == "__main__":
                 "num_write": n_write,
             })
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=["dataset", "domain", "task_id", "num_actions", "num_write"])
         writer.writeheader()

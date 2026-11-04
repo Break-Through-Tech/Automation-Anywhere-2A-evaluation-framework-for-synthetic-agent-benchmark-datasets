@@ -34,10 +34,10 @@ class FrameworkTests(unittest.TestCase):
         args = run_all.parser().parse_args([])
         tasks, labels = run_all.load_inputs(args.tasks, args.labels_dir)
         counts, scores = compute_attribute_diversity(labels)
-        expected = run_all.read_csv(run_all.ROOT / "coverage/attribute_scores.csv")
+        expected = run_all.read_csv(run_all.ROOT / "results/coverage/attribute_scores.csv")
         self.assertEqual(scores, [{**r, "score": float(r["score"])} for r in expected])
         self.assertEqual(len(tasks), 342)
-        self.assertEqual(len(counts), len(run_all.read_csv(run_all.ROOT / "coverage/attribute_counts.csv")))
+        self.assertEqual(len(counts), len(run_all.read_csv(run_all.ROOT / "results/coverage/attribute_counts.csv")))
 
     def test_structural_scores_preserve_both_existing_implementations(self):
         args = run_all.parser().parse_args([])
@@ -45,7 +45,7 @@ class FrameworkTests(unittest.TestCase):
         actual = run_all.structural_difficulty(tasks, args.tasks, args.tau_tool_labels,
                                               args.synthetic_tool_labels)
         expected = []
-        for p in ("difficulty/write_counts.csv", "results/difficulty/tau2_write_counts.csv"):
+        for p in ("results/difficulty/write_counts.csv", "results/difficulty/tau2_write_counts.csv"):
             expected.extend(run_all.read_csv(run_all.ROOT / p))
         by_key = {(r["dataset"], r["domain"], r["task_id"]): r for r in actual}
         self.assertEqual(len(by_key), 342)

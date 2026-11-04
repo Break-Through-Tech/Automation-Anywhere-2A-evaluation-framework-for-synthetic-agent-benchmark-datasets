@@ -44,3 +44,9 @@ Each run replaces the CSV and metadata files in the output directory. Use
 `--output-dir` to keep separate experiments. If you supply a different task
 file with `--tasks`, set `--split-label` to describe its split; this label does
 not change which tasks are selected.
+
+
+Standalone score exports also live under `results/coverage/`:
+`attribute_counts.csv`, `attribute_scores.csv`, and `vendi_scores.csv`.
+Run `python coverage/attribute_diversity.py` or `python coverage/vendi_score.py`
+to regenerate them. The combined report remains in `results/framework/`.

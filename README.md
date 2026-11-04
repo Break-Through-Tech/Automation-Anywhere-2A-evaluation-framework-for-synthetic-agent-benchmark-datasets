@@ -1,4 +1,4 @@
-# AI Studio Challenge Project Title
+# Evaluation Framework for Agent Benchmark Datasets
 
 ## Run the evaluation framework (issue #15)
 
@@ -54,124 +54,56 @@ Run the focused checks with `python -m unittest discover -s tests -v`.
 The framework reads the committed task file, so a local tau2-bench clone
 is not needed for this command.
 
----
 
-> 💡 **Note for the team:** This is just a template. Update the above title with your AI Studio Challenge Project name. Remove all guidance notes and example text in this template and populate this README with your own content. You can work on this README throughout AI Studio, and get feedback from your AI Studio Coach and Challenge Advisor before finalizing it.  
+## Repository layout
 
----
+- `data/`: supplied synthetic tasks and tools, data loaders, and the committed unified task file.
+- `coverage/` and `difficulty/`: metric implementations and reviewed input labels.
+- `baseline/`: original baseline runners, synthetic reference grader, and evaluation protocol.
+- `labeling/`: tools for generating and reviewing coverage labels.
+- `tests/`: core framework and original synthetic baseline tests.
+- `experiments/onboarding_pilot/`: separate revised six-scenario environment, outcome grader, and its tests. See [the pilot guide](experiments/onboarding_pilot/README.md).
+- `results/framework/`: combined framework outputs.
+- `results/baseline/`: current full tau2 and original synthetic baseline evidence.
+- `results/coverage/` and `results/difficulty/`: standalone metric outputs and validation evidence.
+- `results/labeling/`: generated label exports, review sheets, and local labeling cache. Reviewed framework inputs remain in `coverage/labels/`.
+- `results/experiments/`: onboarding pilot results, kept outside the benchmark comparison.
+- `results/archive/`: earlier baseline runs and the initial runtime/cost pilot. See [the archive guide](results/archive/README.md).
 
-### 👥 **Team Members**
+The standalone metric scripts now write into `results/coverage/` or
+`results/difficulty/`, rather than beside their source code. Existing result
+files were relocated without recomputing their scores. Recorded manifests
+retain historical paths and hashes; see [the results guide](results/README.md).
 
-**Example:**
+Run the optional pilot checks separately, without API calls:
 
-| Name             | GitHub Handle | Contribution                                                             |
-|------------------|---------------|--------------------------------------------------------------------------|
-| Taylor Nguyen    | @taylornguyen | Data exploration, visualization, overall project coordination            |
-| Jordan Ramirez   | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
-| Amina Hassan     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
-| Priya Mehta      | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
-| Chris Park       | @chrispark    | Model evaluation, performance analysis, results interpretation           |
+```bash
+python -m unittest discover -s experiments/onboarding_pilot/tests -v
+python -m experiments.onboarding_pilot.run --validate-only
+python -m experiments.onboarding_pilot.run --regrade
+```
 
----
+The pilot uses revised fixtures and is not a replacement for the original
+synthetic benchmark. Its recorded results must not be merged with the original
+64-task comparison. Local virtual environments and the tau2 checkout are
+ignored by Git and are not repository deliverables.
 
-## 🎯 **Project Highlights**
+## Synthetic grading rubric review
 
-**Example:**
+Issue #45's proposed rubric is in
+[the milestone rubric](docs/evaluation/synthetic_milestone_rubric.md).
+[The evidence review](results/rubric_review/v1/review.md) covers 16 saved attempts
+across all seven synthetic categories and records open adjudication questions.
+It is an author draft awaiting independent team review, not a replacement grader
+or a new set of empirical scores.
 
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
+Reproduce the offline diagnostics without API calls:
 
----
+```bash
+python -m baseline.review_synthetic_rubric
+```
 
-## 👩🏽‍💻 **Setup and Installation**
-
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
-
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
-
----
-
-## 🏗️ **Project Overview**
-
-**Describe:**
-
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
-
----
-
-## 📊 **Data Exploration**
-
-**You might consider describing the following (as applicable):**
-
-* The dataset(s) used: origin, format, size, type of data
-* Data exploration and preprocessing approaches
-* Insights from your Exploratory Data Analysis (EDA)
-* Challenges and assumptions when working with the dataset(s)
-
-**Potential visualizations to include:**
-
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
-
----
-
-## 🧠 **Model Development**
-
-**You might consider describing the following (as applicable):**
-
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
-
-
----
-
-## 📈 **Results & Key Findings**
-
-**You might consider describing the following (as applicable):**
-
-* Performance metrics (e.g., Accuracy, F1 score, RMSE)
-* How your model performed
-* Insights from evaluating model fairness
-
-**Potential visualizations to include:**
-
-* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
-
----
-
-## 🚀 **Next Steps**
-
-**You might consider addressing the following (as applicable):**
-
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
-
----
-
-## 📝 **License**
-
-Specify how your project can be used by others. Choose an appropriate license and link it here (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type. 
-
-**Example:**
-This project is licensed under the MIT License.
-
----
-
-## 📄 **References** (Optional but encouraged)
-
-Cite relevant papers, articles, or resources that supported your project.
-
----
-
-## 🙏 **Acknowledgements** (Optional but encouraged)
-
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+The diagnostics replay supplied reference calls for execution checks and inspect
+saved trace metadata. A reference matching itself does not independently verify
+outcome correctness. Original data, rewards, traces, and framework outputs are
+preserved. Named reviewers and final rubric/denominator decisions remain pending.

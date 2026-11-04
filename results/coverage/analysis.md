@@ -5,7 +5,7 @@ The input is the committed `data/processed/tasks.jsonl` τ²-bench **base** spli
 278 tasks (retail 114, airline 50, telecom 114). The scorer is
 `coverage/vendi_score.py` using `all-MiniLM-L6-v2` sentence embeddings. All
 scenarios reuse the same embeddings. The full-set VS of 23.0133 matches the
-score in `coverage/vendi_scores.csv`.
+score in `results/coverage/vendi_scores.csv`.
 
 | Tasks scored | n | Vendi Score | VS/n | Change in VS/n from full | Equal-size full-set sample mean VS/n |
 | --- | ---: | ---: | ---: | ---: | ---: |

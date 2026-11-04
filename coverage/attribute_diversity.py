@@ -54,8 +54,10 @@ def main():
         with (folder / "labels" / f"labels_{dataset}.csv").open(newline="") as handle:
             labels[dataset] = list(csv.DictReader(handle))
     counts, scores = compute_attribute_diversity(labels)
+    output = folder.parent / "results" / "coverage"
+    output.mkdir(parents=True, exist_ok=True)
     for filename, rows in [("attribute_counts.csv", counts), ("attribute_scores.csv", scores)]:
-        with (folder / filename).open("w", newline="") as handle:
+        with (output / filename).open("w", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
             writer.writeheader()
             writer.writerows(rows)

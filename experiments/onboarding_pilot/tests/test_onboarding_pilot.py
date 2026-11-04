@@ -4,10 +4,10 @@ import json
 
 from openai import APIConnectionError
 
-from baseline.onboarding_pilot.environment import OnboardingEnvironment
-from baseline.onboarding_pilot.grader import grade_state
-from baseline.onboarding_pilot.validation import load_fixtures, valid_workflow, validate_pilot
-from baseline.onboarding_pilot.run import DATASET_VERSION, run_trial
+from experiments.onboarding_pilot.environment import OnboardingEnvironment
+from experiments.onboarding_pilot.grader import grade_state
+from experiments.onboarding_pilot.validation import load_fixtures, valid_workflow, validate_pilot
+from experiments.onboarding_pilot.run import DATASET_VERSION, run_trial
 from baseline.synthetic_environment import execute, tools_for
 
 

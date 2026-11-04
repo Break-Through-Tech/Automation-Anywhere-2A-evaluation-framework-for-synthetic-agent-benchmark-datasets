@@ -52,8 +52,8 @@ Run from the repository root:
 
 ```bash
 .venv/bin/python -B -m unittest discover -s tests -v
-.venv/bin/python -B -m baseline.onboarding_pilot.run --validate-only
-.venv/bin/python -B -m baseline.onboarding_pilot.run --regrade
+.venv/bin/python -B -m experiments.onboarding_pilot.run --validate-only
+.venv/bin/python -B -m experiments.onboarding_pilot.run --regrade
 ```
 
 The tests replay public tools with altered inputs and separately corrupt saved

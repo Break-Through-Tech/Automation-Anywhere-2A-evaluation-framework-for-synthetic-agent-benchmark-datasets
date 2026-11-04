@@ -10,7 +10,7 @@ tau2's environment-state evaluation, but **does not invoke tau2's grader**.
 - Grader: `onboarding_business_outcomes_v1`.
 - Baseline: the existing v2 model, ReAct instruction template, agent/user
   decoding settings, seed 42, four trials per task, 200 steps, concurrency four.
-- Output: `results/pilots/onboarding_state_v1/`.
+- Output: `results/experiments/onboarding_state_v1/`.
 - Trial IDs have a versioned prefix so they cannot silently be included in
   the original synthetic benchmark by `run_all.py`.
 
@@ -65,16 +65,16 @@ offline failure coverage, and decisions needed before extending this pilot.
 
 ```bash
 # No model calls: validate 12 different known-valid workflows.
-.venv/bin/python -m baseline.onboarding_pilot.run --validate-only
+.venv/bin/python -m experiments.onboarding_pilot.run --validate-only
 
 # First two of the 24 planned trial slots.
-.venv/bin/python -m baseline.onboarding_pilot.run --limit-trials 2
+.venv/bin/python -m experiments.onboarding_pilot.run --limit-trials 2
 
 # Continue remaining slots without rerunning saved trials.
-.venv/bin/python -m baseline.onboarding_pilot.run --resume
+.venv/bin/python -m experiments.onboarding_pilot.run --resume
 
 # Verify saved rewards against final states without model calls.
-.venv/bin/python -m baseline.onboarding_pilot.run --regrade
+.venv/bin/python -m experiments.onboarding_pilot.run --regrade
 
 .venv/bin/python -m unittest discover -s tests -v
 ```
@@ -89,3 +89,20 @@ The pilot demonstrates outcome-grading mechanics. A full fair comparison still
 needs reviewed task contracts, additional negative/edge cases, and consistent
 evaluation goals across datasets. It does not by itself establish that scores
 from this revised environment are directly comparable with the old tau2 run.
+
+
+## Relocation and historical evidence
+
+This pilot moved from `baseline/onboarding_pilot/` to `experiments/onboarding_pilot/`.
+Its tests are in `experiments/onboarding_pilot/tests/`:
+
+```bash
+python -m unittest discover -s experiments/onboarding_pilot/tests -v
+```
+
+Saved results moved from `results/pilots/onboarding_state_v1/` to
+`results/experiments/onboarding_state_v1/`. The original manifest retains its
+original paths and hashes. Every original hashed source is preserved under
+`source_snapshot/`; `relocation.json` records the current paths and hashes.
+The runner validates this audit when checking relocated saved results. Future
+source changes still require a new output version.

@@ -11,3 +11,7 @@ tau2-bench/
 .DS_Store
 TEAM_LEAD_DISCUSSION.md
 
+# Local Python caches and meeting preparation documents
+__pycache__/
+Team_Lead_Meeting_Brief.docx
+results/labeling/cache/

@@ -1,0 +1,1924 @@
+[
+  {
+    "domain": "banking_accounts_deposits",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###TRANSFER###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "All business owners' identities validated",
+        "expected_state": {
+          "identity_status": "verified",
+          "owners_verified": true
+        },
+        "step": 1
+      },
+      {
+        "description": "AML screening clear for business and owners",
+        "expected_state": {
+          "aml_status": "clear"
+        },
+        "step": 2
+      },
+      {
+        "description": "Account tier calculated as business_basic",
+        "expected_state": {
+          "eligibility": true,
+          "tier": "business_basic"
+        },
+        "step": 3
+      },
+      {
+        "description": "Business account limits configured for multi-signers",
+        "expected_state": {
+          "limits": {
+            "owner_access": {
+              "John Smith": "full",
+              "Mary Jones": "full"
+            },
+            "withdrawal_limit": 50000
+          }
+        },
+        "step": 4
+      },
+      {
+        "description": "Fee schedule for business applied",
+        "expected_state": {
+          "fee_schedule": {
+            "monthly_fee": 15,
+            "waivers": {
+              "business": false
+            }
+          }
+        },
+        "step": 5
+      },
+      {
+        "description": "Business disclosures generated and delivered",
+        "expected_state": {
+          "disclosures_status": "delivered"
+        },
+        "step": 6
+      },
+      {
+        "description": "Wire funding source linked and verified",
+        "expected_state": {
+          "funding_status": "verified"
+        },
+        "step": 7
+      },
+      {
+        "description": "Account opened with all authorized signers",
+        "expected_state": {
+          "confirmation_sent": true,
+          "status": "opened"
+        },
+        "step": 8
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "issues": [
+        {
+          "error": "ValueError",
+          "message": "Invalid id_type: business_license. Must be one of [\"driver's_license\", 'passport', 'state_id']",
+          "step": 0,
+          "tool": "validate_customer_identity"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R01",
+    "source_file": "data/banking_accounts_deposits/test_cases.py",
+    "source_lines": {
+      "class": 1755,
+      "description": 2134,
+      "difficulty": 2135,
+      "difficulty_reasoning": 2136,
+      "expected_tool_calls": 1819,
+      "input_data": 1765,
+      "milestones": 2062,
+      "test_case_id": 1762,
+      "title": 1763,
+      "workflow": 1764
+    },
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W3_TC1_trial0.json.gz",
+    "trace_sha256": "8409034c8171fc77fbf11e44de628e40cf1f71304fcd6ddd7cc744edd96c4066",
+    "trial": 0
+  },
+  {
+    "domain": "banking_accounts_deposits",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "validate_customer_identity"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "perform_aml_screening"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "calculate_account_tier"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "link_funding_source"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Customer identity and student status validated",
+        "expected_state": {
+          "identity_status": "verified",
+          "student_status": true
+        },
+        "step": 1
+      },
+      {
+        "description": "AML screening clear",
+        "expected_state": {
+          "aml_status": "clear"
+        },
+        "step": 2
+      },
+      {
+        "description": "Account tier calculated as student",
+        "expected_state": {
+          "eligibility": true,
+          "tier": "student"
+        },
+        "step": 3
+      },
+      {
+        "description": "Student account limits configured",
+        "expected_state": {
+          "limits": {
+            "transaction_limit": 500,
+            "transfer_limit": 2000,
+            "withdrawal_limit": 1000
+          }
+        },
+        "step": 4
+      },
+      {
+        "description": "Fee schedule with student waivers applied",
+        "expected_state": {
+          "fee_schedule": {
+            "monthly_fee": 0,
+            "waivers": {
+              "student": true
+            }
+          }
+        },
+        "step": 5
+      },
+      {
+        "description": "Student disclosures generated and delivered",
+        "expected_state": {
+          "disclosures_status": "delivered"
+        },
+        "step": 6
+      },
+      {
+        "description": "Funding source linked and verified",
+        "expected_state": {
+          "funding_status": "verified"
+        },
+        "step": 7
+      },
+      {
+        "description": "Account opened and confirmation sent",
+        "expected_state": {
+          "confirmation_sent": true,
+          "status": "opened"
+        },
+        "step": 8
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 2,
+      "missing_tool": "calculate_account_tier",
+      "required_calls": 9,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      2
+    ],
+    "review_id": "R02",
+    "source_file": "data/banking_accounts_deposits/test_cases.py",
+    "source_lines": {
+      "class": 1455,
+      "description": 1744,
+      "difficulty": 1748,
+      "difficulty_reasoning": 1749,
+      "expected_tool_calls": 1489,
+      "input_data": 1465,
+      "milestones": 1673,
+      "test_case_id": 1461,
+      "title": 1462,
+      "workflow": 1463
+    },
+    "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz",
+    "trace_sha256": "66b1c068f22f9bb6e344edfba35eb25403ecded81993b611a1ede026a725c22e",
+    "trial": 1
+  },
+  {
+    "domain": "banking_customer_onboarding",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "extract_kyc_documents"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Business and owner documents extracted",
+        "expected_state": {
+          "documents_status": "valid",
+          "required_docs_present": true
+        },
+        "step": 1
+      },
+      {
+        "description": "Owner identity verified",
+        "expected_state": {
+          "fraud_flag": false,
+          "identity_status": "verified"
+        },
+        "step": 2
+      },
+      {
+        "description": "Business and owner screened for sanctions",
+        "expected_state": {
+          "match_status": "none"
+        },
+        "step": 3
+      },
+      {
+        "description": "AML risk score calculated for business",
+        "expected_state": {
+          "risk_level": "medium",
+          "score": 60
+        },
+        "step": 4
+      },
+      {
+        "description": "Business account created in core banking",
+        "expected_state": {
+          "account_id": "ACC-30002",
+          "customer_id": "CUST-30002",
+          "status": "created"
+        },
+        "step": 5
+      },
+      {
+        "description": "CRM business profile created",
+        "expected_state": {
+          "crm_id": "CRM-30002",
+          "status": "created"
+        },
+        "step": 6
+      },
+      {
+        "description": "Welcome communication sent to business and owner",
+        "expected_state": {
+          "communication_status": "sent"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "issues": [
+        {
+          "error": "ValidationError",
+          "message": "1 validation error for screen_sanctions_lists_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+          "step": 2,
+          "tool": "screen_sanctions_lists"
+        },
+        {
+          "error": "ValidationError",
+          "message": "1 validation error for create_core_banking_customer_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+          "step": 4,
+          "tool": "create_core_banking_customer"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R03",
+    "source_file": "data/banking_customer_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 1078,
+      "description": 1274,
+      "difficulty": 1275,
+      "difficulty_reasoning": 1276,
+      "expected_tool_calls": 1102,
+      "input_data": 1087,
+      "milestones": 1217,
+      "test_case_id": 1084,
+      "title": 1085,
+      "workflow": 1086
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W4_TC2_trial0.json.gz",
+    "trace_sha256": "dd6ed7011721e61d74222bf3ebccb007183dc56dbb2bd5a9c9069e9e3e74d8e6",
+    "trial": 0
+  },
+  {
+    "domain": "banking_customer_onboarding",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "extract_kyc_documents"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "extract_kyc_documents"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Documents extracted",
+        "expected_state": {
+          "documents_status": "valid",
+          "required_docs_present": true
+        },
+        "step": 1
+      },
+      {
+        "description": "Identity verified",
+        "expected_state": {
+          "fraud_flag": false,
+          "identity_status": "verified"
+        },
+        "step": 2
+      },
+      {
+        "description": "Sanctions screening clear",
+        "expected_state": {
+          "match_status": "none"
+        },
+        "step": 3
+      },
+      {
+        "description": "AML risk score calculated",
+        "expected_state": {
+          "risk_level": "low",
+          "score": 25
+        },
+        "step": 4
+      },
+      {
+        "description": "Core banking customer created",
+        "expected_state": {
+          "customer_id": "CUST-887234",
+          "status": "created"
+        },
+        "step": 5
+      },
+      {
+        "description": "CRM profile created",
+        "expected_state": {
+          "crm_id": "CRM-3321",
+          "status": "created"
+        },
+        "step": 6
+      },
+      {
+        "description": "Welcome communication sent",
+        "expected_state": {
+          "communication_status": "sent"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 1,
+      "missing_tool": "validate_identity",
+      "required_calls": 8,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R04",
+    "source_file": "data/banking_customer_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 414,
+      "description": 606,
+      "difficulty": 607,
+      "difficulty_reasoning": 608,
+      "expected_tool_calls": 436,
+      "input_data": 424,
+      "milestones": 549,
+      "test_case_id": 420,
+      "title": 421,
+      "workflow": 422
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz",
+    "trace_sha256": "8a3bbb4a395953f99fbb72630b6c8c1753f02cbfa86b01993161f23c8643566b",
+    "trial": 0
+  },
+  {
+    "domain": "banking_fraud_monitoring",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###TRANSFER###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Login and transaction details, customer profile retrieved",
+        "expected_state": {
+          "account_status": "good_standing",
+          "transaction_id": "TX-90009"
+        },
+        "step": 1
+      },
+      {
+        "description": "Device intelligence and recent account changes checked",
+        "expected_state": {
+          "device_risk_score": 95
+        },
+        "step": 2
+      },
+      {
+        "description": "Fraud risk score calculated",
+        "expected_state": {
+          "fraud_risk_score": 97
+        },
+        "step": 3
+      },
+      {
+        "description": "Account access blocked",
+        "expected_state": {
+          "block_status": "blocked",
+          "notification_sent": true
+        },
+        "step": 4
+      },
+      {
+        "description": "Case routed to analyst with urgent escalation",
+        "expected_state": {
+          "escalation_level": "urgent"
+        },
+        "step": 5
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 0,
+      "missing_tool": "retrieve_transaction_details",
+      "required_calls": 8,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R05",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 2058,
+      "description": 2251,
+      "difficulty": 2254,
+      "difficulty_reasoning": 2255,
+      "expected_tool_calls": 2078,
+      "input_data": 2065,
+      "milestones": 2211,
+      "test_case_id": 2061,
+      "title": 2062,
+      "workflow": 2063
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W5_TC1_trial1.json.gz",
+    "trace_sha256": "f85f362a2a49b2160c0ccfd568ba88d36dfe14abc81f5f73c3892da8a091eb25",
+    "trial": 1
+  },
+  {
+    "domain": "banking_fraud_monitoring",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "retrieve_transaction_details"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "get_customer_profile"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "check_device_intelligence"
+      },
+      {
+        "error": false,
+        "index": 5,
+        "name": "cross_reference_fraud_databases"
+      },
+      {
+        "error": false,
+        "index": 6,
+        "name": "analyze_transaction_history"
+      },
+      {
+        "error": false,
+        "index": 7,
+        "name": "calculate_fraud_risk_score"
+      },
+      {
+        "error": false,
+        "index": 8,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 9,
+        "name": "route_to_analyst"
+      },
+      {
+        "error": false,
+        "index": 10,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 11,
+        "name": "check_device_intelligence"
+      },
+      {
+        "error": false,
+        "index": 12,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###OUT-OF-SCOPE###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Transaction details and customer profile retrieved",
+        "expected_state": {
+          "account_status": "good_standing",
+          "transaction_id": "TX-40004"
+        },
+        "step": 1
+      },
+      {
+        "description": "Transaction history and device intelligence analyzed",
+        "expected_state": {
+          "device_risk_score": 97,
+          "tor_detected": true
+        },
+        "step": 2
+      },
+      {
+        "description": "Fraud risk score calculated and takeover confirmed",
+        "expected_state": {
+          "fraud_risk_score": 98,
+          "risk_factors": [
+            "account_takeover",
+            "device_fraud"
+          ]
+        },
+        "step": 3
+      },
+      {
+        "description": "Auto-decline transaction and block account",
+        "expected_state": {
+          "block_status": "blocked",
+          "notification_sent": true
+        },
+        "step": 4
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 4,
+      "missing_tool": "calculate_fraud_risk_score",
+      "required_calls": 8,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      7
+    ],
+    "review_id": "R06",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 1055,
+      "description": 1252,
+      "difficulty": 1256,
+      "difficulty_reasoning": 1257,
+      "expected_tool_calls": 1077,
+      "input_data": 1065,
+      "milestones": 1215,
+      "test_case_id": 1062,
+      "title": 1063,
+      "workflow": 1064
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz",
+    "trace_sha256": "9fcd432911825c39dfcb2f379f0e6d091aa71c8b68ef0ff1f9ffa0d2759a7203",
+    "trial": 2
+  },
+  {
+    "domain": "healthcare_patient_onboarding",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "extract_patient_demographics"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "extract_medical_history"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "check_provider_availability"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 5,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Extract patient demographics",
+        "expected_state": {
+          "demographics_status": "extracted"
+        },
+        "step": 1
+      },
+      {
+        "description": "Extract medical history",
+        "expected_state": {
+          "medical_history_status": "extracted"
+        },
+        "step": 2
+      },
+      {
+        "description": "Create self-pay patient record in EHR",
+        "expected_state": {
+          "patient_record_status": "created"
+        },
+        "step": 3
+      },
+      {
+        "description": "Provide pricing estimate via communication",
+        "expected_state": {
+          "pricing_sent": true
+        },
+        "step": 4
+      },
+      {
+        "description": "Schedule appointment with payment required at visit",
+        "expected_state": {
+          "appointment_status": "scheduled"
+        },
+        "step": 5
+      },
+      {
+        "description": "Send appointment confirmation with payment instructions",
+        "expected_state": {
+          "confirmation_sent": true
+        },
+        "step": 6
+      },
+      {
+        "description": "Signal successful onboarding",
+        "expected_state": {
+          "final_status": "success"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "issues": [
+        {
+          "error": "ValidationError",
+          "message": "1 validation error for create_ehr_patient_record_arguments\ninsurance\n  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type",
+          "step": 2,
+          "tool": "create_ehr_patient_record"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R07",
+    "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 1621,
+      "description": 1782,
+      "difficulty": 1785,
+      "difficulty_reasoning": 1786,
+      "expected_tool_calls": 1634,
+      "input_data": 1628,
+      "milestones": 1731,
+      "test_case_id": 1625,
+      "title": 1626,
+      "workflow": 1627
+    },
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz",
+    "trace_sha256": "1ee99a1e542c140f9e90f79a5a384bb6dd98d9a92e5d228ade36adec93261d03",
+    "trial": 0
+  },
+  {
+    "domain": "healthcare_patient_onboarding",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "extract_patient_demographics"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "extract_insurance_info"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "verify_insurance_eligibility"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "extract_medical_history"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 5,
+        "name": "check_provider_availability"
+      },
+      {
+        "error": false,
+        "index": 6,
+        "name": "check_provider_availability"
+      },
+      {
+        "error": false,
+        "index": 7,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 8,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Extract patient demographics",
+        "expected_state": {
+          "demographics_status": "extracted"
+        },
+        "step": 1
+      },
+      {
+        "description": "Extract detailed medical history",
+        "expected_state": {
+          "chronic_conditions_count": 3,
+          "medical_history_status": "extracted",
+          "medications_count": 6
+        },
+        "step": 2
+      },
+      {
+        "description": "Verify insurance eligibility",
+        "expected_state": {
+          "insurance_eligibility_status": "active"
+        },
+        "step": 3
+      },
+      {
+        "description": "Create EHR record with high-risk flag",
+        "expected_state": {
+          "high_risk_flag": true,
+          "patient_record_status": "created"
+        },
+        "step": 4
+      },
+      {
+        "description": "Assign care coordinator (manual or system)",
+        "expected_state": {
+          "care_coordinator_assigned": true
+        },
+        "step": 5
+      },
+      {
+        "description": "Check provider availability for extended visit",
+        "expected_state": {
+          "available_slots_found": true
+        },
+        "step": 6
+      },
+      {
+        "description": "Schedule extended appointment",
+        "expected_state": {
+          "appointment_status": "scheduled"
+        },
+        "step": 7
+      },
+      {
+        "description": "Send welcome packet and disease management resources",
+        "expected_state": {
+          "welcome_sent": true
+        },
+        "step": 8
+      },
+      {
+        "description": "Signal successful onboarding",
+        "expected_state": {
+          "final_status": "success"
+        },
+        "step": 9
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 2,
+      "missing_tool": "extract_insurance_info",
+      "required_calls": 9,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      1
+    ],
+    "review_id": "R08",
+    "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 1969,
+      "description": 2194,
+      "difficulty": 2195,
+      "difficulty_reasoning": 2196,
+      "expected_tool_calls": 1985,
+      "input_data": 1978,
+      "milestones": 2125,
+      "test_case_id": 1974,
+      "title": 1975,
+      "workflow": 1976
+    },
+    "task_id": "HealthcareOnboarding_W7_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz",
+    "trace_sha256": "462edd76a3302dab358c40c17c4ba8995532d4290c14b80cb9af24946c2f9124",
+    "trial": 1
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "PA requirement checked for sleep study",
+        "expected_state": {
+          "pa_required": true
+        },
+        "step": 1
+      },
+      {
+        "description": "Medical necessity criteria retrieved for sleep study",
+        "expected_state": {
+          "criteria_text": "Sleep study criteria",
+          "required_docs": [
+            "clinical note",
+            "home sleep test report"
+          ]
+        },
+        "step": 2
+      },
+      {
+        "description": "Alternate required documentation gathered",
+        "expected_state": {
+          "docs_found": [
+            "clinical note",
+            "home sleep test report"
+          ],
+          "docs_missing": []
+        },
+        "step": 3
+      },
+      {
+        "description": "Clinical criteria validated using alternate documentation",
+        "expected_state": {
+          "criteria_met": true
+        },
+        "step": 4
+      },
+      {
+        "description": "PA submission prepared",
+        "expected_state": {
+          "ready_to_submit": true
+        },
+        "step": 5
+      },
+      {
+        "description": "PA request submitted via portal",
+        "expected_state": {
+          "submission_status": "submitted"
+        },
+        "step": 6
+      },
+      {
+        "description": "PA status tracked; provider notified of approval",
+        "expected_state": {
+          "auth_number": "AUTH-991122",
+          "pa_status": "approved"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "issues": [
+        {
+          "error": "ValidationError",
+          "message": "3 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Sleep ...ome sleep test report']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='home sleep test report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type",
+          "step": 3,
+          "tool": "validate_clinical_criteria"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R09",
+    "source_file": "data/healthcare_prior_authorization/test_cases.py",
+    "source_lines": {
+      "class": 648,
+      "description": 829,
+      "difficulty": 833,
+      "difficulty_reasoning": 834,
+      "expected_tool_calls": 668,
+      "input_data": 660,
+      "milestones": 769,
+      "test_case_id": 657,
+      "title": 658,
+      "workflow": 659
+    },
+    "task_id": "HealthcarePA_W1_TC2",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC2_trial0.json.gz",
+    "trace_sha256": "78a11d8dad681f33549905344273aa94fc05199939ce5c8e9c1bcf57e226a62f",
+    "trial": 0
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "check_pa_requirements"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "retrieve_medical_necessity_criteria"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "gather_clinical_documentation"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "gather_clinical_documentation"
+      }
+    ],
+    "final_user_markers": [
+      "###OUT-OF-SCOPE###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "PA requirement checked for MRI",
+        "expected_state": {
+          "pa_required": true
+        },
+        "step": 1
+      },
+      {
+        "description": "Medical necessity criteria retrieved for MRI",
+        "expected_state": {
+          "criteria_text": "MRI criteria",
+          "required_docs": [
+            "clinical note",
+            "imaging report"
+          ]
+        },
+        "step": 2
+      },
+      {
+        "description": "All required clinical documentation gathered",
+        "expected_state": {
+          "docs_found": [
+            "clinical note",
+            "imaging report"
+          ],
+          "docs_missing": []
+        },
+        "step": 3
+      },
+      {
+        "description": "Clinical criteria validated",
+        "expected_state": {
+          "criteria_met": true
+        },
+        "step": 4
+      },
+      {
+        "description": "PA submission prepared and assembled",
+        "expected_state": {
+          "ready_to_submit": true
+        },
+        "step": 5
+      },
+      {
+        "description": "PA request submitted via API/portal",
+        "expected_state": {
+          "submission_status": "submitted"
+        },
+        "step": 6
+      },
+      {
+        "description": "PA status tracked; provider notified of approval",
+        "expected_state": {
+          "auth_number": "AUTH-556677",
+          "pa_status": "approved"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 2,
+      "missing_tool": "gather_clinical_documentation",
+      "required_calls": 8,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      2,
+      3
+    ],
+    "review_id": "R10",
+    "source_file": "data/healthcare_prior_authorization/test_cases.py",
+    "source_lines": {
+      "class": 451,
+      "description": 639,
+      "difficulty": 642,
+      "difficulty_reasoning": 643,
+      "expected_tool_calls": 470,
+      "input_data": 461,
+      "milestones": 578,
+      "test_case_id": 457,
+      "title": 458,
+      "workflow": 459
+    },
+    "task_id": "HealthcarePA_W1_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC1_trial3.json.gz",
+    "trace_sha256": "48bfe6c1cfe23d4f48dc04815c40d5d2a74bc3e9e5897e9f6b9f1818d7ac88ae",
+    "trial": 3
+  },
+  {
+    "domain": "insurance_claims_intake",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###TRANSFER###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Loss details extracted (auto, multiple injuries)",
+        "expected_state": {
+          "injuries": [
+            "back pain",
+            "shoulder pain"
+          ],
+          "loss_details": "complete"
+        },
+        "step": 1
+      },
+      {
+        "description": "Claim classified as auto liability",
+        "expected_state": {
+          "claim_type": "auto",
+          "sub_type": "liability"
+        },
+        "step": 2
+      },
+      {
+        "description": "Policy coverage validated (active, liability covered)",
+        "expected_state": {
+          "coverage_confirmed": true,
+          "policy_status": "active"
+        },
+        "step": 3
+      },
+      {
+        "description": "Claim severity assessed (BI flag)",
+        "expected_state": {
+          "flags": [
+            "BI"
+          ],
+          "severity_level": "standard"
+        },
+        "step": 4
+      },
+      {
+        "description": "Claim record created with injury flag",
+        "expected_state": {
+          "claim_status": "created",
+          "flags": [
+            "BI"
+          ]
+        },
+        "step": 5
+      },
+      {
+        "description": "Claim routed to BI adjuster",
+        "expected_state": {
+          "assigned_team": "BI adjuster",
+          "assignment_status": "assigned"
+        },
+        "step": 6
+      },
+      {
+        "description": "Claim acknowledgment sent to claimant",
+        "expected_state": {
+          "delivery_status": "sent",
+          "message_type": "acknowledgment"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "issues": [
+        {
+          "error": "ValidationError",
+          "message": "2 validation errors for classify_claim_type_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+          "step": 1,
+          "tool": "classify_claim_type"
+        },
+        {
+          "error": "ValidationError",
+          "message": "2 validation errors for assess_claim_severity_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+          "step": 3,
+          "tool": "assess_claim_severity"
+        },
+        {
+          "error": "ValidationError",
+          "message": "2 validation errors for create_claim_record_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+          "step": 4,
+          "tool": "create_claim_record"
+        },
+        {
+          "error": "ValidationError",
+          "message": "2 validation errors for send_claim_acknowledgment_arguments\nrecipient_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nrecipient_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+          "step": 6,
+          "tool": "send_claim_acknowledgment"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R11",
+    "source_file": "data/insurance_claims_intake/test_cases.py",
+    "source_lines": {
+      "class": 1182,
+      "description": 1400,
+      "difficulty": 1401,
+      "difficulty_reasoning": 1402,
+      "expected_tool_calls": 1206,
+      "input_data": 1191,
+      "milestones": 1334,
+      "test_case_id": 1188,
+      "title": 1189,
+      "workflow": 1190
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W2_TC2_trial0.json.gz",
+    "trace_sha256": "d8c7f462eb7754e004e17be5949f32aaaa7533faee568e290625fc5d2c34a292",
+    "trial": 0
+  },
+  {
+    "domain": "insurance_claims_intake",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "validate_policy_coverage"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###OUT-OF-SCOPE###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Loss details extracted (attorney letter, injury details)",
+        "expected_state": {
+          "attorney_represented": true,
+          "loss_details": "complete"
+        },
+        "step": 1
+      },
+      {
+        "description": "Claim classified as liability",
+        "expected_state": {
+          "claim_type": "liability",
+          "sub_type": "slip and fall"
+        },
+        "step": 2
+      },
+      {
+        "description": "GL policy and premises coverage validated",
+        "expected_state": {
+          "coverage_confirmed": true,
+          "policy_status": "active"
+        },
+        "step": 3
+      },
+      {
+        "description": "Severity assessed (litigation risk flagged)",
+        "expected_state": {
+          "flags": [
+            "attorney",
+            "litigation"
+          ],
+          "severity_level": "litigation"
+        },
+        "step": 4
+      },
+      {
+        "description": "GL claim record created with litigation flag",
+        "expected_state": {
+          "claim_status": "created",
+          "flags": [
+            "litigation"
+          ]
+        },
+        "step": 5
+      },
+      {
+        "description": "Claim routed to senior liability adjuster, legal team notified",
+        "expected_state": {
+          "assigned_team": "Senior liability adjuster",
+          "assignment_status": "assigned"
+        },
+        "step": 6
+      },
+      {
+        "description": "Document preservation request sent to insured",
+        "expected_state": {
+          "delivery_status": "sent",
+          "message_type": "attorney_notification"
+        },
+        "step": 7
+      },
+      {
+        "description": "Claim acknowledgment sent to attorney",
+        "expected_state": {
+          "delivery_status": "sent",
+          "message_type": "acknowledgment"
+        },
+        "step": 8
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 0,
+      "missing_tool": "extract_loss_details",
+      "required_calls": 9,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R12",
+    "source_file": "data/insurance_claims_intake/test_cases.py",
+    "source_lines": {
+      "class": 2043,
+      "description": 2285,
+      "difficulty": 2288,
+      "difficulty_reasoning": 2289,
+      "expected_tool_calls": 2064,
+      "input_data": 2052,
+      "milestones": 2214,
+      "test_case_id": 2049,
+      "title": 2050,
+      "workflow": 2051
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W5_TC1_trial3.json.gz",
+    "trace_sha256": "3150f0df3d8dd05d54c19753ad2f89d7eed66ef0c612eea37307506935d706b1",
+    "trial": 3
+  },
+  {
+    "domain": "manufacturing_purchase_to_pay",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "read_purchase_requisition"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "read_purchase_requisition"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###STOP###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Partial goods receipt recorded",
+        "expected_state": {
+          "ordered_quantity": 100,
+          "receipt_id": "GR-654321",
+          "received_quantity": 60
+        },
+        "step": 1
+      },
+      {
+        "description": "Invoice matched to PO and receipt (quantity mismatch)",
+        "expected_state": {
+          "match_status": "quantity_mismatch",
+          "variance_amount": 40
+        },
+        "step": 2
+      },
+      {
+        "description": "Payment approval routed for partial payment",
+        "expected_state": {
+          "approval_status": "approved",
+          "approver": "auto"
+        },
+        "step": 3
+      },
+      {
+        "description": "Partial payment processed",
+        "expected_state": {
+          "amount": 6000.0,
+          "payment_status": "completed"
+        },
+        "step": 4
+      },
+      {
+        "description": "Backorder received and reconciled",
+        "expected_state": {
+          "receipt_id": "GR-654322",
+          "received_quantity": 40
+        },
+        "step": 5
+      },
+      {
+        "description": "Final payment processed",
+        "expected_state": {
+          "amount": 4000.0,
+          "payment_status": "completed"
+        },
+        "step": 6
+      },
+      {
+        "description": "Workflow completion signaled",
+        "expected_state": {
+          "workflow_status": "completed"
+        },
+        "step": 7
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "issues": [
+        {
+          "error": "ValueError",
+          "message": "Invalid match_status: quantity_mismatch. Must be one of ['exact', 'small_variance', 'medium_variance', 'large_variance', 'exception', 'duplicate']",
+          "step": 1,
+          "tool": "route_payment_approval"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [],
+    "review_id": "R13",
+    "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+    "source_lines": {
+      "class": 1420,
+      "description": 1578,
+      "difficulty": 1579,
+      "difficulty_reasoning": 1580,
+      "expected_tool_calls": 1442,
+      "input_data": 1430,
+      "milestones": 1519,
+      "test_case_id": 1426,
+      "title": 1427,
+      "workflow": 1428
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1_trial0.json.gz",
+    "trace_sha256": "35e5c6e9b48e9361033462d170276b037c7db13c6f1b7a37ecbbe6e6e11ffceb",
+    "trial": 0
+  },
+  {
+    "domain": "manufacturing_purchase_to_pay",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "read_purchase_requisition"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "validate_budget_availability"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "check_supplier_contracts"
+      },
+      {
+        "error": false,
+        "index": 5,
+        "name": "HUMAN_IN_THE_LOOP"
+      },
+      {
+        "error": false,
+        "index": 6,
+        "name": "HUMAN_IN_THE_LOOP"
+      }
+    ],
+    "final_user_markers": [
+      "###OUT-OF-SCOPE###"
+    ],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Purchase requisition read and parsed",
+        "expected_state": {
+          "requisition_valid": true
+        },
+        "step": 1
+      },
+      {
+        "description": "Budget validated and exceeded",
+        "expected_state": {
+          "budget_status": "exceeded",
+          "exceeded_amount": 2000.0
+        },
+        "step": 2
+      },
+      {
+        "description": "Budget override approval granted by CFO",
+        "expected_state": {
+          "approval_status": "approved",
+          "approver": "CFO"
+        },
+        "step": 3
+      },
+      {
+        "description": "Supplier contract checked for compliance",
+        "expected_state": {
+          "contract_status": "preferred"
+        },
+        "step": 4
+      },
+      {
+        "description": "PO created and sent via email",
+        "expected_state": {
+          "delivery_status": "sent",
+          "method": "email",
+          "po_id": "PO-222222"
+        },
+        "step": 5
+      },
+      {
+        "description": "Workflow completion signaled",
+        "expected_state": {
+          "workflow_status": "completed"
+        },
+        "step": 6
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 1,
+      "missing_tool": "validate_budget_availability",
+      "required_calls": 7,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      1
+    ],
+    "review_id": "R14",
+    "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+    "source_lines": {
+      "class": 954,
+      "description": 1115,
+      "difficulty": 1119,
+      "difficulty_reasoning": 1120,
+      "expected_tool_calls": 973,
+      "input_data": 964,
+      "milestones": 1067,
+      "test_case_id": 961,
+      "title": 962,
+      "workflow": 963
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+    "termination_reason": "user_stop",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz",
+    "trace_sha256": "e58ca93414e5190deaf64ec14920a4107eca6b03cb39fbb9a9de1e9930b2519c",
+    "trial": 1
+  },
+  {
+    "domain": "banking_fraud_monitoring",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "retrieve_transaction_details"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "get_customer_profile"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "analyze_transaction_history"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "check_device_intelligence"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "cross_reference_fraud_databases"
+      },
+      {
+        "error": false,
+        "index": 5,
+        "name": "calculate_fraud_risk_score"
+      },
+      {
+        "error": false,
+        "index": 6,
+        "name": "SUCCESS"
+      }
+    ],
+    "final_user_markers": [],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Transaction details retrieved",
+        "expected_state": {
+          "amount": 220.0,
+          "transaction_id": "TX-20002"
+        },
+        "step": 1
+      },
+      {
+        "description": "Customer profile and transaction history analyzed",
+        "expected_state": {
+          "recent_travel": [
+            "Miami, FL"
+          ],
+          "velocity_metrics": {
+            "max_per_day": 3
+          }
+        },
+        "step": 2
+      },
+      {
+        "description": "Device intelligence checked",
+        "expected_state": {
+          "device_risk_score": 15,
+          "tor_detected": false,
+          "vpn_detected": false
+        },
+        "step": 3
+      },
+      {
+        "description": "Fraud risk score calculated",
+        "expected_state": {
+          "fraud_risk_score": 25,
+          "risk_factors": []
+        },
+        "step": 4
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 3,
+      "missing_tool": "check_device_intelligence",
+      "required_calls": 6,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      3
+    ],
+    "review_id": "R15",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 689,
+      "description": 845,
+      "difficulty": 850,
+      "difficulty_reasoning": 851,
+      "expected_tool_calls": 714,
+      "input_data": 699,
+      "milestones": 806,
+      "test_case_id": 696,
+      "title": 697,
+      "workflow": 698
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "termination_reason": "workflow_terminal",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz",
+    "trace_sha256": "b10c359faa85454d820910ff86c26c718ea78b7e72721811b5ed7f30f3fc3c74",
+    "trial": 2
+  },
+  {
+    "domain": "banking_fraud_monitoring",
+    "events": [
+      {
+        "error": false,
+        "index": 0,
+        "name": "retrieve_transaction_details"
+      },
+      {
+        "error": false,
+        "index": 1,
+        "name": "get_customer_profile"
+      },
+      {
+        "error": false,
+        "index": 2,
+        "name": "check_device_intelligence"
+      },
+      {
+        "error": false,
+        "index": 3,
+        "name": "cross_reference_fraud_databases"
+      },
+      {
+        "error": false,
+        "index": 4,
+        "name": "analyze_transaction_history"
+      },
+      {
+        "error": false,
+        "index": 5,
+        "name": "calculate_fraud_risk_score"
+      },
+      {
+        "error": false,
+        "index": 6,
+        "name": "SUCCESS"
+      }
+    ],
+    "final_user_markers": [],
+    "human_adjudication": "pending",
+    "milestones": [
+      {
+        "description": "Transaction details retrieved",
+        "expected_state": {
+          "amount": 220.0,
+          "transaction_id": "TX-20002"
+        },
+        "step": 1
+      },
+      {
+        "description": "Customer profile and transaction history analyzed",
+        "expected_state": {
+          "recent_travel": [
+            "Miami, FL"
+          ],
+          "velocity_metrics": {
+            "max_per_day": 3
+          }
+        },
+        "step": 2
+      },
+      {
+        "description": "Device intelligence checked",
+        "expected_state": {
+          "device_risk_score": 15,
+          "tor_detected": false,
+          "vpn_detected": false
+        },
+        "step": 3
+      },
+      {
+        "description": "Fraud risk score calculated",
+        "expected_state": {
+          "fraud_risk_score": 25,
+          "risk_factors": []
+        },
+        "step": 4
+      }
+    ],
+    "new_reward": null,
+    "original_evaluation": {
+      "matched_calls": 3,
+      "missing_tool": "check_device_intelligence",
+      "required_calls": 6,
+      "reward": 0,
+      "status": "failed_reference"
+    },
+    "original_missing_tool_also_present_at_event_indices": [
+      2
+    ],
+    "review_id": "R16",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 689,
+      "description": 845,
+      "difficulty": 850,
+      "difficulty_reasoning": 851,
+      "expected_tool_calls": 714,
+      "input_data": 699,
+      "milestones": 806,
+      "test_case_id": 696,
+      "title": 697,
+      "workflow": 698
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "termination_reason": "workflow_terminal",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz",
+    "trace_sha256": "fd772e68794a36767b33a7340fed5db4f68bc3dac8dc950bfa0fe2ab529a5763",
+    "trial": 3
+  }
+]

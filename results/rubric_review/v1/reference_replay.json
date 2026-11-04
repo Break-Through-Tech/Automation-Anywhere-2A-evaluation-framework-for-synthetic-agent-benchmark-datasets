@@ -1,0 +1,2396 @@
+[
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_accounts_deposits",
+    "errors": [],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_accounts_deposits",
+    "errors": [],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_accounts_deposits",
+    "errors": [],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_accounts_deposits",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValueError",
+          "message": "Invalid id_type: business_license. Must be one of [\"driver's_license\", 'passport', 'state_id']"
+        },
+        "direct_mock_invocation": {
+          "error": "ValueError",
+          "message": "Invalid id_type: business_license. Must be one of [\"driver's_license\", 'passport', 'state_id']",
+          "status": "raised"
+        },
+        "reference_call_index": 0,
+        "tool": "validate_customer_identity"
+      }
+    ],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValueError",
+            "message": "Invalid id_type: business_license. Must be one of [\"driver's_license\", 'passport', 'state_id']"
+          },
+          "direct_mock_invocation": {
+            "error": "ValueError",
+            "message": "Invalid id_type: business_license. Must be one of [\"driver's_license\", 'passport', 'state_id']",
+            "status": "raised"
+          },
+          "reference_call_index": 0,
+          "tool": "validate_customer_identity"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_accounts_deposits",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValueError",
+          "message": "Invalid id_type: joint. Must be one of [\"driver's_license\", 'passport', 'state_id']"
+        },
+        "direct_mock_invocation": {
+          "error": "ValueError",
+          "message": "Invalid id_type: joint. Must be one of [\"driver's_license\", 'passport', 'state_id']",
+          "status": "raised"
+        },
+        "reference_call_index": 0,
+        "tool": "validate_customer_identity"
+      }
+    ],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValueError",
+            "message": "Invalid id_type: joint. Must be one of [\"driver's_license\", 'passport', 'state_id']"
+          },
+          "direct_mock_invocation": {
+            "error": "ValueError",
+            "message": "Invalid id_type: joint. Must be one of [\"driver's_license\", 'passport', 'state_id']",
+            "status": "raised"
+          },
+          "reference_call_index": 0,
+          "tool": "validate_customer_identity"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "banking_accounts_deposits",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for calculate_account_tier_arguments\ncustomer_profile.student_status\n  Input should be a valid boolean [type=bool_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/bool_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 2,
+        "tool": "calculate_account_tier"
+      }
+    ],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "link_funding_source",
+      "configure_account_limits",
+      "open_account",
+      "generate_account_disclosures",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for calculate_account_tier_arguments\ncustomer_profile.student_status\n  Input should be a valid boolean [type=bool_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/bool_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 2,
+          "tool": "calculate_account_tier"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_accounts_deposits",
+    "errors": [],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "HUMAN_IN_THE_LOOP",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_accounts_deposits",
+    "errors": [],
+    "executed_names": [
+      "validate_customer_identity",
+      "perform_aml_screening",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_customer_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_kyc_documents",
+      "validate_identity",
+      "screen_sanctions_lists",
+      "calculate_aml_risk_score",
+      "create_core_banking_customer",
+      "create_crm_profile",
+      "send_welcome_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_customer_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_kyc_documents",
+      "validate_identity",
+      "screen_sanctions_lists",
+      "calculate_aml_risk_score",
+      "create_core_banking_customer",
+      "create_crm_profile",
+      "send_welcome_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_customer_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_kyc_documents",
+      "validate_identity",
+      "validate_identity",
+      "screen_sanctions_lists",
+      "calculate_aml_risk_score",
+      "create_core_banking_customer",
+      "create_crm_profile",
+      "send_welcome_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "banking_customer_onboarding",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for screen_sanctions_lists_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 2,
+        "tool": "screen_sanctions_lists"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for create_core_banking_customer_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 4,
+        "tool": "create_core_banking_customer"
+      }
+    ],
+    "executed_names": [
+      "extract_kyc_documents",
+      "validate_identity",
+      "screen_sanctions_lists",
+      "calculate_aml_risk_score",
+      "create_core_banking_customer",
+      "create_crm_profile",
+      "send_welcome_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for screen_sanctions_lists_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 2,
+          "tool": "screen_sanctions_lists"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for create_core_banking_customer_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 4,
+          "tool": "create_core_banking_customer"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_customer_onboarding",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for send_welcome_communication_arguments\ncustomer_id\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 1,
+        "tool": "send_welcome_communication"
+      }
+    ],
+    "executed_names": [
+      "extract_kyc_documents",
+      "send_welcome_communication",
+      "extract_kyc_documents",
+      "validate_identity",
+      "screen_sanctions_lists",
+      "calculate_aml_risk_score",
+      "create_core_banking_customer",
+      "create_crm_profile",
+      "send_welcome_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 10,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for send_welcome_communication_arguments\ncustomer_id\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 1,
+          "tool": "send_welcome_communication"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "banking_customer_onboarding",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for send_welcome_communication_arguments\ncustomer_id\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 1,
+        "tool": "send_welcome_communication"
+      }
+    ],
+    "executed_names": [
+      "extract_kyc_documents",
+      "send_welcome_communication",
+      "extract_kyc_documents",
+      "validate_identity",
+      "screen_sanctions_lists",
+      "calculate_aml_risk_score",
+      "create_core_banking_customer",
+      "create_crm_profile",
+      "send_welcome_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 10,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for send_welcome_communication_arguments\ncustomer_id\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 1,
+          "tool": "send_welcome_communication"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "calculate_fraud_risk_score",
+      "SUCCESS"
+    ],
+    "reference_calls": 6,
+    "self_reference_evaluation": {
+      "matched_calls": 6,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "calculate_fraud_risk_score",
+      "SUCCESS"
+    ],
+    "reference_calls": 6,
+    "self_reference_evaluation": {
+      "matched_calls": 6,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "cross_reference_fraud_databases",
+      "calculate_fraud_risk_score",
+      "auto_decline_transaction",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "cross_reference_fraud_databases",
+      "calculate_fraud_risk_score",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "cross_reference_fraud_databases",
+      "calculate_fraud_risk_score",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "calculate_fraud_risk_score",
+      "cross_reference_fraud_databases",
+      "auto_decline_transaction",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "calculate_fraud_risk_score",
+      "request_customer_verification",
+      "SUCCESS"
+    ],
+    "reference_calls": 7,
+    "self_reference_evaluation": {
+      "matched_calls": 7,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "calculate_fraud_risk_score",
+      "request_customer_verification",
+      "SUCCESS"
+    ],
+    "reference_calls": 7,
+    "self_reference_evaluation": {
+      "matched_calls": 7,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "check_device_intelligence",
+      "analyze_transaction_history",
+      "calculate_fraud_risk_score",
+      "auto_decline_transaction",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "analyze_transaction_history",
+      "calculate_fraud_risk_score",
+      "cross_reference_fraud_databases",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 6,
+    "self_reference_evaluation": {
+      "matched_calls": 6,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "get_customer_profile",
+      "check_device_intelligence",
+      "cross_reference_fraud_databases",
+      "calculate_fraud_risk_score",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 6,
+    "self_reference_evaluation": {
+      "matched_calls": 6,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "check_device_intelligence",
+      "calculate_fraud_risk_score",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 7,
+    "self_reference_evaluation": {
+      "matched_calls": 7,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "banking_fraud_monitoring",
+    "errors": [],
+    "executed_names": [
+      "retrieve_transaction_details",
+      "get_customer_profile",
+      "analyze_transaction_history",
+      "cross_reference_fraud_databases",
+      "calculate_fraud_risk_score",
+      "auto_decline_transaction",
+      "route_to_analyst",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_insurance_info",
+      "verify_insurance_eligibility",
+      "extract_medical_history",
+      "create_ehr_patient_record",
+      "check_provider_availability",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcareOnboarding_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_insurance_info",
+      "verify_insurance_eligibility",
+      "extract_medical_history",
+      "create_ehr_patient_record",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcareOnboarding_W2_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 5,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "verify_insurance_eligibility",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 5,
+    "self_reference_evaluation": {
+      "matched_calls": 5,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcareOnboarding_W4_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for create_ehr_patient_record_arguments\ninsurance\n  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 2,
+        "tool": "create_ehr_patient_record"
+      }
+    ],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_medical_history",
+      "create_ehr_patient_record",
+      "send_patient_communication",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 7,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for create_ehr_patient_record_arguments\ninsurance\n  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 2,
+          "tool": "create_ehr_patient_record"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 5,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "create_ehr_patient_record",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 5,
+    "self_reference_evaluation": {
+      "matched_calls": 5,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcareOnboarding_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_medical_history",
+      "extract_insurance_info",
+      "verify_insurance_eligibility",
+      "create_ehr_patient_record",
+      "check_provider_availability",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcareOnboarding_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for create_ehr_patient_record_arguments\ndemographics\n  Input should be a valid dictionary [type=dict_type, input_value='extracted-demographics', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nmedical_history\n  Input should be a valid dictionary [type=dict_type, input_value='extracted-medical-history', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 6,
+        "tool": "create_ehr_patient_record"
+      }
+    ],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_insurance_info",
+      "send_patient_communication",
+      "extract_patient_demographics",
+      "extract_insurance_info",
+      "verify_insurance_eligibility",
+      "create_ehr_patient_record",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 10,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for create_ehr_patient_record_arguments\ndemographics\n  Input should be a valid dictionary [type=dict_type, input_value='extracted-demographics', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nmedical_history\n  Input should be a valid dictionary [type=dict_type, input_value='extracted-medical-history', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 6,
+          "tool": "create_ehr_patient_record"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcareOnboarding_W8_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_insurance_info",
+      "verify_insurance_eligibility",
+      "extract_medical_history",
+      "create_ehr_patient_record",
+      "check_provider_availability",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "healthcare_patient_onboarding",
+    "errors": [],
+    "executed_names": [
+      "extract_patient_demographics",
+      "extract_insurance_info",
+      "verify_insurance_eligibility",
+      "send_patient_communication",
+      "verify_insurance_eligibility",
+      "create_ehr_patient_record",
+      "schedule_appointment",
+      "send_patient_communication",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "healthcare_prior_authorization",
+    "errors": [],
+    "executed_names": [
+      "check_pa_requirements",
+      "retrieve_medical_necessity_criteria",
+      "gather_clinical_documentation",
+      "validate_clinical_criteria",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcarePA_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "healthcare_prior_authorization",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Sleep ...ome sleep test report']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='home sleep test report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 3,
+        "tool": "validate_clinical_criteria"
+      }
+    ],
+    "executed_names": [
+      "check_pa_requirements",
+      "retrieve_medical_necessity_criteria",
+      "gather_clinical_documentation",
+      "validate_clinical_criteria",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Sleep ...ome sleep test report']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='home sleep test report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 3,
+          "tool": "validate_clinical_criteria"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcarePA_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "healthcare_prior_authorization",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for validate_clinical_criteria_arguments\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='imaging report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 5,
+        "tool": "validate_clinical_criteria"
+      }
+    ],
+    "executed_names": [
+      "check_pa_requirements",
+      "retrieve_medical_necessity_criteria",
+      "gather_clinical_documentation",
+      "HUMAN_IN_THE_LOOP",
+      "gather_clinical_documentation",
+      "validate_clinical_criteria",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 10,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for validate_clinical_criteria_arguments\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='imaging report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 5,
+          "tool": "validate_clinical_criteria"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcarePA_W2_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "healthcare_prior_authorization",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for validate_clinical_criteria_arguments\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='labs', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='treatment history', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='provider notes', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 3,
+        "tool": "validate_clinical_criteria"
+      }
+    ],
+    "executed_names": [
+      "check_pa_requirements",
+      "retrieve_medical_necessity_criteria",
+      "gather_clinical_documentation",
+      "validate_clinical_criteria",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for validate_clinical_criteria_arguments\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='labs', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='treatment history', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='provider notes', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 3,
+          "tool": "validate_clinical_criteria"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcarePA_W3_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 4,
+    "domain": "healthcare_prior_authorization",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for appeal_pa_denial_arguments\nadditional_docs.0\n  Input should be a valid dictionary [type=dict_type, input_value='additional labs', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nadditional_docs.1\n  Input should be a valid dictionary [type=dict_type, input_value='specialist note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 2,
+        "tool": "appeal_pa_denial"
+      }
+    ],
+    "executed_names": [
+      "track_pa_status",
+      "gather_clinical_documentation",
+      "appeal_pa_denial",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 5,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for appeal_pa_denial_arguments\nadditional_docs.0\n  Input should be a valid dictionary [type=dict_type, input_value='additional labs', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nadditional_docs.1\n  Input should be a valid dictionary [type=dict_type, input_value='specialist note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 2,
+          "tool": "appeal_pa_denial"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcarePA_W4_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 5,
+    "domain": "healthcare_prior_authorization",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "4 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'DME cr...is', 'pulse ox', 'ABG']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 3,
+        "tool": "validate_clinical_criteria"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for prepare_pa_submission_arguments\nattachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 4,
+        "tool": "prepare_pa_submission"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for submit_pa_request_arguments\npa_submission.attachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 5,
+        "tool": "submit_pa_request"
+      }
+    ],
+    "executed_names": [
+      "check_pa_requirements",
+      "retrieve_medical_necessity_criteria",
+      "gather_clinical_documentation",
+      "validate_clinical_criteria",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "4 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'DME cr...is', 'pulse ox', 'ABG']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 3,
+          "tool": "validate_clinical_criteria"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for prepare_pa_submission_arguments\nattachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 4,
+          "tool": "prepare_pa_submission"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for submit_pa_request_arguments\npa_submission.attachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 5,
+          "tool": "submit_pa_request"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcarePA_W5_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 6,
+    "domain": "healthcare_prior_authorization",
+    "errors": [],
+    "executed_names": [
+      "check_pa_requirements",
+      "gather_clinical_documentation",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 6,
+    "self_reference_evaluation": {
+      "matched_calls": 6,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcarePA_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 5,
+    "domain": "healthcare_prior_authorization",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "4 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Bariat...', 'cardiac clearance']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 3,
+        "tool": "validate_clinical_criteria"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for prepare_pa_submission_arguments\nattachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 4,
+        "tool": "prepare_pa_submission"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for submit_pa_request_arguments\npa_submission.attachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 5,
+        "tool": "submit_pa_request"
+      }
+    ],
+    "executed_names": [
+      "check_pa_requirements",
+      "retrieve_medical_necessity_criteria",
+      "gather_clinical_documentation",
+      "validate_clinical_criteria",
+      "prepare_pa_submission",
+      "submit_pa_request",
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "4 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Bariat...', 'cardiac clearance']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 3,
+          "tool": "validate_clinical_criteria"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for prepare_pa_submission_arguments\nattachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 4,
+          "tool": "prepare_pa_submission"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for submit_pa_request_arguments\npa_submission.attachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 5,
+          "tool": "submit_pa_request"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "HealthcarePA_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 2,
+    "domain": "healthcare_prior_authorization",
+    "errors": [],
+    "executed_names": [
+      "track_pa_status",
+      "SUCCESS"
+    ],
+    "reference_calls": 2,
+    "self_reference_evaluation": {
+      "matched_calls": 2,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "HealthcarePA_W8_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 7,
+    "self_reference_evaluation": {
+      "matched_calls": 7,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ClaimsAgent_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "trigger_emergency_services",
+      "route_to_adjuster",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "trigger_emergency_services",
+      "route_to_adjuster",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "route_to_adjuster",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 4,
+    "domain": "insurance_claims_intake",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for classify_claim_type_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 1,
+        "tool": "classify_claim_type"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for assess_claim_severity_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 3,
+        "tool": "assess_claim_severity"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for create_claim_record_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 4,
+        "tool": "create_claim_record"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for send_claim_acknowledgment_arguments\nrecipient_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nrecipient_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 6,
+        "tool": "send_claim_acknowledgment"
+      }
+    ],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "route_to_adjuster",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for classify_claim_type_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 1,
+          "tool": "classify_claim_type"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for assess_claim_severity_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 3,
+          "tool": "assess_claim_severity"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for create_claim_record_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 4,
+          "tool": "create_claim_record"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for send_claim_acknowledgment_arguments\nrecipient_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nrecipient_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 6,
+          "tool": "send_claim_acknowledgment"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "insurance_claims_intake",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 3,
+        "tool": "classify_claim_type"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 4,
+        "tool": "classify_claim_type"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 5,
+        "tool": "classify_claim_type"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 9,
+        "tool": "assess_claim_severity"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 10,
+        "tool": "assess_claim_severity"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 11,
+        "tool": "assess_claim_severity"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "error": "AttributeError",
+          "message": "'str' object has no attribute 'get'",
+          "status": "raised"
+        },
+        "reference_call_index": 12,
+        "tool": "create_claim_record"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "error": "AttributeError",
+          "message": "'str' object has no attribute 'get'",
+          "status": "raised"
+        },
+        "reference_call_index": 13,
+        "tool": "create_claim_record"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "error": "AttributeError",
+          "message": "'str' object has no attribute 'get'",
+          "status": "raised"
+        },
+        "reference_call_index": 14,
+        "tool": "create_claim_record"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "error": "AttributeError",
+          "message": "'str' object has no attribute 'get'",
+          "status": "raised"
+        },
+        "reference_call_index": 15,
+        "tool": "route_to_adjuster"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "error": "AttributeError",
+          "message": "'str' object has no attribute 'get'",
+          "status": "raised"
+        },
+        "reference_call_index": 16,
+        "tool": "route_to_adjuster"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "error": "AttributeError",
+          "message": "'str' object has no attribute 'get'",
+          "status": "raised"
+        },
+        "reference_call_index": 17,
+        "tool": "route_to_adjuster"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 20,
+        "tool": "send_claim_acknowledgment"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 21,
+        "tool": "send_claim_acknowledgment"
+      },
+      {
+        "adapter_error": {
+          "error": "ValidationError",
+          "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+        },
+        "direct_mock_invocation": {
+          "status": "returned_without_exception"
+        },
+        "reference_call_index": 22,
+        "tool": "send_claim_acknowledgment"
+      }
+    ],
+    "executed_names": [
+      "extract_loss_details",
+      "extract_loss_details",
+      "extract_loss_details",
+      "classify_claim_type",
+      "classify_claim_type",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "validate_policy_coverage",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "assess_claim_severity",
+      "assess_claim_severity",
+      "create_claim_record",
+      "create_claim_record",
+      "create_claim_record",
+      "route_to_adjuster",
+      "route_to_adjuster",
+      "route_to_adjuster",
+      "trigger_emergency_services",
+      "trigger_emergency_services",
+      "send_claim_acknowledgment",
+      "send_claim_acknowledgment",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 24,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 3,
+          "tool": "classify_claim_type"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 4,
+          "tool": "classify_claim_type"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 5,
+          "tool": "classify_claim_type"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 9,
+          "tool": "assess_claim_severity"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 10,
+          "tool": "assess_claim_severity"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 11,
+          "tool": "assess_claim_severity"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "error": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "status": "raised"
+          },
+          "reference_call_index": 12,
+          "tool": "create_claim_record"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "error": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "status": "raised"
+          },
+          "reference_call_index": 13,
+          "tool": "create_claim_record"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "error": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "status": "raised"
+          },
+          "reference_call_index": 14,
+          "tool": "create_claim_record"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "error": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "status": "raised"
+          },
+          "reference_call_index": 15,
+          "tool": "route_to_adjuster"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "error": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "status": "raised"
+          },
+          "reference_call_index": 16,
+          "tool": "route_to_adjuster"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "error": "AttributeError",
+            "message": "'str' object has no attribute 'get'",
+            "status": "raised"
+          },
+          "reference_call_index": 17,
+          "tool": "route_to_adjuster"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 20,
+          "tool": "send_claim_acknowledgment"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 21,
+          "tool": "send_claim_acknowledgment"
+        },
+        {
+          "adapter_error": {
+            "error": "ValidationError",
+            "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+          },
+          "direct_mock_invocation": {
+            "status": "returned_without_exception"
+          },
+          "reference_call_index": 22,
+          "tool": "send_claim_acknowledgment"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "route_to_adjuster",
+      "trigger_emergency_services",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "route_to_adjuster",
+      "send_claim_acknowledgment",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 5,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "create_claim_record",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 5,
+    "self_reference_evaluation": {
+      "matched_calls": 5,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "insurance_claims_intake",
+    "errors": [],
+    "executed_names": [
+      "extract_loss_details",
+      "classify_claim_type",
+      "validate_policy_coverage",
+      "assess_claim_severity",
+      "create_claim_record",
+      "route_to_adjuster",
+      "trigger_emergency_services",
+      "send_claim_acknowledgment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "read_purchase_requisition",
+      "validate_budget_availability",
+      "check_supplier_contracts",
+      "create_purchase_order",
+      "send_po_to_supplier",
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "read_purchase_requisition",
+      "validate_budget_availability",
+      "check_supplier_contracts",
+      "create_purchase_order",
+      "send_po_to_supplier",
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 7,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "read_purchase_requisition",
+      "validate_budget_availability",
+      "HUMAN_IN_THE_LOOP",
+      "check_supplier_contracts",
+      "create_purchase_order",
+      "send_po_to_supplier",
+      "SUCCESS"
+    ],
+    "reference_calls": 7,
+    "self_reference_evaluation": {
+      "matched_calls": 7,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 4,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 4,
+    "self_reference_evaluation": {
+      "matched_calls": 4,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 4,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [
+      {
+        "adapter_error": {
+          "error": "ValueError",
+          "message": "Invalid match_status: quantity_mismatch. Must be one of ['exact', 'small_variance', 'medium_variance', 'large_variance', 'exception', 'duplicate']"
+        },
+        "direct_mock_invocation": {
+          "error": "ValueError",
+          "message": "Invalid match_status: quantity_mismatch. Must be one of ['exact', 'small_variance', 'medium_variance', 'large_variance', 'exception', 'duplicate']",
+          "status": "raised"
+        },
+        "reference_call_index": 1,
+        "tool": "route_payment_approval"
+      }
+    ],
+    "executed_names": [
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 5,
+    "self_reference_evaluation": {
+      "issues": [
+        {
+          "adapter_error": {
+            "error": "ValueError",
+            "message": "Invalid match_status: quantity_mismatch. Must be one of ['exact', 'small_variance', 'medium_variance', 'large_variance', 'exception', 'duplicate']"
+          },
+          "direct_mock_invocation": {
+            "error": "ValueError",
+            "message": "Invalid match_status: quantity_mismatch. Must be one of ['exact', 'small_variance', 'medium_variance', 'large_variance', 'exception', 'duplicate']",
+            "status": "raised"
+          },
+          "reference_call_index": 1,
+          "tool": "route_payment_approval"
+        }
+      ],
+      "reward": null,
+      "status": "invalid_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 3,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "SUCCESS"
+    ],
+    "reference_calls": 3,
+    "self_reference_evaluation": {
+      "matched_calls": 3,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 4,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 4,
+    "self_reference_evaluation": {
+      "matched_calls": 4,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 8,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "read_purchase_requisition",
+      "check_supplier_contracts",
+      "create_purchase_order",
+      "send_po_to_supplier",
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 8,
+    "self_reference_evaluation": {
+      "matched_calls": 8,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  },
+  {
+    "calls_without_execution_error": 9,
+    "domain": "manufacturing_purchase_to_pay",
+    "errors": [],
+    "executed_names": [
+      "read_purchase_requisition",
+      "validate_budget_availability",
+      "check_supplier_contracts",
+      "create_purchase_order",
+      "send_po_to_supplier",
+      "match_invoice_to_po",
+      "route_payment_approval",
+      "process_payment",
+      "SUCCESS"
+    ],
+    "reference_calls": 9,
+    "self_reference_evaluation": {
+      "matched_calls": 9,
+      "reward": 1,
+      "status": "passed_reference"
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+    "terminal_claim_is_not_independent_outcome_evidence": true
+  }
+]
