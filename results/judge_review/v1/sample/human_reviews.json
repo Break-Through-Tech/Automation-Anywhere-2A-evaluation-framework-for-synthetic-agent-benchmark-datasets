@@ -1,0 +1,1265 @@
+{
+  "rubric_version": "synthetic_milestones_v0.1_draft",
+  "rubric_sha256": "69ad3055a576848ea76949b8cc6d3ee3c1380c76e1f79d76f58da7d096b553f1",
+  "packet_sha256": "6fca396513df28a344ceff36d503e3b614b7cd58139a6037651c45f403575492",
+  "reviews": [
+    {
+      "review_id": "R01",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 8,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R02",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "trial": 1,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 8,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R03",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R04",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R05",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "trial": 1,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R06",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "trial": 2,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R07",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R08",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "trial": 1,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 8,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 9,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R09",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R10",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "trial": 3,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R11",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R12",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "trial": 3,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 8,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R13",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "trial": 0,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 7,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R14",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "trial": 1,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 5,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 6,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R15",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "trial": 2,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    },
+    {
+      "review_id": "R16",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "trial": 3,
+      "reviewer": null,
+      "task_judgment": null,
+      "task_rationale": "",
+      "task_evidence": [],
+      "task_contradictions": [],
+      "milestones": [
+        {
+          "step": 1,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 2,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 3,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        },
+        {
+          "step": 4,
+          "applicable": null,
+          "material": null,
+          "applicability_basis": "",
+          "judgment": null,
+          "rationale": "",
+          "evidence": [],
+          "contradictions": []
+        }
+      ]
+    }
+  ]
+}

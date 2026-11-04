@@ -1,0 +1,59 @@
+{
+  "packet_sha256": "be56eb919ffc041e7103639eb4f5193f0f435c70c7b51c467afe02b128bc6d5d",
+  "groups": [
+    {
+      "number": 1,
+      "name": "Banking accounts and onboarding",
+      "slug": "reviewer_1_banking",
+      "ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04"
+      ],
+      "secondary": []
+    },
+    {
+      "number": 2,
+      "name": "Fraud monitoring",
+      "slug": "reviewer_2_fraud",
+      "ids": [
+        "R05",
+        "R06",
+        "R15",
+        "R16"
+      ],
+      "secondary": [
+        "R04"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "Healthcare onboarding and authorization",
+      "slug": "reviewer_3_healthcare",
+      "ids": [
+        "R07",
+        "R08",
+        "R09",
+        "R10"
+      ],
+      "secondary": []
+    },
+    {
+      "number": 4,
+      "name": "Insurance and manufacturing",
+      "slug": "reviewer_4_insurance_manufacturing",
+      "ids": [
+        "R11",
+        "R12",
+        "R13",
+        "R14"
+      ],
+      "secondary": [
+        "R10"
+      ]
+    }
+  ],
+  "reviewer_names": "unassigned; reviewers claim an issue",
+  "first_pass_only": true
+}

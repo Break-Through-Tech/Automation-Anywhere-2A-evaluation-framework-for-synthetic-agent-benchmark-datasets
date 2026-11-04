@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Judge synthetic agent trials against task milestones and aggregate difficulty.
 
-Input JSONL rows require ``domain``, ``task_id``, and ``transcript``. An ``error``
-row represents a failed/invalid trial and is excluded from the difficulty score.
+Read transcript JSONL or original baseline CSV plus compressed traces. Legacy
+top-level error rows remain unassessed; individual tool errors stay in evidence.
+Use --dry-run or --prepare-review to validate evidence without model calls.
 """
 
 from __future__ import annotations
@@ -19,6 +20,11 @@ from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Tuple
 
 from dotenv import load_dotenv
+
+if __package__:
+    from .saved_trials import load_baseline_trials, file_hash
+else:
+    from saved_trials import load_baseline_trials, file_hash
 
 REPO = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO / "data"
@@ -41,7 +47,10 @@ rationale, evidence (a list of {"locator": "...", "excerpt": "..."}), and contra
 present in the input. Met/unmet claims require non-empty evidence; uncertainty belongs in
 "unverifiable". Also return task_judgment with the same three values, task_rationale,
 task_evidence, and task_contradictions. Follow the rubric's proposed aggregation rule;
-do not invent missing references or requirements."""
+do not invent missing references or requirements. For a structured transcript, use JSON
+pointers relative to that object, such as #/tool_events/0/output/status or
+#/conversation/0/content. Tool events and conversation messages retain their separate
+original order; do not invent an interleaving that the evidence does not establish."""
 
 
 def load_rubric(path: Path = RUBRIC_PATH) -> Tuple[str, str, str]:
@@ -87,8 +96,10 @@ def _expected_tool_sequences(test_cases_path: Path) -> Tuple[Dict[str, List[str]
             ),
             None,
         )
-        if not isinstance(test_case_id, str):
-            continue
+        if not isinstance(test_case_id, str) or not test_case_id.strip():
+            raise ValueError(f"Missing test_case_id on {node.name} in {test_cases_path}")
+        if test_case_id in class_case_ids.values():
+            raise ValueError(f"Duplicate Python test_case_id {test_case_id!r} in {test_cases_path}")
         class_case_ids[node.name] = test_case_id
         tool_names = []
         if isinstance(calls_node, ast.List):
@@ -110,7 +121,7 @@ def _expected_tool_sequences(test_cases_path: Path) -> Tuple[Dict[str, List[str]
 
 
 def load_synthetic_cases(data_dir: Path = DATA_DIR) -> Dict[Tuple[str, str], Dict[str, Any]]:
-    """Load JSON milestones and expected outcomes, indexed by domain and task ID aliases."""
+    """Use Python test_case_id as canonical; accept legacy names only at input."""
     cases: Dict[Tuple[str, str], Dict[str, Any]] = {}
     for domain_dir in sorted(data_dir.iterdir()):
         json_path = domain_dir / "test_cases.json"
@@ -118,24 +129,29 @@ def load_synthetic_cases(data_dir: Path = DATA_DIR) -> Dict[Tuple[str, str], Dic
             continue
         data = json.loads(json_path.read_text(encoding="utf-8"))
         sequences, class_case_ids = _expected_tool_sequences(domain_dir / "test_cases.py")
+        mapped_classes = set()
         for workflow in data.get("workflows", []):
             for case in workflow.get("test_cases", []):
-                canonical_id = case.get("test_case_id")
-                if not canonical_id:
-                    continue
-                aliases = {canonical_id}
+                reference_id = case.get("test_case_id")
+                if not isinstance(reference_id, str) or not reference_id.strip():
+                    raise ValueError(f"Missing JSON test_case_id in {json_path}")
                 matching_classes = []
-                task_token = re.search(r"W\d+_TC\d+$", canonical_id)
+                task_token = re.search(r"W\d+_TC\d+$", reference_id)
                 for class_name, test_case_id in class_case_ids.items():
                     class_token = re.search(r"W\d+_TC\d+$", test_case_id)
-                    if test_case_id.endswith(canonical_id) or (
+                    if test_case_id == reference_id or test_case_id.endswith(reference_id) or (
                         task_token and class_token and task_token.group() == class_token.group()
                     ):
                         matching_classes.append(class_name)
-                if len(matching_classes) > 1:
-                    raise ValueError(f"Ambiguous Python test case for {domain_dir.name}/{canonical_id}: {matching_classes}")
-                aliases.update(matching_classes)
-                expected_calls = sequences[matching_classes[0]] if matching_classes else []
+                if len(matching_classes) != 1:
+                    raise ValueError(f"Expected one Python test case for {domain_dir.name}/{reference_id}; found {matching_classes}")
+                class_name = matching_classes[0]
+                if class_name in mapped_classes:
+                    raise ValueError(f"Multiple JSON cases map to {domain_dir.name}/{class_name}")
+                mapped_classes.add(class_name)
+                canonical_id = class_case_ids[class_name]
+                aliases = {canonical_id, reference_id, class_name}
+                expected_calls = sequences[class_name]
                 record = {
                     "test_case_id": canonical_id,
                     "title": case.get("title", ""),
@@ -144,6 +160,7 @@ def load_synthetic_cases(data_dir: Path = DATA_DIR) -> Dict[Tuple[str, str], Dic
                     "expected_success_outcome": case.get("expected_success_outcome", {}),
                     "milestones": case.get("milestones", []),
                     "expected_tool_calls": expected_calls,
+                    "scenario": {"input_data": case.get("representative_input", {})},
                 }
                 for alias in aliases:
                     key = (domain_dir.name, alias)
@@ -151,12 +168,21 @@ def load_synthetic_cases(data_dir: Path = DATA_DIR) -> Dict[Tuple[str, str], Dic
                     if existing and existing["test_case_id"] != canonical_id:
                         raise ValueError(f"Ambiguous task alias {key}: {canonical_id} conflicts with {existing['test_case_id']}")
                     cases[key] = record
+        unmapped = set(class_case_ids) - mapped_classes
+        if unmapped:
+            raise ValueError(f"Python cases without JSON references in {domain_dir.name}: {sorted(unmapped)}")
     return cases
 
 
 def load_trials(paths: Iterable[Path]) -> List[Dict[str, Any]]:
     rows = []
     for path in paths:
+        path = Path(path)
+        if path.is_dir():
+            path = path / "trials.csv"
+        if path.suffix.lower() == ".csv":
+            rows.extend(load_baseline_trials(path))
+            continue
         with path.open(encoding="utf-8") as source:
             for line_number, line in enumerate(source, start=1):
                 if not line.strip():
@@ -170,6 +196,8 @@ def load_trials(paths: Iterable[Path]) -> List[Dict[str, Any]]:
                 for field in ("domain", "task_id"):
                     if not row.get(field):
                         raise ValueError(f"Trial on line {line_number} of {path} is missing required field {field!r}")
+                row["source"] = {**row.get("source", {}), "jsonl_file": str(path.resolve()),
+                                 "jsonl_sha256": file_hash(path)}
                 rows.append(row)
     if not rows:
         raise ValueError("No trial rows found in the supplied JSONL files")
@@ -286,6 +314,7 @@ def _call_judge(
             "expected_success_outcome": task["expected_success_outcome"],
             "milestones": task["milestones"],
             "expected_tool_calls_reference_only": task["expected_tool_calls"],
+            "scenario": task.get("scenario", {}),
         },
         "agent_transcript": transcript,
     }
@@ -304,6 +333,28 @@ def _call_judge(
     return _parse_judgment(content, task["milestones"])
 
 
+def resolve_trials(rows, cases):
+    """Validate every identity and payload before any paid judging."""
+    resolved = []
+    seen = set()
+    for row in rows:
+        key = (str(row["domain"]), str(row["task_id"]))
+        task = cases.get(key)
+        if task is None:
+            raise KeyError(f"No synthetic test case found for {key}")
+        identity = (key[0], task["test_case_id"], str(row.get("trial", "")))
+        if identity in seen:
+            raise ValueError(f"Duplicate canonical task/trial identity: {identity}")
+        seen.add(identity)
+        if not row.get("error"):
+            transcript = row.get("transcript", row.get("messages"))
+            if transcript is None or transcript == "" or transcript == []:
+                raise ValueError(f"Trial {key} has no transcript")
+        row = {**row, "task_id": task["test_case_id"]}
+        resolved.append((row, key, {**task, "scenario": row.get("scenario", task.get("scenario", {}))}))
+    return resolved
+
+
 def judge_trials(
     rows: Iterable[Dict[str, Any]],
     cases: Dict[Tuple[str, str], Dict[str, Any]],
@@ -312,11 +363,9 @@ def judge_trials(
 ) -> List[Dict[str, Any]]:
     results = []
     _, rubric_version, rubric_status = load_rubric()
-    for row in rows:
-        key = (str(row["domain"]), str(row["task_id"]))
-        task = cases.get(key)
-        if task is None:
-            raise KeyError(f"No synthetic test case found for {key}")
+    resolved = resolve_trials(rows, cases)
+    # Validate identities before any paid judging, including duplicate legacy aliases.
+    for row, key, task in resolved:
         common = {
             "domain": key[0],
             "task_id": task["test_case_id"],
@@ -324,6 +373,8 @@ def judge_trials(
             "model": model,
             "rubric_version": rubric_version,
             "rubric_status": rubric_status,
+            "rubric_sha256": file_hash(RUBRIC_PATH),
+            "source_json": json.dumps(row.get("source", {}), sort_keys=True),
         }
         if row.get("error"):
             results.append({
@@ -393,13 +444,34 @@ def _write_csv(path: Path, rows: List[Dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-def run(trials_paths: Iterable[Path], out_dir: Path, model: str, data_dir: Path = DATA_DIR) -> int:
+def run(trials_paths: Iterable[Path], out_dir: Path, model: str, data_dir: Path = DATA_DIR,
+        dry_run=False, selection=None, prepare_review=False) -> int:
     load_dotenv(dotenv_path=REPO / ".env")
     load_rubric()
-    if not os.getenv("OPENAI_API_KEY"):
-        raise ValueError("OPENAI_API_KEY is required; set it in .env or the environment")
     trial_rows = load_trials(trials_paths)
     cases = load_synthetic_cases(data_dir)
+    resolved = resolve_trials(trial_rows, cases)
+    if __package__:
+        from .judge_review import audit_inputs, select_trials, write_review_packet
+    else:
+        from judge_review import audit_inputs, select_trials, write_review_packet
+    selected = select_trials(resolved, selection, cases) if selection else resolved
+    out_dir = Path(out_dir)
+    protected = [REPO / "data", REPO / "results/baseline", REPO / "results/framework",
+                 REPO / "results/archive", REPO / "results/experiments", REPO / "results/rubric_review"]
+    if any(out_dir.resolve() == p or out_dir.resolve().is_relative_to(p) or
+           p.is_relative_to(out_dir.resolve()) for p in protected):
+        raise ValueError("Judge output must not overlap source data or historical result directories")
+    if prepare_review:
+        write_review_packet(out_dir, selected, load_rubric(), file_hash(RUBRIC_PATH))
+    if dry_run or prepare_review:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        audit = audit_inputs(resolved, selected, data_dir, RUBRIC_PATH, selection)
+        (out_dir / "input_audit.json").write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n")
+        return len(selected)
+    if not os.getenv("OPENAI_API_KEY"):
+        raise ValueError("OPENAI_API_KEY is required; set it in .env or the environment")
+    trial_rows = [row for row, _, _ in selected]
     results = judge_trials(trial_rows, cases, model)
     summary = compute_judge_difficulty(results)
     _write_csv(out_dir / "llm_judge_trials.csv", results)
@@ -410,17 +482,25 @@ def run(trials_paths: Iterable[Path], out_dir: Path, model: str, data_dir: Path 
 def main(argv: Optional[List[str]] = None) -> int:
     load_dotenv(dotenv_path=REPO / ".env")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--trials", required=True, nargs="+", type=Path, help="Agent trial transcript JSONL file(s)")
+    parser.add_argument("--trials", required=True, nargs="+", type=Path,
+                        help="Transcript JSONL files, baseline trials.csv, or saved run directories")
     parser.add_argument("--out", type=Path, default=REPO / "results" / "difficulty" / "llm_judge")
     parser.add_argument("--data", type=Path, default=DATA_DIR, help="Synthetic dataset directory")
     parser.add_argument("--model", default=os.getenv("JUDGE_MODEL") or os.getenv("MODEL_NAME") or "gpt-4.1-mini")
+    parser.add_argument("--dry-run", action="store_true", help="Validate inputs and write an audit without model calls")
+    parser.add_argument("--selection", type=Path, help="JSON list of domain/task_id/trial identities to select")
+    parser.add_argument("--prepare-review", action="store_true", help="Prepare a blind human-review packet; implies dry-run")
     args = parser.parse_args(argv)
-    if not os.getenv("OPENAI_API_KEY"):
+    if not (args.dry_run or args.prepare_review) and not os.getenv("OPENAI_API_KEY"):
         parser.error("OPENAI_API_KEY is required; set it in .env or the environment")
     _, rubric_version, rubric_status = load_rubric()
-    n_judged = run(args.trials, args.out, args.model, args.data)
-    print(f"Judged {n_judged} trials with rubric {rubric_version} ({rubric_status}); "
-          f"wrote per-trial judgments and difficulty to {args.out}")
+    n_judged = run(args.trials, args.out, args.model, args.data,
+                   args.dry_run, args.selection, args.prepare_review)
+    if args.dry_run or args.prepare_review:
+        print(f"Validated {n_judged} selected attempts; no model calls or new scores. Output: {args.out}")
+    else:
+        print(f"Judged {n_judged} trials with rubric {rubric_version} ({rubric_status}); "
+              f"wrote per-trial judgments and difficulty to {args.out}")
     return 0
 
 

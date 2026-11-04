@@ -26,9 +26,6 @@ sys.path.insert(0, str(current_dir))
 # Load configuration before agent_runner checks credentials during import.
 load_dotenv(dotenv_path=current_dir.parent / ".env")
 
-from agent_runner import run_test_case_local
-
-
 def load_test_case_classes(agent_name: str):
     """
     Dynamically import test case classes for a given agent.
@@ -37,7 +34,7 @@ def load_test_case_classes(agent_name: str):
         agent_name: Name of the agent (e.g., "insurance_claims")
         
     Returns:
-        Dictionary mapping test_id to test case class
+        Dictionary keyed by the supplied Python test_case_id
     """
     module_path = f"{agent_name}.test_cases"
     
@@ -54,14 +51,14 @@ def load_test_case_classes(agent_name: str):
         if name.startswith("TestCase") and obj.__module__ == module_path
     ]
     
-    # Build a dict keyed by test_id or class name
+    # Use the same supplied identifier as the saved baseline and judge outputs.
     test_cases_by_id = {}
     for cls in test_case_classes:
-        # Try to get test_id from class attributes
-        test_id = getattr(cls, 'test_id', None)
-        if not test_id:
-            # Fallback to class name
-            test_id = cls.__name__
+        test_id = getattr(cls, 'test_case_id', None)
+        if not isinstance(test_id, str) or not test_id.strip():
+            raise ValueError(f"Missing test_case_id on {cls.__name__}")
+        if test_id in test_cases_by_id:
+            raise ValueError(f"Duplicate test_case_id {test_id!r} in {agent_name}")
         test_cases_by_id[test_id] = cls
     
     print(f"✓ Loaded {len(test_case_classes)} test case classes from {module_path}")
@@ -192,6 +189,9 @@ def run_local_testcases(
     test_instance = test_cls()
     
     # try:
+    # Load execution dependencies only when actually running an agent.
+    from agent_runner import run_test_case_local
+
     # Run the test case using agent_runner
     agent_result, tools = run_test_case_local(
         test_case_instance=test_instance,
