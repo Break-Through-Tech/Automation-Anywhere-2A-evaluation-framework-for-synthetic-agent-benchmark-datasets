@@ -11,7 +11,9 @@
         "R03",
         "R04"
       ],
-      "secondary": []
+      "secondary": [],
+      "issue_number": 51,
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51"
     },
     {
       "number": 2,
@@ -25,7 +27,9 @@
       ],
       "secondary": [
         "R04"
-      ]
+      ],
+      "issue_number": 52,
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52"
     },
     {
       "number": 3,
@@ -37,7 +41,9 @@
         "R09",
         "R10"
       ],
-      "secondary": []
+      "secondary": [],
+      "issue_number": 53,
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/53"
     },
     {
       "number": 4,
@@ -51,7 +57,9 @@
       ],
       "secondary": [
         "R10"
-      ]
+      ],
+      "issue_number": 54,
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/54"
     }
   ],
   "reviewer_names": "unassigned; reviewers claim an issue",
