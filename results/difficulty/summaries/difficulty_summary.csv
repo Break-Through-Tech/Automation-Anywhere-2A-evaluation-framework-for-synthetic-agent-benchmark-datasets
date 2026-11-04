@@ -1,0 +1,3 @@
+dataset,n_tasks,mean_num_write,n_tasks_with_empirical,mean_empirical_difficulty
+tau2,278,2.5935,278,0.2158
+synthetic,64,2.1094,0,

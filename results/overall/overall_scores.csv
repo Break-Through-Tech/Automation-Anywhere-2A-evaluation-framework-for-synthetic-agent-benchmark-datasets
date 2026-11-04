@@ -1,0 +1,3 @@
+dataset,difficulty_write_norm,coverage_vendi_norm,coverage_attribute_diversity,difficulty_mean_num_write
+tau2,1.0,0.0828,0.8474,2.5935
+synthetic,0.8133,0.4552,0.797,2.1094

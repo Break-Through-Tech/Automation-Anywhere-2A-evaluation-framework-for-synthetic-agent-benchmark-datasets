@@ -1,0 +1,16 @@
+[
+  {
+    "dataset": "tau2",
+    "n_tasks": 278,
+    "mean_num_write": 2.5935,
+    "n_tasks_with_empirical": 278,
+    "mean_empirical_difficulty": 0.2158
+  },
+  {
+    "dataset": "synthetic",
+    "n_tasks": 64,
+    "mean_num_write": 2.1094,
+    "n_tasks_with_empirical": 0,
+    "mean_empirical_difficulty": null
+  }
+]
