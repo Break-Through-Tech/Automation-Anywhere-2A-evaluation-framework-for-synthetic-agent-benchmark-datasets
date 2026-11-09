@@ -1,0 +1,70 @@
+{
+  "checks": [
+    "unique task identities",
+    "legacy labels match selected tasks",
+    "pinned tau2 metadata and snapshot hashes",
+    "curated map source hashes",
+    "synthetic Python/JSON workflow agreement",
+    "workflow IDs exist in agent definitions",
+    "known telecom condition IDs",
+    "reference tools match selected dataset"
+  ],
+  "code_sha256": {
+    "labeling/workflows.py": "8a07d88080e86fd68c11c3e2f5772f1e30fa3b11cd9f60a595f2511ec6874b63"
+  },
+  "downstream_scoring_status": "not_run",
+  "input_sha256": {
+    "coverage/labels/labels_synthetic.csv": "26e9f927a0ed6488c9d238e5c22ae65313dc882f6b89725d7fc4c515f59a364c",
+    "coverage/labels/labels_tau2.csv": "fd57752732404e7e577a820f4baaa5eb0af3571f9be1f6fe379a026aac056bb7",
+    "data/banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+    "data/banking_accounts_deposits/test_cases.json": "fcd7228764e32c35df5eefa15b6395a2bd7abd5017711f702552ee7b6fc67403",
+    "data/banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "data/banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "data/banking_customer_onboarding/test_cases.json": "849d04f1e2c0c7a41e6f7af7424a8b4162353f72692e577ba50f5281d8f79c9f",
+    "data/banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "data/banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+    "data/banking_fraud_monitoring/test_cases.json": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94",
+    "data/banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+    "data/healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "data/healthcare_patient_onboarding/test_cases.json": "c2a257396c615b71206c9b941a4b0328e2451a7a75db7f3fca04266e6d12930d",
+    "data/healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "data/healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+    "data/healthcare_prior_authorization/test_cases.json": "251007e8148562cdeb561200cb333cf6a44f98eeb599f00c5f68e760381824d0",
+    "data/healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "data/insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+    "data/insurance_claims_intake/test_cases.json": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd",
+    "data/insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "data/manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c",
+    "data/manufacturing_purchase_to_pay/test_cases.json": "a46adedb99892fc44a48c9cadea9c9d96ab174c9267f49d674717595ecd728f7",
+    "data/manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "data/processed/tasks.jsonl": "da86fa5e65ca10599e98f9e70ebc5cf75db0b8db80c9022b8368d15ab319b7f1",
+    "labeling/workflow_rules.json": "7a3836f34811a89297642216431fa39afb16dec0a50448a983b03802e3577c54",
+    "labeling/workflow_sources/tau2/conditions.json": "33caaa84c2453145da06e58cd18e61cf2bfa96e53f93ebf8a004296c808fe3aa",
+    "labeling/workflow_sources/tau2/manifest.json": "29cee7693632ff51fe2403f942ab29cdb5c54698d427f69713d445c60aa8bf59",
+    "labeling/workflow_sources/tau2/policy/LICENSE": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+    "labeling/workflow_sources/tau2/policy/data/tau2/domains/airline/policy.md": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+    "labeling/workflow_sources/tau2/policy/data/tau2/domains/retail/policy.md": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+    "labeling/workflow_sources/tau2/policy/data/tau2/domains/telecom/main_policy.md": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7",
+    "labeling/workflow_sources/tau2/policy/data/tau2/domains/telecom/tech_support_manual.md": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba",
+    "labeling/workflow_sources/tau2/policy/data/tau2/domains/telecom/tech_support_workflow.md": "64f3ccd13875d14f358b21b9af221dab09e0e7bf5690d0e4322fb91855a43a4d",
+    "labeling/workflow_sources/tau2/policy/src/tau2/agent/llm_agent.py": "d13412ff502859f0ef0492af0128f1b2666be32640057ba8e076d2602af084d8",
+    "labeling/workflow_sources/tau2/tasks.jsonl": "3608e0135df5ffc7370431432ff93a41161c957a8a2743d1c9eeb81d82baea59",
+    "labeling/workflow_task_map.csv": "9cd2e0837272df6ce7ef9a4f9707efac58ffff306f19ccbd6ddbad4c2d896f0f"
+  },
+  "output_sha256": {
+    "workflow_catalog.csv": "9eba192afd77adb0735022f3ca7a0a957d3920ce261b1487fbbeda5d59de901d",
+    "workflow_counts.csv": "13469b1d77e0fc8d85125e129ca83f8a7e36f617dc6470b3d1758ee2b1603b4c",
+    "workflow_evidence.jsonl": "bab20c6e2c6f45f07966df5aee38fdb2caf423e3b1a712a871268a3a3f0f7ffc",
+    "workflow_labels.csv": "2c80d3d4dd4fa0373e758f4187a018ba8ff84b7f5720c8bfa492369ffa2d647a"
+  },
+  "python_version": "3.14.2",
+  "pyyaml_version": "6.0.3",
+  "review_note": "Source extraction and rule checks; no independent human-label accuracy claim.",
+  "schema_version": 1,
+  "task_counts": {
+    "synthetic": 64,
+    "tau2": 278
+  },
+  "tau2_revision": "dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd",
+  "tau2_split": "base"
+}

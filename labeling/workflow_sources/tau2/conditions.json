@@ -1,0 +1,82 @@
+{
+  "airplane_mode_on": {
+    "description": "Airplane mode is on.",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py#L360"
+  },
+  "bad_network_preference": {
+    "description": "Bad network preference",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L435"
+  },
+  "bad_vpn": {
+    "description": "Bad vpn",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L442"
+  },
+  "bad_wifi_calling": {
+    "description": "Bad wifi calling",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mms_issues.py#L206"
+  },
+  "break_apn_mms_setting": {
+    "description": "Break apn mms setting",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mms_issues.py#L212"
+  },
+  "break_apn_settings": {
+    "description": "APN settings are broken",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py#L386"
+  },
+  "break_app_both_permissions": {
+    "description": "Break app both permissions",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mms_issues.py#L231"
+  },
+  "break_app_sms_permission": {
+    "description": "Break app sms permission",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mms_issues.py#L219"
+  },
+  "break_app_storage_permission": {
+    "description": "Break app storage permission",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mms_issues.py#L225"
+  },
+  "contract_end_suspension": {
+    "description": "Line is suspended for an overdue bill and a contract end",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py#L400"
+  },
+  "data_mode_off": {
+    "description": "Data mode is off",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L421"
+  },
+  "data_saver_mode_on": {
+    "description": "Data saver mode is on",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L428"
+  },
+  "data_usage_exceeded": {
+    "description": "Data usage exceeded",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L449"
+  },
+  "data_usage_exceeded_no_refuel": {
+    "description": "Data usage exceeded",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L458"
+  },
+  "lock_sim_card_pin": {
+    "description": "SIM card is locked with a PIN",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py#L372"
+  },
+  "overdue_bill_suspension": {
+    "description": "Line is suspended for an overdue bill",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py#L393"
+  },
+  "unseat_sim_card": {
+    "description": "SIM card is unseated.",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py#L366"
+  },
+  "user_abroad_roaming_disabled_off": {
+    "description": "User is abroad and roaming is off",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L414"
+  },
+  "user_abroad_roaming_disabled_on": {
+    "description": "User is abroad and roaming is off",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L407"
+  },
+  "user_abroad_roaming_enabled_off": {
+    "description": "User is abroad and roaming is off",
+    "source": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py#L401"
+  }
+}

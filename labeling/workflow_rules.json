@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "label_basis": "Requested domain goals, including conditional alternatives and requests disallowed by policy. Labels describe test design, not execution success.",
+  "families": {
+    "retail": {
+      "item_change": "Change ordered product options; includes pending-item modification and delivered-item exchange, including rejected requests.",
+      "order_cancellation": "Request cancellation of an order or selected items, including conditional or withdrawn requests.",
+      "return_refund": "Request a return or refund for received items, including requests rejected by policy.",
+      "order_address_change": "Change the shipping address of an existing order.",
+      "profile_address_change": "Change the default address in the user profile.",
+      "payment_change": "Change or split payment on an existing order; includes prohibited split-payment requests.",
+      "information_request": "Explicit independent request for product, order, profile, tracking, or balance information; routine lookup and transaction totals are not counted separately.",
+      "order_creation_request": "Ask the retail agent to place or recreate an order. This is outside the listed retail capabilities.",
+      "order_reinstatement_request": "Ask to undo an order cancellation. This is outside the listed retail capabilities."
+    },
+    "airline": {
+      "booking": "Request a new flight reservation, including cancellation and rebooking alternatives.",
+      "flight_change": "Request changes to flight date, route, or flight selection on a reservation, including disallowed changes.",
+      "cabin_change": "Request a cabin upgrade or downgrade, including unsupported partial changes.",
+      "baggage_change": "Request adding or removing checked bags; includes disallowed removal.",
+      "passenger_change": "Request changing passenger details or passenger count; includes prohibited count changes.",
+      "cancellation": "Request reservation cancellation/refund, whether eligible, rejected, or conditional.",
+      "insurance_change": "Request adding, removing, or refunding insurance after booking; these requests are disallowed.",
+      "compensation": "Request or discuss compensation for a delayed/cancelled flight, including ineligible claims.",
+      "information_request": "Independent request for reservation, allowance, balance, or flight information; routine lookup to perform another request is not counted separately."
+    }
+  },
+  "unsupported_families": {
+    "retail": [
+      "order_creation_request",
+      "order_reinstatement_request"
+    ],
+    "airline": [
+      "insurance_change"
+    ]
+  },
+  "telecom_families": {
+    "mms_issue": "Restore MMS messaging",
+    "mobile_data_issue": "Restore mobile data / internet speed",
+    "service_issue": "Restore phone service"
+  }
+}
