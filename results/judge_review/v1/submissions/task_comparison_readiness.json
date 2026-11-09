@@ -1,0 +1,13 @@
+{
+  "agreement_metrics_computed": false,
+  "comparison_level": "task",
+  "expected_reviews": 16,
+  "human_evidence_validation": "Structured citations checked if provided; submitted prose is not exact-excerpt validated.",
+  "independent_review_not_verified_by_software": true,
+  "milestone_agreement_computed": false,
+  "received_task_reviews": 16,
+  "rubric_sha256": "69ad3055a576848ea76949b8cc6d3ee3c1380c76e1f79d76f58da7d096b553f1",
+  "rubric_version": "synthetic_milestones_v0.1_draft",
+  "scope": "purposive development sample; not held-out judge validation",
+  "status": "awaiting_judge_results"
+}

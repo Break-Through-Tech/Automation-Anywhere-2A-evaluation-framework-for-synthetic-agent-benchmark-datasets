@@ -33,6 +33,23 @@ Use `--output-dir` to keep runs separate. For example:
 python run_all.py --seed 42 --output-dir /tmp/framework-repeat
 ```
 
+Optionally attach the proposed synthetic designed-complexity features to a new
+framework run:
+
+```bash
+python run_all.py --seed 42 --synthetic-structural-features results/difficulty/structural_v1/task_features.json --output-dir results/framework/structural_v1
+```
+
+This adds `designed_` columns to `difficulty_tasks.csv` for synthetic tasks and
+records the feature file and its supplied-source hashes in `run_metadata.json`.
+The input must match all synthetic task IDs exactly once and its source hashes
+must still match. τ²-bench receives blank designed-feature columns. Existing
+metrics and write-count correlations are unchanged; no new feature correlations
+or combined difficulty score are computed. The summary marks new-signal validation
+as awaiting validated outcomes. The seven AI-reviewed structural examples do not
+replace the independent judge-review study. See the
+[counting rules](docs/evaluation/structural_feature_rules.md) for limitations.
+
 The synthetic baseline runner and evaluation protocol are documented in
 [`baseline/SYNTHETIC_BASELINE.md`](baseline/SYNTHETIC_BASELINE.md).
 When `results/baseline/v2_synthetic_full/trials.csv` exists, the framework

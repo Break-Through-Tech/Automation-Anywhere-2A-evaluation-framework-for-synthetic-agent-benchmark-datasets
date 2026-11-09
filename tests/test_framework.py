@@ -106,6 +106,31 @@ class FrameworkTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "still incomplete"):
                 run_all.evaluate(args)
 
+    def test_optional_structural_features_attach_without_new_outcome_validation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            features = run_all.ROOT / 'results/difficulty/structural_v1/task_features.json'
+            args = run_all.parser().parse_args([
+                '--output-dir', directory, '--synthetic-structural-features', str(features)])
+            args.synthetic_trials = None
+            vectors = np.tile(np.array([[1.0, 0.0], [0.0, 1.0]]), (171, 1))
+            with patch.object(run_all, 'embed', return_value=vectors), \
+                 patch.object(run_all, 'scatter'), contextlib.redirect_stdout(io.StringIO()):
+                summary = run_all.evaluate(args)
+            self.assertEqual(summary['synthetic_designed_complexity']['n_tasks'], 64)
+            self.assertEqual(summary['synthetic_designed_complexity']['validation_status'],
+                             'awaiting_validated_outcomes')
+            self.assertFalse(summary['synthetic_designed_complexity']['combined_score_computed'])
+            self.assertIsNone(summary['datasets']['synthetic']['mean_empirical_difficulty'])
+            rows = run_all.read_csv(Path(directory) / 'difficulty_tasks.csv')
+            self.assertEqual(sum(r['dataset'] == 'synthetic' for r in rows), 64)
+            self.assertTrue(all(r['designed_class_difficulty_tag'] in {'easy', 'medium', 'hard'}
+                                for r in rows if r['dataset'] == 'synthetic'))
+            self.assertTrue(all(r['designed_workflow_step_count'] == ''
+                                for r in rows if r['dataset'] == 'tau2'))
+            metadata = json.loads((Path(directory) / 'run_metadata.json').read_text())
+            self.assertIn('results/difficulty/structural_v1/task_features.json', metadata['inputs'])
+            self.assertIn('data/banking_accounts_deposits/agent_definition.yaml', metadata['inputs'])
+
 
 if __name__ == "__main__":
     unittest.main()

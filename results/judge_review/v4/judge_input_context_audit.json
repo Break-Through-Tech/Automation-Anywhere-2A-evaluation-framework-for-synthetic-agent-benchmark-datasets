@@ -1,0 +1,242 @@
+[
+  {
+    "review_id": "R01",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R02",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R03",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R04",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R05",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R06",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R07",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R08",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R09",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R10",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R11",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R12",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R13",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R14",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R15",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  },
+  {
+    "review_id": "R16",
+    "task_payload_fields": [
+      "title",
+      "rationale",
+      "input_conditions",
+      "expected_success_outcome",
+      "milestones",
+      "expected_tool_calls_reference_only",
+      "scenario"
+    ],
+    "full_authoritative_tool_contracts_provided": false,
+    "full_workflow_guidelines_provided": false,
+    "note": "Task reference and observed calls are present; complete tool schemas and workflow definitions are absent from this request."
+  }
+]

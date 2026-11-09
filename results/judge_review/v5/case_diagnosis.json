@@ -1,0 +1,71 @@
+[
+  {
+    "review_id": "R01",
+    "judgment": "unverifiable",
+    "validation_status": "accepted",
+    "environment_assessment": {
+      "status": "suspected_blocker",
+      "prevents_required_execution": false,
+      "rationale": "A necessary execution blocker is suspected, not demonstrated. Actual owner identity values were not provided, and the customer confirms some information is unavailable. However, the runtime schemas allow partial customer and owner objects, and the supplied evidence does not determine whether available data could support valid business-and-owner screening. Ownership percentages and secure-channel use are not established mandatory prerequisites. The false flag means prevention is not proven, not that completion is proven feasible. This uncertainty prevents reliable attribution of the interrupted outcome.",
+      "evidence": [
+        {
+          "locator": "#/conversation/4/content",
+          "excerpt": "I can provide their dates of birth and ID details through the secure application channel, but I don’t have their residential addresses, contact details, countries of residence, or ownership percentages available."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent appropriately avoided fabricating identity data and obtained an acknowledged handoff, but its categorical claim that screening could not proceed relies partly on unestablished requirements. Without a supported necessary blocker, that claim cannot receive supported-positive blocker-recognition status. The handoff is an observed behavior, not completion credit.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "Identity and AML screening cannot yet be completed; do not configure or open the account."
+        },
+        {
+          "locator": "#/tool_events/0/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        }
+      ]
+    },
+    "model_rationale": "The execution establishes information gathering and an acknowledged escalation for ACC-3001, not the requested opened account. No mandatory business operation has a supporting result. However, the record also does not conclusively establish that full compliant execution was feasible with the information actually exposed to the agent. The customer reports missing information, and sensitive identity values remain unprovided; the runtime schemas permit partial objects and do not substantiate all of the agent's claimed requirements. This leaves a suspected, unresolved input blocker rather than a proven environmental impossibility or a decisive feasible-action failure. All material outcome conditions therefore remain unverifiable. No current review date or exact reference-call replay is used.",
+    "difficulty_eligible": false,
+    "raw_response_sha256": "bdaf8b48a82bbafc04538fa367bf9e5e1a9bcce54f2f4bff720a0422b9678807"
+  },
+  {
+    "review_id": "R15",
+    "judgment": "unverifiable",
+    "validation_status": "accepted",
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "Execution outputs demonstrate material disagreement with the required transaction identity and matching-travel context despite correct lookup inputs. The blocker prevents reliable execution or assessment of the full specified scenario, although the tools allow a coherent review of the different returned data. The approval/case-state endpoint also lacks an unambiguous operational contract. This finding is grounded in observed outputs, not an agent claim of unavailable tools.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/alert_id",
+          "excerpt": "FA-883422"
+        },
+        {
+          "locator": "#/tool_events/0/output/transaction_id",
+          "excerpt": "TX-998877"
+        },
+        {
+          "locator": "#/tool_events/1/output/recent_travel",
+          "excerpt": "[\"New York\", \"Chicago\"]"
+        },
+        {
+          "locator": "#/tool_events/5/output/fraud_risk_score",
+          "excerpt": "15"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "not_established",
+      "rationale": "The agent did not identify the reference/environment mismatch or the approval-state observability gap. It was not directly shown the hidden scenario literals, so this is not evidence of ignoring a visible identity contradiction. Asking for and obtaining the lookback was appropriate clarification, not recognition of the material blocker.",
+      "evidence": []
+    },
+    "model_rationale": "The agent obtained the correct alert and customer identifiers, requested the missing lookback, performed the enrichment prerequisites, carried returned entities and data consistently, and selected the branch supported by the observed score. Nevertheless, the environment supplied a materially different transaction, device, travel history, velocity, and score from the task's intended scenario. These unresolved conflicts prevent reliable assessment of full completion for the required entity and inputs. There is also an endpoint-contract gap: the reference workflow assigns approval and case updating to SUCCESS, but its runtime contract only signals completion and reports structured data. The observed approval recommendation and terminal report do not independently establish an approved, closed case. Under v0.2, this blocked assessment is excluded rather than counted as agent failure or success.",
+    "difficulty_eligible": false,
+    "raw_response_sha256": "dccb1e1441f890b6c3ad095c28decc2415864d0c0340b13fb38cebc7ebd5054f"
+  }
+]

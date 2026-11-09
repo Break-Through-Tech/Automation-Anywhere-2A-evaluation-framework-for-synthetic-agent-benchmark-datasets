@@ -13,7 +13,10 @@
       ],
       "secondary": [],
       "issue_number": 51,
-      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51"
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51",
+      "primary_submission_status": "task_level_submitted",
+      "reviewer": "Sana",
+      "milestone_submission_status": "not_submitted"
     },
     {
       "number": 2,
@@ -29,7 +32,10 @@
         "R04"
       ],
       "issue_number": 52,
-      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52"
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52",
+      "reviewer": "Zayd Nadir",
+      "primary_submission_status": "task_level_submitted",
+      "milestone_submission_status": "not_submitted"
     },
     {
       "number": 3,
@@ -43,7 +49,10 @@
       ],
       "secondary": [],
       "issue_number": 53,
-      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/53"
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/53",
+      "reviewer": "Shrutika",
+      "primary_submission_status": "task_level_submitted",
+      "milestone_submission_status": "not_submitted"
     },
     {
       "number": 4,
@@ -59,7 +68,10 @@
         "R10"
       ],
       "issue_number": 54,
-      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/54"
+      "issue_url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/54",
+      "reviewer": "Anjana Kummetha",
+      "primary_submission_status": "task_level_submitted",
+      "milestone_submission_status": "not_submitted"
     }
   ],
   "reviewer_names": "unassigned; reviewers claim an issue",

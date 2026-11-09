@@ -1,0 +1,15 @@
+{
+  "raw_endpoint_candidates": 15,
+  "reporting_only_candidates_cleared_on_source_review": [
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "step": 9,
+      "description": "Signal successful batch processing.",
+      "disposition": "reporting_only_phrase_not_independent_business_action",
+      "rationale": "Signal successful batch processing describes a terminal report; this wording alone does not establish a missing business-operation contract."
+    }
+  ],
+  "remaining_endpoint_candidates_require_review": 14,
+  "new_outcome_labels": false
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "review_id": "R01",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "trial": 0
+  },
+  {
+    "review_id": "R15",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 2
+  },
+  {
+    "review_id": "R07",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "trial": 0
+  }
+]

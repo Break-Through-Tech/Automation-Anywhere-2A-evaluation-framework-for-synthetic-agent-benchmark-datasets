@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import ast
 import csv
+import hashlib
 import json
 import os
 import re
@@ -23,13 +24,16 @@ from dotenv import load_dotenv
 
 if __package__:
     from .saved_trials import load_baseline_trials, file_hash
+    from .judge_evidence import check_evidence
 else:
     from saved_trials import load_baseline_trials, file_hash
+    from judge_evidence import check_evidence
 
 REPO = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO / "data"
 RUBRIC_PATH = REPO / "docs" / "evaluation" / "synthetic_milestone_rubric.md"
 JUDGMENTS = {"met", "unmet", "unverifiable"}
+PROMPT_VERSION = "synthetic_judge_v0.2_exact_evidence"
 
 SYSTEM_PROMPT = """You are an impartial evaluator of an AI agent's attempt at a synthetic task.
 Apply the grading definitions in the supplied rubric. It is a proposed draft, not an
@@ -53,6 +57,38 @@ do not invent missing references or requirements. For a structured transcript, u
 pointers relative to that object, such as #/tool_events/0/output/status or
 #/conversation/0/content. Tool events and conversation messages retain their separate
 original order; do not invent an interleaving that the evidence does not establish."""
+
+SYSTEM_PROMPT += """
+
+EVIDENCE RULES
+The payload has two separate objects: task describes requirements; agent_transcript
+records execution. Use task to decide applicability and intended outcomes. Explain
+reference conflicts in rationale/contradictions. Never cite task as execution evidence.
+All evidence locators are relative to the INSIDE of agent_transcript, not the payload.
+Do not use #/task/... or #/agent_transcript/... . Prefer a single leaf field, such as
+#/tool_events/0/output/status, rather than a whole event or document array.
+
+Every excerpt must be a nonempty, exact, contiguous quotation from the cited value.
+Copy capitalization, punctuation, and spacing. Do not paraphrase, join separated
+fields, insert ellipses, or invent an excerpt describing a missing event. For a
+non-string value, quote its JSON representation (for example true or 500.0).
+Put explanations and inferences in rationale, never in excerpt. Evidence can support
+an inference, but the inference itself is not a quotation. Quote relevant observed
+outputs when explaining noncompletion; absence of a call alone is not proof of a
+violation. If the rubric does not support a met/unmet conclusion, use unverifiable.
+For unverifiable judgments use evidence: [] when no valid execution citation exists;
+never add an empty locator or excerpt as a placeholder. Keep both applicable and
+material as boolean fields for every milestone, including unverifiable milestones.
+
+ILLUSTRATIVE CITATION EXAMPLES ONLY (these values are not evidence for this attempt)
+Given agent_transcript = {"tool_events":[{"output":{"status":"created"}}]},
+a valid evidence entry is {"locator":"#/tool_events/0/output/status","excerpt":"created"}.
+Given agent_transcript = {"conversation":[{"content":"The account is still pending."}]},
+a valid evidence entry is {"locator":"#/conversation/0/content","excerpt":"still pending"}.
+The latter supports a reported pending state, not proof of an actual database state.
+Do not copy these example values unless they actually occur at the cited location
+in the supplied transcript. No prose or markdown fences outside the JSON response.
+"""
 
 
 def load_rubric(path: Path = RUBRIC_PATH) -> Tuple[str, str, str]:
@@ -332,7 +368,9 @@ def _call_judge(
     content = response.choices[0].message.content
     if not content:
         raise ValueError("Judge returned an empty response")
-    return _parse_judgment(content, task["milestones"])
+    judgment = _parse_judgment(content, task["milestones"])
+    check_evidence(judgment, transcript)
+    return judgment
 
 
 def resolve_trials(rows, cases):
@@ -364,7 +402,8 @@ def judge_trials(
     judge: Callable[[Dict[str, Any], Any, str], Dict[str, Any]] = _call_judge,
 ) -> List[Dict[str, Any]]:
     results = []
-    _, rubric_version, rubric_status = load_rubric()
+    rubric_text, rubric_version, rubric_status = load_rubric()
+    prompt_hash = hashlib.sha256(build_system_prompt(rubric_text).encode()).hexdigest()
     resolved = resolve_trials(rows, cases)
     # Validate identities before any paid judging, including duplicate legacy aliases.
     for row, key, task in resolved:
@@ -373,6 +412,8 @@ def judge_trials(
             "task_id": task["test_case_id"],
             "trial": row.get("trial", ""),
             "model": model,
+            "prompt_version": PROMPT_VERSION,
+            "prompt_sha256": prompt_hash,
             "rubric_version": rubric_version,
             "rubric_status": rubric_status,
             "rubric_sha256": file_hash(RUBRIC_PATH),
@@ -417,7 +458,16 @@ def compute_judge_difficulty(results: Iterable[Dict[str, Any]]) -> List[Dict[str
     summary = []
     for (domain, task_id), trials in sorted(groups.items()):
         judged = [trial for trial in trials if trial["status"] == "valid"]
-        eligible = [trial for trial in judged if trial["task_judgment"] in {"met", "unmet"}]
+        policy_versions = {trial.get('policy_version', '') for trial in trials}
+        if len(policy_versions) > 1:
+            raise ValueError('Cannot combine different outcome policies for task difficulty')
+        for trial in judged:
+            if trial.get('policy_version') == 'provisional_outcome_v0.2' and 'difficulty_eligible' not in trial:
+                raise ValueError('Policy v0.2 requires explicit difficulty eligibility')
+            if 'difficulty_eligible' in trial and str(trial['difficulty_eligible']) not in {'0', '1', 'True', 'False'}:
+                raise ValueError('Difficulty eligibility must be an explicit boolean or 0/1')
+        eligible = [trial for trial in judged if trial["task_judgment"] in {"met", "unmet"}
+                    and str(trial.get('difficulty_eligible', 1)) in {'1', 'True'}]
         passed = sum(trial["task_judgment"] == "met" for trial in eligible)
         n_eligible = len(eligible)
         summary.append({
@@ -428,10 +478,13 @@ def compute_judge_difficulty(results: Iterable[Dict[str, Any]]) -> List[Dict[str
             "n_eligible": n_eligible,
             "n_unverifiable": sum(trial["task_judgment"] == "unverifiable" for trial in judged),
             "n_invalid": len(trials) - len(judged),
+            "n_policy_excluded": len(judged) - n_eligible,
             "c_passed": passed,
             "pass_rate": round(passed / n_eligible, 4) if n_eligible else "",
             "difficulty": round(1 - passed / n_eligible, 4) if n_eligible else "",
-            "denominator_policy": "draft_proposed_exclude_unverifiable",
+            "denominator_policy": ("user_v0.2_exclude_blocked_and_unverifiable"
+                                   if policy_versions == {'provisional_outcome_v0.2'}
+                                   else "draft_proposed_exclude_unverifiable"),
         })
     return summary
 

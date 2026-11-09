@@ -1,0 +1,3943 @@
+{
+  "feature_version": "structural_features_v0.1_proposed",
+  "status": "proposed_features_with_seven_ai_reviewed_examples",
+  "network_calls": 0,
+  "combined_difficulty_score": null,
+  "source_root": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/data",
+  "source_sha256": {
+    "banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+    "banking_accounts_deposits/test_cases.json": "fcd7228764e32c35df5eefa15b6395a2bd7abd5017711f702552ee7b6fc67403",
+    "banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "banking_customer_onboarding/test_cases.json": "849d04f1e2c0c7a41e6f7af7424a8b4162353f72692e577ba50f5281d8f79c9f",
+    "banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+    "banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+    "banking_fraud_monitoring/test_cases.json": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94",
+    "healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "healthcare_patient_onboarding/test_cases.json": "c2a257396c615b71206c9b941a4b0328e2451a7a75db7f3fca04266e6d12930d",
+    "healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+    "healthcare_prior_authorization/test_cases.json": "251007e8148562cdeb561200cb333cf6a44f98eeb599f00c5f68e760381824d0",
+    "insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+    "insurance_claims_intake/test_cases.json": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd",
+    "manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c",
+    "manufacturing_purchase_to_pay/test_cases.json": "a46adedb99892fc44a48c9cadea9c9d96ab174c9267f49d674717595ecd728f7"
+  },
+  "task_count": 64,
+  "domain_count": 7,
+  "tasks": [
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "title": "Premium Savings Account - Individual, Large Deposit, Instant Funding",
+      "class_name": "TestCase1_DigitalAccountOpeningAgent_W1_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Premium/Standard Savings or Checking Account Opening",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Calculate account tier based on deposit amount and profile."
+        },
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Configure fee schedule based on tier and waivers."
+        }
+      ],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 590,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "title": "Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding",
+      "class_name": "TestCase2_DigitalAccountOpeningAgent_W1_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Premium/Standard Savings or Checking Account Opening",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Calculate account tier based on deposit amount and profile."
+        },
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Configure fee schedule based on tier and waivers."
+        }
+      ],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 878,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W1_TC2"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+      "title": "Student Checking - Verified Student, Parent Account Funding",
+      "class_name": "TestCase3_DigitalAccountOpeningAgent_W2_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Student Checking Account Opening",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 1168,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W2_TC1"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "title": "Student Checking - Verified Student, External Bank Funding",
+      "class_name": "TestCase4_DigitalAccountOpeningAgent_W2_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Student Checking Account Opening",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 1455,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W2_TC2"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "title": "Business Checking - Multi-Owner, Wire Funding",
+      "class_name": "TestCase5_DigitalAccountOpeningAgent_W3_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W3",
+      "workflow_name": "Business Checking Account Opening (Multi-Signer)",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 1755,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W3_TC1"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+      "title": "Joint Savings Account - Two Owners, Transfer Funding",
+      "class_name": "TestCase6_DigitalAccountOpeningAgent_W6_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W6",
+      "workflow_name": "Joint Account Opening",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Calculate account tier based on deposit and profile."
+        }
+      ],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 2143,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W6_TC1"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+      "title": "Restricted Account - Pending Micro-Deposit Funding Verification",
+      "class_name": "TestCase7_DigitalAccountOpeningAgent_W7_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W7",
+      "workflow_name": "Funding Source Verification Hold",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "link_funding_source",
+        "configure_account_limits",
+        "open_account",
+        "generate_account_disclosures",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "link_funding_source",
+        "configure_account_limits",
+        "open_account",
+        "generate_account_disclosures",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 2539,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W7_TC1"
+      }
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+      "title": "Same-Day Account Opening - Cash Deposit >= $10,000",
+      "class_name": "TestCase8_DigitalAccountOpeningAgent_W8_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W8",
+      "workflow_name": "Same-Day Account Opening with Cash Deposit and CTR Filing",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "HUMAN_IN_THE_LOOP",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "open_account",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 2,
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "HUMAN_IN_THE_LOOP",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "open_account",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 2796,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W8_TC1"
+      }
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "title": "Low-Risk Personal Account: Standard KYC, Driver License",
+      "class_name": "TestCase1_BankingCustomerOnboardingAgent_W1_StandardPersonalAccountOnboarding_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Standard Personal Account Onboarding",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 414,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1"
+      }
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "title": "Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume",
+      "class_name": "TestCase2_BankingCustomerOnboardingAgent_W1_Standard_Personal_Account_Onboarding_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W1",
+      "workflow_name": "Standard Personal Account Onboarding",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 614,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2"
+      }
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "title": "Business Account: Multiple Owners, All Pass Screening",
+      "class_name": "TestCase3_BankingCustomerOnboardingAgent_W4_Business_Account_Onboarding_Multiple_Documents_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W4",
+      "workflow_name": "Business Account Onboarding - Multiple Documents",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Calculate AML risk score based on business type."
+        }
+      ],
+      "workflow_tool_names": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 821,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1"
+      }
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "title": "Business Account: Single Owner, Medium AML Risk",
+      "class_name": "TestCase4_BankingCustomerOnboardingAgent_W4_Business_Account_Onboarding_Multiple_Documents_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W4",
+      "workflow_name": "Business Account Onboarding - Multiple Documents",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Calculate AML risk score based on business type."
+        }
+      ],
+      "workflow_tool_names": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 1078,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2"
+      }
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "title": "Personal Account: Missing Proof of Address, Provided After Request",
+      "class_name": "TestCase5_BankingCustomerOnboardingAgent_W6_Incomplete_Documentation_Customer_Follow_up_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W6",
+      "workflow_name": "Incomplete Documentation - Customer Follow-up",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 10,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_kyc_documents",
+        "extract_kyc_documents",
+        "send_welcome_communication",
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 9,
+      "reference_domain_tool_call_count": 9,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "send_welcome_communication",
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 1283,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1"
+      }
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "title": "Address Mismatch: Customer Provides Explanation and Valid New Document",
+      "class_name": "TestCase6_BankingCustomerOnboardingAgent_W7_AddressMismatchDataReconciliation_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W7",
+      "workflow_name": "Address Mismatch - Data Reconciliation",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 10,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_kyc_documents",
+        "extract_kyc_documents",
+        "send_welcome_communication",
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 9,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "send_welcome_communication",
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 1513,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+      "title": "Low-Risk Card Present Transaction with Typical Device",
+      "class_name": "TestCase1_BankingFraudMonitoringSupportAgent_W1_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Low Risk Legitimate Transaction Auto-Approval",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "approve"
+          ],
+          "description": "Auto-approve transaction and update case with rationale."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 5,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 520,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "title": "Low-Risk Card Not Present Transaction with Recent Customer Travel",
+      "class_name": "TestCase2_BankingFraudMonitoringSupportAgent_W1_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Low Risk Legitimate Transaction Auto-Approval",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "approve"
+          ],
+          "description": "Auto-approve transaction and update case with rationale."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 5,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 689,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+      "title": "Obvious Fraud - Blacklisted Merchant, Card Not Present",
+      "class_name": "TestCase3_BankingFraudMonitoringSupportAgent_W2_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Obvious Fraud Auto-Decline and Block",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "cross_reference_fraud_databases",
+        "auto_decline_transaction",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "auto_decline_transaction",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 857,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "title": "Obvious Fraud - Account Takeover Detected on ATM Transaction",
+      "class_name": "TestCase4_BankingFraudMonitoringSupportAgent_W2_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Obvious Fraud Auto-Decline and Block",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "cross_reference_fraud_databases",
+        "auto_decline_transaction",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "cross_reference_fraud_databases",
+        "auto_decline_transaction",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 1055,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W2_TC2"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "title": "High-Risk Online Transaction with Device Mismatch",
+      "class_name": "TestCase5_BankingFraudMonitoringSupportAgent_W3_hard",
+      "class_difficulty_tag": "hard",
+      "declared_difficulty": "hard",
+      "workflow_id": "W3",
+      "workflow_name": "High-Risk Case Escalation to Analyst",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "escalation"
+          ],
+          "description": "Confirm escalation and log summary."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 1262,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+      "title": "High-Risk Card Present Transaction with Location Anomaly",
+      "class_name": "TestCase6_BankingFraudMonitoringSupportAgent_W3_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W3",
+      "workflow_name": "High-Risk Case Escalation to Analyst",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "escalation"
+          ],
+          "description": "Confirm escalation and log summary."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 1490,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+      "title": "Moderate-Risk Transaction, Customer Verifies via SMS",
+      "class_name": "TestCase7_BankingFraudMonitoringSupportAgent_W4_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W4",
+      "workflow_name": "Customer Verification for Uncertain Cases",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "approve",
+            "escalate",
+            "if"
+          ],
+          "description": "If customer verifies, approve transaction; else, escalate."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "request_customer_verification",
+        "SUCCESS",
+        "route_to_analyst"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 6,
+      "reference_unique_domain_tool_count": 6,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "request_customer_verification",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 1716,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W4_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+      "title": "Moderate-Risk Transaction, Customer Verifies via Email",
+      "class_name": "TestCase8_BankingFraudMonitoringSupportAgent_W4_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W4",
+      "workflow_name": "Customer Verification for Uncertain Cases",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "approve",
+            "escalate",
+            "if"
+          ],
+          "description": "If customer verifies, approve transaction; else, escalate."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "request_customer_verification",
+        "SUCCESS",
+        "route_to_analyst"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 6,
+      "reference_unique_domain_tool_count": 6,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "request_customer_verification",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 1892,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W4_TC2"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "title": "Account Takeover - Immediate Block and Escalation",
+      "class_name": "TestCase9_BankingFraudMonitoringSupportAgent_W5_hard",
+      "class_difficulty_tag": "hard",
+      "declared_difficulty": "hard",
+      "workflow_id": "W5",
+      "workflow_name": "Account Takeover Immediate Block and Escalation",
+      "workflow_step_count": 6,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "escalation"
+          ],
+          "description": "Route case to analyst with urgent escalation."
+        }
+      ],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "check_device_intelligence",
+        "analyze_transaction_history",
+        "calculate_fraud_risk_score",
+        "auto_decline_transaction",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 5,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "check_device_intelligence",
+        "analyze_transaction_history",
+        "calculate_fraud_risk_score",
+        "auto_decline_transaction",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 2058,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W5_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+      "title": "Velocity Fraud - Rapid Transactions Across States",
+      "class_name": "TestCase10_BankingFraudMonitoringSupportAgent_W6_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W6",
+      "workflow_name": "Velocity Fraud Escalation",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "analyze_transaction_history",
+        "calculate_fraud_risk_score",
+        "cross_reference_fraud_databases",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 5,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "analyze_transaction_history",
+        "calculate_fraud_risk_score",
+        "cross_reference_fraud_databases",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 2263,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W6_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+      "title": "Synthetic Identity - New Account Device and Identity Anomalies",
+      "class_name": "TestCase11_BankingFraudMonitoringSupportAgent_W7_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W7",
+      "workflow_name": "Synthetic Identity New Account Escalation",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "escalation"
+          ],
+          "description": "Log escalation and notify."
+        }
+      ],
+      "workflow_tool_names": [
+        "get_customer_profile",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 5,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "get_customer_profile",
+        "check_device_intelligence",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 2457,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W7_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+      "title": "Friendly Fraud - Chargeback Investigation, Evidence Provided",
+      "class_name": "TestCase12_BankingFraudMonitoringSupportAgent_W8_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W8",
+      "workflow_name": "Friendly Fraud Chargeback Investigation",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 6,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 6,
+      "reference_unique_domain_tool_count": 6,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "check_device_intelligence",
+        "calculate_fraud_risk_score",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 2663,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W8_TC1"
+      }
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+      "title": "APP Fraud - Large Wire Transfer Held and Escalated",
+      "class_name": "TestCase13_BankingFraudMonitoringSupportAgent_W9_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W9",
+      "workflow_name": "Authorized Push Payment (APP) Fraud Escalation and Hold",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "auto_decline_transaction",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 6,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "retrieve_transaction_details",
+        "get_customer_profile",
+        "analyze_transaction_history",
+        "cross_reference_fraud_databases",
+        "calculate_fraud_risk_score",
+        "auto_decline_transaction",
+        "route_to_analyst",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 2838,
+        "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/8",
+        "json_file": "banking_fraud_monitoring/test_cases.json",
+        "canonical_task_id": "BankingFraudMonitoringSupportAgent_W9_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+      "title": "Adult patient with active insurance, initial visit, and preferred dates",
+      "class_name": "TestCase1_HealthcarePatientOnboardingAgent_W1_Full_New_Patient_Onboarding_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Full New Patient Onboarding",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "check_provider_availability",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "check_provider_availability",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 426,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "title": "Adult patient with active insurance, annual physical, no preferred dates",
+      "class_name": "TestCase2_HealthcarePatientOnboardingAgent_W1_Full_New_Patient_Onboarding_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Full New Patient Onboarding",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "check_provider_availability",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "check_provider_availability",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 655,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W1_TC2"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W2_TC1",
+      "title": "Pediatric patient (<18) with parent as subscriber, well-child visit",
+      "class_name": "TestCase3_HealthcarePatientOnboardingAgent_W2_PediatricPatientOnboarding_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Pediatric Patient Onboarding",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 884,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W2_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "title": "Patient provides updated insurance after initial inactive coverage",
+      "class_name": "TestCase4_HealthcarePatientOnboardingAgent_W3_Insurance_Eligibility_Failure_Request_Update_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W3",
+      "workflow_name": "Insurance Eligibility Failure - Request Update",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 3,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "If coverage inactive, send request for updated insurance or self-pay"
+        },
+        {
+          "step_index": 5,
+          "step": 6,
+          "matched_cues": [
+            "escalate",
+            "if"
+          ],
+          "description": "If new insurance active, proceed with onboarding; else escalate"
+        },
+        {
+          "step_index": 6,
+          "step": 7,
+          "matched_cues": [
+            "escalate"
+          ],
+          "description": "Signal success or escalate as needed"
+        }
+      ],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "send_patient_communication",
+        "verify_insurance_eligibility",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS",
+        "HUMAN_IN_THE_LOOP"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 6,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "send_patient_communication",
+        "verify_insurance_eligibility",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1107,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W4_TC1",
+      "title": "Specialty referral with prior auth approved",
+      "class_name": "TestCase5_HealthcarePatientOnboardingAgent_W4_SpecialtyReferralwithPriorAuthorization_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W4",
+      "workflow_name": "Specialty Referral with Prior Authorization",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 4,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 6,
+          "step": 7,
+          "matched_cues": [
+            "escalate",
+            "if"
+          ],
+          "description": "Signal success or escalate if auth denied/delayed"
+        }
+      ],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "verify_insurance_eligibility",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS",
+        "HUMAN_IN_THE_LOOP"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 4,
+      "reference_unique_domain_tool_count": 4,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "verify_insurance_eligibility",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1385,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W4_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "title": "Self-pay patient onboarding with initial visit",
+      "class_name": "TestCase6_HealthcarePatientOnboardingAgent_W5_SelfPayPatientOnboarding_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W5",
+      "workflow_name": "Self-Pay Patient Onboarding",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 6,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "send_patient_communication",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 6,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "send_patient_communication",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1621,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W5_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W6_TC1",
+      "title": "Duplicate patient detected by SSN and DOB, records merged",
+      "class_name": "TestCase7_HealthcarePatientOnboardingAgent_W6_Duplicate_Patient_Detection_and_Merge_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W6",
+      "workflow_name": "Duplicate Patient Detection and Merge",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 3,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "If duplicate detected, update/merge existing record with new info"
+        },
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Merge insurance info if new/updated"
+        },
+        {
+          "step_index": 6,
+          "step": 7,
+          "matched_cues": [
+            "escalate"
+          ],
+          "description": "Signal success or escalate ambiguous matches"
+        }
+      ],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "create_ehr_patient_record",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS",
+        "HUMAN_IN_THE_LOOP"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 4,
+      "reference_unique_domain_tool_count": 4,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1793,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W6_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "title": "High-risk patient with >2 chronic conditions and >5 medications",
+      "class_name": "TestCase8_HealthcarePatientOnboardingAgent_W7_HighRiskComplexMedicalHistoryOnboarding_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W7",
+      "workflow_name": "High-Risk/Complex Medical History Onboarding",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_medical_history",
+        "verify_insurance_eligibility",
+        "create_ehr_patient_record",
+        "check_provider_availability",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 9,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_medical_history",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "create_ehr_patient_record",
+        "check_provider_availability",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [
+        "extract_insurance_info"
+      ],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review",
+        "expected_tools_not_listed_in_workflow"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1969,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W7_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W8_TC1",
+      "title": "Missing insurance fields, patient supplies info on request",
+      "class_name": "TestCase9_HealthcarePatientOnboardingAgent_W8_IncompleteIntakeFormRequestInformation_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W8",
+      "workflow_name": "Incomplete Intake Form - Request Information",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 9,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 7,
+          "step": 8,
+          "matched_cues": [
+            "escalate",
+            "if"
+          ],
+          "description": "Signal success or escalate if data remains incomplete"
+        }
+      ],
+      "workflow_tool_names": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "send_patient_communication",
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS",
+        "HUMAN_IN_THE_LOOP"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 9,
+      "reference_unique_domain_tool_count": 6,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "send_patient_communication",
+        "extract_patient_demographics",
+        "extract_insurance_info",
+        "verify_insurance_eligibility",
+        "create_ehr_patient_record",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 2202,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W8_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "title": "Standard MRI PA - All Documentation Present, Criteria Met",
+      "class_name": "TestCase1_HealthcarePriorAuthorizationAutomationAgent_W1_Standard_Prior_Authorization_Submission_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Standard Prior Authorization Submission",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 0,
+          "step": 1,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Check if prior authorization is required for procedure/service."
+        },
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Validate if clinical criteria are met."
+        }
+      ],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 451,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W1_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "title": "Standard Sleep Study PA - Alternate Documentation Path",
+      "class_name": "TestCase2_HealthcarePriorAuthorizationAutomationAgent_W1_Standard_Prior_Authorization_Submission_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Standard Prior Authorization Submission",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 0,
+          "step": 1,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Check if prior authorization is required for procedure/service."
+        },
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Validate if clinical criteria are met."
+        }
+      ],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 648,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W1_TC2"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W2_TC1",
+      "title": "Documentation Completion After Initial EHR Deficiency",
+      "class_name": "TestCase3_HealthcarePriorAuthorizationAutomationAgent_W2_Documentation_Request_and_Completion_Workflow_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W2",
+      "workflow_name": "Documentation Request and Completion Workflow",
+      "workflow_step_count": 6,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "HUMAN_IN_THE_LOOP",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 6,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 2,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "HUMAN_IN_THE_LOOP",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 839,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W2_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W3_TC1",
+      "title": "Specialty Drug PA - High-Cost Medication, All Criteria Met",
+      "class_name": "TestCase4_HealthcarePriorAuthorizationAutomationAgent_W3_Specialty_Drug_Prior_Authorization_Workflow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W3",
+      "workflow_name": "Specialty Drug Prior Authorization Workflow",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 3,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Validate if all clinical criteria are met."
+        },
+        {
+          "step_index": 6,
+          "step": 7,
+          "matched_cues": [
+            "if"
+          ],
+          "description": "Track PA status; if pended, monitor for clinical review outcome."
+        },
+        {
+          "step_index": 7,
+          "step": 8,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Notify provider of approval or next steps."
+        }
+      ],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1032,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W3_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W4_TC1",
+      "title": "Appeal After Initial PA Denial - Additional Evidence Provided",
+      "class_name": "TestCase5_HealthcarePriorAuthorizationAutomationAgent_W4_Denial_and_Appeal_Workflow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W4",
+      "workflow_name": "Denial and Appeal Workflow",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 4,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "track_pa_status",
+        "gather_clinical_documentation",
+        "appeal_pa_denial",
+        "track_pa_status",
+        "SUCCESS",
+        "FAILED"
+      ],
+      "reference_milestone_count": 5,
+      "reference_domain_tool_call_count": 4,
+      "reference_unique_domain_tool_count": 3,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "track_pa_status",
+        "gather_clinical_documentation",
+        "appeal_pa_denial",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1213,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W4_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W5_TC1",
+      "title": "DME PA - Home Oxygen, All Clinical Criteria Met",
+      "class_name": "TestCase6_HealthcarePriorAuthorizationAutomationAgent_W5_Durable_Medical_Equipment_PA_Workflow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W5",
+      "workflow_name": "Durable Medical Equipment PA Workflow",
+      "workflow_step_count": 6,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 6,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1360,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W5_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W6_TC1",
+      "title": "Urgent Cardiac Cath PA - Expedited Approval",
+      "class_name": "TestCase7_HealthcarePriorAuthorizationAutomationAgent_W6_Urgent_Expedited_Prior_Authorization_Workflow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W6",
+      "workflow_name": "Urgent/Expedited Prior Authorization Workflow",
+      "workflow_step_count": 6,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 5,
+          "step": 6,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Notify provider/cath lab of approval."
+        }
+      ],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "gather_clinical_documentation",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 6,
+      "reference_domain_tool_call_count": 5,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "gather_clinical_documentation",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1535,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W6_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W7_TC1",
+      "title": "Bariatric Surgery PA - All Multi-Step Criteria Met",
+      "class_name": "TestCase8_HealthcarePriorAuthorizationAutomationAgent_W7_MultiStepBariatricSurgeryPAWorkflow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W7",
+      "workflow_name": "Multi-Step Bariatric Surgery PA Workflow",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 6,
+          "step": 7,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Track status and notify provider of approval/next steps."
+        }
+      ],
+      "workflow_tool_names": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "check_pa_requirements",
+        "retrieve_medical_necessity_criteria",
+        "gather_clinical_documentation",
+        "validate_clinical_criteria",
+        "prepare_pa_submission",
+        "submit_pa_request",
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1691,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W7_TC1"
+      }
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "title": "Status Check for Approved PA",
+      "class_name": "TestCase9_HealthcarePriorAuthorizationAutomationAgent_W8_PA_Status_Tracking_and_Follow_Up_Workflow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W8",
+      "workflow_name": "PA Status Tracking and Follow-Up Workflow",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 2,
+      "workflow_system_tool_mentions": 3,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "track_pa_status",
+        "SUCCESS",
+        "FAILED",
+        "appeal_pa_denial",
+        "HUMAN_IN_THE_LOOP"
+      ],
+      "reference_milestone_count": 3,
+      "reference_domain_tool_call_count": 1,
+      "reference_unique_domain_tool_count": 1,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1886,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W8_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "title": "Emergency Property Claim – Water Intrusion, Storm Peril, Coverage Confirmed",
+      "class_name": "TestCase1_InsuranceClaimsIntakeAndTriageAgent_W1_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Storm Damage - Emergency Water Mitigation",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "trigger_emergency_services",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "trigger_emergency_services",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 451,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+      "title": "Emergency Property Claim – Water Intrusion, Storm Peril, Local Vendor, Alternate Address",
+      "class_name": "TestCase2_InsuranceClaimsIntakeAndTriageAgent_W1_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W1",
+      "workflow_name": "Storm Damage - Emergency Water Mitigation",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "trigger_emergency_services",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "trigger_emergency_services",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 698,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+      "title": "Auto Accident with Bodily Injury – Standard BI, Coverage Confirmed",
+      "class_name": "TestCase3_InsuranceClaimsIntakeAndTriageAgent_W2_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Auto Accident - Liability Claim with Injuries",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 959,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "title": "Auto Accident with Bodily Injury – Multiple Injuries, Coverage Confirmed",
+      "class_name": "TestCase4_InsuranceClaimsIntakeAndTriageAgent_W2_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W2",
+      "workflow_name": "Auto Accident - Liability Claim with Injuries",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 1182,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "title": "Catastrophe Event – Batch Processing, Emergencies Flagged",
+      "class_name": "TestCase5_InsuranceClaimsIntakeAndTriageAgent_W3_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W3",
+      "workflow_name": "Catastrophe Event - Hurricane Claims Surge",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 23,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "extract_loss_details",
+        "extract_loss_details",
+        "classify_claim_type",
+        "classify_claim_type",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "validate_policy_coverage",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "assess_claim_severity",
+        "assess_claim_severity",
+        "create_claim_record",
+        "create_claim_record",
+        "create_claim_record",
+        "route_to_adjuster",
+        "route_to_adjuster",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "send_claim_acknowledgment",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 1408,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+      "title": "Workers Comp Claim – Lost Time Injury, Medical Dispatch",
+      "class_name": "TestCase6_InsuranceClaimsIntakeAndTriageAgent_W4_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W4",
+      "workflow_name": "Workers Compensation - Injured Employee",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 1796,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "title": "Attorney-Represented Slip & Fall – Liability, Legal Notification",
+      "class_name": "TestCase7_InsuranceClaimsIntakeAndTriageAgent_W5_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W5",
+      "workflow_name": "Liability Claim - Slip and Fall at Business",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 2043,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "ClaimsAgent_W6_TC1",
+      "title": "Denied Claim – Policy Lapsed, Coverage Not Confirmed",
+      "class_name": "TestCase8_InsuranceClaimsIntakeAndTriageAgent_W6_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W6",
+      "workflow_name": "Denied Claim - Policy Lapsed",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 6,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 6,
+      "reference_domain_tool_call_count": 6,
+      "reference_unique_domain_tool_count": 6,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 2294,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "ClaimsAgent_W6_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+      "title": "Duplicate Claim – FNOL Already Reported, Link and Notify",
+      "class_name": "TestCase9_InsuranceClaimsIntakeAndTriageAgent_W7_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W7",
+      "workflow_name": "Duplicate Claim - Already Reported",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 4,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "create_claim_record",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 4,
+      "reference_unique_domain_tool_count": 4,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "create_claim_record",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 2486,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1"
+      }
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "title": "Complex Commercial Property Claim – Business Interruption, Large Loss",
+      "class_name": "TestCase10_InsuranceClaimsIntakeAndTriageAgent_W8_hard",
+      "class_difficulty_tag": "hard",
+      "declared_difficulty": "hard",
+      "workflow_id": "W8",
+      "workflow_name": "Complex Commercial Claim - Business Interruption",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 0,
+      "workflow_decision_cue_evidence": [],
+      "workflow_tool_names": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 8,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 2632,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+      "title": "Standard requisition, preferred supplier, exact invoice match",
+      "class_name": "TestCase1_ManufacturingPurchaseToPayAutomationAgent_W1_Standard_Raw_Materials_Purchase_3_Way_Match_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Standard Raw Materials Purchase - 3-Way Match",
+      "workflow_step_count": 10,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 7,
+          "step": 8,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Route payment approval for exact match."
+        }
+      ],
+      "workflow_tool_names": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 10,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 483,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+      "title": "Standard requisition, preferred supplier, small price variance within tolerance",
+      "class_name": "TestCase2_ManufacturingPurchaseToPayAutomationAgent_W1_Standard_Raw_Materials_Purchase_3_Way_Match_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W1",
+      "workflow_name": "Standard Raw Materials Purchase - 3-Way Match",
+      "workflow_step_count": 10,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 7,
+          "step": 8,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Route payment approval for exact match."
+        }
+      ],
+      "workflow_tool_names": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 10,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 714,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "title": "Budget exceeded, CFO override granted, PO created and sent",
+      "class_name": "TestCase3_ManufacturingPurchaseToPayAutomationAgent_W2_Budget_Exceeded_Approval_Required_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W2",
+      "workflow_name": "Budget Exceeded - Approval Required",
+      "workflow_step_count": 8,
+      "workflow_domain_tool_mentions": 5,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "approval",
+            "escalate"
+          ],
+          "description": "Escalate for budget override approval (CFO)."
+        },
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Update budget allocation after approval."
+        }
+      ],
+      "workflow_tool_names": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "HUMAN_IN_THE_LOOP",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 6,
+      "reference_domain_tool_call_count": 5,
+      "reference_unique_domain_tool_count": 5,
+      "reference_system_tool_call_count": 2,
+      "reference_tool_sequence": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "HUMAN_IN_THE_LOOP",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 954,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/1",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "title": "Invoice price mismatch > $500, AP resolves and payment processed",
+      "class_name": "TestCase4_ManufacturingPurchaseToPayAutomationAgent_W3_InvoicePriceMismatchExceptionRouting_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W3",
+      "workflow_name": "Invoice Price Mismatch - Exception Routing",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 3,
+      "workflow_system_tool_mentions": 2,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "escalate",
+            "if"
+          ],
+          "description": "Escalate to HUMAN_IN_THE_LOOP if AP cannot resolve."
+        },
+        {
+          "step_index": 5,
+          "step": 6,
+          "matched_cues": [
+            "approve"
+          ],
+          "description": "Approve payment after resolution."
+        }
+      ],
+      "workflow_tool_names": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "HUMAN_IN_THE_LOOP",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 3,
+      "reference_unique_domain_tool_count": 3,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1196,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "title": "Partial receipt, quantity mismatch, backorder received and payments processed",
+      "class_name": "TestCase5_ManufacturingPurchaseToPayAutomationAgent_W4_Quantity_Discrepancy_Partial_Receipt_medium",
+      "class_difficulty_tag": "medium",
+      "declared_difficulty": "medium",
+      "workflow_id": "W4",
+      "workflow_name": "Quantity Discrepancy - Partial Receipt",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 4,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "approve"
+          ],
+          "description": "Approve partial payment for received units."
+        }
+      ],
+      "workflow_tool_names": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 7,
+      "reference_domain_tool_call_count": 4,
+      "reference_unique_domain_tool_count": 3,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1420,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "title": "Duplicate invoice detected and rejected, supplier notified",
+      "class_name": "TestCase6_ManufacturingPurchaseToPayAutomationAgent_W5_DuplicateInvoiceDetection_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W5",
+      "workflow_name": "Duplicate Invoice Detection",
+      "workflow_step_count": 5,
+      "workflow_domain_tool_mentions": 2,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 2,
+          "step": 3,
+          "matched_cues": [
+            "based on"
+          ],
+          "description": "Detect duplicate based on PO, amount, and date."
+        },
+        {
+          "step_index": 3,
+          "step": 4,
+          "matched_cues": [
+            "reject"
+          ],
+          "description": "Reject invoice and notify supplier."
+        }
+      ],
+      "workflow_tool_names": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 3,
+      "reference_domain_tool_call_count": 2,
+      "reference_unique_domain_tool_count": 2,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1619,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "title": "Early payment discount available, cash sufficient, payment processed early",
+      "class_name": "TestCase7_ManufacturingPurchaseToPayAutomationAgent_W6_Early_Payment_Discount_Optimize_Cash_Flow_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W6",
+      "workflow_name": "Early Payment Discount - Optimize Cash Flow",
+      "workflow_step_count": 7,
+      "workflow_domain_tool_mentions": 3,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 4,
+          "step": 5,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Route payment approval recommending early payment."
+        }
+      ],
+      "workflow_tool_names": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 4,
+      "reference_domain_tool_call_count": 3,
+      "reference_unique_domain_tool_count": 3,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1795,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/5",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+      "title": "Blanket PO release, within limits, auto-approval and payment",
+      "class_name": "TestCase8_ManufacturingPurchaseToPayAutomationAgent_W7_BlanketPOReleaseOngoingSupplyAgreement_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W7",
+      "workflow_name": "Blanket PO Release - Ongoing Supply Agreement",
+      "workflow_step_count": 9,
+      "workflow_domain_tool_mentions": 7,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 1,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 6,
+          "step": 7,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Route payment approval for auto-approval."
+        }
+      ],
+      "workflow_tool_names": [
+        "read_purchase_requisition",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 9,
+      "reference_domain_tool_call_count": 7,
+      "reference_unique_domain_tool_count": 7,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "read_purchase_requisition",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 2001,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1"
+      }
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+      "title": "Urgent requisition, expedited PO and payment, production resumes",
+      "class_name": "TestCase9_ManufacturingPurchaseToPayAutomationAgent_W8___Emergency_Purchase___Expedited_Processing_easy",
+      "class_difficulty_tag": "easy",
+      "declared_difficulty": "easy",
+      "workflow_id": "W8",
+      "workflow_name": "Emergency Purchase - Expedited Processing",
+      "workflow_step_count": 11,
+      "workflow_domain_tool_mentions": 8,
+      "workflow_system_tool_mentions": 1,
+      "workflow_decision_cue_step_count": 2,
+      "workflow_decision_cue_evidence": [
+        {
+          "step_index": 1,
+          "step": 2,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Assess urgency and override standard approval workflow."
+        },
+        {
+          "step_index": 8,
+          "step": 9,
+          "matched_cues": [
+            "approval"
+          ],
+          "description": "Route payment approval for expedited payment."
+        }
+      ],
+      "workflow_tool_names": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "reference_milestone_count": 10,
+      "reference_domain_tool_call_count": 8,
+      "reference_unique_domain_tool_count": 8,
+      "reference_system_tool_call_count": 1,
+      "reference_tool_sequence": [
+        "read_purchase_requisition",
+        "validate_budget_availability",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "send_po_to_supplier",
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "expected_tools_not_listed_in_workflow": [],
+      "task_path_step_count": null,
+      "task_decision_point_count": null,
+      "review_status": "proposed_unreviewed",
+      "review_flags": [
+        "workflow_counts_are_not_task_path_counts",
+        "decision_cues_require_review"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 2217,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1"
+      }
+    }
+  ],
+  "reviewed_example_count": 7,
+  "review_method": "AI-assisted source spot check; no independent human review claimed"
+}

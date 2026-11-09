@@ -1,0 +1,74 @@
+{
+  "synthetic": {
+    "all": {
+      "n": 47,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "banking_accounts_deposits": {
+      "n": 5,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "banking_customer_onboarding": {
+      "n": 3,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "banking_fraud_monitoring": {
+      "n": 13,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "healthcare_patient_onboarding": {
+      "n": 7,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "healthcare_prior_authorization": {
+      "n": 3,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "insurance_claims_intake": {
+      "n": 8,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    },
+    "manufacturing_purchase_to_pay": {
+      "n": 8,
+      "note": "not enough tasks or no variation to correlate",
+      "p_value": null,
+      "rho": null
+    }
+  },
+  "tau2": {
+    "airline": {
+      "n": 50,
+      "p_value": 3.134164681202008e-07,
+      "rho": 0.6507
+    },
+    "all": {
+      "n": 278,
+      "p_value": 0.041136035226293104,
+      "rho": 0.1226
+    },
+    "retail": {
+      "n": 114,
+      "p_value": 0.2997415349802334,
+      "rho": -0.098
+    },
+    "telecom": {
+      "n": 114,
+      "p_value": 0.000185113038561883,
+      "rho": 0.3432
+    }
+  }
+}

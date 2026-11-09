@@ -65,7 +65,7 @@ def audit_inputs(all_resolved, selected, data_dir, rubric_path, selection):
         'invalid_reference_is_not_automatically_excluded': True,
         'source_hashes': sources, 'reference_hashes': reference_files,
         'implementation_hashes': {name: file_hash(Path(__file__).with_name(name))
-                                  for name in ('llm_judge.py', 'saved_trials.py', 'judge_review.py', 'compare_judge_reviews.py')},
+                                  for name in ('llm_judge.py', 'saved_trials.py', 'judge_review.py', 'judge_evidence.py', 'compare_judge_reviews.py')},
         'rubric_sha256': file_hash(rubric_path),
         'selection_sha256': file_hash(selection) if selection else None,
         'evidence_format': 'conversation and tool_events copied without modifying their contents; no original scores are sent as evidence',

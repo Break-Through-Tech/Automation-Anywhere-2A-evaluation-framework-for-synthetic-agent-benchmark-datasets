@@ -7,38 +7,20 @@ from collections import Counter
 from pathlib import Path
 
 if __package__:
-    from .llm_judge import _parse_judgment
+    from .llm_judge import JUDGMENTS, _parse_judgment, _validate_evidence
+    from .judge_evidence import check_evidence, pointer_value
 else:
-    from llm_judge import _parse_judgment
+    from llm_judge import JUDGMENTS, _parse_judgment, _validate_evidence
+    from judge_evidence import check_evidence, pointer_value
 
 
 def identity(row):
     return row['domain'], row['task_id'], str(row['trial'])
 
 
-def pointer_value(transcript, locator):
-    if not locator.startswith('#/'):
-        raise ValueError('Review evidence locators must start with #/ relative to the transcript')
-    value = transcript
-    try:
-        for token in locator[2:].split('/'):
-            token = token.replace('~1', '/').replace('~0', '~')
-            value = value[int(token)] if isinstance(value, list) else value[token]
-    except (KeyError, IndexError, ValueError, TypeError) as exc:
-        raise ValueError(f'Evidence locator does not resolve: {locator}') from exc
-    return value
-
-
-def check_evidence(judgment, transcript):
-    for claim in [dict(evidence=judgment['task_evidence']), *judgment['milestones']]:
-        for evidence in claim['evidence']:
-            value = pointer_value(transcript, evidence['locator'])
-            text = value if isinstance(value, str) else json.dumps(value, ensure_ascii=False)
-            if evidence['excerpt'] not in text:
-                raise ValueError('Evidence excerpt is not present at its stated locator')
-
-
-def compare_reviews(human_path, packet_path, judgments_path=None):
+def compare_reviews(human_path, packet_path, judgments_path=None, level='full'):
+    if level not in {'task', 'full'}:
+        raise ValueError('Comparison level must be task or full')
     human = json.loads(Path(human_path).read_text())
     packet = json.loads(Path(packet_path).read_text())
     packet_hash = hashlib.sha256(json.dumps(packet, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
@@ -50,18 +32,30 @@ def compare_reviews(human_path, packet_path, judgments_path=None):
     if len({identity(r) for r in reviews}) != len(reviews) or {identity(r) for r in reviews} != set(cases):
         raise ValueError('Human review identities must exactly match the packet without duplicates')
     pending = [r['review_id'] for r in reviews if not r.get('reviewer') or r.get('task_judgment') is None
-               or not r.get('task_rationale') or any(
+               or not r.get('task_rationale') or (level == 'full' and any(
                    m.get('judgment') is None or m.get('applicable') is None or m.get('material') is None
-                   or not m.get('rationale') or not m.get('applicability_basis') for m in r.get('milestones', []))]
+                   or not m.get('rationale') or not m.get('applicability_basis') for m in r.get('milestones', [])))]
     base = {'rubric_version': packet['rubric_version'], 'rubric_sha256': packet['rubric_sha256'],
             'scope': 'purposive development sample; not held-out judge validation',
-            'expected_reviews': len(cases), 'independent_review_not_verified_by_software': True}
+            'expected_reviews': len(cases), 'independent_review_not_verified_by_software': True,
+            'comparison_level': level,
+            'received_task_reviews': sum(bool(r.get('reviewer') and r.get('task_rationale')
+                                             and r.get('task_judgment') in JUDGMENTS) for r in reviews)}
+    if level == 'task':
+        base['milestone_agreement_computed'] = False
+        base['human_evidence_validation'] = 'Structured citations checked if provided; submitted prose is not exact-excerpt validated.'
     if pending:
         return {**base, 'status': 'awaiting_human_review', 'pending_review_ids': pending,
                 'agreement_metrics_computed': False}
     parsed_human = {}
     for row in reviews:
-        parsed = _parse_judgment(json.dumps(row), cases[identity(row)]['reference']['milestones'])
+        if level == 'task':
+            if row['task_judgment'] not in JUDGMENTS:
+                raise ValueError('Human task judgment must be met, unmet, or unverifiable')
+            parsed = {'task_judgment': row['task_judgment'], 'milestones': [],
+                      'task_evidence': _validate_evidence(row.get('task_evidence', []), 'human task', required=False)}
+        else:
+            parsed = _parse_judgment(json.dumps(row), cases[identity(row)]['reference']['milestones'])
         check_evidence(parsed, cases[identity(row)]['transcript'])
         parsed_human[identity(row)] = parsed
     if judgments_path is None:
@@ -84,7 +78,8 @@ def compare_reviews(human_path, packet_path, judgments_path=None):
         check_evidence(parsed, cases[identity(row)]['transcript'])
         reference = parsed_human[identity(row)]
         task_pairs.append((reference['task_judgment'], parsed['task_judgment']))
-        milestone_pairs.extend((h['judgment'], j['judgment']) for h, j in zip(reference['milestones'], parsed['milestones']))
+        if level == 'full':
+            milestone_pairs.extend((h['judgment'], j['judgment']) for h, j in zip(reference['milestones'], parsed['milestones']))
     def metrics(pairs):
         counts = Counter(pairs)
         return {'n_compared': len(pairs), 'n_agree': sum(a == b for a, b in pairs),
@@ -92,7 +87,8 @@ def compare_reviews(human_path, packet_path, judgments_path=None):
                 'confusion_counts': [{'human': a, 'judge': b, 'count': n} for (a, b), n in sorted(counts.items())]}
     return {**base, 'status': 'development_comparison_complete', 'agreement_metrics_computed': bool(task_pairs),
             'unassessed_judge_review_ids': unassessed,
-            'task_comparison': metrics(task_pairs), 'milestone_comparison': metrics(milestone_pairs)}
+            'task_comparison': metrics(task_pairs),
+            'milestone_comparison': metrics(milestone_pairs) if level == 'full' else None}
 
 
 def main():
@@ -101,8 +97,10 @@ def main():
     parser.add_argument('--packet', required=True, type=Path)
     parser.add_argument('--judgments', type=Path)
     parser.add_argument('--out', required=True, type=Path)
+    parser.add_argument('--level', choices=['task', 'full'], default='full',
+                        help='Task accepts first-pass human judgments; full also requires milestone labels')
     args = parser.parse_args()
-    result = compare_reviews(args.human, args.packet, args.judgments)
+    result = compare_reviews(args.human, args.packet, args.judgments, args.level)
     if args.out.resolve() in {p.resolve() for p in (args.human, args.packet, args.judgments) if p}:
         parser.error('Comparison output cannot replace its input files')
     args.out.parent.mkdir(parents=True, exist_ok=True)

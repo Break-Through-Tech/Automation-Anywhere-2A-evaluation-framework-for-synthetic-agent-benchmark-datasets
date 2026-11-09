@@ -20,6 +20,7 @@ from baseline.validate_difficulty import load_labels, scatter, spearman, tau2_wr
 from coverage.attribute_diversity import DOMAINS, compute_attribute_diversity
 from coverage.vendi_score import MODEL_NAME, embed, vendi_score
 from difficulty.write_counts import count_actions
+from difficulty.structural_features import FRAMEWORK_COLUMNS, load_for_framework
 
 ROOT = Path(__file__).resolve().parent
 # Resolved from the public model's snapshot during the first framework run.
@@ -109,6 +110,10 @@ def empirical_difficulty(path, expected):
 
 def evaluate(args):
     tasks, labels = load_inputs(args.tasks, args.labels_dir)
+    feature_path = getattr(args, 'synthetic_structural_features', None)
+    feature_document, feature_rows, feature_sources = None, {}, []
+    if feature_path:
+        feature_document, feature_rows, feature_sources = load_for_framework(feature_path, tasks)
     counts, attributes = compute_attribute_diversity(labels)
     structural = structural_difficulty(tasks, args.tasks, args.tau_tool_labels, args.synthetic_tool_labels)
     empirical = {}
@@ -149,6 +154,9 @@ def evaluate(args):
         per_task.append({**row, "n_trials": e.get("n_trials", 0), "n_valid": e.get("n_valid", 0),
                          "c_passed": e.get("c_passed", 0), "empirical_difficulty": e.get("difficulty"),
                          "evaluation_status": "|".join(sorted(e.get("evaluation_status_counts", {}))) or "not_run"})
+        if feature_path:
+            feature = feature_rows.get((row['domain'], row['task_id']), {}) if row['dataset'] == 'synthetic' else {}
+            per_task[-1].update({f'designed_{field}': feature.get(field) for field in FRAMEWORK_COLUMNS})
     summaries = []
     for score in scores:
         rows = [r for r in per_task if r["dataset"] == score["dataset"]
@@ -175,6 +183,8 @@ def evaluate(args):
 
     inputs = [args.tasks, args.tau_tool_labels, args.synthetic_tool_labels,
               *(args.labels_dir / f"labels_{dataset}.csv" for dataset in DOMAINS)]
+    if feature_path:
+        inputs.extend([feature_path, *feature_sources])
     for path in (args.tau_trials, args.synthetic_trials):
         if path:
             inputs.append(path)
@@ -191,6 +201,18 @@ def evaluate(args):
                          "Synthetic attributes use four broad domains; task/Vendi groups use seven agent categories.",
                          "Write counts measure structural difficulty; higher difficulty does not imply higher quality."],
     }
+    if feature_path:
+        summary['synthetic_designed_complexity'] = {
+            'feature_version': feature_document['feature_version'],
+            'feature_status': feature_document['status'],
+            'n_tasks': len(feature_rows),
+            'validation_status': 'awaiting_validated_outcomes',
+            'combined_score_computed': False,
+        }
+        summary['limitations'].append(
+            'Designed complexity columns are proposed descriptive signals; wording cues are not exact '
+            'decisions, and workflow steps are not task-specific path lengths. Historical empirical '
+            'scores do not validate these new signals. No new feature correlations are computed.')
     for dataset in DOMAINS:
         result = summary["datasets"][dataset]
         if result["empirical_tasks_scored"] < result["n_tasks"]:
@@ -217,7 +239,7 @@ def evaluate(args):
         "sources": {p: hashlib.sha256((ROOT / p).read_bytes()).hexdigest() for p in
                     ["run_all.py", "coverage/attribute_diversity.py", "coverage/vendi_score.py",
                      "difficulty/write_counts.py", "baseline/compute_difficulty.py",
-                     "baseline/validate_difficulty.py"]},
+                     "baseline/validate_difficulty.py", "difficulty/structural_features.py"]},
         "packages": {name: metadata.version(name) for name in
                      ["numpy", "sentence-transformers", "torch", "transformers", "scipy", "matplotlib",
                       "openai", "pydantic", "langchain-core", "PyYAML"]},
@@ -252,6 +274,8 @@ def parser():
     p.add_argument("--tau-trials", type=Path, default=ROOT / "results/baseline/v2_full/trials.csv")
     synthetic = ROOT / "results/baseline/v2_synthetic_full/trials.csv"
     p.add_argument("--synthetic-trials", type=Path, default=synthetic if synthetic.exists() else None)
+    p.add_argument('--synthetic-structural-features', type=Path,
+                   help='Optional proposed task_features.json; attach descriptive columns without changing scores')
     p.add_argument("--output-dir", type=Path, default=ROOT / "results/framework")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--model", default=MODEL_NAME)

@@ -34,14 +34,24 @@ Scenario details: `{"account_type": "business_checking"}`.
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W3_TC1_trial0.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Sana
+
 Review ID: R01
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **unverifiable**
+
+Evidence as submitted:
+
+#/tool_events/0/output/exit_status is escalated, and it’s the only tool call, so none of the 8 milestones were attempted.
+
+Missing or contradictory information as submitted:
+
+The agent requested info no tool requires, never asked for the business details that were available, and steered the customer away from sharing the DOB and ID data they offered.
+Rubric question: should an attempt on a broken task be scored unmet or unverifiable? (Mila asked Sandra.)
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51#issuecomment-6716465470). Retrieved 2026-11-07. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R02 Primary review
 
@@ -73,14 +83,23 @@ Scenario details: `{"account_type": "student_checking"}`.
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Sana
+
 Review ID: R02
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **unmet**
+
+Evidence as submitted:
+
+#/tool_events/3/output/exit_status is "escalated", and no limits, fee, disclosure, or open_account call follows. #/conversation/16/content - the agent stating the account "has not yet been opened or funded."
+
+Missing or contradictory information as submitted:
+
+E0, E1, E2, and E4 support milestones 1, 2, 3, and 7, but student status was self-reported and passed through rather than shown as verified. Milestones 4, 5, 6, and 8 were never attempted. The agent escalated because AML returned "clear" with no explicit risk level, even though policy only requires escalation for high-risk or ambiguous cases.
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51#issuecomment-6716465470). Retrieved 2026-11-07. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R03 Primary review
 
@@ -110,14 +129,23 @@ Scenario details: `{"account_type": "business_savings", "customer_type": "busine
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W4_TC2_trial0.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Sana
+
 Review ID: R03
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **unverifiable**
+
+Evidence as submitted:
+
+#/tool_events/0/output/documents returns Sarah Chen's driver license and passport data for all three files, none of which match the business documents or Maria Gomez's ID. #/tool_events/1/output/exit_status is "escalated" after the agent flagged the mismatch.
+
+Missing or contradictory information as submitted:
+
+The escalation looks correct, since policy says not to onboard on questionable documents. No account was created and milestones 2 through 7 were never attempted. The scenario lacks the transaction volume needed for the medium-risk milestone.
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51#issuecomment-6716465470). Retrieved 2026-11-07. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R04 Primary review
 
@@ -147,16 +175,29 @@ Scenario details: `{"account_type": "personal_checking", "customer_type": "perso
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
-Review ID: R04
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+**Submitted human answer**
 
-## Completion checklist
+Reviewer: Sana
+
+Review ID: R04
+
+Outcome: **unmet**
+
+Evidence as submitted:
+
+#/tool_events/0/output/documents/0 shows a valid driver license extracted, yet #/tool_events/2/output/exit_status is "escalated" with no validate_identity or later call. #/conversation/14/content confirms the application remains paused.
+
+Missing or contradictory information as submitted:
+
+Milestone 1 ran; milestones 2 through 7 were never attempted. The agent escalated because utility_bill.jpg extracted as a passport (twice), but the valid driver license already provided the fields validate_identity needs, so stopping seems premature. The agent never noticed the license name (Sarah Chen) doesn't match the contact email (alice.smith). The extraction mock returns the same fixed data as R03, but here the reference is valid (failed_reference, expecting validate_identity next), so the task was considered completable.
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/51#issuecomment-6716465470). Retrieved 2026-11-07. Detailed milestone labels and exact excerpt normalization remain pending.
+
+## Submission status
+
+All four primary task-level answers were imported from the named reviewer’s issue comment. Optional second reviews, detailed milestone labels, and exact evidence normalization were not submitted or inferred.
+
+## Original completion checklist
 
 - [ ] One named reviewer has claimed this group.
 

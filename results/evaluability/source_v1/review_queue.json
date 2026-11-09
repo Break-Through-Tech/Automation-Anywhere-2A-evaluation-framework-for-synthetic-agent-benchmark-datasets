@@ -1,0 +1,765 @@
+{
+  "scope": "offline triage order, not a difficulty or risk score",
+  "network_calls": 0,
+  "group_counts": {
+    "1_reference_execution_errors": 17,
+    "2_literal_differences_need_semantic_review": 26,
+    "3_completion_contract_review": 3,
+    "4_other_reference_mapping_review": 1,
+    "5_unflagged_but_not_validated": 17
+  },
+  "tasks": [
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "title": "Business Checking - Multi-Owner, Wire Funding",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 1755,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+      "title": "Joint Savings Account - Two Owners, Transfer Funding",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 2143,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+      "title": "Restricted Account - Pending Micro-Deposit Funding Verification",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 2539,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "title": "Business Account: Single Owner, Medium AML Risk",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_customer_onboarding/test_cases.py",
+      "class_line": 1078,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "title": "Personal Account: Missing Proof of Address, Provided After Request",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_customer_onboarding/test_cases.py",
+      "class_line": 1283,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "title": "Address Mismatch: Customer Provides Explanation and Valid New Document",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_customer_onboarding/test_cases.py",
+      "class_line": 1513,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "title": "Self-pay patient onboarding with initial visit",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 1621,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W8_TC1",
+      "title": "Missing insurance fields, patient supplies info on request",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 2202,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "title": "Standard Sleep Study PA - Alternate Documentation Path",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 648,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W2_TC1",
+      "title": "Documentation Completion After Initial EHR Deficiency",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 839,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W3_TC1",
+      "title": "Specialty Drug PA - High-Cost Medication, All Criteria Met",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 1032,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W4_TC1",
+      "title": "Appeal After Initial PA Denial - Additional Evidence Provided",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 1213,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W5_TC1",
+      "title": "DME PA - Home Oxygen, All Clinical Criteria Met",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 1360,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W7_TC1",
+      "title": "Bariatric Surgery PA - All Multi-Step Criteria Met",
+      "review_flags": [
+        "historical_reference_execution_errors"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 1691,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "title": "Auto Accident with Bodily Injury \u2013 Multiple Injuries, Coverage Confirmed",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 1182,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "title": "Catastrophe Event \u2013 Batch Processing, Emergencies Flagged",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 1408,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "1_reference_execution_errors",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "title": "Partial receipt, quantity mismatch, backorder received and payments processed",
+      "review_flags": [
+        "historical_reference_execution_errors",
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 1420,
+      "next_check": "Inspect saved reference-call errors; distinguish invalid reference inputs from an impossible task."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "title": "Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_customer_onboarding/test_cases.py",
+      "class_line": 614,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "title": "Business Account: Multiple Owners, All Pass Screening",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_customer_onboarding/test_cases.py",
+      "class_line": 821,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+      "title": "Low-Risk Card Present Transaction with Typical Device",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 520,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "title": "Low-Risk Card Not Present Transaction with Recent Customer Travel",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 689,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+      "title": "Obvious Fraud - Blacklisted Merchant, Card Not Present",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 857,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "title": "High-Risk Online Transaction with Device Mismatch",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 1262,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+      "title": "High-Risk Card Present Transaction with Location Anomaly",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 1490,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "title": "Obvious Fraud - Account Takeover Detected on ATM Transaction",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 1055,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+      "title": "Moderate-Risk Transaction, Customer Verifies via SMS",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 1716,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+      "title": "Moderate-Risk Transaction, Customer Verifies via Email",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 1892,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "title": "Account Takeover - Immediate Block and Escalation",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 2058,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+      "title": "Velocity Fraud - Rapid Transactions Across States",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 2263,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+      "title": "Synthetic Identity - New Account Device and Identity Anomalies",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 2457,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+      "title": "Friendly Fraud - Chargeback Investigation, Evidence Provided",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 2663,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+      "title": "APP Fraud - Large Wire Transfer Held and Escalated",
+      "review_flags": [
+        "reference_literal_output_differences",
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/banking_fraud_monitoring/test_cases.py",
+      "class_line": 2838,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "ClaimsAgent_W6_TC1",
+      "title": "Denied Claim \u2013 Policy Lapsed, Coverage Not Confirmed",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 2294,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "title": "Emergency Property Claim \u2013 Water Intrusion, Storm Peril, Coverage Confirmed",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 451,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+      "title": "Emergency Property Claim \u2013 Water Intrusion, Storm Peril, Local Vendor, Alternate Address",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 698,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+      "title": "Auto Accident with Bodily Injury \u2013 Standard BI, Coverage Confirmed",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 959,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+      "title": "Workers Comp Claim \u2013 Lost Time Injury, Medical Dispatch",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 1796,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "title": "Attorney-Represented Slip & Fall \u2013 Liability, Legal Notification",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 2043,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "title": "Complex Commercial Property Claim \u2013 Business Interruption, Large Loss",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 2632,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+      "title": "Standard requisition, preferred supplier, exact invoice match",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 483,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+      "title": "Standard requisition, preferred supplier, small price variance within tolerance",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 714,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+      "title": "Blanket PO release, within limits, auto-approval and payment",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 2001,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "2_literal_differences_need_semantic_review",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+      "title": "Urgent requisition, expedited PO and payment, production resumes",
+      "review_flags": [
+        "reference_literal_output_differences"
+      ],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 2217,
+      "next_check": "Determine whether differing fields are material requirements or harmless reference literals; do not exact-match by default."
+    },
+    {
+      "triage_group": "3_completion_contract_review",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W6_TC1",
+      "title": "Urgent Cardiac Cath PA - Expedited Approval",
+      "review_flags": [
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 1535,
+      "next_check": "Define the simulated business endpoint and whether the system-tool result actually supports it."
+    },
+    {
+      "triage_group": "3_completion_contract_review",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "title": "Status Check for Approved PA",
+      "review_flags": [
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 1886,
+      "next_check": "Define the simulated business endpoint and whether the system-tool result actually supports it."
+    },
+    {
+      "triage_group": "3_completion_contract_review",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "title": "Budget exceeded, CFO override granted, PO created and sent",
+      "review_flags": [
+        "system_tool_only_business_endpoint"
+      ],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 954,
+      "next_check": "Define the simulated business endpoint and whether the system-tool result actually supports it."
+    },
+    {
+      "triage_group": "4_other_reference_mapping_review",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "title": "High-risk patient with >2 chronic conditions and >5 medications",
+      "review_flags": [
+        "reference_tools_not_listed_in_workflow"
+      ],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 1969,
+      "next_check": "Reconcile task/workflow tool lists without editing supplied sources."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "title": "Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding",
+      "review_flags": [],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 878,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+      "title": "Student Checking - Verified Student, Parent Account Funding",
+      "review_flags": [],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 1168,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "title": "Student Checking - Verified Student, External Bank Funding",
+      "review_flags": [],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 1455,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+      "title": "Same-Day Account Opening - Cash Deposit >= $10,000",
+      "review_flags": [],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 2796,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "title": "Premium Savings Account - Individual, Large Deposit, Instant Funding",
+      "review_flags": [],
+      "source_file": "data/banking_accounts_deposits/test_cases.py",
+      "class_line": 590,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "title": "Low-Risk Personal Account: Standard KYC, Driver License",
+      "review_flags": [],
+      "source_file": "data/banking_customer_onboarding/test_cases.py",
+      "class_line": 414,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "title": "Adult patient with active insurance, annual physical, no preferred dates",
+      "review_flags": [],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 655,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W2_TC1",
+      "title": "Pediatric patient (<18) with parent as subscriber, well-child visit",
+      "review_flags": [],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 884,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W4_TC1",
+      "title": "Specialty referral with prior auth approved",
+      "review_flags": [],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 1385,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W6_TC1",
+      "title": "Duplicate patient detected by SSN and DOB, records merged",
+      "review_flags": [],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 1793,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+      "title": "Adult patient with active insurance, initial visit, and preferred dates",
+      "review_flags": [],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 426,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "title": "Patient provides updated insurance after initial inactive coverage",
+      "review_flags": [],
+      "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+      "class_line": 1107,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "title": "Standard MRI PA - All Documentation Present, Criteria Met",
+      "review_flags": [],
+      "source_file": "data/healthcare_prior_authorization/test_cases.py",
+      "class_line": 451,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+      "title": "Duplicate Claim \u2013 FNOL Already Reported, Link and Notify",
+      "review_flags": [],
+      "source_file": "data/insurance_claims_intake/test_cases.py",
+      "class_line": 2486,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "title": "Invoice price mismatch > $500, AP resolves and payment processed",
+      "review_flags": [],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 1196,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "title": "Duplicate invoice detected and rejected, supplier notified",
+      "review_flags": [],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 1619,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    },
+    {
+      "triage_group": "5_unflagged_but_not_validated",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "title": "Early payment discount available, cash sufficient, payment processed early",
+      "review_flags": [],
+      "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+      "class_line": 1795,
+      "next_check": "Read scenario, mandatory prerequisites, contracts, and saved trace before considering any paid canary."
+    }
+  ]
+}

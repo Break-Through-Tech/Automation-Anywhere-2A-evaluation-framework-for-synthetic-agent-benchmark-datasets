@@ -36,14 +36,23 @@ Scenario details: `{"transaction_type": "online"}`.
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W5_TC1_trial1.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Zayd Nadir
+
 Review ID: R05
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **unmet**
+
+Evidence as submitted:
+
+agent only made one call (E0), escalated to a human and got back a generic “request acknowledged” thing, then told the customer it couldn't confirm the account was blocked (conversation 2)
+
+Missing or contradictory information as submitted:
+
+none of the actual investigation happened, no transaction lookup no profile no device check no risk score and nothing got routed to an analyst, also it told the customer it had no way to block anything which isnt true, it had auto_decline_transaction (which literally takes “confirmed_account_takeover” as a reason) and route_to_analyst sitting right there, and it never even asked for an alert or customer ID
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52#issuecomment-6645481687). Retrieved 2026-11-05. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R06 Primary review
 
@@ -75,14 +84,23 @@ The device lookup also returned ... [excerpt]
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Zayd Nadir
+
 Review ID: R06
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **unverifiable**
+
+Evidence as submitted:
+
+risk score came back 15 with a recommendation to approve (E7) and the agent never called auto_decline_transaction, then at the end it told the customer it couldn't confirm if the transaction got declined or if notifications went out (conversation 22)
+
+Missing or contradictory information as submitted:
+
+the test data just doesn't match the scenario, task is about an ATM transaction but the lookup gave back an online one (E1), task expects a confirmed takeover with a high score but the score was low, the customer ID the user gave doesn't match the one in the device history (E4), looking up a second device (E11) returned the exact same data as the first so the mock is probably hardcoded, and the analyst case got routed as “normal” not urgent (E9), with all that conflicting i dont think the intended path was even reachable
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52#issuecomment-6645481687). Retrieved 2026-11-05. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R15 Primary review
 
@@ -110,14 +128,23 @@ Scenario details: `{"transaction_type": "online"}`.
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Zayd Nadir
+
 Review ID: R15
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **met**
+
+Evidence as submitted:
+
+all four intended steps ran on the right transaction and customer, transaction lookup (E0), profile and 90 day history (E1, E2), device check (E3) and a risk score of 15 (E5), agent wrapped up with SUCCESS and an auto approve decision (E6)
+
+Missing or contradictory information as submitted:
+
+the “recent travel” part of the scenario doesn't really fit, the transaction was in Miami which is the customers home state and the travel history only lists New York and Chicago, history also flagged an old transaction from a new country that the agent mentioned but never dug into, theres no approval tool so the approval was just stated but approval isn't one of the listed milestones anyway so not a big deal
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52#issuecomment-6645481687). Retrieved 2026-11-05. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R16 Primary review
 
@@ -145,14 +172,23 @@ Scenario details: `{"transaction_type": "online"}`.
 
 [Original saved trace](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/70047de/results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz). Download/decompress if the excerpts are insufficient.
 
-**Your answer:**
-```text
-Reviewer:
+**Submitted human answer**
+
+Reviewer: Zayd Nadir
+
 Review ID: R16
-Outcome: met / unmet / unverifiable
-Evidence:
-Missing or contradictory information:
-```
+
+Outcome: **met**
+
+Evidence as submitted:
+
+same task as R15 and all four steps ran again just in a different order, transaction lookup (E0), profile (E1), device check (E2), history (E4) and risk score of 15 (E5), agent ended with SUCCESS and said there was no approval tool available (E6)
+
+Missing or contradictory information as submitted:
+
+the transaction lookup didn't include a customer ID so the agent had to ask the customer for it (conversation 3), same travel mismatch and same new country flag it didn't look into as R15, one difference from R15 is the agent was upfront that it couldn't actually carry out the approval which is better
+
+[Source issue comment](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/52#issuecomment-6645481687). Retrieved 2026-11-05. Detailed milestone labels and exact excerpt normalization remain pending.
 
 ## R04 Optional second review
 
@@ -191,7 +227,11 @@ Evidence:
 Missing or contradictory information:
 ```
 
-## Completion checklist
+## Submission status
+
+All four primary task-level answers were imported from the named reviewer’s issue comment. Optional second reviews, detailed milestone labels, and exact evidence normalization were not submitted or inferred.
+
+## Original completion checklist
 
 - [ ] One named reviewer has claimed this group.
 

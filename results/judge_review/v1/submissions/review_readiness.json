@@ -1,0 +1,20 @@
+{
+  "status": "all_task_reviews_received_policy_pending",
+  "task_labels_received": 16,
+  "expected_task_labels": 16,
+  "pending_task_review_ids": [],
+  "group_1_prerequisite_complete": true,
+  "detailed_milestone_reviews_received": 0,
+  "structured_evidence_normalization": "submitted prose retained; exact excerpt normalization pending",
+  "api_test_executed": false,
+  "new_model_calls": 0,
+  "agreement_metrics_computed": false,
+  "difficulty_computed": false,
+  "rubric_policy_status": "awaiting Sandra clarification: unmet versus unverifiable for blocked/conflicting tasks",
+  "submitted_labels_preserved_without_adjudication": true,
+  "human_independence_not_certified": true,
+  "historical_grader_reference_in_submission": [
+    "R04"
+  ],
+  "next_step": "Resolve policy or explicitly retain draft labels for exploratory retry; compare only with validated new judge outputs."
+}

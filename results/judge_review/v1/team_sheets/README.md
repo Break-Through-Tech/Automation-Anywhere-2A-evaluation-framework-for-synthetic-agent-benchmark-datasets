@@ -10,3 +10,11 @@ Groups 2 and 4 also contain one optional shared case for checking reviewer agree
 - [Insurance and manufacturing — issue #54](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/54) · [Word review sheet](reviewer_4_insurance_manufacturing.docx)
 
 The supplied cases, mocks, saved traces, and blank human-label template remain unchanged. Reviewers are unassigned until they claim an issue.
+
+## Imported submissions on 2026 11 05
+
+Groups 2–4 have submitted their four primary task-level answers. Their Word and Markdown sheets now contain the attributed answers and source-comment links. Group 1 / issue 51 remains pending. Optional second reviews and detailed milestone labels were not supplied. No model answers were added to human review sheets, and no API tests were run. See `../submissions/README.md` for provenance and comparison readiness.
+
+## Group 1 imported on 2026 11 07
+
+Sana’s four primary answers are now in the banking Word and Markdown sheets and saved review form. All sixteen task-level judgments have been received. Detailed milestone labels remain unsubmitted. Sandra’s unmet versus unverifiable clarification is pending. No API judge test was run during this import.

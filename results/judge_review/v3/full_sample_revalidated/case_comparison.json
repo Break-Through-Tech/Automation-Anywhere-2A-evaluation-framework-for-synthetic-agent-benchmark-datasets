@@ -1,0 +1,162 @@
+[
+  {
+    "review_id": "R01",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "trial": 0,
+    "original_human_judgment": "unverifiable",
+    "model_judgment": "unmet",
+    "labels_match": false,
+    "model_rationale": "The intended entity, account type, owners, funding branch, and required opening endpoint are clear. The execution expressly leaves screening and opening incomplete and performs an acknowledged escalation instead. These material unmet conditions are decisive under the provisional outcome rule; the other unobserved conditions remain unverifiable. The transfer marker is not treated as proof of completion. Escalation and avoiding invented secure-channel instructions may be reasonable behavior, but neither completes this task. The evidence does not establish that the additional information requested was contractually necessary, that the agent could access all scenario inputs, or that an environmental blocker made completion impossible. Accordingly, noncompletion is established without assigning definitive fault or an empirical difficulty classification."
+  },
+  {
+    "review_id": "R02",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+    "trial": 1,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The requested outcome and student/external-bank branch are clear. Identity validation, clear AML screening, eligible student tier, and funding-source verification are supported for the correct application. However, the attempt explicitly ends with configuration and disclosures deferred and the account unopened. These material noncompletions make the overall outcome unmet under the provisional aggregation rule. The escalation was candid and did not fabricate approval, but a handoff is not the task's accepted endpoint. Whether waiting for an explicit risk level was necessary or avoidable cannot be determined without the relevant tool contract; this uncertainty about behavior and environmental causation does not erase the observed noncompletion. No empirical difficulty or denominator judgment is made."
+  },
+  {
+    "review_id": "R03",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "trial": 0,
+    "original_human_judgment": "unverifiable",
+    "model_judgment": "unmet",
+    "labels_match": false,
+    "model_rationale": "The intended entity and business savings onboarding outcome are clear. The extraction discrepancy is an observed execution conflict, not a reason to reinterpret the requested owner as Sarah Chen. Correct-entity document extraction is conclusively unmet, and the attempt ends with onboarding paused rather than an account created. Under the provisional aggregation rule, these material failures establish an unmet outcome while unobserved downstream states remain unverifiable. Escalating rather than using unrelated identity data was reasonable behavior, but the task does not accept escalation as completion. The evidence does not establish agent fault for the extraction discrepancy or the outcome of any subsequent human review."
+  },
+  {
+    "review_id": "R04",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "trial": 0,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The requested endpoint is completed personal-checking onboarding, including customer and account creation, a CRM profile, and a sent welcome communication. The recorded attempt instead explicitly paused onboarding and obtained only acknowledgement of a document-review escalation. Under the provisional outcome rule, that supported noncompletion is decisive even though a document-classification conflict contributed to the pause. The conflict leaves document sufficiency unresolved but does not make the requested business endpoint ambiguous. Rechecking and escalating were reasonable responses to the observed discrepancy; this outcome judgment does not establish agent fault. No account creation or linked account ID is supported. The closing stop marker is not treated as proof of success, and the human acknowledgement is not treated as completed review or approval."
+  },
+  {
+    "review_id": "R05",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+    "trial": 1,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unverifiable",
+    "labels_match": false,
+    "model_rationale": "The required endpoint is a blocked account and case, supported investigation and urgent analyst escalation—not merely a supervisor handoff. The trace establishes an acknowledged escalation request and an appropriately qualified statement that blocking is unconfirmed. It does not establish the required entity linkage, investigative checks, scores, blocking, notification, close_account recommendation, or investigation package. No observed operation conclusively fails, and the acknowledgment does not resolve what the human subsequently did. Under the provisional outcome rule, these gaps support unverifiable rather than treating missing proof as conclusive noncompletion. The agent's cautious handoff is distinct from completion of the business outcome."
+  },
+  {
+    "review_id": "R06",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+    "trial": 2,
+    "original_human_judgment": "unverifiable",
+    "model_judgment": "unverifiable",
+    "labels_match": true,
+    "model_rationale": "Material conflicts remain between the specified ATM/takeover case and the execution data returned for the correct alert and device identifiers. The transcript establishes correct-customer profile retrieval, 90-day history analysis, device queries, risk calculation on the returned transaction, and analyst routing. It does not resolve the intended transaction identity or establish decline, account blocking, or notification. Under the provisional rule, uncertainty rather than a pending policy decision determines this judgment: there is no conclusive final-state failure for the intended ATM transaction. The agent reasonably surfaced the conflicts and avoided claiming completion, but that behavior does not satisfy the requested business outcome. The transcript does not independently establish the claimed lack of blocking or status-query tools."
+  },
+  {
+    "review_id": "R07",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "trial": 0,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The requested self-pay onboarding outcome is clear despite uncertainty about the alleged tool limitations and the availability date. Demographic and medical-history extraction are supported. Pricing delivery and appointment scheduling are conclusively incomplete in the recorded attempt, and the resulting staff handoff is not an accepted completion endpoint. Under the provisional outcome rule and proposed aggregation, those material unmet conditions determine the overall judgment while the EHR creation state remains unverifiable. The agent's refusal to invent pricing or claim a booking is reasonable, but this does not complete the business outcome. The evidence does not establish that environmental limitations caused every shortfall or that a feasible supported completion path was available."
+  },
+  {
+    "review_id": "R08",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W7_TC1",
+    "trial": 1,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unverifiable",
+    "labels_match": false,
+    "model_rationale": "The required high-risk branch cannot be reliably bound to the executed patient history: the task specifies three conditions and six medications, but extraction for the correct form returns one of each. This material conflict affects the high-risk flag, coordinator assignment, and disease-management branch. Under the proposed aggregation rule, unresolved material branch semantics make the overall judgment unverifiable; this is not based solely on pending rubric approval. Independently established noncompletion is retained: record creation was deferred, extended availability was not found, and the appointment remained unbooked. Demographics extraction and active insurance verification were supported. The agent appropriately avoided claiming completed scheduling or human review, but its duplicate-review prerequisite is unsupported by the supplied task. These observations do not establish that environmental issues caused every incomplete milestone."
+  },
+  {
+    "review_id": "R09",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC2",
+    "trial": 0,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The required entity and branch are clear: a standard sleep-study authorization for PAT-445641, CPT 95800, diagnosis G47.33, using the supplied payer and plan and alternate documentation. The attempt ends with identifier verification pending and an explicit statement that no authorization request was submitted. Nonsubmission is a decisive unmet material requirement under the provisional aggregation rule, even though other states remain unobservable. The successful escalation is distinct from completing the requested authorization. Avoiding invented identifiers and reporting the pending state are reasonable precautions, but the supplied evidence does not confirm that the claimed tool-format restriction actually prevented execution. Consequently, this outcome judgment does not establish an agent-caused failure or intrinsic task difficulty."
+  },
+  {
+    "review_id": "R10",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC1",
+    "trial": 3,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "Under the provisional outcome rule, the missing-document responses and explicit submission hold conclusively establish that material documentation, readiness, submission, and approval outcomes were not achieved. The all-documentation-present premise conflicts with execution observations, but the intended entity, required report, and approved endpoint remain clear. Requirements checking and criteria retrieval were supported; clinical validation remains unverifiable. Pausing rather than inventing documentation was reasonable given the observed responses, but the task does not accept that pause as completion. This outcome judgment does not establish intrinsic agent difficulty or assign sole causation to the environment."
+  },
+  {
+    "review_id": "R11",
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "trial": 0,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The required endpoint is a created injury claim, validated coverage, BI-adjuster assignment, and claimant acknowledgment—not an intake escalation. The explicit reports that validation is unfinished and no claim has been created establish decisive material noncompletion under the provisional outcome rule. The successful supervisor handoff and accurate injury summary remain supported subconditions. The agent was transparent about its status, but the evidence does not establish that the missing date and location were mandatory blockers or that a feasible alternative was available; responsibility for noncompletion therefore remains uncertain. No exact reference call sequence or literal generated claim number is needed to reach this judgment."
+  },
+  {
+    "review_id": "R12",
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+    "trial": 3,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The required endpoint is a created, litigation-flagged liability claim with assignment and communications, not merely an acknowledged escalation. The recorded attempt explicitly remained without a created claim or claim number, and required injury details remained unavailable. These decisive material noncompletions support unmet under the provisional aggregation rule, while coverage validation and liability classification remain met and unconfirmed downstream actions remain unverifiable. Escalation and transparent statements of uncertainty were reasonable responses to the observed missing information; this outcome judgment does not establish that completion was feasible or that the agent caused the information gaps. The scenario's completeness designation and anomalous coverage limits do not make the core claim-creation requirement ambiguous."
+  },
+  {
+    "review_id": "R13",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "trial": 0,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "Under the provisional outcome rule, the explicit incomplete reconciliation and pending review establish a decisive unmet completion requirement. The amount discrepancy prevents verification of the required payment split, but does not make the required endpoint ambiguous: the task requires completed reconciliation, not merely a handoff. Earlier receipts, approvals, and payments remain unverifiable rather than being treated as disproven. Rechecking the conflicting record and escalating appears reasonable given the observations; the incomplete business outcome does not by itself establish agent fault or intrinsic difficulty."
+  },
+  {
+    "review_id": "R14",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+    "trial": 1,
+    "original_human_judgment": "unmet",
+    "model_judgment": "unmet",
+    "labels_match": true,
+    "model_rationale": "The intended entity, $22,000 amount, override branch, and created-and-emailed PO endpoint are clear. Conflicting execution data prevent verification of some prerequisite states, but do not make that requested endpoint ambiguous. Under provisional_outcome_v0.1, the demonstrated noncompletion of the PO and workflow is decisive despite the environment discrepancies. The agent reasonably avoided inventing corrected inputs or treating acknowledgements as approval; that behavior is distinct from completing the purchase. The findings do not establish agent fault or intrinsic difficulty."
+  },
+  {
+    "review_id": "R15",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 2,
+    "original_human_judgment": "met",
+    "model_judgment": "unverifiable",
+    "labels_match": false,
+    "model_rationale": "The intended outcome is auto-approval of the specified low-risk transaction with score 25 and no required customer notification. The trace establishes retrieval for the correct alert and customer, the requested lookback, coherent propagation of returned data, device checks, and an approve recommendation. However, material conflicts affect transaction identity, amount, device identity, travel context, and scores. No supplied evidence resolves which conflicting source is correct. The terminal output repeats the agent's auto-approve decision but does not independently establish case_status auto_approved or customer_notification_status not_required. Under the provisional outcome rule, these unresolved entity semantics and outcome observability warrant unverifiable rather than a conclusive failure or success. The extra fraud-database lookup is not itself a violation. Following returned identifiers and reporting the returned score are supported behaviors, but they do not prove completion of the intended scenario."
+  },
+  {
+    "review_id": "R16",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 3,
+    "original_human_judgment": "met",
+    "model_judgment": "unverifiable",
+    "labels_match": false,
+    "model_rationale": "The intended endpoint is auto-approval of the specified low-risk transaction, with matching recent travel and no required customer notification. Execution establishes retrieval for the requested alert, correct-customer enrichment, consistent propagation of returned inputs, and an approve recommendation. Material conflicts between the scenario and observed transaction, device, travel, and scores prevent verification that these operations concern the intended test case. Separately, the terminal result reports qualification for auto-approval, not an independently supported case-status change. Its assertion that no approval tool is available is not verified by a supplied tool inventory. The evidence therefore supports neither completed auto-approval nor a conclusive failure of an unambiguously resolved task. Under the provisional aggregation rule, the unresolved material conflicts and outcome observability require unverifiable; the supported reads and recommendation remain established."
+  }
+]

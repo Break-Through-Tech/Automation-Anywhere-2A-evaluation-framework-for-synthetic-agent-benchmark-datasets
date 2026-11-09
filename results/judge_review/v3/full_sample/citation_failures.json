@@ -1,0 +1,24 @@
+[
+  {
+    "review_id": "R10",
+    "claim": "milestone 1",
+    "locator": "#/tool_events/0/arguments",
+    "submitted_excerpt": "{\"payer_id\":\"PAYER-ANTHEM\",\"plan_id\":\"PLAN-BCBS-01\",\"cpt_code\":\"72148\",\"diagnosis_code\":\"M54.5\"}",
+    "actual_value": {
+      "payer_id": "PAYER-ANTHEM",
+      "plan_id": "PLAN-BCBS-01",
+      "cpt_code": "72148",
+      "diagnosis_code": "M54.5"
+    }
+  },
+  {
+    "review_id": "R10",
+    "claim": "milestone 2",
+    "locator": "#/tool_events/1/output/required_docs",
+    "submitted_excerpt": "[\"Progress Notes\",\"Imaging Report\"]",
+    "actual_value": [
+      "Progress Notes",
+      "Imaging Report"
+    ]
+  }
+]

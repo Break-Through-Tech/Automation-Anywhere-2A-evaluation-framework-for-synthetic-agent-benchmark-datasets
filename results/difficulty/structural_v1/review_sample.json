@@ -1,0 +1,518 @@
+{
+  "feature_version": "structural_features_v0.1_proposed",
+  "scope": "Seven source examples reviewed, one per domain; not exhaustive semantic validation of all 64 tasks.",
+  "reviews": [
+    {
+      "features": {
+        "domain": "banking_accounts_deposits",
+        "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+        "title": "Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding",
+        "class_name": "TestCase2_DigitalAccountOpeningAgent_W1_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W1",
+        "workflow_name": "Premium/Standard Savings or Checking Account Opening",
+        "workflow_step_count": 8,
+        "workflow_domain_tool_mentions": 8,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 2,
+        "workflow_decision_cue_evidence": [
+          {
+            "step_index": 2,
+            "step": 3,
+            "matched_cues": [
+              "based on"
+            ],
+            "description": "Calculate account tier based on deposit amount and profile."
+          },
+          {
+            "step_index": 4,
+            "step": 5,
+            "matched_cues": [
+              "based on"
+            ],
+            "description": "Configure fee schedule based on tier and waivers."
+          }
+        ],
+        "workflow_tool_names": [
+          "validate_customer_identity",
+          "perform_aml_screening",
+          "calculate_account_tier",
+          "configure_account_limits",
+          "configure_fee_schedule",
+          "generate_account_disclosures",
+          "link_funding_source",
+          "open_account",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 8,
+        "reference_domain_tool_call_count": 8,
+        "reference_unique_domain_tool_count": 8,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "validate_customer_identity",
+          "perform_aml_screening",
+          "calculate_account_tier",
+          "configure_account_limits",
+          "configure_fee_schedule",
+          "generate_account_disclosures",
+          "link_funding_source",
+          "open_account",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review"
+        ],
+        "sources": {
+          "python_file": "banking_accounts_deposits/test_cases.py",
+          "python_class_line": 878,
+          "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/0",
+          "json_file": "banking_accounts_deposits/test_cases.json",
+          "canonical_task_id": "DigitalAccountOpeningAgent_W1_TC2"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag, eight YAML steps, eight reference domain calls, and one SUCCESS control call match the sources. The two cue matches are based on in steps 3 and 5. Tier/risk-dependent limits in step 4, instant versus micro-deposit verification in step 7, and conditional exit rules illustrate why two wording matches are not an exact decision count.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    },
+    {
+      "features": {
+        "domain": "banking_customer_onboarding",
+        "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+        "title": "Low-Risk Personal Account: Standard KYC, Driver License",
+        "class_name": "TestCase1_BankingCustomerOnboardingAgent_W1_StandardPersonalAccountOnboarding_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W1",
+        "workflow_name": "Standard Personal Account Onboarding",
+        "workflow_step_count": 8,
+        "workflow_domain_tool_mentions": 7,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 0,
+        "workflow_decision_cue_evidence": [],
+        "workflow_tool_names": [
+          "extract_kyc_documents",
+          "validate_identity",
+          "screen_sanctions_lists",
+          "calculate_aml_risk_score",
+          "create_core_banking_customer",
+          "create_crm_profile",
+          "send_welcome_communication",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 7,
+        "reference_domain_tool_call_count": 7,
+        "reference_unique_domain_tool_count": 7,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "extract_kyc_documents",
+          "validate_identity",
+          "screen_sanctions_lists",
+          "calculate_aml_risk_score",
+          "create_core_banking_customer",
+          "create_crm_profile",
+          "send_welcome_communication",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review"
+        ],
+        "sources": {
+          "python_file": "banking_customer_onboarding/test_cases.py",
+          "python_class_line": 414,
+          "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/0",
+          "json_file": "banking_customer_onboarding/test_cases.json",
+          "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag, eight YAML steps, seven reference domain calls, and one SUCCESS control call match the sources. The eighth workflow step signals completion. Zero cue matches does not mean no decisions: risk assessment and failure handling still exist, and the heuristic does not inspect exit conditions.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    },
+    {
+      "features": {
+        "domain": "banking_fraud_monitoring",
+        "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+        "title": "Low-Risk Card Present Transaction with Typical Device",
+        "class_name": "TestCase1_BankingFraudMonitoringSupportAgent_W1_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W1",
+        "workflow_name": "Low Risk Legitimate Transaction Auto-Approval",
+        "workflow_step_count": 5,
+        "workflow_domain_tool_mentions": 5,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 1,
+        "workflow_decision_cue_evidence": [
+          {
+            "step_index": 4,
+            "step": 5,
+            "matched_cues": [
+              "approve"
+            ],
+            "description": "Auto-approve transaction and update case with rationale."
+          }
+        ],
+        "workflow_tool_names": [
+          "retrieve_transaction_details",
+          "get_customer_profile",
+          "analyze_transaction_history",
+          "check_device_intelligence",
+          "calculate_fraud_risk_score",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 4,
+        "reference_domain_tool_call_count": 5,
+        "reference_unique_domain_tool_count": 5,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "retrieve_transaction_details",
+          "get_customer_profile",
+          "analyze_transaction_history",
+          "check_device_intelligence",
+          "calculate_fraud_risk_score",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review"
+        ],
+        "sources": {
+          "python_file": "banking_fraud_monitoring/test_cases.py",
+          "python_class_line": 520,
+          "yaml_file": "banking_fraud_monitoring/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/0",
+          "json_file": "banking_fraud_monitoring/test_cases.json",
+          "canonical_task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag and literal counts match the sources. Step 2 lists two domain tools, so five workflow steps need not equal five domain tool calls. Auto-approve in step 5 produces an approve wording match, but that step describes a chosen action rather than proving a runtime branch. Conditional escalation rules are outside the cue-count scope.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    },
+    {
+      "features": {
+        "domain": "healthcare_patient_onboarding",
+        "task_id": "HealthcareOnboarding_W7_TC1",
+        "title": "High-risk patient with >2 chronic conditions and >5 medications",
+        "class_name": "TestCase8_HealthcarePatientOnboardingAgent_W7_HighRiskComplexMedicalHistoryOnboarding_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W7",
+        "workflow_name": "High-Risk/Complex Medical History Onboarding",
+        "workflow_step_count": 9,
+        "workflow_domain_tool_mentions": 7,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 0,
+        "workflow_decision_cue_evidence": [],
+        "workflow_tool_names": [
+          "extract_patient_demographics",
+          "extract_medical_history",
+          "verify_insurance_eligibility",
+          "create_ehr_patient_record",
+          "check_provider_availability",
+          "schedule_appointment",
+          "send_patient_communication",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 9,
+        "reference_domain_tool_call_count": 8,
+        "reference_unique_domain_tool_count": 8,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "extract_patient_demographics",
+          "extract_medical_history",
+          "extract_insurance_info",
+          "verify_insurance_eligibility",
+          "create_ehr_patient_record",
+          "check_provider_availability",
+          "schedule_appointment",
+          "send_patient_communication",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [
+          "extract_insurance_info"
+        ],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review",
+          "expected_tools_not_listed_in_workflow"
+        ],
+        "sources": {
+          "python_file": "healthcare_patient_onboarding/test_cases.py",
+          "python_class_line": 1969,
+          "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/6",
+          "json_file": "healthcare_patient_onboarding/test_cases.json",
+          "canonical_task_id": "HealthcareOnboarding_W7_TC1"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag and literal counts match the sources; easy is a supplied label, not a conclusion about the high-risk scenario. The reference includes extract_insurance_info, which is absent from W7 tool lists. Preserve this discrepancy for interpretation. Manual versus system coordinator assignment and exit rules may contain decisions not captured by the wording heuristic.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    },
+    {
+      "features": {
+        "domain": "healthcare_prior_authorization",
+        "task_id": "HealthcarePA_W1_TC1",
+        "title": "Standard MRI PA - All Documentation Present, Criteria Met",
+        "class_name": "TestCase1_HealthcarePriorAuthorizationAutomationAgent_W1_Standard_Prior_Authorization_Submission_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W1",
+        "workflow_name": "Standard Prior Authorization Submission",
+        "workflow_step_count": 7,
+        "workflow_domain_tool_mentions": 7,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 2,
+        "workflow_decision_cue_evidence": [
+          {
+            "step_index": 0,
+            "step": 1,
+            "matched_cues": [
+              "if"
+            ],
+            "description": "Check if prior authorization is required for procedure/service."
+          },
+          {
+            "step_index": 3,
+            "step": 4,
+            "matched_cues": [
+              "if"
+            ],
+            "description": "Validate if clinical criteria are met."
+          }
+        ],
+        "workflow_tool_names": [
+          "check_pa_requirements",
+          "retrieve_medical_necessity_criteria",
+          "gather_clinical_documentation",
+          "validate_clinical_criteria",
+          "prepare_pa_submission",
+          "submit_pa_request",
+          "track_pa_status",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 7,
+        "reference_domain_tool_call_count": 7,
+        "reference_unique_domain_tool_count": 7,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "check_pa_requirements",
+          "retrieve_medical_necessity_criteria",
+          "gather_clinical_documentation",
+          "validate_clinical_criteria",
+          "prepare_pa_submission",
+          "submit_pa_request",
+          "track_pa_status",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review"
+        ],
+        "sources": {
+          "python_file": "healthcare_prior_authorization/test_cases.py",
+          "python_class_line": 451,
+          "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/0",
+          "json_file": "healthcare_prior_authorization/test_cases.json",
+          "canonical_task_id": "HealthcarePA_W1_TC1"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag and literal counts match the sources. The cue heuristic flags if in steps 1 and 4. These indicate checks of PA requirement and clinical criteria, but seven workflow steps are not a verified path length for every result. Documentation and submission alternatives, along with exit rules, require separate interpretation.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    },
+    {
+      "features": {
+        "domain": "insurance_claims_intake",
+        "task_id": "ClaimsAgent_W6_TC1",
+        "title": "Denied Claim – Policy Lapsed, Coverage Not Confirmed",
+        "class_name": "TestCase8_InsuranceClaimsIntakeAndTriageAgent_W6_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W6",
+        "workflow_name": "Denied Claim - Policy Lapsed",
+        "workflow_step_count": 7,
+        "workflow_domain_tool_mentions": 6,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 0,
+        "workflow_decision_cue_evidence": [],
+        "workflow_tool_names": [
+          "extract_loss_details",
+          "classify_claim_type",
+          "validate_policy_coverage",
+          "assess_claim_severity",
+          "create_claim_record",
+          "send_claim_acknowledgment",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 6,
+        "reference_domain_tool_call_count": 6,
+        "reference_unique_domain_tool_count": 6,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "extract_loss_details",
+          "classify_claim_type",
+          "validate_policy_coverage",
+          "assess_claim_severity",
+          "create_claim_record",
+          "send_claim_acknowledgment",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review"
+        ],
+        "sources": {
+          "python_file": "insurance_claims_intake/test_cases.py",
+          "python_class_line": 2294,
+          "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/5",
+          "json_file": "insurance_claims_intake/test_cases.json",
+          "canonical_task_id": "ClaimsAgent_W6_TC1"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag and literal counts match the sources. This workflow completes by recording a denied claim and notifying the customer. A denial can be the intended task outcome; it is not automatically an agent failure. No listed decision wording cue in the steps does not rule out coverage checks or conditional escalation.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    },
+    {
+      "features": {
+        "domain": "manufacturing_purchase_to_pay",
+        "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+        "title": "Standard requisition, preferred supplier, exact invoice match",
+        "class_name": "TestCase1_ManufacturingPurchaseToPayAutomationAgent_W1_Standard_Raw_Materials_Purchase_3_Way_Match_easy",
+        "class_difficulty_tag": "easy",
+        "declared_difficulty": "easy",
+        "workflow_id": "W1",
+        "workflow_name": "Standard Raw Materials Purchase - 3-Way Match",
+        "workflow_step_count": 10,
+        "workflow_domain_tool_mentions": 8,
+        "workflow_system_tool_mentions": 1,
+        "workflow_decision_cue_step_count": 1,
+        "workflow_decision_cue_evidence": [
+          {
+            "step_index": 7,
+            "step": 8,
+            "matched_cues": [
+              "approval"
+            ],
+            "description": "Route payment approval for exact match."
+          }
+        ],
+        "workflow_tool_names": [
+          "read_purchase_requisition",
+          "validate_budget_availability",
+          "check_supplier_contracts",
+          "create_purchase_order",
+          "send_po_to_supplier",
+          "match_invoice_to_po",
+          "route_payment_approval",
+          "process_payment",
+          "SUCCESS"
+        ],
+        "reference_milestone_count": 10,
+        "reference_domain_tool_call_count": 8,
+        "reference_unique_domain_tool_count": 8,
+        "reference_system_tool_call_count": 1,
+        "reference_tool_sequence": [
+          "read_purchase_requisition",
+          "validate_budget_availability",
+          "check_supplier_contracts",
+          "create_purchase_order",
+          "send_po_to_supplier",
+          "match_invoice_to_po",
+          "route_payment_approval",
+          "process_payment",
+          "SUCCESS"
+        ],
+        "expected_tools_not_listed_in_workflow": [],
+        "task_path_step_count": null,
+        "task_decision_point_count": null,
+        "review_status": "ai_assisted_source_review_complete",
+        "review_flags": [
+          "workflow_counts_are_not_task_path_counts",
+          "decision_cues_require_review"
+        ],
+        "sources": {
+          "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+          "python_class_line": 483,
+          "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+          "yaml_workflow_pointer": "#/agent/workflows/0",
+          "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+          "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1"
+        }
+      },
+      "reviewer": "AI-assisted review requested by user",
+      "counts_and_tag_verified": true,
+      "notes": "The easy tag and literal counts match the sources. Ten YAML steps and eight reference domain tool calls are different measures. The workflow includes receipt handling and an explicit completion step; the shorter reference list is not proof that those workflow steps are unnecessary. Approval wording is a cue, not a verified count of branches or approvals executed.",
+      "proposed_task_path_step_count": null,
+      "proposed_task_decision_point_count": null,
+      "review_status": "ai_assisted_source_review_complete",
+      "task_path_count_basis": "Not established by literal extraction; left unknown rather than inferred.",
+      "exact_decision_count_basis": "Wording cues are not an exact decision or branch count."
+    }
+  ],
+  "status": "ai_assisted_source_spot_check_complete",
+  "human_review_required": false,
+  "review_method": "Source inspection and offline count checks; no independent human judgments supplied."
+}

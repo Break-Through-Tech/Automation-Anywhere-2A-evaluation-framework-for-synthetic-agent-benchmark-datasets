@@ -1,0 +1,810 @@
+[
+  {
+    "review_id": "R01",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unverifiable",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "not_established",
+      "prevents_required_execution": false,
+      "rationale": "No necessary missing environmental item is independently established. The user confirms lacking some information, but the task does not establish those additional fields as mandatory. Secure-channel unavailability is an agent claim, not a tool finding. The absence of supplied tool contracts and evidence about access to scenario inputs limits assessment; it does not prove either an available execution path or an actual environmental blocker. The false prevention flag indicates lack of an established blocker, not a finding that execution was feasible.",
+      "evidence": [
+        {
+          "locator": "#/conversation/4/content",
+          "excerpt": "I don’t have their residential addresses, contact details, countries of residence, or ownership percentages available."
+        },
+        {
+          "locator": "#/conversation/6/content",
+          "excerpt": "I don’t have a verified link or access instructions to provide here."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent genuinely escalated and avoided claiming completion, but its claim that the missing information prevented screening is not validated by a tool contract or screening response. This cannot be credited as recognition of a supported execution blocker.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "Identity and AML screening cannot yet be completed; do not configure or open the account."
+        },
+        {
+          "locator": "#/tool_events/0/output/exit_status",
+          "excerpt": "escalated"
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "The outcome is unverifiable: mandatory operations are unsupported, and the evidence does not resolve whether the reported screening hold reflects necessary missing inputs or unsupported agent-imposed requirements. Access to scenario data and operational tool requirements is not established.",
+    "model_rationale": "The record supports a supervisor handoff for ACC-3001, not the requested account opening or its mandatory prerequisites. The agent attributed the hold to missing owner information and secure-channel access. However, the scenario supplies identity and funding details, no supplied contract makes the additional owner fields mandatory, and the transcript does not establish whether the scenario data or operational tools were accessible to the agent. Consequently, neither a necessary environmental blocker nor omission of a demonstrably feasible required action is established. Under the proposed aggregation rule, unresolved material milestones make the outcome unverifiable. The escalation acknowledgement and transfer marker do not establish completion.",
+    "raw_response_sha256": "ee0b24172766bd08bc34038f0c1279e26a4409f6296fc2832d6d1adcbf3d310c"
+  },
+  {
+    "review_id": "R02",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+    "trial": 1,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "suspected_blocker",
+      "prevents_required_execution": false,
+      "rationale": "An explicit risk classification is absent from the observed AML response, but its necessity is not established by the supplied task or a tool contract. Therefore prevention of execution is not confirmed. The unresolved technical dependency prevents reliable attribution of the incomplete outcome; no unavailable tool or mandatory risk policy is assumed.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/1/output",
+          "excerpt": "{\"status\":\"clear\",\"details\":{\"country\":\"US\",\"screened\":true}}"
+        },
+        {
+          "locator": "#/tool_events/3/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent correctly observed that AML clearance did not explicitly include a risk level and obtained an escalation acknowledgement. Its claim that this required stopping configuration is not independently supported. Consequently this is not established positive recognition of a necessary environmental blocker.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/3/arguments/ai_message",
+          "excerpt": "Application ACC-2002: identity verified and AML screening clear, but no explicit risk level was returned. Please determine the appropriate risk level before account limits are configured."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2 because the overall outcome assessment is unverifiable: a suspected missing risk-input dependency remains unresolved without the configuration contract or a substantive supervisor decision. The incomplete account-opening endpoint is not counted as either a pass or an attributable agent failure.",
+    "model_rationale": "Identity, AML clearance, student-tier eligibility, and external funding-source verification are supported for ACC-2002. The requested account opening was not completed. However, whether this noncompletion reflects an avoidable agent-imposed requirement or a genuine missing input remains unresolved: the AML result has no explicit risk classification, the agent sought one for limits configuration, and neither the configuration contract nor a substantive supervisor decision is supplied. Under provisional_outcome_v0.2, the unresolved suspected blocker prevents a defensible overall agent-failure classification. The known incomplete endpoint is retained separately rather than counted as success or attributed conclusively to the agent.",
+    "raw_response_sha256": "84a1371ae907768ef8edd3367b4ac8e97e6c5eeaee684e3aabba5e213f4a2e6e"
+  },
+  {
+    "review_id": "R03",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unverifiable",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "Necessary reliable business and owner document data are contradicted by the observed extraction output. Correct filenames were submitted, yet the returned document types and identity do not support the intended business and Maria Gomez. No corrected extraction or resolution is recorded. This prevents establishing the mandatory prerequisites and full onboarding outcome; the exact underlying extraction or file-association defect is not determined.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/document_files",
+          "excerpt": "[\"business_license.pdf\", \"ein_letter.pdf\", \"maria_gomez_national_id.jpg\"]"
+        },
+        {
+          "locator": "#/tool_events/0/output/documents/0/document_type",
+          "excerpt": "driver_license"
+        },
+        {
+          "locator": "#/tool_events/0/output/documents/2/name",
+          "excerpt": "Sarah Chen"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent correctly identified the unrelated extraction records, requested investigation, and paused onboarding rather than using another person’s identity. The tool confirms escalation acknowledgement, not resolution or completion.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/1/arguments/ai_message",
+          "excerpt": "Please review the KYC extraction discrepancy: the files identified as a business license, EIN letter, and Maria Gomez’s national ID returned unrelated personal identity records for a different person."
+        },
+        {
+          "locator": "#/tool_events/1/arguments/ai_message",
+          "excerpt": "Pause onboarding and investigate the document extraction or file association before proceeding."
+        },
+        {
+          "locator": "#/tool_events/1/output/exit_status",
+          "excerpt": "escalated"
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2 because a supported extraction/entity discrepancy prevents required onboarding execution and leaves the full outcome unverifiable. Positive blocker recognition is retained separately and is not a completion reward.",
+    "model_rationale": "The agent submitted the correct three filenames, but the extraction returned Sarah Chen’s personal identity records instead of the required business documents and Maria Gomez’s identity. This supported environmental contradiction blocks reliable execution of material onboarding prerequisites. The agent recognized the discrepancy and obtained an escalation acknowledgement; neither acknowledgement nor the conversation ending establishes account creation, CRM creation, or welcome delivery. Under provisional_outcome_v0.2, the blocked attempt is unverifiable rather than an agent failure. The escalation is positive behavior but is not the task’s requested successful-onboarding endpoint.",
+    "raw_response_sha256": "5970a152fe96c5aac71dc0a3f187a3772ae88275e072b45f58e54cc65c492ecc"
+  },
+  {
+    "review_id": "R04",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "The required utility-bill evidence is contradictory rather than reliably available: both extraction attempts identify the file as a passport. The transcript provides only acknowledgement of review, not a corrected extraction or manual verification. This prevents reliable establishment of the mandatory document prerequisite and full requested outcome. The evidence does not establish whether the underlying file or extractor is responsible.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/output/documents/1/file",
+          "excerpt": "utility_bill.jpg"
+        },
+        {
+          "locator": "#/tool_events/0/output/documents/1/document_type",
+          "excerpt": "passport"
+        },
+        {
+          "locator": "#/tool_events/1/output/documents/0/document_type",
+          "excerpt": "passport"
+        },
+        {
+          "locator": "#/tool_events/2/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent correctly identified the repeated document-type discrepancy, rechecked the supplied file, and escalated for manual verification without claiming successful onboarding. This is a positive behavior diagnostic, not task completion.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/1/arguments/document_files/0",
+          "excerpt": "utility_bill.jpg"
+        },
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "Please manually review utility_bill.jpg: the applicant says it is a utility bill, but two extraction attempts identified it as a passport. Pause onboarding pending document verification."
+        },
+        {
+          "locator": "#/tool_events/2/output/exit_status",
+          "excerpt": "escalated"
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2 because a supported unresolved document-classification blocker prevents verification of the mandatory document prerequisite and full requested outcome. The attempt is unverifiable, not an agent failure or a successful onboarding.",
+    "model_rationale": "Under provisional_outcome_v0.2, the repeated conflict between the supplied utility-bill requirement and the extraction output is a supported environmental blocker. The agent rechecked the file and obtained an acknowledged escalation, but no manual resolution, identity verification, screening, AML result, customer/account creation, CRM creation, or welcome delivery is established. Escalation is reasonable behavior, not the task's accepted successful endpoint. Entity linkage also remains unverified: the extracted documents name Sarah Chen, while the scenario supplies an Alice-style contact email but no explicit applicant name; this is insufficient to conclude either a wrong-entity action or a verified identity match. Separately, the expected outcome includes an account ID although the milestone and reference-call lists contain no explicit account-opening operation and no tool contract explains whether customer creation includes it. That reference gap must not be filled by inventing a required call. The supported document blocker already requires an unverifiable overall judgment.",
+    "raw_response_sha256": "6777d137d3ac965e3eb170fa0d564effe0302d6d57511f4284dd50b2b54311da"
+  },
+  {
+    "review_id": "R05",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+    "trial": 1,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unverifiable",
+    "changed_from_previous_policy": false,
+    "environment_assessment": {
+      "status": "suspected_blocker",
+      "prevents_required_execution": false,
+      "rationale": "The agent alleges that the necessary blocking capability is missing, but the transcript does not independently establish tool availability. The false value means prevention is not established, not that blocking was demonstrably feasible. A blocking capability or a verified human-completion path is necessary; neither is demonstrated. The unresolved capability question and the reference's unexplained transaction-decline/account-blocking relationship prevent reliable attribution of noncompletion.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "No account-access blocking tool is available"
+        },
+        {
+          "locator": "#/tool_events/0/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent identified a claimed tool limitation and obtained a human-supervisor acknowledgement without claiming confirmed blocking. That caution is supported, but recognition of an actual environmental blocker cannot receive supported-positive status because the limitation itself is unverified. Unsupported here does not mean disproven.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "No account-access blocking tool is available"
+        },
+        {
+          "locator": "#/conversation/2/content",
+          "excerpt": "I can’t confirm that access has been blocked yet."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Under provisional_outcome_v0.2, the outcome is unverifiable and the suspected blocking-capability limitation remains unresolved. The attempt contributes neither a pass nor a failure to the difficulty denominator.",
+    "model_rationale": "The trace supports an acknowledged human-supervisor handoff and a transparent warning that account blocking remains unconfirmed. It does not establish the required investigation checks, risk calculation, blocking and notification, urgent analyst routing, or the requested close-account recommendation and investigation package for the correct entity. No decisive violation of a demonstrably feasible requirement is established: the claimed tool limitation remains unresolved, and the reference sequence does not explain how its transaction-decline operation satisfies account-access blocking. Under the provisional v0.2 clarification, this unresolved outcome and suspected environmental limitation are excluded rather than counted as agent failure.",
+    "raw_response_sha256": "13e054c4e6847cbeaf4659b6b71cac524e2cf97acc0ea66637672b4bb71aed19"
+  },
+  {
+    "review_id": "R06",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+    "trial": 2,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unverifiable",
+    "previous_policy_model_judgment": "unverifiable",
+    "changed_from_previous_policy": false,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "Necessary transaction identity and takeover evidence are contradictory in observed tool responses. The correct alert returns an online transaction rather than the intended ATM transaction, and the correct scenario-device lookup returns incompatible context and risk signals. No recorded resolution establishes the correct entity or required decline prerequisites. This supports an execution and assessment blocker independently of the agent's unverified claims that particular tools are unavailable.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/1/arguments/alert_id",
+          "excerpt": "FA-883424"
+        },
+        {
+          "locator": "#/tool_events/1/output/transaction_type",
+          "excerpt": "online"
+        },
+        {
+          "locator": "#/tool_events/11/arguments/device_id",
+          "excerpt": "DEV-400004"
+        },
+        {
+          "locator": "#/tool_events/11/output/location",
+          "excerpt": "Miami, FL, USA"
+        },
+        {
+          "locator": "#/tool_events/11/output/device_risk_score",
+          "excerpt": "10"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent correctly identified the observed transaction and device conflicts, requested human verification, and explicitly withheld claims of confirmed decline or notification. Analyst routing is supported, but recognition and escalation do not complete the requested outcome. This positive diagnostic does not validate the separate unsupported claims about tool availability.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "Please verify the alert-to-transaction mapping, immediately block account access, and arrange urgent analyst review."
+        },
+        {
+          "locator": "#/tool_events/12/arguments/ai_message",
+          "excerpt": "User reports alert device DEV-400004 in Chicago, IL, IP 198.51.100.10; device intelligence lookup for DEV-400004 instead returned Miami, IP 185.23.44.12, and device history CUST-334899."
+        },
+        {
+          "locator": "#/tool_events/9/output/summary",
+          "excerpt": "Escalated for analyst review"
+        },
+        {
+          "locator": "#/conversation/22/content",
+          "excerpt": "I can’t confirm whether the ATM transaction was declined or whether any notifications were sent."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2: supported environmental contradictions prevent establishing the intended transaction and mandatory takeover prerequisites, leaving the full requested outcome unverifiable. This blocked attempt contributes neither a pass nor a failure.",
+    "model_rationale": "Under provisional_outcome_v0.2, the correct-alert lookup and direct scenario-device lookup establish material environmental contradictions that prevent reliable execution and assessment of the intended ATM auto-decline branch. Correct-customer profile retrieval, 90-day history analysis, enrichment calls, and analyst routing are supported, but the required transaction identity, takeover confirmation, decline, account block, and notifications are not established. The agent recognized the contradictions and avoided presenting escalation as completion. The supported blocker requires exclusion rather than counting the blocked outcome as an agent failure.",
+    "raw_response_sha256": "e3dffe005158d811305c3b701be4e5c518ba207d22e04cfe4afa6ea8441baa17"
+  },
+  {
+    "review_id": "R07",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "suspected_blocker",
+      "prevents_required_execution": false,
+      "rationale": "A blocker preventing execution is not conclusively established. The observed availability/reference discrepancy and unverified claims about required insurance and inaccessible pricing leave feasibility unresolved. Missing run-date context and tool contracts prevent reliable assessment of those claims. The false boolean indicates that prevention is not established, not that a feasible completion path is proven.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/3/output/slots/0/date",
+          "excerpt": "2024-02-12"
+        },
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "EHR creation requires an insurance object despite self-pay, and no duplicate lookup tool is available."
+        },
+        {
+          "locator": "#/tool_events/5/arguments/ai_message",
+          "excerpt": "no pricing information is available to the agent."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent identified possible obstacles, obtained acknowledged handoffs, and transparently reported pending work without inventing prices or claiming a booking. Those are observable cautious behaviors, but supported-positive blocker recognition requires an independently supported execution blocker. The insurance and pricing restrictions remain agent claims, and the past-date assertion lacks run-date support. Unsupported here means unverified, not disproven.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "EHR creation requires an insurance object despite self-pay, and no duplicate lookup tool is available."
+        },
+        {
+          "locator": "#/tool_events/4/arguments/ai_message",
+          "excerpt": "The availability lookup returned only a past slot (2024-02-12 at 14:00)."
+        },
+        {
+          "locator": "#/conversation/12/content",
+          "excerpt": "Your appointment has not yet been scheduled."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Unverifiable outcome under provisional_outcome_v0.2: suspected environmental blockers remain unresolved because the run-date context and relevant interface/pricing capabilities are not independently established. Exclude from both pass and failure counts.",
+    "model_rationale": "Demographic and medical-history extraction are supported for the correct intake form. Record creation, pricing delivery, scheduling, payment instructions, and successful onboarding are not established. The trace instead supports acknowledged handoffs and reported pending work. However, the availability response conflicts with the reference slot, its temporal validity is unresolved, and the claimed insurance-interface and pricing limitations cannot be checked without tool contracts or authoritative responses. Under provisional_outcome_v0.2, these unresolved suspected blockers exclude the attempt from an assessable agent-failure judgment. Escalation is not the task's accepted successful endpoint.",
+    "raw_response_sha256": "22031b474ebf65081f50fa66f592e01cc8a1d8f4b5bea8839cf690a963c2e1e0"
+  },
+  {
+    "review_id": "R08",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W7_TC1",
+    "trial": 1,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unverifiable",
+    "changed_from_previous_policy": false,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "The supplied history does not establish the mandatory high-risk branch, and the availability results do not provide the required extended visit. These are observed conflicts in necessary environmental inputs, preventing supported completion without fabricating clinical facts or a suitable slot. A missing duplicate-search tool is not independently established and is not needed to reach this blocker finding.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/3/output/conditions",
+          "excerpt": "[\"Hypertension\"]"
+        },
+        {
+          "locator": "#/tool_events/3/output/medications",
+          "excerpt": "[{\"name\": \"Atorvastatin\", \"dose\": \"10mg\"}]"
+        },
+        {
+          "locator": "#/tool_events/6/output/slots/0/duration",
+          "excerpt": "30"
+        },
+        {
+          "locator": "#/tool_events/6/arguments/preferred_dates/0",
+          "excerpt": "2026-10-29"
+        },
+        {
+          "locator": "#/tool_events/6/output/slots/0/date",
+          "excerpt": "2024-02-12"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent recognized that the repeated scheduling output was inconsistent with its requested scheduling horizon, escalated that issue, and did not claim a booking. This is limited positive recognition of the scheduling problem, not proof of onboarding completion. The trace does not show recognition of the scenario/history count conflict or the duration mismatch. The duplicate-search claim remains unsupported as a necessary blocker, and the absolute assertion that the slot was in the past lacks authoritative run-date confirmation.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/6/arguments/preferred_dates/0",
+          "excerpt": "2026-10-29"
+        },
+        {
+          "locator": "#/tool_events/6/output/slots/0/date",
+          "excerpt": "2024-02-12"
+        },
+        {
+          "locator": "#/tool_events/7/arguments/ai_message",
+          "excerpt": "Please investigate chronic care availability for provider PROV-55667: the scheduling system repeatedly returned only a past slot, including when queried for 2026-10-29."
+        },
+        {
+          "locator": "#/conversation/22/content",
+          "excerpt": "your appointment has not yet been booked."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2 because contradictory clinical inputs and unsuitable scheduling outputs block the required outcome, leaving the attempt unverifiable. Positive extraction, eligibility, and blocker-recognition findings do not count as completion or a fractional difficulty contribution.",
+    "model_rationale": "Demographics extraction and active insurance verification are supported. History extraction and provider lookups also occurred for the correct form and provider, but the environment supplied a materially different clinical history and only 30-minute availability for a task requiring the high-risk branch and an extended visit. These conflicts prevent reliable execution and assessment of the full requested outcome. EHR creation, coordinator assignment, booking, and welcome delivery are not established. The agent's added duplicate-review prerequisite is unsupported by the task and is not accepted as an environmental blocker. Nevertheless, independently supported clinical and scheduling blockers require an unverifiable overall judgment under provisional_outcome_v0.2, not a failure or a pass.",
+    "raw_response_sha256": "42c8c54750810cf4f84a1d80b594626c3d4e2c8f7d02548ae8f498b598dfe7d6"
+  },
+  {
+    "review_id": "R09",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC2",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "suspected_blocker",
+      "prevents_required_execution": false,
+      "rationale": "A necessary identifier incompatibility is suspected, not established. The agent cites restrictive formats, but no tool contract or requirements-check rejection corroborates them. The requester confirms having no alternate IDs, which supports the lack of replacements but not their necessity. Actual prevention of execution cannot be asserted; the missing corroboration prevents reliable assessment of whether the workflow could have continued.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "They do not match the requirements-check tool's documented PAYER-XXXX and PLAN-XXXX formats, and the requester has no alternate IDs."
+        },
+        {
+          "locator": "#/conversation/4/content",
+          "excerpt": "Those are the payer and plan IDs I have: PAYER-UHC and PLAN-MEDICARE-02."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent executed a handoff and accurately reported a pending, unsubmitted request. However, the alleged format restriction is uncorroborated, so identifying it cannot be credited as recognition of a supported environmental blocker. Unsupported here means unverified, not proven false.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "They do not match the requirements-check tool's documented PAYER-XXXX and PLAN-XXXX formats"
+        },
+        {
+          "locator": "#/tool_events/0/output/exit_status",
+          "excerpt": "escalated"
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2 because the outcome is unverifiable and the suspected identifier-format blocker remains unresolved. The evidence does not establish either required completion or a feasible workflow demonstrably abandoned without justification.",
+    "model_rationale": "The requested approved PA for PAT-445641, CPT 95800, diagnosis G47.33, with PAYER-UHC and PLAN-MEDICARE-02 is not established. The escalation consistently identifies the intended entity and inputs, but its acknowledgement is not PA approval or evidence of any mandatory prerequisite. The agent's alleged identifier-format restriction is neither confirmed by a supplied tool contract nor tested by a recorded requirements-check response. Thus the attempt is incomplete, but an unresolved suspected environmental blocker prevents confidently classifying the nonexecution as an agent failure under provisional_outcome_v0.2.",
+    "raw_response_sha256": "8eaba9d85e6438d6c39de59cd9706bcf95b5ef20425be811b05656751ab15794"
+  },
+  {
+    "review_id": "R10",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC1",
+    "trial": 3,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "The criteria tool requires an imaging report, and two retrieval results report it missing for the correct patient. This is tool-supported unavailability, not merely an agent assertion. Without that required material, complete documentation and properly supported downstream approval cannot be established.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/1/output/required_docs/1",
+          "excerpt": "Imaging Report"
+        },
+        {
+          "locator": "#/tool_events/2/output/docs_missing/0",
+          "excerpt": "Imaging Report"
+        },
+        {
+          "locator": "#/tool_events/3/arguments/patient_id",
+          "excerpt": "PAT-445566"
+        },
+        {
+          "locator": "#/tool_events/3/output/docs_missing/0",
+          "excerpt": "Imaging Report"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent correctly identified the tool-confirmed missing report, retried retrieval at the user's request, and paused while requesting that the provider or imaging facility supply it. This is positive blocker handling, not approval, a completed handoff, or partial completion credit. The earlier identifier-format concern was not a supported blocker and was resolved by successful tool execution.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/3/output/docs_missing/0",
+          "excerpt": "Imaging Report"
+        },
+        {
+          "locator": "#/conversation/13/content",
+          "excerpt": "I checked the EHR again, and the imaging report is still missing. Please ask the provider or imaging facility to supply it or add it to the EHR."
+        },
+        {
+          "locator": "#/conversation/13/content",
+          "excerpt": "The authorization request remains on hold until the required report is available."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2: a tool-supported missing required imaging report prevents the requested workflow despite the scenario's availability premise. The overall outcome is unverifiable and contributes neither a pass nor a failure.",
+    "model_rationale": "The requirement check and criteria retrieval succeeded for the intended MRI. However, repeated retrievals for the correct patient established that a required imaging report was unavailable, contradicting the scenario's all-documentation-present premise. Full approval and its prerequisites are not supported. Under provisional_outcome_v0.2, this supported environmental blocker requires an overall unverifiable judgment and exclusion from difficulty, despite the directly observed unmet documentation condition. The agent's pause is not completion, but it is consistent with the blocker.",
+    "raw_response_sha256": "197d5b878ceb876661766ec1a2817c0db5a05f8aa00121388770d2ecaf9c4a1c"
+  },
+  {
+    "review_id": "R11",
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "suspected_blocker",
+      "prevents_required_execution": false,
+      "rationale": "Missing accident details are established, but no execution result or supplied contract proves that those details are necessary for validation or creation. The false value indicates that prevention of execution is not established, not that execution was demonstrably feasible. The unresolved prerequisite and the scenario's confirmed-coverage/complete-data setup prevent reliable assessment of whether pausing was necessary.",
+      "evidence": [
+        {
+          "locator": "#/conversation/4/content",
+          "excerpt": "I don’t have the accident date or the city and state available."
+        },
+        {
+          "locator": "#/conversation/5/content",
+          "excerpt": "Coverage validation requires the unavailable loss date"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent correctly notices the unavailable details, escalates, and avoids claiming that a claim was created. However, its stronger assertion that the missing date necessarily blocks coverage validation is not supported by an observed tool requirement or rejection, so recognition of a necessary execution blocker cannot be credited as established.",
+      "evidence": [
+        {
+          "locator": "#/conversation/5/content",
+          "excerpt": "Coverage validation requires the unavailable loss date"
+        },
+        {
+          "locator": "#/tool_events/0/arguments/ai_message",
+          "excerpt": "Accident date and city/state are unavailable. Coverage has not been validated and no claim has been created."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Unverifiable outcome with an unresolved suspected environmental blocker: additional accident details are unavailable, but the supplied evidence does not establish whether they are mandatory or whether the required operations were feasible without them.",
+    "model_rationale": "The trace supports accurate capture of the supplied loss facts and a completed supervisor escalation, but not the requested validated, created, BI-assigned claim and claimant acknowledgment. The user confirms that additional accident details are unavailable, while the agent asserts that they are mandatory. No supplied tool contract establishes that necessity or a feasible alternative, and the scenario describes coverage as confirmed and data as complete. Under provisional_outcome_v0.2, this unresolved suspected blocker prevents a defensible failure attribution and excludes the attempt from difficulty scoring. Escalation is not the task's accepted successful endpoint.",
+    "raw_response_sha256": "4c8618877a2deaefc9acec9eb62c02daa77c03ec633cfb517c10caadc7ee314d"
+  },
+  {
+    "review_id": "R12",
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+    "trial": 3,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "The execution user independently confirms unavailable injury and contact details; this is not merely an agent assertion. These gaps prevent the required complete loss details and leave attorney acknowledgment delivery unsupported. No supplied contract establishes that those requirements can be completed without the missing information. This supports a blocker to the full requested outcome, not a finding that all processing was impossible.",
+      "evidence": [
+        {
+          "locator": "#/conversation/3/content",
+          "excerpt": "I don’t have the store address, injury details, or my contact information available here"
+        },
+        {
+          "locator": "#/conversation/7/content",
+          "excerpt": "I don’t have the store location or contact details available to provide."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent correctly identified the missing injury and contact information, requested it, and escalated the legal and preservation requests without claiming those actions were completed. The human acknowledgment establishes receipt of the escalation, not fulfillment of the business outcome.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "store address, injury details, representative contact information, and duplicate-claim status remain unknown."
+        },
+        {
+          "locator": "#/tool_events/3/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        },
+        {
+          "locator": "#/conversation/9/content",
+          "excerpt": "I can’t yet confirm that legal has been notified or that preservation steps have been taken."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "The full outcome is unverifiable under provisional_outcome_v0.2 because required loss and contact information was explicitly unavailable. Material reference ambiguities also remain. The supported escalation is a positive behavior diagnostic, not completion or a difficulty contribution.",
+    "model_rationale": "The trace supports substantive liability classification, coverage validation for the correct policy and loss date, and acknowledged human escalation. It does not establish a created litigation-flagged claim, adjuster assignment, legal notification, preservation delivery, or attorney acknowledgment. Required injury information and recipient contact details were explicitly unavailable in the execution conversation, conflicting with the scenario's complete-data premise. Under provisional outcome v0.2, this supported blocker prevents a full-outcome determination and excludes the attempt from agent difficulty scoring. Escalation was reasonable but was not the task's accepted completion endpoint.",
+    "raw_response_sha256": "72a041b9bd1c9c66c7caa91ce6b4105dc3296ea11a50ab3ee092a53932fcc346"
+  },
+  {
+    "review_id": "R13",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "trial": 0,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "The correct requisition ID yields materially conflicting amount and quantity data on repeated reads. A consistent transaction basis is necessary to establish the specified receipt reconciliation and payments; the trace never resolves it. This prevents reliable execution or assessment of the required outcome. The separate claim that no suitable lookup tools exist is not established and is not needed for the supported-blocker finding.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/requisition_id",
+          "excerpt": "REQ-445800"
+        },
+        {
+          "locator": "#/tool_events/0/output/amount",
+          "excerpt": "500.0"
+        },
+        {
+          "locator": "#/tool_events/1/output/amount",
+          "excerpt": "500.0"
+        },
+        {
+          "locator": "#/tool_events/0/output/items/0/quantity",
+          "excerpt": "10"
+        },
+        {
+          "locator": "#/conversation/5/content",
+          "excerpt": "my information shows the requisition amount as $10,000, not $500."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent rechecked the requisition, correctly identified the amount discrepancy, and obtained acknowledgement of an escalation requesting resolution and verification of receipts and both payments. It did not claim reconciliation was complete. This positive behavior applies to the supported data conflict, not to the unverified assertion about tool availability.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "Two reads of the requisition show 10 units of RM-1001 at $50 each, totaling $500."
+        },
+        {
+          "locator": "#/tool_events/3/arguments/ai_message",
+          "excerpt": "Also resolve the $500 versus $10,000 requisition discrepancy."
+        },
+        {
+          "locator": "#/tool_events/3/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        },
+        {
+          "locator": "#/conversation/11/content",
+          "excerpt": "The review is still pending."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Excluded under provisional_outcome_v0.2: contradictory requisition data blocks reliable execution and assessment of the required transaction. The overall outcome is unverifiable; acknowledged escalation does not contribute a pass or failure.",
+    "model_rationale": "The requested reconciliation, automatic approval, two specified payments, and completed workflow are not established. Reads targeting REQ-445800 consistently return $500 and an item quantity of 10, materially conflicting with the task's $10,000, 100-unit transaction. No execution evidence resolves that conflict or verifies the receipts and prior payments. Under provisional_outcome_v0.2, this supported environmental contradiction prevents reliable completion or assessment and requires an unverifiable overall outcome despite the clearly uncompleted signaling milestone. The agent's escalation is supported positive blocker recognition, not successful reconciliation. The reference sequence does not establish the receipt milestones by itself, and the reported unavailability of lookup tools remains unverified because no tool inventory or contracts are supplied.",
+    "raw_response_sha256": "c976bd38082699c0dff18a78ce971762c7e8ff138ea52ecd20b870c54665b035"
+  },
+  {
+    "review_id": "R14",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+    "trial": 1,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "unmet",
+    "previous_policy_model_judgment": "unmet",
+    "changed_from_previous_policy": true,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "Necessary transaction data conflict between the retrieved requisition and the intended request. The observed budget result does not establish the specified overrun, and subsequent review acknowledgements do not reconcile the data or supply CFO approval. This prevents reliable execution or assessment of the required branch. No claim is made that all possible correction tools are unavailable, or that the agent's requested delivery date is an independently established prerequisite.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/output/amount",
+          "excerpt": "500.0"
+        },
+        {
+          "locator": "#/conversation/6/content",
+          "excerpt": "Also, the requisition amount should be $22,000, not $500."
+        },
+        {
+          "locator": "#/tool_events/1/output/status",
+          "excerpt": "within_limit"
+        },
+        {
+          "locator": "#/tool_events/6/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "supported_positive",
+      "rationale": "The agent correctly identified the observed amount and priority discrepancy, escalated it for verification, and did not represent an acknowledgement as correction, approval, or PO completion. This is positive blocker recognition, not task completion. It does not endorse every additional prerequisite asserted by the agent.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/2/arguments/ai_message",
+          "excerpt": "Please review requisition REQ-445600: ERP records $500 for 10 units of RM-1001 at $50 each and normal priority, while the requester states the amount should be $22,000 and priority high."
+        },
+        {
+          "locator": "#/conversation/22/content",
+          "excerpt": "The request was acknowledged, but those details haven’t been confirmed yet."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Supported material environmental conflicts and unresolved approval prevent verification of the required outcome. Under provisional outcome v0.2, this blocked/unverifiable attempt contributes neither a pass nor a failure.",
+    "model_rationale": "The correct requisition was read and the intended supplier's preferred status was established. However, the ERP response conflicts materially with the required amount and priority, the budget response does not support the intended exceeded-budget branch, and human handoffs supply acknowledgements rather than corrected data or CFO approval. PO creation, email delivery, and workflow completion are not established. Under provisional outcome v0.2, this supported environmental conflict prevents reliable execution or assessment of the requested outcome and excludes the attempt from agent difficulty rather than counting its safe pause as failure.",
+    "raw_response_sha256": "0cb8166b73ffbbcb2047b109dc47f7439808549ca0d1636779dc856428629f16"
+  },
+  {
+    "review_id": "R15",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 2,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "met",
+    "previous_policy_model_judgment": "unverifiable",
+    "changed_from_previous_policy": false,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "Execution outputs for the correct supplied identifiers conflict materially with the required transaction and matching-travel scenario. A consistent authoritative transaction/profile context is unavailable in the recorded results. This prevents establishing execution for the intended entity and branch; no supported reconciliation is shown. The blocker concerns the required scenario, not an inability to calculate a score on the alternative returned data.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/alert_id",
+          "excerpt": "FA-883422"
+        },
+        {
+          "locator": "#/tool_events/0/output/transaction_id",
+          "excerpt": "TX-998877"
+        },
+        {
+          "locator": "#/tool_events/1/arguments/customer_id",
+          "excerpt": "CUST-334899"
+        },
+        {
+          "locator": "#/tool_events/1/output/recent_travel/0",
+          "excerpt": "New York"
+        },
+        {
+          "locator": "#/tool_events/1/output/recent_travel/1",
+          "excerpt": "Chicago"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "not_established",
+      "rationale": "The agent used the returned data and declared auto-approval without identifying the material scenario conflicts. Its observation of a historical anomaly is not recognition of the environmental mismatch. The trace does not establish whether the agent could see all task-reference expectations.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/6/arguments/message",
+          "excerpt": "Alert FA-883422 reviewed: risk score 15/100; auto-approve under policy."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Supported environmental data conflicts prevent reliable assessment of the required entity, recent-travel branch, and outcome. The unverifiable attempt is excluded under provisional_outcome_v0.2, without counting it as agent success or failure.",
+    "model_rationale": "Under provisional_outcome_v0.2, the supported conflict between the intended scenario and environmental outputs prevents reliable assessment of full completion and excludes this attempt from difficulty scoring. The agent performed the principal reads and calculation, maintained returned identifiers, and received an approval recommendation. Those positive subconditions do not resolve the wrong-scenario data. The terminal SUCCESS event only reports auto-approval; it does not independently establish case_status auto_approved or customer_notification_status not_required. The reference sequence supplies no distinct case-update operation or tool contract establishing that recommendation alone performs approval, so no missing write requirement is invented.",
+    "raw_response_sha256": "2cbd70baa6f320e658d701771f63c3ca86ebc48f6138cbab4ce1d7ebd6a238ae"
+  },
+  {
+    "review_id": "R16",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 3,
+    "model_judgment": "unverifiable",
+    "original_human_judgment": "met",
+    "previous_policy_model_judgment": "unverifiable",
+    "changed_from_previous_policy": false,
+    "environment_assessment": {
+      "status": "supported_blocker",
+      "prevents_required_execution": true,
+      "rationale": "Necessary scenario-consistent transaction and customer context are contradicted by the tool outputs for the correct lookup identifiers. This blocks reliable establishment of the requested entity-specific outcome without arbitrarily replacing observed data with reference literals. It does not prove every possible recovery path was unavailable. The separate claim of missing approval tooling remains unsupported.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/alert_id",
+          "excerpt": "FA-883422"
+        },
+        {
+          "locator": "#/tool_events/0/output/transaction_id",
+          "excerpt": "TX-998877"
+        },
+        {
+          "locator": "#/tool_events/1/arguments/customer_id",
+          "excerpt": "CUST-334899"
+        },
+        {
+          "locator": "#/tool_events/1/output/recent_travel",
+          "excerpt": "[\"New York\", \"Chicago\"]"
+        }
+      ]
+    },
+    "blocker_recognition": {
+      "status": "unsupported_claim",
+      "rationale": "The agent explicitly claims approval tooling is unavailable, but no inventory, contract, or failed invocation supports that assertion. It does not identify the supported scenario/output conflicts. Asking for the customer ID and lookback period appropriately obtained those inputs, but those resolved questions do not establish recognition of the material blocker.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/6/arguments/result_data/approval_execution",
+          "excerpt": "No transaction approval tool is available."
+        }
+      ]
+    },
+    "difficulty_eligible": false,
+    "difficulty_exclusion_reason": "Material environment/reference conflicts prevent reliable assessment of the intended transaction, travel context, and risk outcome. Auto-approved case status also remains unverified. This unverifiable attempt is excluded under provisional_outcome_v0.2.",
+    "model_rationale": "The trace supports retrieval, customer and history checks, device checking, and risk calculation using consistently propagated tool outputs. It does not support completion for the stipulated transaction and travel context because the environment returns materially conflicting data for the correct alert and customer. The approval recommendation is observed, but actual auto-approved case status and notification-not-required status are not independently established. The reference sequence ends with SUCCESS without identifying an operation that establishes those states, and no tool contract resolves whether recommendation alone is the accepted endpoint. Under v0.2, the supported environmental conflict prevents reliable assessment and excludes this attempt rather than making it an agent failure.",
+    "raw_response_sha256": "b7f1ad1d7fd1a84d83ccc6ebac950f1c8d485ff2353000a7ee87a5ee75f1d60a"
+  }
+]

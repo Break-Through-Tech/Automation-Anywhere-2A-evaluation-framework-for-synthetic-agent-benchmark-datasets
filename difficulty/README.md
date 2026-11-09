@@ -1,5 +1,47 @@
 # LLM-judge difficulty
 
+Offline source-consistency triage for all 64 original tasks is documented in
+[`results/evaluability/source_v1/`](../results/evaluability/source_v1/README.md).
+Run `python -m difficulty.audit_evaluability` into a fresh output directory to
+reproduce it. Triage flags do not assign outcomes or difficulty eligibility and
+do not authorize another broad paid run.
+
+The offline working interpretation of completion evidence and input sufficiency
+is in [evaluation expectations](../docs/evaluation/evaluation_expectations_v0.1.md).
+The two-case context test stopped early and its source-backed follow-up remains
+unverifiable/excluded; do not resume broad paid judging just to obtain variation.
+
+Paid experiments must follow the user's
+[spending guard](../docs/evaluation/api_spending_guard.md): begin with at most
+three sequential requests; stop after a technical failure or two consecutive
+non-success judgments and diagnose before spending more. Never automatically
+expand a uniform failure/unverifiable pattern to the entire sample.
+
+The user's current grading clarification is
+[provisional outcome policy v0.2](../docs/evaluation/provisional_outcome_policy_v0.2.md).
+It requires evidence of mandatory prerequisites as well as the outcome, and
+classifies attempts blocked by necessary missing environmental material as
+unverifiable, outside difficulty. Correct blocker recognition is a separate
+positive diagnostic. The earlier v0.1 run is preserved. A fresh sixteen-attempt
+v0.2 assessment is under `results/judge_review/v4/`, with separate blocker and
+recognition reports. All sixteen were proposed unverifiable, leaving no eligible
+difficulty observations. The input audit found missing authoritative tool/workflow
+context in judge requests, so these exclusions do not establish dataset defects
+or agent failure. An offline context supplement is prepared for the next check.
+
+For a separate extraction of designed-complexity signals, see
+[the structural feature counting rules](../docs/evaluation/structural_feature_rules.md).
+`structural_features.py` extracts all 64 task records without model calls. The
+generated features and seven-example review guide are under
+`results/difficulty/structural_v1/`. These signals are not success-based difficulty
+scores and are not combined into a single score.
+
+The framework accepts `--synthetic-structural-features` with the generated
+`task_features.json`. It checks an exact task-ID join and source hashes before
+embedding or scoring. The optional `designed_` output columns are descriptive
+features; historical success scores do not validate them. See the root README
+for a command that writes to a new framework output directory.
+
 `llm_judge.py` evaluates synthetic agent transcripts against the expected outcomes and
 milestones in `data/<domain>/test_cases.json`, using
 [`docs/evaluation/synthetic_milestone_rubric.md`](../docs/evaluation/synthetic_milestone_rubric.md)
@@ -92,3 +134,63 @@ from `JUDGE_MODEL`, then `MODEL_NAME`, then `gpt-4.1-mini`. It writes per-trial 
 including milestone evidence and contradictions, and task-level difficulty under
 `results/difficulty/llm_judge/`. Review traces for sensitive data before sending them to an
 external judge provider.
+
+## Exact evidence checks and the next small retry
+
+Groups 2–4 submitted task-level answers in issue comments. These are transcribed
+with provenance under `results/judge_review/v1/submissions/` and in the matching
+review sheets. Group 1 remains pending. No human milestone judgments have been
+inferred from first-pass answers.
+
+Use `compare_judge_reviews.py --level task` for first-pass task-label agreement;
+the default `--level full` still requires milestone labels. Task-only mode accepts
+submitted human evidence prose and explicitly reports that it is not exact-excerpt
+validated. It still checks every model judgment's structure and exact citations.
+It computes no milestone agreement. Both modes require all expected human labels
+and matching task/rubric identities before computing agreement. No API test may
+run until group 1 / issue 51 is complete, per the user's instruction.
+
+```bash
+python difficulty/compare_judge_reviews.py --human results/judge_review/v1/sample/human_reviews.json --packet results/judge_review/v1/sample/review_packet.json --level task --out results/judge_review/v1/submissions/task_comparison_readiness.json
+```
+
+Prompt `synthetic_judge_v0.2_exact_evidence` distinguishes task requirements from
+execution evidence. It requires exact, contiguous excerpts at transcript-relative
+JSON pointers, and includes illustrative citation examples. Task-reference pointers,
+payload-wrapper prefixes, paraphrased excerpts, and empty citation placeholders
+are not execution evidence. Unverifiable judgments can have empty evidence lists.
+The normal model-call path and the human comparison now share the same citation
+checker in `judge_evidence.py`. Rejected responses raise a validation error; they
+must not become agent failures or difficulty scores. Outputs record the prompt
+version and hash separately from the unchanged draft rubric version.
+
+The checker also accepts a whole JSON object or array quoted with different
+serialization whitespace, provided its full contents and order are unchanged.
+Whitespace inside strings is significant; omitted or changed values, reordered
+arrays, duplicate keys, and paraphrases remain invalid. This corrected an R10
+false rejection without another model request. The completed sixteen-attempt
+development comparison and its validation history are under
+`results/judge_review/v3/full_sample_revalidated/`. Human labels are unchanged;
+agreement under the provisional policy is descriptive, not final accuracy.
+
+The next prompt-development retry selects only R01, R06, and R07 across banking
+accounts, fraud monitoring, and healthcare onboarding. These are already-inspected
+development cases, not a held-out validation sample. Validate the selection offline:
+
+```bash
+python difficulty/llm_judge.py --trials results/baseline/v2_synthetic_full/trials.csv --selection results/judge_review/v2/retry_selection.json --dry-run --out .cache/judge_review/v2/retry_dry_run
+python -m unittest discover -s tests -p 'test*judge*.py'
+```
+
+A local recorded GPT-6 Astra retry runner is prepared at
+`.cache/judge_review/v2/retry_gpt6_astra/run_sample.py`. It is ignored by Git and
+has not been run. After credits are restored, that runner can make the three
+requests with medium reasoning, no temperature setting, a completion-token cap,
+and no automatic retries. It saves exact requests, raw responses, metadata,
+and validation results in a fresh private folder. Keep the earlier runs intact.
+
+Review all three responses and their evidence before expanding to the full sample.
+Passing citation checks alone does not establish semantic correctness. Compare
+with actual human labels only after independent reviews are submitted, and keep
+model answers out of the human review issues. A changed prompt must be recorded
+as a new experiment, not pooled silently with the earlier prompt's results.

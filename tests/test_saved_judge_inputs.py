@@ -163,3 +163,39 @@ class HumanComparisonTests(unittest.TestCase):
             form_path.write_text(json.dumps(form))
             with self.assertRaisesRegex(ValueError, 'excerpt is not present'):
                 compare_reviews(form_path, packet_path, csv_path)
+
+    def test_task_first_pass_does_not_invent_milestone_agreement(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory)
+            task = {'test_case_id': 'Task_W1_TC1', 'milestones': [{'step': 1}]}
+            row = {'domain': 'sample', 'task_id': task['test_case_id'], 'trial': 0,
+                   'transcript': {'tool_events': [{'output': {'status': 'done'}}], 'conversation': []}}
+            write_review_packet(out, [(row, ('sample', row['task_id']), task)], llm_judge.load_rubric(),
+                                llm_judge.file_hash(llm_judge.RUBRIC_PATH))
+            human_path = out / 'human_reviews.json'; packet_path = out / 'review_packet.json'
+            human = json.loads(human_path.read_text())
+            self.assertEqual(compare_reviews(human_path, packet_path, level='task')['received_task_reviews'], 0)
+            human['reviews'][0].update(reviewer='Offline fixture reviewer', task_judgment='met',
+                                      task_rationale='The operation returned done.')
+            human_path.write_text(json.dumps(human))
+            self.assertEqual(compare_reviews(human_path, packet_path)['status'], 'awaiting_human_review')
+            ready = compare_reviews(human_path, packet_path, level='task')
+            self.assertEqual(ready['status'], 'awaiting_judge_results')
+            self.assertFalse(ready['milestone_agreement_computed'])
+            evidence = [{'locator': '#/tool_events/0/output/status', 'excerpt': 'done'}]
+            model = {'task_judgment': 'met', 'task_rationale': 'Recorded done.',
+                     'task_evidence': evidence, 'task_contradictions': [], 'milestones': [
+                         {'step': 1, 'applicable': True, 'material': True,
+                          'applicability_basis': 'Required operation.', 'judgment': 'met',
+                          'rationale': 'Recorded done.', 'evidence': evidence, 'contradictions': []}]}
+            # Deterministic unit-test model output; no actual human label or API call.
+            judged = llm_judge.judge_trials([row], {('sample', row['task_id']): task}, 'offline',
+                                          judge=lambda *_: model)
+            csv_path = out / 'judgments.csv'; llm_judge._write_csv(csv_path, judged)
+            result = compare_reviews(human_path, packet_path, csv_path, level='task')
+            self.assertEqual(result['task_comparison']['agreement'], 1)
+            self.assertIsNone(result['milestone_comparison'])
+            judged[0]['evidence_json'] = json.dumps([{'locator': '#/task/expected', 'excerpt': 'done'}])
+            llm_judge._write_csv(csv_path, judged)
+            with self.assertRaisesRegex(ValueError, 'does not resolve'):
+                compare_reviews(human_path, packet_path, csv_path, level='task')

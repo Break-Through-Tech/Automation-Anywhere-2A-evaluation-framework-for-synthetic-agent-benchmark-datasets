@@ -1,0 +1,98 @@
+[
+  {
+    "review_id": "R01",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "32fe34b7eb5fd59a26f2ddb3548a33b8c9f84c9e6c80d70ba13feb6c3b4065a0"
+  },
+  {
+    "review_id": "R02",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "8a3d8e3142ad22818f6325a295823d225182cf43e3ea91b1473815e28da0ee86"
+  },
+  {
+    "review_id": "R03",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "48456bc1aca482a17fce40ea0c5aea98383c6466088fa82063870300cbb7a4f7"
+  },
+  {
+    "review_id": "R04",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "eb5d6cdb3d54ec66349bb7f3dec5e063acd00211abc2b0e265a274b3b729ef1e"
+  },
+  {
+    "review_id": "R05",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "6ab6a42826c43e9623c1c72726f66f00e473d8160b60b262d56ade86f1ac8a10"
+  },
+  {
+    "review_id": "R06",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "9ce0c037d17f3969989c1836506234178e806a08529d091e9055717b987bdc91"
+  },
+  {
+    "review_id": "R07",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "e390bbe92cfd403d555070330422167babca4210a49fa470439c9c0118dc49e1"
+  },
+  {
+    "review_id": "R08",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "96882f6a31b271d433a06c3f949f6dedfbf8e39a657cede139e99952b49caca9"
+  },
+  {
+    "review_id": "R09",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "a2eb77c6348041fc9a4cdfeaf5df66176e576f11f5c729f831eb7fcd6b1989cd"
+  },
+  {
+    "review_id": "R10",
+    "original_validation_status": "rejected_response",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "6a6db6c22200d6467da146a2964664b6ca7c09c45dd482d345e465615db6d425"
+  },
+  {
+    "review_id": "R11",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "608bda2f47a36b40941c98aa915000db7ef1b26be3b3c0217d75500a798c4348"
+  },
+  {
+    "review_id": "R12",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "1d675cf9574ac24d46851a2b68fdc43aa6ba1ef6e0aa290fa893dab2d207a140"
+  },
+  {
+    "review_id": "R13",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "53b3cad73549f457b421342aee1769be234deba5ff86591d7fef3a9e08076363"
+  },
+  {
+    "review_id": "R14",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "354c40a6b90c75773f0e9c72a365d1d1b3a2a371ff2be8199491246fd88f5309"
+  },
+  {
+    "review_id": "R15",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "532f89a1bba7c44c8782e7653218ffb58144c297b1a42aee5dce77430051d13b"
+  },
+  {
+    "review_id": "R16",
+    "original_validation_status": "accepted",
+    "revalidated_status": "accepted",
+    "raw_response_sha256": "ccba0edb227e09280065ef9528c86126778e18ac214ac2c8a679fccd48a8cb6c"
+  }
+]
