@@ -1,7 +1,7 @@
 # Calibration protocol before broad paid scoring
 
 Version: `design_calibration_v1`
-Status: nine complete revised-format cases pass repeat tolerances, but telecom quotation failure and the experimental exact-excerpt API rejection leave calibration incomplete. All 60 approved domain request slots are used. See [the current diagnostic](../../results/difficulty/numeric_design_source_bound_probe_v14/README.md).
+Status: API evidence-format blocker resolved using citation IDs. Final synthetic scoring completed at **64.30/100**, 64/64 tasks, under one evidence-reference format. The final run has one judgment per task; earlier repeated-score checks remain historical, and independent/new-format repeat validation is not implied. See [the final synthetic report](../../results/difficulty/synthetic_final_v15/README.md).
 
 1. Run offline contract, mapping, citation, schema, arithmetic and spending-gate tests.
 2. With explicit API authorization, score three synthetic cases sequentially:

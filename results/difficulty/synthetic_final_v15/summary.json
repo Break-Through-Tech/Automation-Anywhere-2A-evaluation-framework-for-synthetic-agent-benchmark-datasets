@@ -1,0 +1,1512 @@
+{
+  "metric": "llm_source_only_designed_difficulty",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "scale": [
+    0,
+    100
+  ],
+  "task_weighting": "equal_weight_after_mean_of_all_planned_usable_repeats",
+  "inventory_sha256": "da709c08f35077c7c9d67f4684dbacfdf6fdd0567bf443db6b43606cca54fe03",
+  "packet_manifest_hashes": {
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_01": "6b800d02c18408f3c0b2c27f2b0132ed29d9db615ba340b3aadde8377fbe2a89",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_02": "4a09721c4c275bf67cf2511cc09dcad98d8de86e9a59c181b185f1689afcf95b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_03": "652b7eadc39e8651a3adc51c71bf68408e88c0703d7625e267fb92e63d0cea48",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_04": "c10f197cfcfb3ac2122c5a734c5a741fe16fe3a1ec84af47c04404965607c104",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_05": "955bcabf9fc78a944878f4cb368b4b70649d1d7e1a81f058cfeefa50ebee098b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_06": "b2a70a18437817cabbd85ed20502f1b6157ad1de9913fb407df74934ff5f9aad",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_07": "94f28b6b125e284652eb2b5fe54f36c678d4f6ddbb3301f67b11ee7167cba1c2",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_08": "0ca72273b9adb8560e44844c140b846c26864e299a92064d290d9cdea7d4d955",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_09": "566839ac9c3912540b2c67662d81e027671938dacf285ff7ad8ab67818d182be",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_10": "3fc36466e389318197b3d1593ca0a2802672d49ea54c8beee59e8e5fdc2d6c94",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_11": "75fd360d5f629fd474439a0ae46230c43632c7ced0fe17674a3a9f79cd97ad54",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_12": "1dee69d1666381c7bca38e8520d9ff6d75332d84ebc207ab515a2a53b17b51a5",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_13": "92a4b54ec1ca76ef452f89fcc7f854299e2ed2e0ac86ab125e19c0fb8c4d7b19",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_14": "7db95f9a297826ace2f99ab9d431b4f67291ebc33be4e77d4370b79d1bc1a311",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_15": "d62ca3493edf54916cadb36fc3146371345840d874f22f2c2f3f46aec8d77b84",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_16": "3fe98d07360f4266f4085ffe5a1d971aefc6464cbeae0f7e495f1e507b9d5e49",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_17": "ae8074e49a8bcd4e9360f01c9d3d1716929243ad9aaa57b36ccc3b92e52a8a3a",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_18": "85f3f90a68a0c537597b8302ed9710ebe636865cc5640cb4aaef3fe28ba650ea",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_19": "49d306bbe1c577fd1404bb4901dcf31702f31d8db457d5811137bd2ed6e0e881",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_20": "571c163c46dea1590da4a28dfe86632617b78b7363e6a989a2916962b1a3e317",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_21": "73c6d1775092869c059b273043f355d8c269819dad07b3cfff81adba2afdbfd9",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_22": "003f8342684b5a9d1a250c764f089345f7360ab830cf8a4af8f398cf8556c65b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_23": "06cfce55483c4b08ceb0f3751aa9ca4d7a840103be434a83a7013d72f29196d0",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_24": "58f2df748c1c2a31fb567f00a9e56b5facda0b39136a07cb4c671c332910a5b0",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_25": "d335edb28c583156754cedf014b8f96b4ab017a446e87290906c7b7d926446da",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_26": "8f629d106019986f77bd83a9db2be79e5d9eadfdd7fb61e2bbe0e2ddac1b370b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_27": "9b6ea934151e90942cb382486575f9af63ed6fd4558ce548603a687c7e9e84fe",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_28": "f1d4854ddd85e0c363b8bf66e5361d0f24c307f265ab637d8eb55720c613e0bd",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_29": "1501b9a9a6061dc7dba554fc87efcead72fad287a1280fc4c57c6a5e8aada598",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_30": "ce2f5f807f636f33da239b3ec2916de26443ab237d9f46077955550f7cc0bb93",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_31": "b79ac98b4860612915033a6bc61a767f5521a3bb84b0ab0e6317a4e4a907f735",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_32": "621d8d2bcadc53dce0d85b40c59825c7fd50c46048cd9077f937abacef818658",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_33": "de27dfd677e1cce4f65ed438bc2759ea8b68954af83a695e4f7ac01e4948243f",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_34": "a7c4d65721bcd9d571f975cb95bebccbea3b0d487d81b59f64ea743ba53318c9",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_35": "6d1c00fd64f6a5e0ca9eca08296f9e5d32962bee60673cc97e65bb1718f91724",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_36": "a9da652b2d7f23cd155b9ebac90902171095b316ce7b4d9460528f7c4cf2da61",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_37": "ad5b6911e18ca6695f658f252d2f0d277cb35248cc65a3fe1895bc16e5284c90",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_38": "60b0625d58b410d2355aec70a44650081d5286be1c03b0d0bfcb53fb1171d271",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_39": "5bcbe399d71ae669fc7603ca0615214054026988d4a63338a82a31554699c80c",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_40": "e16f8bd169a58a2bc5ea7629a20630314ea1ccf7a7d5633aa21f2fc127f9d303",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_41": "d68e89e35e8fa44b8f971e848409f34a9c7688ff920b4860c4e8d4e1956d7fec",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_42": "5e0ad5a71cbc20a9a2beff8cab34e4679a6565c7baeff25b437bd52c857d83fa",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_43": "1c62788dbad8f32fcf4b94fd0cd456f0929e36ff3eb6b2b9ef521f37ef200965",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_44": "240a2ddb8ba4ff2690530830c0eb2a7ddeb6f89c4b5be5e2bc249e4d340808fa",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_45": "a6f5dc88fc3a9f0d1809caa03473e56ee384d4f90e5432e9231a4e31fa751b29",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_46": "387ae9f2430ff0ca622804c91caf437bfbb0d49a24a15010a8a3cd819073ec02",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_47": "4aa240eb2b0f96a2475d8ef38ca8a4688fa8e3833b15b433736f481465376f90",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_48": "920e1d70166213aa263af1047f25a2fc92cc79addba1005a1df0ad79f8b39744",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_49": "cc61721a61c5762b8746c27fa104a5fe313a069a2e76ffc8eff9c6a1db85f1ba",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_50": "6843d54697ebabe50debc32e2d010a82159b0464eae177afb7bf364d2545bf40",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_51": "00a80861fbff9cad4effdc8f8ad82be6bbf69fef54c3eadf6960a2b079c80fa8",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_52": "c735f85a81ea6ff196717e758f450358671904d3989bb15792f503393687a7c7",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_53": "3ac134e3c09e71a5c0a101e30ac9db73b0647a8c7f5d3663c94f458e12cdd20f",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_54": "f8d075b9d4fe3da15929ee6a9270688ea974459591b8fe02aa445fc3114e1ebc",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_55": "0c5087b03ea2e8c12dce5e18a5cca7edc6b73ba7a62e5a055000fa203dc87c6b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_56": "70447befa77e539e0846ffd4b5f9fc82dc997c4ff76b7926124c383ee7a6cd21",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_57": "bdb1921e559f2d84fdfcf6b00bfce53a59fc92e30becd4a1073da8350662b9f1",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_58": "c8a6914fcf49d500b603d99e0a380c3a104a1f875aec86287adb47cd148f9c4a",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_59": "0c3be6a476b586d2ae8667a2eb83ab05a0b78d8b774b187a9bf639c7a4be76ec",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_60": "4f3a585e944a47cf80f0b90f1667848d34c2ffad122cad6429eb199d3aac094d",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_61": "24ce9c3d1a0ea15c593061c2c7a0ec449be47dcbe5fe44c805f77b8c6acb45bf",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_62": "eb3f0021cec8d18f6da5953c38ce6a7fa3077918c1bdb37c34790e525a5d23a1",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_63": "8166b0ffebfae841715ce8b45c2d8cc2d86498a9f7eec27444573b60cd7a13e2",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_64": "41100f39e7ac26c7d66795199404f6cdcb53e0f34e4fba34f2b050fb2a9447fd"
+  },
+  "protocol_fingerprints": [
+    "802f8b7dc316d6c8904a7a66be3541b7164f2b040f7caaf3b8cef7bffa5b54e8"
+  ],
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "calibration_status": "not_established_by_aggregation",
+  "independent_validation": false,
+  "datasets": {
+    "synthetic": {
+      "n_total": 64,
+      "n_scored": 64,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 64
+      },
+      "mean": 64.296875,
+      "median": 65.0,
+      "min": 40,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 6.426701349399628,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 6,
+        "60-79": 58,
+        "80-100": 0
+      }
+    }
+  },
+  "domains": {
+    "synthetic/banking_accounts_deposits": {
+      "n_total": 8,
+      "n_scored": 8,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 8
+      },
+      "mean": 66.25,
+      "median": 65.0,
+      "min": 60,
+      "max": 70,
+      "q1": 65.0,
+      "q3": 70.0,
+      "iqr": 5.0,
+      "population_stddev": 3.307189138830738,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 8,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding": {
+      "n_total": 6,
+      "n_scored": 6,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 6
+      },
+      "mean": 69.16666666666667,
+      "median": 67.5,
+      "min": 65,
+      "max": 75,
+      "q1": 65.0,
+      "q3": 73.75,
+      "iqr": 8.75,
+      "population_stddev": 4.487637339278753,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 6,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring": {
+      "n_total": 13,
+      "n_scored": 13,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 13
+      },
+      "mean": 64.23076923076923,
+      "median": 65,
+      "min": 55,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 65.0,
+      "iqr": 5.0,
+      "population_stddev": 5.131409255433205,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 12,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 64.44444444444444,
+      "median": 65,
+      "min": 60,
+      "max": 70,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 4.37444881889545,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 9,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 40,
+      "max": 70,
+      "q1": 60.0,
+      "q3": 65.0,
+      "iqr": 5.0,
+      "population_stddev": 8.16496580927726,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 2,
+        "60-79": 7,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake": {
+      "n_total": 10,
+      "n_scored": 10,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 10
+      },
+      "mean": 67,
+      "median": 65.0,
+      "min": 60,
+      "max": 75,
+      "q1": 61.25,
+      "q3": 73.75,
+      "iqr": 12.5,
+      "population_stddev": 6.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 10,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 60.55555555555556,
+      "median": 65,
+      "min": 50,
+      "max": 70,
+      "q1": 55.0,
+      "q3": 65.0,
+      "iqr": 10.0,
+      "population_stddev": 6.849348892187751,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 3,
+        "60-79": 6,
+        "80-100": 0
+      }
+    }
+  },
+  "workflows": {
+    "synthetic/banking_accounts_deposits/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W4": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 57.5,
+      "median": 57.5,
+      "min": 55,
+      "max": 60,
+      "q1": 56.25,
+      "q3": 58.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W3": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W4": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W9": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 60,
+      "median": 60.0,
+      "min": 60,
+      "max": 60,
+      "q1": 60.0,
+      "q3": 60.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 40,
+      "median": 40,
+      "min": 40,
+      "max": 40,
+      "q1": 40,
+      "q3": 40,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 60,
+      "max": 70,
+      "q1": 62.5,
+      "q3": 67.5,
+      "iqr": 5.0,
+      "population_stddev": 5.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    }
+  },
+  "limitations": [
+    "Provisional anchored index; numerical distances are not independently validated.",
+    "Incomplete means describe scored subsets, not omitted tasks.",
+    "Domain composition and available source information affect comparisons.",
+    "Higher difficulty alone is not higher dataset quality."
+  ]
+}

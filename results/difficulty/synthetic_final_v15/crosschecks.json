@@ -1,0 +1,2699 @@
+{
+  "status": "post_scoring_diagnostics",
+  "score_report_sha256": "cd5695058a9ae8d69d1a89f351543639cf5dddb033ce448a3b33502387fa88f0",
+  "feature_document_sha256": "95f560acd2501a9be831e29aba925b4c9fe7c3e613aa5835fd2d019b582c39eb",
+  "groups": {
+    "all": {
+      "n_total": 64,
+      "n_scored": 64,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 64,
+        "rho": 0.18722982984862555,
+        "p_value": 0.13848591241694685,
+        "ties_x": 61,
+        "ties_y": 57,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 64,
+          "rho": 0.425662898864828,
+          "p_value": 0.0004539214801120311,
+          "ties_x": 55,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 64,
+          "rho": 0.6221711588542703,
+          "p_value": 4.065007205536747e-08,
+          "ties_x": 54,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 64,
+          "rho": 0.37475343238636494,
+          "p_value": 0.002281115836052494,
+          "ties_x": 59,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 64,
+          "rho": 0.4668744295877403,
+          "p_value": 0.00010069249551415865,
+          "ties_x": 60,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic": {
+      "n_total": 64,
+      "n_scored": 64,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 64,
+        "rho": 0.18722982984862555,
+        "p_value": 0.13848591241694685,
+        "ties_x": 61,
+        "ties_y": 57,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 64,
+          "rho": 0.425662898864828,
+          "p_value": 0.0004539214801120311,
+          "ties_x": 55,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 64,
+          "rho": 0.6221711588542703,
+          "p_value": 4.065007205536747e-08,
+          "ties_x": 54,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 64,
+          "rho": 0.37475343238636494,
+          "p_value": 0.002281115836052494,
+          "ties_x": 59,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 64,
+          "rho": 0.4668744295877403,
+          "p_value": 0.00010069249551415865,
+          "ties_x": 60,
+          "ties_y": 57,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/banking_accounts_deposits": {
+      "n_total": 8,
+      "n_scored": 8,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 8,
+        "rho": -0.1807015805810502,
+        "p_value": 0.6684878606002789,
+        "ties_x": 6,
+        "ties_y": 5,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 8,
+          "rho": -0.7928571428571427,
+          "p_value": 0.01891123152509005,
+          "ties_x": 5,
+          "ties_y": 5,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 8,
+          "rho": -0.6900655593423541,
+          "p_value": 0.0582013412036747,
+          "ties_x": 6,
+          "ties_y": 5,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 8,
+          "rho": -0.45175395145262554,
+          "p_value": 0.2611489803787885,
+          "ties_x": 6,
+          "ties_y": 5,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 8,
+          "rho": 0.1451349025620335,
+          "p_value": 0.7316693365443898,
+          "ties_x": 5,
+          "ties_y": 5,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/banking_customer_onboarding": {
+      "n_total": 6,
+      "n_scored": 6,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 6,
+        "rho": -0.6708203932499369,
+        "p_value": 0.1447039986063304,
+        "ties_x": 4,
+        "ties_y": 3,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 6,
+          "rho": 0.8763560920082659,
+          "p_value": 0.02198660131877533,
+          "ties_x": 3,
+          "ties_y": 3,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 6,
+          "rho": 1.0,
+          "p_value": 0.0,
+          "ties_x": 3,
+          "ties_y": 3,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 6,
+          "rho": 0.5656854249492381,
+          "p_value": 0.24198153056802077,
+          "ties_x": 4,
+          "ties_y": 3,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 6,
+          "rho": -0.223606797749979,
+          "p_value": 0.670179973318781,
+          "ties_x": 4,
+          "ties_y": 3,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/banking_fraud_monitoring": {
+      "n_total": 13,
+      "n_scored": 13,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 13,
+        "rho": 0.4277825767816321,
+        "p_value": 0.1447917323319156,
+        "ties_x": 10,
+        "ties_y": 8,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 13,
+          "rho": 0.3365496198170188,
+          "p_value": 0.26085260041274166,
+          "ties_x": 10,
+          "ties_y": 8,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 13,
+          "rho": 0.38749520446821895,
+          "p_value": 0.1908092966928816,
+          "ties_x": 10,
+          "ties_y": 8,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 13,
+          "rho": -0.2550785468538369,
+          "p_value": 0.400305875726123,
+          "ties_x": 11,
+          "ties_y": 8,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 13,
+          "rho": 0.6251840855741138,
+          "p_value": 0.02231746485250319,
+          "ties_x": 11,
+          "ties_y": 8,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/healthcare_patient_onboarding": {
+      "n_total": 9,
+      "n_scored": 9,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 9,
+        "rho": -0.22131333406899523,
+        "p_value": 0.5671432316868558,
+        "ties_x": 7,
+        "ties_y": 6,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 9,
+          "rho": 0.6197797868009122,
+          "p_value": 0.07502621196337289,
+          "ties_x": 6,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 9,
+          "rho": 0.35052852810725404,
+          "p_value": 0.3550433486347866,
+          "ties_x": 4,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 9,
+          "rho": 0.46045282790171793,
+          "p_value": 0.2123001831096605,
+          "ties_x": 5,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 9,
+          "rho": 0.9258200997725515,
+          "p_value": 0.0003402472168076143,
+          "ties_x": 7,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/healthcare_prior_authorization": {
+      "n_total": 9,
+      "n_scored": 9,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 9,
+        "rho": 0.5669467095138409,
+        "p_value": 0.11141646787533979,
+        "ties_x": 7,
+        "ties_y": 4,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 9,
+          "rho": 0.5413127381832802,
+          "p_value": 0.13229085458905038,
+          "ties_x": 5,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 9,
+          "rho": 0.8882165115716839,
+          "p_value": 0.001376230905525021,
+          "ties_x": 4,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 9,
+          "rho": 0.23145502494313788,
+          "p_value": 0.549029332103617,
+          "ties_x": 6,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 9,
+          "rho": 0.5669467095138409,
+          "p_value": 0.11141646787533979,
+          "ties_x": 7,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/insurance_claims_intake": {
+      "n_total": 10,
+      "n_scored": 10,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 10,
+        "rho": 0.7490354138825009,
+        "p_value": 0.012655447431529052,
+        "ties_x": 7,
+        "ties_y": 6,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 10,
+          "rho": 0.7545552778908134,
+          "p_value": 0.011662815465762488,
+          "ties_x": 5,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 10,
+          "rho": 0.7545552778908134,
+          "p_value": 0.011662815465762488,
+          "ties_x": 5,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 10,
+          "rho": 0.42180922353627587,
+          "p_value": 0.22467982937331366,
+          "ties_x": 8,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 10,
+          "rho": 0.7284982384333862,
+          "p_value": 0.016869319100938123,
+          "ties_x": 6,
+          "ties_y": 6,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay": {
+      "n_total": 9,
+      "n_scored": 9,
+      "n_missing_tags": 0,
+      "n_conflicting_tags": 0,
+      "tag_association": {
+        "n": 9,
+        "rho": -0.1436739427831727,
+        "p_value": 0.7122980017531548,
+        "ties_x": 7,
+        "ties_y": 4,
+        "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+      },
+      "feature_associations": {
+        "proposed_operation_unit_count": {
+          "n": 9,
+          "rho": 0.8440528475241593,
+          "p_value": 0.004218984274420953,
+          "ties_x": 3,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "reference_tool_interactions": {
+          "n": 9,
+          "rho": 0.9155070568383739,
+          "p_value": 0.0005311077798956608,
+          "ties_x": 3,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "business_check_groups": {
+          "n": 9,
+          "rho": 0.7465517058725968,
+          "p_value": 0.020844690913046048,
+          "ties_x": 6,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        },
+        "distinct_coordination_events": {
+          "n": 9,
+          "rho": 0.33523919982740297,
+          "p_value": 0.3778260693774733,
+          "ties_x": 7,
+          "ties_y": 4,
+          "reason": "exploratory_asymptotic_p_value_not_independent_validation"
+        }
+      }
+    }
+  },
+  "within_workflow_pairs": [
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "workflow_id": "W1",
+      "task_ids": [
+        "DigitalAccountOpeningAgent_W1_TC2",
+        "DigitalAccountOpening_DigitalAccountOpening_W1_TC1"
+      ],
+      "scores": [
+        65,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "workflow_id": "W2",
+      "task_ids": [
+        "DigitalAccountOpeningAgent_W2_TC1",
+        "DigitalAccountOpeningAgent_W2_TC2"
+      ],
+      "scores": [
+        60,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "workflow_id": "W1",
+      "task_ids": [
+        "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+        "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2"
+      ],
+      "scores": [
+        65,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "medium"
+      ],
+      "delta": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "workflow_id": "W4",
+      "task_ids": [
+        "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+        "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2"
+      ],
+      "scores": [
+        70,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "medium"
+      ],
+      "delta": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "workflow_id": "W1",
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2"
+      ],
+      "scores": [
+        55,
+        60
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "workflow_id": "W2",
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+        "BankingFraudMonitoringSupportAgent_W2_TC2"
+      ],
+      "scores": [
+        60,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "workflow_id": "W3",
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2"
+      ],
+      "scores": [
+        65,
+        70
+      ],
+      "supplied_tags": [
+        "hard",
+        "medium"
+      ],
+      "delta": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "workflow_id": "W4",
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_W4_TC1",
+        "BankingFraudMonitoringSupportAgent_W4_TC2"
+      ],
+      "scores": [
+        65,
+        60
+      ],
+      "supplied_tags": [
+        "medium",
+        "medium"
+      ],
+      "delta": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "workflow_id": "W1",
+      "task_ids": [
+        "HealthcareOnboarding_W1_TC2",
+        "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1"
+      ],
+      "scores": [
+        60,
+        60
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "workflow_id": "W1",
+      "task_ids": [
+        "HealthcarePA_W1_TC1",
+        "HealthcarePA_W1_TC2"
+      ],
+      "scores": [
+        60,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "workflow_id": "W1",
+      "task_ids": [
+        "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+        "InsuranceClaimsIntakeAndTriageAgent_W1_TC2"
+      ],
+      "scores": [
+        65,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "medium"
+      ],
+      "delta": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "workflow_id": "W2",
+      "task_ids": [
+        "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+        "InsuranceClaimsIntakeAndTriageAgent_W2_TC2"
+      ],
+      "scores": [
+        60,
+        70
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 10
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "workflow_id": "W1",
+      "task_ids": [
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2"
+      ],
+      "scores": [
+        65,
+        65
+      ],
+      "supplied_tags": [
+        "easy",
+        "easy"
+      ],
+      "delta": 0
+    }
+  ],
+  "tasks": [
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "361b11e6b936a53224004c3c",
+      "input_sha256": "f6c0b9b405cb71cf164ef6352921be39ec7102eab096e432a0c4a6bdd108ac8b",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "3beaf8c8c9e772f6b66899fd",
+      "input_sha256": "75ada208b45cd56f3e82348f1c793c625a25f18266925cbec9fa99c328c1cb42",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "workflow_id": "W2",
+      "case_key": "b5e6c6984e19b53bd012f0fd",
+      "input_sha256": "87ab1ee286603a234834ac679a77d305217852ecb49d11df408d7c27dc598e06",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "29b417f9f9da91fea99de3c8",
+      "input_sha256": "9d2eb1710a94bef23adca20ec077cb13ea3cb2a18fbea443c1a7d7d05b3806a8",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 10,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 2
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "79c2f39378c232a77c0dc80b",
+      "input_sha256": "e800b1b0892f99d6384639eda12f72a1ca9416c4c64e70070012f2e06d6e75cb",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 10,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "c78119624d432c2f4f4937eb",
+      "input_sha256": "4fc27fcd5b87789aaf7968180ee6dc2a5379f08e8b13eafe02f8ff6180dd3a85",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "be6f326d73f4eceed3374392",
+      "input_sha256": "0b34a1e9958cf1d39bf0a4a1b22f550f245a94c612bd82fb54bda14953a5abba",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 10,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "601c9160105d3fa75b2d0622",
+      "input_sha256": "d390be50a3fe0498d508fde0edeae11f9a52f006dca953c65fb8068eec02a86e",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "bbbe7c5c1490603dab7d5982",
+      "input_sha256": "6346172e0286228ebe3a92b5f4bc504190aeb7fff4e16c933630b6f8dcecfd97",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "0c88268c1d9b33cdb300efdc",
+      "input_sha256": "5a82f67c68b59c6411397e4a08c5205494f5ddb0b31e02f21108117b97d84847",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "a9968a98bcf8a35e17f7ec59",
+      "input_sha256": "9e8d3d559224e237ce2a2f76f1d705c362650cc97bb6ce58753e1dc77d3f0362",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "workflow_id": "W4",
+      "case_key": "f5ccb41530858a04e7abbfdb",
+      "input_sha256": "48c769a6af613446f2508184bb61c6350beb39dfccd92d1b28e59d0f8a192948",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "32bcaa9518e9bf441fee4d40",
+      "input_sha256": "65e160311313d6046c6ebee65e1bac2d3d8fe619fc5cc6fda6fdb4456748fcdf",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 4,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 9,
+        "reference_tool_interactions": 9,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "d02081ec5868c95f77624903",
+      "input_sha256": "58ee8e4055ac2dc7b32e9ee8cda493c97a3f5129fde3fb155cb6bb339eaf8b3f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 9,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "2151381fb07273b9a8240041",
+      "input_sha256": "023c3e57e32b92cbbe9910a29124a4cb888f5d405bcb5fb1a69ca93343a95b0f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 55,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "42a11d016aada3934bb6b78c",
+      "input_sha256": "740507151dea933d2986aee2a88f7171b799414e3164eaf493f637bb14ff0ae4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "20be36268c046c3431a55efd",
+      "input_sha256": "10f695d4093562443ac07d34c80e15d1126aa8467c06a0c6d662b50426545862",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 6,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "8c109e7aeb788bdc0fffec82",
+      "input_sha256": "d46433a85f833e68fe5b39a8269a50bc96ebd34f82343c44c482fc2ea9736c4e",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "hard",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 5,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+      "workflow_id": "W3",
+      "case_key": "4c78b9d919a09c14a6fe033a",
+      "input_sha256": "1e47357bb266d8f3b8e8f0e86d5dfd11f78d0d2243b09f1cc3bae8ac5eaa20f6",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 5,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "workflow_id": "W2",
+      "case_key": "c0104d0c068cb704eff1b67e",
+      "input_sha256": "d45166067523eaf4b30ba92662bb01492a9e56251c2250ce647f70915b582a98",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 6,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "0ac88751d59f3539f7385aa7",
+      "input_sha256": "8f4d7c50c0760d787b464e159d68243869c017b0e6353ade08a6b1699a2b8fa5",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+      "workflow_id": "W4",
+      "case_key": "608376cdf98aa947ea6ead6f",
+      "input_sha256": "8576d67cef9a5b200efa73c6e101bbf11051af67c26ace54be818bfb8a35fe11",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "b2ea695f78d9fa64f698b6e1",
+      "input_sha256": "099f4972440b24bcc22dfb19ad781b67cad80b615a6b479d738ab496599a2034",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "hard",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 5,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "3f8c434695e8ec25c2c0cb75",
+      "input_sha256": "1ef733682992478e52adb47415dd611d1b26bc0701402b5837ccc57862f032e6",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "4add88518a146733a255e5e0",
+      "input_sha256": "6c46b45c943f25926e706590836dd8426e17f961751c439c3b9633e2024a0101",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "ff30119638e158060cfd78c6",
+      "input_sha256": "fd7251e518547c926be9a9ae265f16f66b0681469ac1d888825c34af985e81cd",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 5,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+      "workflow_id": "W9",
+      "case_key": "799afa5b8ad39e5bd9340627",
+      "input_sha256": "8b99cd2a9c523faf2221bbdc43e2da858bb1365110854e110ed439957ad54cfc",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 6,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "4267da5e057e3d1b2d9dba80",
+      "input_sha256": "d2bc3a0b1763db4bbe59c0be6df03e3a1320f3e7e8e4cdbc02b32c0472bfb2c8",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 10,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "c2126a86d6a2033ac530b53e",
+      "input_sha256": "231bb8f6e0ef555b52f5f341856ded9db750947da58702148d9e24caf640a975",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "fd62b60e36864e78dee47e99",
+      "input_sha256": "879b2c7cea0e35a86945badfa102e0764c05e0c8535be19e59a60328848137ca",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "96a3108259d52d574118371c",
+      "input_sha256": "f858ae2c165cecec5db9b767e707bf344fc952f74637331fedcdae7c39823ff4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "dd84c041e1728831e5a83007",
+      "input_sha256": "e7da34becca7219ef3e74328eccd8dd5abe618cb96c91be339e1d0ae838f2f46",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [
+        {
+          "code": "unit_uses_cross_reference",
+          "unit_id": "step_004",
+          "cited_source_ids": [
+            "milestone_004",
+            "reference_calls"
+          ],
+          "note": "No direct unit-source citation; inspect relevance of same-task evidence."
+        }
+      ],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "be77c8cc139e8d7d842b991a",
+      "input_sha256": "b682f4bd438fc99f9adee9d14c2badefcc8a80be327cccaca282e22b60732eff",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 10,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "6bf69cb1ff149e0606454c62",
+      "input_sha256": "6116293f5d4bc39d3e1e1fb78792d4e1447766b53730221e10dfbe3d19c025cb",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 9,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "4e837a3a6cf57ae94b085f3e",
+      "input_sha256": "639ad4e949d4847b9c65c42fd37d07e307448fb751ffca1487b24f2b66f17f4f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 10,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "fd1e88310078fd869836eb5c",
+      "input_sha256": "787df4e9d5da5e04667b03f56c30d2cb31600448686592a9d4050192c5aa6de4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 11,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 5,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "abf5c2cba1a7d7bef0138481",
+      "input_sha256": "19485f1ee2596ebd3673ca40f1209e2c800ca21f224900b9a2becbff656a8afd",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "0e274b9ee6d7b057705ac79a",
+      "input_sha256": "7518510bdd274c7fa219e48de441c304ce51490faa2459f9d6fd725ca674bb69",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "a8edf4678891e1d8bd8fa93e",
+      "input_sha256": "39949401875c481de52a1d2bfbc13101897f2f26b35e7e6d0f750a18d8d98aa8",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "ef21f2e431018808b0b071f3",
+      "input_sha256": "3f2ff2832beb54d5449a7dd18f2ac3ded7dc4109ad5c323c82817ecaf1633d9d",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "c0a1bf1e8253d1a4fd5b6383",
+      "input_sha256": "29a35b0eb77cd148932000aa5fabc63f7fa802841ae616947c67a7422ab3d1a1",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 55,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 6,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "1a02a71691295fbba0ad4c7d",
+      "input_sha256": "310d9898b9fd3a4b8c302c642ab91b6f12dcff23ea2061f867c26e58c1266647",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "594374cea8b696c0580153b8",
+      "input_sha256": "e72ff8aa02fa8f12e3132f5058bd8d55fc26611845f023339950c969660cc68d",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "ac3c684379c5f07b165337cc",
+      "input_sha256": "ba777600190f272de7be1cdc930bb164c112caf43ce0cebaff0d9ceeee674326",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "597efb34784a109105ff2f41",
+      "input_sha256": "0f67e55b0551209ffa571e6aaec1dde06049e4004121c4d7d939d0a6516fef9d",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 40,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 1,
+        "tool_use": 2,
+        "dependencies": 1,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [
+        {
+          "code": "unit_uses_cross_reference",
+          "unit_id": "step_001",
+          "cited_source_ids": [
+            "case_success_path_differences",
+            "tool_contracts"
+          ],
+          "note": "No direct unit-source citation; inspect relevance of same-task evidence."
+        }
+      ],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 3,
+        "reference_tool_interactions": 1,
+        "business_check_groups": 1,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "ClaimsAgent_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "45be0e269d480fa8646b63e5",
+      "input_sha256": "21563780607841122bd808b06a2e3e160ab895f6e01703992aefa28ac6a7a81f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 6,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "e50c62586ed96cecf4eb230c",
+      "input_sha256": "ef87e6935d082f03d38fe1786970fe60f23292425961a73018ff95d5b9b4ce7a",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 2
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "b2db36f78e3bef642150089d",
+      "input_sha256": "f0146e2d981700b70deda94e164207ca851c5c394d7b6736ad2c0f49a269f780",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [
+        "reference_has_nonliteral_expressions"
+      ],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 2
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "00d5bc810f61f0be3cf3dc5d",
+      "input_sha256": "8e37d954b31646d05aa11d1ecf3ad572829f42de87c5e59144a317f9149ea728",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "workflow_id": "W2",
+      "case_key": "50f2e05f611609430edefb27",
+      "input_sha256": "2f57d29b812c0568dd2ddb354f144f16d48769061c09f67af293bab500addbc9",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "3c6bd6037fd7f2b02178229a",
+      "input_sha256": "444d5aa0344b42dd070636b1987837a805cc73a0b6a49008427dc21f8873b1f5",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 4,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [
+        {
+          "code": "unit_uses_cross_reference",
+          "unit_id": "step_007",
+          "cited_source_ids": [
+            "case_success_path_differences",
+            "milestone_007"
+          ],
+          "note": "No direct unit-source citation; inspect relevance of same-task evidence."
+        }
+      ],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 23,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 2
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "78bdc86635840c1450eb6769",
+      "input_sha256": "52305da15001d0e0d6100f157b3df778d429ed94f35f913b61c0070a04f960a4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 2
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "55bb7fa612dc3ba0dedb648d",
+      "input_sha256": "ad1114436027c6522a07e519c185cdf9596b0d468868e3121123185fc460c474",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 9,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 2
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "7157a7b871e22202230dc60d",
+      "input_sha256": "9baf33ba218fc3e45fdf913fef2dc2d3f85e44f6b45fe55e77a0870340b44238",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 1,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "a2fed07b3b66388f64a03b9f",
+      "input_sha256": "53431df8757254fc3d2a46541a96889019dd6e625503f3ae25b84321e407720c",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 4,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "hard",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 3
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "81c0e2c48776458fe9942301",
+      "input_sha256": "5df645e056c80ec1b70daac43c3b20a711c1ae40d110461640503ee96f7fec4c",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 9,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "a385ba8898b0130a4cc3bf0e",
+      "input_sha256": "2673d3c8c0d4e11a1820435f42f0d15554d236ea217c2a66071bae11dcfd004a",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 9,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "b84a1ebfc178797e69d3b835",
+      "input_sha256": "aa64aea1392c1851ed845c3d62a154bfbb292e38533acd0aa8c3890a0ea4db78",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 5,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "8d831891ce42cebabb865a4a",
+      "input_sha256": "18397f7a72f3982cda79754c983224689d4096394467605195632d5b9709487e",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 55,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 3,
+        "reference_tool_interactions": 3,
+        "business_check_groups": 1,
+        "distinct_coordination_events": 1
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "fd655e1771a9e35090280720",
+      "input_sha256": "93f2f88edbd55a4da5a6273b4a10734f29b6cacd1ea5971abb88a88f74126cd4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "medium",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 6,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 1,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "7a1025ec30383759918db5c3",
+      "input_sha256": "eede1e0dad0b0ad41ff6afa6f0bf85e82c3f5fd809fb4dba0445ccc4b91e8421",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 50,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 3,
+        "reference_tool_interactions": 2,
+        "business_check_groups": 1,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "302f23213b33e299edd15b3a",
+      "input_sha256": "0794984bb8c29de42d8aaee3f97964c5548b97c0783d4c23ce250262abf44a22",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 50,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 4,
+        "reference_tool_interactions": 3,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "c0d0f2acdd96a52f80c3efdd",
+      "input_sha256": "faec6dcd87c404a72b05d99a188e6795fc4d8f8a8ec834aaaa4427627a88275f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 0
+      }
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "1f5807f876b0ac66b5c17e82",
+      "input_sha256": "2f410450eaeadb199613921581b849f253daad4df6fb0ea8bb11e02299b3e9f0",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [],
+      "supplied_tag_comparison_only": "easy",
+      "declared_tag_conflict": false,
+      "features": {
+        "proposed_operation_unit_count": 9,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3,
+        "distinct_coordination_events": 1
+      }
+    }
+  ],
+  "limitations": [
+    "Tags are supplied annotations, not verified gold difficulty.",
+    "Shared sources and overlapping dimensions limit independence of structural comparisons.",
+    "Pooled-domain effects, small samples and ties require caution; associations are descriptive.",
+    "No thresholds or weights were tuned to force a dataset ordering."
+  ]
+}

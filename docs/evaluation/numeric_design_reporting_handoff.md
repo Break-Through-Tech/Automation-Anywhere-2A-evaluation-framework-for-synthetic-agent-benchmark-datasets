@@ -1,3 +1,20 @@
+# Current synthetic result: 64.30 / 100
+
+The final computed synthetic result now covers **64/64 tasks**, with no exclusions.
+Use [the final report](../../results/difficulty/synthetic_final_v15/README.md),
+[the readable task CSV](../../results/difficulty/synthetic_final_v15/task_scores_readable.csv)
+and [the chart](../../results/difficulty/synthetic_final_v15/score_overview.png).
+All scores use one evidence-reference format; older-format scores are not pooled.
+The result is provisional in validity, based on one judgment per task. Native tau2
+whole-dataset scoring and Coverage/overall-quality outputs remain separate.
+
+The API blocker is resolved: IDs replace natural-language schema enum values, and exact
+source excerpts are resolved deterministically without changing scores. 153 offline
+tests passed and the real framework reproduced the final report exactly. Earlier stop
+gates/plans below describe historical stages; the final report supersedes their status.
+
+---
+
 # Reporting handoff: source-only numeric designed difficulty
 
 Start with `results/difficulty/numeric_design_calibration_v13/README.md` and its complete

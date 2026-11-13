@@ -9,6 +9,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 from .inputs import ADAPTER_VERSION, file_hash, unique, validate_case, verify_sources
+from .evidence_choices import request_payload, resolve_evidence
 from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, SCHEMA_VERSION, ROOT, STEP_DIMENSIONS,
                      SOURCE_BOUND_PROMPT_VERSION, SOURCE_BOUND_SCHEMA_VERSION,
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
@@ -54,7 +55,7 @@ def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoni
     for row in rows:
         for repeat in range(repeats):
             api = {**config, "input": [{"role": "system", "content": prompt},
-                                       {"role": "user", "content": json.dumps(row["payload"], ensure_ascii=False)}],
+                                       {"role": "user", "content": json.dumps(request_payload(row, source_bound_evidence), ensure_ascii=False)}],
                    "text": {"format": {"type": "json_schema", "name": "design_judgment", "strict": True,
                                        "schema": response_schema([u["unit_id"] for u in row["payload"]["units"]], row["payload"]["source_catalog"] if source_bound_evidence else None)}}}
             requests.append({"request_id": row["payload"]["case_key"] + f"_r{repeat:02}",
@@ -113,7 +114,7 @@ def load_packet(packet, check_sources=True):
         row = by_key.get(request["case_key"])
         if not row or request["input_sha256"] != row["input_sha256"] or digest(request["api_request"]) != request["request_sha256"]:
             raise ValueError("Request identity/fingerprint mismatch")
-        if json.loads(request["api_request"]["input"][1]["content"]) != row["payload"]:
+        if json.loads(request["api_request"]["input"][1]["content"]) != request_payload(row, source_bound):
             raise ValueError("Judge payload differs from canonical contract")
         if request["api_request"]["text"]["format"]["schema"] != response_schema([u["unit_id"] for u in row["payload"]["units"]], row["payload"]["source_catalog"] if source_bound else None):
             raise ValueError("Response schema differs from task-bound unit contract")
@@ -272,7 +273,10 @@ def read_result(packet, request, row):
     if not raw.exists() or file_hash(raw) != result.get("raw_sha256"):
         raise ValueError("Saved raw response changed or missing")
     if result["status"] == "validated":
-        Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(result["judgment"])
+        wire = result.get("model_judgment", result["judgment"])
+        Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(wire)
+        if result.get("model_judgment") is not None and resolve_evidence(wire, row) != result["judgment"]:
+            raise ValueError("Resolved evidence differs from saved model references")
         validate_judgment(result["judgment"], row)
         if (result.get("validator_version") != VALIDATOR_VERSION or
             result.get("evidence_diagnostics") != evidence_diagnostics(result["judgment"], row)):
@@ -280,7 +284,7 @@ def read_result(packet, request, row):
         raw_value = json.loads(raw.read_text())
         text = "".join(part["text"] for message in raw_value.get("output", [])
                        for part in message.get("content", []) if part.get("type") == "output_text")
-        if raw_value.get("status") != "completed" or json.loads(text) != result["judgment"]:
+        if raw_value.get("status") != "completed" or json.loads(text) != wire:
             raise ValueError("Saved judgment differs from raw response")
         if result.get("returned_model") != raw_value.get("model") or not result.get("returned_model"):
             raise ValueError("Missing or inconsistent returned model identity")
@@ -344,8 +348,13 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
                 try:
                     if raw.get("status") != "completed":
                         raise ValueError("Response was not completed (refusal/truncation must be inspected)")
-                    judgment = json.loads(response.output_text)
-                    Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(judgment)
+                    wire = json.loads(response.output_text)
+                    Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(wire)
+                    if manifest.get("source_bound_evidence_experimental"):
+                        result["model_judgment"] = wire
+                        judgment = resolve_evidence(wire, row)
+                    else:
+                        judgment = wire
                     validate_judgment(judgment, row)
                     result.update(status="validated", judgment=judgment,
                                   evidence_diagnostics=evidence_diagnostics(judgment, row))

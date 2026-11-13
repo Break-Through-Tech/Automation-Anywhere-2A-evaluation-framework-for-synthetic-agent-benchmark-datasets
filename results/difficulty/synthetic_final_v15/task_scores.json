@@ -1,0 +1,3018 @@
+{
+  "metric": "llm_source_only_designed_difficulty",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "scale": [
+    0,
+    100
+  ],
+  "task_weighting": "equal_weight_after_mean_of_all_planned_usable_repeats",
+  "inventory_sha256": "da709c08f35077c7c9d67f4684dbacfdf6fdd0567bf443db6b43606cca54fe03",
+  "packet_manifest_hashes": {
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_01": "6b800d02c18408f3c0b2c27f2b0132ed29d9db615ba340b3aadde8377fbe2a89",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_02": "4a09721c4c275bf67cf2511cc09dcad98d8de86e9a59c181b185f1689afcf95b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_03": "652b7eadc39e8651a3adc51c71bf68408e88c0703d7625e267fb92e63d0cea48",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_04": "c10f197cfcfb3ac2122c5a734c5a741fe16fe3a1ec84af47c04404965607c104",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_05": "955bcabf9fc78a944878f4cb368b4b70649d1d7e1a81f058cfeefa50ebee098b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_06": "b2a70a18437817cabbd85ed20502f1b6157ad1de9913fb407df74934ff5f9aad",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_07": "94f28b6b125e284652eb2b5fe54f36c678d4f6ddbb3301f67b11ee7167cba1c2",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_08": "0ca72273b9adb8560e44844c140b846c26864e299a92064d290d9cdea7d4d955",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_09": "566839ac9c3912540b2c67662d81e027671938dacf285ff7ad8ab67818d182be",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_10": "3fc36466e389318197b3d1593ca0a2802672d49ea54c8beee59e8e5fdc2d6c94",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_11": "75fd360d5f629fd474439a0ae46230c43632c7ced0fe17674a3a9f79cd97ad54",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_12": "1dee69d1666381c7bca38e8520d9ff6d75332d84ebc207ab515a2a53b17b51a5",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_13": "92a4b54ec1ca76ef452f89fcc7f854299e2ed2e0ac86ab125e19c0fb8c4d7b19",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_14": "7db95f9a297826ace2f99ab9d431b4f67291ebc33be4e77d4370b79d1bc1a311",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_15": "d62ca3493edf54916cadb36fc3146371345840d874f22f2c2f3f46aec8d77b84",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_16": "3fe98d07360f4266f4085ffe5a1d971aefc6464cbeae0f7e495f1e507b9d5e49",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_17": "ae8074e49a8bcd4e9360f01c9d3d1716929243ad9aaa57b36ccc3b92e52a8a3a",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_18": "85f3f90a68a0c537597b8302ed9710ebe636865cc5640cb4aaef3fe28ba650ea",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_19": "49d306bbe1c577fd1404bb4901dcf31702f31d8db457d5811137bd2ed6e0e881",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_20": "571c163c46dea1590da4a28dfe86632617b78b7363e6a989a2916962b1a3e317",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_21": "73c6d1775092869c059b273043f355d8c269819dad07b3cfff81adba2afdbfd9",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_22": "003f8342684b5a9d1a250c764f089345f7360ab830cf8a4af8f398cf8556c65b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_23": "06cfce55483c4b08ceb0f3751aa9ca4d7a840103be434a83a7013d72f29196d0",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_24": "58f2df748c1c2a31fb567f00a9e56b5facda0b39136a07cb4c671c332910a5b0",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_25": "d335edb28c583156754cedf014b8f96b4ab017a446e87290906c7b7d926446da",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_26": "8f629d106019986f77bd83a9db2be79e5d9eadfdd7fb61e2bbe0e2ddac1b370b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_27": "9b6ea934151e90942cb382486575f9af63ed6fd4558ce548603a687c7e9e84fe",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_28": "f1d4854ddd85e0c363b8bf66e5361d0f24c307f265ab637d8eb55720c613e0bd",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_29": "1501b9a9a6061dc7dba554fc87efcead72fad287a1280fc4c57c6a5e8aada598",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_30": "ce2f5f807f636f33da239b3ec2916de26443ab237d9f46077955550f7cc0bb93",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_31": "b79ac98b4860612915033a6bc61a767f5521a3bb84b0ab0e6317a4e4a907f735",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_32": "621d8d2bcadc53dce0d85b40c59825c7fd50c46048cd9077f937abacef818658",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_33": "de27dfd677e1cce4f65ed438bc2759ea8b68954af83a695e4f7ac01e4948243f",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_34": "a7c4d65721bcd9d571f975cb95bebccbea3b0d487d81b59f64ea743ba53318c9",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_35": "6d1c00fd64f6a5e0ca9eca08296f9e5d32962bee60673cc97e65bb1718f91724",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_36": "a9da652b2d7f23cd155b9ebac90902171095b316ce7b4d9460528f7c4cf2da61",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_37": "ad5b6911e18ca6695f658f252d2f0d277cb35248cc65a3fe1895bc16e5284c90",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_38": "60b0625d58b410d2355aec70a44650081d5286be1c03b0d0bfcb53fb1171d271",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_39": "5bcbe399d71ae669fc7603ca0615214054026988d4a63338a82a31554699c80c",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_40": "e16f8bd169a58a2bc5ea7629a20630314ea1ccf7a7d5633aa21f2fc127f9d303",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_41": "d68e89e35e8fa44b8f971e848409f34a9c7688ff920b4860c4e8d4e1956d7fec",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_42": "5e0ad5a71cbc20a9a2beff8cab34e4679a6565c7baeff25b437bd52c857d83fa",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_43": "1c62788dbad8f32fcf4b94fd0cd456f0929e36ff3eb6b2b9ef521f37ef200965",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_44": "240a2ddb8ba4ff2690530830c0eb2a7ddeb6f89c4b5be5e2bc249e4d340808fa",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_45": "a6f5dc88fc3a9f0d1809caa03473e56ee384d4f90e5432e9231a4e31fa751b29",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_46": "387ae9f2430ff0ca622804c91caf437bfbb0d49a24a15010a8a3cd819073ec02",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_47": "4aa240eb2b0f96a2475d8ef38ca8a4688fa8e3833b15b433736f481465376f90",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_48": "920e1d70166213aa263af1047f25a2fc92cc79addba1005a1df0ad79f8b39744",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_49": "cc61721a61c5762b8746c27fa104a5fe313a069a2e76ffc8eff9c6a1db85f1ba",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_50": "6843d54697ebabe50debc32e2d010a82159b0464eae177afb7bf364d2545bf40",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_51": "00a80861fbff9cad4effdc8f8ad82be6bbf69fef54c3eadf6960a2b079c80fa8",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_52": "c735f85a81ea6ff196717e758f450358671904d3989bb15792f503393687a7c7",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_53": "3ac134e3c09e71a5c0a101e30ac9db73b0647a8c7f5d3663c94f458e12cdd20f",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_54": "f8d075b9d4fe3da15929ee6a9270688ea974459591b8fe02aa445fc3114e1ebc",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_55": "0c5087b03ea2e8c12dce5e18a5cca7edc6b73ba7a62e5a055000fa203dc87c6b",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_56": "70447befa77e539e0846ffd4b5f9fc82dc997c4ff76b7926124c383ee7a6cd21",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_57": "bdb1921e559f2d84fdfcf6b00bfce53a59fc92e30becd4a1073da8350662b9f1",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_58": "c8a6914fcf49d500b603d99e0a380c3a104a1f875aec86287adb47cd148f9c4a",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_59": "0c3be6a476b586d2ae8667a2eb83ab05a0b78d8b774b187a9bf639c7a4be76ec",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_60": "4f3a585e944a47cf80f0b90f1667848d34c2ffad122cad6429eb199d3aac094d",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_61": "24ce9c3d1a0ea15c593061c2c7a0ec449be47dcbe5fe44c805f77b8c6acb45bf",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_62": "eb3f0021cec8d18f6da5953c38ce6a7fa3077918c1bdb37c34790e525a5d23a1",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_63": "8166b0ffebfae841715ce8b45c2d8cc2d86498a9f7eec27444573b60cd7a13e2",
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/synthetic_final_refs_v15/case_64": "41100f39e7ac26c7d66795199404f6cdcb53e0f34e4fba34f2b050fb2a9447fd"
+  },
+  "protocol_fingerprints": [
+    "802f8b7dc316d6c8904a7a66be3541b7164f2b040f7caaf3b8cef7bffa5b54e8"
+  ],
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "calibration_status": "not_established_by_aggregation",
+  "independent_validation": false,
+  "datasets": {
+    "synthetic": {
+      "n_total": 64,
+      "n_scored": 64,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 64
+      },
+      "mean": 64.296875,
+      "median": 65.0,
+      "min": 40,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 6.426701349399628,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 6,
+        "60-79": 58,
+        "80-100": 0
+      }
+    }
+  },
+  "domains": {
+    "synthetic/banking_accounts_deposits": {
+      "n_total": 8,
+      "n_scored": 8,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 8
+      },
+      "mean": 66.25,
+      "median": 65.0,
+      "min": 60,
+      "max": 70,
+      "q1": 65.0,
+      "q3": 70.0,
+      "iqr": 5.0,
+      "population_stddev": 3.307189138830738,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 8,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding": {
+      "n_total": 6,
+      "n_scored": 6,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 6
+      },
+      "mean": 69.16666666666667,
+      "median": 67.5,
+      "min": 65,
+      "max": 75,
+      "q1": 65.0,
+      "q3": 73.75,
+      "iqr": 8.75,
+      "population_stddev": 4.487637339278753,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 6,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring": {
+      "n_total": 13,
+      "n_scored": 13,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 13
+      },
+      "mean": 64.23076923076923,
+      "median": 65,
+      "min": 55,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 65.0,
+      "iqr": 5.0,
+      "population_stddev": 5.131409255433205,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 12,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 64.44444444444444,
+      "median": 65,
+      "min": 60,
+      "max": 70,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 4.37444881889545,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 9,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 40,
+      "max": 70,
+      "q1": 60.0,
+      "q3": 65.0,
+      "iqr": 5.0,
+      "population_stddev": 8.16496580927726,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 2,
+        "60-79": 7,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake": {
+      "n_total": 10,
+      "n_scored": 10,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 10
+      },
+      "mean": 67,
+      "median": 65.0,
+      "min": 60,
+      "max": 75,
+      "q1": 61.25,
+      "q3": 73.75,
+      "iqr": 12.5,
+      "population_stddev": 6.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 10,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 60.55555555555556,
+      "median": 65,
+      "min": 50,
+      "max": 70,
+      "q1": 55.0,
+      "q3": 65.0,
+      "iqr": 10.0,
+      "population_stddev": 6.849348892187751,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 3,
+        "60-79": 6,
+        "80-100": 0
+      }
+    }
+  },
+  "workflows": {
+    "synthetic/banking_accounts_deposits/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W4": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 57.5,
+      "median": 57.5,
+      "min": 55,
+      "max": 60,
+      "q1": 56.25,
+      "q3": 58.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W3": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W4": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W9": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 60,
+      "median": 60.0,
+      "min": 60,
+      "max": 60,
+      "q1": 60.0,
+      "q3": 60.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 40,
+      "median": 40,
+      "min": 40,
+      "max": 40,
+      "q1": 40,
+      "q3": 40,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 60,
+      "max": 70,
+      "q1": 62.5,
+      "q3": 67.5,
+      "iqr": 5.0,
+      "population_stddev": 5.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    }
+  },
+  "tasks": [
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "361b11e6b936a53224004c3c",
+      "input_sha256": "f6c0b9b405cb71cf164ef6352921be39ec7102eab096e432a0c4a6bdd108ac8b",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "3beaf8c8c9e772f6b66899fd",
+      "input_sha256": "75ada208b45cd56f3e82348f1c793c625a25f18266925cbec9fa99c328c1cb42",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "workflow_id": "W2",
+      "case_key": "b5e6c6984e19b53bd012f0fd",
+      "input_sha256": "87ab1ee286603a234834ac679a77d305217852ecb49d11df408d7c27dc598e06",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "29b417f9f9da91fea99de3c8",
+      "input_sha256": "9d2eb1710a94bef23adca20ec077cb13ea3cb2a18fbea443c1a7d7d05b3806a8",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "79c2f39378c232a77c0dc80b",
+      "input_sha256": "e800b1b0892f99d6384639eda12f72a1ca9416c4c64e70070012f2e06d6e75cb",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "c78119624d432c2f4f4937eb",
+      "input_sha256": "4fc27fcd5b87789aaf7968180ee6dc2a5379f08e8b13eafe02f8ff6180dd3a85",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "be6f326d73f4eceed3374392",
+      "input_sha256": "0b34a1e9958cf1d39bf0a4a1b22f550f245a94c612bd82fb54bda14953a5abba",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "601c9160105d3fa75b2d0622",
+      "input_sha256": "d390be50a3fe0498d508fde0edeae11f9a52f006dca953c65fb8068eec02a86e",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "bbbe7c5c1490603dab7d5982",
+      "input_sha256": "6346172e0286228ebe3a92b5f4bc504190aeb7fff4e16c933630b6f8dcecfd97",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "0c88268c1d9b33cdb300efdc",
+      "input_sha256": "5a82f67c68b59c6411397e4a08c5205494f5ddb0b31e02f21108117b97d84847",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "a9968a98bcf8a35e17f7ec59",
+      "input_sha256": "9e8d3d559224e237ce2a2f76f1d705c362650cc97bb6ce58753e1dc77d3f0362",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "workflow_id": "W4",
+      "case_key": "f5ccb41530858a04e7abbfdb",
+      "input_sha256": "48c769a6af613446f2508184bb61c6350beb39dfccd92d1b28e59d0f8a192948",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "32bcaa9518e9bf441fee4d40",
+      "input_sha256": "65e160311313d6046c6ebee65e1bac2d3d8fe619fc5cc6fda6fdb4456748fcdf",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 4,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "d02081ec5868c95f77624903",
+      "input_sha256": "58ee8e4055ac2dc7b32e9ee8cda493c97a3f5129fde3fb155cb6bb339eaf8b3f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "2151381fb07273b9a8240041",
+      "input_sha256": "023c3e57e32b92cbbe9910a29124a4cb888f5d405bcb5fb1a69ca93343a95b0f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 55,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "42a11d016aada3934bb6b78c",
+      "input_sha256": "740507151dea933d2986aee2a88f7171b799414e3164eaf493f637bb14ff0ae4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "20be36268c046c3431a55efd",
+      "input_sha256": "10f695d4093562443ac07d34c80e15d1126aa8467c06a0c6d662b50426545862",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "8c109e7aeb788bdc0fffec82",
+      "input_sha256": "d46433a85f833e68fe5b39a8269a50bc96ebd34f82343c44c482fc2ea9736c4e",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+      "workflow_id": "W3",
+      "case_key": "4c78b9d919a09c14a6fe033a",
+      "input_sha256": "1e47357bb266d8f3b8e8f0e86d5dfd11f78d0d2243b09f1cc3bae8ac5eaa20f6",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "workflow_id": "W2",
+      "case_key": "c0104d0c068cb704eff1b67e",
+      "input_sha256": "d45166067523eaf4b30ba92662bb01492a9e56251c2250ce647f70915b582a98",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "0ac88751d59f3539f7385aa7",
+      "input_sha256": "8f4d7c50c0760d787b464e159d68243869c017b0e6353ade08a6b1699a2b8fa5",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+      "workflow_id": "W4",
+      "case_key": "608376cdf98aa947ea6ead6f",
+      "input_sha256": "8576d67cef9a5b200efa73c6e101bbf11051af67c26ace54be818bfb8a35fe11",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "b2ea695f78d9fa64f698b6e1",
+      "input_sha256": "099f4972440b24bcc22dfb19ad781b67cad80b615a6b479d738ab496599a2034",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "3f8c434695e8ec25c2c0cb75",
+      "input_sha256": "1ef733682992478e52adb47415dd611d1b26bc0701402b5837ccc57862f032e6",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "4add88518a146733a255e5e0",
+      "input_sha256": "6c46b45c943f25926e706590836dd8426e17f961751c439c3b9633e2024a0101",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "ff30119638e158060cfd78c6",
+      "input_sha256": "fd7251e518547c926be9a9ae265f16f66b0681469ac1d888825c34af985e81cd",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+      "workflow_id": "W9",
+      "case_key": "799afa5b8ad39e5bd9340627",
+      "input_sha256": "8b99cd2a9c523faf2221bbdc43e2da858bb1365110854e110ed439957ad54cfc",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "4267da5e057e3d1b2d9dba80",
+      "input_sha256": "d2bc3a0b1763db4bbe59c0be6df03e3a1320f3e7e8e4cdbc02b32c0472bfb2c8",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "c2126a86d6a2033ac530b53e",
+      "input_sha256": "231bb8f6e0ef555b52f5f341856ded9db750947da58702148d9e24caf640a975",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "fd62b60e36864e78dee47e99",
+      "input_sha256": "879b2c7cea0e35a86945badfa102e0764c05e0c8535be19e59a60328848137ca",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "96a3108259d52d574118371c",
+      "input_sha256": "f858ae2c165cecec5db9b767e707bf344fc952f74637331fedcdae7c39823ff4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "dd84c041e1728831e5a83007",
+      "input_sha256": "e7da34becca7219ef3e74328eccd8dd5abe618cb96c91be339e1d0ae838f2f46",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [
+        {
+          "code": "unit_uses_cross_reference",
+          "unit_id": "step_004",
+          "cited_source_ids": [
+            "milestone_004",
+            "reference_calls"
+          ],
+          "note": "No direct unit-source citation; inspect relevance of same-task evidence."
+        }
+      ],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "be77c8cc139e8d7d842b991a",
+      "input_sha256": "b682f4bd438fc99f9adee9d14c2badefcc8a80be327cccaca282e22b60732eff",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "6bf69cb1ff149e0606454c62",
+      "input_sha256": "6116293f5d4bc39d3e1e1fb78792d4e1447766b53730221e10dfbe3d19c025cb",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "4e837a3a6cf57ae94b085f3e",
+      "input_sha256": "639ad4e949d4847b9c65c42fd37d07e307448fb751ffca1487b24f2b66f17f4f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "fd1e88310078fd869836eb5c",
+      "input_sha256": "787df4e9d5da5e04667b03f56c30d2cb31600448686592a9d4050192c5aa6de4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "abf5c2cba1a7d7bef0138481",
+      "input_sha256": "19485f1ee2596ebd3673ca40f1209e2c800ca21f224900b9a2becbff656a8afd",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "0e274b9ee6d7b057705ac79a",
+      "input_sha256": "7518510bdd274c7fa219e48de441c304ce51490faa2459f9d6fd725ca674bb69",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "a8edf4678891e1d8bd8fa93e",
+      "input_sha256": "39949401875c481de52a1d2bfbc13101897f2f26b35e7e6d0f750a18d8d98aa8",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "ef21f2e431018808b0b071f3",
+      "input_sha256": "3f2ff2832beb54d5449a7dd18f2ac3ded7dc4109ad5c323c82817ecaf1633d9d",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "c0a1bf1e8253d1a4fd5b6383",
+      "input_sha256": "29a35b0eb77cd148932000aa5fabc63f7fa802841ae616947c67a7422ab3d1a1",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 55,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "1a02a71691295fbba0ad4c7d",
+      "input_sha256": "310d9898b9fd3a4b8c302c642ab91b6f12dcff23ea2061f867c26e58c1266647",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "594374cea8b696c0580153b8",
+      "input_sha256": "e72ff8aa02fa8f12e3132f5058bd8d55fc26611845f023339950c969660cc68d",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "ac3c684379c5f07b165337cc",
+      "input_sha256": "ba777600190f272de7be1cdc930bb164c112caf43ce0cebaff0d9ceeee674326",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "597efb34784a109105ff2f41",
+      "input_sha256": "0f67e55b0551209ffa571e6aaec1dde06049e4004121c4d7d939d0a6516fef9d",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 40,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 1,
+        "tool_use": 2,
+        "dependencies": 1,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [
+        {
+          "code": "unit_uses_cross_reference",
+          "unit_id": "step_001",
+          "cited_source_ids": [
+            "case_success_path_differences",
+            "tool_contracts"
+          ],
+          "note": "No direct unit-source citation; inspect relevance of same-task evidence."
+        }
+      ],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "ClaimsAgent_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "45be0e269d480fa8646b63e5",
+      "input_sha256": "21563780607841122bd808b06a2e3e160ab895f6e01703992aefa28ac6a7a81f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "e50c62586ed96cecf4eb230c",
+      "input_sha256": "ef87e6935d082f03d38fe1786970fe60f23292425961a73018ff95d5b9b4ce7a",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "b2db36f78e3bef642150089d",
+      "input_sha256": "f0146e2d981700b70deda94e164207ca851c5c394d7b6736ad2c0f49a269f780",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": [
+        "reference_has_nonliteral_expressions"
+      ]
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "00d5bc810f61f0be3cf3dc5d",
+      "input_sha256": "8e37d954b31646d05aa11d1ecf3ad572829f42de87c5e59144a317f9149ea728",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "workflow_id": "W2",
+      "case_key": "50f2e05f611609430edefb27",
+      "input_sha256": "2f57d29b812c0568dd2ddb354f144f16d48769061c09f67af293bab500addbc9",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "3c6bd6037fd7f2b02178229a",
+      "input_sha256": "444d5aa0344b42dd070636b1987837a805cc73a0b6a49008427dc21f8873b1f5",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 4,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [
+        {
+          "code": "unit_uses_cross_reference",
+          "unit_id": "step_007",
+          "cited_source_ids": [
+            "case_success_path_differences",
+            "milestone_007"
+          ],
+          "note": "No direct unit-source citation; inspect relevance of same-task evidence."
+        }
+      ],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "78bdc86635840c1450eb6769",
+      "input_sha256": "52305da15001d0e0d6100f157b3df778d429ed94f35f913b61c0070a04f960a4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "55bb7fa612dc3ba0dedb648d",
+      "input_sha256": "ad1114436027c6522a07e519c185cdf9596b0d468868e3121123185fc460c474",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "7157a7b871e22202230dc60d",
+      "input_sha256": "9baf33ba218fc3e45fdf913fef2dc2d3f85e44f6b45fe55e77a0870340b44238",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 3
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "a2fed07b3b66388f64a03b9f",
+      "input_sha256": "53431df8757254fc3d2a46541a96889019dd6e625503f3ae25b84321e407720c",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 75,
+      "dimensions": {
+        "workload": 4,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+      "workflow_id": "W1",
+      "case_key": "81c0e2c48776458fe9942301",
+      "input_sha256": "5df645e056c80ec1b70daac43c3b20a711c1ae40d110461640503ee96f7fec4c",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+      "workflow_id": "W1",
+      "case_key": "a385ba8898b0130a4cc3bf0e",
+      "input_sha256": "2673d3c8c0d4e11a1820435f42f0d15554d236ea217c2a66071bae11dcfd004a",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "workflow_id": "W2",
+      "case_key": "b84a1ebfc178797e69d3b835",
+      "input_sha256": "aa64aea1392c1851ed845c3d62a154bfbb292e38533acd0aa8c3890a0ea4db78",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "workflow_id": "W3",
+      "case_key": "8d831891ce42cebabb865a4a",
+      "input_sha256": "18397f7a72f3982cda79754c983224689d4096394467605195632d5b9709487e",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 55,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "workflow_id": "W4",
+      "case_key": "fd655e1771a9e35090280720",
+      "input_sha256": "93f2f88edbd55a4da5a6273b4a10734f29b6cacd1ea5971abb88a88f74126cd4",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 60,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "workflow_id": "W5",
+      "case_key": "7a1025ec30383759918db5c3",
+      "input_sha256": "eede1e0dad0b0ad41ff6afa6f0bf85e82c3f5fd809fb4dba0445ccc4b91e8421",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 50,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "workflow_id": "W6",
+      "case_key": "302f23213b33e299edd15b3a",
+      "input_sha256": "0794984bb8c29de42d8aaee3f97964c5548b97c0783d4c23ce250262abf44a22",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 50,
+      "dimensions": {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+      "workflow_id": "W7",
+      "case_key": "c0d0f2acdd96a52f80c3efdd",
+      "input_sha256": "faec6dcd87c404a72b05d99a188e6795fc4d8f8a8ec834aaaa4427627a88275f",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 65,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+      "workflow_id": "W8",
+      "case_key": "1f5807f876b0ac66b5c17e82",
+      "input_sha256": "2f410450eaeadb199613921581b849f253daad4df6fb0ea8bb11e02299b3e9f0",
+      "status": "scored",
+      "reason": "All planned repeat judgments usable",
+      "score": 70,
+      "dimensions": {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "n_planned_judgments": 1,
+      "n_saved_judgments": 1,
+      "evidence_diagnostics": [],
+      "repeat_score_range": 0,
+      "source_quality_flags": []
+    }
+  ],
+  "limitations": [
+    "Provisional anchored index; numerical distances are not independently validated.",
+    "Incomplete means describe scored subsets, not omitted tasks.",
+    "Domain composition and available source information affect comparisons.",
+    "Higher difficulty alone is not higher dataset quality."
+  ]
+}

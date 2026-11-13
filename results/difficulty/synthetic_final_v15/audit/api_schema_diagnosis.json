@@ -1,0 +1,13 @@
+{
+  "diagnostic_error": {
+    "error_type": "BadRequestError",
+    "status_code": 400,
+    "code": "invalid_json_schema",
+    "param": "text.format.schema",
+    "message": "Invalid schema for response_format 'design_judgment': In context=('anyOf', '0', 'properties', 'excerpt'), \" is not allowed in string literals for structured outputs (strict=true)."
+  },
+  "resolution": "Short citation IDs in schema enums; exact source excerpts supplied in model input and resolved after response.",
+  "final_api_validation": "64/64 original synthetic tasks passed in one reference-ID protocol.",
+  "diagnostic_judgment_returned": false,
+  "no_diagnostic_score_in_dataset_mean": true
+}

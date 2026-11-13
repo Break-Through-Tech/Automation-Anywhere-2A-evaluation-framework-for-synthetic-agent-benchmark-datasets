@@ -163,12 +163,14 @@ class NumericValidationTests(unittest.TestCase):
                    {"source_id": "Q", "text": "Another independent policy statement.", "kind": "policy"}]
         schema = rubric.response_schema(["U1"], catalog)
         value = copy.deepcopy(self.good)
-        value["units"][0]["evidence"][0].update(source_id="P", excerpt=original)
+        value["units"][0]["evidence"][0].clear()
+        value["units"][0]["evidence"][0].update(citation_id="E0000")
         judge.Draft202012Validator(schema).validate(value)
         value["units"][0]["evidence"][0]["excerpt"] = original.replace("a user", "the user")
         with self.assertRaises(Exception):
             judge.Draft202012Validator(schema).validate(value)
-        value["units"][0]["evidence"][0].update(source_id="Q", excerpt=original)
+        value["units"][0]["evidence"][0].clear()
+        value["units"][0]["evidence"][0].update(citation_id="invented")
         with self.assertRaises(Exception):
             judge.Draft202012Validator(schema).validate(value)
 
@@ -287,6 +289,21 @@ class NumericRunnerTests(unittest.TestCase):
         self.assertTrue(manifest["source_bound_evidence_experimental"])
         self.assertEqual(manifest["schema_version"], rubric.SOURCE_BOUND_SCHEMA_VERSION)
         self.assertIn("$defs", requests[0]["api_request"]["text"]["format"]["schema"])
+
+    def test_reference_response_preserves_raw_output_and_resolves_only_evidence(self):
+        packet = self.root / "references"
+        judge.prepare_packet([self.row], packet, "offline-model", source_bound_evidence=True)
+        wire = stub_judgment(self.row)
+        for assessment in [*wire["dimensions"].values(), wire["intended_endpoint"], *wire["units"]]:
+            assessment["evidence"] = [{"citation_id": "E0000"}]
+        original = copy.deepcopy(wire)
+        judge.run_packet(packet, authorize_paid=True, client=fake_client([wire]))
+        _, rows, requests = judge.load_packet(packet)
+        result = judge.read_result(packet, requests[0], rows[0])
+        self.assertEqual(result["model_judgment"], original)
+        self.assertEqual(result["judgment"]["overall_score"], wire["overall_score"])
+        self.assertEqual(result["judgment"]["units"][0]["evidence"][0]["source_id"], "S")
+        self.assertEqual(result["judgment"]["units"][0]["evidence"][0]["excerpt"], self.row["payload"]["source_catalog"][0]["text"])
 
     def test_no_client_construction_or_api_without_explicit_authorization(self):
         packet = self.packet()

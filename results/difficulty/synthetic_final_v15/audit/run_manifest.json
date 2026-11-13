@@ -1,0 +1,68 @@
+{
+  "status": "complete_source_only_evaluation",
+  "n_original_tasks": 64,
+  "n_scored": 64,
+  "status_counts": {
+    "scored": 64
+  },
+  "dataset_score": 64.296875,
+  "score_label": "complete_inventory_mean",
+  "mean_dimension_levels": {
+    "workload": 2.921875,
+    "reasoning": 2.296875,
+    "tool_use": 2.9375,
+    "dependencies": 2.59375,
+    "information": 2.109375
+  },
+  "mean_dimension_contributions_points": {
+    "workload": 14.609375,
+    "reasoning": 11.484375,
+    "tool_use": 14.6875,
+    "dependencies": 12.96875,
+    "information": 10.546875
+  },
+  "final_run_api_requests": 64,
+  "pilot_calls_included_not_extra": 3,
+  "older_protocol_scores_used": 0,
+  "model": "gpt-6-sol",
+  "schema_version": "design_schema_v1.4_source_evidence_refs",
+  "prompt_version": "design_prompt_v1.3",
+  "validator_version": "design_evidence_validation_v1.3",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "config": {
+    "model": "gpt-6-sol",
+    "max_output_tokens": 10000,
+    "store": false,
+    "reasoning": {
+      "effort": "low"
+    }
+  },
+  "usage": {
+    "input_tokens": 1491429,
+    "output_tokens": 128292,
+    "total_tokens": 1619721
+  },
+  "source_data_unchanged_verified": true,
+  "new_offline_tests_passed": 153,
+  "evidence_resolution": "Model citation IDs are deterministically expanded to original source excerpts; all numerical judgments are preserved unchanged. Raw model_judgment and normalized judgment retained.",
+  "independent_validation": false,
+  "limitations": [
+    "Provisional five-dimension rubric with equal 20% weights; no independent difficulty ground truth.",
+    "One model judgment per original task; no per-task repeatability estimate in this final run.",
+    "Source-quality findings are separately retained; this does not establish runtime feasibility or agent success.",
+    "No native tau2 dataset score is included in this synthetic result."
+  ],
+  "implementation_sha256": {
+    "difficulty/design/__init__.py": "60aa3851440117d13f77fc9c9558f8cdf454cc1c62aa13f86ec61680d2587520",
+    "difficulty/design/__main__.py": "4e64aa8ba0f89b4910b8c673e5df9976d32ed504c3fbc04ef16be92dd240cf0b",
+    "difficulty/design/calibration.py": "292db70153643545054f0db8ec7ff2dda96cc41368cf296a7fe1e022f7aa6bef",
+    "difficulty/design/crosscheck.py": "26236e715e149bffa99eac57726e0fa57f6066503e8ecc7c50f89f99428e6d9c",
+    "difficulty/design/evidence_choices.py": "8b5a2171f8c102e2967bca5a6a55132a4f033cd9b4623c4c6402e4937eaee926",
+    "difficulty/design/framework.py": "0d00463046b48d8a72f2ccff53837891988d8f30fd802ac3cbdd05b92b1cae8f",
+    "difficulty/design/inputs.py": "3733513afac126590026f8c6b2f296d58ae80ff5deaecbbb417790e20ba0f9b1",
+    "difficulty/design/judge.py": "1fd5b8572efb6060c0a8ae33cf3f9a7356c26264d6473008d6dc46b0ab4d01eb",
+    "difficulty/design/reporting.py": "8ef872c3b91e8a8bf824d307f674bedb4c3c93cd55709a285c462f946ceaa963",
+    "difficulty/design/rubric.py": "6accf6b14e46891d3269fdf436218a251255fab9a9d3df01fee0a815c98cafec"
+  },
+  "full_inventory_sha256": "da709c08f35077c7c9d67f4684dbacfdf6fdd0567bf443db6b43606cca54fe03"
+}

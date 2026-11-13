@@ -1,3 +1,7 @@
+> Historical stage. The API-format blocker is now resolved via evidence IDs.
+> The [final synthetic result](../synthetic_final_v15/README.md) is **64.30/100**,
+> with 64/64 tasks scored. This earlier cohort is not pooled into that result.
+
 # Source-bound evidence diagnostic: API rejected the request
 
 The final authorized diagnostic returned **HTTP 400 / BadRequestError**, before a model

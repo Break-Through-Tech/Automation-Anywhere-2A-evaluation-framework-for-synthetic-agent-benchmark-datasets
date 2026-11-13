@@ -2,15 +2,15 @@
 import hashlib
 import json
 from pathlib import Path
-from .evidence_choices import source_choices, check_schema_limits
+from .evidence_choices import source_choices, check_schema_limits, evidence_index
 
 VERSION = "design_numeric_v1.0_provisional"
 INPUT_VERSION = "design_input_v1"
 OUTPUT_VERSION = "design_judgment_v1"
 PROMPT_VERSION = "design_prompt_v1.1"
 SCHEMA_VERSION = "design_schema_v1.2_task_bound_units"
-SOURCE_BOUND_PROMPT_VERSION = "design_prompt_v1.2"
-SOURCE_BOUND_SCHEMA_VERSION = "design_schema_v1.3_source_bound_excerpts"
+SOURCE_BOUND_PROMPT_VERSION = "design_prompt_v1.3"
+SOURCE_BOUND_SCHEMA_VERSION = "design_schema_v1.4_source_evidence_refs"
 DIMENSIONS = ("workload", "reasoning", "tool_use", "dependencies", "information")
 STEP_DIMENSIONS = ("reasoning", "tool_use", "information")
 ROOT = Path(__file__).resolve().parents[2]
@@ -60,10 +60,11 @@ provisional index in increments of five. Do not average step scores, rank a coho
 estimate failure probability, or invent exact execution counts.
 \nFROZEN RUBRIC\n""" + rubric_text()
     if source_bound:
-        guidance = ("Select only source_id/excerpt combinations allowed by the schema. Do not paraphrase\n"
-                    "quotations. Select evidence that actually supports the assessment; availability alone\n"
-                    "does not establish relevance. The full source text remains available for reasoning.\n"
-                    "Prefer the shortest allowed excerpt that actually supports the claim.\n")
+        guidance = ("Evidence is supplied in evidence_index. Return citation_id references, not copied\n"
+                    "quotations or source_id/excerpt objects. The application resolves IDs to exact source\n"
+                    "excerpts without editing your scores. Select relevant evidence; availability alone\n"
+                    "does not establish support. Prefer short supporting excerpts. The full source remains\n"
+                    "available for reasoning. Never invent a citation ID.\n")
         prompt = prompt.replace("Assess every supplied unit", guidance + "Assess every supplied unit", 1)
     return prompt
 
@@ -82,12 +83,10 @@ def response_schema(unit_ids=None, source_catalog=None):
     definitions = {}
     item = _object({"source_id": string, "excerpt": string})
     if source_catalog is not None:
-        branches = [_object({"source_id": {"type": "string", "enum": [s["source_id"]]},
-                             "excerpt": {"type": "string", "enum": choices}})
-                    for s in source_catalog if (choices := source_choices(s))]
-        if not branches:
+        references = [e["citation_id"] for e in evidence_index(source_catalog)]
+        if not references:
             raise ValueError("No nonempty evidence choices")
-        definitions["source_evidence"] = {"anyOf": branches}
+        definitions["source_evidence"] = _object({"citation_id": {"type": "string", "enum": references}})
         item = {"$ref": "#/$defs/source_evidence"}
     evidence = {"type": "array", "items": item}
     level = {"type": ["integer", "null"], "minimum": 0, "maximum": 4}

@@ -1,3 +1,7 @@
+> Historical stage. The API-format blocker is now resolved via evidence IDs.
+> The [final synthetic result](../synthetic_final_v15/README.md) is **64.30/100**,
+> with 64/64 tasks scored. This earlier cohort is not pooled into that result.
+
 # Revised-format calibration: nine complete cases; quotation failure stopped the run
 
 26 of 27 newly approved calls completed: **59/60 cumulative domain calls used**, one

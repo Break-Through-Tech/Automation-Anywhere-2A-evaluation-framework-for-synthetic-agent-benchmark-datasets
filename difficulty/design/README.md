@@ -3,22 +3,22 @@
 This mode reads task designs and asks an LLM for evidence-backed difficulty ratings.
 It does not run task agents or grade saved attempts.
 
-**Latest:** nine complete triplets pass repeat tolerances, but telecom's changed-word
-quotation stopped the [revised-format calibration](../../results/difficulty/numeric_design_calibration_v13/README.md).
-The [source/excerpt-choice diagnostic](../../results/difficulty/numeric_design_source_bound_probe_v14/README.md)
-then returned HTTP 400 before a judgment. **60/60 request slots are used.** Full calibration
-is incomplete; do not expand paid scoring. **152 offline tests pass.** No source files or raw responses were altered.
+**Final synthetic result: [64.30/100](../../results/difficulty/synthetic_final_v15/README.md),
+64/64 tasks scored, no exclusions.** All task scores use one evidence-reference format,
+with the same provisional five-dimension rubric. The first three pilot calls are included
+in the 64; older-format scores are not pooled. **153 offline tests pass.**
 
-The excerpt-choice format is experimental/opt-in. The previously API-exercised task-bound
-unit schema remains the default, with strict quotation checks. Safe server-error capture
-is now implemented for the next separately authorized diagnostic. Do not silently mix
-old/new prompt or schema versions.
+The API-format problem is resolved for this run: strict schemas use short citation IDs,
+then code expands them to exact source excerpts without changing numerical judgments.
+[Chart and readable task scores](../../results/difficulty/synthetic_final_v15/README.md).
+This is a computed source-only index; independent validity and final native tau2 scoring
+remain separate. Source data and historical raw responses are preserved.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
 3. Obtain approval for API credits, run the bounded pilot, and inspect its explanations.
-4. Complete the [calibration protocol](../../docs/evaluation/numeric_design_calibration_v1.md)
-   before broader scoring. Implementation completion does not imply validation.
+4. Record calibration findings and limits using the [protocol](../../docs/evaluation/numeric_design_calibration_v1.md).
+   Successful scoring does not establish independent validity.
 5. Generate the task scores, dataset means, coverage and post-scoring diagnostics offline.
 
 The provisional formula gives five LLM-assessed dimensions equal weight (20% each):
@@ -35,7 +35,7 @@ Run from the repository root. Use a **fresh output directory** for every new pac
 ```sh
 python -m difficulty.design inventory --dataset both --out .cache/design_numeric/inventory
 python -m difficulty.design prepare --inventory .cache/design_numeric/inventory/inventory.json \
-  --selection pilot --model gpt-6-sol --reasoning-effort low --out .cache/design_numeric/pilot
+  --selection pilot --model gpt-6-sol --reasoning-effort low --source-bound-evidence --out .cache/design_numeric/pilot
 python -m difficulty.design check --packet .cache/design_numeric/pilot
 python -m difficulty.design report --inventory .cache/design_numeric/inventory/inventory.json \
   --packet .cache/design_numeric/pilot --out results/difficulty/numeric_design_pilot_report
@@ -164,16 +164,12 @@ revision to regenerate its outputs. Revalidation is not a license to accept inve
 Historical reports describe their own frozen cohorts and versions, not current full
 dataset coverage. Their numeric scales, limits and raw-response provenance remain explicit.
 
-## Experimental exact-excerpt choices
+## Verified evidence-reference format
 
-`prepare --source-bound-evidence` opts into prompt v1.2 / source-bound schema v1.3.
-It offers deterministic literal/decoded/canonical excerpts tied to their source IDs.
-The source catalog remains complete. This option passed offline size checks for all
-342 tasks but its real API probe returned HTTP 400; compatibility is NOT established.
-Do not use it for broad paid runs. Default preparation retains prompt v1.1 / task-bound
-unit schema v1.2. Any API rejection stops immediately. Server error diagnostics are
-bounded and credential-redacted; no implicit retry or fallback occurs.
-
-The 26-call calibration report is frozen to commit `fbeade4`; regenerate it using that
-implementation. Old packets deliberately fail current implementation fingerprints.
-Previous broad-run plans are stale, not authorization to run.
+Use `--source-bound-evidence` for schema v1.4 / prompt v1.3. The option now emits short
+citation IDs rather than excerpt strings in schema enums. A deterministic evidence
+index accompanies the full source catalog. Raw model-selected IDs and exact resolved
+evidence are retained separately; scores and dimension levels are never rewritten.
+This format passed all 64 final synthetic calls. The manifest's historical experimental
+flag name is retained for compatibility. The earlier v1.3 excerpt-enum prototype was
+API-rejected and remains preserved as a failed experiment, not a current result.
