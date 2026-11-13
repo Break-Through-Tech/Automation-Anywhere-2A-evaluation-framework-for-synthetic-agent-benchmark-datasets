@@ -1,5 +1,12 @@
 # Evaluation Framework for Agent Benchmark Datasets
 
+## Numeric LLM designed difficulty (current roadmap)
+
+The source-only numeric judge is implemented; paid calibration and scoring are pending.
+Start with [the short guide](difficulty/design/README.md) and [the provisional rubric](docs/evaluation/numeric_design_rubric_v1.md).
+It scores each test case from its scenario, workflow steps, milestones, tools and intended endpoint.
+Historical feature profiles and execution results below remain separate supplementary work.
+
 ## Run the evaluation framework (issue #15)
 
 ```bash

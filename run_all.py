@@ -109,6 +109,9 @@ def empirical_difficulty(path, expected):
 
 
 def evaluate(args):
+    if getattr(args, "difficulty_mode", "historical") == "source-only":
+        from difficulty.design.framework import evaluate as evaluate_design
+        return evaluate_design(args)
     tasks, labels = load_inputs(args.tasks, args.labels_dir)
     feature_path = getattr(args, 'synthetic_structural_features', None)
     feature_document, feature_rows, feature_sources = None, {}, []
@@ -267,6 +270,10 @@ def evaluate(args):
 
 def parser():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--difficulty-mode", choices=["historical", "source-only"], default="historical",
+                   help="source-only aggregates numeric LLM design scores offline without running agents or embeddings")
+    p.add_argument("--design-inventory", type=Path, help="Canonical source-only inventory.json")
+    p.add_argument("--design-packet", type=Path, action="append", help="Compatible frozen design packet; repeat for disjoint task subsets")
     p.add_argument("--tasks", type=Path, default=ROOT / "data/processed/tasks.jsonl")
     p.add_argument("--labels-dir", type=Path, default=ROOT / "coverage/labels")
     p.add_argument("--tau-tool-labels", type=Path, default=ROOT / "difficulty/tau2_tool_labels.csv")

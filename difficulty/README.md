@@ -1,5 +1,11 @@
 # LLM-judge difficulty
 
+## Current source-only numeric mode
+
+Use [`difficulty.design`](design/README.md) for the numeric designed-difficulty roadmap (#71).
+The implementation and offline checks are ready; paid calibration and actual scores are pending.
+The execution judge and historical structural index below are separate procedures.
+
 Offline source-consistency triage for all 64 original tasks is documented in
 [`results/evaluability/source_v1/`](../results/evaluability/source_v1/README.md).
 Run `python -m difficulty.audit_evaluability` into a fresh output directory to
