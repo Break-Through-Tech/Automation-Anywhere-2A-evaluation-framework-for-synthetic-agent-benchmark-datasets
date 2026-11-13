@@ -31,7 +31,7 @@ def main(argv=None):
     prepare.add_argument("--reasoning-effort", choices=["low", "medium", "high"])
     prepare.add_argument("--max-output-tokens", type=int, default=10000)
     prepare.add_argument("--source-bound-evidence", action="store_true",
-                         help="Experimental source/excerpt enum schema; API compatibility not established")
+                         help="Use source-bound citation IDs; exact excerpts are resolved without changing scores")
     prepare.add_argument("--out", type=Path, required=True)
     check = commands.add_parser("check", help="Verify a frozen packet offline")
     check.add_argument("--packet", type=Path, required=True)

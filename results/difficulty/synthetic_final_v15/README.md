@@ -98,3 +98,5 @@ preserved outside this cohort. No dollar charge or API-account ownership is infe
 resolved source excerpts. `audit/source_bindings.json` retains source pointers and frozen
 implementation fingerprints. Use the recorded implementation revision for regeneration;
 do not rewrite old manifests to bypass a fingerprint mismatch.
+
+Frozen scoring implementation: `4bcb67dd18ae7c84f787d151da19b98474a1f66a`. Later help/documentation changes do not alter these saved scores; use this revision to regenerate the frozen packets.

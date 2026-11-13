@@ -64,5 +64,6 @@
     "difficulty/design/reporting.py": "8ef872c3b91e8a8bf824d307f674bedb4c3c93cd55709a285c462f946ceaa963",
     "difficulty/design/rubric.py": "6accf6b14e46891d3269fdf436218a251255fab9a9d3df01fee0a815c98cafec"
   },
-  "full_inventory_sha256": "da709c08f35077c7c9d67f4684dbacfdf6fdd0567bf443db6b43606cca54fe03"
+  "full_inventory_sha256": "da709c08f35077c7c9d67f4684dbacfdf6fdd0567bf443db6b43606cca54fe03",
+  "frozen_scoring_implementation_commit": "4bcb67dd18ae7c84f787d151da19b98474a1f66a"
 }
