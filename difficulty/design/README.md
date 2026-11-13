@@ -110,8 +110,14 @@ Missing essential source material is explicit and never a zero difficulty score.
 
 The default τ-bench adapter targets the checked-out `tau2-bench` base split (not τ-bench
 v1), with the telecom manual policy. File hashes identify the exact sources; the local
-revision is recorded where available. Full database records are not sent: this limitation
-is explicit in the prompt, and cases requiring absent state must remain unscorable.
+revision is recorded where available. The `tau2_source_context_v1` projection supplies
+task-relevant original baseline records and linked dependencies, not the full database.
+Initial overrides and ordered fixture setup remain explicit; setup is not agent workload.
+Static setup/assertion definitions and environment completion assertions are included.
+These records are judge-only context: the task agent must still retrieve needed facts.
+Essential unavailable state remains unscorable; other source limitations stay flagged.
+A task without explicit completion references may still be assessed from its stated user
+goal and policy when defensible; no reference actions are fabricated.
 Supplied source documents themselves may still contain indirect complexity cues.
 
 Add `--features results/difficulty/designed_v3/profiles.json` to the offline `report`
@@ -173,3 +179,18 @@ evidence are retained separately; scores and dimension levels are never rewritte
 This format passed all 64 final synthetic calls. The manifest's historical experimental
 flag name is retained for compatibility. The earlier v1.3 excerpt-enum prototype was
 API-rejected and remains preserved as a failed experiment, not a current result.
+
+## Current native expansion
+
+Current-format practical repeat and source-control checks passed: ten tasks across ten
+synthetic/native domains, three judgments each, maximum range 5 and mean range 2.5.
+Four separate fixtures test added complexity and harmless changes. These are bounded
+consistency checks, not independent validity. See
+[calibration v16](../../results/difficulty/numeric_design_calibration_v16/README.md).
+The tau2 base inventory is 278 tasks (50 airline, 114 retail, 114 telecom). A frozen
+full run uses one judgment per task, except three pilot tasks with three judgments;
+pilots are averaged before equal-task aggregation. The published synthetic primary
+mean remains 64.296875 from its original 64 single judgments. Diagnostic synthetic
+repeats are not substituted into that mean. New implementation fingerprints may be
+bound to saved responses offline only when the complete original API request is
+identical; retain original output and binding provenance and record zero new calls.

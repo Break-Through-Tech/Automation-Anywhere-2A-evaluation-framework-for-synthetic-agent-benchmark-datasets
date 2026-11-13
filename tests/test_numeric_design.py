@@ -124,7 +124,26 @@ class NumericAdapterTests(unittest.TestCase):
         self.assertEqual(telecom["comparison_only"], {})
         self.assertTrue(all(u["kind"] != "milestone" for u in telecom["payload"]["units"]))
         blocked = [r for r in self.tau if r["preflight_errors"]]
-        self.assertEqual([(r["domain"], r["task_id"]) for r in blocked], [("retail", "57")])
+        self.assertEqual(blocked, [])
+        retail57 = next(r for r in self.tau if r["domain"] == "retail" and r["task_id"] == "57")
+        self.assertIn("missing_explicit_completion_reference", retail57["source_quality_flags"])
+
+    def test_native_context_binds_original_records_and_retains_success_assertions(self):
+        airline = next(r for r in self.tau if r["domain"] == "airline" and r["task_id"] == "0")
+        records = [json.loads(s["text"]) for s in airline["payload"]["source_catalog"]
+                   if s["kind"] == "judge_only_initial_design_state"]
+        reservation = next(r for r in records if r.get("reservation_id") == "EHGLP3")
+        self.assertEqual(reservation["insurance"], "no")
+        flight = next(r for r in records if r.get("flight_number") == "HAT156")
+        self.assertIn("2024-05-17", flight["dates"])
+        self.assertLess(len(records), 30)
+        telecom = next(r for r in self.tau if r["domain"] == "telecom")
+        catalog = {s["source_id"]: s for s in telecom["payload"]["source_catalog"]}
+        completion = json.loads(catalog["completion_design"]["text"])
+        self.assertTrue(completion["env_assertions"])
+        self.assertIn("initial_user_device", catalog)
+        self.assertTrue(any(k.startswith("setup_assertion_definitions_") for k in catalog))
+        self.assertTrue(any("Setup actions are NOT agent workload" in s for s in telecom["payload"]["source_notes"]))
 
     def test_source_bound_schemas_fit_all_supported_tasks_offline(self):
         for row in [*self.synthetic, *self.tau]:

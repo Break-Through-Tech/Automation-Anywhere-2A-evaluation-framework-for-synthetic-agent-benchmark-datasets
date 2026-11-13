@@ -69,25 +69,31 @@ Supplied easy/medium/hard tags are withheld during generation and compared after
 they are annotations, not independently verified gold labels. Do not change weights or
 thresholds simply to make tau2 scores higher than synthetic scores.
 
-## What remains after calibration
+## Current run and comparison scope
 
-Full synthetic scoring can reuse the seven compatible calibration task means. The
-prepared economical plan uses one judgment for each of the remaining 57 tasks, requiring
-57 separately approved calls. Report unequal repeat counts: seven tasks have three
-judgments and new tasks initially have one, with less directly measured per-task stability.
-All tasks still have equal weight in the dataset mean. The optional three-per-new-task
-plan would require 171 calls and must not be executed in addition to the economical plan.
+The final synthetic primary result is 64.296875/100 (64/64 original tasks), one
+judgment each. Use `results/difficulty/synthetic_final_v15`. The subsequent v16
+calibration repeats are diagnostics; they do not replace primary synthetic judgments.
+Current-format practical checks passed: ten cross-domain tasks repeated three times,
+maximum range 5 and mean range 2.5; four controls passed frozen tolerances. This
+supports bounded provisional scoring, not independent difficulty validity.
 
-Native whole-dataset scoring requires a separately reviewed source-context scope and
-API budget. The airline diagnostic includes selected original reservation/flight state;
-the default native adapter omits full database records. Other unavailable information
-must remain explicit, not be treated as low complexity. No whole-dataset ordering or
-independent validity follows from passing a small calibration sample.
+The native adapter now projects selected task-relevant original database records and
+linked dependencies, includes environment assertions and static setup/assertion
+semantics, and distinguishes baseline state from initialization overrides/actions.
+Setup is not charged as agent workload. Original data are unchanged. The task agent
+must still retrieve facts shown only as judge context. Missing essential state remains
+unscorable. Retail 57 lacks explicit completion references; this is flagged, with stated
+user goal/policy usable only if a defensible assessment is possible.
 
-## Current stop gate
+The frozen tau2 base run covers 278 tasks: airline 50, retail 114, telecom 114. Three
+native pilots have three planned judgments; all other tasks have one. Average each
+pilot first, then weight all tasks equally. Controls and synthetic diagnostic repeats
+never enter primary dataset means. Do not average the three domain means equally for
+the headline: the domains have different task counts.
 
-Telecom quotation failure left the calibration incomplete. The source/excerpt-choice
-experiment then received HTTP 400 before a judgment; it is opt-in and unverified.
-All 60 request slots are used. See `numeric_design_source_bound_probe_v14` for the
-next bounded diagnostic, not broad scoring. Older prepared full-run plans have stale
-implementation fingerprints and must be regenerated once the format is settled.
+Native easy/medium/hard labels and equivalent precomputed structural feature values
+are unavailable; retain missingness rather than inventing values. The same rubric and
+model do not remove differences in policy length, domain mix, source granularity, or
+reference completeness. Equal dataset scores can be legitimate; greater difficulty is
+not evidence of greater quality. Do not force a desired synthetic/native ordering.

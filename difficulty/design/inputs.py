@@ -10,6 +10,7 @@ import subprocess
 import yaml
 
 from .rubric import INPUT_VERSION, ROOT, digest
+from .native_context import load_context, select_records, selected_methods, VERSION as NATIVE_CONTEXT_VERSION
 
 ADAPTER_VERSION = "design_adapters_v1"
 HIDDEN = {"difficulty", "difficulty_label", "difficulty_reasoning", "difficulty_tag",
@@ -240,6 +241,7 @@ def tau_cases(tau_dir=ROOT / "tau2-bench", domains=("airline", "retail", "teleco
         policies = [folder / name for name in (("main_policy.md", "tech_support_manual.md")
                                                if domain == "telecom" else ("policy.md",))]
         task_list = json.loads(tp.read_text())
+        context = load_context(folder)
         byid = {t["id"]: (i, t) for i, t in enumerate(task_list)}
         if len(byid) != len(task_list):
             raise ValueError("Duplicate native task IDs")
@@ -257,7 +259,8 @@ def tau_cases(tau_dir=ROOT / "tau2-bench", domains=("airline", "retail", "teleco
             index, task = byid[tid]
             b = CaseBuilder("tau2", domain, tid, None, root)
             b.row["provenance"] = {"benchmark": "tau2-bench", "revision": revision,
-                                    "split": split, "split_sha256": file_hash(sp)}
+                                    "split": split, "split_sha256": file_hash(sp),
+                                    "native_context_version": NATIVE_CONTEXT_VERSION}
             base = f"#/{index}"
             b.add("scenario", task.get("user_scenario"), tp, base + "/user_scenario", "scenario")
             b.unit("task_requirements", "scenario", "task_requirements")
@@ -266,7 +269,7 @@ def tau_cases(tau_dir=ROOT / "tau2-bench", domains=("airline", "retail", "teleco
                 b.add("policy_" + str(pi+1), policy.read_text(), policy, "whole document", "global_requirements")
             b.add("task_design_notes", task.get("description"), tp, base + "/description")
             criteria = task.get("evaluation_criteria") or {}
-            endpoint = {k: criteria.get(k) for k in ("actions", "communicate_info", "nl_assertions")}
+            endpoint = {k: criteria.get(k) for k in ("actions", "communicate_info", "nl_assertions", "env_assertions")}
             b.add("completion_design", endpoint, tp, base + "/evaluation_criteria", "completion_requirements")
             for i, action in enumerate(criteria.get("actions") or []):
                 sid = f"reference_{i+1:03}"
@@ -277,15 +280,36 @@ def tau_cases(tau_dir=ROOT / "tau2-bench", domains=("airline", "retail", "teleco
                     b.row["preflight_errors"].append("missing_tool_definition:" + actor + ":" + action["name"])
             for path, actor in files:
                 b.add("tools_" + actor, contracts[actor], path, "@is_tool method signatures/docstrings", "tool_contracts")
+                state = task.get("initial_state") or {}
+                setups = [a for a in state.get("initialization_actions") or [] if a.get("env_type") == actor]
+                assertions = [a for a in criteria.get("env_assertions") or [] if a.get("env_type") == actor]
+                names = {a["func_name"] for a in [*setups, *assertions]}
+                definitions = selected_methods(path, names)
+                if definitions:
+                    b.add("setup_assertion_definitions_" + actor, definitions, path,
+                          "AST methods: " + ",".join(sorted(names)), "type_definitions")
+            records = select_records(task, context)
+            b.row["provenance"]["selected_initial_record_count"] = len(records)
+            for ci, (table, key, record, locator) in enumerate(records):
+                b.add(f"initial_record_{ci:03}", record, context["path"], locator, "judge_only_initial_design_state")
+            if context["user_data"] is not None:
+                b.add("initial_user_device", context["user_data"], context["user_path"],
+                      "whole document; baseline before declared fixture setup", "judge_only_initial_design_state")
             # Complex argument types and native state definitions matter to design burden.
             for name in ("data_model.py", "user_data_model.py"):
                 path = root / "src/tau2/domains" / domain / name
                 if path.exists():
                     b.add("types_" + name[:-3], path.read_text(), path, "whole source; types only", "type_definitions")
-            if not task.get("user_scenario") or not any(endpoint.values()):
-                b.row["preflight_errors"].append("missing_task_or_completion_requirements")
+            if not task.get("user_scenario"):
+                b.row["preflight_errors"].append("missing_task_requirements")
+            if not any(endpoint.values()):
+                b.row["source_quality_flags"].append("missing_explicit_completion_reference")
             b.payload["source_notes"] = ["Native task has no synthetic YAML workflow or milestone list. Do not invent them. Reference actions and completion requirements describe intended design, not observed execution.",
-                                          "Full database records are not supplied. Mark unscorable if the case cannot be assessed without them; do not silently treat omitted state as easy.", *b.row["preflight_errors"]]
+                "Selected original baseline records and device state are judge-only design context. The task agent must still retrieve necessary facts; do not treat records as knowledge given to the agent.",
+                "Read baseline records together with initial_state: declared initialization_data overrides baseline values, then initialization_actions apply in order. Setup actions are NOT agent workload. Their static definitions are supplied where available; no fixture or tool code was executed.",
+                "Only task-relevant records and linked dependencies are supplied, not the full database. Unspecified state must remain uncertain; return unscorable only when it prevents a defensible designed-complexity assessment.",
+                *(["No explicit benchmark completion reference is supplied. Use the stated user goal and policy to identify intended requirements if defensible; otherwise return unscorable. Do not fabricate reference actions."] if not any(endpoint.values()) else []),
+                *b.row["preflight_errors"]]
             rows.append(b.finish())
     return unique(rows)
 
