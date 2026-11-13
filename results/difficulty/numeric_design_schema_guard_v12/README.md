@@ -53,3 +53,10 @@ can reuse this exact raw response without another charge; two new calls would re
 
 See `evidence.json`, `run_manifest.json` and `task_scores.csv`. Source inputs, request,
 manifest, raw response, model metadata and validation output are retained unchanged.
+
+## Latest follow-up
+
+The separate task-bound airline cohort now validates at 50/50/50 under validator v1.3.
+The signature/return rendering issue was resolved offline with explicit diagnostics;
+no raw response was edited. Total approved batch calls used: 33. See [the repeat review](../numeric_design_airline_repeats_v13/README.md).
+These older cohort scores and generation versions remain separate.

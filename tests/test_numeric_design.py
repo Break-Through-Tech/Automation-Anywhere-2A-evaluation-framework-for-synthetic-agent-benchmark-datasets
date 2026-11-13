@@ -196,6 +196,13 @@ class NumericValidationTests(unittest.TestCase):
         self.assertFalse(judge.quotation_in_source("second line.Third line.", text))
         self.assertFalse(judge.quotation_in_source(" \n", text))
 
+    def test_rendered_tool_signature_requires_exact_same_object_fields(self):
+        text = json.dumps({"tool": {"signature": "lookup(item_id: str)", "returns": "Item"}})
+        self.assertEqual(judge.quotation_match_kind("lookup(item_id: str) -> Item", text), "rendered_tool_signature")
+        self.assertFalse(judge.quotation_in_source("lookup(item_id: str) -> OtherType", text))
+        self.assertFalse(judge.quotation_in_source("lookup(item_id: str) -> Item", json.dumps([
+            {"signature": "lookup(item_id: str)"}, {"returns": "Item"}])))
+
 
 class NumericRunnerTests(unittest.TestCase):
     def setUp(self):

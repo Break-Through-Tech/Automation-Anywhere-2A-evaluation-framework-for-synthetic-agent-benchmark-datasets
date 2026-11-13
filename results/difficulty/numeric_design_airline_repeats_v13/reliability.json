@@ -1,0 +1,19 @@
+{
+  "version": "design_calibration_v1",
+  "thresholds": {
+    "max_repeat_range": 10,
+    "max_mean_repeat_range": 5,
+    "max_perturbation_delta": 10,
+    "min_control_pair_delta": 10
+  },
+  "n_repeated_tasks": 1,
+  "max_observed_repeat_range": 0,
+  "mean_observed_repeat_range": 0,
+  "repeat_check": "pass",
+  "perturbation_check": "not_run",
+  "control_pair_check": "not_run",
+  "held_out_check": "not_run",
+  "go_no_go": "not_established",
+  "independent_human_validation": false,
+  "note": "A valid response or a three-task pilot is not full calibration. Repeat, controlled-pair, paraphrase/order and held-out source checks remain separate requirements."
+}

@@ -12,7 +12,7 @@ from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, SCHEMA_VERSION,
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
 
 PROTOCOL = "design_run_v1"
-VALIDATOR_VERSION = "design_evidence_validation_v1.2"
+VALIDATOR_VERSION = "design_evidence_validation_v1.3"
 
 
 def implementation_hashes():
@@ -110,27 +110,37 @@ def load_packet(packet, check_sources=True):
     return manifest, rows, requests
 
 
-def quotation_in_source(excerpt, text):
-    """Exact source text or one decoded JSON string leaf; never fuzzy matching."""
+def quotation_match_kind(excerpt, text):
+    """Recognize exact text and explicitly defined structured-source renderings."""
     if not excerpt.strip():
-        return False
+        return None
     if excerpt in text:
-        return True
+        return "literal"
     try:
         parsed = json.loads(text)
     except (ValueError, TypeError):
-        return False
+        return None
 
     def contains(value):
         if isinstance(value, str):
-            return excerpt in value
+            return "decoded_json_string" if excerpt in value else None
         if isinstance(value, dict):
-            return any(contains(v) for v in value.values())
+            # A tool contract stores its argument signature and return annotation
+            # separately. Permit only this exact, deterministic Python rendering;
+            # never join arbitrary fields or infer an absent return annotation.
+            sig, returns = value.get("signature"), value.get("returns")
+            if isinstance(sig, str) and isinstance(returns, str) and returns and excerpt == f"{sig} -> {returns}":
+                return "rendered_tool_signature"
+            return next((kind for v in value.values() if (kind := contains(v))), None)
         if isinstance(value, list):
-            return any(contains(v) for v in value)
-        return False
+            return next((kind for v in value if (kind := contains(v))), None)
+        return None
 
     return contains(parsed)
+
+
+def quotation_in_source(excerpt, text):
+    return quotation_match_kind(excerpt, text) is not None
 
 
 def validate_judgment(value, row):
@@ -201,11 +211,22 @@ def evidence_diagnostics(value, row):
     workflow step. Source membership alone cannot establish semantic relevance.
     """
     units = {u["unit_id"]: u for u in row["payload"]["units"]}
-    return [{"code": "unit_uses_cross_reference", "unit_id": u["unit_id"],
+    diagnostics = [{"code": "unit_uses_cross_reference", "unit_id": u["unit_id"],
              "cited_source_ids": sorted({e["source_id"] for e in u["evidence"]}),
              "note": "No direct unit-source citation; inspect relevance of same-task evidence."}
             for u in value["units"]
             if not any(e["source_id"] in units[u["unit_id"]]["source_ids"] for e in u["evidence"])]
+    catalog = {s["source_id"]: s["text"] for s in row["payload"]["source_catalog"]}
+    assessments = [("dimension." + k, d["evidence"]) for k, d in value["dimensions"].items()]
+    assessments += [("endpoint", value["intended_endpoint"]["evidence"])]
+    assessments += [("unit." + u["unit_id"], u["evidence"]) for u in value["units"]]
+    for location, items in assessments:
+        for item in items:
+            if quotation_match_kind(item["excerpt"], catalog[item["source_id"]]) == "rendered_tool_signature":
+                diagnostics.append({"code": "rendered_tool_signature", "assessment": location,
+                                    "source_id": item["source_id"], "excerpt": item["excerpt"],
+                                    "note": "Exact signature-plus-return rendering from one tool object; not a literal quotation."})
+    return diagnostics
 
 
 def utc_now():

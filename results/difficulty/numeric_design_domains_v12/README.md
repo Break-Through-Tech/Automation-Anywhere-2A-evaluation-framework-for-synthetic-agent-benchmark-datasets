@@ -86,3 +86,10 @@ report integration remain open in #75–#77 and #50.
 After this 30-call cohort was frozen, the task-bound schema fix passed 145 offline
 tests and one separately authorized diagnostic at 50/100. That exhausted the 31-call
 batch cap. It is not pooled into these means. See [the follow-up](../numeric_design_schema_guard_v12/README.md).
+
+## Latest follow-up
+
+The separate task-bound airline cohort now validates at 50/50/50 under validator v1.3.
+The signature/return rendering issue was resolved offline with explicit diagnostics;
+no raw response was edited. Total approved batch calls used: 33. See [the repeat review](../numeric_design_airline_repeats_v13/README.md).
+These older cohort scores and generation versions remain separate.

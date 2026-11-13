@@ -1,28 +1,18 @@
 # Numeric design difficulty — start here
 
 This mode reads task designs and asks an LLM for evidence-backed difficulty ratings.
-It does not run task agents or grade saved attempts. The implementation and offline
-checks are ready; full calibration requires authorized API calls. The first three-call
-pilot produced two accepted scores and one rejected response; see
-[the pilot review](../../results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md).
-A separate approved v1.1 insurance retry returned an accepted 70/100; see
-[the retry report](../../results/difficulty/numeric_design_insurance_retry_v11/README.md).
-The matched v1.1 pilot now has accepted scores **65, 65 and 70**; see
-[the comparison and limits](../../results/difficulty/numeric_design_matched_pilot_v11/README.md).
-The [initial repeatability check](../../results/difficulty/numeric_design_repeatability_v11/README.md)
-passes on three development cases: accounts 65/65/65 each, insurance 70/70/75.
-The [four source controls](../../results/difficulty/numeric_design_controls_v11/README.md)
-now pass their practical tolerances (35, 75, 40 and 40). Broader calibration remains: a
-[domain calibration](../../results/difficulty/numeric_design_domains_v12/README.md) now has
-nine complete three-judgment cases within tolerance. Thirty calls were used under an
-extended cap of 31. Airline stopped on an invented-unit response after its input-context
-gap was diagnosed; full calibration remains incomplete. No paid retry followed that error.
+It does not run task agents or grade saved attempts.
 
-The [task-bound schema follow-up](../../results/difficulty/numeric_design_schema_guard_v12/README.md)
-now passes its first real diagnostic at 50/100. All 31 approved batch calls are used.
-The new schema enumerates allowed unit IDs and limits unit-row count; 145 offline tests
-pass. Its one judgment is separate from the earlier generation protocol and does not
-establish repeatability. Additional API approval is required for further judgments.
+**Latest:** the [task-bound airline repeat check](../../results/difficulty/numeric_design_airline_repeats_v13/README.md)
+returns **50 / 50 / 50**. All **146 offline tests pass**, and **33/33 approved batch calls**
+are used. The original source and rejected outputs are preserved. The rubric remains
+provisional; calibration across all domains using the revised generation format is incomplete.
+
+The [earlier domain check](../../results/difficulty/numeric_design_domains_v12/README.md)
+has nine complete cases within tolerance under the earlier format. Do not silently pool
+old/new generation schemas. Nine compatible three-repeat packets are prepared offline;
+completing that calibration would require approval for **27 new calls**. No additional
+calls are scheduled automatically.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
@@ -130,7 +120,7 @@ Do not invent missing τ-bench tags, tune to copy supplied labels, or force one 
 above another. Equal scores can be legitimate. Report incomplete averages as scored-
 subset means and do not equate greater difficulty with greater dataset quality.
 
-## Evidence validation v1.2
+## Evidence validation v1.3
 
 A genuine quotation from a task-specific milestone may support a shared workflow step.
 The validator now records a `unit_uses_cross_reference` review diagnostic when a unit
@@ -144,7 +134,12 @@ inputs, weights, model and settings are unchanged. Existing raw responses were r
 generations were repeated. The original rejected responses remain unchanged.
 Exact quotations may match the literal source or one decoded JSON string value,
 so a documented line break is not rejected solely because JSON escaped it. No fuzzy
-matching, whitespace rewriting or concatenation across separate values is allowed. Packets pin implementation hashes: old
+matching, whitespace rewriting or arbitrary concatenation across separate values is allowed.
+One explicit structured rendering is recognized: an exact `signature -> ReturnType`
+from the `signature` and `returns` fields of the same tool object. It is flagged as
+`rendered_tool_signature`, not described as a literal quotation. Wrong annotations and
+cross-object joins are rejected. This validator-only correction reassessed unchanged
+raw responses without paid retries. Packets pin implementation hashes: old
 reports should be regenerated using their recorded implementation revision, not by
 silently rewriting old manifests. Revised validation policy is part of aggregation's
 compatibility fingerprint.
@@ -157,3 +152,14 @@ An unscorable response may omit unit assessments. This changes the generation co
 not the rubric or weights: prepare fresh packets and do not silently pool old/new schema
 results. The 30-call domain report is frozen to implementation commit `c72a37e`; use that
 revision to regenerate its outputs. Revalidation is not a license to accept invented units.
+
+## Earlier run history
+
+- [Original pilot](../../results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md).
+- [Matched v1.1 pilot](../../results/difficulty/numeric_design_matched_pilot_v11/README.md).
+- [Initial development repeats](../../results/difficulty/numeric_design_repeatability_v11/README.md).
+- [Authored source controls](../../results/difficulty/numeric_design_controls_v11/README.md).
+- [First task-bound schema diagnostic](../../results/difficulty/numeric_design_schema_guard_v12/README.md).
+
+Historical reports describe their own frozen cohorts and versions, not current full
+dataset coverage. Their numeric scales, limits and raw-response provenance remain explicit.
