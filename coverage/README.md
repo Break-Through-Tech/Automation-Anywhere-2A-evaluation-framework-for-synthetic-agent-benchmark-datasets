@@ -1,5 +1,16 @@
 # Coverage validation (issue #27)
 
+## Workflow attribute update
+
+Run `python labeling/workflows.py` from the repository root to rebuild
+source-backed workflow labels for both datasets. Outputs are saved separately
+in `coverage/labels/workflows/`. See [workflow labels and scoring handoff](../labeling/WORKFLOWS.md)
+for definitions, source checks, findings and the next validation steps.
+The scores and plots below still use the October attributes; this label
+rebuild does not recompute them.
+
+## Domain-removal validation
+
 `validate_coverage.py` reads `data/processed/tasks.jsonl`
 and calls `embed()` and `vendi_score()` from
 `coverage/vendi_score.py`. It selects all `tau2` tasks in that file, scores the

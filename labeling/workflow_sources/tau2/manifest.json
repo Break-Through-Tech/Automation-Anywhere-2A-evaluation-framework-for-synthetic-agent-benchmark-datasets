@@ -1,0 +1,83 @@
+{
+  "original_files": {
+    "LICENSE": {
+      "sha256": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/LICENSE"
+    },
+    "data/tau2/domains/airline/policy.md": {
+      "sha256": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/airline/policy.md"
+    },
+    "data/tau2/domains/airline/split_tasks.json": {
+      "sha256": "b22ced4d9a9850ac9aea31c53bdcb6d6009058140bd9acc7db37c1d36222ba8b",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/airline/split_tasks.json"
+    },
+    "data/tau2/domains/airline/tasks.json": {
+      "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/airline/tasks.json"
+    },
+    "data/tau2/domains/retail/policy.md": {
+      "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/retail/policy.md"
+    },
+    "data/tau2/domains/retail/split_tasks.json": {
+      "sha256": "ed0580ec52575b63fbf76568af42490da6ee7783ecb4aa81af46961291358f20",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/retail/split_tasks.json"
+    },
+    "data/tau2/domains/retail/tasks.json": {
+      "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/retail/tasks.json"
+    },
+    "data/tau2/domains/telecom/main_policy.md": {
+      "sha256": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/telecom/main_policy.md"
+    },
+    "data/tau2/domains/telecom/split_tasks.json": {
+      "sha256": "605b488bb9a6acb3c7f4505240a855fdc8681d09aadb16a8f38b2efcfc5c3aec",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/telecom/split_tasks.json"
+    },
+    "data/tau2/domains/telecom/tasks.json": {
+      "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/telecom/tasks.json"
+    },
+    "data/tau2/domains/telecom/tech_support_manual.md": {
+      "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/telecom/tech_support_manual.md"
+    },
+    "data/tau2/domains/telecom/tech_support_workflow.md": {
+      "sha256": "64f3ccd13875d14f358b21b9af221dab09e0e7bf5690d0e4322fb91855a43a4d",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/data/tau2/domains/telecom/tech_support_workflow.md"
+    },
+    "src/tau2/agent/llm_agent.py": {
+      "sha256": "d13412ff502859f0ef0492af0128f1b2666be32640057ba8e076d2602af084d8",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/agent/llm_agent.py"
+    },
+    "src/tau2/domains/telecom/tasks/mms_issues.py": {
+      "sha256": "f7350a6771ac28464ee392731f741486b421126ddf907082891d2cfc4a739b24",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mms_issues.py"
+    },
+    "src/tau2/domains/telecom/tasks/mobile_data_issues.py": {
+      "sha256": "2c5169d82c6fad894ffd9447b98c249312155354d428fb3d3f373176b82fd667",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/mobile_data_issues.py"
+    },
+    "src/tau2/domains/telecom/tasks/service_issues.py": {
+      "sha256": "a646ab516cdd7f9a3716dfa9acd7ca60741bb7db81494c26c2c988f2efe3db2a",
+      "url": "https://github.com/sierra-research/tau2-bench/blob/dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd/src/tau2/domains/telecom/tasks/service_issues.py"
+    }
+  },
+  "repository": "sierra-research/tau2-bench",
+  "revision": "dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd",
+  "snapshot_sha256": {
+    "conditions.json": "33caaa84c2453145da06e58cd18e61cf2bfa96e53f93ebf8a004296c808fe3aa",
+    "policy/LICENSE": "e67c5aa0074dfcaefd3c3a1aedb94cb539234aecd15d5a972574e3200e6252fe",
+    "policy/data/tau2/domains/airline/policy.md": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+    "policy/data/tau2/domains/retail/policy.md": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+    "policy/data/tau2/domains/telecom/main_policy.md": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7",
+    "policy/data/tau2/domains/telecom/tech_support_manual.md": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba",
+    "policy/data/tau2/domains/telecom/tech_support_workflow.md": "64f3ccd13875d14f358b21b9af221dab09e0e7bf5690d0e4322fb91855a43a4d",
+    "policy/src/tau2/agent/llm_agent.py": "d13412ff502859f0ef0492af0128f1b2666be32640057ba8e076d2602af084d8",
+    "tasks.jsonl": "3608e0135df5ffc7370431432ff93a41161c957a8a2743d1c9eeb81d82baea59"
+  },
+  "split": "base",
+  "task_count": 278
+}
