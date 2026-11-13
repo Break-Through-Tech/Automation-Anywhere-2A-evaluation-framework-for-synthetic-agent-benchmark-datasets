@@ -1,0 +1,44 @@
+{
+  "approved_total_domain_cap": 60,
+  "prior_domain_calls_used": 33,
+  "new_calls_this_approval": 26,
+  "total_domain_calls_used": 59,
+  "remaining_authorized_calls": 1,
+  "current_cohort_unique_tasks": 10,
+  "current_cohort_saved_judgments": 29,
+  "cached_airline_responses": 3,
+  "new_usage": {
+    "input_tokens": 253467,
+    "output_tokens": 60463,
+    "total_tokens": 313930
+  },
+  "cumulative_domain_usage": {
+    "input_tokens": 585724,
+    "output_tokens": 129561,
+    "total_tokens": 715285
+  },
+  "model": "gpt-6-sol",
+  "schema_version": "design_schema_v1.2_task_bound_units",
+  "validator_version": "design_evidence_validation_v1.3",
+  "prompt_version": "design_prompt_v1.1",
+  "thresholds": {
+    "max_repeat_range": 10,
+    "max_mean_repeat_range": 5,
+    "max_perturbation_delta": 10,
+    "min_control_pair_delta": 10
+  },
+  "implementation_sha256": {
+    "difficulty/design/__init__.py": "60aa3851440117d13f77fc9c9558f8cdf454cc1c62aa13f86ec61680d2587520",
+    "difficulty/design/__main__.py": "f233ce63a885139f21fcdde92beda1f7b8a84aeeb998d6f85deceaeee077ccc7",
+    "difficulty/design/calibration.py": "292db70153643545054f0db8ec7ff2dda96cc41368cf296a7fe1e022f7aa6bef",
+    "difficulty/design/crosscheck.py": "26236e715e149bffa99eac57726e0fa57f6066503e8ecc7c50f89f99428e6d9c",
+    "difficulty/design/framework.py": "0d00463046b48d8a72f2ccff53837891988d8f30fd802ac3cbdd05b92b1cae8f",
+    "difficulty/design/inputs.py": "3733513afac126590026f8c6b2f296d58ae80ff5deaecbbb417790e20ba0f9b1",
+    "difficulty/design/judge.py": "1b26d62cf2bb0fce8bdebbe3874b87335f039a628318286c1c442fab44271b5e",
+    "difficulty/design/reporting.py": "8ef872c3b91e8a8bf824d307f674bedb4c3c93cd55709a285c462f946ceaa963",
+    "difficulty/design/rubric.py": "bf3a076778f784f0d142d8071669fcc8c72a94e95cb175e3cbc131404a5161ff"
+  },
+  "all_original_sources_preserved": true,
+  "independent_validation": false,
+  "go_no_go": "stop_and_review"
+}
