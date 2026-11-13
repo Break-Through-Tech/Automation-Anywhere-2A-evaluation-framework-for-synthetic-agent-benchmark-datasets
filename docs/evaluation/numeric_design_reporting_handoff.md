@@ -72,7 +72,7 @@ thresholds simply to make tau2 scores higher than synthetic scores.
 ## Current run and comparison scope
 
 The final synthetic primary result is 64.296875/100 (64/64 original tasks), one
-judgment each. Use `results/difficulty/synthetic_final_v15`. The subsequent v16
+judgment each. Use `results/difficulty/synthetic_final_v15`. The subsequent v18
 calibration repeats are diagnostics; they do not replace primary synthetic judgments.
 Current-format practical checks passed: ten cross-domain tasks repeated three times,
 maximum range 5 and mean range 2.5; four controls passed frozen tolerances. This
@@ -97,3 +97,14 @@ are unavailable; retain missingness rather than inventing values. The same rubri
 model do not remove differences in policy length, domain mix, source granularity, or
 reference completeness. Equal dataset scores can be legitimate; greater difficulty is
 not evidence of greater quality. Do not force a desired synthetic/native ordering.
+
+## Arithmetic correction and audit
+
+Use the locally computed `judgment.overall_score` under validation v1.4. The raw
+`model_judgment.overall_score` remains an audit observation; it can disagree with
+the frozen formula. Keep `score_arithmetic` and offline-binding provenance visible.
+The first telecom mismatch stopped dispatch and was resolved offline from unchanged
+ratings, without retrying the model. Synthetic primary scores remain unchanged.
+Current full comparison artifacts are `results/difficulty/tau2_final_v18`; replay
+with `python -m difficulty.reproduce_numeric_design --out .cache/replayed_design_v18`
+at the recorded implementation/source revision. No API credentials are needed.

@@ -324,6 +324,32 @@ class NumericRunnerTests(unittest.TestCase):
         self.assertEqual(result["judgment"]["units"][0]["evidence"][0]["source_id"], "S")
         self.assertEqual(result["judgment"]["units"][0]["evidence"][0]["excerpt"], self.row["payload"]["source_catalog"][0]["text"])
 
+    def test_model_total_is_audited_and_index_is_derived_from_unchanged_ratings(self):
+        packet = self.packet()
+        wire = stub_judgment(self.row)
+        wire["overall_score"] = 85
+        original = copy.deepcopy(wire)
+        judge.run_packet(packet, authorize_paid=True, client=fake_client([wire]))
+        _, rows, requests = judge.load_packet(packet)
+        result = judge.read_result(packet, requests[0], rows[0])
+        self.assertEqual(result["model_judgment"], original)
+        self.assertEqual(result["judgment"]["dimensions"], original["dimensions"])
+        self.assertEqual(result["judgment"]["overall_score"], 5 * sum(v["level"] for v in original["dimensions"].values()))
+        self.assertTrue(result["score_arithmetic"]["reported_total_mismatch"])
+        self.assertEqual(result["score_arithmetic"]["model_reported_total"], 85)
+        path = packet / "results" / (requests[0]["request_id"] + ".json")
+        result["score_arithmetic"]["computed_total"] = 85
+        path.write_text(json.dumps(result))
+        with self.assertRaisesRegex(ValueError, "arithmetic"):
+            judge.read_result(packet, requests[0], rows[0])
+
+    def test_derived_arithmetic_does_not_repair_invalid_ratings(self):
+        packet = self.packet()
+        wire = stub_judgment(self.row)
+        wire["dimensions"]["workload"]["level"] = 9
+        result = judge.run_packet(packet, authorize_paid=True, client=fake_client([wire]))
+        self.assertEqual(result["stopped_reason"], "failure_requires_diagnosis")
+
     def test_no_client_construction_or_api_without_explicit_authorization(self):
         packet = self.packet()
         with patch("openai.OpenAI", side_effect=AssertionError("Must not construct a client")):
@@ -353,7 +379,7 @@ class NumericRunnerTests(unittest.TestCase):
         changed = json.loads(p.read_text())
         changed["judgment"] = stub_judgment(self.row, 3)
         p.write_text(json.dumps(changed))
-        with self.assertRaisesRegex(ValueError, "raw response"):
+        with self.assertRaisesRegex(ValueError, "raw response|Canonical evidence"):
             reporting.aggregate([self.row], [packet])
         (self.root / "source/requirements.txt").write_text("Changed")
         with self.assertRaisesRegex(ValueError, "Changed"):
@@ -384,7 +410,7 @@ class NumericRunnerTests(unittest.TestCase):
     def test_first_format_failure_stops(self):
         other = fixture_case(self.root, "second")
         bad = stub_judgment(self.row)
-        bad["overall_score"] = 99
+        bad["case_key"] = "wrong_case"
         packet = self.packet([self.row, other])
         client = fake_client([bad, stub_judgment(other)])
         result = judge.run_packet(packet, authorize_paid=True, client=client)

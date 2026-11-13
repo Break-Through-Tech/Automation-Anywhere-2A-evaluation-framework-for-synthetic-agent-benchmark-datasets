@@ -15,7 +15,7 @@ from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, SCHEMA_VERSION,
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
 
 PROTOCOL = "design_run_v1"
-VALIDATOR_VERSION = "design_evidence_validation_v1.3"
+VALIDATOR_VERSION = "design_evidence_validation_v1.4_derived_score"
 
 
 def implementation_hashes():
@@ -262,6 +262,28 @@ def safe_api_error(exc):
     return result
 
 
+def canonical_judgment(wire, row):
+    """Compute the fixed index locally; never change model ratings or raw output.
+
+    The model's redundant total is retained as an audit observation. It is not
+    authoritative over the already-frozen 5 * sum(levels) definition.
+    """
+    assessments = [*wire["dimensions"].values(), wire["intended_endpoint"], *wire["units"]]
+    has_refs = any("citation_id" in e for a in assessments for e in a["evidence"])
+    value = resolve_evidence(wire, row) if has_refs else json.loads(json.dumps(wire))
+    reported = value["overall_score"]
+    computed = reported
+    if value["status"] == "scored":
+        levels = [value["dimensions"][k]["level"] for k in DIMENSIONS]
+        if all(type(n) is int and 0 <= n <= 4 for n in levels):
+            computed = 5 * sum(levels)
+            value["overall_score"] = computed
+    arithmetic = {"rule": "5_times_sum_of_unchanged_dimension_levels",
+                  "model_reported_total": reported, "computed_total": computed,
+                  "reported_total_mismatch": reported != computed}
+    return value, arithmetic
+
+
 def read_result(packet, request, row):
     path = Path(packet) / "results" / (request["request_id"] + ".json")
     if not path.exists():
@@ -275,8 +297,9 @@ def read_result(packet, request, row):
     if result["status"] == "validated":
         wire = result.get("model_judgment", result["judgment"])
         Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(wire)
-        if result.get("model_judgment") is not None and resolve_evidence(wire, row) != result["judgment"]:
-            raise ValueError("Resolved evidence differs from saved model references")
+        canonical, arithmetic = canonical_judgment(wire, row)
+        if canonical != result["judgment"] or arithmetic != result.get("score_arithmetic"):
+            raise ValueError("Canonical evidence or computed arithmetic differs from saved model output")
         validate_judgment(result["judgment"], row)
         if (result.get("validator_version") != VALIDATOR_VERSION or
             result.get("evidence_diagnostics") != evidence_diagnostics(result["judgment"], row)):
@@ -350,11 +373,9 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
                         raise ValueError("Response was not completed (refusal/truncation must be inspected)")
                     wire = json.loads(response.output_text)
                     Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(wire)
-                    if manifest.get("source_bound_evidence_experimental"):
-                        result["model_judgment"] = wire
-                        judgment = resolve_evidence(wire, row)
-                    else:
-                        judgment = wire
+                    result["model_judgment"] = wire
+                    judgment, arithmetic = canonical_judgment(wire, row)
+                    result["score_arithmetic"] = arithmetic
                     validate_judgment(judgment, row)
                     result.update(status="validated", judgment=judgment,
                                   evidence_diagnostics=evidence_diagnostics(judgment, row))

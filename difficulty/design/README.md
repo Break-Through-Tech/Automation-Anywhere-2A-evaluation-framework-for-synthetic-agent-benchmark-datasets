@@ -186,7 +186,7 @@ Current-format practical repeat and source-control checks passed: ten tasks acro
 synthetic/native domains, three judgments each, maximum range 5 and mean range 2.5.
 Four separate fixtures test added complexity and harmless changes. These are bounded
 consistency checks, not independent validity. See
-[calibration v16](../../results/difficulty/numeric_design_calibration_v16/README.md).
+[calibration v16](../../results/difficulty/numeric_design_calibration_v18/README.md).
 The tau2 base inventory is 278 tasks (50 airline, 114 retail, 114 telecom). A frozen
 full run uses one judgment per task, except three pilot tasks with three judgments;
 pilots are averaged before equal-task aggregation. The published synthetic primary
@@ -194,3 +194,21 @@ mean remains 64.296875 from its original 64 single judgments. Diagnostic synthet
 repeats are not substituted into that mean. New implementation fingerprints may be
 bound to saved responses offline only when the complete original API request is
 identical; retain original output and binding provenance and record zero new calls.
+
+## Derived arithmetic policy v1.4
+
+The model supplies the five difficulty ratings and a redundant total. The final
+index is now computed locally as `5 * sum(dimension levels)`, as already defined by
+the frozen rubric. `model_judgment` and the raw response retain the original total;
+`score_arithmetic` records that number, the computed total and any mismatch. The
+canonical `judgment.overall_score` is the computed index. No dimension rating, unit
+rating, explanation or applicability choice is repaired. Invalid evidence, invalid
+ratings, wrong identities, API errors and incomplete responses still stop a run.
+
+This is an explicit validation-policy version, not a changed generation request or
+weighting scheme. One telecom response reported 85 despite ratings and its own
+explanation totaling 80; the old policy stopped immediately. The original error was
+preserved, then all saved responses were rebound to fresh packets with exact API
+request equality and zero new API calls. The published original synthetic mean is
+unchanged. Do not combine old/new validation fingerprints silently; v18 reporting
+uses the new policy consistently and retains the original error provenance.

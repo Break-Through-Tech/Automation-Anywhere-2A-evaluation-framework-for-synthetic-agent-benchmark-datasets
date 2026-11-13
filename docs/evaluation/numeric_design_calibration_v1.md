@@ -1,7 +1,7 @@
 # Calibration protocol before broad paid scoring
 
 Version: `design_calibration_v1`
-Status: Current-format practical calibration passed: ten cross-domain tasks, three judgments each, maximum range 5 and mean range 2.5; four controls passed prespecified tolerances. See [calibration v16](../../results/difficulty/numeric_design_calibration_v16/README.md). These are bounded consistency checks, not independent gold validity. API evidence-format blocker resolved using citation IDs. Final synthetic scoring completed at **64.30/100**, 64/64 tasks, under one evidence-reference format. The final run has one judgment per task; earlier repeated-score checks remain historical. The new v16 repeat sample is reported separately and does not change that primary synthetic score. See [the final synthetic report](../../results/difficulty/synthetic_final_v15/README.md).
+Status: Current-format practical calibration passed: ten cross-domain tasks, three judgments each, maximum range 5 and mean range 2.5; four controls passed prespecified tolerances. See [calibration v16](../../results/difficulty/numeric_design_calibration_v18/README.md). These are bounded consistency checks, not independent gold validity. API evidence-format blocker resolved using citation IDs. Final synthetic scoring completed at **64.30/100**, 64/64 tasks, under one evidence-reference format. The final run has one judgment per task; earlier repeated-score checks remain historical. The new v16 repeat sample is reported separately and does not change that primary synthetic score. See [the final synthetic report](../../results/difficulty/synthetic_final_v15/README.md).
 
 1. Run offline contract, mapping, citation, schema, arithmetic and spending-gate tests.
 2. With explicit API authorization, score three synthetic cases sequentially:
@@ -39,3 +39,9 @@ source agreement do not establish independent human validity. Supplied tags and
 structural features are compared afterward (#50); do not tune to copy labels or
 force τ-bench above synthetic scores. Any rubric revision creates a new protocol
 version and a new run; old and new scores must not be silently pooled.
+
+Validation policy v1.4 computes the fixed total from the model's unchanged ratings.
+A model-reported total mismatch is retained as an arithmetic diagnostic, rather than
+rerunning the LLM to redo addition. All generation requests, raw responses, weights
+and ratings remain unchanged. The v18 calibration is an offline revalidation of the
+same ten-task/four-control cohort, with identical findings and zero new calls.
