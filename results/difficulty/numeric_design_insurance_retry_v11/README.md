@@ -23,8 +23,10 @@ Agreement across different prompt versions is not a controlled repeatability che
 
 The earlier account scores (60 and 65) used prompt v1. They are kept separate from this
 v1.1 result. Do not combine their means or claim a validated ranking across versions.
-The next bounded proposal is two calls to reassess the account cases under the same v1.1
-protocol. That two-request packet is prepared offline but has not been sent.
+The two separately authorized account reassessments have now completed under v1.1.
+See [the matched pilot](../numeric_design_matched_pilot_v11/README.md): both account cases
+score 65, while this insurance case scores 70. Original prompt-v1 scores are not pooled.
+The next bounded proposal is six additional judgments to check initial repeatability.
 Repeat/control/held-out checks and broader scoring remain pending.
 
 ## Evidence and usage

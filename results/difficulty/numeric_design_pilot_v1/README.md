@@ -17,3 +17,5 @@ Original exact requests and raw responses remain in the local frozen packet. Use
 Prompt v1.1 fixes the schema/prompt mismatch; the separately authorized insurance retry is reported below.
 
 A separately approved prompt-v1.1 insurance retry has now passed at 70/100: [retry report](../numeric_design_insurance_retry_v11/README.md). This does not alter the original pilot results or permit pooling prompt versions.
+
+For the current same-prompt comparison, see [the matched v1.1 pilot](../numeric_design_matched_pilot_v11/README.md): accepted scores 65, 65 and 70. The historical v1 results above remain separate.

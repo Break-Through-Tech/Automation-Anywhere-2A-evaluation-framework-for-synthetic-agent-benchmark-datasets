@@ -78,3 +78,5 @@ Exact requests, raw responses, fingerprints and usage are preserved locally unde
 `.cache/design_numeric_v1/pilot_gpt6_sol_v1`. The original implementation is commit
 `9fa5640`; use that frozen version when regenerating its outputs. Supplied source
 files and existing successful judgments were not edited.
+
+For the current same-prompt comparison, see [the matched v1.1 pilot](../numeric_design_matched_pilot_v11/README.md): accepted scores 65, 65 and 70. The historical v1 results above remain separate.

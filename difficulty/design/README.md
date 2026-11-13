@@ -7,7 +7,9 @@ pilot produced two accepted scores and one rejected response; see
 [the pilot review](../../results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md).
 A separate approved v1.1 insurance retry returned an accepted 70/100; see
 [the retry report](../../results/difficulty/numeric_design_insurance_retry_v11/README.md).
-The account cases have not yet been reassessed under v1.1, and full calibration remains pending.
+The matched v1.1 pilot now has accepted scores **65, 65 and 70**; see
+[the comparison and limits](../../results/difficulty/numeric_design_matched_pilot_v11/README.md).
+Initial repeatability and full calibration remain pending.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
