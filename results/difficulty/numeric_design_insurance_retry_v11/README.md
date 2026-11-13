@@ -26,7 +26,7 @@ v1.1 result. Do not combine their means or claim a validated ranking across vers
 The two separately authorized account reassessments have now completed under v1.1.
 See [the matched pilot](../numeric_design_matched_pilot_v11/README.md): both account cases
 score 65, while this insurance case scores 70. Original prompt-v1 scores are not pooled.
-The next bounded proposal is six additional judgments to check initial repeatability.
+The subsequent six-judgment repeatability check is complete: [repeatability report](../numeric_design_repeatability_v11/README.md). Full calibration remains incomplete.
 Repeat/control/held-out checks and broader scoring remain pending.
 
 ## Evidence and usage

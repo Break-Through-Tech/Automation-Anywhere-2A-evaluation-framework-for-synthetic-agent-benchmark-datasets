@@ -37,14 +37,18 @@ Only 3 of 64 synthetic tasks were selected purposively. The selected-subset mean
 scored. Repeatability, perturbation/control and held-out checks remain incomplete;
 response validity alone does not validate the metric.
 
-The next bounded proposal is **six new model calls**: two additional judgments of each
+At the initial-pilot cutoff, the next bounded proposal was **six new model calls**: two additional judgments of each
 of these three unchanged inputs. Three separate repeat packets are prepared offline,
 each reusing its existing accepted response as repeat 0. Copies preserve hashes and
 source provenance and do not count as new paid calls. Each packet needs only two new
-calls to obtain three judgments. No requests from those packets have been sent.
+calls to obtain three judgments. Those six requests have since been authorized and completed; see the follow-up below.
 This checks initial repeatability only, not the full domain-diverse calibration plan.
 
 See matched_evidence.json, source_bindings.json, run_manifest.json and task_scores.csv.
 Raw responses remain in their original frozen packets. Weights, anchors, benchmark
 sources and earlier model outputs were not edited. Token usage in the manifest is
 not a dollar-cost estimate or billing audit.
+
+## Follow-up: six authorized repeats completed
+
+The [initial repeatability report](../numeric_design_repeatability_v11/README.md) now records account scores 65/65/65 each and insurance 70/70/75. The initial three single-response results above remain unchanged. Four separate control checks are the next proposed paid step and have not been run.
