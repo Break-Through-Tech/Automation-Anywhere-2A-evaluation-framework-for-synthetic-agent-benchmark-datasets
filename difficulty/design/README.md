@@ -2,7 +2,9 @@
 
 This mode reads task designs and asks an LLM for evidence-backed difficulty ratings.
 It does not run task agents or grade saved attempts. The implementation and offline
-checks are ready; real numeric scores and calibration require authorized API calls.
+checks are ready; full calibration requires authorized API calls. The first three-call
+pilot produced two accepted scores and one rejected response; see
+[the pilot review](../../results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md).
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
@@ -25,7 +27,7 @@ Run from the repository root. Use a **fresh output directory** for every new pac
 ```sh
 python -m difficulty.design inventory --dataset both --out .cache/design_numeric/inventory
 python -m difficulty.design prepare --inventory .cache/design_numeric/inventory/inventory.json \
-  --selection pilot --model gpt-6 --reasoning-effort low --out .cache/design_numeric/pilot
+  --selection pilot --model gpt-6-sol --reasoning-effort low --out .cache/design_numeric/pilot
 python -m difficulty.design check --packet .cache/design_numeric/pilot
 python -m difficulty.design report --inventory .cache/design_numeric/inventory/inventory.json \
   --packet .cache/design_numeric/pilot --out results/difficulty/numeric_design_pilot_report
@@ -40,6 +42,9 @@ Use an already configured `OPENAI_API_KEY` in the environment. This mode never p
 the key or automatically reads `.env`. The explicit model is preserved; an unavailable
 model fails and stops rather than silently substituting another model. Account/billing
 ownership cannot be inferred from a key's variable name.
+
+The configured account rejected the bare name `gpt-6`; the authorized pilot used
+`gpt-6-sol`. Verify availability for the intended account before a new paid run.
 
 ```sh
 python -m difficulty.design run --packet .cache/design_numeric/pilot \
@@ -58,6 +63,12 @@ retries. The first API/format/input failure stops it. Three identical scores or 
 unscorable responses trigger inspection. A stop gate blocks further calls on that packet;
 diagnose and prepare a fresh reviewed packet. Completed calls are cached; an interrupted
 intent is never automatically replayed because it may already have incurred a charge.
+
+Prompt v1.1 now enforces null difficulty levels for context/unselected/uncertain units
+in the API schema as well as local validation. The original pilot and rejected response
+remain unchanged. Its packet is pinned to implementation commit `9fa5640`; use that
+version to regenerate its reports. Fresh v1.1 requests must not be pooled silently with
+the earlier prompt's scores. The rubric anchors and 20% dimension weights are unchanged.
 
 ## Framework integration
 

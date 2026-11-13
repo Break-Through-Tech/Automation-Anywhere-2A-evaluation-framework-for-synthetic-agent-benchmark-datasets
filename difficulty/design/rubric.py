@@ -6,7 +6,7 @@ from pathlib import Path
 VERSION = "design_numeric_v1.0_provisional"
 INPUT_VERSION = "design_input_v1"
 OUTPUT_VERSION = "design_judgment_v1"
-PROMPT_VERSION = "design_prompt_v1"
+PROMPT_VERSION = "design_prompt_v1.1"
 DIMENSIONS = ("workload", "reasoning", "tool_use", "dependencies", "information")
 STEP_DIMENSIONS = ("reasoning", "tool_use", "information")
 ROOT = Path(__file__).resolve().parents[2]
@@ -39,8 +39,12 @@ the score. Native reference calls indicate intended work, not authoritative orde
 proof of feasibility. Apply the same rubric to every task. Return only the requested
 JSON schema. Quote exact nonempty excerpts from the supplied source_catalog for claims.
 Assess every supplied unit, including optional/conditional units; distinguish required,
-selected conditional, unselected optional, context, and uncertain applicability. Select
-the intended valid endpoint using scenario evidence; do not assume success over a valid
+selected conditional, unselected optional, context, and uncertain applicability.
+Only required and selected_conditional units receive numeric levels. For every
+optional_not_selected, context, or uncertain unit, set ALL three levels to null.
+Zero is a numeric rating, not null. A milestone may express a required state without
+adding an operation; if you classify it as context, retain its evidence and use null levels.
+Select the intended valid endpoint using scenario evidence; do not assume success over a valid
 escalation. Do not charge the task for all possible alternative paths. If missing or
 conflicting information prevents a defensible score, return unscorable, with null
 dimensions and overall_score, a reason and source-quality flags. Never turn a parser
@@ -65,11 +69,15 @@ def response_schema():
     level = {"type": ["integer", "null"], "minimum": 0, "maximum": 4}
     assessment = _object({"level": level, "rationale": string, "evidence": evidence})
     dimensions = _object({k: assessment for k in DIMENSIONS})
-    unit = _object({"unit_id": string,
-                    "applicability": {"type": "string", "enum": ["required", "selected_conditional", "optional_not_selected", "context", "uncertain"]},
-                    "applicability_rationale": string, "evidence": evidence,
-                    "levels": _object({k: level for k in STEP_DIMENSIONS}),
-                    "rationale": string})
+    # Encode the same applicability rule at the API boundary and locally. The old
+    # schema allowed context + numeric levels, which the local validator rejected.
+    common = {"unit_id": string, "applicability_rationale": string,
+              "evidence": evidence, "rationale": string}
+    unit = {"anyOf": [
+        _object({**common, "applicability": {"type": "string", "enum": ["required", "selected_conditional"]},
+                 "levels": _object({k: {"type": "integer", "minimum": 0, "maximum": 4} for k in STEP_DIMENSIONS})}),
+        _object({**common, "applicability": {"type": "string", "enum": ["optional_not_selected", "context", "uncertain"]},
+                 "levels": _object({k: {"type": "null"} for k in STEP_DIMENSIONS})})]}
     return _object({"version": {"type": "string", "enum": [OUTPUT_VERSION]},
                     "case_key": string, "status": {"type": "string", "enum": ["scored", "unscorable"]},
                     "units": {"type": "array", "items": unit}, "dimensions": dimensions,

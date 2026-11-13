@@ -160,6 +160,21 @@ class NumericValidationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             judge.validate_judgment(value, self.row)
 
+    def test_api_schema_rejects_numeric_context_levels_before_local_validation(self):
+        value = copy.deepcopy(self.good)
+        value['units'][0]['applicability'] = 'context'
+        value['units'][0]['levels'] = dict.fromkeys(rubric.STEP_DIMENSIONS, 0)
+        with self.assertRaises(Exception):
+            judge.Draft202012Validator(rubric.response_schema()).validate(value)
+        value['units'][0]['levels'] = dict.fromkeys(rubric.STEP_DIMENSIONS, None)
+        judge.Draft202012Validator(rubric.response_schema()).validate(value)
+
+    def test_api_schema_requires_numeric_levels_for_active_units(self):
+        value = copy.deepcopy(self.good)
+        value['units'][0]['levels']['reasoning'] = None
+        with self.assertRaises(Exception):
+            judge.Draft202012Validator(rubric.response_schema()).validate(value)
+
     def test_own_source_citations_and_required_step_lower_bound(self):
         b = inputs.CaseBuilder("synthetic", "fixture", "other", "W1", Path(self.tmp.name) / "source")
         source = Path(self.tmp.name) / "source/requirements.txt"
