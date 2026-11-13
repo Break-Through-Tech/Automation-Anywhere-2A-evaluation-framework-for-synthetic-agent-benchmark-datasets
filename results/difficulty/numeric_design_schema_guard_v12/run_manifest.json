@@ -1,0 +1,32 @@
+{
+  "approved_domain_batch_cap": 31,
+  "total_batch_calls": 31,
+  "this_diagnostic_new_calls": 1,
+  "remaining_approved_calls": 0,
+  "schema_version": "design_schema_v1.2_task_bound_units",
+  "prompt_version": "design_prompt_v1.1",
+  "validator_version": "design_evidence_validation_v1.2",
+  "generation_protocol_changed": true,
+  "mixed_with_previous_scores": false,
+  "status": "validated",
+  "overall_score": 50,
+  "usage": {
+    "input_tokens": 10187,
+    "input_tokens_details": {
+      "cache_write_tokens": 10184,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1154,
+    "output_tokens_details": {
+      "reasoning_tokens": 79
+    },
+    "total_tokens": 11341
+  },
+  "independent_validation": false,
+  "repeatability": "not_established_one_new_schema_judgment",
+  "offline_tests_passed": 145,
+  "offline_archived_response_check": {
+    "previous_valid_accepted": 42,
+    "invented_unit_rejected": 1
+  }
+}

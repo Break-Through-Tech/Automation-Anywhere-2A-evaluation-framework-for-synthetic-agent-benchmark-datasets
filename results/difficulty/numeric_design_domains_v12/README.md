@@ -80,3 +80,9 @@ not silently pool its new generation protocol with this frozen cohort. A new bou
 paid check requires authorization beyond the remaining single call if three judgments
 are planned. Broader scoring, consistent native database-context treatment and final
 report integration remain open in #75–#77 and #50.
+
+## Later, separate follow-up
+
+After this 30-call cohort was frozen, the task-bound schema fix passed 145 offline
+tests and one separately authorized diagnostic at 50/100. That exhausted the 31-call
+batch cap. It is not pooled into these means. See [the follow-up](../numeric_design_schema_guard_v12/README.md).

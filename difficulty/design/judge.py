@@ -8,7 +8,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 
 from .inputs import ADAPTER_VERSION, file_hash, unique, validate_case, verify_sources
-from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, ROOT, STEP_DIMENSIONS,
+from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, SCHEMA_VERSION, ROOT, STEP_DIMENSIONS,
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
 
 PROTOCOL = "design_run_v1"
@@ -50,12 +50,14 @@ def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoni
         for repeat in range(repeats):
             api = {**config, "input": [{"role": "system", "content": prompt},
                                        {"role": "user", "content": json.dumps(row["payload"], ensure_ascii=False)}],
-                   "text": {"format": {"type": "json_schema", "name": "design_judgment", "strict": True, "schema": schema}}}
+                   "text": {"format": {"type": "json_schema", "name": "design_judgment", "strict": True,
+                                       "schema": response_schema([u["unit_id"] for u in row["payload"]["units"]])}}}
             requests.append({"request_id": row["payload"]["case_key"] + f"_r{repeat:02}",
                              "case_key": row["payload"]["case_key"], "repeat": repeat,
                              "input_sha256": row["input_sha256"], "api_request": api,
                              "request_sha256": digest(api), "preflight_errors": row["preflight_errors"]})
-    manifest = {"protocol": PROTOCOL, "validator_version": VALIDATOR_VERSION, "rubric_version": VERSION, "prompt_version": PROMPT_VERSION,
+    manifest = {"protocol": PROTOCOL, "validator_version": VALIDATOR_VERSION, "schema_version": SCHEMA_VERSION,
+                "rubric_version": VERSION, "prompt_version": PROMPT_VERSION,
                 "adapter_version": ADAPTER_VERSION, "rubric_sha256": digest(rubric_text()),
                 "prompt_sha256": digest(prompt), "schema_sha256": digest(schema),
                 "inventory_sha256": digest(rows), "requests_sha256": digest(requests),
@@ -80,7 +82,8 @@ def load_packet(packet, check_sources=True):
     manifest = json.loads((packet / "manifest.json").read_text())
     rows = json.loads((packet / "inventory_PRIVATE_COMPARISON.json").read_text())
     requests = json.loads((packet / "requests.json").read_text())
-    if (manifest.get("protocol") != PROTOCOL or manifest.get("validator_version") != VALIDATOR_VERSION or manifest.get("rubric_version") != VERSION or
+    if (manifest.get("protocol") != PROTOCOL or manifest.get("validator_version") != VALIDATOR_VERSION or
+        manifest.get("schema_version") != SCHEMA_VERSION or manifest.get("rubric_version") != VERSION or
         manifest.get("prompt_version") != PROMPT_VERSION or manifest.get("adapter_version") != ADAPTER_VERSION or
         manifest.get("implementation_sha256") != implementation_hashes() or
         manifest.get("rubric_sha256") != digest(rubric_text()) or
@@ -102,6 +105,8 @@ def load_packet(packet, check_sources=True):
             raise ValueError("Request identity/fingerprint mismatch")
         if json.loads(request["api_request"]["input"][1]["content"]) != row["payload"]:
             raise ValueError("Judge payload differs from canonical contract")
+        if request["api_request"]["text"]["format"]["schema"] != response_schema([u["unit_id"] for u in row["payload"]["units"]]):
+            raise ValueError("Response schema differs from task-bound unit contract")
     return manifest, rows, requests
 
 

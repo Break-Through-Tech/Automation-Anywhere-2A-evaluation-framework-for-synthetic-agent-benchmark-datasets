@@ -7,6 +7,7 @@ VERSION = "design_numeric_v1.0_provisional"
 INPUT_VERSION = "design_input_v1"
 OUTPUT_VERSION = "design_judgment_v1"
 PROMPT_VERSION = "design_prompt_v1.1"
+SCHEMA_VERSION = "design_schema_v1.2_task_bound_units"
 DIMENSIONS = ("workload", "reasoning", "tool_use", "dependencies", "information")
 STEP_DIMENSIONS = ("reasoning", "tool_use", "information")
 ROOT = Path(__file__).resolve().parents[2]
@@ -62,7 +63,10 @@ def _object(properties):
             "additionalProperties": False}
 
 
-def response_schema():
+def response_schema(unit_ids=None):
+    if unit_ids is not None and (len(set(unit_ids)) != len(unit_ids) or
+                                 any(not isinstance(uid, str) or not uid for uid in unit_ids)):
+        raise ValueError("Unit IDs must be unique nonempty strings")
     string = {"type": "string"}
     strings = {"type": "array", "items": string}
     evidence = {"type": "array", "items": _object({"source_id": string, "excerpt": string})}
@@ -71,16 +75,20 @@ def response_schema():
     dimensions = _object({k: assessment for k in DIMENSIONS})
     # Encode the same applicability rule at the API boundary and locally. The old
     # schema allowed context + numeric levels, which the local validator rejected.
-    common = {"unit_id": string, "applicability_rationale": string,
+    unit_id_schema = {"type": "string", "enum": list(unit_ids)} if unit_ids else string
+    common = {"unit_id": unit_id_schema, "applicability_rationale": string,
               "evidence": evidence, "rationale": string}
     unit = {"anyOf": [
         _object({**common, "applicability": {"type": "string", "enum": ["required", "selected_conditional"]},
                  "levels": _object({k: {"type": "integer", "minimum": 0, "maximum": 4} for k in STEP_DIMENSIONS})}),
         _object({**common, "applicability": {"type": "string", "enum": ["optional_not_selected", "context", "uncertain"]},
                  "levels": _object({k: {"type": "null"} for k in STEP_DIMENSIONS})})]}
+    units = {"type": "array", "items": unit}
+    if unit_ids is not None:
+        units["maxItems"] = len(unit_ids)
     return _object({"version": {"type": "string", "enum": [OUTPUT_VERSION]},
                     "case_key": string, "status": {"type": "string", "enum": ["scored", "unscorable"]},
-                    "units": {"type": "array", "items": unit}, "dimensions": dimensions,
+                    "units": units, "dimensions": dimensions,
                     "overall_score": {"type": ["integer", "null"], "minimum": 0, "maximum": 100},
                     "intended_endpoint": _object({"description": string, "evidence": evidence}),
                     "dependency_reasoning": string, "score_rationale": string,

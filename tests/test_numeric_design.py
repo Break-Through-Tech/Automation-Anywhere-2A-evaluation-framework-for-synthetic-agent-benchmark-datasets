@@ -209,6 +209,21 @@ class NumericRunnerTests(unittest.TestCase):
         judge.prepare_packet(rows or [self.row], out, model, repeats)
         return out
 
+    def test_request_schema_limits_units_to_the_supplied_case(self):
+        packet = self.packet()
+        manifest, rows, requests = judge.load_packet(packet)
+        schema = requests[0]["api_request"]["text"]["format"]["schema"]
+        self.assertEqual(manifest["schema_version"], rubric.SCHEMA_VERSION)
+        value = stub_judgment(self.row)
+        judge.Draft202012Validator(schema).validate(value)
+        value["units"][0]["unit_id"] = "invented_eligibility_check"
+        with self.assertRaises(Exception):
+            judge.Draft202012Validator(schema).validate(value)
+        with self.assertRaisesRegex(ValueError, "Unknown or duplicate"):
+            judge.validate_judgment(value, self.row)
+        empty_schema = rubric.response_schema([])
+        self.assertEqual(empty_schema["properties"]["units"]["maxItems"], 0)
+
     def test_no_client_construction_or_api_without_explicit_authorization(self):
         packet = self.packet()
         with patch("openai.OpenAI", side_effect=AssertionError("Must not construct a client")):

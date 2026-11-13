@@ -35,7 +35,7 @@ def aggregate(inventory, packets=()):
     seen_requests = set()
     for packet in packets:
         manifest, rows, requests = load_packet(packet)
-        signatures.add(digest({k: manifest[k] for k in ("protocol", "validator_version", "rubric_version", "prompt_version", "prompt_sha256", "schema_sha256", "rubric_sha256", "adapter_version", "config")}))
+        signatures.add(digest({k: manifest[k] for k in ("protocol", "validator_version", "schema_version", "rubric_version", "prompt_version", "prompt_sha256", "schema_sha256", "rubric_sha256", "adapter_version", "config")}))
         packet_hashes[str(Path(packet).resolve())] = digest(manifest)
         for row in rows:
             key = row["payload"]["case_key"]

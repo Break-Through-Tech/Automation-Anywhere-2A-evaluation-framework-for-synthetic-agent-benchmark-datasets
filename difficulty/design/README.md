@@ -18,6 +18,12 @@ nine complete three-judgment cases within tolerance. Thirty calls were used unde
 extended cap of 31. Airline stopped on an invented-unit response after its input-context
 gap was diagnosed; full calibration remains incomplete. No paid retry followed that error.
 
+The [task-bound schema follow-up](../../results/difficulty/numeric_design_schema_guard_v12/README.md)
+now passes its first real diagnostic at 50/100. All 31 approved batch calls are used.
+The new schema enumerates allowed unit IDs and limits unit-row count; 145 offline tests
+pass. Its one judgment is separate from the earlier generation protocol and does not
+establish repeatability. Additional API approval is required for further judgments.
+
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
 3. Obtain approval for API credits, run the bounded pilot, and inspect its explanations.
@@ -142,3 +148,12 @@ matching, whitespace rewriting or concatenation across separate values is allowe
 reports should be regenerated using their recorded implementation revision, not by
 silently rewriting old manifests. Revised validation policy is part of aggregation's
 compatibility fingerprint.
+
+## Task-bound generation schema
+
+`design_schema_v1.2_task_bound_units` restricts generated unit IDs to the supplied task
+and limits the number of unit rows. Local coverage and duplicate checks still apply.
+An unscorable response may omit unit assessments. This changes the generation contract,
+not the rubric or weights: prepare fresh packets and do not silently pool old/new schema
+results. The 30-call domain report is frozen to implementation commit `c72a37e`; use that
+revision to regenerate its outputs. Revalidation is not a license to accept invented units.

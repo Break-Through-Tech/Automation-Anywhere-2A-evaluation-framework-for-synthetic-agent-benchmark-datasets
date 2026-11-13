@@ -1,0 +1,105 @@
+{
+  "metric": "llm_source_only_designed_difficulty",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "scale": [
+    0,
+    100
+  ],
+  "task_weighting": "equal_weight_after_mean_of_all_planned_usable_repeats",
+  "inventory_sha256": "03763d951f2c101012b79550f4545bb74ef37e12189db347609106f07bc25e90",
+  "packet_manifest_hashes": {
+    "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/.cache/design_numeric_v1/airline_task_bound_schema_v12": "392739c896143303a9ced4183cac3b81badec1b29c0d64c7e7071d8a09c93734"
+  },
+  "protocol_fingerprints": [
+    "fe49ec284e05acade1097726f9bd19319f39eeb7d9394b370dc148a154e0169e"
+  ],
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "calibration_status": "not_established_by_aggregation",
+  "independent_validation": false,
+  "datasets": {
+    "tau2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    }
+  },
+  "domains": {
+    "tau2/airline": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    }
+  },
+  "workflows": {
+    "tau2/airline/not_defined": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    }
+  },
+  "limitations": [
+    "Provisional anchored index; numerical distances are not independently validated.",
+    "Incomplete means describe scored subsets, not omitted tasks.",
+    "Domain composition and available source information affect comparisons.",
+    "Higher difficulty alone is not higher dataset quality."
+  ]
+}
