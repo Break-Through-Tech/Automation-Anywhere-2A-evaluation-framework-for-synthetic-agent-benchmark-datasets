@@ -35,7 +35,7 @@ def aggregate(inventory, packets=()):
     seen_requests = set()
     for packet in packets:
         manifest, rows, requests = load_packet(packet)
-        signatures.add(digest({k: manifest[k] for k in ("protocol", "rubric_version", "prompt_version", "prompt_sha256", "schema_sha256", "rubric_sha256", "adapter_version", "config")}))
+        signatures.add(digest({k: manifest[k] for k in ("protocol", "validator_version", "rubric_version", "prompt_version", "prompt_sha256", "schema_sha256", "rubric_sha256", "adapter_version", "config")}))
         packet_hashes[str(Path(packet).resolve())] = digest(manifest)
         for row in rows:
             key = row["payload"]["case_key"]
@@ -75,6 +75,7 @@ def aggregate(inventory, packets=()):
                           "status": status, "reason": reason, "score": value, "dimensions": dimensions,
                           "n_planned_judgments": len(requested.get(key, [])),
                           "n_saved_judgments": sum(r is not None for r in attempts),
+                          "evidence_diagnostics": [d for r in attempts if r for d in r.get("evidence_diagnostics", [])],
                           "repeat_score_range": (max(r["judgment"]["overall_score"] for r in attempts) - min(r["judgment"]["overall_score"] for r in attempts)) if status == "scored" else None,
                           "source_quality_flags": row["source_quality_flags"]})
     datasets, domains, workflows = {}, {}, {}

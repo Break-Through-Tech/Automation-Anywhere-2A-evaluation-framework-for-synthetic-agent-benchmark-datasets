@@ -1,7 +1,7 @@
 # Calibration protocol before broad paid scoring
 
 Version: `design_calibration_v1`
-Status: prespecified candidate protocol; no paid numeric-judge calibration completed.
+Status: development repeats and source controls completed; nine-case domain repeat check passed. Airline source/context and unit-identity failure keep full calibration incomplete. See [the domain review](../../results/difficulty/numeric_design_domains_v12/README.md).
 
 1. Run offline contract, mapping, citation, schema, arithmetic and spending-gate tests.
 2. With explicit API authorization, score three synthetic cases sequentially:

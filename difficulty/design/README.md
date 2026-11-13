@@ -13,8 +13,10 @@ The [initial repeatability check](../../results/difficulty/numeric_design_repeat
 passes on three development cases: accounts 65/65/65 each, insurance 70/70/75.
 The [four source controls](../../results/difficulty/numeric_design_controls_v11/README.md)
 now pass their practical tolerances (35, 75, 40 and 40). Broader calibration remains: a
-ten-task, three-judgment-per-task domain sample is prepared but unsent; it requires
-approval for up to 30 calls.
+[domain calibration](../../results/difficulty/numeric_design_domains_v12/README.md) now has
+nine complete three-judgment cases within tolerance. Thirty calls were used under an
+extended cap of 31. Airline stopped on an invented-unit response after its input-context
+gap was diagnosed; full calibration remains incomplete. No paid retry followed that error.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
@@ -121,3 +123,22 @@ command to cross-check existing features. It never blends them into the numeric 
 Do not invent missing τ-bench tags, tune to copy supplied labels, or force one dataset
 above another. Equal scores can be legitimate. Report incomplete averages as scored-
 subset means and do not equate greater difficulty with greater dataset quality.
+
+## Evidence validation v1.2
+
+A genuine quotation from a task-specific milestone may support a shared workflow step.
+The validator now records a `unit_uses_cross_reference` review diagnostic when a unit
+has no direct unit-source citation, instead of rejecting the entire response. It still
+requires exact, nonempty quotations from the same task's source catalog, valid unit
+coverage/applicability, and consistent score arithmetic. A warning is not proof that
+the cited source is semantically relevant.
+
+This is a versioned validator-only correction: the generation prompt v1.1, schema,
+inputs, weights, model and settings are unchanged. Existing raw responses were reassessed in fresh packets with provenance; no
+generations were repeated. The original rejected responses remain unchanged.
+Exact quotations may match the literal source or one decoded JSON string value,
+so a documented line break is not rejected solely because JSON escaped it. No fuzzy
+matching, whitespace rewriting or concatenation across separate values is allowed. Packets pin implementation hashes: old
+reports should be regenerated using their recorded implementation revision, not by
+silently rewriting old manifests. Revised validation policy is part of aggregation's
+compatibility fingerprint.

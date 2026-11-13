@@ -175,7 +175,7 @@ class NumericValidationTests(unittest.TestCase):
         with self.assertRaises(Exception):
             judge.Draft202012Validator(rubric.response_schema()).validate(value)
 
-    def test_own_source_citations_and_required_step_lower_bound(self):
+    def test_same_task_cross_reference_is_flagged_not_rejected(self):
         b = inputs.CaseBuilder("synthetic", "fixture", "other", "W1", Path(self.tmp.name) / "source")
         source = Path(self.tmp.name) / "source/requirements.txt"
         b.add("S", source.read_text(), source, "original")
@@ -183,8 +183,18 @@ class NumericValidationTests(unittest.TestCase):
         b.unit("U1", "T", "workflow_step")
         row = b.finish()
         value = stub_judgment(row)
-        with self.assertRaisesRegex(ValueError, "own source"):
+        judge.validate_judgment(value, row)
+        self.assertEqual(judge.evidence_diagnostics(value, row)[0]["unit_id"], "U1")
+        value["units"][0]["evidence"][0]["excerpt"] = "Invented quotation"
+        with self.assertRaisesRegex(ValueError, "absent"):
             judge.validate_judgment(value, row)
+
+    def test_exact_quotes_allow_decoded_json_strings_not_fuzzy_or_joined_text(self):
+        text = json.dumps({"tool": {"doc": "First line\nsecond line."}, "other": "Third line."})
+        self.assertTrue(judge.quotation_in_source("First line\nsecond line.", text))
+        self.assertFalse(judge.quotation_in_source("First line second line.", text))
+        self.assertFalse(judge.quotation_in_source("second line.Third line.", text))
+        self.assertFalse(judge.quotation_in_source(" \n", text))
 
 
 class NumericRunnerTests(unittest.TestCase):

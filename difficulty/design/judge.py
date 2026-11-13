@@ -12,6 +12,7 @@ from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, ROOT, STEP_DIME
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
 
 PROTOCOL = "design_run_v1"
+VALIDATOR_VERSION = "design_evidence_validation_v1.2"
 
 
 def implementation_hashes():
@@ -54,7 +55,7 @@ def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoni
                              "case_key": row["payload"]["case_key"], "repeat": repeat,
                              "input_sha256": row["input_sha256"], "api_request": api,
                              "request_sha256": digest(api), "preflight_errors": row["preflight_errors"]})
-    manifest = {"protocol": PROTOCOL, "rubric_version": VERSION, "prompt_version": PROMPT_VERSION,
+    manifest = {"protocol": PROTOCOL, "validator_version": VALIDATOR_VERSION, "rubric_version": VERSION, "prompt_version": PROMPT_VERSION,
                 "adapter_version": ADAPTER_VERSION, "rubric_sha256": digest(rubric_text()),
                 "prompt_sha256": digest(prompt), "schema_sha256": digest(schema),
                 "inventory_sha256": digest(rows), "requests_sha256": digest(requests),
@@ -79,7 +80,7 @@ def load_packet(packet, check_sources=True):
     manifest = json.loads((packet / "manifest.json").read_text())
     rows = json.loads((packet / "inventory_PRIVATE_COMPARISON.json").read_text())
     requests = json.loads((packet / "requests.json").read_text())
-    if (manifest.get("protocol") != PROTOCOL or manifest.get("rubric_version") != VERSION or
+    if (manifest.get("protocol") != PROTOCOL or manifest.get("validator_version") != VALIDATOR_VERSION or manifest.get("rubric_version") != VERSION or
         manifest.get("prompt_version") != PROMPT_VERSION or manifest.get("adapter_version") != ADAPTER_VERSION or
         manifest.get("implementation_sha256") != implementation_hashes() or
         manifest.get("rubric_sha256") != digest(rubric_text()) or
@@ -104,6 +105,29 @@ def load_packet(packet, check_sources=True):
     return manifest, rows, requests
 
 
+def quotation_in_source(excerpt, text):
+    """Exact source text or one decoded JSON string leaf; never fuzzy matching."""
+    if not excerpt.strip():
+        return False
+    if excerpt in text:
+        return True
+    try:
+        parsed = json.loads(text)
+    except (ValueError, TypeError):
+        return False
+
+    def contains(value):
+        if isinstance(value, str):
+            return excerpt in value
+        if isinstance(value, dict):
+            return any(contains(v) for v in value.values())
+        if isinstance(value, list):
+            return any(contains(v) for v in value)
+        return False
+
+    return contains(parsed)
+
+
 def validate_judgment(value, row):
     Draft202012Validator(response_schema()).validate(value)
     if value["case_key"] != row["payload"]["case_key"] or value["version"] != OUTPUT_VERSION:
@@ -115,7 +139,7 @@ def validate_judgment(value, row):
         if required and not items:
             raise ValueError("Assessment needs source evidence")
         for item in items:
-            if not item["excerpt"].strip() or item["source_id"] not in catalog or item["excerpt"] not in catalog[item["source_id"]]:
+            if item["source_id"] not in catalog or not quotation_in_source(item["excerpt"], catalog[item["source_id"]]):
                 raise ValueError("Citation is absent from the named source")
 
     for dimension in value["dimensions"].values():
@@ -130,8 +154,6 @@ def validate_judgment(value, row):
             raise ValueError("Unknown or duplicate assessed unit")
         seen.add(uid)
         evidence(unit["evidence"], True)
-        if not any(e["source_id"] in units[uid]["source_ids"] for e in unit["evidence"]):
-            raise ValueError("Unit assessment must cite its own source")
         if not unit["rationale"].strip() or not unit["applicability_rationale"].strip():
             raise ValueError("Unit applicability and difficulty require reasoning")
         if unit["applicability"] in {"required", "selected_conditional"}:
@@ -167,6 +189,20 @@ def validate_judgment(value, row):
     return value
 
 
+def evidence_diagnostics(value, row):
+    """Flag cross-references for review; exact same-task quotations remain mandatory.
+
+    A milestone can legitimately supply task-specific evidence for a shared
+    workflow step. Source membership alone cannot establish semantic relevance.
+    """
+    units = {u["unit_id"]: u for u in row["payload"]["units"]}
+    return [{"code": "unit_uses_cross_reference", "unit_id": u["unit_id"],
+             "cited_source_ids": sorted({e["source_id"] for e in u["evidence"]}),
+             "note": "No direct unit-source citation; inspect relevance of same-task evidence."}
+            for u in value["units"]
+            if not any(e["source_id"] in units[u["unit_id"]]["source_ids"] for e in u["evidence"])]
+
+
 def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
@@ -183,6 +219,9 @@ def read_result(packet, request, row):
         raise ValueError("Saved raw response changed or missing")
     if result["status"] == "validated":
         validate_judgment(result["judgment"], row)
+        if (result.get("validator_version") != VALIDATOR_VERSION or
+            result.get("evidence_diagnostics") != evidence_diagnostics(result["judgment"], row)):
+            raise ValueError("Saved validation policy or evidence diagnostics changed")
         raw_value = json.loads(raw.read_text())
         text = "".join(part["text"] for message in raw_value.get("output", [])
                        for part in message.get("content", []) if part.get("type") == "output_text")
@@ -228,7 +267,7 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
             raise ValueError("Interrupted/uncertain request: inspect raw response before any paid replay")
         if calls >= max_calls:
             break
-        result = {"request_sha256": request["request_sha256"], "input_sha256": row["input_sha256"],
+        result = {"validator_version": VALIDATOR_VERSION, "request_sha256": request["request_sha256"], "input_sha256": row["input_sha256"],
                   "requested_model": manifest["config"]["model"], "started_at": utc_now()}
         raw_path = packet / "raw" / (rid + ".json")
         if request["preflight_errors"]:
@@ -252,7 +291,8 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
                         raise ValueError("Response was not completed (refusal/truncation must be inspected)")
                     judgment = json.loads(response.output_text)
                     validate_judgment(judgment, row)
-                    result.update(status="validated", judgment=judgment)
+                    result.update(status="validated", judgment=judgment,
+                                  evidence_diagnostics=evidence_diagnostics(judgment, row))
                     if judgment["status"] == "scored":
                         valid_scores.append(judgment["overall_score"])
                 except Exception as exc:
