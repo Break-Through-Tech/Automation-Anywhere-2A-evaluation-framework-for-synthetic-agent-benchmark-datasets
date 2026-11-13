@@ -1,0 +1,209 @@
+{
+  "status": "complete_planned_source_only_run",
+  "native_inventory": 278,
+  "native_requests": 284,
+  "new_requests_this_stage": 302,
+  "new_request_cap": 302,
+  "usage_native_judgments_only": {
+    "input_tokens": 15153110,
+    "output_tokens": 412933,
+    "total_tokens": 15566043
+  },
+  "datasets": {
+    "synthetic": {
+      "n_total": 64,
+      "n_scored": 64,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 64
+      },
+      "mean": 64.296875,
+      "median": 65.0,
+      "min": 40,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 6.426701349399628,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 6,
+        "60-79": 58,
+        "80-100": 0
+      }
+    },
+    "tau2": {
+      "n_total": 278,
+      "n_scored": 278,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 278
+      },
+      "mean": 65.34772182254197,
+      "median": 70.0,
+      "min": 30,
+      "max": 85,
+      "q1": 55.0,
+      "q3": 75.0,
+      "iqr": 20.0,
+      "population_stddev": 11.122950004037667,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 1,
+        "40-59": 81,
+        "60-79": 166,
+        "80-100": 30
+      }
+    }
+  },
+  "native_domains": {
+    "tau2/airline": {
+      "n_total": 50,
+      "n_scored": 50,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 50
+      },
+      "mean": 59.9,
+      "median": 60.0,
+      "min": 30,
+      "max": 85,
+      "q1": 50.0,
+      "q3": 70.0,
+      "iqr": 20.0,
+      "population_stddev": 12.941792766073794,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 1,
+        "40-59": 20,
+        "60-79": 26,
+        "80-100": 3
+      }
+    },
+    "tau2/retail": {
+      "n_total": 114,
+      "n_scored": 114,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 114
+      },
+      "mean": 66.0233918128655,
+      "median": 70.0,
+      "min": 50,
+      "max": 85,
+      "q1": 60.0,
+      "q3": 75.0,
+      "iqr": 15.0,
+      "population_stddev": 9.509174732338627,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 25,
+        "60-79": 86,
+        "80-100": 3
+      }
+    },
+    "tau2/telecom": {
+      "n_total": 114,
+      "n_scored": 114,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 114
+      },
+      "mean": 67.06140350877193,
+      "median": 70.0,
+      "min": 50,
+      "max": 85,
+      "q1": 55.0,
+      "q3": 75.0,
+      "iqr": 20.0,
+      "population_stddev": 11.018553004404202,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 36,
+        "60-79": 54,
+        "80-100": 24
+      }
+    }
+  },
+  "native_revision": {
+    "benchmark": "tau2-bench",
+    "revision": "dd8757d4c8791dad7b3cdaf02a105a3d5f9d86bd",
+    "split": "base",
+    "split_sha256": "b22ced4d9a9850ac9aea31c53bdcb6d6009058140bd9acc7db37c1d36222ba8b",
+    "native_context_version": "tau2_source_context_v1",
+    "selected_initial_record_count": 4
+  },
+  "native_context_version": "tau2_source_context_v1",
+  "protocol": {
+    "config": {
+      "model": "gpt-6-sol",
+      "max_output_tokens": 10000,
+      "store": false,
+      "reasoning": {
+        "effort": "low"
+      }
+    },
+    "rubric_version": "design_numeric_v1.0_provisional",
+    "prompt_version": "design_prompt_v1.3",
+    "schema_version": "design_schema_v1.4_source_evidence_refs",
+    "validator_version": "design_validation_v1.5_request_bound_metadata",
+    "implementation_sha256": {
+      "difficulty/design/__init__.py": "60aa3851440117d13f77fc9c9558f8cdf454cc1c62aa13f86ec61680d2587520",
+      "difficulty/design/__main__.py": "7a98763721b88cdd56cb14eccc92cbd4ccc4dc6160938114b58d00c02c442a3f",
+      "difficulty/design/calibration.py": "292db70153643545054f0db8ec7ff2dda96cc41368cf296a7fe1e022f7aa6bef",
+      "difficulty/design/crosscheck.py": "26236e715e149bffa99eac57726e0fa57f6066503e8ecc7c50f89f99428e6d9c",
+      "difficulty/design/evidence_choices.py": "8b5a2171f8c102e2967bca5a6a55132a4f033cd9b4623c4c6402e4937eaee926",
+      "difficulty/design/framework.py": "0d00463046b48d8a72f2ccff53837891988d8f30fd802ac3cbdd05b92b1cae8f",
+      "difficulty/design/inputs.py": "9a9b0f65fe6b59bfed2fe5ddfdc0abb963117029fb3b3b5125031bdf57d09d2c",
+      "difficulty/design/judge.py": "ab994c67b4c8be9bc909d942bd8805e0bf96494e79d3e5570b2a6d673e718069",
+      "difficulty/design/native_context.py": "ae0d7a92a4d92b616fe7a0997d2ce3828ce512c036b0e5aa4cd6535a249d5bb3",
+      "difficulty/design/reporting.py": "8ef872c3b91e8a8bf824d307f674bedb4c3c93cd55709a285c462f946ceaa963",
+      "difficulty/design/rubric.py": "6accf6b14e46891d3269fdf436218a251255fab9a9d3df01fee0a815c98cafec"
+    }
+  },
+  "offline_tests_passed": 158,
+  "model_case_key_mismatches": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "request_id": "31953c555e5fef2e2103bd45_r00",
+      "bound_case_key": "31953c555e5fef2e2103bd45",
+      "model_reported_case_key": "31953c555e5f2e2103bd45",
+      "model_case_key_mismatch": true
+    }
+  ],
+  "reported_total_mismatches": [
+    {
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "request_id": "3a03a1c064828f22f3ba9a11_r00",
+      "rule": "5_times_sum_of_unchanged_dimension_levels",
+      "model_reported_total": 85,
+      "computed_total": 80,
+      "reported_total_mismatch": true
+    }
+  ],
+  "source_files_unchanged_verified": true,
+  "synthetic_original_mean_unchanged": 64.296875,
+  "synthetic_primary_judgments": 64,
+  "synthetic_diagnostic_repeats_excluded_from_primary_mean": true,
+  "native_repeats": "3 pilots have 3 judgments each; remaining 275 have one; equal task weights after repeat mean",
+  "independent_validation": false,
+  "archive_sha256": "f46df0156490fd9bbcfe25b15514e2108ef151f94ed02c994b5d37cbf20a6476",
+  "limitations": [
+    "Provisional equal-weight rubric, not independently validated difficulty truth.",
+    "Unequal domain mix and source granularity limit direct dataset comparisons.",
+    "No benchmark agents/tools executed; does not measure empirical success or environment feasibility.",
+    "Native labels and equivalent structural profiles are unavailable, not zero."
+  ],
+  "frozen_scoring_implementation_commit": "072a443969c334a3ddeadeb51f9257dc5bde2c65",
+  "framework_report_exact_match": true,
+  "archive_replay_verified": true,
+  "offline_replay_comparison": "Every task compared by case identity; dataset/domain/workflow summaries and protocols match. Serialized task ordering is not substantive."
+}

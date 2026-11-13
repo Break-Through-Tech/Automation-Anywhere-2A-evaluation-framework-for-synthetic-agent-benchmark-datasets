@@ -1,0 +1,4 @@
+domain,n_total,n_scored,mean,median,min,max
+airline,50,50,59.9,60.0,30,85
+retail,114,114,66.0233918128655,70.0,50,85
+telecom,114,114,67.06140350877193,70.0,50,85

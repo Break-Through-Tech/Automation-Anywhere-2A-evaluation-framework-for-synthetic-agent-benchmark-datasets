@@ -1,11 +1,24 @@
 # Evaluation Framework for Agent Benchmark Datasets
 
-## Numeric LLM designed difficulty (current roadmap)
+## Numeric LLM designed difficulty (completed run)
 
-The source-only numeric judge is implemented; paid calibration and scoring are pending.
-Start with [the short guide](difficulty/design/README.md) and [the provisional rubric](docs/evaluation/numeric_design_rubric_v1.md).
-It scores each test case from its scenario, workflow steps, milestones, tools and intended endpoint.
-Historical feature profiles and execution results below remain separate supplementary work.
+**τ²-bench 65.35/100** (278/278 tasks); **synthetic 64.30/100** (64/64).
+See [the comparison, domain scores and charts](results/difficulty/tau2_final_v19/README.md)
+and [the scoring guide](difficulty/design/README.md).
+An LLM assesses five source-only difficulty dimensions; the pipeline computes the
+fixed equal-weight index. This is provisional designed complexity, not execution
+success or dataset quality. Current-format practical calibration passed; 158 tests
+passed. Ratings, source evidence, raw responses and deterministic metadata audits
+are retained. No supplied data were changed.
+
+Reproduce the saved task and dataset summaries without API calls:
+
+```bash
+python -m difficulty.reproduce_numeric_design --out .cache/replayed_design_v19
+```
+
+This requires the original native source checkout at the revision documented in the
+comparison report. Historical coverage/empirical analysis below remains separate.
 
 ## Run the evaluation framework (issue #15)
 

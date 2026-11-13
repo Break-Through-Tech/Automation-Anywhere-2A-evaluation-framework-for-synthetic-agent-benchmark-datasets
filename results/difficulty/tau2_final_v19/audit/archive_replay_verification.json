@@ -1,0 +1,55 @@
+{
+  "status": "exact_scores_and_summaries_match",
+  "api_calls": 0,
+  "tasks": 342,
+  "datasets": {
+    "synthetic": {
+      "n_total": 64,
+      "n_scored": 64,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 64
+      },
+      "mean": 64.296875,
+      "median": 65.0,
+      "min": 40,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 6.426701349399628,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 6,
+        "60-79": 58,
+        "80-100": 0
+      }
+    },
+    "tau2": {
+      "n_total": 278,
+      "n_scored": 278,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 278
+      },
+      "mean": 65.34772182254197,
+      "median": 70.0,
+      "min": 30,
+      "max": 85,
+      "q1": 55.0,
+      "q3": 75.0,
+      "iqr": 20.0,
+      "population_stddev": 11.122950004037667,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 1,
+        "40-59": 81,
+        "60-79": 166,
+        "80-100": 30
+      }
+    }
+  }
+}

@@ -1,9 +1,17 @@
 # LLM-judge difficulty
 
+## Current numeric designed-difficulty results
+
+τ²-bench **65.35/100**, all 278 tasks; synthetic **64.30/100**, all 64.
+Use [the final comparison](../results/difficulty/tau2_final_v19/README.md) and
+[the source-only guide](design/README.md). The historical execution-grader material
+below is supplementary and does not define this numeric design metric.
+
+
 ## Current source-only numeric mode
 
 Use [`difficulty.design`](design/README.md) for the numeric designed-difficulty roadmap (#71).
-The implementation and offline checks are ready; paid calibration and actual scores are pending.
+The complete synthetic/native source-only scores and bounded practical calibration are published above; independent validity remains unestablished.
 The execution judge and historical structural index below are separate procedures.
 
 Offline source-consistency triage for all 64 original tasks is documented in

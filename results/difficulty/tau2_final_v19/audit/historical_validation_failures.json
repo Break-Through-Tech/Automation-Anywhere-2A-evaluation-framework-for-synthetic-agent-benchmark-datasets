@@ -1,0 +1,862 @@
+[
+  {
+    "packet": ".cache/design_numeric_v1/tau2_final_refs_v16/native/case_166",
+    "original_result": {
+      "validator_version": "design_evidence_validation_v1.3",
+      "request_sha256": "d0c1422bc07d47d0abf601b8d870e9a7da1c893098dd16b506d2d82746029367",
+      "input_sha256": "2f120a44e913e81a66b86bbdd0f9d6e70fb6092386af9e0184b307ea54340327",
+      "requested_model": "gpt-6-sol",
+      "started_at": "2026-11-13T23:29:03.179597+00:00",
+      "returned_model": "gpt-6-sol",
+      "response_id": "resp_0b92574e37fdc4ac016af79d400f8487d1b8af7cc373495ed8",
+      "usage": {
+        "input_tokens": 75185,
+        "input_tokens_details": {
+          "cache_write_tokens": 75182,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2006,
+        "output_tokens_details": {
+          "reasoning_tokens": 59
+        },
+        "total_tokens": 77191
+      },
+      "decoding_metadata": {
+        "temperature": 1.0,
+        "top_p": 0.98,
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "low",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "max_output_tokens": 10000
+      },
+      "model_judgment": {
+        "version": "design_judgment_v1",
+        "case_key": "3a03a1c064828f22f3ba9a11",
+        "status": "scored",
+        "units": [
+          {
+            "unit_id": "task_requirements",
+            "applicability_rationale": "The user requests MMS restoration, permits a 2.0 GB refuel if necessary, and rules out a plan change.",
+            "evidence": [
+              {
+                "citation_id": "E0006"
+              },
+              {
+                "citation_id": "E0007"
+              },
+              {
+                "citation_id": "E0154"
+              }
+            ],
+            "rationale": "Identify the customer, diagnose the failure, respect the plan constraint, and verify MMS capability. The customer’s limited technical comfort adds a need for clear guidance.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 3,
+              "tool_use": 2,
+              "information": 3
+            }
+          },
+          {
+            "unit_id": "reference_001",
+            "applicability_rationale": "Setup enables airplane mode, which blocks cellular service.",
+            "evidence": [
+              {
+                "citation_id": "E0021"
+              },
+              {
+                "citation_id": "E0220"
+              }
+            ],
+            "rationale": "Check its state before guiding the user to turn it off.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_002",
+            "applicability_rationale": "Setup selects 2G-only mode; the MMS guidance calls for a suitable network mode.",
+            "evidence": [
+              {
+                "citation_id": "E0015"
+              },
+              {
+                "citation_id": "E0310"
+              },
+              {
+                "citation_id": "E0353"
+              }
+            ],
+            "rationale": "Diagnose the network preference and supply the documented mode argument.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_003",
+            "applicability_rationale": "Setup enables Wi-Fi Calling, and the MMS procedure directs disabling it when on.",
+            "evidence": [
+              {
+                "citation_id": "E0015"
+              },
+              {
+                "citation_id": "E0317"
+              }
+            ],
+            "rationale": "Confirm its state before guiding the toggle; its precise contribution to the failure is not established.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_004",
+            "applicability_rationale": "Setup removes the MMSC URL, matching the documented reset condition.",
+            "evidence": [
+              {
+                "citation_id": "E0631"
+              },
+              {
+                "citation_id": "E0314"
+              }
+            ],
+            "rationale": "Check the APN settings and guide a reset rather than inventing replacement values.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_005",
+            "applicability_rationale": "The policy requires a reboot after resetting APN settings.",
+            "evidence": [
+              {
+                "citation_id": "E0232"
+              },
+              {
+                "citation_id": "E0363"
+              }
+            ],
+            "rationale": "Coordinate this dependent user action and explain it to a user concerned about rebooting.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 1,
+              "information": 1
+            }
+          },
+          {
+            "unit_id": "reference_006",
+            "applicability_rationale": "Setup removes the messaging app’s SMS permission.",
+            "evidence": [
+              {
+                "citation_id": "E0016"
+              },
+              {
+                "citation_id": "E0320"
+              },
+              {
+                "citation_id": "E0366"
+              }
+            ],
+            "rationale": "Verify the app permission and bind the messaging app and SMS permission arguments.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_007",
+            "applicability_rationale": "Setup also removes the messaging app’s storage permission.",
+            "evidence": [
+              {
+                "citation_id": "E0016"
+              },
+              {
+                "citation_id": "E0320"
+              },
+              {
+                "citation_id": "E0369"
+              }
+            ],
+            "rationale": "Restore the separately missing storage permission using the correct app and permission arguments.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_008",
+            "applicability_rationale": "Setup turns mobile data off, while MMS requires mobile data.",
+            "evidence": [
+              {
+                "citation_id": "E0016"
+              },
+              {
+                "citation_id": "E0293"
+              },
+              {
+                "citation_id": "E0264"
+              }
+            ],
+            "rationale": "Check the device’s data state before directing the toggle.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_009",
+            "applicability_rationale": "Setup raises usage above the plan limit, and completion requires a 2.0 GB refuel; the user permits refueling but not a plan change.",
+            "evidence": [
+              {
+                "citation_id": "E0016"
+              },
+              {
+                "citation_id": "E0670"
+              },
+              {
+                "citation_id": "E0007"
+              },
+              {
+                "citation_id": "E0327"
+              }
+            ],
+            "rationale": "Retrieve usage and price, confirm the charge and amount, then bind the correct customer and line to the refuel.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 3,
+              "tool_use": 3,
+              "information": 3
+            }
+          },
+          {
+            "unit_id": "reference_010",
+            "applicability_rationale": "Setup unseats the SIM; policy prescribes reseating a missing SIM.",
+            "evidence": [
+              {
+                "citation_id": "E0629"
+              },
+              {
+                "citation_id": "E0225"
+              },
+              {
+                "citation_id": "E0226"
+              }
+            ],
+            "rationale": "Diagnose the SIM state and guide the user through restoring it.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_011",
+            "applicability_rationale": "The customer is abroad and setup disables roaming on the line, although device roaming is turned on.",
+            "evidence": [
+              {
+                "citation_id": "E0005"
+              },
+              {
+                "citation_id": "E0017"
+              },
+              {
+                "citation_id": "E0152"
+              },
+              {
+                "citation_id": "E0379"
+              }
+            ],
+            "rationale": "Distinguish line-level roaming from the phone setting, verify the associated line, and enable it.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 3,
+              "information": 3
+            }
+          }
+        ],
+        "dimensions": {
+          "workload": {
+            "level": 4,
+            "rationale": "Restoring MMS spans substantial device troubleshooting, two app permissions, and carrier-side data and roaming changes; setup operations themselves are not charged as work.",
+            "evidence": [
+              {
+                "citation_id": "E0015"
+              },
+              {
+                "citation_id": "E0016"
+              },
+              {
+                "citation_id": "E0017"
+              },
+              {
+                "citation_id": "E0327"
+              }
+            ]
+          },
+          "reasoning": {
+            "level": 3,
+            "rationale": "The agent must reconcile multiple simultaneous causes across service, data, MMS configuration, and account state while respecting the no-plan-change constraint.",
+            "evidence": [
+              {
+                "citation_id": "E0293"
+              },
+              {
+                "citation_id": "E0297"
+              },
+              {
+                "citation_id": "E0300"
+              },
+              {
+                "citation_id": "E0007"
+              },
+              {
+                "citation_id": "E0152"
+              }
+            ]
+          },
+          "tool_use": {
+            "level": 3,
+            "rationale": "The path combines user-device diagnostics and actions with carrier lookups and writes requiring repeated customer-to-line binding, but not substantial nested-argument orchestration.",
+            "evidence": [
+              {
+                "citation_id": "E0387"
+              },
+              {
+                "citation_id": "E0388"
+              },
+              {
+                "citation_id": "E0390"
+              },
+              {
+                "citation_id": "E0383"
+              },
+              {
+                "citation_id": "E0320"
+              }
+            ]
+          },
+          "dependencies": {
+            "level": 3,
+            "rationale": "Customer identification precedes account changes; cellular service and data underpin MMS, APN reset precedes reboot, and refueling requires price confirmation and the correct line. User-guided actions and status checks create linked handoffs.",
+            "evidence": [
+              {
+                "citation_id": "E0154"
+              },
+              {
+                "citation_id": "E0243"
+              },
+              {
+                "citation_id": "E0293"
+              },
+              {
+                "citation_id": "E0232"
+              },
+              {
+                "citation_id": "E0136"
+              },
+              {
+                "citation_id": "E0139"
+              }
+            ]
+          },
+          "information": {
+            "level": 3,
+            "rationale": "The necessary facts are distributed between phone diagnostics and carrier customer, line, plan, usage, and roaming records; baseline design records are not facts supplied to the agent.",
+            "evidence": [
+              {
+                "citation_id": "E0175"
+              },
+              {
+                "citation_id": "E0177"
+              },
+              {
+                "citation_id": "E0179"
+              },
+              {
+                "citation_id": "E0185"
+              },
+              {
+                "citation_id": "E0387"
+              },
+              {
+                "citation_id": "E0388"
+              }
+            ]
+          }
+        },
+        "overall_score": 85,
+        "intended_endpoint": {
+          "description": "Restore and verify the ability to send MMS, with exactly 2.0 GB refueled on the associated line and no plan change. This is an intended state, not an observed outcome.",
+          "evidence": [
+            {
+              "citation_id": "E0006"
+            },
+            {
+              "citation_id": "E0007"
+            },
+            {
+              "citation_id": "E0327"
+            }
+          ]
+        },
+        "dependency_reasoning": "Identify the customer and line, diagnose and restore cellular service, then establish working mobile data and roaming before verifying MMS-specific settings and permissions. Reboot follows APN reset; the refuel follows usage and price checks. The reference list indicates intended actions, not an authoritative execution order.",
+        "score_rationale": "Ratings of 4 workload, 3 reasoning, 3 tool use, 3 dependencies, and 3 information sum to 16; 5 × 16 = 80.",
+        "uncertainties": [
+          "The exact effects and status-return behavior of some device actions are not fully specified; verification may require further diagnostic calls.",
+          "The listed reference-action order is not necessarily a safe troubleshooting order.",
+          "Wi-Fi Calling is enabled in setup, but its precise causal contribution to this MMS failure is not established."
+        ],
+        "source_quality_flags": [
+          "The scenario mentions `get_status_bar`, while the supplied user tool contract names `check_status_bar`; this naming inconsistency is not scored as task difficulty.",
+          "Baseline records describe pre-setup values; setup actions change usage, roaming, and device state. These records must not be treated as information already available to the agent."
+        ],
+        "unscorable_reason": ""
+      },
+      "status": "format_error",
+      "error": "Overall score differs from frozen arithmetic",
+      "raw_sha256": "23638e15b0affb7c41da1c5d300a2035af64f936f92334d5b4c532426dd29350",
+      "finished_at": "2026-11-13T23:29:18.855237+00:00"
+    }
+  },
+  {
+    "packet": ".cache/design_numeric_v1/tau2_final_refs_v18/native/case_174",
+    "original_result": {
+      "validator_version": "design_evidence_validation_v1.4_derived_score",
+      "request_sha256": "0cf581cc42551c4f4226bb645a6bd568a5f1ea44ba522692d7fcbf8f63b63256",
+      "input_sha256": "70e92745e5fd61db68f6e80355e97d7d9c40f3a53d117c420d336a1f30219834",
+      "requested_model": "gpt-6-sol",
+      "started_at": "2026-11-13T23:34:46.453132+00:00",
+      "returned_model": "gpt-6-sol",
+      "response_id": "resp_02945eab9402a2f4016af79e96a78887d1a78d1412e287d69a",
+      "usage": {
+        "input_tokens": 73326,
+        "input_tokens_details": {
+          "cache_write_tokens": 73323,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1905,
+        "output_tokens_details": {
+          "reasoning_tokens": 77
+        },
+        "total_tokens": 75231
+      },
+      "decoding_metadata": {
+        "temperature": 1.0,
+        "top_p": 0.98,
+        "reasoning": {
+          "context": "all_turns",
+          "effort": "low",
+          "generate_summary": null,
+          "mode": "standard",
+          "summary": null
+        },
+        "max_output_tokens": 10000
+      },
+      "model_judgment": {
+        "version": "design_judgment_v1",
+        "case_key": "31953c555e5f2e2103bd45",
+        "status": "scored",
+        "units": [
+          {
+            "unit_id": "task_requirements",
+            "applicability_rationale": "The customer requests a working MMS connection, and technical support must identify the customer and diagnose the service and data prerequisites.",
+            "evidence": [
+              {
+                "citation_id": "E0004"
+              },
+              {
+                "citation_id": "E0147"
+              },
+              {
+                "citation_id": "E0286"
+              }
+            ],
+            "rationale": "This adds customer lookup, tool-grounded diagnosis, coordination with the user, and verification around the documented repairs; it does not count setup actions as work.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 3,
+              "tool_use": 3,
+              "information": 3
+            }
+          },
+          {
+            "unit_id": "reference_001",
+            "applicability_rationale": "Setup turns airplane mode on; the support rule directs the user to turn it off when found on.",
+            "evidence": [
+              {
+                "citation_id": "E0015"
+              },
+              {
+                "citation_id": "E0213"
+              },
+              {
+                "citation_id": "E0340"
+              }
+            ],
+            "rationale": "Diagnose the setting, guide one toggle, and check the resulting connectivity.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 1,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_002",
+            "applicability_rationale": "Setup selects 2G only, which the MMS guidance identifies as unsuitable.",
+            "evidence": [
+              {
+                "citation_id": "E0010"
+              },
+              {
+                "citation_id": "E0303"
+              },
+              {
+                "citation_id": "E0343"
+              }
+            ],
+            "rationale": "Check network preference or technology and guide the specified 4G/5G selection.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_003",
+            "applicability_rationale": "Setup enables Wi-Fi Calling; MMS guidance prescribes disabling it when it is on.",
+            "evidence": [
+              {
+                "citation_id": "E0010"
+              },
+              {
+                "citation_id": "E0310"
+              },
+              {
+                "citation_id": "E0347"
+              }
+            ],
+            "rationale": "Verify the setting before guiding the user to toggle it off.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 1,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_004",
+            "applicability_rationale": "Setup removes the messaging app's SMS permission, and the reference restores that permission.",
+            "evidence": [
+              {
+                "citation_id": "E0011"
+              },
+              {
+                "citation_id": "E0313"
+              },
+              {
+                "citation_id": "E0350"
+              }
+            ],
+            "rationale": "Inspect app permissions and bind the messaging app and SMS permission to the repair.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_005",
+            "applicability_rationale": "Setup disables mobile data, which MMS requires.",
+            "evidence": [
+              {
+                "citation_id": "E0011"
+              },
+              {
+                "citation_id": "E0257"
+              },
+              {
+                "citation_id": "E0353"
+              }
+            ],
+            "rationale": "Verify data status and guide the user to turn it on.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 1,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_006",
+            "applicability_rationale": "Setup raises usage above the documented plan limit; the customer permits refueling but rejects a plan change, and completion requires 2.0 GB.",
+            "evidence": [
+              {
+                "citation_id": "E0011"
+              },
+              {
+                "citation_id": "E0653"
+              },
+              {
+                "citation_id": "E0005"
+              },
+              {
+                "citation_id": "E0355"
+              },
+              {
+                "citation_id": "E0319"
+              }
+            ],
+            "rationale": "Retrieve current usage and the correct line, confirm the price and amount, then apply the refuel to that line.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_007",
+            "applicability_rationale": "Setup unseats the SIM; the guide prescribes reseating a missing SIM.",
+            "evidence": [
+              {
+                "citation_id": "E0021"
+              },
+              {
+                "citation_id": "E0219"
+              },
+              {
+                "citation_id": "E0357"
+              }
+            ],
+            "rationale": "A SIM-status check distinguishes this repair from other causes of no service.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 1,
+              "tool_use": 1,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_008",
+            "applicability_rationale": "The customer is abroad and setup disables roaming on the line; policy requires enabling it when disabled.",
+            "evidence": [
+              {
+                "citation_id": "E0003"
+              },
+              {
+                "citation_id": "E0012"
+              },
+              {
+                "citation_id": "E0145"
+              },
+              {
+                "citation_id": "E0360"
+              }
+            ],
+            "rationale": "Check the account line's roaming state and bind the identified customer and line to the carrier-side change.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 2,
+              "information": 2
+            }
+          },
+          {
+            "unit_id": "reference_009",
+            "applicability_rationale": "Setup separately turns off roaming on the device, so carrier-side enablement alone is insufficient.",
+            "evidence": [
+              {
+                "citation_id": "E0012"
+              },
+              {
+                "citation_id": "E0260"
+              },
+              {
+                "citation_id": "E0363"
+              }
+            ],
+            "rationale": "Verify the device setting and guide its toggle while tracking the separate line setting.",
+            "applicability": "required",
+            "levels": {
+              "reasoning": 2,
+              "tool_use": 1,
+              "information": 2
+            }
+          }
+        ],
+        "dimensions": {
+          "workload": {
+            "level": 4,
+            "rationale": "The intended resolution spans customer identification, several distinct device repairs, a billed account change, carrier roaming, and MMS verification. Setup changes themselves are excluded.",
+            "evidence": [
+              {
+                "citation_id": "E0147"
+              },
+              {
+                "citation_id": "E0316"
+              },
+              {
+                "citation_id": "E0317"
+              },
+              {
+                "citation_id": "E0318"
+              },
+              {
+                "citation_id": "E0319"
+              }
+            ]
+          },
+          "reasoning": {
+            "level": 3,
+            "rationale": "The agent must integrate service, mobile-data, roaming, network, app, and Wi-Fi Calling prerequisites while honoring the customer's refusal to change plans. This interaction is greater than any individual repair's rule.",
+            "evidence": [
+              {
+                "citation_id": "E0286"
+              },
+              {
+                "citation_id": "E0289"
+              },
+              {
+                "citation_id": "E0005"
+              },
+              {
+                "citation_id": "E0261"
+              }
+            ]
+          },
+          "tool_use": {
+            "level": 3,
+            "rationale": "Diagnosis uses different user-side checks, while refueling and roaming changes require binding the correct customer and line across account-side tools; user-directed repairs require further coordination.",
+            "evidence": [
+              {
+                "citation_id": "E0170"
+              },
+              {
+                "citation_id": "E0178"
+              },
+              {
+                "citation_id": "E0371"
+              },
+              {
+                "citation_id": "E0429"
+              },
+              {
+                "citation_id": "E0445"
+              },
+              {
+                "citation_id": "E0397"
+              }
+            ]
+          },
+          "dependencies": {
+            "level": 3,
+            "rationale": "Customer and line identification precede account changes; service must be restored before mobile data and MMS can work. Device and carrier roaming are separate linked states, with user responses and rechecks between repairs.",
+            "evidence": [
+              {
+                "citation_id": "E0147"
+              },
+              {
+                "citation_id": "E0236"
+              },
+              {
+                "citation_id": "E0286"
+              },
+              {
+                "citation_id": "E0261"
+              },
+              {
+                "citation_id": "E0005"
+              }
+            ]
+          },
+          "information": {
+            "level": 3,
+            "rationale": "The customer supplies the symptom, phone number, and location, not the diagnosed device or account state. The task requires reconciling multiple device checks with line usage, plan limit, and roaming state; the judge-only setup is not information already given to the agent.",
+            "evidence": [
+              {
+                "citation_id": "E0003"
+              },
+              {
+                "citation_id": "E0004"
+              },
+              {
+                "citation_id": "E0531"
+              },
+              {
+                "citation_id": "E0537"
+              },
+              {
+                "citation_id": "E0429"
+              },
+              {
+                "citation_id": "E0319"
+              }
+            ]
+          }
+        },
+        "overall_score": 80,
+        "intended_endpoint": {
+          "description": "Restore the ability to send MMS on the specified phone line, with 2.0 GB of data refueled; verify MMS capability rather than presume it from individual toggles.",
+          "evidence": [
+            {
+              "citation_id": "E0004"
+            },
+            {
+              "citation_id": "E0319"
+            },
+            {
+              "citation_id": "E0295"
+            }
+          ]
+        },
+        "dependency_reasoning": "The reference actions indicate intended repairs, not a mandatory execution order. Identification and diagnosis govern account-side changes and user guidance; cellular service and mobile data are prerequisites to MMS, and both device and line roaming settings matter abroad. Verification follows the repairs.",
+        "score_rationale": "Five ratings of 4, 3, 3, 3, and 3 sum to 16; 5 × 16 = 80. Breadth is extensive, while decisions, tool binding, linked state, and discovery are substantial but not rated at their maximum anchors.",
+        "uncertainties": [
+          "The exact diagnostic sequence and number of status rechecks depend on tool responses; reference action order is not treated as authoritative.",
+          "The supplied sources do not establish that the intended endpoint was actually reached."
+        ],
+        "source_quality_flags": [
+          "Baseline device and account records are judge-only design context, not facts already available to the task agent.",
+          "The scenario example names `get_status_bar`, whereas the supplied user tool is `check_status_bar`; this naming mismatch does not prevent a designed-difficulty assessment."
+        ],
+        "unscorable_reason": ""
+      },
+      "score_arithmetic": {
+        "rule": "5_times_sum_of_unchanged_dimension_levels",
+        "model_reported_total": 80,
+        "computed_total": 80,
+        "reported_total_mismatch": false
+      },
+      "status": "format_error",
+      "error": "Response belongs to a different task/version",
+      "raw_sha256": "f6a1fd159f37bd312ddbf13ee184f218b1d52a3e3c5cd5280c3849c78a2cb3b8",
+      "finished_at": "2026-11-13T23:35:02.484028+00:00"
+    }
+  }
+]
