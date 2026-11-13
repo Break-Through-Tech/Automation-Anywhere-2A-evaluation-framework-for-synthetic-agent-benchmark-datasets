@@ -5,6 +5,9 @@ It does not run task agents or grade saved attempts. The implementation and offl
 checks are ready; full calibration requires authorized API calls. The first three-call
 pilot produced two accepted scores and one rejected response; see
 [the pilot review](../../results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md).
+A separate approved v1.1 insurance retry returned an accepted 70/100; see
+[the retry report](../../results/difficulty/numeric_design_insurance_retry_v11/README.md).
+The account cases have not yet been reassessed under v1.1, and full calibration remains pending.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.

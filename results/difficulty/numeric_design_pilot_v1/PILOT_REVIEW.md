@@ -1,5 +1,9 @@
 # First GPT-6 Sol design-difficulty pilot
 
+## Follow-up: the separately authorized retry passed
+
+The insurance case was later reviewed once under corrected prompt v1.1 and returned an accepted **70/100**. See [the retry report](../numeric_design_insurance_retry_v11/README.md). The original three-call pilot below remains a separate protocol: its insurance response is still rejected. Do not pool the accepted v1 account scores with the v1.1 retry.
+
 Three model calls were authorized and made. Two responses passed validation; the
 third was rejected. No task agent was run, and no extra generation calls or retries
 were made after the rejection.
@@ -43,7 +47,7 @@ reference does not clearly satisfy dispatching an engineer and forensic accounta
 and general escalation guidance differs from the selected case path. These are
 model observations to inspect against the supplied sources, not confirmed dataset bugs.
 
-## Offline correction and next step
+## Offline correction and follow-up
 
 Prompt v1.1 explicitly distinguishes null from zero. Its API schema now separates
 active units with numeric ratings from context/unselected/uncertain units with null
@@ -51,9 +55,9 @@ ratings. Local validation still rejects inconsistent results. New offline regres
 tests cover both combinations. Rubric anchors, dimension weights and the dataset are
 unchanged.
 
-The next proposed paid action is **one diagnostic retry of the insurance case** in a
-fresh versioned packet. It requires authorization. It will test the output-contract
-correction; it will not retroactively validate or replace the original response.
+The separately authorized **one-case insurance retry** has now completed under a
+fresh v1.1 packet, with an accepted score of 70/100. This tests the output-contract
+correction for one response; it does not retroactively validate or replace the original response.
 Do not silently combine revised-prompt scores with this pilot's accepted scores.
 
 ## Scope, evidence and usage

@@ -14,4 +14,6 @@ No τ²-bench task was scored. Calibration and repeat checks are incomplete.
 - `task_scores.csv`: all 342 framework task identities, including pending and source/format error statuses.
 
 Original exact requests and raw responses remain in the local frozen packet. Use implementation commit `9fa5640` to regenerate this v1 report.
-Prompt v1.1 fixes the schema/prompt mismatch; its separate one-case retry packet is prepared but has not been sent.
+Prompt v1.1 fixes the schema/prompt mismatch; the separately authorized insurance retry is reported below.
+
+A separately approved prompt-v1.1 insurance retry has now passed at 70/100: [retry report](../numeric_design_insurance_retry_v11/README.md). This does not alter the original pilot results or permit pooling prompt versions.
