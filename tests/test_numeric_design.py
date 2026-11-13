@@ -22,7 +22,7 @@ def fixture_case(root, name="case", dataset="synthetic"):
 
 
 def stub_judgment(row, level=2):
-    evidence = [{"source_id": "S", "excerpt": "apply the stated rule"}]
+    evidence = [{"source_id": "S", "excerpt": row["payload"]["source_catalog"][0]["text"]}]
     return {"version": rubric.OUTPUT_VERSION, "case_key": row["payload"]["case_key"], "status": "scored",
             "units": [{"unit_id": "U1", "applicability": "required", "applicability_rationale": "Explicit required operation",
                        "evidence": evidence, "levels": dict.fromkeys(rubric.STEP_DIMENSIONS, level), "rationale": "Offline test rating only"}],
@@ -126,6 +126,14 @@ class NumericAdapterTests(unittest.TestCase):
         blocked = [r for r in self.tau if r["preflight_errors"]]
         self.assertEqual([(r["domain"], r["task_id"]) for r in blocked], [("retail", "57")])
 
+    def test_source_bound_schemas_fit_all_supported_tasks_offline(self):
+        for row in [*self.synthetic, *self.tau]:
+            schema = rubric.response_schema([u["unit_id"] for u in row["payload"]["units"]],
+                                            row["payload"]["source_catalog"])
+            stats = rubric.check_schema_limits(schema)
+            self.assertLessEqual(stats["enum_values"], 1000)
+            self.assertLessEqual(stats["schema_string_characters"], 120000)
+
 
 class NumericValidationTests(unittest.TestCase):
     def setUp(self):
@@ -148,6 +156,45 @@ class NumericValidationTests(unittest.TestCase):
             change(value)
             with self.assertRaises(Exception):
                 judge.validate_judgment(value, self.row)
+
+    def test_source_bound_choices_reject_article_change_and_wrong_source(self):
+        original = "If a user is traveling outside their home network, check roaming."
+        catalog = [{"source_id": "P", "text": original, "kind": "policy"},
+                   {"source_id": "Q", "text": "Another independent policy statement.", "kind": "policy"}]
+        schema = rubric.response_schema(["U1"], catalog)
+        value = copy.deepcopy(self.good)
+        value["units"][0]["evidence"][0].update(source_id="P", excerpt=original)
+        judge.Draft202012Validator(schema).validate(value)
+        value["units"][0]["evidence"][0]["excerpt"] = original.replace("a user", "the user")
+        with self.assertRaises(Exception):
+            judge.Draft202012Validator(schema).validate(value)
+        value["units"][0]["evidence"][0].update(source_id="Q", excerpt=original)
+        with self.assertRaises(Exception):
+            judge.Draft202012Validator(schema).validate(value)
+
+    def test_schema_limits_fail_offline_instead_of_spending_a_call(self):
+        with self.assertRaises(ValueError):
+            rubric.check_schema_limits({"type": "string", "enum": [str(i) for i in range(1001)]})
+        with self.assertRaises(ValueError):
+            rubric.check_schema_limits({"type": "string", "enum": [str(i) + "x"*70 for i in range(251)]})
+
+    def test_every_generated_option_is_grounded_even_for_long_signatures(self):
+        source = {"source_id": "tools", "kind": "tool_contracts", "text": json.dumps({
+            "signature": "lookup(" + "argument: str, " * 90 + ")", "returns": "Record",
+            "documentation": "A quoted string: \\\"example\\\".\n" + "long context " * 100})}
+        for excerpt in rubric.source_choices(source):
+            self.assertTrue(judge.quotation_in_source(excerpt, source["text"]))
+
+    def test_api_error_details_are_retained_without_secrets(self):
+        exc = RuntimeError("Do not save arbitrary exception arguments")
+        exc.status_code = 400
+        exc.body = {"error": {"code": "invalid_json_schema", "param": "text.format.schema",
+                              "message": "Invalid schema sk-example-secret and Bearer another-secret"}}
+        result = judge.safe_api_error(exc)
+        self.assertEqual(result["code"], "invalid_json_schema")
+        self.assertEqual(result["param"], "text.format.schema")
+        self.assertNotIn("example-secret", json.dumps(result))
+        self.assertNotIn("another-secret", json.dumps(result))
 
     def test_unscorable_does_not_have_a_numeric_score(self):
         value = copy.deepcopy(self.good)
@@ -230,6 +277,16 @@ class NumericRunnerTests(unittest.TestCase):
             judge.validate_judgment(value, self.row)
         empty_schema = rubric.response_schema([])
         self.assertEqual(empty_schema["properties"]["units"]["maxItems"], 0)
+
+    def test_source_bound_schema_is_explicitly_experimental_not_default(self):
+        default = self.packet()
+        self.assertFalse(judge.load_packet(default)[0]["source_bound_evidence_experimental"])
+        experimental = self.root / "experimental"
+        judge.prepare_packet([self.row], experimental, "offline-model", source_bound_evidence=True)
+        manifest, _, requests = judge.load_packet(experimental)
+        self.assertTrue(manifest["source_bound_evidence_experimental"])
+        self.assertEqual(manifest["schema_version"], rubric.SOURCE_BOUND_SCHEMA_VERSION)
+        self.assertIn("$defs", requests[0]["api_request"]["text"]["format"]["schema"])
 
     def test_no_client_construction_or_api_without_explicit_authorization(self):
         packet = self.packet()

@@ -3,16 +3,16 @@
 This mode reads task designs and asks an LLM for evidence-backed difficulty ratings.
 It does not run task agents or grade saved attempts.
 
-**Latest:** the [task-bound airline repeat check](../../results/difficulty/numeric_design_airline_repeats_v13/README.md)
-returns **50 / 50 / 50**. All **146 offline tests pass**, and **33/33 approved batch calls**
-are used. The original source and rejected outputs are preserved. The rubric remains
-provisional; calibration across all domains using the revised generation format is incomplete.
+**Latest:** nine complete triplets pass repeat tolerances, but telecom's changed-word
+quotation stopped the [revised-format calibration](../../results/difficulty/numeric_design_calibration_v13/README.md).
+The [source/excerpt-choice diagnostic](../../results/difficulty/numeric_design_source_bound_probe_v14/README.md)
+then returned HTTP 400 before a judgment. **60/60 request slots are used.** Full calibration
+is incomplete; do not expand paid scoring. **152 offline tests pass.** No source files or raw responses were altered.
 
-The [earlier domain check](../../results/difficulty/numeric_design_domains_v12/README.md)
-has nine complete cases within tolerance under the earlier format. Do not silently pool
-old/new generation schemas. Nine compatible three-repeat packets are prepared offline;
-completing that calibration would require approval for **27 new calls**. No additional
-calls are scheduled automatically.
+The excerpt-choice format is experimental/opt-in. The previously API-exercised task-bound
+unit schema remains the default, with strict quotation checks. Safe server-error capture
+is now implemented for the next separately authorized diagnostic. Do not silently mix
+old/new prompt or schema versions.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
@@ -163,3 +163,17 @@ revision to regenerate its outputs. Revalidation is not a license to accept inve
 
 Historical reports describe their own frozen cohorts and versions, not current full
 dataset coverage. Their numeric scales, limits and raw-response provenance remain explicit.
+
+## Experimental exact-excerpt choices
+
+`prepare --source-bound-evidence` opts into prompt v1.2 / source-bound schema v1.3.
+It offers deterministic literal/decoded/canonical excerpts tied to their source IDs.
+The source catalog remains complete. This option passed offline size checks for all
+342 tasks but its real API probe returned HTTP 400; compatibility is NOT established.
+Do not use it for broad paid runs. Default preparation retains prompt v1.1 / task-bound
+unit schema v1.2. Any API rejection stops immediately. Server error diagnostics are
+bounded and credential-redacted; no implicit retry or fallback occurs.
+
+The 26-call calibration report is frozen to commit `fbeade4`; regenerate it using that
+implementation. Old packets deliberately fail current implementation fingerprints.
+Previous broad-run plans are stale, not authorization to run.

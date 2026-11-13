@@ -1,7 +1,7 @@
 # Calibration protocol before broad paid scoring
 
 Version: `design_calibration_v1`
-Status: development controls, nine legacy-format domain repeats, and the task-bound airline repeat check passed their practical tolerances. Consistent revised-format calibration across all domains remains incomplete. See [the latest review](../../results/difficulty/numeric_design_airline_repeats_v13/README.md).
+Status: nine complete revised-format cases pass repeat tolerances, but telecom quotation failure and the experimental exact-excerpt API rejection leave calibration incomplete. All 60 approved domain request slots are used. See [the current diagnostic](../../results/difficulty/numeric_design_source_bound_probe_v14/README.md).
 
 1. Run offline contract, mapping, citation, schema, arithmetic and spending-gate tests.
 2. With explicit API authorization, score three synthetic cases sequentially:

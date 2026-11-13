@@ -66,3 +66,11 @@ API budget. The airline diagnostic includes selected original reservation/flight
 the default native adapter omits full database records. Other unavailable information
 must remain explicit, not be treated as low complexity. No whole-dataset ordering or
 independent validity follows from passing a small calibration sample.
+
+## Current stop gate
+
+Telecom quotation failure left the calibration incomplete. The source/excerpt-choice
+experiment then received HTTP 400 before a judgment; it is opt-in and unverified.
+All 60 request slots are used. See `numeric_design_source_bound_probe_v14` for the
+next bounded diagnostic, not broad scoring. Older prepared full-run plans have stale
+implementation fingerprints and must be regenerated once the format is settled.

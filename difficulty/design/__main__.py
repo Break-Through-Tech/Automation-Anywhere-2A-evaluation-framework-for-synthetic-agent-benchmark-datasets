@@ -30,6 +30,8 @@ def main(argv=None):
     prepare.add_argument("--repeats", type=int, default=1)
     prepare.add_argument("--reasoning-effort", choices=["low", "medium", "high"])
     prepare.add_argument("--max-output-tokens", type=int, default=10000)
+    prepare.add_argument("--source-bound-evidence", action="store_true",
+                         help="Experimental source/excerpt enum schema; API compatibility not established")
     prepare.add_argument("--out", type=Path, required=True)
     check = commands.add_parser("check", help="Verify a frozen packet offline")
     check.add_argument("--packet", type=Path, required=True)
@@ -62,7 +64,8 @@ def main(argv=None):
         rows = json.loads(args.inventory.read_text())
         if args.selection == "pilot":
             rows = pilot_cases(rows)
-        result = prepare_packet(rows, args.out, args.model, args.repeats, args.max_output_tokens, args.reasoning_effort)
+        result = prepare_packet(rows, args.out, args.model, args.repeats, args.max_output_tokens, args.reasoning_effort,
+                                source_bound_evidence=args.source_bound_evidence)
     elif args.command == "check":
         result = load_packet(args.packet)[0]
     elif args.command == "run":

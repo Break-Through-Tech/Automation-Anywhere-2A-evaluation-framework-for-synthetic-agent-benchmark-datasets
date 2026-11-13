@@ -3,12 +3,14 @@ from datetime import datetime, timezone
 from importlib import metadata
 import json
 import os
+import re
 from pathlib import Path
 
 from jsonschema import Draft202012Validator
 
 from .inputs import ADAPTER_VERSION, file_hash, unique, validate_case, verify_sources
 from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, SCHEMA_VERSION, ROOT, STEP_DIMENSIONS,
+                     SOURCE_BOUND_PROMPT_VERSION, SOURCE_BOUND_SCHEMA_VERSION,
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
 
 PROTOCOL = "design_run_v1"
@@ -32,7 +34,8 @@ def safe_output(path):
     return path
 
 
-def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoning_effort=None):
+def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoning_effort=None,
+                   source_bound_evidence=False):
     """Prepare only; even a real model name never triggers a network call."""
     unique(rows)
     verify_sources(rows)
@@ -41,7 +44,9 @@ def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoni
     out = safe_output(out)
     if out.exists():
         raise ValueError("Use a fresh packet directory")
-    schema, prompt = response_schema(), system_prompt()
+    if type(source_bound_evidence) is not bool:
+        raise ValueError("Explicit boolean evidence mode required")
+    schema, prompt = response_schema(), system_prompt(source_bound_evidence)
     config = {"model": model, "max_output_tokens": max_output_tokens, "store": False}
     if reasoning_effort:
         config["reasoning"] = {"effort": reasoning_effort}
@@ -51,13 +56,15 @@ def prepare_packet(rows, out, model, repeats=1, max_output_tokens=10000, reasoni
             api = {**config, "input": [{"role": "system", "content": prompt},
                                        {"role": "user", "content": json.dumps(row["payload"], ensure_ascii=False)}],
                    "text": {"format": {"type": "json_schema", "name": "design_judgment", "strict": True,
-                                       "schema": response_schema([u["unit_id"] for u in row["payload"]["units"]])}}}
+                                       "schema": response_schema([u["unit_id"] for u in row["payload"]["units"]], row["payload"]["source_catalog"] if source_bound_evidence else None)}}}
             requests.append({"request_id": row["payload"]["case_key"] + f"_r{repeat:02}",
                              "case_key": row["payload"]["case_key"], "repeat": repeat,
                              "input_sha256": row["input_sha256"], "api_request": api,
                              "request_sha256": digest(api), "preflight_errors": row["preflight_errors"]})
-    manifest = {"protocol": PROTOCOL, "validator_version": VALIDATOR_VERSION, "schema_version": SCHEMA_VERSION,
-                "rubric_version": VERSION, "prompt_version": PROMPT_VERSION,
+    manifest = {"protocol": PROTOCOL, "validator_version": VALIDATOR_VERSION,
+                "source_bound_evidence_experimental": source_bound_evidence,
+                "schema_version": SOURCE_BOUND_SCHEMA_VERSION if source_bound_evidence else SCHEMA_VERSION,
+                "rubric_version": VERSION, "prompt_version": SOURCE_BOUND_PROMPT_VERSION if source_bound_evidence else PROMPT_VERSION,
                 "adapter_version": ADAPTER_VERSION, "rubric_sha256": digest(rubric_text()),
                 "prompt_sha256": digest(prompt), "schema_sha256": digest(schema),
                 "inventory_sha256": digest(rows), "requests_sha256": digest(requests),
@@ -82,12 +89,15 @@ def load_packet(packet, check_sources=True):
     manifest = json.loads((packet / "manifest.json").read_text())
     rows = json.loads((packet / "inventory_PRIVATE_COMPARISON.json").read_text())
     requests = json.loads((packet / "requests.json").read_text())
+    source_bound = manifest.get("source_bound_evidence_experimental", False)
+    if type(source_bound) is not bool:
+        raise ValueError("Invalid evidence mode")
     if (manifest.get("protocol") != PROTOCOL or manifest.get("validator_version") != VALIDATOR_VERSION or
-        manifest.get("schema_version") != SCHEMA_VERSION or manifest.get("rubric_version") != VERSION or
-        manifest.get("prompt_version") != PROMPT_VERSION or manifest.get("adapter_version") != ADAPTER_VERSION or
+        manifest.get("schema_version") != (SOURCE_BOUND_SCHEMA_VERSION if source_bound else SCHEMA_VERSION) or manifest.get("rubric_version") != VERSION or
+        manifest.get("prompt_version") != (SOURCE_BOUND_PROMPT_VERSION if source_bound else PROMPT_VERSION) or manifest.get("adapter_version") != ADAPTER_VERSION or
         manifest.get("implementation_sha256") != implementation_hashes() or
         manifest.get("rubric_sha256") != digest(rubric_text()) or
-        manifest.get("prompt_sha256") != digest(system_prompt()) or manifest.get("schema_sha256") != digest(response_schema()) or
+        manifest.get("prompt_sha256") != digest(system_prompt(source_bound)) or manifest.get("schema_sha256") != digest(response_schema()) or
         manifest.get("inventory_sha256") != digest(rows) or manifest.get("requests_sha256") != digest(requests)):
         raise ValueError("Frozen packet, rubric, prompt, schema or inventory changed")
     unique(rows)
@@ -105,7 +115,7 @@ def load_packet(packet, check_sources=True):
             raise ValueError("Request identity/fingerprint mismatch")
         if json.loads(request["api_request"]["input"][1]["content"]) != row["payload"]:
             raise ValueError("Judge payload differs from canonical contract")
-        if request["api_request"]["text"]["format"]["schema"] != response_schema([u["unit_id"] for u in row["payload"]["units"]]):
+        if request["api_request"]["text"]["format"]["schema"] != response_schema([u["unit_id"] for u in row["payload"]["units"]], row["payload"]["source_catalog"] if source_bound else None):
             raise ValueError("Response schema differs from task-bound unit contract")
     return manifest, rows, requests
 
@@ -233,6 +243,24 @@ def utc_now():
     return datetime.now(timezone.utc).isoformat()
 
 
+def safe_api_error(exc):
+    """Retain bounded server diagnostics, never headers, requests or credentials."""
+    result = {"error_type": type(exc).__name__, "status_code": getattr(exc, "status_code", None)}
+    body = getattr(exc, "body", None)
+    if isinstance(body, dict):
+        details = body.get("error", body)
+        if isinstance(details, dict):
+            for key in ("code", "param", "message"):
+                if isinstance(details.get(key), str):
+                    value = details[key]
+                    secret = os.environ.get("OPENAI_API_KEY")
+                    if secret:
+                        value = value.replace(secret, "[REDACTED]")
+                    value = re.sub(r"(?i)Bearer\s+\S+|sk-[A-Za-z0-9_-]+", "[REDACTED]", value)
+                    result[key] = value[:2000]
+    return result
+
+
 def read_result(packet, request, row):
     path = Path(packet) / "results" / (request["request_id"] + ".json")
     if not path.exists():
@@ -244,6 +272,7 @@ def read_result(packet, request, row):
     if not raw.exists() or file_hash(raw) != result.get("raw_sha256"):
         raise ValueError("Saved raw response changed or missing")
     if result["status"] == "validated":
+        Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(result["judgment"])
         validate_judgment(result["judgment"], row)
         if (result.get("validator_version") != VALIDATOR_VERSION or
             result.get("evidence_diagnostics") != evidence_diagnostics(result["judgment"], row)):
@@ -316,6 +345,7 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
                     if raw.get("status") != "completed":
                         raise ValueError("Response was not completed (refusal/truncation must be inspected)")
                     judgment = json.loads(response.output_text)
+                    Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(judgment)
                     validate_judgment(judgment, row)
                     result.update(status="validated", judgment=judgment,
                                   evidence_diagnostics=evidence_diagnostics(judgment, row))
@@ -325,7 +355,7 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
                     result.update(status="format_error", error=str(exc))
             except Exception as exc:
                 # Do not store exception strings that might contain credentials or request data.
-                raw = {"error_type": type(exc).__name__, "status_code": getattr(exc, "status_code", None)}
+                raw = safe_api_error(exc)
                 result.update(status="api_error", error=type(exc).__name__)
         if not raw_path.exists():
             write_json(raw_path, raw)
