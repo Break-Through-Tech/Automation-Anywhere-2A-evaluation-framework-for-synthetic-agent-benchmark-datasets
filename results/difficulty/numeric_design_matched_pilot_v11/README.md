@@ -51,4 +51,4 @@ not a dollar-cost estimate or billing audit.
 
 ## Follow-up: six authorized repeats completed
 
-The [initial repeatability report](../numeric_design_repeatability_v11/README.md) now records account scores 65/65/65 each and insurance 70/70/75. The initial three single-response results above remain unchanged. Four separate control checks are the next proposed paid step and have not been run.
+The [initial repeatability report](../numeric_design_repeatability_v11/README.md) now records account scores 65/65/65 each and insurance 70/70/75. The initial three single-response results above remain unchanged. Four separate control checks have since been authorized and completed: [control report](../numeric_design_controls_v11/README.md). Broader calibration remains pending.

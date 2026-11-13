@@ -1,0 +1,24 @@
+{
+  "status": "four_controls_completed_not_full_calibration",
+  "model": "gpt-6-sol",
+  "prompt_version": "design_prompt_v1.1",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "n_new_paid_calls": 4,
+  "n_validated_responses": 4,
+  "packet_manifest_sha256": "2501f09abbb02b107915ebb7b4e53492d0c754923aef6bbe3466f6a2fc479416",
+  "scores": {
+    "C01": 35,
+    "C02": 75,
+    "C03": 40,
+    "C04": 40
+  },
+  "new_call_usage": {
+    "input_tokens": 10875,
+    "output_tokens": 3504,
+    "total_tokens": 14379
+  },
+  "fixture_scope": "Separate authored source-only controls; not original benchmark tasks or independent gold difficulty labels.",
+  "source_or_score_rule_changes": false,
+  "raw_responses_preserved_locally": ".cache/design_numeric_v1/control_checks_v11/raw",
+  "further_calls_made": 0
+}

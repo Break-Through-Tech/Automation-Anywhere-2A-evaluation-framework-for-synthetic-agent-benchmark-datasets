@@ -44,9 +44,10 @@ summary, not the difficulty of all 64 tasks. Old prompt-v1 values are not pooled
 Next are four separate source-control cases: a simple task, a more involved task
 with the same listed step count, a paraphrase, and a source-order variant. These
 check sensitivity and harmless-change stability; they are not edits to benchmark data
-or independent gold difficulty labels. Their v1.1 packet is prepared but has not
-been sent. Four additional paid calls require approval. Broader domain-diverse and
-held-out checks remain beyond that bounded control check.
+or independent gold difficulty labels. Those four calls were subsequently authorized and completed; see [the control
+results](../numeric_design_controls_v11/README.md). A ten-domain, three-judgment-per-task
+calibration sample is now prepared but unsent and requires approval for up to 30 calls.
+Broader validity limitations remain.
 
 See repeat_summary.json, repeat_evidence.json, reliability.json, run_manifest.json
 and task_scores.csv. Raw responses and cached-seed provenance remain in their frozen

@@ -11,7 +11,10 @@ The matched v1.1 pilot now has accepted scores **65, 65 and 70**; see
 [the comparison and limits](../../results/difficulty/numeric_design_matched_pilot_v11/README.md).
 The [initial repeatability check](../../results/difficulty/numeric_design_repeatability_v11/README.md)
 passes on three development cases: accounts 65/65/65 each, insurance 70/70/75.
-Interpretation variation and broader calibration remain; four control checks are prepared but unsent.
+The [four source controls](../../results/difficulty/numeric_design_controls_v11/README.md)
+now pass their practical tolerances (35, 75, 40 and 40). Broader calibration remains: a
+ten-task, three-judgment-per-task domain sample is prepared but unsent; it requires
+approval for up to 30 calls.
 
 1. Read the [short rubric](../../docs/evaluation/numeric_design_rubric_v1.md).
 2. Prepare source inputs and a three-task request packet offline.
