@@ -186,7 +186,7 @@ Current-format practical repeat and source-control checks passed: ten tasks acro
 synthetic/native domains, three judgments each, maximum range 5 and mean range 2.5.
 Four separate fixtures test added complexity and harmless changes. These are bounded
 consistency checks, not independent validity. See
-[calibration v16](../../results/difficulty/numeric_design_calibration_v18/README.md).
+[calibration v16](../../results/difficulty/numeric_design_calibration_v19/README.md).
 The tau2 base inventory is 278 tasks (50 airline, 114 retail, 114 telecom). A frozen
 full run uses one judgment per task, except three pilot tasks with three judgments;
 pilots are averaged before equal-task aggregation. The published synthetic primary
@@ -212,3 +212,15 @@ preserved, then all saved responses were rebound to fresh packets with exact API
 request equality and zero new API calls. The published original synthetic mean is
 unchanged. Do not combine old/new validation fingerprints silently; v18 reporting
 uses the new policy consistently and retains the original error provenance.
+
+## Request-bound identity policy v1.5
+
+Task identity is canonical request metadata, not a model judgment. The pipeline binds
+`judgment.case_key` to the frozen request/input; `model_judgment.case_key` preserves
+the model's original echo and `request_binding` records any discrepancy. A telecom
+response truncated four characters in that redundant hash echo. The old validation
+stopped, the source-backed response was inspected, and a fresh explicit policy was
+applied offline without changing any request, rating, source evidence or raw output.
+The original failed validation is preserved. Request/input/raw hashes, version,
+unit coverage, quotation grounding and rating validity remain checked. A wrong-task
+quotation is still rejected. Never infer trustworthy identity from LLM-copied hashes.

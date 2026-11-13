@@ -350,6 +350,25 @@ class NumericRunnerTests(unittest.TestCase):
         result = judge.run_packet(packet, authorize_paid=True, client=fake_client([wire]))
         self.assertEqual(result["stopped_reason"], "failure_requires_diagnosis")
 
+    def test_task_binding_uses_frozen_request_and_audits_bad_model_echo(self):
+        packet = self.packet()
+        wire = stub_judgment(self.row)
+        wire["case_key"] = "truncated_echo"
+        judge.run_packet(packet, authorize_paid=True, client=fake_client([wire]))
+        _, rows, requests = judge.load_packet(packet)
+        result = judge.read_result(packet, requests[0], rows[0])
+        self.assertEqual(result["judgment"]["case_key"], self.row["payload"]["case_key"])
+        self.assertEqual(result["model_judgment"]["case_key"], "truncated_echo")
+        self.assertTrue(result["request_binding"]["model_case_key_mismatch"])
+
+    def test_request_bound_identity_still_rejects_wrong_task_evidence(self):
+        packet = self.packet()
+        wire = stub_judgment(self.row)
+        wire["case_key"] = "another_task"
+        wire["dimensions"]["workload"]["evidence"][0]["excerpt"] = "Facts not in this task"
+        result = judge.run_packet(packet, authorize_paid=True, client=fake_client([wire]))
+        self.assertEqual(result["stopped_reason"], "failure_requires_diagnosis")
+
     def test_no_client_construction_or_api_without_explicit_authorization(self):
         packet = self.packet()
         with patch("openai.OpenAI", side_effect=AssertionError("Must not construct a client")):
@@ -410,7 +429,7 @@ class NumericRunnerTests(unittest.TestCase):
     def test_first_format_failure_stops(self):
         other = fixture_case(self.root, "second")
         bad = stub_judgment(self.row)
-        bad["case_key"] = "wrong_case"
+        bad["version"] = "wrong_version"
         packet = self.packet([self.row, other])
         client = fake_client([bad, stub_judgment(other)])
         result = judge.run_packet(packet, authorize_paid=True, client=client)

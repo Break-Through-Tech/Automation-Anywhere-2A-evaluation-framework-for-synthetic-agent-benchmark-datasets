@@ -15,7 +15,7 @@ from .rubric import (DIMENSIONS, OUTPUT_VERSION, PROMPT_VERSION, SCHEMA_VERSION,
                      VERSION, digest, response_schema, rubric_text, score, system_prompt)
 
 PROTOCOL = "design_run_v1"
-VALIDATOR_VERSION = "design_evidence_validation_v1.4_derived_score"
+VALIDATOR_VERSION = "design_validation_v1.5_request_bound_metadata"
 
 
 def implementation_hashes():
@@ -271,6 +271,7 @@ def canonical_judgment(wire, row):
     assessments = [*wire["dimensions"].values(), wire["intended_endpoint"], *wire["units"]]
     has_refs = any("citation_id" in e for a in assessments for e in a["evidence"])
     value = resolve_evidence(wire, row) if has_refs else json.loads(json.dumps(wire))
+    value["case_key"] = row["payload"]["case_key"]
     reported = value["overall_score"]
     computed = reported
     if value["status"] == "scored":
@@ -282,6 +283,13 @@ def canonical_judgment(wire, row):
                   "model_reported_total": reported, "computed_total": computed,
                   "reported_total_mismatch": reported != computed}
     return value, arithmetic
+
+
+def request_binding(wire, row):
+    """Request identity comes from the frozen request, never an LLM hash echo."""
+    bound = row["payload"]["case_key"]
+    return {"bound_case_key": bound, "model_reported_case_key": wire["case_key"],
+            "model_case_key_mismatch": wire["case_key"] != bound}
 
 
 def read_result(packet, request, row):
@@ -298,7 +306,8 @@ def read_result(packet, request, row):
         wire = result.get("model_judgment", result["judgment"])
         Draft202012Validator(request["api_request"]["text"]["format"]["schema"]).validate(wire)
         canonical, arithmetic = canonical_judgment(wire, row)
-        if canonical != result["judgment"] or arithmetic != result.get("score_arithmetic"):
+        if (canonical != result["judgment"] or arithmetic != result.get("score_arithmetic") or
+                request_binding(wire, row) != result.get("request_binding")):
             raise ValueError("Canonical evidence or computed arithmetic differs from saved model output")
         validate_judgment(result["judgment"], row)
         if (result.get("validator_version") != VALIDATOR_VERSION or
@@ -376,6 +385,7 @@ def run_packet(packet, *, authorize_paid=False, max_calls=3, client=None):
                     result["model_judgment"] = wire
                     judgment, arithmetic = canonical_judgment(wire, row)
                     result["score_arithmetic"] = arithmetic
+                    result["request_binding"] = request_binding(wire, row)
                     validate_judgment(judgment, row)
                     result.update(status="validated", judgment=judgment,
                                   evidence_diagnostics=evidence_diagnostics(judgment, row))

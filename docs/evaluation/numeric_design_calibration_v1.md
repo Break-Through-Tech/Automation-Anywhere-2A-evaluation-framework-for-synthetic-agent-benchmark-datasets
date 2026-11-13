@@ -1,7 +1,7 @@
 # Calibration protocol before broad paid scoring
 
 Version: `design_calibration_v1`
-Status: Current-format practical calibration passed: ten cross-domain tasks, three judgments each, maximum range 5 and mean range 2.5; four controls passed prespecified tolerances. See [calibration v16](../../results/difficulty/numeric_design_calibration_v18/README.md). These are bounded consistency checks, not independent gold validity. API evidence-format blocker resolved using citation IDs. Final synthetic scoring completed at **64.30/100**, 64/64 tasks, under one evidence-reference format. The final run has one judgment per task; earlier repeated-score checks remain historical. The new v16 repeat sample is reported separately and does not change that primary synthetic score. See [the final synthetic report](../../results/difficulty/synthetic_final_v15/README.md).
+Status: Current-format practical calibration passed: ten cross-domain tasks, three judgments each, maximum range 5 and mean range 2.5; four controls passed prespecified tolerances. See [calibration v16](../../results/difficulty/numeric_design_calibration_v19/README.md). These are bounded consistency checks, not independent gold validity. API evidence-format blocker resolved using citation IDs. Final synthetic scoring completed at **64.30/100**, 64/64 tasks, under one evidence-reference format. The final run has one judgment per task; earlier repeated-score checks remain historical. The new v16 repeat sample is reported separately and does not change that primary synthetic score. See [the final synthetic report](../../results/difficulty/synthetic_final_v15/README.md).
 
 1. Run offline contract, mapping, citation, schema, arithmetic and spending-gate tests.
 2. With explicit API authorization, score three synthetic cases sequentially:
@@ -45,3 +45,9 @@ A model-reported total mismatch is retained as an arithmetic diagnostic, rather 
 rerunning the LLM to redo addition. All generation requests, raw responses, weights
 and ratings remain unchanged. The v18 calibration is an offline revalidation of the
 same ten-task/four-control cohort, with identical findings and zero new calls.
+
+Validation v1.5 binds task identity to the frozen request, retaining model ID echoes
+and mismatch diagnostics. A truncated echo was diagnosed offline; raw responses,
+ratings and inputs were preserved. All 158 tests and the same calibration checks
+passed before resuming. This changes deterministic metadata handling, not the
+rubric, model request or difficulty judgment.

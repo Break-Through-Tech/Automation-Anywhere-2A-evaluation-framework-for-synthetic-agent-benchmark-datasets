@@ -105,6 +105,11 @@ Use the locally computed `judgment.overall_score` under validation v1.4. The raw
 the frozen formula. Keep `score_arithmetic` and offline-binding provenance visible.
 The first telecom mismatch stopped dispatch and was resolved offline from unchanged
 ratings, without retrying the model. Synthetic primary scores remain unchanged.
-Current full comparison artifacts are `results/difficulty/tau2_final_v18`; replay
-with `python -m difficulty.reproduce_numeric_design --out .cache/replayed_design_v18`
+Current full comparison artifacts are `results/difficulty/tau2_final_v19`; replay
+with `python -m difficulty.reproduce_numeric_design --out .cache/replayed_design_v19`
 at the recorded implementation/source revision. No API credentials are needed.
+
+Validation v1.5 also makes canonical case identity request-bound. Keep `request_binding`
+for model-echo discrepancies. A response's shortened copied hash is not used to move
+it to another task. Frozen request/input hashes and source-grounded unit checks remain
+mandatory. All 158 tests passed; no additional calls were used to repair metadata.
