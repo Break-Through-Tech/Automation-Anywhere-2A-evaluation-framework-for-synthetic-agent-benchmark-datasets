@@ -24,6 +24,8 @@ Each reviewer must run their parameter, verify exact inputs and contributions, c
 
 ## Reproduce your setting
 
+Use the code and inputs from `codex/weekend-scoring-plan` in your own working branch. The five assigned tasks are #78–#82; see `assignments.json` for their live links.
+
 Example for Zayd (change 0.70 and output suffix for another setting):
 
 ```bash

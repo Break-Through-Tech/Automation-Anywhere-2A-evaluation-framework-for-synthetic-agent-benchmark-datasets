@@ -16,11 +16,11 @@ Workflow coverage is on main at `results/coverage/workflow/README.md`. Its datas
 
 Trial assignments, in Mila's requested order:
 
-1. **Zayd (`zaydn4321`): 70% Coverage / 30% Difficulty.** Coverage-heavy contrast.
-2. **Ronnit (`ronnitrana`): 60% / 40%.** Moderate coverage preference.
-3. **Divya (`divyabapanapalli`): 50% / 50%.** Neutral comparison baseline, not automatically the winning choice.
-4. **Sana (`sanagrao6`): 40% / 60%.** Moderate challenge preference.
-5. **Mila (`bondmila`): 30% / 70%.** Challenge-heavy contrast.
+1. **Zayd (`zaydn4321`, #78): 70% Coverage / 30% Difficulty.** Coverage-heavy contrast.
+2. **Ronnit (`ronnitrana`, #79): 60% / 40%.** Moderate coverage preference.
+3. **Divya (`divyabapanapalli`, #80): 50% / 50%.** Neutral comparison baseline, not automatically the winning choice.
+4. **Sana (`sanagrao6`, #81): 40% / 60%.** Moderate challenge preference.
+5. **Mila (`bondmila`, #82): 30% / 70%.** Challenge-heavy contrast.
 
 These trials do not change the five 20% difficulty weights and require **zero new LLM/API calls**. A shared calculator avoids five incompatible implementations; each teammate should verify and interpret their setting rather than duplicate the pipeline.
 
@@ -58,3 +58,13 @@ Higher D is positive under this **challenge-oriented convention**, not a theorem
 ## Handoff requirements
 
 Each weight reviewer supplies their parameter values, two dataset scores, separate Coverage/Difficulty contributions, frozen input hashes, reproduction command, rationale and limitations. Mila records the final selection only after those reviews. Orange/blue work may prepare layouts now but must label unfinished values as pending. Missing inputs are not zeros. Preserve original datasets and historical reports.
+
+## Live assignment links
+
+- [[Yellow · Nov 14] Zayd: test Coverage 70% / Difficulty 30%](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/78) — assigned to @zaydn4321; added to project 144.
+- [[Yellow · Nov 14] Ronnit: test Coverage 60% / Difficulty 40%](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/79) — assigned to @ronnitrana; added to project 144.
+- [[Yellow · Nov 14] Divya: test Coverage 50% / Difficulty 50%](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/80) — assigned to @divyabapanapalli; added to project 144.
+- [[Yellow · Nov 14] Sana: test Coverage 40% / Difficulty 60%](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/81) — assigned to @sanagrao6; added to project 144.
+- [[Yellow · Nov 14] Mila: test Coverage 30% / Difficulty 70%](https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/82) — assigned to @bondmila; added to project 144.
+
+The shared code and frozen input snapshots are on `codex/weekend-scoring-plan`. Work in your own branch based on that version, or copy those unchanged inputs and the calculator into your existing branch. Change the CLI weight, not the input definitions.
