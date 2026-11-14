@@ -12,7 +12,7 @@
     "tests/test_judge_evidence.py"
   ],
   "active_navigation_links": "all_exist",
-  "maintained_offline_tests": 201,
+  "maintained_offline_tests": 197,
   "test_result": "passed",
   "archive_replay": {
     "status": "exact_task_scores_and_summaries_match",
@@ -23,5 +23,20 @@
   },
   "framework_replay": "exact_tasks_datasets_domains_workflows_weights_and_formula_match",
   "api_calls": 0,
-  "supplied_data_or_labels_changed": false
+  "supplied_data_or_labels_changed": false,
+  "working_copy_tests_including_uncommitted_local_changes": 201,
+  "committed_only_fresh_checkout": {
+    "commit": "5cb421ead6a2f8b1061d9e0de9cf8bfab046b241",
+    "tests": 197,
+    "result": "passed",
+    "local_package_imports": "all_resolve",
+    "archive_replay": {
+      "status": "exact_task_scores_and_summaries_match",
+      "api_calls": 0,
+      "task_count": 342,
+      "original_inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9",
+      "relocated_inventory_sha256": "5a2e39a84431c4838dab3995a9d5ebf107f4360261245ed231de4a2c8516d6c2"
+    },
+    "framework_replay": "342 tasks; synthetic 63.75; tau2 64.15467625899281"
+  }
 }
