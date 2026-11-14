@@ -1,0 +1,271 @@
+[
+  {
+    "role": "sim_exit",
+    "dataset": "tau2",
+    "domain": "telecom",
+    "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+    "source_backed_selection_evidence": [
+      {
+        "source_id": "scenario",
+        "text": "{\"instructions\": {\"domain\": \"telecom\", \"known_info\": \"You are John Smith with phone number 555-123-2002.\", \"reason_for_call\": \"Your phone has been showing 'No Service' for the past few hours.\", \"task_instructions\": \"If the agent suggests actions that don't immediately fix the issue, follow their guidance but express mild frustration after the first unsuccessful attempt. You will consider the issue resolved when the status bar shows that you have signal. Always check the status bar if the agent asks you for status information. If the agent asks you to pay a bill, you accept. If the tool call does not return updated status information, you might need to perform another tool call to get the updated status. \\nWhenever the agent asks you about your device, always ground your responses on the results of tool calls. \\nFor example: If the agent asks what the status bar shows, always ground your response on the results of the `get_status_bar` tool call. If the agent asks if you are able to send an MMS message, always ground your response on the results of the `can_send_mms` tool call.\\nNever make up the results of tool calls, always ground your responses on the results of tool calls.\\nIf you are unsure about whether an action is necessary, always ask the agent for clarification.\\n\", \"unknown_info\": null}, \"persona\": null}",
+        "provenance": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/user_scenario",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        }
+      },
+      {
+        "source_id": "completion_design",
+        "text": "{\"actions\": [{\"action_id\": \"transfer_to_human_agents\", \"arguments\": {\"summary\": \"I cannot fix the issue.\"}, \"compare_args\": [], \"info\": null, \"name\": \"transfer_to_human_agents\", \"requestor\": \"assistant\"}], \"communicate_info\": null, \"env_assertions\": [{\"arguments\": {\"expected_status\": \"no_service\"}, \"assert_value\": true, \"env_type\": \"user\", \"func_name\": \"assert_service_status\", \"message\": null}], \"nl_assertions\": null}",
+        "provenance": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/evaluation_criteria",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        }
+      }
+    ],
+    "original_request_sha256": "6e7e9e278104d20e4bdb5b88d3c4eb95970807ad3b23dd305c9c2a1803dd95af",
+    "cached_baseline_judgments": 1,
+    "cached_baseline_source_notes": [
+      "Reference action is not a full workflow and does not prove feasibility or execution.",
+      "Baseline records are judge-only context; initialization changes their relevant state.",
+      "Status-bar tool name differs between scenario example and tool contract."
+    ],
+    "is_benchmark_task": true
+  },
+  {
+    "role": "airline_no_target_exit",
+    "dataset": "tau2",
+    "domain": "airline",
+    "task_id": "14",
+    "case_key": "4052de4afd171be50d2045cf",
+    "input_sha256": "d18df5d7a58b7acf42c4f36d7f58b79a48d563e3941ae3325a9c09754b3b1633",
+    "source_backed_selection_evidence": [
+      {
+        "source_id": "scenario",
+        "text": "{\"instructions\": {\"domain\": \"airline\", \"known_info\": \"Your name is Mohamed Silva.\\n\\nYour user id is mohamed_silva_9265.\", \"reason_for_call\": \"You want to know how much you have on your gift cards and certificates. Then you want to change your upcoming reservation.\", \"task_instructions\": \"You want to know the sum of gift card balances and sum of certificate balances.\\n\\nIf the agent gives you individual balances, you want the sums.\\n\\nThen you want to change your recent reservation. You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not.\\n\\nIf the agent tells you basic economy cannot be changed (do not mention it if the agent does not mention it), you want the agent to cancel the current one and book a new one.\\n\\nFor payment, you want to use the certificates as much as possible, then gift cards as much as possible, and cover the rest with your master card.\\n\\nBut you want to know how much your master card will be charged.\\n\\nYou do not need baggage or insurance.\\n\\nYou want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000.\\n\\nYou are calm.\", \"unknown_info\": null}, \"persona\": null}",
+        "provenance": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/user_scenario",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        }
+      },
+      {
+        "source_id": "completion_design",
+        "text": "{\"actions\": [{\"action_id\": \"14_0\", \"arguments\": {\"reservation_id\": \"K1NW8N\"}, \"info\": null, \"name\": \"cancel_reservation\"}, {\"action_id\": \"14_1\", \"arguments\": {\"cabin\": \"business\", \"destination\": \"SFO\", \"flight_type\": \"round_trip\", \"flights\": [{\"date\": \"2024-05-26\", \"flight_number\": \"HAT023\"}, {\"date\": \"2024-05-28\", \"flight_number\": \"HAT204\"}, {\"date\": \"2024-05-28\", \"flight_number\": \"HAT100\"}], \"insurance\": \"no\", \"nonfree_baggages\": 0, \"origin\": \"JFK\", \"passengers\": [{\"dob\": \"1960-11-26\", \"first_name\": \"Mohamed\", \"last_name\": \"Silva\"}, {\"dob\": \"1986-09-12\", \"first_name\": \"Raj\", \"last_name\": \"Sanchez\"}, {\"dob\": \"1980-03-27\", \"first_name\": \"Liam\", \"last_name\": \"Wilson\"}], \"payment_methods\": [{\"amount\": 500, \"payment_id\": \"certificate_3765853\"}, {\"amount\": 198, \"payment_id\": \"gift_card_8020792\"}, {\"amount\": 129, \"payment_id\": \"gift_card_6136092\"}, {\"amount\": 1786, \"payment_id\": \"credit_card_2198526\"}], \"total_baggages\": 0, \"user_id\": \"mohamed_silva_9265\"}, \"info\": null, \"name\": \"book_reservation\"}], \"communicate_info\": [\"327\", \"1000\", \"1786\"], \"env_assertions\": null, \"nl_assertions\": [\"Agent communicates that total gift card balance is $327.\", \"Agent communicates that total certificate balance if $1000.\", \"Agent should cancel reservation K1NW8N.\", \"Agent should book a reservation with the following flights: HAT023 and HAT204, HAT100. No insurance. No baggage. Departure on 2024-05-26, return on 2024-05-28.\", \"Agent communicated that the $1786 will be charged to the mastercard.\"]}",
+        "provenance": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/evaluation_criteria",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        }
+      }
+    ],
+    "original_request_sha256": "58ef88df3311abd2c8633584b368b1b125cbe0aac20cc0cf4b4a99cfed2af7a0",
+    "cached_baseline_judgments": 1,
+    "cached_baseline_source_notes": [
+      "Initial records are judge-only design context, not facts already known to the task agent.",
+      "Native reference actions describe intended writes, not an executed trace or authoritative ordering.",
+      "Initial_state is null; no setup changes are documented."
+    ],
+    "is_benchmark_task": true
+  },
+  {
+    "role": "retail_no_target_exit",
+    "dataset": "tau2",
+    "domain": "retail",
+    "task_id": "107",
+    "case_key": "2aa74102d9e3011cd0032533",
+    "input_sha256": "f3a3b69c8dda395cb414f270af415f5366e6aac8ae6a1556aeca58a4e6ed5136",
+    "source_backed_selection_evidence": [
+      {
+        "source_id": "scenario",
+        "text": "{\"instructions\": {\"domain\": \"retail\", \"known_info\": \"You name is Yara Ito and your zip code is 75284.\", \"reason_for_call\": \"You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level.\", \"task_instructions\": \"You are happy but messy.\", \"unknown_info\": \"You do not remember your email address\"}, \"persona\": null}",
+        "provenance": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/user_scenario",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        }
+      },
+      {
+        "source_id": "completion_design",
+        "text": "{\"actions\": [{\"action_id\": \"108_0\", \"arguments\": {\"item_ids\": [\"1615379700\"], \"new_item_ids\": [\"8106223139\"], \"order_id\": \"#W1304208\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}, {\"action_id\": \"108_1\", \"arguments\": {\"item_ids\": [\"6245746168\"], \"new_item_ids\": [\"3112842858\"], \"order_id\": \"#W8353027\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}], \"communicate_info\": [], \"env_assertions\": null, \"nl_assertions\": [\"Agent should exchange items in both orders.\"]}",
+        "provenance": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/evaluation_criteria",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        }
+      }
+    ],
+    "original_request_sha256": "0ba0c869694411fb38ba109f485ff88754ea6070a347ee1d5572e97e0c1516d9",
+    "cached_baseline_judgments": 1,
+    "cached_baseline_source_notes": [
+      "Initial records are judge-only design context, not facts already known to the task agent.",
+      "Reference actions specify intended writes rather than a complete workflow or proof of execution."
+    ],
+    "is_benchmark_task": true
+  },
+  {
+    "role": "fraud_package_exit",
+    "dataset": "synthetic",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+    "case_key": "4c78b9d919a09c14a6fe033a",
+    "input_sha256": "1e47357bb266d8f3b8e8f0e86d5dfd11f78d0d2243b09f1cc3bae8ac5eaa20f6",
+    "source_backed_selection_evidence": [
+      {
+        "source_id": "milestone_001",
+        "text": "{\"description\": \"Transaction details, customer profile, and history retrieved\", \"expected_state\": {\"states_visited\": [\"CA\", \"NV\"], \"transaction_id\": \"TX-60006\"}, \"step\": 1}",
+        "provenance": {
+          "path": "banking_fraud_monitoring/test_cases.json",
+          "locator": "#/workflows/2/test_cases/1/milestones/0",
+          "sha256": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94"
+        }
+      },
+      {
+        "source_id": "milestone_002",
+        "text": "{\"description\": \"Device intelligence and fraud database cross-referenced\", \"expected_state\": {\"device_risk_score\": 25, \"merchant_blacklist_hit\": false}, \"step\": 2}",
+        "provenance": {
+          "path": "banking_fraud_monitoring/test_cases.json",
+          "locator": "#/workflows/2/test_cases/1/milestones/1",
+          "sha256": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94"
+        }
+      },
+      {
+        "source_id": "milestone_003",
+        "text": "{\"description\": \"Fraud risk score calculated and investigation package compiled\", \"expected_state\": {\"fraud_risk_score\": 90}, \"step\": 3}",
+        "provenance": {
+          "path": "banking_fraud_monitoring/test_cases.json",
+          "locator": "#/workflows/2/test_cases/1/milestones/2",
+          "sha256": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94"
+        }
+      },
+      {
+        "source_id": "milestone_004",
+        "text": "{\"description\": \"Case routed to analyst\", \"expected_state\": {\"case_id\": \"CASE-60006\", \"escalation_level\": \"normal\"}, \"step\": 4}",
+        "provenance": {
+          "path": "banking_fraud_monitoring/test_cases.json",
+          "locator": "#/workflows/2/test_cases/1/milestones/3",
+          "sha256": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94"
+        }
+      },
+      {
+        "source_id": "exit_conditions",
+        "text": "{\"escalation\": \"If investigation package is incomplete, escalate to HUMAN_IN_THE_LOOP.\", \"failure\": \"If routing fails, escalate to HUMAN_IN_THE_LOOP.\", \"success\": \"Case escalated to analyst with full context.\"}",
+        "provenance": {
+          "path": "banking_fraud_monitoring/agent_definition.yaml",
+          "locator": "#/agent/workflows/2/exit_conditions",
+          "sha256": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310"
+        }
+      }
+    ],
+    "original_request_sha256": "a1788da8b385d246a37eeb473302faf57184519157cd2ebe3b1964d3159d2e04",
+    "cached_baseline_judgments": 1,
+    "cached_baseline_source_notes": [
+      "Reference calls describe intended inputs, not observed execution or proof that all tool results are obtainable.",
+      "Package completeness is described more broadly by the routing contract than by the reference-call example."
+    ],
+    "is_benchmark_task": true
+  },
+  {
+    "role": "simple_control",
+    "dataset": "validation_fixture",
+    "domain": "control",
+    "task_id": "C01",
+    "case_key": "cfaeafa096c68dc6d8821159",
+    "input_sha256": "1bb6373ffe8849901cc981d2621ec7ab96f1aa7379e0299e21ef10953f87802e",
+    "source_backed_selection_evidence": [
+      {
+        "source_id": "scenario",
+        "text": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/0/scenario",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      },
+      {
+        "source_id": "endpoint",
+        "text": "The current balance and currency are recorded for Customer K, with a record confirmation.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/0/endpoint",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      },
+      {
+        "source_id": "step_1",
+        "text": "Read Customer K's current balance and currency using read_balance.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/0/steps/0",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      },
+      {
+        "source_id": "step_2",
+        "text": "Record that balance and currency for Customer K using record_balance.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/0/steps/1",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      }
+    ],
+    "original_request_sha256": "3a6e7f23b20ea990d47683987a5ef58d7121dac0dcecc46e70bf305faef54616",
+    "cached_baseline_judgments": 1,
+    "cached_baseline_source_notes": [],
+    "is_benchmark_task": false
+  },
+  {
+    "role": "complex_control",
+    "dataset": "validation_fixture",
+    "domain": "control",
+    "task_id": "C02",
+    "case_key": "223d00bffbb05674e0efd936",
+    "input_sha256": "f8fa9aa0ada5bd61c6a42578037f2249b880df3e9fe6f0ab10d07de58c40bf1c",
+    "source_backed_selection_evidence": [
+      {
+        "source_id": "scenario",
+        "text": "Customer K has several linked accounts in different currencies. Reconcile the exposure in USD as of 2026-04-16; approval is required if converted exposure exceeds USD 100000. Preserve all original and converted balances.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/1/scenario",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      },
+      {
+        "source_id": "endpoint",
+        "text": "A linked reconciliation with correct source records and required approval is recorded, or a rejected approval is reported without recording a reconciliation.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/1/endpoint",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      },
+      {
+        "source_id": "step_1",
+        "text": "Resolve Customer K's linked accounts, read each balance, obtain the applicable dated currency rates, reconcile inconsistent currency identifiers and compute the combined USD exposure.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/1/steps/0",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      },
+      {
+        "source_id": "step_2",
+        "text": "Compare the exposure against the supplied threshold, request approval when required, and only after approval record a reconciliation linking the original balances, conversions and approval identifier; on rejection do not record it.",
+        "provenance": {
+          "path": "docs/evaluation/numeric_design_controls_v1.json",
+          "locator": "#/cases/1/steps/1",
+          "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+        }
+      }
+    ],
+    "original_request_sha256": "60560de4a66e546e168bad71f85e7c24f799f9274db3500d9fcc0134dd191273",
+    "cached_baseline_judgments": 1,
+    "cached_baseline_source_notes": [],
+    "is_benchmark_task": false
+  }
+]

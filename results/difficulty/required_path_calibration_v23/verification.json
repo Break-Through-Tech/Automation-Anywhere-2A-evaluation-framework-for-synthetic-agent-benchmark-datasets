@@ -1,0 +1,13 @@
+{
+  "status": "prepared_and_checked_offline",
+  "api_calls": 0,
+  "offline_tests_passed": 176,
+  "prepared_results_are_only_seven_cached_judgments": true,
+  "new_api_intents_created": 0,
+  "published_score_files_unchanged": [
+    "results/difficulty/tau2_final_v19/comparison.json",
+    "results/difficulty/synthetic_final_v15/task_scores.json"
+  ],
+  "earlier_80_user_files_unchanged": true,
+  "frozen_manifest_sha256": "b688f75bb010731336ae334a30f593ff603fc1b94305132eff412a14b3cebefe"
+}
