@@ -1,0 +1,94 @@
+{
+  "release_protocol": "designed_difficulty_v1.1_required_path",
+  "status": "full_inventory_scored_with_documented_interpretive_uncertainty",
+  "tasks": 342,
+  "planned_judgments": 348,
+  "validated_usable_judgments": 348,
+  "new_api_calls": 341,
+  "reused_exact_judgments": 7,
+  "automatic_retries": 0,
+  "generation_config": {
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000,
+    "store": false
+  },
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "new_call_usage_only": {
+    "input_tokens": 16353076,
+    "output_tokens": 559606,
+    "total_tokens": 16912682
+  },
+  "archive_sha256": "cf40e9efca088aae5a2d012e7662011f9a1e90890e48b6c1ca5f66416747fe63",
+  "prepared_manifest": {
+    "status": "prepared_only_not_authorized_not_adopted",
+    "n_tasks": 342,
+    "n_requests": 348,
+    "cached_requests": 7,
+    "proposed_new_call_cap": 341,
+    "api_calls": 0,
+    "full_rescore_authorized": false,
+    "primary_scores_changed": false,
+    "requests_sha256": "88000e539350fe91e5244e628199f28f3426874a3bb9e5fb3fc81cfd8a29b9fb",
+    "inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9",
+    "bindings_sha256": "844db2e94d66b5e345422644697dba50bf04427b4bbaa8b6c72c63c266beb595",
+    "repeat_convention": "Same per-task repeat plan as published baseline; only repeat-index-matching exact requests reused",
+    "clarification": "Identical to the tested frozen addendum; no weight, anchor, input or schema changes"
+  },
+  "authorization": {
+    "authorization": "User explicitly approved up to 341 new calls with the documented uncertainty",
+    "approved_new_call_cap": 341,
+    "approved_at": "2026-11-14T03:52:09.507642+00:00",
+    "prepared_manifest_sha256": "001f35c05d292d112cc7346abc8bd66f073de661a7e701a5708ba5ad5a17acf6",
+    "runner_sha256": "fa47f26f9cca661dee7aa9b4bf5910d72f9ce015121f5b06d8a98037b3e5a2e9",
+    "core_implementation_sha256": {
+      "difficulty/design/__init__.py": "60aa3851440117d13f77fc9c9558f8cdf454cc1c62aa13f86ec61680d2587520",
+      "difficulty/design/__main__.py": "7a98763721b88cdd56cb14eccc92cbd4ccc4dc6160938114b58d00c02c442a3f",
+      "difficulty/design/calibration.py": "292db70153643545054f0db8ec7ff2dda96cc41368cf296a7fe1e022f7aa6bef",
+      "difficulty/design/crosscheck.py": "26236e715e149bffa99eac57726e0fa57f6066503e8ecc7c50f89f99428e6d9c",
+      "difficulty/design/evidence_choices.py": "8b5a2171f8c102e2967bca5a6a55132a4f033cd9b4623c4c6402e4937eaee926",
+      "difficulty/design/framework.py": "0d00463046b48d8a72f2ccff53837891988d8f30fd802ac3cbdd05b92b1cae8f",
+      "difficulty/design/inputs.py": "9a9b0f65fe6b59bfed2fe5ddfdc0abb963117029fb3b3b5125031bdf57d09d2c",
+      "difficulty/design/judge.py": "ab994c67b4c8be9bc909d942bd8805e0bf96494e79d3e5570b2a6d673e718069",
+      "difficulty/design/native_context.py": "ae0d7a92a4d92b616fe7a0997d2ce3828ce512c036b0e5aa4cd6535a249d5bb3",
+      "difficulty/design/reporting.py": "8ef872c3b91e8a8bf824d307f674bedb4c3c93cd55709a285c462f946ceaa963",
+      "difficulty/design/rubric.py": "6accf6b14e46891d3269fdf436218a251255fab9a9d3df01fee0a815c98cafec"
+    },
+    "initial_sequential_checks": 3,
+    "subsequent_max_concurrency": 3,
+    "automatic_retries": 0,
+    "note": "Prepared manifest remains the historical pre-authorization snapshot; this record grants execution authority."
+  },
+  "new_api_errors": 0,
+  "new_format_errors": 0,
+  "historical_primary_reports_changed": false,
+  "independent_validation": false,
+  "same_inventory_as_original": true,
+  "repeat_mean_first_equal_task_weights": true,
+  "unit_ratings_or_scores_manually_edited": false,
+  "implementation_sha256": {
+    "difficulty/clarified_design_run.py": "fa47f26f9cca661dee7aa9b4bf5910d72f9ce015121f5b06d8a98037b3e5a2e9",
+    "difficulty/clarified_framework.py": "10279c0466638038248bc295e89d94c3c0de985c4ae4612179d7401320bc6679",
+    "difficulty/reproduce_clarified_design.py": "34af6c590045abde228fd18a86002e7f7a8aa3c541022876c7665be7841f16bb"
+  },
+  "score_arithmetic_metadata": [
+    {
+      "request_id": "release_clarified_668f7e69e8b304bfe3f86090_r00",
+      "arithmetic": {
+        "rule": "5_times_sum_of_unchanged_dimension_levels",
+        "model_reported_total": 85,
+        "computed_total": 80,
+        "reported_total_mismatch": true
+      },
+      "request_binding": {
+        "bound_case_key": "668f7e69e8b304bfe3f86090",
+        "model_reported_case_key": "668f7e69e8b304bfe3f86090",
+        "model_case_key_mismatch": false
+      }
+    }
+  ]
+}

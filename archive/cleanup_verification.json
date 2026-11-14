@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "moved_files": 372,
+  "move_groups": 44,
+  "archive_bytes_unchanged": true,
+  "final_release_files_unchanged": true,
+  "frozen_core_and_prompt_unchanged": true,
+  "unrelated_local_edits_preserved": [
+    "difficulty/environment_policy.py",
+    "difficulty/llm_judge.py",
+    "requirements.txt",
+    "tests/test_judge_evidence.py"
+  ],
+  "active_navigation_links": "all_exist",
+  "maintained_offline_tests": 201,
+  "test_result": "passed",
+  "archive_replay": {
+    "status": "exact_task_scores_and_summaries_match",
+    "api_calls": 0,
+    "task_count": 342,
+    "original_inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9",
+    "relocated_inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9"
+  },
+  "framework_replay": "exact_tasks_datasets_domains_workflows_weights_and_formula_match",
+  "api_calls": 0,
+  "supplied_data_or_labels_changed": false
+}

@@ -1,0 +1,157 @@
+{
+  "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+  "case_key": "a2fed07b3b66388f64a03b9f",
+  "input_sha256": "53431df8757254fc3d2a46541a96889019dd6e625503f3ae25b84321e407720c",
+  "sources": {
+    "case_title": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/title",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "case_rationale": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/rationale",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "case_input_conditions": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/input_conditions",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "case_representative_input": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/representative_input",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "case_success_path_differences": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/success_path_differences",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "case_expected_success_outcome": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/expected_success_outcome",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "python_input": {
+      "path": "insurance_claims_intake/test_cases.py",
+      "locator": "class at line 2632/input_data",
+      "sha256": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a"
+    },
+    "reference_calls": {
+      "path": "insurance_claims_intake/test_cases.py",
+      "locator": "class at line 2632/expected_tool_calls",
+      "sha256": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a"
+    },
+    "workflow_context": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_001": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/0",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_002": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/1",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_003": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/2",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_004": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/3",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_005": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/4",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_006": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/5",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_007": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/6",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_008": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/7",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "step_009": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/steps/8",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "milestone_001": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/0",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_002": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/1",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_003": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/2",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_004": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/3",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_005": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/4",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_006": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/5",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_007": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/6",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "milestone_008": {
+      "path": "insurance_claims_intake/test_cases.json",
+      "locator": "#/workflows/7/test_cases/0/milestones/7",
+      "sha256": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd"
+    },
+    "exit_conditions": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/workflows/7/exit_conditions",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "global_plan": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/action_plan",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "agent_goal": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/goal",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    },
+    "tool_contracts": {
+      "path": "insurance_claims_intake/agent_definition.yaml",
+      "locator": "#/agent/tools",
+      "sha256": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304"
+    }
+  }
+}

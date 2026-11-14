@@ -1,0 +1,17 @@
+{
+  "saved_responses_rebound": 271,
+  "new_api_calls": 0,
+  "generation_requests_identical": true,
+  "reported_total_mismatches": [
+    {
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_166",
+      "request_id": "3a03a1c064828f22f3ba9a11_r00",
+      "rule": "5_times_sum_of_unchanged_dimension_levels",
+      "model_reported_total": 85,
+      "computed_total": 80,
+      "reported_total_mismatch": true
+    }
+  ],
+  "prior_run": ".cache/design_numeric_v1/tau2_final_refs_v18",
+  "validation_policy": "design_validation_v1.5_request_bound_metadata"
+}

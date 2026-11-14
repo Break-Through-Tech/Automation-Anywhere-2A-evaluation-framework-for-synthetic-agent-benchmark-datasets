@@ -1,0 +1,165 @@
+[
+  {
+    "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+    "domain": "banking_accounts_deposits",
+    "trial": 0,
+    "issue": "A reference input error and a restricted account are different from agent failure",
+    "observation": "The expected calculate_account_tier call supplies student_status=None. The current runtime schema rejects it because this nested field must be boolean. Trial 0 has no tool events: the user asks how to handle an already restricted account, and the agent explains micro-deposit verification. This also differs from the reference opening workflow.",
+    "interpretation": "A restricted or pending account can be the intended successful business endpoint. Do not label restricted as fail automatically, or treat rejected reference input as an agent error. The saved conversation and the full required workflow need separate adjudication.",
+    "question": "Should successful restricted opening count as pass? How should an advisory conversation about an existing restriction map to the opening task? May None be omitted for a nonstudent, or is the reference invalid?",
+    "evidence": [
+      {
+        "locator": "#/conversation/4/content",
+        "excerpt": "verification is pending through micro-deposits."
+      }
+    ],
+    "review_type": "assistant source inspection, not independent human adjudication",
+    "outcome": null,
+    "execution_eligible": null,
+    "new_judge_calls": 0,
+    "new_mock_executions": 0,
+    "source_file": "data/banking_accounts_deposits/test_cases.py",
+    "source_sha256": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "source_class_line": 2539,
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W7_TC1_trial0.json.gz",
+    "trace_sha256": "33d627b46d0459a4da4902b8292fe0921a2ee1db29fceb64f61050458a688c93",
+    "tool_inventory": [
+      "CANCELLED",
+      "FAILED",
+      "HUMAN_IN_THE_LOOP",
+      "SUCCESS",
+      "calculate_account_tier",
+      "configure_account_limits",
+      "configure_fee_schedule",
+      "generate_account_disclosures",
+      "link_funding_source",
+      "open_account",
+      "perform_aml_screening",
+      "validate_customer_identity"
+    ],
+    "source_methods": [
+      {
+        "name": "calculate_account_tier",
+        "line": 258,
+        "source": "    def calculate_account_tier(\n        self,\n        application_id: str,\n        deposit_amount: float,\n        customer_profile: CustomerProfile\n    ) -> AccountTierResult:\n        \"\"\"\n        Determine account product tier based on deposit amount, age, and customer profile.\n\n        Args:\n            application_id: Unique application identifier. Format: ACC-XXXX where X is numeric.\n            deposit_amount: Initial deposit amount in USD, must be >= 0, max 2 decimal places.\n            customer_profile: Profile object:\n                - age (integer)\n                - student_status (boolean)\n                - business_type (string, optional)\n                - relationship_value (number, optional)\n\n        Returns:\n            AccountTierResult:\n                - tier (string: premium|standard|student|business_basic)\n                - eligibility (boolean)\n                - details (object)\n        \"\"\"\n        print(f\"--- Running calculate_account_tier ---\")\n        print(f\"application_id: {application_id}\")\n        print(f\"deposit_amount: {deposit_amount}\")\n        print(f\"customer_profile: {customer_profile}\")\n\n        age = customer_profile.get(\"age\", 30)\n        student_status = customer_profile.get(\"student_status\", False)\n        business_type = customer_profile.get(\"business_type\", None)\n\n        if business_type:\n            tier = \"business_basic\"\n        elif student_status or age < 25:\n            tier = \"student\"\n        elif deposit_amount >= 5000:\n            tier = \"premium\"\n        else:\n            tier = \"standard\"\n\n        eligibility = True\n        return {\n            \"tier\": tier,\n            \"eligibility\": eligibility,\n            \"details\": {\"age\": age, \"student_status\": student_status}\n        }\n"
+      }
+    ],
+    "reference_schema_findings": [
+      {
+        "tool": "calculate_account_tier",
+        "errors": [
+          {
+            "location": [
+              "customer_profile",
+              "student_status"
+            ],
+            "type": "bool_type"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "task_id": "HealthcarePA_W8_TC1",
+    "domain": "healthcare_prior_authorization",
+    "trial": 0,
+    "issue": "One tool call can still be infeasible when its identifier is hidden",
+    "observation": "The task requires a status lookup, but its scenario input has no reference_id. The expected call assumes PA-778899. In trial 0 the user explicitly lacks that ID and no status lookup is executed. The declared tool requires reference_id and payer_id.",
+    "interpretation": "Low designed call count does not imply the required inputs are available. Do not supply private expected IDs to the agent or infer an intrinsic difficulty of one. A task can be simple by design and unassessable at runtime.",
+    "question": "Was the PA reference ID meant to be provided, or should an authorized lookup supply it? Is reporting status enough, or must provider notification be separately observable?",
+    "evidence": [
+      {
+        "locator": "#/conversation/2/content",
+        "excerpt": "I don’t have the prior authorization reference ID available."
+      }
+    ],
+    "review_type": "assistant source inspection, not independent human adjudication",
+    "outcome": null,
+    "execution_eligible": null,
+    "new_judge_calls": 0,
+    "new_mock_executions": 0,
+    "source_file": "data/healthcare_prior_authorization/test_cases.py",
+    "source_sha256": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "source_class_line": 1886,
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W8_TC1_trial0.json.gz",
+    "trace_sha256": "5db0e92f38703ebc7c235f38e701f866caf9428712da9061db90860d74fea310",
+    "tool_inventory": [
+      "CANCELLED",
+      "FAILED",
+      "HUMAN_IN_THE_LOOP",
+      "SUCCESS",
+      "appeal_pa_denial",
+      "check_pa_requirements",
+      "gather_clinical_documentation",
+      "prepare_pa_submission",
+      "retrieve_medical_necessity_criteria",
+      "submit_pa_request",
+      "track_pa_status",
+      "validate_clinical_criteria"
+    ],
+    "source_methods": [
+      {
+        "name": "track_pa_status",
+        "line": 1968,
+        "source": "    def track_pa_status(self, reference_id: str, payer_id: str) -> dict:\n        \"\"\"\n        Monitor and update the status of submitted PA requests.\n\n        Args:\n            reference_id: Unique PA submission reference. Format: PA-XXXXXX.\n            payer_id: Unique payer identifier.\n\n        Returns:\n            dict: Status object with status (enum: approved, denied, pended, expired),\n                  auth_number (string), decision_notes (string), valid_through (ISO 8601)\n        \"\"\"\n        print(f\"--- Running track_pa_status ---\")\n        print(f\"reference_id: {reference_id}, payer_id: {payer_id}\")\n        # Simulate approved PA status as per test case\n        if reference_id == \"PA-778899\" and payer_id == \"PAYER-ANTHEM\":\n            return {\n                \"status\": \"approved\",\n                \"auth_number\": \"AUTH-556677\",\n                \"decision_notes\": \"Approved for 90 days, MRI criteria met.\",\n                \"valid_through\": \"2024-09-10\"\n            }\n        # Default mock for other cases\n        return {\n            \"status\": \"pended\",\n            \"auth_number\": None,\n            \"decision_notes\": \"Pending review.\",\n            \"valid_through\": None\n        }\n"
+      }
+    ],
+    "reference_schema_findings": []
+  },
+  {
+    "task_id": "ClaimsAgent_W6_TC1",
+    "domain": "insurance_claims_intake",
+    "trial": 0,
+    "issue": "A correctly denied claim can be a successful task outcome",
+    "observation": "The task expects a lapsed policy and denial. Its inherited validate_policy_coverage source returns active and coverage_confirmed=True; assess_claim_severity returns emergency. Trial 0 never calls these methods: the user cannot supply the loss date and the agent escalates. Thus the source conflict is not an observed coverage response in this attempt.",
+    "interpretation": "Business denial is not agent failure when denial is the requested valid outcome. Separately track the missing loss date and static branch conflict. Do not claim that trial 0 experienced tool responses it never received.",
+    "question": "What establishes successful completion of the denial workflow? Which source governs lapsed versus active coverage, and how should an unavailable loss date affect execution eligibility?",
+    "evidence": [
+      {
+        "locator": "#/conversation/2/content",
+        "excerpt": "I don’t have the other details available right now"
+      },
+      {
+        "locator": "#/tool_events/0/output/exit_status",
+        "excerpt": "escalated"
+      }
+    ],
+    "review_type": "assistant source inspection, not independent human adjudication",
+    "outcome": null,
+    "execution_eligible": null,
+    "new_judge_calls": 0,
+    "new_mock_executions": 0,
+    "source_file": "data/insurance_claims_intake/test_cases.py",
+    "source_sha256": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "source_class_line": 2294,
+    "trace_file": "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/ClaimsAgent_W6_TC1_trial0.json.gz",
+    "trace_sha256": "b7b828c6b289ec8e734d005ef08866f5613ddb9e50c650d8848e81b4cccf6bf6",
+    "tool_inventory": [
+      "CANCELLED",
+      "FAILED",
+      "HUMAN_IN_THE_LOOP",
+      "SUCCESS",
+      "assess_claim_severity",
+      "classify_claim_type",
+      "create_claim_record",
+      "extract_loss_details",
+      "route_to_adjuster",
+      "send_claim_acknowledgment",
+      "trigger_emergency_services",
+      "validate_policy_coverage"
+    ],
+    "source_methods": [
+      {
+        "name": "assess_claim_severity",
+        "line": 238,
+        "source": "    def assess_claim_severity(\n        self, loss_details: LossDetails, coverage_info: CoverageInfo\n    ) -> SeverityInfo:\n        \"\"\"\n        Assess claim urgency, emergency needs, and complexity for triage.\n\n        Args:\n            loss_details: Extracted loss details object.\n            coverage_info: Policy coverage validation result.\n\n        Returns:\n            SeverityInfo:\n                - severity_level (enum: standard, emergency, catastrophe, large_loss, litigation, denied)\n                - emergency_services_needed (boolean)\n                - estimated_exposure (number, USD, >=0, max 2 decimals)\n                - flags (array: emergency, BI, litigation, duplicate, denied)\n        \"\"\"\n        valid_severity = [\"standard\", \"emergency\", \"catastrophe\", \"large_loss\", \"litigation\", \"denied\"]\n        print(f\"--- Running assess_claim_severity ---\")\n        print(f\"loss_details: {loss_details}\")\n        print(f\"coverage_info: {coverage_info}\")\n        # Mock assessment\n        return {\n            \"severity_level\": \"emergency\",\n            \"emergency_services_needed\": True,\n            \"estimated_exposure\": 30000.00,\n            \"flags\": [\"emergency\"]\n        }\n"
+      },
+      {
+        "name": "validate_policy_coverage",
+        "line": 209,
+        "source": "    def validate_policy_coverage(\n        self, policy_number: str, date_of_loss: str, peril: str\n    ) -> CoverageInfo:\n        \"\"\"\n        Validate if the policy is active, loss date is within coverage period, and peril is covered.\n\n        Args:\n            policy_number: Policy identifier. Format: [policy type prefix]-[6+ digits], e.g., HO-887766.\n            date_of_loss: Date of loss. ISO 8601 format (YYYY-MM-DD).\n            peril: Type of peril/loss (e.g., fire, wind, water, theft, liability, injury).\n\n        Returns:\n            CoverageInfo:\n                - coverage_confirmed (boolean)\n                - policy_status (enum: active, lapsed, cancelled, expired)\n                - coverage_limits (object)\n                - denial_reason (string, optional)\n        \"\"\"\n        valid_status = [\"active\", \"lapsed\", \"cancelled\", \"expired\"]\n        print(f\"--- Running validate_policy_coverage ---\")\n        print(f\"policy_number: {policy_number}, date_of_loss: {date_of_loss}, peril: {peril}\")\n        # Mock validation\n        return {\n            \"coverage_confirmed\": True,\n            \"policy_status\": \"active\",\n            \"coverage_limits\": {\"dwelling\": 250000.0, \"contents\": 75000.0},\n            \"denial_reason\": None\n        }\n"
+      }
+    ],
+    "reference_schema_findings": []
+  }
+]

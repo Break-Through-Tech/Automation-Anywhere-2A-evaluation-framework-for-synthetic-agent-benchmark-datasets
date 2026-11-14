@@ -1,0 +1,8 @@
+{
+  "authorization": "User approved up to 24 additional calls to finish paired repeatability; no full-dataset rescoring",
+  "phase": "phase2",
+  "additional_call_cap": 24,
+  "overall_new_call_cap": 29,
+  "request_sha256": "a039eccd8864f5aff3cc695378862258fe9428649e5e1ba6d17bff6848228418",
+  "at": "2026-11-14T03:35:34.031478+00:00"
+}

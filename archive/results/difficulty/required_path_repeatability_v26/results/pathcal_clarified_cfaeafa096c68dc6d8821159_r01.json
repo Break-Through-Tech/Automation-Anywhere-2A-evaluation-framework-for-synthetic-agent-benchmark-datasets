@@ -1,0 +1,313 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "probe_prompt_version": "design_prompt_v1.4_required_path_probe",
+  "request_sha256": "b6c9dbe64d6da28484252354002c290d7a062411195cba5808fd3d7f9eed9048",
+  "input_sha256": "1bb6373ffe8849901cc981d2621ec7ab96f1aa7379e0299e21ef10953f87802e",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-14T03:36:23.350293+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_0c94e1963b90ccc9016af7d737cc8c87d1a189d0da721b1e39",
+  "usage": {
+    "input_tokens": 3517,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 3514
+    },
+    "output_tokens": 711,
+    "output_tokens_details": {
+      "reasoning_tokens": 76
+    },
+    "total_tokens": 4228
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "cfaeafa096c68dc6d8821159",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "step_1",
+        "applicability_rationale": "Required to obtain the current balance and currency before recording them.",
+        "evidence": [
+          {
+            "citation_id": "E0009"
+          }
+        ],
+        "rationale": "A direct retrieval using a specified tool; the balance and currency must be discovered.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_2",
+        "applicability_rationale": "Required to reach the stated record-confirmation endpoint.",
+        "evidence": [
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0008"
+          }
+        ],
+        "rationale": "A direct recording operation that binds the values retrieved in step 1 to the specified tool inputs.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 2,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 2,
+        "rationale": "The sufficient path has two routine stages for one objective: retrieve the current values, then record them. No approval or conversion work follows or is needed.",
+        "evidence": [
+          {
+            "citation_id": "E0009"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0000"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 1,
+        "rationale": "The scenario gives a direct rule: record the current balance without approval or conversion.",
+        "evidence": [
+          {
+            "citation_id": "E0000"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 2,
+        "rationale": "The specified read and record tools require passing the retrieved balance and currency into the record operation.",
+        "evidence": [
+          {
+            "citation_id": "E0004"
+          },
+          {
+            "citation_id": "E0005"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 1,
+        "rationale": "Recording depends on the preceding read. The decisive endpoint is record confirmation; identity verification is already complete, and approval, conversion, and reconciliation are excluded.",
+        "evidence": [
+          {
+            "citation_id": "E0000"
+          },
+          {
+            "citation_id": "E0009"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0008"
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The current balance and currency require ordinary retrieval; the customer and account situation are otherwise specified.",
+        "evidence": [
+          {
+            "citation_id": "E0000"
+          },
+          {
+            "citation_id": "E0009"
+          }
+        ]
+      }
+    },
+    "overall_score": 40,
+    "intended_endpoint": {
+      "description": "Customer K's current balance and currency are recorded, with confirmation.",
+      "evidence": [
+        {
+          "citation_id": "E0008"
+        }
+      ]
+    },
+    "dependency_reasoning": "Read the balance and currency before recording those values. Record confirmation is the decisive exit. The already-verified identity and single USD account require no additional preliminary work, and approval, conversion, and reconciliation are not part of this path.",
+    "score_rationale": "Ratings of 2 workload, 1 reasoning, 2 tool use, 1 dependencies, and 2 information sum to 8; 5 × 8 = 40.",
+    "uncertainties": [],
+    "source_quality_flags": [],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "cfaeafa096c68dc6d8821159",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "step_1",
+        "applicability_rationale": "Required to obtain the current balance and currency before recording them.",
+        "evidence": [
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          }
+        ],
+        "rationale": "A direct retrieval using a specified tool; the balance and currency must be discovered.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_2",
+        "applicability_rationale": "Required to reach the stated record-confirmation endpoint.",
+        "evidence": [
+          {
+            "source_id": "step_2",
+            "excerpt": "Record that balance and currency for Customer K using record_balance."
+          },
+          {
+            "source_id": "endpoint",
+            "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+          }
+        ],
+        "rationale": "A direct recording operation that binds the values retrieved in step 1 to the specified tool inputs.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 2,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 2,
+        "rationale": "The sufficient path has two routine stages for one objective: retrieve the current values, then record them. No approval or conversion work follows or is needed.",
+        "evidence": [
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          },
+          {
+            "source_id": "step_2",
+            "excerpt": "Record that balance and currency for Customer K using record_balance."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 1,
+        "rationale": "The scenario gives a direct rule: record the current balance without approval or conversion.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 2,
+        "rationale": "The specified read and record tools require passing the retrieved balance and currency into the record operation.",
+        "evidence": [
+          {
+            "source_id": "tools",
+            "excerpt": "customer_id, optional account_id -> balance and currency"
+          },
+          {
+            "source_id": "tools",
+            "excerpt": "customer_id, balance, currency -> recorded confirmation"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 1,
+        "rationale": "Recording depends on the preceding read. The decisive endpoint is record confirmation; identity verification is already complete, and approval, conversion, and reconciliation are excluded.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          },
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          },
+          {
+            "source_id": "step_2",
+            "excerpt": "Record that balance and currency for Customer K using record_balance."
+          },
+          {
+            "source_id": "endpoint",
+            "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The current balance and currency require ordinary retrieval; the customer and account situation are otherwise specified.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          },
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          }
+        ]
+      }
+    },
+    "overall_score": 40,
+    "intended_endpoint": {
+      "description": "Customer K's current balance and currency are recorded, with confirmation.",
+      "evidence": [
+        {
+          "source_id": "endpoint",
+          "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+        }
+      ]
+    },
+    "dependency_reasoning": "Read the balance and currency before recording those values. Record confirmation is the decisive exit. The already-verified identity and single USD account require no additional preliminary work, and approval, conversion, and reconciliation are not part of this path.",
+    "score_rationale": "Ratings of 2 workload, 1 reasoning, 2 tool use, 1 dependencies, and 2 information sum to 8; 5 × 8 = 40.",
+    "uncertainties": [],
+    "source_quality_flags": [],
+    "unscorable_reason": ""
+  },
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 40,
+    "computed_total": 40,
+    "reported_total_mismatch": false
+  },
+  "request_binding": {
+    "bound_case_key": "cfaeafa096c68dc6d8821159",
+    "model_reported_case_key": "cfaeafa096c68dc6d8821159",
+    "model_case_key_mismatch": false
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "fbcc82f8b5eea2d67e7b02b19434320d296af4dcaf96a4180660cf3f779061b7",
+  "finished_at": "2026-11-14T03:36:29.256103+00:00"
+}

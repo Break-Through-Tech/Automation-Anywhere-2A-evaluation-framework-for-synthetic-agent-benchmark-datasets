@@ -21,6 +21,7 @@ from coverage.attribute_diversity import DOMAINS, compute_attribute_diversity
 from coverage.vendi_score import MODEL_NAME, embed, vendi_score
 from difficulty.write_counts import count_actions
 from difficulty.structural_features import FRAMEWORK_COLUMNS, load_for_framework
+from difficulty.designed_difficulty import FRAMEWORK_COLUMNS as INDEX_COLUMNS, load_scores_for_framework
 
 ROOT = Path(__file__).resolve().parent
 # Resolved from the public model's snapshot during the first framework run.
@@ -109,11 +110,23 @@ def empirical_difficulty(path, expected):
 
 
 def evaluate(args):
+    if getattr(args, "design_clarified_packet", None):
+        if getattr(args, "difficulty_mode", "historical") != "source-only":
+            raise ValueError("--design-clarified-packet requires --difficulty-mode source-only")
+        from difficulty.clarified_framework import evaluate as evaluate_clarified
+        return evaluate_clarified(args)
+    if getattr(args, "difficulty_mode", "historical") == "source-only":
+        from difficulty.design.framework import evaluate as evaluate_design
+        return evaluate_design(args)
     tasks, labels = load_inputs(args.tasks, args.labels_dir)
     feature_path = getattr(args, 'synthetic_structural_features', None)
     feature_document, feature_rows, feature_sources = None, {}, []
     if feature_path:
         feature_document, feature_rows, feature_sources = load_for_framework(feature_path, tasks)
+    index_path = getattr(args, "synthetic_designed_scores", None)
+    index_document, index_rows, index_sources = None, {}, []
+    if index_path:
+        index_document, index_rows, index_sources = load_scores_for_framework(index_path, tasks)
     counts, attributes = compute_attribute_diversity(labels)
     structural = structural_difficulty(tasks, args.tasks, args.tau_tool_labels, args.synthetic_tool_labels)
     empirical = {}
@@ -157,6 +170,11 @@ def evaluate(args):
         if feature_path:
             feature = feature_rows.get((row['domain'], row['task_id']), {}) if row['dataset'] == 'synthetic' else {}
             per_task[-1].update({f'designed_{field}': feature.get(field) for field in FRAMEWORK_COLUMNS})
+        if index_path:
+            index = index_rows.get((row['domain'], row['task_id']), {}) if row['dataset'] == 'synthetic' else {}
+            per_task[-1].update({f'designed_index_{field}': '|'.join(index[field])
+                               if isinstance(index.get(field), list) else index.get(field)
+                               for field in INDEX_COLUMNS})
     summaries = []
     for score in scores:
         rows = [r for r in per_task if r["dataset"] == score["dataset"]
@@ -185,6 +203,8 @@ def evaluate(args):
               *(args.labels_dir / f"labels_{dataset}.csv" for dataset in DOMAINS)]
     if feature_path:
         inputs.extend([feature_path, *feature_sources])
+    if index_path:
+        inputs.extend([index_path, *index_sources])
     for path in (args.tau_trials, args.synthetic_trials):
         if path:
             inputs.append(path)
@@ -213,6 +233,17 @@ def evaluate(args):
             'Designed complexity columns are proposed descriptive signals; wording cues are not exact '
             'decisions, and workflow steps are not task-specific path lengths. Historical empirical '
             'scores do not validate these new signals. No new feature correlations are computed.')
+    if index_path:
+        summary['metrics'].append('provisional_designed_difficulty')
+        summary['synthetic_designed_index'] = {
+            'version': index_document['version'], 'n_tasks': len(index_rows),
+            'status': 'provisional_not_independently_validated',
+            'mean_score': statistics.mean(r['score'] for r in index_rows.values()),
+            'weights': index_document['weights'], 'scales': index_document['normalization_scales'],
+        }
+        summary['limitations'].append('The designed index uses task milestone action groups, reference calls '
+            'and annotated business-check groups. It is not exact atomic actions, independent decisions, '
+            'a failure probability, or a validated scale. Tags and agent outcomes are not score inputs.')
     for dataset in DOMAINS:
         result = summary["datasets"][dataset]
         if result["empirical_tasks_scored"] < result["n_tasks"]:
@@ -267,6 +298,11 @@ def evaluate(args):
 
 def parser():
     p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument("--difficulty-mode", choices=["historical", "source-only"], default="historical",
+                   help="source-only aggregates numeric LLM design scores offline without running agents or embeddings")
+    p.add_argument("--design-inventory", type=Path, help="Canonical source-only inventory.json")
+    p.add_argument("--design-clarified-packet", type=Path, help="One frozen clarified-protocol packet; aggregates saved judgments offline")
+    p.add_argument("--design-packet", type=Path, action="append", help="Compatible frozen design packet; repeat for disjoint task subsets")
     p.add_argument("--tasks", type=Path, default=ROOT / "data/processed/tasks.jsonl")
     p.add_argument("--labels-dir", type=Path, default=ROOT / "coverage/labels")
     p.add_argument("--tau-tool-labels", type=Path, default=ROOT / "difficulty/tau2_tool_labels.csv")
@@ -276,6 +312,8 @@ def parser():
     p.add_argument("--synthetic-trials", type=Path, default=synthetic if synthetic.exists() else None)
     p.add_argument('--synthetic-structural-features', type=Path,
                    help='Optional proposed task_features.json; attach descriptive columns without changing scores')
+    p.add_argument("--synthetic-designed-scores", type=Path,
+                   help="Optional scores.json from the provisional designed-difficulty method; separate from empirical scores")
     p.add_argument("--output-dir", type=Path, default=ROOT / "results/framework")
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--model", default=MODEL_NAME)

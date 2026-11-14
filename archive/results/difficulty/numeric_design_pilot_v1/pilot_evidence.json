@@ -1,0 +1,1347 @@
+[
+  {
+    "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+    "dataset": "synthetic",
+    "domain": "banking_accounts_deposits",
+    "validation_status": "validated",
+    "accepted_for_scoring": true,
+    "validation_error": null,
+    "returned_model": "gpt-6-sol",
+    "usage": {
+      "input_tokens": 9000,
+      "input_tokens_details": {
+        "cache_write_tokens": 8997,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 8997
+        }
+      },
+      "output_tokens": 2364,
+      "output_tokens_details": {
+        "reasoning_tokens": 66
+      },
+      "total_tokens": 11364
+    },
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "601c9160105d3fa75b2d0622",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_001",
+          "applicability": "required",
+          "applicability_rationale": "Identity verification is a prerequisite on the selected opening path.",
+          "evidence": [
+            {
+              "source_id": "step_001",
+              "excerpt": "Validate customer identity using credit bureau and ID verification."
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Bind the supplied customer record to verification and check its result."
+        },
+        {
+          "unit_id": "step_002",
+          "applicability": "required",
+          "applicability_rationale": "AML screening precedes account configuration.",
+          "evidence": [
+            {
+              "source_id": "step_002",
+              "excerpt": "Perform AML screening against OFAC and sanctions lists."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Screen the applicant and distinguish a clear result from an escalation result."
+        },
+        {
+          "unit_id": "step_003",
+          "applicability": "required",
+          "applicability_rationale": "The individual applicant and deposit select the premium-tier path.",
+          "evidence": [
+            {
+              "source_id": "step_003",
+              "excerpt": "Calculate account tier based on deposit amount and profile."
+            },
+            {
+              "source_id": "case_input_conditions",
+              "excerpt": "Deposit amount >= 5000"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Supply the deposit and profile, including an age derived from the supplied birth date, and check eligibility."
+        },
+        {
+          "unit_id": "step_004",
+          "applicability": "required",
+          "applicability_rationale": "Premium limits must be configured before disclosure and opening.",
+          "evidence": [
+            {
+              "source_id": "step_004",
+              "excerpt": "Configure account limits according to tier and risk."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Bind the selected tier and a risk level to the limits configuration."
+        },
+        {
+          "unit_id": "step_005",
+          "applicability": "required",
+          "applicability_rationale": "The premium path includes fee waivers.",
+          "evidence": [
+            {
+              "source_id": "step_005",
+              "excerpt": "Configure fee schedule based on tier and waivers."
+            },
+            {
+              "source_id": "case_success_path_differences",
+              "excerpt": "Premium tier triggers higher limits and fee waivers"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Apply the premium waiver conditions and obtain the fee schedule."
+        },
+        {
+          "unit_id": "step_006",
+          "applicability": "required",
+          "applicability_rationale": "Disclosures are required for the account-opening endpoint.",
+          "evidence": [
+            {
+              "source_id": "step_006",
+              "excerpt": "Generate required disclosures (Truth in Savings, privacy notice, fee schedule)."
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 3,
+            "information": 1
+          },
+          "rationale": "Pass the configured limits and fee schedule into a disclosure call and check delivery."
+        },
+        {
+          "unit_id": "step_007",
+          "applicability": "required",
+          "applicability_rationale": "The specified external bank uses instant verification.",
+          "evidence": [
+            {
+              "source_id": "step_007",
+              "excerpt": "Link funding source and verify via instant or micro-deposit."
+            },
+            {
+              "source_id": "case_input_conditions",
+              "excerpt": "Funding source is external bank, instant verification"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Select instant verification, bind bank details, and check verified status."
+        },
+        {
+          "unit_id": "step_008",
+          "applicability": "required",
+          "applicability_rationale": "Opening and confirmation complete the selected success path.",
+          "evidence": [
+            {
+              "source_id": "step_008",
+              "excerpt": "Open account in core banking system and send confirmation."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 3,
+            "information": 1
+          },
+          "rationale": "Combine prior configuration, disclosures, and funding status in the opening call; report the resulting account."
+        },
+        {
+          "unit_id": "milestone_001",
+          "applicability": "required",
+          "applicability_rationale": "Required verification state, not an additional operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_001",
+              "excerpt": "Customer identity validated"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check the identity result from step 1."
+        },
+        {
+          "unit_id": "milestone_002",
+          "applicability": "required",
+          "applicability_rationale": "Required clear screening state, not another screening call.",
+          "evidence": [
+            {
+              "source_id": "milestone_002",
+              "excerpt": "AML screening clear"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check whether screening permits continuation."
+        },
+        {
+          "unit_id": "milestone_003",
+          "applicability": "required",
+          "applicability_rationale": "Required tier outcome, not another calculation.",
+          "evidence": [
+            {
+              "source_id": "milestone_003",
+              "excerpt": "Account tier calculated as premium"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Verify the selected tier and eligibility."
+        },
+        {
+          "unit_id": "milestone_004",
+          "applicability": "required",
+          "applicability_rationale": "Required limits state, not another configuration action.",
+          "evidence": [
+            {
+              "source_id": "milestone_004",
+              "excerpt": "Premium account limits configured"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Verify the premium limits output."
+        },
+        {
+          "unit_id": "milestone_005",
+          "applicability": "required",
+          "applicability_rationale": "Required fee outcome, not another fee call.",
+          "evidence": [
+            {
+              "source_id": "milestone_005",
+              "excerpt": "Fee schedule with premium waivers applied"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check that the premium waiver appears."
+        },
+        {
+          "unit_id": "milestone_006",
+          "applicability": "required",
+          "applicability_rationale": "Disclosure delivery is a required state, not a separate action beyond step 6.",
+          "evidence": [
+            {
+              "source_id": "milestone_006",
+              "excerpt": "Disclosures generated and delivered"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check the disclosure delivery result."
+        },
+        {
+          "unit_id": "milestone_007",
+          "applicability": "required",
+          "applicability_rationale": "Instant funding verification is a required state, not an extra call.",
+          "evidence": [
+            {
+              "source_id": "milestone_007",
+              "excerpt": "Funding source linked and verified instantly"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check the funding result."
+        },
+        {
+          "unit_id": "milestone_008",
+          "applicability": "required",
+          "applicability_rationale": "Opened status and confirmation are terminal requirements, not extra operations.",
+          "evidence": [
+            {
+              "source_id": "milestone_008",
+              "excerpt": "Account opened and confirmation sent"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check the opening outcome and confirmation."
+        },
+        {
+          "unit_id": "global_requirements",
+          "applicability": "context",
+          "applicability_rationale": "The global plan supplies sequencing and contingency rules; its alternative workflows are not all selected.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "Always perform identity and AML screening before any account configuration or opening."
+            },
+            {
+              "source_id": "global_plan",
+              "excerpt": "If funding source verification fails or is pending"
+            }
+          ],
+          "levels": {
+            "reasoning": null,
+            "tool_use": null,
+            "information": null
+          },
+          "rationale": "Apply the screening prerequisite; do not count untriggered recovery workflows as required work."
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 3,
+          "rationale": "Eight distinct active stages span compliance, product configuration, documentation, funding, and opening; milestones duplicate outcomes rather than adding stages.",
+          "evidence": [
+            {
+              "source_id": "step_001",
+              "excerpt": "Validate customer identity using credit bureau and ID verification."
+            },
+            {
+              "source_id": "step_008",
+              "excerpt": "Open account in core banking system and send confirmation."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 2,
+          "rationale": "The selected path requires several tier, risk, waiver, screening, and verification checks, but no documented need to resolve competing cases.",
+          "evidence": [
+            {
+              "source_id": "step_004",
+              "excerpt": "Configure account limits according to tier and risk."
+            },
+            {
+              "source_id": "exit_conditions",
+              "excerpt": "If AML returns medium/high risk, escalate to HUMAN_IN_THE_LOOP."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 3,
+          "rationale": "Later calls require nested outputs from distinct configuration and disclosure tools, plus customer and funding records.",
+          "evidence": [
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "open_account(application_id, customer_data, tier, limits, fee_schedule, disclosures, funding_status, owners?)"
+            },
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "generate_account_disclosures(application_id, tier, fee_schedule, limits, account_type, owners?)"
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 2,
+          "rationale": "Screening must precede configuration; limits and fees feed disclosures, and verified funding and delivered disclosures feed opening. No human handoff is selected.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "Always perform identity and AML screening before any account configuration or opening."
+            },
+            {
+              "source_id": "exit_conditions",
+              "excerpt": "Account opened, disclosures delivered, funding verified."
+            }
+          ]
+        },
+        "information": {
+          "level": 2,
+          "rationale": "Structured applicant and bank inputs are supplied, but the path requires obtaining screening and verification results and binding derived profile/risk values.",
+          "evidence": [
+            {
+              "source_id": "case_representative_input",
+              "excerpt": "\"deposit_amount\": 10000"
+            },
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "Risk level. Must be one of: low, medium, high"
+            }
+          ]
+        }
+      },
+      "overall_score": 60,
+      "intended_endpoint": {
+        "description": "Open the individual premium savings account after clear compliance checks, delivered disclosures, and instant funding verification; send confirmation and signal success. Escalation or failure remains conditional on adverse results, not the selected endpoint.",
+        "evidence": [
+          {
+            "source_id": "case_expected_success_outcome",
+            "excerpt": "\"final_status\": \"opened\""
+          },
+          {
+            "source_id": "case_success_path_differences",
+            "excerpt": "instant funding verification allows immediate account opening."
+          },
+          {
+            "source_id": "exit_conditions",
+            "excerpt": "Account opened, disclosures delivered, funding verified."
+          }
+        ]
+      },
+      "dependency_reasoning": "Identity and AML checks gate configuration; tier and risk inform limits and fees; those outputs feed disclosures; disclosure delivery and funding verification precede opening. Milestones check these states without adding calls.",
+      "score_rationale": "Levels 3 + 2 + 3 + 2 + 2 = 12; 5 × 12 = 60. This reflects a substantial single-applicant workflow with linked tool outputs, not every alternative recovery path.",
+      "uncertainties": [
+        "The input gives a birth date but not an explicit customer_profile or risk_level; reference arguments illustrate intended values without proving how they are determined.",
+        "The reference shows favorable screening and funding results, but source-only review cannot establish actual results.",
+        "The milestone's exact identity match score is an expected state, not a value established by the input."
+      ],
+      "source_quality_flags": [
+        "Reference calls describe intended work, not observed execution or authoritative ordering.",
+        "No blocking conflict prevents scoring the documented selected path."
+      ],
+      "unscorable_reason": ""
+    },
+    "request_sha256": "c967082b986911ec220acf0ac59003e2c3c9988013d52fa63b9877d723806e05",
+    "raw_response_sha256": "5f80f6d438a91d824fe3dee793f7a1ef7cf0ec047dec0af688a28e2c2df619dc"
+  },
+  {
+    "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+    "dataset": "synthetic",
+    "domain": "banking_accounts_deposits",
+    "validation_status": "validated",
+    "accepted_for_scoring": true,
+    "validation_error": null,
+    "returned_model": "gpt-6-sol",
+    "usage": {
+      "input_tokens": 8981,
+      "input_tokens_details": {
+        "cache_write_tokens": 6822,
+        "cached_tokens": 2156,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 6822
+        }
+      },
+      "output_tokens": 2469,
+      "output_tokens_details": {
+        "reasoning_tokens": 91
+      },
+      "total_tokens": 11450
+    },
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "361b11e6b936a53224004c3c",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_001",
+          "applicability": "required",
+          "applicability_rationale": "Identity verification is a prerequisite to configuration.",
+          "evidence": [
+            {
+              "source_id": "step_001",
+              "excerpt": "Validate customer identity using credit bureau and ID verification."
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Submit the structured customer record and check the verification result."
+        },
+        {
+          "unit_id": "step_002",
+          "applicability": "required",
+          "applicability_rationale": "AML clearance is required on the selected opening path.",
+          "evidence": [
+            {
+              "source_id": "step_002",
+              "excerpt": "Perform AML screening against OFAC and sanctions lists."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Screen the applicant and distinguish clearance from results requiring escalation."
+        },
+        {
+          "unit_id": "step_003",
+          "applicability": "required",
+          "applicability_rationale": "The individual applicant's $1,500 deposit selects the standard tier.",
+          "evidence": [
+            {
+              "source_id": "step_003",
+              "excerpt": "Calculate account tier based on deposit amount and profile."
+            },
+            {
+              "source_id": "case_input_conditions",
+              "excerpt": "Deposit amount < 5000"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Bind deposit and profile information, then verify eligibility and tier."
+        },
+        {
+          "unit_id": "step_004",
+          "applicability": "required",
+          "applicability_rationale": "Standard-tier limits must be configured.",
+          "evidence": [
+            {
+              "source_id": "step_004",
+              "excerpt": "Configure account limits according to tier and risk."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Use the tier and risk result to configure and retain the limits."
+        },
+        {
+          "unit_id": "step_005",
+          "applicability": "required",
+          "applicability_rationale": "The standard fee schedule is part of this path.",
+          "evidence": [
+            {
+              "source_id": "step_005",
+              "excerpt": "Configure fee schedule based on tier and waivers."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Apply standard fees and check the waiver setting."
+        },
+        {
+          "unit_id": "step_006",
+          "applicability": "required",
+          "applicability_rationale": "Disclosure delivery is required before a successful opening.",
+          "evidence": [
+            {
+              "source_id": "step_006",
+              "excerpt": "Generate required disclosures (Truth in Savings, privacy notice, fee schedule)."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 3,
+            "information": 2
+          },
+          "rationale": "Supply the tier, account type, configured limits, and full fee schedule; check delivery."
+        },
+        {
+          "unit_id": "step_007",
+          "applicability": "required",
+          "applicability_rationale": "This case selects external-bank micro-deposit verification.",
+          "evidence": [
+            {
+              "source_id": "step_007",
+              "excerpt": "Link funding source and verify via instant or micro-deposit."
+            },
+            {
+              "source_id": "case_input_conditions",
+              "excerpt": "Funding source is external bank, micro-deposit verification"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Bind bank details and the selected method, then establish verified rather than pending or failed status."
+        },
+        {
+          "unit_id": "step_008",
+          "applicability": "required",
+          "applicability_rationale": "Opening and confirmation are the selected endpoint; SUCCESS is a terminal signal, not another account-opening operation.",
+          "evidence": [
+            {
+              "source_id": "step_008",
+              "excerpt": "Open account in core banking system and send confirmation."
+            },
+            {
+              "source_id": "case_expected_success_outcome",
+              "excerpt": "\"final_status\": \"opened\""
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 3,
+            "information": 2
+          },
+          "rationale": "Combine prior configuration, disclosures, customer data, and verified funding in the opening request; report the resulting confirmation."
+        },
+        {
+          "unit_id": "milestone_001",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 1, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_001",
+              "excerpt": "Customer identity validated"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check verified identity and the specified match score."
+        },
+        {
+          "unit_id": "milestone_002",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 2, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_002",
+              "excerpt": "AML screening clear"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check clear status before continuing."
+        },
+        {
+          "unit_id": "milestone_003",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 3, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_003",
+              "excerpt": "Account tier calculated as standard"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check eligibility and the standard-tier result."
+        },
+        {
+          "unit_id": "milestone_004",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 4, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_004",
+              "excerpt": "Standard account limits configured"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check the configured limits."
+        },
+        {
+          "unit_id": "milestone_005",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 5, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_005",
+              "excerpt": "Fee schedule with standard fees applied"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check the standard fees and absence of a standard waiver."
+        },
+        {
+          "unit_id": "milestone_006",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 6, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_006",
+              "excerpt": "Disclosures generated and delivered"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check delivery, rather than generation alone."
+        },
+        {
+          "unit_id": "milestone_007",
+          "applicability": "required",
+          "applicability_rationale": "Required result of step 7, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_007",
+              "excerpt": "Funding source linked and verified via micro-deposit"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 2
+          },
+          "rationale": "Check the verification result; the documentation does not specify how a pending micro-deposit resolves."
+        },
+        {
+          "unit_id": "milestone_008",
+          "applicability": "required",
+          "applicability_rationale": "Required final state of step 8, not an extra operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_008",
+              "excerpt": "Account opened and confirmation sent"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Check opened status and confirmation."
+        },
+        {
+          "unit_id": "global_requirements",
+          "applicability": "context",
+          "applicability_rationale": "Provides ordering and exception rules; unselected recovery workflows are not additional required work.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "Always perform identity and AML screening before any account configuration or opening."
+            },
+            {
+              "source_id": "global_plan",
+              "excerpt": "If funding source verification fails or is pending"
+            }
+          ],
+          "levels": {
+            "reasoning": null,
+            "tool_use": null,
+            "information": null
+          },
+          "rationale": "Apply its prerequisites and selected-path checks without charging every possible recovery branch."
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 3,
+          "rationale": "Identity, compliance, product configuration, disclosures, funding, and opening form substantial multi-stage work for one applicant; milestones duplicate step outcomes.",
+          "evidence": [
+            {
+              "source_id": "step_001",
+              "excerpt": "Validate customer identity using credit bureau and ID verification."
+            },
+            {
+              "source_id": "step_008",
+              "excerpt": "Open account in core banking system and send confirmation."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 2,
+          "rationale": "The path requires several explicit checks of screening, tier, risk, disclosure delivery, and funding status, but no documented substantial tradeoff on this case.",
+          "evidence": [
+            {
+              "source_id": "workflow_context",
+              "excerpt": "Deposit amount >= 5000 for premium, else standard"
+            },
+            {
+              "source_id": "exit_conditions",
+              "excerpt": "If AML returns medium/high risk, escalate to HUMAN_IN_THE_LOOP."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 3,
+          "rationale": "Several distinct tools exchange structured results; disclosure and opening calls require multiple prior output objects as arguments.",
+          "evidence": [
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "generate_account_disclosures(application_id, tier, fee_schedule, limits, account_type, owners?)"
+            },
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "open_account(application_id, customer_data, tier, limits, fee_schedule, disclosures, funding_status, owners?)"
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 3,
+          "rationale": "Compliance gates precede configuration; tier and risk feed limits, configured outputs feed disclosures and opening, and verified funding gates the successful endpoint.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "Always perform identity and AML screening before any account configuration or opening."
+            },
+            {
+              "source_id": "exit_conditions",
+              "excerpt": "Account opened, disclosures delivered, funding verified."
+            }
+          ]
+        },
+        "information": {
+          "level": 2,
+          "rationale": "Most applicant inputs are structured, but the task must retrieve and verify screening, configuration, disclosure, and funding results; the profile age and risk value also need support.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "All customer-provided data is received in structured digital format."
+            },
+            {
+              "source_id": "step_004",
+              "excerpt": "Configure account limits according to tier and risk."
+            }
+          ]
+        }
+      },
+      "overall_score": 65,
+      "intended_endpoint": {
+        "description": "Open this individual standard checking account after clear compliance checks, delivered disclosures, and verified external-bank micro-deposit funding; send confirmation. Escalation and failure are conditional exits, not the selected endpoint.",
+        "evidence": [
+          {
+            "source_id": "case_input_conditions",
+            "excerpt": "Applicant is individual"
+          },
+          {
+            "source_id": "case_success_path_differences",
+            "excerpt": "micro-deposit funding requires verification but is completed successfully."
+          },
+          {
+            "source_id": "exit_conditions",
+            "excerpt": "Account opened, disclosures delivered, funding verified."
+          }
+        ]
+      },
+      "dependency_reasoning": "Identity and AML are prerequisite gates. The standard-tier result feeds limits and fees; those results feed disclosures. Delivered disclosures and verified funding, with configuration and customer data, feed account opening. A pending verification is a dependency, not counted as active waiting work.",
+      "score_rationale": "Levels 3 + 2 + 3 + 3 + 2 yield 65. The score reflects a linked, multi-stage single-applicant path, not the unselected recovery workflows or duplicate milestone operations.",
+      "uncertainties": [
+        "The reference supplies age 31 and low risk, but the scenario input does not directly supply a risk level or a customer_profile object; their derivation is not fully specified.",
+        "Micro-deposit verification is described as successfully completed, but no customer response, timing, or pending-to-verified procedure is documented.",
+        "The reference success call is intended design evidence, not proof that the account can be opened."
+      ],
+      "source_quality_flags": [
+        "Some intermediate argument values appear in intended reference calls without fully documented derivation.",
+        "Micro-deposit verification continuation is underspecified; this limits precision but does not prevent scoring the documented path."
+      ],
+      "unscorable_reason": ""
+    },
+    "request_sha256": "77bacd71efa3e80b09eb9aa527cddd919e800628a543a3b81b8544ebb5c1ccb7",
+    "raw_response_sha256": "7b6f0290fbc1380e6f3713bad8afe84e1fd842ac5889b388cec9f8be902e0809"
+  },
+  {
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+    "dataset": "synthetic",
+    "domain": "insurance_claims_intake",
+    "validation_status": "format_error",
+    "accepted_for_scoring": false,
+    "validation_error": "Unselected/context/uncertain units must have null levels",
+    "returned_model": "gpt-6-sol",
+    "usage": {
+      "input_tokens": 8689,
+      "input_tokens_details": {
+        "cache_write_tokens": 6530,
+        "cached_tokens": 2156,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 6530
+        }
+      },
+      "output_tokens": 2628,
+      "output_tokens_details": {
+        "reasoning_tokens": 87
+      },
+      "total_tokens": 11317
+    },
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "a2fed07b3b66388f64a03b9f",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_001",
+          "applicability": "required",
+          "applicability_rationale": "The selected workflow begins with FNOL extraction.",
+          "evidence": [
+            {
+              "source_id": "step_001",
+              "excerpt": "Extract loss details from FNOL."
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 1,
+            "information": 2
+          },
+          "rationale": "Extract structured details from the supplied narrative using the named tool."
+        },
+        {
+          "unit_id": "step_002",
+          "applicability": "required",
+          "applicability_rationale": "Commercial property with BI is the selected classification.",
+          "evidence": [
+            {
+              "source_id": "step_002",
+              "excerpt": "Classify claim as commercial property + business interruption."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 1
+          },
+          "rationale": "Preserve both the primary type and BI subtype from extracted details."
+        },
+        {
+          "unit_id": "step_003",
+          "applicability": "required",
+          "applicability_rationale": "Coverage validation precedes creation and dispatch.",
+          "evidence": [
+            {
+              "source_id": "step_003",
+              "excerpt": "Validate property and BI coverage."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Check the policy and relevant coverages, binding extracted policy, date, and peril."
+        },
+        {
+          "unit_id": "step_004",
+          "applicability": "required",
+          "applicability_rationale": "Large-loss and BI severity govern subsequent routing and services.",
+          "evidence": [
+            {
+              "source_id": "step_004",
+              "excerpt": "Assess severity (large loss, BI exposure)."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 2,
+            "information": 2
+          },
+          "rationale": "Combine loss and coverage results to assess exposure and emergency need."
+        },
+        {
+          "unit_id": "step_005",
+          "applicability": "required",
+          "applicability_rationale": "Linked property and BI claims are an explicit outcome.",
+          "evidence": [
+            {
+              "source_id": "step_005",
+              "excerpt": "Create linked claims for property and BI."
+            }
+          ],
+          "levels": {
+            "reasoning": 3,
+            "tool_use": 3,
+            "information": 2
+          },
+          "rationale": "Creation must maintain two related claim identities while binding classification, coverage, loss, and severity data."
+        },
+        {
+          "unit_id": "step_006",
+          "applicability": "required",
+          "applicability_rationale": "Both specialist routing requirements apply to this case.",
+          "evidence": [
+            {
+              "source_id": "step_006",
+              "excerpt": "Route to large loss unit and BI specialist."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 3,
+            "information": 1
+          },
+          "rationale": "Route using the created claim identity, severity, location, and specialist requirements."
+        },
+        {
+          "unit_id": "step_007",
+          "applicability": "selected_conditional",
+          "applicability_rationale": "The scenario expressly requires specialist dispatch and the reference indicates emergency services are needed.",
+          "evidence": [
+            {
+              "source_id": "step_007",
+              "excerpt": "Engage forensic accountant and engineer (via vendor dispatch)."
+            },
+            {
+              "source_id": "reference_calls",
+              "excerpt": "\"emergency_services_needed\": true"
+            }
+          ],
+          "levels": {
+            "reasoning": 3,
+            "tool_use": 3,
+            "information": 2
+          },
+          "rationale": "Determine appropriate dispatch for the loss and bind the claim and location; the named tool describes emergency vendors rather than these specialists."
+        },
+        {
+          "unit_id": "step_008",
+          "applicability": "required",
+          "applicability_rationale": "The insured must receive acknowledgment after claim creation and routing.",
+          "evidence": [
+            {
+              "source_id": "step_008",
+              "excerpt": "Send claim acknowledgment to insured with contact info for all parties."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 3,
+            "information": 2
+          },
+          "rationale": "Compose a notification using claim and assignment details and recipient contact information."
+        },
+        {
+          "unit_id": "step_009",
+          "applicability": "context",
+          "applicability_rationale": "This is a terminal success signal, not additional substantive intake work.",
+          "evidence": [
+            {
+              "source_id": "step_009",
+              "excerpt": "Signal successful intake."
+            }
+          ],
+          "levels": {
+            "reasoning": 0,
+            "tool_use": 1,
+            "information": 0
+          },
+          "rationale": "Reports the intended endpoint after requirements are met."
+        },
+        {
+          "unit_id": "milestone_001",
+          "applicability": "context",
+          "applicability_rationale": "State requirement for extraction, not a separate operation.",
+          "evidence": [
+            {
+              "source_id": "milestone_001",
+              "excerpt": "Loss details extracted (fire, business interruption)"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Specifies the details step 001 should produce."
+        },
+        {
+          "unit_id": "milestone_002",
+          "applicability": "context",
+          "applicability_rationale": "Classification state requirement, not additional work.",
+          "evidence": [
+            {
+              "source_id": "milestone_002",
+              "excerpt": "Claim classified as commercial property + BI"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 0
+          },
+          "rationale": "Specifies the result of step 002."
+        },
+        {
+          "unit_id": "milestone_003",
+          "applicability": "context",
+          "applicability_rationale": "Coverage state requirement, not an extra check.",
+          "evidence": [
+            {
+              "source_id": "milestone_003",
+              "excerpt": "Property and BI coverage validated"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Specifies the result of step 003."
+        },
+        {
+          "unit_id": "milestone_004",
+          "applicability": "context",
+          "applicability_rationale": "Severity state requirement, not another assessment.",
+          "evidence": [
+            {
+              "source_id": "milestone_004",
+              "excerpt": "Severity assessed (large loss, BI exposure)"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 0
+          },
+          "rationale": "Specifies the result of step 004."
+        },
+        {
+          "unit_id": "milestone_005",
+          "applicability": "context",
+          "applicability_rationale": "Linked-claim requirement is counted with creation, not twice.",
+          "evidence": [
+            {
+              "source_id": "milestone_005",
+              "excerpt": "Linked claims created for property and BI"
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 0,
+            "information": 1
+          },
+          "rationale": "Defines the linked-record state required of step 005."
+        },
+        {
+          "unit_id": "milestone_006",
+          "applicability": "context",
+          "applicability_rationale": "Assignment requirement is counted with routing.",
+          "evidence": [
+            {
+              "source_id": "milestone_006",
+              "excerpt": "Claim routed to large loss unit and BI specialist"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 0
+          },
+          "rationale": "Defines the intended routing result."
+        },
+        {
+          "unit_id": "milestone_007",
+          "applicability": "context",
+          "applicability_rationale": "Dispatch requirement is counted with step 007.",
+          "evidence": [
+            {
+              "source_id": "milestone_007",
+              "excerpt": "Forensic accountant and engineer dispatched"
+            }
+          ],
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 0,
+            "information": 0
+          },
+          "rationale": "Defines the intended specialist-dispatch result."
+        },
+        {
+          "unit_id": "milestone_008",
+          "applicability": "context",
+          "applicability_rationale": "Delivery requirement is counted with acknowledgment.",
+          "evidence": [
+            {
+              "source_id": "milestone_008",
+              "excerpt": "Claim acknowledgment sent to insured"
+            }
+          ],
+          "levels": {
+            "reasoning": 0,
+            "tool_use": 0,
+            "information": 0
+          },
+          "rationale": "Defines the intended notification result."
+        },
+        {
+          "unit_id": "global_requirements",
+          "applicability": "selected_conditional",
+          "applicability_rationale": "Coverage-first ordering, specialized routing, and severity-gated services apply; recovery alternatives are not selected by the supplied conditions.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "Always validate policy coverage before claim creation or vendor dispatch."
+            },
+            {
+              "source_id": "global_plan",
+              "excerpt": "Trigger emergency services only when claim severity warrants immediate action."
+            }
+          ],
+          "levels": {
+            "reasoning": 2,
+            "tool_use": 1,
+            "information": 1
+          },
+          "rationale": "Adds sequencing and a dispatch gate without adding every listed recovery path to the active workload."
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 3,
+          "rationale": "Substantial staged intake culminates in linked claims, specialist routing and dispatch, and acknowledgment; milestones are not counted again.",
+          "evidence": [
+            {
+              "source_id": "step_005",
+              "excerpt": "Create linked claims for property and BI."
+            },
+            {
+              "source_id": "step_007",
+              "excerpt": "Engage forensic accountant and engineer (via vendor dispatch)."
+            },
+            {
+              "source_id": "step_008",
+              "excerpt": "Send claim acknowledgment to insured with contact info for all parties."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 3,
+          "rationale": "Linked property/BI handling and specialist dispatch require coordinating case-specific requirements, though the scenario fixes the principal path.",
+          "evidence": [
+            {
+              "source_id": "step_005",
+              "excerpt": "Create linked claims for property and BI."
+            },
+            {
+              "source_id": "step_006",
+              "excerpt": "Route to large loss unit and BI specialist."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 3,
+          "rationale": "Several tools require nested prior results and repeated binding of claim identity, severity, location, and recipient details.",
+          "evidence": [
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "create_claim_record(loss_details, claim_type, coverage_info, severity_info)"
+            },
+            {
+              "source_id": "tool_contracts",
+              "excerpt": "send_claim_acknowledgment(claim_number, recipient_info, message_type, delivery_method, content)"
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 3,
+          "rationale": "Coverage and severity gate creation and dispatch; linked records then feed assignment and insured notification.",
+          "evidence": [
+            {
+              "source_id": "global_plan",
+              "excerpt": "Always validate policy coverage before claim creation or vendor dispatch."
+            },
+            {
+              "source_id": "step_005",
+              "excerpt": "Create linked claims for property and BI."
+            },
+            {
+              "source_id": "step_008",
+              "excerpt": "Send claim acknowledgment to insured with contact info for all parties."
+            }
+          ]
+        },
+        "information": {
+          "level": 2,
+          "rationale": "FNOL details and coverage must be extracted or verified, but the selected scenario supplies the key branch conditions and no documented conflict requires extensive discovery.",
+          "evidence": [
+            {
+              "source_id": "step_001",
+              "excerpt": "Extract loss details from FNOL."
+            },
+            {
+              "source_id": "step_003",
+              "excerpt": "Validate property and BI coverage."
+            },
+            {
+              "source_id": "case_representative_input",
+              "excerpt": "\"data_incomplete\": false, \"duplicate_claim_found\": false"
+            }
+          ]
+        }
+      },
+      "overall_score": 70,
+      "intended_endpoint": {
+        "description": "Successful intake with linked property and BI claims, large-loss and BI specialist handling, dispatch, and insured acknowledgment; escalation remains an alternative if coverage limits or BI calculation prove unclear.",
+        "evidence": [
+          {
+            "source_id": "exit_conditions",
+            "excerpt": "\"success\": \"Linked claims created, specialists engaged, insured notified.\""
+          },
+          {
+            "source_id": "exit_conditions",
+            "excerpt": "\"escalation\": \"If coverage limits unclear or BI calculation complex, escalate to HUMAN_IN_THE_LOOP.\""
+          },
+          {
+            "source_id": "case_representative_input",
+            "excerpt": "\"coverage_confirmed\": true, \"data_incomplete\": false"
+          }
+        ]
+      },
+      "dependency_reasoning": "The selected path extracts and classifies loss information, validates coverage before creation or dispatch, assesses severity, creates linked records, and uses resulting identities and details for routing, dispatch, and acknowledgment. Milestones duplicate required states, while recovery branches are not charged as active work.",
+      "score_rationale": "Levels 3 + 3 + 3 + 3 + 2 yield 5 × 14 = 70. Breadth, linked-state coordination, and nested tool inputs drive the score; supplied scenario values limit discovery and branching.",
+      "uncertainties": [
+        "The workflow calls for linked property and BI claims, but the reference shows one create_claim_record call and the contract lists linked_claims as an optional return; the exact creation mechanism is unspecified.",
+        "The specialist-dispatch requirement names a forensic accountant and engineer, while the referenced emergency-services call requests salvage from ServiceMaster; how that call satisfies specialist dispatch is unclear.",
+        "The global guidance mentions human review for complex or high-severity cases, but the case-specific success path selects processing rather than immediate escalation."
+      ],
+      "source_quality_flags": [
+        "Reference calls are intended design evidence, not proof that linked claims or specialist dispatch can be achieved by the shown calls.",
+        "Some reference identifiers use 2026-CP-7788 and 2026-BI-7788 despite tool-contract descriptions specifying a different claim-number format.",
+        "The reference loss-details arguments contain claimant, contact, date, and location fields absent from the short supplied source_text; their availability depends on extraction or other claim data not shown."
+      ],
+      "unscorable_reason": ""
+    },
+    "request_sha256": "f017d5913d5068572680d3bedd8e76f62ce1c41b7e64a69e4dc6ddfe355d93d8",
+    "raw_response_sha256": "d39ba56d3f381f65873fa116c01fc4909b25a20406f265b0b1ee20d7bbaa641d"
+  }
+]

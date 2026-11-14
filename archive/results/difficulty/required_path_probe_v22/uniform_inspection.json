@@ -1,0 +1,11 @@
+{
+  "scores": [
+    50,
+    50,
+    50
+  ],
+  "decision": "Proceed with fourth already-authorized call after source explanation inspection",
+  "reason": "Cases 1/2 include missing-SIM discovery and reseating; case 3 lacks a missing-SIM condition and its explanation does not invent one. All share a locked-SIM escalation and routine 0–4 anchor bands. Distinct sufficient paths can legitimately tie. This is inspection, not independent proof of numeric validity.",
+  "new_api_calls_during_inspection": 0,
+  "remaining_authorized_calls": 1
+}

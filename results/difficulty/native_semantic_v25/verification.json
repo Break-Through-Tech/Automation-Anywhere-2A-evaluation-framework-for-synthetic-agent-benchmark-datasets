@@ -1,0 +1,24 @@
+{
+  "api_calls": 0,
+  "agent_runs": 0,
+  "all_native_sources_verified": 278,
+  "coverage": {
+    "not_authored": 275,
+    "provisional_complete": 2,
+    "unresolved_path": 1
+  },
+  "primary_files_unchanged": {
+    "results/difficulty/tau2_final_v19/comparison.json": true,
+    "results/difficulty/synthetic_final_v15/task_scores.json": true
+  },
+  "preexisting_user_files_unchanged": 80,
+  "source_semantic_checks": "8 tests passed; source references and all 278 inventory entries validated on real inputs",
+  "files_sha256": {
+    "difficulty/native_semantic_profiles.py": "893a81a0b20b82f1127c5d6cad0cdae1fdc9d69f6344754644e34a34697efbf4",
+    "difficulty/native_semantic_annotations_v1.json": "35008279c53d27acc12ecbe467e07de817a12c27309b2274e206b90f6ed16ffe",
+    "docs/evaluation/design_counting_rulebook_v0.1.md": "185a81fa6818625f2080d1c98df0bf230d8493b7fd4f87fcd93b2c69d8abda72",
+    "docs/evaluation/design_counting_rulebook_v0.2.md": "c0a6b7c69927f4c0cbd0698fea22a80cd0dad6f47b7b0cb8896bbefe7688fb28",
+    "results/difficulty/tau2_final_v19/comparison.json": "7733dd4c7cf48440db3543abe18df439597eb08c832b391100090dc378f99cb9",
+    "results/difficulty/synthetic_final_v15/task_scores.json": "e078b4d935f495d29ec5d62ec86a3916151329e4f64b7d30e08c0635eb5453cb"
+  }
+}

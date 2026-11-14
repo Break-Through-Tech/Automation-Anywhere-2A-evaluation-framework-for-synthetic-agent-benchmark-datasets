@@ -1,0 +1,697 @@
+[
+  {
+    "task_id": "C01",
+    "validation_status": "validated",
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "cfaeafa096c68dc6d8821159",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_1",
+          "applicability_rationale": "Reading the balance is required before it can be recorded.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            }
+          ],
+          "rationale": "A direct retrieval with a specified tool and customer.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 1,
+            "information": 1
+          }
+        },
+        {
+          "unit_id": "step_2",
+          "applicability_rationale": "Recording the retrieved balance is the requested endpoint.",
+          "evidence": [
+            {
+              "source_id": "step_2",
+              "excerpt": "Record that balance and currency for Customer K using record_balance."
+            }
+          ],
+          "rationale": "A specified recording call must use the balance and currency returned by the read.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 2,
+            "information": 1
+          }
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 2,
+          "rationale": "Two routine stages serve one recording objective.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            },
+            {
+              "source_id": "step_2",
+              "excerpt": "Record that balance and currency for Customer K using record_balance."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 1,
+          "rationale": "The path is direct; identity, approval, and conversion do not require decisions.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "Its identity is already verified. Record the current balance; no approval or conversion is needed."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 2,
+          "rationale": "The read result supplies ordinary arguments to the recording tool.",
+          "evidence": [
+            {
+              "source_id": "tools",
+              "excerpt": "\"read_balance\": \"customer_id, optional account_id -> balance and currency\", \"record_balance\": \"customer_id, balance, currency -> recorded confirmation\""
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 1,
+          "rationale": "Recording follows the read in a simple local sequence.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            },
+            {
+              "source_id": "step_2",
+              "excerpt": "Record that balance and currency for Customer K using record_balance."
+            }
+          ]
+        },
+        "information": {
+          "level": 1,
+          "rationale": "The customer and account situation are clear; the current balance is obtained by the specified read.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "Customer K has one USD account."
+            },
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            }
+          ]
+        }
+      },
+      "overall_score": 35,
+      "intended_endpoint": {
+        "description": "Customer K's current balance and currency are recorded, with confirmation.",
+        "evidence": [
+          {
+            "source_id": "endpoint",
+            "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+          }
+        ]
+      },
+      "dependency_reasoning": "The balance and currency returned by read_balance are needed for record_balance; no approval or conversion branch applies.",
+      "score_rationale": "Levels 2 + 1 + 2 + 1 + 1 yield a provisional score of 35.",
+      "uncertainties": [],
+      "source_quality_flags": [],
+      "unscorable_reason": ""
+    },
+    "usage": {
+      "input_tokens": 2699,
+      "input_tokens_details": {
+        "cache_write_tokens": 367,
+        "cached_tokens": 2329,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 367
+        }
+      },
+      "output_tokens": 769,
+      "output_tokens_details": {
+        "reasoning_tokens": 89
+      },
+      "total_tokens": 3468
+    },
+    "request_sha256": "0ce4d00fcebc6f0f39afff7f7bc9939163eb22a894faa44affd7c8bf2a43c6d1",
+    "raw_response_sha256": "d9c0136dec9feefb630d1e6d5f5367c8f0679616525e1ebf59749371dfcf7265",
+    "input_sha256": "1bb6373ffe8849901cc981d2621ec7ab96f1aa7379e0299e21ef10953f87802e",
+    "sources": {
+      "scenario": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/scenario",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "tools": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/tool_contracts",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "endpoint": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/endpoint",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_1": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/steps/0",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_2": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/steps/1",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      }
+    }
+  },
+  {
+    "task_id": "C02",
+    "validation_status": "validated",
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "223d00bffbb05674e0efd936",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_1",
+          "applicability_rationale": "Required to establish the exposure and preserve the source balances.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Resolve Customer K's linked accounts, read each balance, obtain the applicable dated currency rates, reconcile inconsistent currency identifiers and compute the combined USD exposure."
+            }
+          ],
+          "rationale": "Requires repeated account and rate retrieval, currency-identifier reconciliation, and aggregation.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 3,
+            "tool_use": 3,
+            "information": 3
+          }
+        },
+        {
+          "unit_id": "step_2",
+          "applicability_rationale": "The threshold decision is required; approval and the terminal action depend on its result and any approval response.",
+          "evidence": [
+            {
+              "source_id": "step_2",
+              "excerpt": "Compare the exposure against the supplied threshold, request approval when required, and only after approval record a reconciliation linking the original balances, conversions and approval identifier; on rejection do not record it."
+            }
+          ],
+          "rationale": "Applies a threshold and conditional approval rule, then binds the resulting records and approval identifier if recording is permitted.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 3,
+            "tool_use": 3,
+            "information": 2
+          }
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 3,
+          "rationale": "Several linked accounts require repeated retrieval and conversion before the approval and recording decision.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "Customer K has several linked accounts in different currencies."
+            },
+            {
+              "source_id": "step_1",
+              "excerpt": "Resolve Customer K's linked accounts, read each balance, obtain the applicable dated currency rates, reconcile inconsistent currency identifiers and compute the combined USD exposure."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 3,
+          "rationale": "Currency inconsistencies and converted exposure must be reconciled before applying the conditional approval rule.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "reconcile inconsistent currency identifiers and compute the combined USD exposure."
+            },
+            {
+              "source_id": "scenario",
+              "excerpt": "approval is required if converted exposure exceeds USD 100000."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 3,
+          "rationale": "The documented tools require repeated account and currency binding, followed by conditionally binding supporting records and an approval identifier.",
+          "evidence": [
+            {
+              "source_id": "tools",
+              "excerpt": "\"get_fx_rate\": \"source_currency, target_currency, date -> conversion rate\", \"get_linked_accounts\": \"customer_id -> account identifiers and currencies\", \"read_balance\": \"customer_id, optional account_id -> balance and currency\""
+            },
+            {
+              "source_id": "tools",
+              "excerpt": "\"record_reconciliation\": \"customer_id, account_ids, original_balances, converted_balances, approval_id -> linked record confirmation\", \"request_approval\": \"customer_id, proposed_reconciliation, supporting_records -> approval or rejection\""
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 3,
+          "rationale": "Account, balance, and rate results feed the exposure decision; a required approval response controls whether recording may proceed.",
+          "evidence": [
+            {
+              "source_id": "step_2",
+              "excerpt": "request approval when required, and only after approval record a reconciliation linking the original balances, conversions and approval identifier; on rejection do not record it."
+            }
+          ]
+        },
+        "information": {
+          "level": 3,
+          "rationale": "Inputs are distributed across linked accounts, balances, and dated rates, with inconsistent currency identifiers explicitly requiring reconciliation.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "read each balance, obtain the applicable dated currency rates, reconcile inconsistent currency identifiers"
+            }
+          ]
+        }
+      },
+      "overall_score": 75,
+      "intended_endpoint": {
+        "description": "Record a linked reconciliation preserving original and converted balances with approval when required; if approval is rejected, report rejection without recording. The source does not establish which conditional outcome applies.",
+        "evidence": [
+          {
+            "source_id": "endpoint",
+            "excerpt": "A linked reconciliation with correct source records and required approval is recorded, or a rejected approval is reported without recording a reconciliation."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "Preserve all original and converted balances."
+          }
+        ]
+      },
+      "dependency_reasoning": "Discovery and conversion precede the threshold check. If approval is required, its response gates recording; rejection instead leads to the reporting endpoint. These are conditional branches, not cumulative obligations.",
+      "score_rationale": "The five ratings are workload 3, reasoning 3, tool use 3, dependencies 3, and information 3; 5 × 15 = 75.",
+      "uncertainties": [
+        "Actual balances and rates are not supplied, so whether approval is required and whether it would be granted cannot be selected in advance.",
+        "The documentation does not specify how inconsistent currency identifiers are resolved."
+      ],
+      "source_quality_flags": [],
+      "unscorable_reason": ""
+    },
+    "usage": {
+      "input_tokens": 2768,
+      "input_tokens_details": {
+        "cache_write_tokens": 436,
+        "cached_tokens": 2329,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 436
+        }
+      },
+      "output_tokens": 1064,
+      "output_tokens_details": {
+        "reasoning_tokens": 92
+      },
+      "total_tokens": 3832
+    },
+    "request_sha256": "9d3b182afddbba2193cd2f61780970082c0332c106afe20d27ae08fb66698e42",
+    "raw_response_sha256": "94e6749566c8ea1e6b211c8cefcedd0204298a9d9e50598ea9caf4ee59c33404",
+    "input_sha256": "f8fa9aa0ada5bd61c6a42578037f2249b880df3e9fe6f0ab10d07de58c40bf1c",
+    "sources": {
+      "scenario": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/1/scenario",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "tools": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/tool_contracts",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "endpoint": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/1/endpoint",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_1": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/1/steps/0",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_2": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/1/steps/1",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      }
+    }
+  },
+  {
+    "task_id": "C03",
+    "validation_status": "validated",
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "e43788f8dbd01288eb6e253b",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_1",
+          "applicability_rationale": "Reading the current balance is required before it can be saved.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Use read_balance to obtain the current balance and currency of Customer K."
+            }
+          ],
+          "rationale": "A direct retrieval with specified customer and output fields; the balance itself must be discovered.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 1,
+            "information": 2
+          }
+        },
+        {
+          "unit_id": "step_2",
+          "applicability_rationale": "Recording the retrieved balance and currency is the requested outcome.",
+          "evidence": [
+            {
+              "source_id": "step_2",
+              "excerpt": "Use record_balance to save that balance and currency for Customer K."
+            },
+            {
+              "source_id": "endpoint",
+              "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+            }
+          ],
+          "rationale": "The recording call binds the retrieved balance and currency to its arguments; no conversion or approval decision is needed.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 2,
+            "information": 1
+          }
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 2,
+          "rationale": "Two routine stages—retrieve and record—serve one objective.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Use read_balance to obtain the current balance and currency of Customer K."
+            },
+            {
+              "source_id": "step_2",
+              "excerpt": "Use record_balance to save that balance and currency for Customer K."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 1,
+          "rationale": "The path is direct: the single USD account needs neither conversion nor approval.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "There is a single account denominated in USD. Save its present balance; neither conversion nor approval is required."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 2,
+          "rationale": "The agent must pass values returned by read_balance into record_balance, using the stated tool arguments.",
+          "evidence": [
+            {
+              "source_id": "tools",
+              "excerpt": "\"read_balance\": \"customer_id, optional account_id -> balance and currency\", \"record_balance\": \"customer_id, balance, currency -> recorded confirmation\""
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 1,
+          "rationale": "Recording follows retrieval of the present balance and currency; no other handoff is required.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Use read_balance to obtain the current balance and currency of Customer K."
+            },
+            {
+              "source_id": "step_2",
+              "excerpt": "Use record_balance to save that balance and currency for Customer K."
+            }
+          ]
+        },
+        "information": {
+          "level": 2,
+          "rationale": "The current balance and currency require ordinary retrieval; the scenario otherwise specifies the applicable path.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Use read_balance to obtain the current balance and currency of Customer K."
+            },
+            {
+              "source_id": "scenario",
+              "excerpt": "There is a single account denominated in USD."
+            }
+          ]
+        }
+      },
+      "overall_score": 40,
+      "intended_endpoint": {
+        "description": "Customer K's current balance and currency are saved, with a record confirmation.",
+        "evidence": [
+          {
+            "source_id": "endpoint",
+            "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+          }
+        ]
+      },
+      "dependency_reasoning": "The read result supplies the balance and currency for the recording call; the confirmed identity and single USD account remove conversion and approval branches.",
+      "score_rationale": "Ratings of 2, 1, 2, 1, and 2 sum to 8; 5 × 8 = 40. This reflects a short, linked retrieval-and-recording task.",
+      "uncertainties": [],
+      "source_quality_flags": [],
+      "unscorable_reason": ""
+    },
+    "usage": {
+      "input_tokens": 2708,
+      "input_tokens_details": {
+        "cache_write_tokens": 376,
+        "cached_tokens": 2329,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 376
+        }
+      },
+      "output_tokens": 868,
+      "output_tokens_details": {
+        "reasoning_tokens": 85
+      },
+      "total_tokens": 3576
+    },
+    "request_sha256": "c2a8987556865c31527d16204ce7dd78ba4f75b64824ec84884cd2c1e6426f80",
+    "raw_response_sha256": "78ae31701910c26ee6e22b7709af460775853b38ddaf84714376caf8d46a3cb3",
+    "input_sha256": "006b0d7c51ad34389d9a0b09ae1ba22c977a30cdef5c80d75d9f601067c1ea43",
+    "sources": {
+      "scenario": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/2/scenario",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "tools": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/tool_contracts",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "endpoint": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/2/endpoint",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_1": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/2/steps/0",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_2": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/2/steps/1",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      }
+    }
+  },
+  {
+    "task_id": "C04",
+    "validation_status": "validated",
+    "judgment_as_returned": {
+      "version": "design_judgment_v1",
+      "case_key": "1f104d44b08e988b2a211605",
+      "status": "scored",
+      "units": [
+        {
+          "unit_id": "step_1",
+          "applicability_rationale": "Reading the current balance is necessary to record it.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            }
+          ],
+          "rationale": "A specified lookup retrieves the balance and currency; no account selection or conversion is needed.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 1,
+            "information": 2
+          }
+        },
+        {
+          "unit_id": "step_2",
+          "applicability_rationale": "Recording the retrieved values is the requested outcome.",
+          "evidence": [
+            {
+              "source_id": "step_2",
+              "excerpt": "Record that balance and currency for Customer K using record_balance."
+            },
+            {
+              "source_id": "tools",
+              "excerpt": "record_balance\": \"customer_id, balance, currency -> recorded confirmation"
+            }
+          ],
+          "rationale": "The specified recording call must use the balance and currency returned by the preceding lookup.",
+          "applicability": "required",
+          "levels": {
+            "reasoning": 1,
+            "tool_use": 2,
+            "information": 1
+          }
+        }
+      ],
+      "dimensions": {
+        "workload": {
+          "level": 2,
+          "rationale": "One objective has two routine active stages: read, then record.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            },
+            {
+              "source_id": "step_2",
+              "excerpt": "Record that balance and currency for Customer K using record_balance."
+            }
+          ]
+        },
+        "reasoning": {
+          "level": 1,
+          "rationale": "The path is explicit, with no approval or conversion decision.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "Record the current balance; no approval or conversion is needed."
+            }
+          ]
+        },
+        "tool_use": {
+          "level": 2,
+          "rationale": "Two specified tools are used, with values from the first bound to arguments of the second.",
+          "evidence": [
+            {
+              "source_id": "tools",
+              "excerpt": "read_balance\": \"customer_id, optional account_id -> balance and currency\""
+            },
+            {
+              "source_id": "tools",
+              "excerpt": "record_balance\": \"customer_id, balance, currency -> recorded confirmation"
+            }
+          ]
+        },
+        "dependencies": {
+          "level": 1,
+          "rationale": "Recording follows the lookup because it uses the retrieved balance and currency.",
+          "evidence": [
+            {
+              "source_id": "step_2",
+              "excerpt": "Record that balance and currency for Customer K using record_balance."
+            }
+          ]
+        },
+        "information": {
+          "level": 2,
+          "rationale": "The current balance and currency must be retrieved, while identity and account context are already specified.",
+          "evidence": [
+            {
+              "source_id": "step_1",
+              "excerpt": "Read Customer K's current balance and currency using read_balance."
+            },
+            {
+              "source_id": "scenario",
+              "excerpt": "Customer K has one USD account. Its identity is already verified."
+            }
+          ]
+        }
+      },
+      "overall_score": 40,
+      "intended_endpoint": {
+        "description": "Customer K's current balance and currency are recorded, with a recording confirmation.",
+        "evidence": [
+          {
+            "source_id": "endpoint",
+            "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+          }
+        ]
+      },
+      "dependency_reasoning": "The read supplies the values for the record call. No approval, conversion, or linked-account reconciliation is required on this scenario's path.",
+      "score_rationale": "Two routine stages with a simple data handoff and ordinary retrieval yield levels 2, 1, 2, 1, and 2; 5 × 8 = 40.",
+      "uncertainties": [],
+      "source_quality_flags": [],
+      "unscorable_reason": ""
+    },
+    "usage": {
+      "input_tokens": 2700,
+      "input_tokens_details": {
+        "cache_write_tokens": 368,
+        "cached_tokens": 2329,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 368
+        }
+      },
+      "output_tokens": 803,
+      "output_tokens_details": {
+        "reasoning_tokens": 76
+      },
+      "total_tokens": 3503
+    },
+    "request_sha256": "9f1d4a40b3241f83a0dff117badf1bab0ff068eb54d54a1186359c1465decb2a",
+    "raw_response_sha256": "afaa52c8e48bc80c99b146ba2b42c431d6d44c22206f39c0f4abdc1c5761ccd1",
+    "input_sha256": "c931d60f828a15c055b6f54c237dee93380cbd268f5262ec2b8c2a7aaa021f41",
+    "sources": {
+      "scenario": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/scenario",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "tools": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/tool_contracts",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "endpoint": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/endpoint",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_1": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/steps/0",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      },
+      "step_2": {
+        "path": "docs/evaluation/numeric_design_controls_v1.json",
+        "locator": "#/cases/0/steps/1",
+        "sha256": "896db4b02460b016dae37664b5293bb9fac5f9cc09399df0279ca1b02259de17"
+      }
+    }
+  }
+]

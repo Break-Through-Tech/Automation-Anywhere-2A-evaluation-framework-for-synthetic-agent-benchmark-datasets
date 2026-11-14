@@ -1,0 +1,21 @@
+{
+  "model": "gpt-6-sol",
+  "prompt_version": "design_prompt_v1.1",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "unique_tasks": 3,
+  "judgments_per_task": 3,
+  "judgments_total": 9,
+  "new_paid_calls": 6,
+  "cached_prior_judgments": 3,
+  "unique_model_response_ids": 9,
+  "new_call_usage": {
+    "input_tokens": 54378,
+    "output_tokens": 14012,
+    "total_tokens": 68390
+  },
+  "independent_validation": false,
+  "full_calibration": "incomplete",
+  "source_or_scoring_rule_changes": false,
+  "raw_responses_preserved_locally": ".cache/design_numeric_v1/repeats_v11",
+  "uniform_score_guard": "Triggered on the two deliberately repeated account inputs; inspected as expected ties, not failures; no extra request followed within those completed packets."
+}

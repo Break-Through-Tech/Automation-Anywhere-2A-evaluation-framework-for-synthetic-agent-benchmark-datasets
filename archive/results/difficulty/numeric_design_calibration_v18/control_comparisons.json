@@ -1,0 +1,39 @@
+{
+  "complexity": {
+    "version": "design_calibration_v1",
+    "kind": "controlled_complexity",
+    "pairs": [
+      {
+        "baseline_case_key": "cfaeafa096c68dc6d8821159",
+        "variant_case_key": "223d00bffbb05674e0efd936",
+        "source_review_rationale": "Same two listed steps; C02 adds linked accounts, currency reconciliation, conditional approval and linked recording.",
+        "delta": 35,
+        "passes_prespecified_tolerance": true
+      }
+    ],
+    "status": "pass",
+    "independent_validation": false
+  },
+  "harmless": {
+    "version": "design_calibration_v1",
+    "kind": "perturbation",
+    "pairs": [
+      {
+        "baseline_case_key": "cfaeafa096c68dc6d8821159",
+        "variant_case_key": "e43788f8dbd01288eb6e253b",
+        "source_review_rationale": "Meaning-preserving paraphrase of the simple case.",
+        "delta": 0,
+        "passes_prespecified_tolerance": true
+      },
+      {
+        "baseline_case_key": "cfaeafa096c68dc6d8821159",
+        "variant_case_key": "1f104d44b08e988b2a211605",
+        "source_review_rationale": "Same simple-case content and units with only source-catalog order reversed.",
+        "delta": 0,
+        "passes_prespecified_tolerance": true
+      }
+    ],
+    "status": "pass",
+    "independent_validation": false
+  }
+}

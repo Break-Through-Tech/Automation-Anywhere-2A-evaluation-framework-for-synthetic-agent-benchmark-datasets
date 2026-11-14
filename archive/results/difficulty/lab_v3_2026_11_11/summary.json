@@ -1,0 +1,512 @@
+{
+  "method_version": "difficulty_lab_v0.3_proposed",
+  "status": "source_metrics_complete_runtime_not_validated",
+  "scope": "difficulty only; outcomes are inputs and diagnostics, not a separate correctness metric",
+  "primary_result": "designed_difficulty_profile",
+  "combined_weighted_score": null,
+  "new_api_calls": 0,
+  "new_mock_executions": 0,
+  "overall": {
+    "n_tasks": 64,
+    "supplied_label_counts": {
+      "easy": 43,
+      "hard": 3,
+      "medium": 18
+    },
+    "features": {
+      "workflow_step_count": {
+        "minimum": 5,
+        "median": 7.0,
+        "mean": 7.203125,
+        "maximum": 11
+      },
+      "reference_domain_tool_call_count": {
+        "minimum": 1,
+        "median": 7.0,
+        "mean": 6.859375,
+        "maximum": 23
+      },
+      "reference_unique_domain_tool_count": {
+        "minimum": 1,
+        "median": 7.0,
+        "mean": 6.390625,
+        "maximum": 8
+      },
+      "reference_milestone_count": {
+        "minimum": 3,
+        "median": 7.0,
+        "mean": 6.578125,
+        "maximum": 10
+      },
+      "workflow_decision_cue_step_count": {
+        "minimum": 0,
+        "median": 0.0,
+        "mean": 0.703125,
+        "maximum": 3
+      }
+    },
+    "n_unknown_exact_path_counts": 64,
+    "n_unknown_exact_decision_counts": 64
+  },
+  "by_domain": {
+    "banking_accounts_deposits": {
+      "n_tasks": 8,
+      "supplied_label_counts": {
+        "easy": 7,
+        "medium": 1
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 7,
+          "median": 8.0,
+          "mean": 7.875,
+          "maximum": 8
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 7,
+          "median": 8.0,
+          "mean": 7.75,
+          "maximum": 8
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 7,
+          "median": 8.0,
+          "mean": 7.75,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 7,
+          "median": 8.0,
+          "mean": 7.875,
+          "maximum": 8
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 0.0,
+          "mean": 0.625,
+          "maximum": 2
+        }
+      },
+      "n_unknown_exact_path_counts": 8,
+      "n_unknown_exact_decision_counts": 8
+    },
+    "banking_customer_onboarding": {
+      "n_tasks": 6,
+      "supplied_label_counts": {
+        "easy": 4,
+        "medium": 2
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 7,
+          "median": 8.0,
+          "mean": 8,
+          "maximum": 9
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 7,
+          "median": 7.5,
+          "mean": 7.833333333333333,
+          "maximum": 9
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 7,
+          "median": 7.0,
+          "mean": 7,
+          "maximum": 7
+        },
+        "reference_milestone_count": {
+          "minimum": 7,
+          "median": 7.0,
+          "mean": 7.5,
+          "maximum": 9
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 0.0,
+          "mean": 0.3333333333333333,
+          "maximum": 1
+        }
+      },
+      "n_unknown_exact_path_counts": 6,
+      "n_unknown_exact_decision_counts": 6
+    },
+    "banking_fraud_monitoring": {
+      "n_tasks": 13,
+      "supplied_label_counts": {
+        "easy": 5,
+        "hard": 2,
+        "medium": 6
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 5,
+          "mean": 5.230769230769231,
+          "maximum": 7
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 5,
+          "median": 6,
+          "mean": 6.153846153846154,
+          "maximum": 7
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 5,
+          "median": 6,
+          "mean": 6.153846153846154,
+          "maximum": 7
+        },
+        "reference_milestone_count": {
+          "minimum": 4,
+          "median": 4,
+          "mean": 4.230769230769231,
+          "maximum": 6
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 1,
+          "mean": 0.6153846153846154,
+          "maximum": 1
+        }
+      },
+      "n_unknown_exact_path_counts": 13,
+      "n_unknown_exact_decision_counts": 13
+    },
+    "healthcare_patient_onboarding": {
+      "n_tasks": 9,
+      "supplied_label_counts": {
+        "easy": 7,
+        "medium": 2
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 7,
+          "median": 8,
+          "mean": 7.666666666666667,
+          "maximum": 9
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 4,
+          "median": 8,
+          "mean": 6.888888888888889,
+          "maximum": 9
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 4,
+          "median": 6,
+          "mean": 6.222222222222222,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 7,
+          "median": 8,
+          "mean": 7.666666666666667,
+          "maximum": 9
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 0,
+          "mean": 0.8888888888888888,
+          "maximum": 3
+        }
+      },
+      "n_unknown_exact_path_counts": 9,
+      "n_unknown_exact_decision_counts": 9
+    },
+    "healthcare_prior_authorization": {
+      "n_tasks": 9,
+      "supplied_label_counts": {
+        "easy": 8,
+        "medium": 1
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 6,
+          "mean": 6.333333333333333,
+          "maximum": 8
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 1,
+          "median": 7,
+          "mean": 5.888888888888889,
+          "maximum": 8
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 1,
+          "median": 7,
+          "mean": 5.666666666666667,
+          "maximum": 7
+        },
+        "reference_milestone_count": {
+          "minimum": 3,
+          "median": 6,
+          "mean": 6,
+          "maximum": 7
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 1,
+          "mean": 1,
+          "maximum": 3
+        }
+      },
+      "n_unknown_exact_path_counts": 9,
+      "n_unknown_exact_decision_counts": 9
+    },
+    "insurance_claims_intake": {
+      "n_tasks": 10,
+      "supplied_label_counts": {
+        "easy": 6,
+        "hard": 1,
+        "medium": 3
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 9.0,
+          "mean": 8.2,
+          "maximum": 9
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 4,
+          "median": 8.0,
+          "mean": 8.7,
+          "maximum": 23
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 4,
+          "median": 7.5,
+          "mean": 7.1,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 4,
+          "median": 8.0,
+          "mean": 7.2,
+          "maximum": 8
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 0.0,
+          "mean": 0,
+          "maximum": 0
+        }
+      },
+      "n_unknown_exact_path_counts": 10,
+      "n_unknown_exact_decision_counts": 10
+    },
+    "manufacturing_purchase_to_pay": {
+      "n_tasks": 9,
+      "supplied_label_counts": {
+        "easy": 6,
+        "medium": 3
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 8,
+          "mean": 8.222222222222221,
+          "maximum": 11
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 2,
+          "median": 5,
+          "mean": 5.333333333333333,
+          "maximum": 8
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 2,
+          "median": 5,
+          "mean": 5.222222222222222,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 3,
+          "median": 7,
+          "mean": 7,
+          "maximum": 10
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 1,
+          "median": 1,
+          "mean": 1.4444444444444444,
+          "maximum": 2
+        }
+      },
+      "n_unknown_exact_path_counts": 9,
+      "n_unknown_exact_decision_counts": 9
+    }
+  },
+  "by_supplied_label": {
+    "easy": {
+      "n_tasks": 43,
+      "supplied_label_counts": {
+        "easy": 43
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 8,
+          "mean": 7.348837209302325,
+          "maximum": 11
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 1,
+          "median": 7,
+          "mean": 6.6976744186046515,
+          "maximum": 9
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 1,
+          "median": 7,
+          "mean": 6.465116279069767,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 3,
+          "median": 7,
+          "mean": 6.8604651162790695,
+          "maximum": 10
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 0,
+          "mean": 0.6744186046511628,
+          "maximum": 3
+        }
+      },
+      "n_unknown_exact_path_counts": 43,
+      "n_unknown_exact_decision_counts": 43
+    },
+    "hard": {
+      "n_tasks": 3,
+      "supplied_label_counts": {
+        "hard": 3
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 6,
+          "mean": 6.666666666666667,
+          "maximum": 9
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 7,
+          "median": 7,
+          "mean": 7.333333333333333,
+          "maximum": 8
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 7,
+          "median": 7,
+          "mean": 7.333333333333333,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 4,
+          "median": 5,
+          "mean": 5.666666666666667,
+          "maximum": 8
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 1,
+          "mean": 0.6666666666666666,
+          "maximum": 1
+        }
+      },
+      "n_unknown_exact_path_counts": 3,
+      "n_unknown_exact_decision_counts": 3
+    },
+    "medium": {
+      "n_tasks": 18,
+      "supplied_label_counts": {
+        "medium": 18
+      },
+      "features": {
+        "workflow_step_count": {
+          "minimum": 5,
+          "median": 7.0,
+          "mean": 6.944444444444445,
+          "maximum": 9
+        },
+        "reference_domain_tool_call_count": {
+          "minimum": 3,
+          "median": 7.0,
+          "mean": 7.166666666666667,
+          "maximum": 23
+        },
+        "reference_unique_domain_tool_count": {
+          "minimum": 3,
+          "median": 6.5,
+          "mean": 6.055555555555555,
+          "maximum": 8
+        },
+        "reference_milestone_count": {
+          "minimum": 4,
+          "median": 6.5,
+          "mean": 6.055555555555555,
+          "maximum": 8
+        },
+        "workflow_decision_cue_step_count": {
+          "minimum": 0,
+          "median": 1.0,
+          "mean": 0.7777777777777778,
+          "maximum": 3
+        }
+      },
+      "n_unknown_exact_path_counts": 18,
+      "n_unknown_exact_decision_counts": 18
+    }
+  },
+  "execution": {
+    "assessment_policy": "provisional_outcome_v0.2",
+    "policy_status": "historical exploratory, not adjudicated under new guidance",
+    "n_original_trials": 256,
+    "n_assessed": 16,
+    "n_unassessed": 240,
+    "logged_outcomes": {
+      "unverifiable": 16
+    },
+    "n_eligible": 0,
+    "execution_difficulty": null,
+    "reason": "No eligible validated attempts in this development assessment source."
+  },
+  "limitations": [
+    "Shared workflow counts are not exact scenario paths.",
+    "Decision wording cues are not exact decisions.",
+    "Supplied labels are designed annotations, not ground truth.",
+    "Only three hard labels; within-domain/label comparisons may be sparse.",
+    "Historical 16-attempt sample is purposive and lacked complete judge context.",
+    "No new-policy outcome labels, benchmark correctness metric, or combined difficulty weights were invented."
+  ],
+  "source_hashes": {
+    "results/baseline/v2_synthetic_full/trials.csv": "67294ce684b69ba6e898fbd48029846faaa8a9262bdce65afd07297321d53fa0",
+    "results/judge_review/v4/blocked_and_unverifiable.json": "c37c9e438378c8d34dde14a9ecc774bd037d57299b22ffb82954146fe2808e11",
+    "results/judge_review/v4/run_summary.json": "62a21e93b47e60cca377c4e53a9a929df28aafb0428fbcbd1dd81ce669813365",
+    "results/judge_review/v1/sample/human_reviews.json": "5b23132bda36fca14a9aef434e4942d2cba3ef44f2c645f1963441b472212360",
+    "data/banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "data/banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+    "data/banking_accounts_deposits/test_cases.json": "fcd7228764e32c35df5eefa15b6395a2bd7abd5017711f702552ee7b6fc67403",
+    "data/banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "data/banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "data/banking_customer_onboarding/test_cases.json": "849d04f1e2c0c7a41e6f7af7424a8b4162353f72692e577ba50f5281d8f79c9f",
+    "data/banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+    "data/banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+    "data/banking_fraud_monitoring/test_cases.json": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94",
+    "data/healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "data/healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "data/healthcare_patient_onboarding/test_cases.json": "c2a257396c615b71206c9b941a4b0328e2451a7a75db7f3fca04266e6d12930d",
+    "data/healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "data/healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+    "data/healthcare_prior_authorization/test_cases.json": "251007e8148562cdeb561200cb333cf6a44f98eeb599f00c5f68e760381824d0",
+    "data/insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "data/insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+    "data/insurance_claims_intake/test_cases.json": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd",
+    "data/manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "data/manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c",
+    "data/manufacturing_purchase_to_pay/test_cases.json": "a46adedb99892fc44a48c9cadea9c9d96ab174c9267f49d674717595ecd728f7"
+  }
+}

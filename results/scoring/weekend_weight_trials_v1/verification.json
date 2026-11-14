@@ -1,0 +1,13 @@
+{
+  "api_calls": 0,
+  "matched_task_ids": 342,
+  "coverage_groups_checked_against_published_CSV": 10,
+  "deterministic_replay": "exact_candidate_results",
+  "focused_tests_passed": 6,
+  "status": "candidate_trials_pending_teammate_review_and_final_weight_selection",
+  "source_urls": {
+    "labels": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/main/coverage/labels/workflows/workflow_labels.csv",
+    "catalog": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/main/coverage/labels/workflows/workflow_catalog.csv",
+    "coverage_scores": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/main/results/coverage/workflow/workflow_coverage_scores.csv"
+  }
+}

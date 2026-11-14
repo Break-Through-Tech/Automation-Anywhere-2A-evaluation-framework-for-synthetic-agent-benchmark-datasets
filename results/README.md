@@ -1,25 +1,19 @@
-# Results and saved evidence
+# Results — current reports first
 
-`framework/` is the primary combined report. `baseline/v2_full/` contains the
-saved tau2 run and `baseline/v2_synthetic_full/` contains the original synthetic
-run, including traces, reference checks, retry history, and source snapshots.
+## Current deliverables
 
-Standalone metric exports and validation files live in `coverage/` and
-`difficulty/`. Generated labeling exports and review sheets live in `labeling/`;
-the reviewed labels consumed by the framework remain in `coverage/labels/` at
-the repository root. Label generation does not overwrite those reviewed inputs.
+- [Designed difficulty v1.1](difficulty/designed_final_v27/README.md): all 342 tasks, dataset/domain scores, charts, uncertainty and replay archive. τ² **64.15/100**; synthetic **63.75/100**.
+- [Coverage/Difficulty weight trials](scoring/weekend_weight_trials_v1/README.md): frozen workflow coverage inputs and five candidate settings, with Vendi separate. These are exploratory index candidates, not final selected weights or a universal quality ranking.
+- [Mila’s completed 30/70 review](scoring/mila_weight_review_v1/README.md): checked scores and comparison with 50/50.
 
-`experiments/onboarding_state_v1/` contains the separate revised onboarding
-pilot. Its original manifest and traces are preserved. `source_snapshot/`
-contains every source file hashed by its original manifest. `relocation.json`
-records the old and new package paths and source hashes, allowing the relocated
-runner to check the saved results without rewriting historical provenance.
+## Retained supporting evidence
 
-`archive/` contains earlier runs; none are automatically included by
-`run_all.py`. Their saved paths describe the layout at execution time. Trace
-paths within trial CSVs remain relative to each run directory. Archived source
-hashes describe the original execution, not today's refactored files.
+`difficulty/native_crosschecks_v20` and `difficulty/native_semantic_v25` contain complementary structural diagnostics, not replacement numeric scores. `difficulty/structural_v1`, `designed_v1`, `designed_v2`, `designed_v3` and `design_review_run_v1` are retained because supported modules/tests consume those fixtures. Root-level difficulty CSVs and `framework/` describe the earlier structural/empirical report mode.
 
-The repository cleanup moved saved evidence without recomputing scores. Existing
-framework metadata and reproducibility hashes therefore document the earlier
-execution. Future framework runs will record the current source hashes.
+`coverage/` contains historical coverage exports. The workflow coverage release used by the weekend trials is copied into their frozen `inputs/` directory with source provenance; these files do not silently replace the earlier attribute/Vendi outputs.
+
+`baseline/v2_full/` and `baseline/v2_synthetic_full/` are the original saved attempt evidence, including trial CSVs and relative trace paths. `judge_review/`, `rubric_review/` and `evaluability/` support the separate saved-execution analysis. `labeling/` contains generated review exports; active reviewed labels remain in `coverage/labels/` at repository root. `experiments/` is the revised onboarding pilot, kept separate from the original benchmark.
+
+## Superseded runs
+
+Older difficulty trials and original-protocol final reports moved to [archive/results/difficulty](../archive/results/difficulty), with byte-preserving path mappings in [the archive guide](../archive/README.md). Earlier baseline and cost pilots remain in [results/archive](archive/README.md). Historical manifests retain original paths and hashes. Do not blend protocols or interpret archived failures as current designed difficulty.

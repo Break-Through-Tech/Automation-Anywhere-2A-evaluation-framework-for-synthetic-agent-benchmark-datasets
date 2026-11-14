@@ -1,0 +1,105 @@
+{
+  "frozen_plan": {
+    "status": "prepared_offline_awaiting_27_call_approval",
+    "new_call_cap_requested": 27,
+    "prior_approved_calls_used": 33,
+    "proposed_total_cap": 60,
+    "already_completed_airline_packet": ".cache/design_numeric_v1/airline_task_bound_evidence_v13",
+    "already_completed_airline_scores": [
+      50,
+      50,
+      50
+    ],
+    "tasks": [
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_01",
+        "dataset": "synthetic",
+        "domain": "banking_accounts_deposits",
+        "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+        "input_sha256": "75ada208b45cd56f3e82348f1c793c625a25f18266925cbec9fa99c328c1cb42",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_02",
+        "dataset": "synthetic",
+        "domain": "banking_customer_onboarding",
+        "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+        "input_sha256": "6346172e0286228ebe3a92b5f4bc504190aeb7fff4e16c933630b6f8dcecfd97",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_03",
+        "dataset": "synthetic",
+        "domain": "banking_fraud_monitoring",
+        "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+        "input_sha256": "023c3e57e32b92cbbe9910a29124a4cb888f5d405bcb5fb1a69ca93343a95b0f",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_04",
+        "dataset": "synthetic",
+        "domain": "healthcare_patient_onboarding",
+        "task_id": "HealthcareOnboarding_W1_TC2",
+        "input_sha256": "d2bc3a0b1763db4bbe59c0be6df03e3a1320f3e7e8e4cdbc02b32c0472bfb2c8",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_05",
+        "dataset": "synthetic",
+        "domain": "healthcare_prior_authorization",
+        "task_id": "HealthcarePA_W1_TC1",
+        "input_sha256": "19485f1ee2596ebd3673ca40f1209e2c800ca21f224900b9a2becbff656a8afd",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_06",
+        "dataset": "synthetic",
+        "domain": "insurance_claims_intake",
+        "task_id": "ClaimsAgent_W6_TC1",
+        "input_sha256": "21563780607841122bd808b06a2e3e160ab895f6e01703992aefa28ac6a7a81f",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_07",
+        "dataset": "synthetic",
+        "domain": "manufacturing_purchase_to_pay",
+        "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+        "input_sha256": "5df645e056c80ec1b70daac43c3b20a711c1ae40d110461640503ee96f7fec4c",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_09",
+        "dataset": "tau2",
+        "domain": "retail",
+        "task_id": "0",
+        "input_sha256": "c38e023ff7f51da7deb9c0cecab7632f1cc019da3d905107c7a8106cb6c8128c",
+        "planned_new_calls": 3
+      },
+      {
+        "packet": ".cache/design_numeric_v1/domain_task_bound_evidence_v13/case_10",
+        "dataset": "tau2",
+        "domain": "telecom",
+        "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+        "input_sha256": "b95c9670ae676237092314c01f5c2aee36d9f12009808ad95fa4fbb14eec0e29",
+        "planned_new_calls": 3
+      }
+    ],
+    "generation_schema_version": "design_schema_v1.2_task_bound_units",
+    "validator_version": "design_evidence_validation_v1.3",
+    "no_api_calls_during_preparation": true,
+    "stop_on_error": true,
+    "max_repeat_range": 10,
+    "max_mean_repeat_range": 5,
+    "no_full_dataset_claim": true
+  },
+  "authorization": {
+    "user_reply": "yes",
+    "at": "2026-11-13T21:33:00.967347+00:00",
+    "prior_calls_used": 33,
+    "additional_call_cap": 27,
+    "total_cap": 60,
+    "scope": "Nine prepared cases, three judgments each, unchanged model/rubric/input/schema/validator."
+  },
+  "actual_new_calls": 26,
+  "status": "stop_and_review"
+}

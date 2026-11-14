@@ -1,0 +1,21 @@
+{
+  "approved_cumulative_domain_cap": 60,
+  "actual_cumulative_API_requests": 60,
+  "new_requests_this_turn": 27,
+  "completed_judge_responses_this_turn": 26,
+  "last_request_status": "api_error",
+  "HTTP_status": 400,
+  "error_type": "BadRequestError",
+  "new_judgment_returned": false,
+  "token_usage_returned": false,
+  "billing_charge_inferred": false,
+  "remaining_authorized_requests": 0,
+  "schema_version": "design_schema_v1.3_source_bound_excerpts",
+  "schema_is_experimental_not_default": true,
+  "next_diagnostic_prepared_not_authorized": ".cache/design_numeric_v1/telecom_source_bound_diagnostic_v14",
+  "new_API_calls_during_preparation": 0,
+  "source_data_edited": false,
+  "offline_tests_passed": 152,
+  "default_API_request_unchanged_verified": true,
+  "structured_error_capture_added": true
+}
