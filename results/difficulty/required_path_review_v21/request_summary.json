@@ -1,0 +1,46 @@
+[
+  {
+    "request_id": "required_path_ddd2f5a8191c1ae70b57ec33_r00",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+    "request_sha256": "a039eccd8864f5aff3cc695378862258fe9428649e5e1ba6d17bff6848228418",
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000
+  },
+  {
+    "request_id": "required_path_988e21ad137ffaac3e856aba_r00",
+    "case_key": "988e21ad137ffaac3e856aba",
+    "input_sha256": "0744bc314f2dcdfefc8c4a4093248d1928e489aa7173ab5e0f5aa5da2e6ea3cf",
+    "request_sha256": "b9e422998598122b11e432c11e362660abf07bb76452297ba5459cda82c506f0",
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000
+  },
+  {
+    "request_id": "required_path_29e97cca516a76b19a606aad_r00",
+    "case_key": "29e97cca516a76b19a606aad",
+    "input_sha256": "db5cd9006052dbc35db819872e6af710f1c4763cc7587d3a87f62646e2df7f17",
+    "request_sha256": "65c5f73769632eaec337b34ca07af9bdd763ff78d53c7014874d79bf300489f5",
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000
+  },
+  {
+    "request_id": "required_path_d14cd4c532ca798c4db5aad0_r00",
+    "case_key": "d14cd4c532ca798c4db5aad0",
+    "input_sha256": "79b002d7f3f4ffbb38850f380efb05f9e1bfc49806ae8d2ed16147ac62d7388b",
+    "request_sha256": "8a5d156a2e31b9f44106a8e9ed6a579374a9e13f8ba8352aa51b2cc898b6d97e",
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000
+  }
+]

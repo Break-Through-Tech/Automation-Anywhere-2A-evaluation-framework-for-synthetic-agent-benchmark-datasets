@@ -1,0 +1,403 @@
+{
+  "status": "assistant_source_review_not_independent_human_or_gold_labels",
+  "api_calls": 0,
+  "source_code_executed": false,
+  "scores_visible_during_review": true,
+  "original_scores_changed": false,
+  "counts": {
+    "additional_path_needs_justification": 4,
+    "insufficient_path_detail": 5,
+    "exit_exclusion_stated": 7,
+    "explicit_extra_chain_concern": 2
+  },
+  "policy_evidence": [
+    {
+      "path": "tau2-bench/data/tau2/domains/telecom/tech_support_manual.md",
+      "locator": "Troubleshooting Service Problems / SIM Card Issues",
+      "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**.",
+      "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+    },
+    {
+      "path": "tau2-bench/data/tau2/domains/telecom/main_policy.md",
+      "locator": "Technical Support",
+      "excerpt": "You must first identify the customer.",
+      "sha256": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7"
+    },
+    {
+      "path": "tau2-bench/data/tau2/domains/telecom/main_policy.md",
+      "locator": "general transfer policy",
+      "excerpt": "You should try your best to resolve the issue for the user before transferring the user to a human agent.",
+      "sha256": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7"
+    }
+  ],
+  "additional_static_review_context_not_added_to_probe": [
+    {
+      "path": "tau2-bench/src/tau2/domains/telecom/user_tools.py",
+      "locator": "AST method _check_sim_status",
+      "excerpt": "def _check_sim_status(self) -> SimStatus:\n        \"\"\"Returns the current status of the SIM card.\"\"\"\n        if self.device.sim_card_missing:\n            return SimStatus.MISSING\n        return self.device.sim_card_status",
+      "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d"
+    },
+    {
+      "path": "tau2-bench/src/tau2/domains/telecom/user_tools.py",
+      "locator": "AST method _reseat_sim_card",
+      "excerpt": "def _reseat_sim_card(self) -> str:\n        \"\"\"Re-seats the SIM card by removing and re-inserting it.\"\"\"\n        self.device.sim_card_missing = False\n        self.simulate_network_search()\n        assert not self.device.sim_card_missing\n        assert self._check_sim_status() != SimStatus.MISSING\n        return \"SIM card re-seated successfully.\"",
+      "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d"
+    },
+    {
+      "path": "tau2-bench/src/tau2/domains/telecom/user_tools.py",
+      "locator": "AST method lock_sim_card",
+      "excerpt": "def lock_sim_card(self, mode: Literal[\"pin\", \"puk\"]) -> str:\n        \"\"\"Locks the SIM card by setting the PIN. This cannot be fixed by calling a tool.\"\"\"\n        if mode == \"pin\":\n            self.device.sim_card_status = SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            self.device.sim_card_status = SimStatus.LOCKED_PUK\n        self.simulate_network_search()\n        if mode == \"pin\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PUK\n        return f\"SIM card locked successfully in {mode} mode.\"",
+      "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d"
+    }
+  ],
+  "tasks": [
+    {
+      "review_number": 1,
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "786ebdc68e05e9b2d56c0dbe",
+      "input_sha256": "392f3ad05fd13f49f159ab41aba6a6d06b9f1c5adf5a97fc7a43b988adc1c0a5",
+      "original_score": 75,
+      "assistant_disposition": "additional_path_needs_justification",
+      "reason": "Explanation includes account/line/contract investigation in a substantial path. It may be a defensible discovery route, but does not clearly justify why this is required in addition to discovering the locked-SIM exit.",
+      "reviewed_judge_quote": "Customer identification precedes linked line investigation; device findings and contract eligibility govern continuation, and the handoff follows the determination that available actions cannot resolve service.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "a3cc5b845a002fbb4a1e76d944ce91ad30b73a5408fa561daa8d0d3f7ab32f99",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/296/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 2,
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "6eee014970553d7226847a93",
+      "input_sha256": "69714bb70516cbfc17b2ee05f7756dbf2fa4e5c37b5cd5e3ae75c5c3efc8a5a7",
+      "original_score": 70,
+      "assistant_disposition": "additional_path_needs_justification",
+      "reason": "Explanation includes account/line/contract investigation in a substantial path. It may be a defensible discovery route, but does not clearly justify why this is required in addition to discovering the locked-SIM exit.",
+      "reviewed_judge_quote": "Identification precedes support; diagnostic results govern user-guided actions, reassessment, and escalation. Device findings and the linked customer line both inform whether service can be restored.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "47102d71c6ffb82f4d14fd318137049e0096704bf864d0b591f0d6931e8a4e5d",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/300/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 3,
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "88f3feb7ecafeeff70b785cc",
+      "input_sha256": "39b767f0330b169ee51a94b2b33edd75d249762a15f92991eb2fa29946b66ccc",
+      "original_score": 55,
+      "assistant_disposition": "insufficient_path_detail",
+      "reason": "Explanation is broad or conditional. Source-only review cannot determine the counted before/after-exit workload precisely; a missing SIM can legitimately add reseating and a renewed check.",
+      "reviewed_judge_quote": "Identification precedes support, checks precede condition-specific guidance, and the inability to resolve must be established before transfer and its required message.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "afe64cea331c7a92d94874de76d9df5d3e18e941b149dd24f643b2670308b060",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/278/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 4,
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "case_key": "29e97cca516a76b19a606aad",
+      "input_sha256": "db5cd9006052dbc35db819872e6af710f1c4763cc7587d3a87f62646e2df7f17",
+      "original_score": 50,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Identification precedes technical support, diagnostic results determine whether escalation is appropriate, and the transfer call precedes its required message. These are conditional linked stages, not an extensive handoff workflow.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "b892bedb5cff955f383fafb30df7219876f702b04ff5e6a08a700ae512ae6ce6",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/295/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 5,
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "case_key": "ddd2f5a8191c1ae70b57ec33",
+      "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+      "original_score": 75,
+      "assistant_disposition": "explicit_extra_chain_concern",
+      "reason": "Dependency explanation explicitly includes payment/line resumption or its prerequisites before escalation. Once a locked SIM is established, no separate source requirement has been identified that makes that whole chain mandatory. This is an explanation concern, not a proven replacement score.",
+      "reviewed_judge_quote": "Customer identification precedes support; device fixes and any bill-payment/line-resumption path require linked checks and user participation before the unresolved issue can be escalated.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "0d0d409cea1123267e9bdbdd21c580ae010fbceed37e88259de6624940b10a45",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/299/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 6,
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+      "case_key": "b5e08ecc77f435a649f3e1af",
+      "input_sha256": "162cdcdda46187a3309692252a4f58c03bcc24b9a1d9cef460e46edd4d0d8c32",
+      "original_score": 65,
+      "assistant_disposition": "insufficient_path_detail",
+      "reason": "Explanation is broad or conditional. Source-only review cannot determine the counted before/after-exit workload precisely; a missing SIM can legitimately add reseating and a renewed check.",
+      "reviewed_judge_quote": "Customer identification precedes support, device checks govern fixes and rechecks, and unresolved SIM security governs the handoff. This requires linked continuation across agent and user actions, not a charge for waiting.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "8c309071b985e31134cae77fa9cb5d42501580696eca68fd2c5b4d913c071e0b",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/290/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 7,
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "4aa79bebc87ae31faa216185",
+      "input_sha256": "994d50bdec9d70ede01eb9c81d2df95899cf8821667cacf638be216edda8af63",
+      "original_score": 75,
+      "assistant_disposition": "additional_path_needs_justification",
+      "reason": "Explanation includes account/line/contract investigation in a substantial path. It may be a defensible discovery route, but does not clearly justify why this is required in addition to discovering the locked-SIM exit.",
+      "reviewed_judge_quote": "Identification precedes account investigation; device fixes require subsequent status checks, while line and SIM findings govern whether transfer is permitted. These are linked states, not a requirement to complete an alternative payment path.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "174c64fdd9b8f5680c86d7d2e328718265f7f404e72889686ca4cf5db2fcd3aa",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/292/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 8,
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "case_key": "207abcd686ea0348c46fa3c3",
+      "input_sha256": "0d889fc1f669a7d25c6ec01faabe6da7f198b224e5318943cd5e0ac69b13f177",
+      "original_score": 50,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Identification precedes support; airplane-mode correction and renewed status assessment precede diagnosing the remaining SIM problem, which determines whether transfer is justified.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "802667cc02c190115bd28f1514fea49637a372410d3a46a4f8037f898ec563e4",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/261/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 9,
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "55ebca441d1a97b5f834cc3c",
+      "input_sha256": "f9a7c0931de0a0563f44607f02d2815c29712ba3cccffa96d37dc19f678cc326",
+      "original_score": 55,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Customer identification precedes support, and device checks and feedback determine whether airplane-mode guidance is followed by SIM diagnosis and transfer. This is linked conditional state, not a requirement to carry out every possible repair.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "04a76aa066af74b9a3ad67e2aea6134fcbee577f9165e3707d2af05118310c8b",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/279/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 10,
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "988e21ad137ffaac3e856aba",
+      "input_sha256": "0744bc314f2dcdfefc8c4a4093248d1928e489aa7173ab5e0f5aa5da2e6ea3cf",
+      "original_score": 75,
+      "assistant_disposition": "explicit_extra_chain_concern",
+      "reason": "Dependency explanation explicitly includes payment/line resumption or its prerequisites before escalation. Once a locked SIM is established, no separate source requirement has been identified that makes that whole chain mandatory. This is an explanation concern, not a proven replacement score.",
+      "reviewed_judge_quote": "Customer identification precedes support; a suspension can be lifted only after overdue bills are paid, followed by a device reboot. Device checks and any fixes must inform whether the unresolved locked SIM warrants transfer.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "7fbbba7ac9eeb7f18751ac0eb3a25e556f2a975672615cd3f4b90265e7c96eaa",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/291/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 11,
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "b4be13a9695d14f83f33d115",
+      "input_sha256": "da6c4652467df1421345f8da99b6a324bfacb0d7ba55fd1fc29e50764f27cbc4",
+      "original_score": 55,
+      "assistant_disposition": "insufficient_path_detail",
+      "reason": "Explanation is broad or conditional. Source-only review cannot determine the counted before/after-exit workload precisely; a missing SIM can legitimately add reseating and a renewed check.",
+      "reviewed_judge_quote": "Customer identification precedes support; diagnostic results determine fixes, subsequent status checks determine whether to continue, and transfer follows the determination that the remaining issue cannot be fixed.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "9d8a554e0dcd6171715127b84d4eb31dd482110234f48336fe31d717686a9d49",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/274/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 12,
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "case_key": "4f8a1784c0db6e4ed69c0b82",
+      "input_sha256": "6f433fcb7e9725e462e2ec83b5a641c53747623e451a2ef6f832611cba2eb45a",
+      "original_score": 55,
+      "assistant_disposition": "insufficient_path_detail",
+      "reason": "Explanation is broad or conditional. Source-only review cannot determine the counted before/after-exit workload precisely; a missing SIM can legitimately add reseating and a renewed check.",
+      "reviewed_judge_quote": "Customer identification precedes technical support, diagnostic findings determine whether escalation is permitted, and transfer precedes its prescribed user-facing message.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "64ecc57c81f93ece24aec21b66de69b1a5d836ea72601f2808a678b8ea0e1f62",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/289/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 13,
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "08de75f0bfd93ab5bc912101",
+      "input_sha256": "8112cb12dda9affa8a486356987333d0c9214461dcf799a623a303a96d8cbc25",
+      "original_score": 75,
+      "assistant_disposition": "additional_path_needs_justification",
+      "reason": "Explanation includes account/line/contract investigation in a substantial path. It may be a defensible discovery route, but does not clearly justify why this is required in addition to discovering the locked-SIM exit.",
+      "reviewed_judge_quote": "Customer identification precedes diagnosis; device checks and any fixes require follow-up status information, while bill and contract findings govern suspension handling and the eventual handoff.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "7b0f826ea3309dda2d580f5349b967206392921cda3008090526e712f2e3911c",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/298/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 14,
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "96e9fd303766bd114f4da068",
+      "input_sha256": "cb6b6b46a888ff09fcb309d8085b1228c213e4f25e2114974b578b7e84a48ac0",
+      "original_score": 50,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Customer identification precedes technical support, and the SIM finding establishes the condition for escalation. Transfer then precedes the required handoff message.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "e32c31eec480772e9a475d45d054fd6d0b34637ec0d0206eb424233f184c9d14",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/269/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 15,
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "1c2b7f4186c563085fce1b0e",
+      "input_sha256": "66208ebe5932934b4fa0985e366d54f405bcdd7f2002730995fa5046868f2b62",
+      "original_score": 55,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Identification precedes technical support; device checking establishes whether the SIM-security escalation condition applies; transfer follows that determination. The user must ground device reports in tool results.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "7b3a2ee34f81a32b680f26148dfc049b82b3c6f24e1cf858978519973f450b48",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/288/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 16,
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "d14cd4c532ca798c4db5aad0",
+      "input_sha256": "79b002d7f3f4ffbb38850f380efb05f9e1bfc49806ae8d2ed16147ac62d7388b",
+      "original_score": 65,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Identification precedes technical support; SIM findings govern whether reseating or escalation applies, and transfer depends on establishing that available actions cannot solve the issue. No payment or line-resumption chain is required once the locked SIM determines the exit.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "c8dafa6760f819e83fe1090b44d6bfefbbd65602fe452376f425a483e949a1b5",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/297/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 17,
+      "task_id": "[service_issue]contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "case_key": "0af2eb10291137f2fe107daf",
+      "input_sha256": "2870e2ce2641c84778a980da2eff8726687095236860216eb089ad7b35c170c1",
+      "original_score": 55,
+      "assistant_disposition": "insufficient_path_detail",
+      "reason": "Explanation is broad or conditional. Source-only review cannot determine the counted before/after-exit workload precisely; a missing SIM can legitimately add reseating and a renewed check.",
+      "reviewed_judge_quote": "Identification precedes technical support; device and line findings establish whether transfer is justified. The transfer tool call precedes its required user message.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "f16e613e7a819f2e329c79cf6c47b64d82a52d255a6c51e1b10f269d862d4f7d",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/271/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    },
+    {
+      "review_number": 18,
+      "task_id": "[service_issue]lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "1cd2224f9e59e94ec2172361",
+      "input_sha256": "cea1699441aa858cf4cfdb5d99a6bfc69fcd9491734f69ed03c07286f8baf242",
+      "original_score": 55,
+      "assistant_disposition": "exit_exclusion_stated",
+      "reason": "Workload/dependency explanation explicitly limits other branches or payment work after the locked-SIM exit. This is consistent wording, not independent validation of all ratings.",
+      "reviewed_judge_quote": "Customer identification precedes technical support, and the transfer decision depends on diagnostic evidence. Transfer itself must precede the specified message to the user.",
+      "judge_quote_field": "dimensions.dependencies.rationale",
+      "saved_judgment_sha256": "b890837a2d6b3275de2e1026c17a17e62ddd2c2b462d6015bba999db1984086b",
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/270/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "published_score_changed": false,
+      "new_numeric_score": null
+    }
+  ],
+  "limitations": [
+    "Explanations can omit work or be imprecise; concern does not determine a corrected numeric score.",
+    "Additional private-helper code establishes missing-SIM masking but was not fully supplied to the original judge.",
+    "Sources permit alternative diagnostic orders; no unique oracle-minimal sequence is declared.",
+    "All 18 were selected for a specific escalation condition; not a representative benchmark sample."
+  ]
+}

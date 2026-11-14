@@ -1,0 +1,20 @@
+{
+  "version": "required_path_probe_v1_prepared_only",
+  "probe_implementation_sha256": "8be4fb89f1c9ae784d027e81b6911dc01eba53eb9d72375609f361c0240e7d5a",
+  "status": "prepared_not_run_requires_new_api_authorization",
+  "api_calls": 0,
+  "proposed_call_cap": 4,
+  "baseline_repeats": 1,
+  "proposed_repeats": 1,
+  "probe_prompt_version": "design_prompt_v1.4_required_path_probe",
+  "addendum_sha256": "6222e44f530ad84b593001c2bd72714196f3df3f58b529e0babeebe550b3c5fd",
+  "document_sha256": "230c74206d8e3b61375dd142f70de50283a060226d514e13c9b0034d18539326",
+  "inventory_sha256": "114da0b906ce45e0f1521f71608e8ff8e930b689d4e0004cb279abf62ad9720a",
+  "requests_sha256": "1b852f07aa79957a0b5a5c0fd4af8475f5bf8d15aab16c9247f8d5ad6fd16539",
+  "originals_sha256": "d8209a3922d6cd7beb4fd1b2691caa62ef641ecd3164e51e36f4db13e1cd942c",
+  "published_scores_changed": false,
+  "inputs_and_schema_unchanged": true,
+  "system_prompt_only_change": true,
+  "independent_validation": false,
+  "full_rerun_authorized": false
+}

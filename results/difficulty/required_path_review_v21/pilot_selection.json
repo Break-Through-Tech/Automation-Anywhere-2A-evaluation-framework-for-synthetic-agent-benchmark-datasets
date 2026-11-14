@@ -1,0 +1,40 @@
+{
+  "selection_status": "post_hoc_development_sample_not_held_out",
+  "api_calls": 0,
+  "proposed_calls": 4,
+  "tasks": [
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "case_key": "ddd2f5a8191c1ae70b57ec33",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_256",
+      "reason": "explicit_extra_chain_concern"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "988e21ad137ffaac3e856aba",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_264",
+      "reason": "explicit_extra_chain_concern"
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "case_key": "29e97cca516a76b19a606aad",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_255",
+      "reason": "exit_exclusion_stated"
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "d14cd4c532ca798c4db5aad0",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_273",
+      "reason": "exit_exclusion_stated"
+    }
+  ],
+  "changes": "System-prompt addendum only; same input, evidence index/schema, model settings and weights. No additional helper-code context.",
+  "checks": [
+    "Identify decisive escalation condition and necessary discovery; do not give the agent judge-only knowledge.",
+    "Exclude a payment/resumption branch after decisive escalation unless a specific independent requirement is cited.",
+    "Preserve legitimate missing-card discovery/reseating work.",
+    "Inspect source-backed workload/dependency reasoning; a lower score is not required to pass.",
+    "Stop for API/format/evidence failure; inspect three identical results; no retries or broad rescoring."
+  ],
+  "limits": "One new judgment per selected case versus one saved baseline judgment; prompt effects and sampling variation cannot be isolated. No claim of calibration or independent accuracy."
+}
