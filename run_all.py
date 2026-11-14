@@ -109,6 +109,11 @@ def empirical_difficulty(path, expected):
 
 
 def evaluate(args):
+    if getattr(args, "design_clarified_packet", None):
+        if getattr(args, "difficulty_mode", "historical") != "source-only":
+            raise ValueError("--design-clarified-packet requires --difficulty-mode source-only")
+        from difficulty.clarified_framework import evaluate as evaluate_clarified
+        return evaluate_clarified(args)
     if getattr(args, "difficulty_mode", "historical") == "source-only":
         from difficulty.design.framework import evaluate as evaluate_design
         return evaluate_design(args)
@@ -273,6 +278,7 @@ def parser():
     p.add_argument("--difficulty-mode", choices=["historical", "source-only"], default="historical",
                    help="source-only aggregates numeric LLM design scores offline without running agents or embeddings")
     p.add_argument("--design-inventory", type=Path, help="Canonical source-only inventory.json")
+    p.add_argument("--design-clarified-packet", type=Path, help="One frozen clarified-protocol packet; aggregates saved judgments offline")
     p.add_argument("--design-packet", type=Path, action="append", help="Compatible frozen design packet; repeat for disjoint task subsets")
     p.add_argument("--tasks", type=Path, default=ROOT / "data/processed/tasks.jsonl")
     p.add_argument("--labels-dir", type=Path, default=ROOT / "coverage/labels")

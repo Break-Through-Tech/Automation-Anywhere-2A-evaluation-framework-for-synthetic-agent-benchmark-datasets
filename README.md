@@ -1,6 +1,26 @@
 # Evaluation Framework for Agent Benchmark Datasets
 
-## Numeric LLM designed difficulty (completed run)
+## Current designed difficulty v1.1 — completed
+
+**τ²-bench 64.15/100** (278/278 tasks); **synthetic 63.75/100** (64/64).
+Use [the current report, domain chart and task scores](results/difficulty/designed_final_v27/README.md)
+and [the fixed metric specification](docs/evaluation/designed_difficulty_metric_v1.1.md).
+The full clarified-protocol run used 341 authorized new calls and seven exact cached
+judgments. Five equally weighted source-only dimensions describe designed complexity,
+not agent failure or dataset quality. Interpretive/source uncertainty remains documented.
+All 203 offline tests passed; exact score and framework replays are recorded in the report.
+
+Reproduce without API credits:
+
+```bash
+python -m difficulty.reproduce_clarified_design --report-dir results/difficulty/designed_final_v27 --out .cache/replayed_clarified_v27
+python run_all.py --difficulty-mode source-only --design-clarified-packet .cache/replayed_clarified_v27 --output-dir .cache/framework_clarified_v27
+```
+
+<details>
+<summary>Historical original-protocol results and replay</summary>
+
+### Original-protocol numeric difficulty (historical)
 
 **τ²-bench 65.35/100** (278/278 tasks); **synthetic 64.30/100** (64/64).
 See [the comparison, domain scores and charts](results/difficulty/tau2_final_v19/README.md)
@@ -19,6 +39,9 @@ python -m difficulty.reproduce_numeric_design --out .cache/replayed_design_v19
 
 This requires the original native source checkout at the revision documented in the
 comparison report. Historical coverage/empirical analysis below remains separate.
+
+
+</details>
 
 ## Run the evaluation framework (issue #15)
 

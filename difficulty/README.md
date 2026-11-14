@@ -1,6 +1,13 @@
 # LLM-judge difficulty
 
-## Current numeric designed-difficulty results
+## Current clarified-protocol results (v1.1)
+
+τ²-bench **64.15/100**, all 278 tasks; synthetic **63.75/100**, all 64.
+Use [the current report and charts](../results/difficulty/designed_final_v27/README.md) and
+[the fixed method](../docs/evaluation/designed_difficulty_metric_v1.1.md).
+The original-protocol results below are historical and are not mixed into these scores.
+
+## Historical original-protocol numeric results
 
 τ²-bench **65.35/100**, all 278 tasks; synthetic **64.30/100**, all 64.
 Use [the final comparison](../results/difficulty/tau2_final_v19/README.md) and

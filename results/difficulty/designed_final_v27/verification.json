@@ -1,0 +1,21 @@
+{
+  "all_planned_results_revalidated": 348,
+  "unique_response_ids": 348,
+  "new_call_cap_respected": true,
+  "all_tasks_scored": 342,
+  "original_sources_verified": true,
+  "historical_scores_unchanged": true,
+  "protected_user_files_unchanged": 80,
+  "frozen_judge_core_unchanged": true,
+  "full_offline_suite_passed": 203,
+  "additional_framework_tests_passed": 2,
+  "offline_replay": {
+    "status": "exact_task_scores_and_summaries_match",
+    "api_calls": 0,
+    "task_count": 342,
+    "original_inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9",
+    "relocated_inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9"
+  },
+  "framework_replay": "exact_entire_report_match_without_API_key_or_embeddings",
+  "working_branch_preserved": true
+}

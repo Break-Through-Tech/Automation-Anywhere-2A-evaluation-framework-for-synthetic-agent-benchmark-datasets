@@ -1,0 +1,1620 @@
+{
+  "metric": "llm_source_only_designed_difficulty",
+  "release_protocol": "designed_difficulty_v1.1_required_path",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "prompt_version": "design_prompt_v1.4_required_path_probe",
+  "scale": [
+    0,
+    100
+  ],
+  "task_weighting": "equal_weight_after_mean_of_all_planned_usable_repeats",
+  "datasets": {
+    "synthetic": {
+      "n_total": 64,
+      "n_scored": 64,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 64
+      },
+      "mean": 63.75,
+      "median": 65.0,
+      "min": 45,
+      "max": 80,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 6.49519052838329,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 11,
+        "60-79": 52,
+        "80-100": 1
+      }
+    },
+    "tau2": {
+      "n_total": 278,
+      "n_scored": 278,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 278
+      },
+      "mean": 64.15467625899281,
+      "median": 65.0,
+      "min": 30,
+      "max": 90,
+      "q1": 55.0,
+      "q3": 75.0,
+      "iqr": 20.0,
+      "population_stddev": 11.749230637733051,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 2,
+        "40-59": 99,
+        "60-79": 143,
+        "80-100": 34
+      }
+    }
+  },
+  "domains": {
+    "synthetic/banking_accounts_deposits": {
+      "n_total": 8,
+      "n_scored": 8,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 8
+      },
+      "mean": 66.25,
+      "median": 65.0,
+      "min": 60,
+      "max": 70,
+      "q1": 65.0,
+      "q3": 70.0,
+      "iqr": 5.0,
+      "population_stddev": 3.307189138830738,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 8,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding": {
+      "n_total": 6,
+      "n_scored": 6,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 6
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 65.0,
+      "q3": 70.0,
+      "iqr": 5.0,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 6,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring": {
+      "n_total": 13,
+      "n_scored": 13,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 13
+      },
+      "mean": 63.46153846153846,
+      "median": 65,
+      "min": 55,
+      "max": 75,
+      "q1": 60.0,
+      "q3": 65.0,
+      "iqr": 5.0,
+      "population_stddev": 5.67877810008977,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 2,
+        "60-79": 11,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 65.55555555555556,
+      "median": 65,
+      "min": 55,
+      "max": 70,
+      "q1": 65.0,
+      "q3": 70.0,
+      "iqr": 5.0,
+      "population_stddev": 4.969039949999533,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 8,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 58.333333333333336,
+      "median": 60,
+      "min": 45,
+      "max": 65,
+      "q1": 55.0,
+      "q3": 65.0,
+      "iqr": 10.0,
+      "population_stddev": 6.666666666666667,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 3,
+        "60-79": 6,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake": {
+      "n_total": 10,
+      "n_scored": 10,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 10
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 55,
+      "max": 80,
+      "q1": 60.0,
+      "q3": 70.0,
+      "iqr": 10.0,
+      "population_stddev": 7.416198487095663,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 2,
+        "60-79": 7,
+        "80-100": 1
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay": {
+      "n_total": 9,
+      "n_scored": 9,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 9
+      },
+      "mean": 61.666666666666664,
+      "median": 65,
+      "min": 50,
+      "max": 70,
+      "q1": 55.0,
+      "q3": 65.0,
+      "iqr": 10.0,
+      "population_stddev": 7.453559924999299,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 3,
+        "60-79": 6,
+        "80-100": 0
+      }
+    },
+    "tau2/airline": {
+      "n_total": 50,
+      "n_scored": 50,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 50
+      },
+      "mean": 59.1,
+      "median": 60.0,
+      "min": 30,
+      "max": 90,
+      "q1": 50.0,
+      "q3": 70.0,
+      "iqr": 20.0,
+      "population_stddev": 13.553228397691822,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 2,
+        "40-59": 22,
+        "60-79": 22,
+        "80-100": 4
+      }
+    },
+    "tau2/retail": {
+      "n_total": 114,
+      "n_scored": 114,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 114
+      },
+      "mean": 64.86842105263158,
+      "median": 67.5,
+      "min": 50,
+      "max": 80,
+      "q1": 55.0,
+      "q3": 75.0,
+      "iqr": 20.0,
+      "population_stddev": 9.653208863718547,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 33,
+        "60-79": 78,
+        "80-100": 3
+      }
+    },
+    "tau2/telecom": {
+      "n_total": 114,
+      "n_scored": 114,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 114
+      },
+      "mean": 65.65789473684211,
+      "median": 70.0,
+      "min": 50,
+      "max": 85,
+      "q1": 51.25,
+      "q3": 75.0,
+      "iqr": 23.75,
+      "population_stddev": 12.202839004854294,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 44,
+        "60-79": 43,
+        "80-100": 27
+      }
+    }
+  },
+  "packet_manifest_sha256": "001f35c05d292d112cc7346abc8bd66f073de661a7e701a5708ba5ad5a17acf6",
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "independent_validation": false,
+  "limitations": [
+    "Interpretive anchored index; practical repeatability is not independent accuracy.",
+    "Multiple sufficient paths and source conflicts remain explicit.",
+    "Higher designed difficulty does not establish higher dataset quality."
+  ],
+  "workflows": {
+    "synthetic/banking_accounts_deposits/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 60,
+      "max": 70,
+      "q1": 62.5,
+      "q3": 67.5,
+      "iqr": 5.0,
+      "population_stddev": 5.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_accounts_deposits/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 65,
+      "median": 65.0,
+      "min": 65,
+      "max": 65,
+      "q1": 65.0,
+      "q3": 65.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W4": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_customer_onboarding/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 55,
+      "median": 55.0,
+      "min": 55,
+      "max": 55,
+      "q1": 55.0,
+      "q3": 55.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 2,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W3": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W4": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 60,
+      "median": 60.0,
+      "min": 60,
+      "max": 60,
+      "q1": 60.0,
+      "q3": 60.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/banking_fraud_monitoring/W9": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 75,
+      "median": 75,
+      "min": 75,
+      "max": 75,
+      "q1": 75,
+      "q3": 75,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_patient_onboarding/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 60,
+      "median": 60.0,
+      "min": 60,
+      "max": 60,
+      "q1": 60.0,
+      "q3": 60.0,
+      "iqr": 0.0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/healthcare_prior_authorization/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 45,
+      "median": 45,
+      "min": 45,
+      "max": 45,
+      "q1": 45,
+      "q3": 45,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W2": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 62.5,
+      "median": 62.5,
+      "min": 60,
+      "max": 65,
+      "q1": 61.25,
+      "q3": 63.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 80,
+      "median": 80,
+      "min": 80,
+      "max": 80,
+      "q1": 80,
+      "q3": 80,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 0,
+        "80-100": 1
+      }
+    },
+    "synthetic/insurance_claims_intake/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 60,
+      "median": 60,
+      "min": 60,
+      "max": 60,
+      "q1": 60,
+      "q3": 60,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/insurance_claims_intake/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W1": {
+      "n_total": 2,
+      "n_scored": 2,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 2
+      },
+      "mean": 67.5,
+      "median": 67.5,
+      "min": 65,
+      "max": 70,
+      "q1": 66.25,
+      "q3": 68.75,
+      "iqr": 2.5,
+      "population_stddev": 2.5,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 2,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W2": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W3": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 55,
+      "median": 55,
+      "min": 55,
+      "max": 55,
+      "q1": 55,
+      "q3": 55,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W4": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 70,
+      "median": 70,
+      "min": 70,
+      "max": 70,
+      "q1": 70,
+      "q3": 70,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W5": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W6": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 50,
+      "median": 50,
+      "min": 50,
+      "max": 50,
+      "q1": 50,
+      "q3": 50,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 1,
+        "60-79": 0,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W7": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "synthetic/manufacturing_purchase_to_pay/W8": {
+      "n_total": 1,
+      "n_scored": 1,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 1
+      },
+      "mean": 65,
+      "median": 65,
+      "min": 65,
+      "max": 65,
+      "q1": 65,
+      "q3": 65,
+      "iqr": 0,
+      "population_stddev": 0.0,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 0,
+        "60-79": 1,
+        "80-100": 0
+      }
+    },
+    "tau2/airline/not_defined": {
+      "n_total": 50,
+      "n_scored": 50,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 50
+      },
+      "mean": 59.1,
+      "median": 60.0,
+      "min": 30,
+      "max": 90,
+      "q1": 50.0,
+      "q3": 70.0,
+      "iqr": 20.0,
+      "population_stddev": 13.553228397691822,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 2,
+        "40-59": 22,
+        "60-79": 22,
+        "80-100": 4
+      }
+    },
+    "tau2/retail/not_defined": {
+      "n_total": 114,
+      "n_scored": 114,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 114
+      },
+      "mean": 64.86842105263158,
+      "median": 67.5,
+      "min": 50,
+      "max": 80,
+      "q1": 55.0,
+      "q3": 75.0,
+      "iqr": 20.0,
+      "population_stddev": 9.653208863718547,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 33,
+        "60-79": 78,
+        "80-100": 3
+      }
+    },
+    "tau2/telecom/not_defined": {
+      "n_total": 114,
+      "n_scored": 114,
+      "coverage": 1.0,
+      "status_counts": {
+        "scored": 114
+      },
+      "mean": 65.65789473684211,
+      "median": 70.0,
+      "min": 50,
+      "max": 85,
+      "q1": 51.25,
+      "q3": 75.0,
+      "iqr": 23.75,
+      "population_stddev": 12.202839004854294,
+      "mean_label": "complete_inventory_mean",
+      "histogram": {
+        "0-19": 0,
+        "20-39": 0,
+        "40-59": 44,
+        "60-79": 43,
+        "80-100": 27
+      }
+    }
+  },
+  "weights": {
+    "workload": 0.2,
+    "reasoning": 0.2,
+    "tool_use": 0.2,
+    "dependencies": 0.2,
+    "information": 0.2
+  },
+  "formula": "5 * sum(five integer dimension levels in [0,4])",
+  "calibration_status": "bounded_practical_checks_passed_not_independent_accuracy"
+}
