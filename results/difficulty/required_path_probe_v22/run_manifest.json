@@ -1,0 +1,42 @@
+{
+  "status": "complete_four_call_development_probe",
+  "authorization": "User: go ahead, in reply to request for four additional paid GPT-6 Sol calls",
+  "actual_api_calls": 4,
+  "authorized_cap": 4,
+  "automatic_retries": 0,
+  "api_or_format_errors": 0,
+  "n_validated_scored": 4,
+  "model": "gpt-6-sol",
+  "usage": {
+    "input_tokens": 275413,
+    "output_tokens": 4986,
+    "total_tokens": 280399
+  },
+  "prompt_version": "design_prompt_v1.4_required_path_probe",
+  "schema": "unchanged source evidence-reference schema from each frozen original request",
+  "rubric_weights_anchors_unchanged": true,
+  "system_prompt_only_change_verified": true,
+  "new_private_helper_context_added": false,
+  "baseline_judgments_per_case": 1,
+  "probe_judgments_per_case": 1,
+  "independent_validation": false,
+  "published_scores_changed": false,
+  "benchmark_agents_or_tools_executed": false,
+  "numerical_outputs": "All four model outputs have five levels of 2 and a derived total of 50. Raw outputs retained.",
+  "interpretation": "Required-path explanation improvement in this development sample; not proof of numerical accuracy, robustness or selective correction.",
+  "limitations": [
+    "Purposive previously inspected escalation cases; not a representative or held-out sample.",
+    "One judgment under each prompt; sampling variation and prompt effects are not isolated.",
+    "All four tie at 50; source-specific paths were inspected, but possible anchor compression needs broader testing.",
+    "One explicit-exclusion contrast changes from 65 to 50, so effects extend beyond the two original explicit-chain concerns.",
+    "No dataset mean is recomputed or replaced."
+  ],
+  "primary_scores": {
+    "tau2": 65.34772182254197,
+    "synthetic": 64.296875
+  },
+  "probe_manifest_sha256": "18231c5bd5f171f54cebbeaa3b2e624e79323e1c4f4a8a0763a05871e5d058f2",
+  "primary_score_files_match_published_git_blobs": true,
+  "all_80_earlier_untracked_files_unchanged": true,
+  "offline_tests_previously_passed": 171
+}

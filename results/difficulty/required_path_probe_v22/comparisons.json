@@ -1,0 +1,122 @@
+[
+  {
+    "case": 1,
+    "role": "explicit_chain_concern",
+    "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "baseline_score": 75,
+    "probe_score": 50,
+    "delta": -25,
+    "baseline_levels": {
+      "workload": 3,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 3,
+      "information": 3
+    },
+    "probe_levels": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "baseline_workload": "Identification, diagnosis across device and account state, applicable troubleshooting, status checks, and escalation form a substantial multi-stage objective; setup actions are excluded.",
+    "probe_workload": "The sufficient path has several stages: identify the customer, diagnose the device, guide any needed preliminary fix, then transfer when the locked SIM is established. On a defensible path, a missing-SIM finding leads to reseating before a subsequent check reveals the lock. Payment, line resumption and APN repair are excluded after that decisive exit; seeded setup operations are not agent work.",
+    "baseline_dependencies": "Customer identification precedes support; device fixes and any bill-payment/line-resumption path require linked checks and user participation before the unresolved issue can be escalated.",
+    "probe_dependencies": "Identification precedes technical support; a missing SIM may need reseating before a later SIM check exposes the decisive lock. Transfer depends on that finding and is followed by the prescribed message. No payment or other repairs are prerequisites to locked-SIM escalation.",
+    "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+    "request_sha256": "a039eccd8864f5aff3cc695378862258fe9428649e5e1ba6d17bff6848228418",
+    "response_id": "resp_05a6dae68e44ad8a016af7b78d6ddc87d1be5c1784c87ec90a"
+  },
+  {
+    "case": 2,
+    "role": "explicit_chain_concern",
+    "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+    "case_key": "988e21ad137ffaac3e856aba",
+    "baseline_score": 75,
+    "probe_score": 50,
+    "delta": -25,
+    "baseline_levels": {
+      "workload": 3,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 3,
+      "information": 3
+    },
+    "probe_levels": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "baseline_workload": "This is substantial multi-stage work for one service issue: identify the customer, diagnose overlapping device and line causes, try applicable fixes, check service, and escalate when the locked SIM remains. Setup actions are not counted as agent work.",
+    "probe_workload": "Several routine stages precede the decisive locked-SIM exit: identification, device checks, guidance for airplane mode and the missing SIM as indicated, and escalation. Payment and line restoration are excluded after that exit.",
+    "baseline_dependencies": "Customer identification precedes support; a suspension can be lifted only after overdue bills are paid, followed by a device reboot. Device checks and any fixes must inform whether the unresolved locked SIM warrants transfer.",
+    "probe_dependencies": "Identification precedes support; a missing-SIM finding leads to reseating and a subsequent SIM check before the lock can establish escalation. No payment-to-resumption dependency is charged after that mandatory exit.",
+    "input_sha256": "0744bc314f2dcdfefc8c4a4093248d1928e489aa7173ab5e0f5aa5da2e6ea3cf",
+    "request_sha256": "b9e422998598122b11e432c11e362660abf07bb76452297ba5459cda82c506f0",
+    "response_id": "resp_0f16c4821bb3ef8f016af7b7b8b8a887d197fffa3bb5c2c50a"
+  },
+  {
+    "case": 3,
+    "role": "explicit_exclusion_contrast",
+    "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+    "case_key": "29e97cca516a76b19a606aad",
+    "baseline_score": 50,
+    "probe_score": 50,
+    "delta": 0,
+    "baseline_levels": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "probe_levels": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "baseline_workload": "One service issue requires several linked but limited stages: identify, diagnose device status, and escalate the locked SIM. Do not count every other initialized fault as a required repair before this exit.",
+    "probe_workload": "Several routine stages serve one objective: identify the customer, check device status, potentially turn off observed airplane mode, diagnose the locked SIM, then transfer and notify. The locked SIM is the decisive exit; APN repair, bill payment and line resumption are excluded after its discovery.",
+    "baseline_dependencies": "Identification precedes technical support, diagnostic results determine whether escalation is appropriate, and the transfer call precedes its required message. These are conditional linked stages, not an extensive handoff workflow.",
+    "probe_dependencies": "Customer identification precedes technical support; device checks and any indicated airplane-mode guidance precede recognition of the locked-SIM exit, which precedes transfer and its required message. No payment or APN-repair chain is needed after that exit. Checking the SIM earlier is also defensible and would omit the airplane-mode action.",
+    "input_sha256": "db5cd9006052dbc35db819872e6af710f1c4763cc7587d3a87f62646e2df7f17",
+    "request_sha256": "65c5f73769632eaec337b34ca07af9bdd763ff78d53c7014874d79bf300489f5",
+    "response_id": "resp_0c2f0c6566913659016af7b7d287c087d193e51de036582660"
+  },
+  {
+    "case": 4,
+    "role": "explicit_exclusion_contrast",
+    "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+    "case_key": "d14cd4c532ca798c4db5aad0",
+    "baseline_score": 65,
+    "probe_score": 50,
+    "delta": -15,
+    "baseline_levels": {
+      "workload": 2,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 2,
+      "information": 3
+    },
+    "probe_levels": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "baseline_workload": "One service-support objective has several stages—customer identification, device diagnosis and applicable guidance, reassessment, then escalation—but unrelated mobile-data and MMS procedures are not charged.",
+    "probe_workload": "The sufficient path has several stages—identify the customer, diagnose and reseat the missing SIM, discover the lock, then transfer. APN repair and overdue-bill payment are excluded after the SIM-security exit.",
+    "baseline_dependencies": "Identification precedes technical support; SIM findings govern whether reseating or escalation applies, and transfer depends on establishing that available actions cannot solve the issue. No payment or line-resumption chain is required once the locked SIM determines the exit.",
+    "probe_dependencies": "Customer identification precedes support; a missing-SIM result leads to reseating and reassessment before the locked-SIM exit is established. Once established, neither billing nor APN work is a prerequisite to transfer.",
+    "input_sha256": "79b002d7f3f4ffbb38850f380efb05f9e1bfc49806ae8d2ed16147ac62d7388b",
+    "request_sha256": "8a5d156a2e31b9f44106a8e9ed6a579374a9e13f8ba8352aa51b2cc898b6d97e",
+    "response_id": "resp_0bb35f90023499ee016af7b8155d8887d19733bd24c7b358cd"
+  }
+]
