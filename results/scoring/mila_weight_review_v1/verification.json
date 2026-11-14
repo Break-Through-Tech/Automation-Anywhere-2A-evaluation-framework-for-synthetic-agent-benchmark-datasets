@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "review_type": "assistant_completed_on_Mila_request_not_independent_human_validation",
+  "api_calls": 0,
+  "matched_task_ids": 342,
+  "coverage_groups_checked": 10,
+  "independent_math": "Recomputed directly from CSV labels/catalog and saved task scores without importing shared calculator.",
+  "contributions_and_bounds": "passed",
+  "gap_30_70": 2.4520135599494495,
+  "gap_50_50": 3.816905093920525,
+  "gap_change": -1.3648915339710754,
+  "ordering": "tau2 > synthetic for every convex Coverage/Difficulty weighting, because both components are greater",
+  "final_weights_selected": false,
+  "rows": [
+    {
+      "dataset": "tau2",
+      "coverage_0_100": 95.18368271555026,
+      "difficulty_0_100": 64.15467625899281,
+      "coverage_contribution": 28.55510481466508,
+      "difficulty_contribution": 44.90827338129496,
+      "index_30_70": 73.46337819596005,
+      "index_50_50": 79.66917948727153,
+      "change_from_50_50": -6.205801291311488
+    },
+    {
+      "dataset": "synthetic",
+      "coverage_0_100": 87.95454878670202,
+      "difficulty_0_100": 63.74999999999999,
+      "coverage_contribution": 26.386364636010605,
+      "difficulty_contribution": 44.625,
+      "index_30_70": 71.0113646360106,
+      "index_50_50": 75.85227439335101,
+      "change_from_50_50": -4.8409097573404125
+    }
+  ]
+}
