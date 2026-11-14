@@ -1,0 +1,9 @@
+{
+  "api_calls": 0,
+  "sources": {
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_labels.csv": "78a25ddf9142d3c9bb4e5215c371e2b422beff8fc16b1511f754515c9f9634dd",
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_catalog.csv": "5afaa14e13efa4d1040ddd0327eab49763ada15195cddb7fcd21d5a7d19fec95",
+    "results/difficulty/designed_final_v27/task_scores.json": "a4563611e88ae82c6837bb7d1c31e2a766bba1e1b63ed5ad7a5cd8f5975dfcc1"
+  },
+  "implementation_sha256": "ac692c82478197a15da51dea9111eb69ef8d8ef3ba732ef78daf63d9547a0054"
+}
