@@ -1,0 +1,45 @@
+{
+  "status": "purposive_source_reviewed_development_selection_prior_scores_visible",
+  "cases": [
+    {
+      "role": "sim_exit",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_256",
+      "request_id": "ddd2f5a8191c1ae70b57ec33_r00"
+    },
+    {
+      "role": "airline_no_target_exit",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_007",
+      "request_id": "4052de4afd171be50d2045cf_r00"
+    },
+    {
+      "role": "retail_no_target_exit",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/native/case_061",
+      "request_id": "2aa74102d9e3011cd0032533_r00"
+    },
+    {
+      "role": "fraud_package_exit",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/synthetic_bound/case_19",
+      "request_id": "4c78b9d919a09c14a6fe033a_r00"
+    },
+    {
+      "role": "simple_control",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/controls",
+      "request_id": "cfaeafa096c68dc6d8821159_r00"
+    },
+    {
+      "role": "complex_control",
+      "packet": ".cache/design_numeric_v1/tau2_final_refs_v19/controls",
+      "request_id": "223d00bffbb05674e0efd936_r00"
+    }
+  ],
+  "cached_clarified": {
+    "packet": ".cache/required_path_probe_v21",
+    "request_id": "required_path_ddd2f5a8191c1ae70b57ec33_r00"
+  },
+  "selection_notes": [
+    "Airline 14 and retail 107 have less known source conflict than the earlier maximum-score examples. Source limitations are preserved, not repaired.",
+    "Fraud W3 TC2 requires transaction/profile/history, enrichment, risk assessment and investigation package before analyst handoff; its package example versus tool-contract scope discrepancy remains flagged.",
+    "C01 and C02 are authored source controls, not benchmark tasks or difficulty gold labels.",
+    "Only one previously scored routine SIM clarification is reused; the other three prior probe cases are not pooled into these repeat means."
+  ]
+}

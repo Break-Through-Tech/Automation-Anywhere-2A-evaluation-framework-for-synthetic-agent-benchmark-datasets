@@ -1,0 +1,161 @@
+[
+  {
+    "role": "sim_exit",
+    "dataset": "tau2",
+    "domain": "telecom",
+    "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+    "original_score": 75,
+    "clarified_score": 50,
+    "change": -25,
+    "clarified_is_new_call": false,
+    "clarified_dimension_levels": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "score_rationale": "Ratings of 2 for workload, reasoning, tool use, dependencies and information yield 5 \u00d7 10 = 50. This reflects a staged diagnostic path to escalation, not a full repair of all seeded faults.",
+    "dependency_reasoning": "A sufficient diagnostic order is phone-number identification, initial service/status check, correction of airplane mode if found, SIM check, reseating if missing, and a repeat check that can establish the non-tool-fixable PIN lock. The lock is the decisive mandatory escalation condition; billing, APN and line repairs need not be completed afterward. Another diagnostic order could discover the lock earlier.",
+    "uncertainties": [
+      "The SIM-status tool's behavior after reseating a missing SIM that is also PIN-locked is not shown by an execution trace; the path is inferred from the setup definitions and policy.",
+      "The broad instruction to try all possible resolutions before transfer is in tension with the specific instruction to escalate a locked SIM; the specific SIM-security exit governs this score.",
+      "The scenario names `get_status_bar`, while the supplied user tool is `check_status_bar`; the documented cellular guide also uses `check_status_bar`."
+    ],
+    "source_quality_flags": [
+      "Reference contains only the transfer call, omitting policy-required identification, diagnosis and transfer message.",
+      "Scenario's `get_status_bar` example differs from the supplied `check_status_bar` tool name.",
+      "Setup definitions and judge-only records describe intended state but were not executed or available as facts to the task agent."
+    ]
+  },
+  {
+    "role": "airline_no_target_exit",
+    "dataset": "tau2",
+    "domain": "airline",
+    "task_id": "14",
+    "original_score": 75,
+    "clarified_score": 85,
+    "change": 10,
+    "clarified_is_new_call": true,
+    "clarified_dimension_levels": {
+      "workload": 4,
+      "reasoning": 3,
+      "tool_use": 4,
+      "dependencies": 3,
+      "information": 3
+    },
+    "score_rationale": "Ratings of 4 workload, 3 reasoning, 4 tool use, 3 dependencies, and 3 information sum to 17; the provisional score is 5 \u00d7 17 = 85.",
+    "dependency_reasoning": "A sufficient path begins with the requested totals and retrieval of the recent reservation; these are necessary before the agent can establish the basic-economy restriction and cancellation eligibility. Flight comparison, the permitted payment split, and the disclosed Mastercard charge establish whether the user's booking cutoff is met. On the documented figures it is met, so the path continues through the applicable cancellation-and-booking confirmations and writes. The design does not establish a unique order for every read or search; no alternative modification, compensation, or human-transfer path is added.",
+    "uncertainties": [
+      "The supplied records are not the full flight database, so the agent must verify the cheapest available itinerary through searches rather than treat the reference flights as proof of global optimality.",
+      "The user expresses willingness to cancel and rebook if told basic economy cannot be changed; the required confirmation and cancellation reason still need to be obtained in the interaction.",
+      "Policy expressly requires confirmation before listed booking-database updates but does not explicitly name cancellation in its parenthetical examples; treating cancellation as a write warranting confirmation is the cautious path."
+    ],
+    "source_quality_flags": [
+      "Reference actions and completion assertions describe intended work, not observed execution or proof that a call succeeds.",
+      "Initial records are judge-only design context, not knowledge initially available to the agent."
+    ]
+  },
+  {
+    "role": "retail_no_target_exit",
+    "dataset": "tau2",
+    "domain": "retail",
+    "task_id": "107",
+    "original_score": 75,
+    "clarified_score": 70,
+    "change": -5,
+    "clarified_is_new_call": true,
+    "clarified_dimension_levels": {
+      "workload": 3,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 3,
+      "information": 2
+    },
+    "score_rationale": "Ratings of workload 3, reasoning 3, tool use 3, dependencies 3 and information 2 sum to 14; 5 \u00d7 14 = 70. The score counts two linked exchanges and their prerequisites, not both boot alternatives as completed work.",
+    "dependency_reasoning": "A defensible sufficient path authenticates by name and ZIP because the email is unknown, retrieves both orders and relevant products, establishes that the identical boot option cannot be exchanged, and proceeds with the stated fallback. It clarifies the puzzle theme, checks both proposed variants and payment details, and obtains explicit confirmation before each order's one-time exchange. The exact diagnostic order between the two products is not prescribed.",
+    "uncertainties": [
+      "\u201cMore fancy\u201d does not specify a catalog theme; customer clarification is needed before treating the reference fantasy variant as the confirmed choice.",
+      "The supplied records are judge-only context; live availability and order details still require retrieval.",
+      "The scenario does not specify when or how the user will provide payment-method consent or explicit confirmations."
+    ],
+    "source_quality_flags": [
+      "The completion references specify intended item IDs but do not demonstrate that the customer confirmed those choices.",
+      "The initial_state is null, and only task-relevant baseline records are supplied; this does not prevent a defensible designed-complexity rating."
+    ]
+  },
+  {
+    "role": "fraud_package_exit",
+    "dataset": "synthetic",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+    "original_score": 70,
+    "clarified_score": 65,
+    "change": -5,
+    "clarified_is_new_call": true,
+    "clarified_dimension_levels": {
+      "workload": 3,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 2,
+      "information": 2
+    },
+    "score_rationale": "Levels 3 workload, 3 reasoning, 3 tool use, 2 dependencies and 2 information sum to 13; 5 \u00d7 13 = 65. Milestone states are not counted again.",
+    "dependency_reasoning": "A sufficient path retrieves and checks relevant records, calculates risk and compiles the package, routes it, then confirms the result. The score-90 escalation path is decisive. Customer verification, auto-decline and human-in-the-loop failure exits are not selected on the stated available-data path.",
+    "uncertainties": [
+      "The expected investigation package lists only a short summary, transaction ID and risk factor, while the routing contract describes a package including transaction, customer, device, history, risk score and notes; the complete-package requirement is scored without prescribing an exact payload.",
+      "The scoring tool's recommended-action values differ from the analyst-routing tool's action enum; selecting contact_customer for routing requires translating the recommendation."
+    ],
+    "source_quality_flags": [
+      "Reference calls describe intended inputs, not observed execution or proof that the reported score and routing result were produced."
+    ]
+  },
+  {
+    "role": "simple_control",
+    "dataset": "validation_fixture",
+    "domain": "control",
+    "task_id": "C01",
+    "original_score": 40,
+    "clarified_score": 40,
+    "change": 0,
+    "clarified_is_new_call": true,
+    "clarified_dimension_levels": {
+      "workload": 2,
+      "reasoning": 1,
+      "tool_use": 2,
+      "dependencies": 1,
+      "information": 2
+    },
+    "score_rationale": "Two routine linked stages require ordinary retrieval and output-to-input tool binding, with little interpretation: 5 \u00d7 (2 + 1 + 2 + 1 + 2) = 40.",
+    "dependency_reasoning": "Read the current balance and currency before recording them. Confirmation of that record ends the sufficient path; the scenario excludes approval and conversion, and does not call for linked-account reconciliation.",
+    "uncertainties": [],
+    "source_quality_flags": []
+  },
+  {
+    "role": "complex_control",
+    "dataset": "validation_fixture",
+    "domain": "control",
+    "task_id": "C02",
+    "original_score": 75,
+    "clarified_score": 75,
+    "change": 0,
+    "clarified_is_new_call": true,
+    "clarified_dimension_levels": {
+      "workload": 3,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 3,
+      "information": 3
+    },
+    "score_rationale": "Substantial multi-account work and cross-record binding, with meaningful currency reconciliation and an approval-dependent endpoint, support five level-3 ratings: 5 \u00d7 (3+3+3+3+3) = 75.",
+    "dependency_reasoning": "A sufficient path first discovers accounts, balances, and applicable rates, resolves identifiers, and computes exposure. That establishes whether approval is mandatory. If requested approval is rejected, reporting rejection is the decisive exit and recording is excluded; otherwise the applicable linked reconciliation is recorded. No ordering among account-level retrievals is prescribed.",
+    "uncertainties": [
+      "The balances and resulting exposure are not supplied, so whether approval is required cannot be determined from the sources.",
+      "The form of the inconsistent currency identifiers and how they can be resolved are unspecified.",
+      "The sources do not establish whether a requested approval would be granted or rejected."
+    ],
+    "source_quality_flags": [
+      "The tool contract lists record_balance, but the workflow and endpoint do not specify a separate balance-recording obligation; it is not counted as required work."
+    ]
+  }
+]

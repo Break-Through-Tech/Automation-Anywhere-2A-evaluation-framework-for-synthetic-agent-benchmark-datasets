@@ -1,0 +1,17 @@
+{
+  "all_12_results_revalidated": true,
+  "unique_response_ids": 12,
+  "new_intents_exactly_phase1": true,
+  "api_errors": 0,
+  "format_errors": 0,
+  "primary_files_match_published_branch": {
+    "results/difficulty/tau2_final_v19/comparison.json": true,
+    "results/difficulty/synthetic_final_v15/task_scores_readable.csv": true
+  },
+  "preexisting_files_checked": 80,
+  "preexisting_files_changed": [],
+  "simple_complex_gap": 35,
+  "offline_tests_prior_preparation": 176,
+  "production_code_changed": false,
+  "repeatability_not_tested": true
+}

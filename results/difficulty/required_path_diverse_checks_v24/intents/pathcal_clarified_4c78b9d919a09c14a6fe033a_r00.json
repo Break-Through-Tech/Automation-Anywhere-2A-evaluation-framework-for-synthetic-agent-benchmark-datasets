@@ -1,0 +1,7 @@
+{
+  "authorization": "User: ok sure, accepting recommendation to run only five diverse-case checks; 24 repeats are not authorized",
+  "cap": 5,
+  "phase": "phase1_only",
+  "request_sha256": "0cc4fe21092afe00dff998f84da9e06fbfe77bd32b2fdbc9589770b414be2907",
+  "at": "2026-11-14T03:14:22.665120+00:00"
+}

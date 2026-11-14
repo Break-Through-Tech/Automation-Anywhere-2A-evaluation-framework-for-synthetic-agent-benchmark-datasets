@@ -1,0 +1,42 @@
+{
+  "status": "five_new_diverse_checks_completed_repeat_phase_not_authorized",
+  "new_api_calls": 5,
+  "cached_judgments": 7,
+  "total_usable_judgments": 12,
+  "phase2_calls": 0,
+  "phase2_remaining_not_authorized": 24,
+  "model_config": {
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000,
+    "store": false
+  },
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "usage_new_calls_only": {
+    "input_tokens": 114399,
+    "output_tokens": 6473,
+    "total_tokens": 120872
+  },
+  "thresholds": {
+    "max_repeat_range": 10,
+    "max_mean_repeat_range": 5,
+    "min_authored_complexity_gap": 10,
+    "non_target_mean_shift_review_threshold": 10
+  },
+  "repeatability": "not_measured_single_judgment_per_case_per_arm",
+  "primary_scores_changed": false,
+  "prompt_adopted": false,
+  "independent_validation": false,
+  "new_request_ids": [
+    "pathcal_clarified_4052de4afd171be50d2045cf_r00",
+    "pathcal_clarified_2aa74102d9e3011cd0032533_r00",
+    "pathcal_clarified_4c78b9d919a09c14a6fe033a_r00",
+    "pathcal_clarified_cfaeafa096c68dc6d8821159_r00",
+    "pathcal_clarified_223d00bffbb05674e0efd936_r00"
+  ],
+  "note": "prepared_manifest.json is the preserved zero-call preparation snapshot, not this execution record."
+}

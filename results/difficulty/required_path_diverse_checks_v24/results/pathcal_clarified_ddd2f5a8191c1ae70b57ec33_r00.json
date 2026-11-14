@@ -1,0 +1,496 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "probe_prompt_version": "design_prompt_v1.4_required_path_probe",
+  "request_sha256": "a039eccd8864f5aff3cc695378862258fe9428649e5e1ba6d17bff6848228418",
+  "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-14T01:21:16.534597+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_05a6dae68e44ad8a016af7b78d6ddc87d1be5c1784c87ec90a",
+  "usage": {
+    "input_tokens": 68647,
+    "input_tokens_details": {
+      "cache_write_tokens": 68644,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1274,
+    "output_tokens_details": {
+      "reasoning_tokens": 88
+    },
+    "total_tokens": 69921
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "Required: the No Service request triggers customer identification and cellular-service diagnosis before a justified exit.",
+        "evidence": [
+          {
+            "citation_id": "E0004"
+          },
+          {
+            "citation_id": "E0141"
+          },
+          {
+            "citation_id": "E0212"
+          },
+          {
+            "citation_id": "E0213"
+          },
+          {
+            "citation_id": "E0214"
+          }
+        ],
+        "rationale": "Identify the customer, obtain device-grounded diagnostics, address a missing SIM if reported, and apply the locked-SIM escalation rule if that condition becomes visible. The seeded faults are not facts available to the agent without discovery.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "Selected conditional: transfer is the intended exit once the SIM lock establishes that the issue cannot be solved with the available actions.",
+        "evidence": [
+          {
+            "citation_id": "E0314"
+          },
+          {
+            "citation_id": "E0214"
+          },
+          {
+            "citation_id": "E0026"
+          },
+          {
+            "citation_id": "E0564"
+          }
+        ],
+        "rationale": "After confirming the lock, call the transfer tool with an issue summary, then give the prescribed transfer message. The reference call alone does not justify transferring before diagnosis.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 2,
+        "rationale": "The sufficient path has several stages: identify the customer, diagnose the device, guide any needed preliminary fix, then transfer when the locked SIM is established. On a defensible path, a missing-SIM finding leads to reseating before a subsequent check reveals the lock. Payment, line resumption and APN repair are excluded after that decisive exit; seeded setup operations are not agent work.",
+        "evidence": [
+          {
+            "citation_id": "E0141"
+          },
+          {
+            "citation_id": "E0212"
+          },
+          {
+            "citation_id": "E0213"
+          },
+          {
+            "citation_id": "E0214"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0011"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 2,
+        "rationale": "The agent must distinguish a fixable missing SIM from a locked SIM requiring escalation, while avoiding an unsupported immediate transfer or charging every seeded fault to the path.",
+        "evidence": [
+          {
+            "citation_id": "E0212"
+          },
+          {
+            "citation_id": "E0213"
+          },
+          {
+            "citation_id": "E0214"
+          },
+          {
+            "citation_id": "E0027"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 2,
+        "rationale": "The path selects a phone-number customer lookup and coordinates user-side diagnostic or fix tools with the assistant-side transfer tool; arguments are ordinary rather than complex nested bindings.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0322"
+          },
+          {
+            "citation_id": "E0489"
+          },
+          {
+            "citation_id": "E0523"
+          },
+          {
+            "citation_id": "E0434"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 2,
+        "rationale": "Identification precedes technical support; a missing SIM may need reseating before a later SIM check exposes the decisive lock. Transfer depends on that finding and is followed by the prescribed message. No payment or other repairs are prerequisites to locked-SIM escalation.",
+        "evidence": [
+          {
+            "citation_id": "E0141"
+          },
+          {
+            "citation_id": "E0213"
+          },
+          {
+            "citation_id": "E0214"
+          },
+          {
+            "citation_id": "E0026"
+          },
+          {
+            "citation_id": "E0563"
+          },
+          {
+            "citation_id": "E0564"
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The agent has a phone number but must retrieve customer and device status; judge-only setup indicates possible overlapping causes but is not agent knowledge. This is ordinary staged verification, not a requirement to reconcile every account and device fault.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0370"
+          },
+          {
+            "citation_id": "E0206"
+          },
+          {
+            "citation_id": "E0212"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0011"
+          }
+        ]
+      }
+    },
+    "overall_score": 50,
+    "intended_endpoint": {
+      "description": "A justified transfer to a human agent for SIM security while service remains unavailable, rather than restoration of signal.",
+      "evidence": [
+        {
+          "citation_id": "E0214"
+        },
+        {
+          "citation_id": "E0310"
+        },
+        {
+          "citation_id": "E0026"
+        }
+      ]
+    },
+    "dependency_reasoning": "A sufficient diagnostic order is phone-number identification, initial service/status check, correction of airplane mode if found, SIM check, reseating if missing, and a repeat check that can establish the non-tool-fixable PIN lock. The lock is the decisive mandatory escalation condition; billing, APN and line repairs need not be completed afterward. Another diagnostic order could discover the lock earlier.",
+    "score_rationale": "Ratings of 2 for workload, reasoning, tool use, dependencies and information yield 5 × 10 = 50. This reflects a staged diagnostic path to escalation, not a full repair of all seeded faults.",
+    "uncertainties": [
+      "The SIM-status tool's behavior after reseating a missing SIM that is also PIN-locked is not shown by an execution trace; the path is inferred from the setup definitions and policy.",
+      "The broad instruction to try all possible resolutions before transfer is in tension with the specific instruction to escalate a locked SIM; the specific SIM-security exit governs this score.",
+      "The scenario names `get_status_bar`, while the supplied user tool is `check_status_bar`; the documented cellular guide also uses `check_status_bar`."
+    ],
+    "source_quality_flags": [
+      "Reference contains only the transfer call, omitting policy-required identification, diagnosis and transfer message.",
+      "Scenario's `get_status_bar` example differs from the supplied `check_status_bar` tool name.",
+      "Setup definitions and judge-only records describe intended state but were not executed or available as facts to the task agent."
+    ],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "Required: the No Service request triggers customer identification and cellular-service diagnosis before a justified exit.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Your phone has been showing 'No Service' for the past few hours."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You must first identify the customer."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          }
+        ],
+        "rationale": "Identify the customer, obtain device-grounded diagnostics, address a missing SIM if reported, and apply the locked-SIM escalation rule if that condition becomes visible. The seeded faults are not facts available to the agent without discovery.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "Selected conditional: transfer is the intended exit once the SIM lock establishes that the issue cannot be solved with the available actions.",
+        "evidence": [
+          {
+            "source_id": "reference_001",
+            "excerpt": "{\"action_id\": \"transfer_to_human_agents\", \"arguments\": {\"summary\": \"I cannot fix the issue.\"}, \"compare_args\": [], \"info\": null, \"name\": \"transfer_to_human_agents\", \"requestor\": \"assistant\"}"
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+          },
+          {
+            "source_id": "setup_assertion_definitions_user",
+            "excerpt": "tr:\n        \"\"\"Locks the SIM card by setting the PIN. This cannot be fixed by calling a tool.\"\"\"\n        if mode == \"pin\":\n            self.device.sim_card_status = SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            self.device.sim_card_status = SimStatus.LOCKED_PUK\n        self.simulate_network_search()\n        if mode == \"pin\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PUK\n        return f\"SIM card locked successfully in {mode} mode.\"\n\ndef break_apn_settings(s"
+          }
+        ],
+        "rationale": "After confirming the lock, call the transfer tool with an issue summary, then give the prescribed transfer message. The reference call alone does not justify transferring before diagnosis.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 2,
+        "rationale": "The sufficient path has several stages: identify the customer, diagnose the device, guide any needed preliminary fix, then transfer when the locked SIM is established. On a defensible path, a missing-SIM finding leads to reseating before a subsequent check reveals the lock. Payment, line resumption and APN repair are excluded after that decisive exit; seeded setup operations are not agent work.",
+        "evidence": [
+          {
+            "source_id": "policy_1",
+            "excerpt": "You must first identify the customer."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "{\"initialization_actions\": [{\"arguments\": {\"name\": \"John Smith\", \"phone_number\": \"555-123-2002\"}, \"env_type\": \"user\", \"func_name\": \"set_user_info\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"turn_airplane_mode_on\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"break_apn_settings\"}, {\"arguments\": {\"mode\": \"pin\"}, \"env_type\": \"user\", \"func_name\": \"lock_sim_card\"}, {\"arguments\": {\"contract_ended\": false, \"customer_id\": \"C1001\", \"line_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"use"
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "e_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"simulate_network_search\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"unseat_sim_card\"}], \"initialization_data\": null, \"message_history\": null}"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 2,
+        "rationale": "The agent must distinguish a fixable missing SIM from a locked SIM requiring escalation, while avoiding an unsupported immediate transfer or charging every seeded fault to the path.",
+        "evidence": [
+          {
+            "source_id": "policy_2",
+            "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You should try your best to resolve the issue for the user before transferring the user to a human agent."
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 2,
+        "rationale": "The path selects a phone-number customer lookup and coordinates user-side diagnostic or fix tools with the assistant-side transfer tool; arguments are ordinary rather than complex nested bindings.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You are John Smith with phone number 555-123-2002."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "{\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Finds a customer by their primary contact or line phone number.\\n\\nArgs:\\n    phone_number: The phone number to search for.\\n\\nReturns:\\n    Customer object if found, None otherwise.\", \"returns\": \"Customer\", \"signature\": \"get_customer_by_phone(self, phone_number: str)\"}, \"get_data_usage\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Retrieves current billing cycle data usage for a line, including data\\nrefueling amount, data limit, and cycle end date.\\n\\nArgs:\\n    customer_id: ID of the customer who owns the line.\\n "
+          },
+          {
+            "source_id": "tools_user",
+            "excerpt": "Checks if your SIM card is working correctly and displays its current status. Shows if the SIM is active, missing, or locked with a PIN or PUK code."
+          },
+          {
+            "source_id": "tools_user",
+            "excerpt": "Simulates removing and reinserting your SIM card. This can help resolve recognition issues."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "transfer_to_human_agents(self, summary: str)"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 2,
+        "rationale": "Identification precedes technical support; a missing SIM may need reseating before a later SIM check exposes the decisive lock. Transfer depends on that finding and is followed by the prescribed message. No payment or other repairs are prerequisites to locked-SIM escalation.",
+        "evidence": [
+          {
+            "source_id": "policy_1",
+            "excerpt": "You must first identify the customer."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+          },
+          {
+            "source_id": "setup_assertion_definitions_user",
+            "excerpt": "plane Mode is now ON.\"\n\ndef unseat_sim_card(self) -> str:\n        \"\"\"Un-seats the SIM card by removing it. This is fixed by calling reseat_sim_card().\"\"\"\n        self.device.sim_card_missing = True\n        self.simulate_network_search()\n        assert self.device.sim_card_missing\n        assert self._check_sim_status() == SimStatus.MISSING\n        return \"SIM card un-seated successfully.\"\n\ndef lock_sim_card(self, mode: Literal[\"pin\", \"puk\"]) -> str:\n        \"\"\"Locks the SIM card by setting the PIN. This cannot be fixed by calling a tool.\"\"\"\n        if mode == \"pin\":\n            self.device.sim"
+          },
+          {
+            "source_id": "setup_assertion_definitions_user",
+            "excerpt": "tr:\n        \"\"\"Locks the SIM card by setting the PIN. This cannot be fixed by calling a tool.\"\"\"\n        if mode == \"pin\":\n            self.device.sim_card_status = SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            self.device.sim_card_status = SimStatus.LOCKED_PUK\n        self.simulate_network_search()\n        if mode == \"pin\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PUK\n        return f\"SIM card locked successfully in {mode} mode.\"\n\ndef break_apn_settings(s"
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The agent has a phone number but must retrieve customer and device status; judge-only setup indicates possible overlapping causes but is not agent knowledge. This is ordinary staged verification, not a requirement to reconcile every account and device fault.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You are John Smith with phone number 555-123-2002."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Finds a customer by their primary contact or line phone number."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "You can check if Airplane Mode is ON by using `check_status_bar()` or `check_network_status()`."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "{\"initialization_actions\": [{\"arguments\": {\"name\": \"John Smith\", \"phone_number\": \"555-123-2002\"}, \"env_type\": \"user\", \"func_name\": \"set_user_info\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"turn_airplane_mode_on\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"break_apn_settings\"}, {\"arguments\": {\"mode\": \"pin\"}, \"env_type\": \"user\", \"func_name\": \"lock_sim_card\"}, {\"arguments\": {\"contract_ended\": false, \"customer_id\": \"C1001\", \"line_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"use"
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "e_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"simulate_network_search\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"unseat_sim_card\"}], \"initialization_data\": null, \"message_history\": null}"
+          }
+        ]
+      }
+    },
+    "overall_score": 50,
+    "intended_endpoint": {
+      "description": "A justified transfer to a human agent for SIM security while service remains unavailable, rather than restoration of signal.",
+      "evidence": [
+        {
+          "source_id": "policy_2",
+          "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+        },
+        {
+          "source_id": "completion_design",
+          "excerpt": "{\"actions\": [{\"action_id\": \"transfer_to_human_agents\", \"arguments\": {\"summary\": \"I cannot fix the issue.\"}, \"compare_args\": [], \"info\": null, \"name\": \"transfer_to_human_agents\", \"requestor\": \"assistant\"}], \"communicate_info\": null, \"env_assertions\": [{\"arguments\": {\"expected_status\": \"no_service\"}, \"assert_value\": true, \"env_type\": \"user\", \"func_name\": \"assert_service_status\", \"message\": null}], \"nl_assertions\": null}"
+        },
+        {
+          "source_id": "policy_1",
+          "excerpt": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+        }
+      ]
+    },
+    "dependency_reasoning": "A sufficient diagnostic order is phone-number identification, initial service/status check, correction of airplane mode if found, SIM check, reseating if missing, and a repeat check that can establish the non-tool-fixable PIN lock. The lock is the decisive mandatory escalation condition; billing, APN and line repairs need not be completed afterward. Another diagnostic order could discover the lock earlier.",
+    "score_rationale": "Ratings of 2 for workload, reasoning, tool use, dependencies and information yield 5 × 10 = 50. This reflects a staged diagnostic path to escalation, not a full repair of all seeded faults.",
+    "uncertainties": [
+      "The SIM-status tool's behavior after reseating a missing SIM that is also PIN-locked is not shown by an execution trace; the path is inferred from the setup definitions and policy.",
+      "The broad instruction to try all possible resolutions before transfer is in tension with the specific instruction to escalate a locked SIM; the specific SIM-security exit governs this score.",
+      "The scenario names `get_status_bar`, while the supplied user tool is `check_status_bar`; the documented cellular guide also uses `check_status_bar`."
+    ],
+    "source_quality_flags": [
+      "Reference contains only the transfer call, omitting policy-required identification, diagnosis and transfer message.",
+      "Scenario's `get_status_bar` example differs from the supplied `check_status_bar` tool name.",
+      "Setup definitions and judge-only records describe intended state but were not executed or available as facts to the task agent."
+    ],
+    "unscorable_reason": ""
+  },
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 50,
+    "computed_total": 50,
+    "reported_total_mismatch": false
+  },
+  "request_binding": {
+    "bound_case_key": "ddd2f5a8191c1ae70b57ec33",
+    "model_reported_case_key": "ddd2f5a8191c1ae70b57ec33",
+    "model_case_key_mismatch": false
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "2c225f4dd1281024ce2ac16b95ab51ae965f22447327484906889fda16f97a57",
+  "finished_at": "2026-11-14T01:21:29.238648+00:00",
+  "offline_cache_binding": {
+    "request_id": "pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00",
+    "source_packet": ".cache/required_path_probe_v21",
+    "source_request_id": "required_path_ddd2f5a8191c1ae70b57ec33_r00",
+    "new_api_calls": 0
+  }
+}
