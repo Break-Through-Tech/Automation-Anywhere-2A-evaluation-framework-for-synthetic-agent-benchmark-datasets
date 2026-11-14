@@ -1,0 +1,514 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "probe_prompt_version": "design_prompt_v1.4_required_path_probe",
+  "request_sha256": "0d255849705a70a58928da969c95ede0027a4f964e89e1253cad34aa17ceb936",
+  "input_sha256": "d18df5d7a58b7acf42c4f36d7f58b79a48d563e3941ae3325a9c09754b3b1633",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-14T03:35:10.836844+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_09021e68dadf2a8c016af7d6f032b887d19d5d63a1fcc5264e",
+  "usage": {
+    "input_tokens": 35817,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 35814
+    },
+    "output_tokens": 1379,
+    "output_tokens_details": {
+      "reasoning_tokens": 92
+    },
+    "total_tokens": 37196
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "4052de4afd171be50d2045cf",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "The balance totals, cheapest business round trip, payment limit, and stated exclusions are the user's requested work.",
+        "evidence": [
+          {
+            "citation_id": "E0006"
+          },
+          {
+            "citation_id": "E0008"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0013"
+          }
+        ],
+        "rationale": "Requires retrieving and totaling balances, identifying the reservation and eligible itinerary, calculating a permitted payment split, and explaining the Mastercard charge before booking.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 3
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "Cancellation is selected for the documented basic-economy reservation when changing its flights; the scenario explicitly requests cancellation and rebooking in that case.",
+        "evidence": [
+          {
+            "citation_id": "E0009"
+          },
+          {
+            "citation_id": "E0094"
+          },
+          {
+            "citation_id": "E0287"
+          },
+          {
+            "citation_id": "E0153"
+          }
+        ],
+        "rationale": "Locate and inspect the reservation, obtain the cancellation reason, verify eligibility and obtain confirmation before cancelling. Its recorded creation time places it within the stated 24-hour cancellation condition.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_002",
+        "applicability_rationale": "The documented split puts the Mastercard charge below the user's booking threshold, so new booking is on the selected sufficient path after cancellation.",
+        "evidence": [
+          {
+            "citation_id": "E0013"
+          },
+          {
+            "citation_id": "E0136"
+          },
+          {
+            "citation_id": "E0155"
+          },
+          {
+            "citation_id": "E0156"
+          }
+        ],
+        "rationale": "Compare available outbound and return flights for the three passengers, use no more than one certificate, bind the selected flights, passengers and payment amounts, and obtain confirmation before booking.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 3
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "This is substantial multi-stage work: balance totals, reservation and eligibility checks, itinerary comparison, payment calculation, confirmations, cancellation and replacement booking. The decisive exit on this supported path is the completed replacement booking with its Mastercard charge communicated; no further modification or compensation is needed afterward.",
+        "evidence": [
+          {
+            "citation_id": "E0005"
+          },
+          {
+            "citation_id": "E0008"
+          },
+          {
+            "citation_id": "E0139"
+          },
+          {
+            "citation_id": "E0019"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "The agent must reconcile cheapest eligible business flights with passenger capacity and dates, the basic-economy modification rule, the one-certificate payment cap, and the user's Mastercard ceiling.",
+        "evidence": [
+          {
+            "citation_id": "E0008"
+          },
+          {
+            "citation_id": "E0094"
+          },
+          {
+            "citation_id": "E0068"
+          },
+          {
+            "citation_id": "E0013"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "Profile and reservation retrieval feed flight searches and calculations; cancellation is followed by a booking with nested flight, passenger and multiple payment arguments.",
+        "evidence": [
+          {
+            "citation_id": "E0226"
+          },
+          {
+            "citation_id": "E0221"
+          },
+          {
+            "citation_id": "E0171"
+          },
+          {
+            "citation_id": "E0172"
+          },
+          {
+            "citation_id": "E0196"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 3,
+        "rationale": "The balance and reservation discoveries precede pricing and the payment-limit decision. Cancellation eligibility and explicit confirmation precede cancellation; the selected replacement and another confirmed database update then depend on those findings. The documented $1786 charge supports continuing to booking rather than taking a threshold-based no-booking exit.",
+        "evidence": [
+          {
+            "citation_id": "E0013"
+          },
+          {
+            "citation_id": "E0115"
+          },
+          {
+            "citation_id": "E0019"
+          },
+          {
+            "citation_id": "E0136"
+          },
+          {
+            "citation_id": "E0153"
+          }
+        ]
+      },
+      "information": {
+        "level": 3,
+        "rationale": "The agent must retrieve payment balances and the reservation, then compare flight availability and prices across direct and connecting possibilities. Judge-only records identify the designed case but are not facts already known to the agent.",
+        "evidence": [
+          {
+            "citation_id": "E0226"
+          },
+          {
+            "citation_id": "E0221"
+          },
+          {
+            "citation_id": "E0240"
+          },
+          {
+            "citation_id": "E0246"
+          },
+          {
+            "citation_id": "E0008"
+          }
+        ]
+      }
+    },
+    "overall_score": 75,
+    "intended_endpoint": {
+      "description": "Communicate $327 in gift-card balances and $1000 in certificate balances; after required checks and confirmations, cancel the basic-economy reservation and book the qualifying business round trip without baggage or insurance, communicating a $1786 Mastercard charge.",
+      "evidence": [
+        {
+          "citation_id": "E0139"
+        },
+        {
+          "citation_id": "E0151"
+        },
+        {
+          "citation_id": "E0152"
+        },
+        {
+          "citation_id": "E0013"
+        }
+      ]
+    },
+    "dependency_reasoning": "A sufficient path starts by retrieving the user's profile and recent reservation, reporting the requested totals, and checking why the existing flights cannot be changed and whether cancellation is allowed. Search and compare same-date business itineraries, establish the permitted $500 certificate plus $327 gift-card split and $1786 Mastercard charge, and secure confirmation for each database update. The supported path ends after cancellation and replacement booking with the charge communicated; cabin-only modification, transfer, compensation and post-booking changes are not charged. Flight-search order is not prescribed.",
+    "score_rationale": "Levels 3+3+3+3+3 give 75. The score reflects linked multi-stage discovery, itinerary and payment decisions, and two confirmed writes, without treating reference calls as the whole workload or counting unrelated branches.",
+    "uncertainties": [
+      "The supplied records cover selected flights rather than the full searchable inventory; the documented intended itinerary supports a designed-complexity score but does not independently prove global cheapestness.",
+      "The scenario makes cancellation and rebooking conditional on the agent explaining the basic-economy restriction; the selected path uses that explanation and the documented reservation cabin.",
+      "The cancellation policy requires obtaining a reason, which the user's wish to replace the flight suggests but does not explicitly classify; it must be obtained before cancellation."
+    ],
+    "source_quality_flags": [
+      "Selected initial records are judge-only design context, not agent-visible discoveries.",
+      "Reference actions and completion assertions describe intended work, not observed execution or an authoritative tool order."
+    ],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "4052de4afd171be50d2045cf",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "The balance totals, cheapest business round trip, payment limit, and stated exclusions are the user's requested work.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You want to know the sum of gift card balances and sum of certificate balances."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "Then you want to change your recent reservation. You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "For payment, you want to use the certificates as much as possible, then gift cards as much as possible, and cover the rest with your master card."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+          }
+        ],
+        "rationale": "Requires retrieving and totaling balances, identifying the reservation and eligible itinerary, calculating a permitted payment split, and explaining the Mastercard charge before booking.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 3
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "Cancellation is selected for the documented basic-economy reservation when changing its flights; the scenario explicitly requests cancellation and rebooking in that case.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "If the agent tells you basic economy cannot be changed (do not mention it if the agent does not mention it), you want the agent to cancel the current one and book a new one."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "- Basic economy flights cannot be modified."
+          },
+          {
+            "source_id": "initial_record_004",
+            "excerpt": "{\"cabin\": \"basic_economy\", \"created_at\": \"2024-05-14T16:03:16\", \"destination\": \"SFO\", \"flight_type\": \"round_trip\", \"flights\": [{\"date\": \"2024-05-26\", \"destination\": \"SFO\", \"flight_number\": \"HAT023\", \"origin\": \"JFK\", \"price\": 53}, {\"date\": \"2024-05-28\", \"destination\": \"SEA\", \"flight_number\": \"HAT204\", \"origin\": \"SFO\", \"price\": 71}, {\"date\": \"2024-05-28\", \"destination\": \"JFK\", \"flight_number\": \"HAT021\", \"origin\": \"SEA\", \"price\": 65}], \"insurance\": \"no\", \"nonfree_baggages\": 0, \"origin\": \"JFK\", \"passengers\": [{\"dob\": \"1960-11-26\", \"first_name\": \"Mohamed\", \"last_name\": \"Silva\"}, {\"dob\": \"1986-09-12"
+          },
+          {
+            "source_id": "reference_001",
+            "excerpt": "{\"action_id\": \"14_0\", \"arguments\": {\"reservation_id\": \"K1NW8N\"}, \"info\": null, \"name\": \"cancel_reservation\"}"
+          }
+        ],
+        "rationale": "Locate and inspect the reservation, obtain the cancellation reason, verify eligibility and obtain confirmation before cancelling. Its recorded creation time places it within the stated 24-hour cancellation condition.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_002",
+        "applicability_rationale": "The documented split puts the Mastercard charge below the user's booking threshold, so new booking is on the selected sufficient path after cancellation.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+          },
+          {
+            "source_id": "task_design_notes",
+            "excerpt": "The total cost of the new flight will be $2613. The correct split is to use first both gift cards for $327, the $500 certificate, and put the remaining $1786 dollars on the master card."
+          },
+          {
+            "source_id": "reference_002",
+            "excerpt": "{\"action_id\": \"14_1\", \"arguments\": {\"cabin\": \"business\", \"destination\": \"SFO\", \"flight_type\": \"round_trip\", \"flights\": [{\"date\": \"2024-05-26\", \"flight_number\": \"HAT023\"}, {\"date\": \"2024-05-28\", \"flight_number\": \"HAT204\"}, {\"date\": \"2024-05-28\", \"flight_number\": \"HAT100\"}], \"insurance\": \"no\", \"nonfree_baggages\": 0, \"origin\": \"JFK\", \"passengers\": [{\"dob\": \"1960-11-26\", \"first_name\": \"Mohamed\", \"last_name\": \"Silva\"}, {\"dob\": \"1986-09-12\", \"first_name\": \"Raj\", \"last_name\": \"Sanchez\"}, {\"dob\": \"1980-03-27\", \"first_name\": \"Liam\", \"last_name\": \"Wilson\"}], \"payment_methods\": [{\"amount\": 500, \"payment_"
+          },
+          {
+            "source_id": "reference_002",
+            "excerpt": "e\": \"Raj\", \"last_name\": \"Sanchez\"}, {\"dob\": \"1980-03-27\", \"first_name\": \"Liam\", \"last_name\": \"Wilson\"}], \"payment_methods\": [{\"amount\": 500, \"payment_id\": \"certificate_3765853\"}, {\"amount\": 198, \"payment_id\": \"gift_card_8020792\"}, {\"amount\": 129, \"payment_id\": \"gift_card_6136092\"}, {\"amount\": 1786, \"payment_id\": \"credit_card_2198526\"}], \"total_baggages\": 0, \"user_id\": \"mohamed_silva_9265\"}, \"info\": null, \"name\": \"book_reservation\"}"
+          }
+        ],
+        "rationale": "Compare available outbound and return flights for the three passengers, use no more than one certificate, bind the selected flights, passengers and payment amounts, and obtain confirmation before booking.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 3
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "This is substantial multi-stage work: balance totals, reservation and eligibility checks, itinerary comparison, payment calculation, confirmations, cancellation and replacement booking. The decisive exit on this supported path is the completed replacement booking with its Mastercard charge communicated; no further modification or compensation is needed afterward.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You want to know how much you have on your gift cards and certificates. Then you want to change your upcoming reservation."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "Then you want to change your recent reservation. You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not."
+          },
+          {
+            "source_id": "completion_design",
+            "excerpt": "2198526\"}], \"total_baggages\": 0, \"user_id\": \"mohamed_silva_9265\"}, \"info\": null, \"name\": \"book_reservation\"}], \"communicate_info\": [\"327\", \"1000\", \"1786\"], \"env_assertions\": null, \"nl_assertions\": [\"Agent communicates that total gift card balance is $327.\", \"Agent communicates that total certificate balance if $1000.\", \"Agent should cancel reservation K1NW8N.\", \"Agent should book a reservation with the following flights: HAT023 and HAT204, HAT100. No insurance. No baggage. Departure on 2024-05-26, return on 2024-05-28.\", \"Agent communicated that the $1786 will be charged to the mastercard.\"]}"
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "Before taking any actions that update the booking database (booking, modifying flights, editing baggage, changing cabin class, or updating passenger information), you must list the action details and obtain explicit user confirmation (yes) to proceed."
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "The agent must reconcile cheapest eligible business flights with passenger capacity and dates, the basic-economy modification rule, the one-certificate payment cap, and the user's Mastercard ceiling.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Then you want to change your recent reservation. You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "- Basic economy flights cannot be modified."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "- Each reservation can use at most one travel certificate, at most one credit card, and at most three gift cards."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "Profile and reservation retrieval feed flight searches and calculations; cancellation is followed by a booking with nested flight, passenger and multiple payment arguments.",
+        "evidence": [
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the details of a user, including their reservations."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the details of a reservation."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "EAD)\"], \"documentation\": \"Search for direct flights between two cities on a specific date.\\n\\nArgs:\\n    origin: The origin city airport in three letters, such as 'JFK'.\\n    destination: The destination city airport in three letters, such as 'LAX'.\\n    date: The date of the flight in the format 'YYYY-MM-DD', such as '2024-01-01'.\\n\\nReturns:\\n    The direct flights between the two cities on the specific date.\", \"returns\": \"list[DirectFlight]\", \"signature\": \"search_direct_flight(self, origin: str, destination: str, date: str)\"}, \"search_onestop_flight\": {\"decorators\": [\"is_tool(ToolType.READ)"
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "\"signature\": \"search_direct_flight(self, origin: str, destination: str, date: str)\"}, \"search_onestop_flight\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Search for one-stop flights between two cities on a specific date.\\n\\nArgs:\\n    origin: The origin city airport in three letters, such as 'JFK'.\\n    destination: The destination city airport in three letters, such as 'LAX'.\\n    date: The date of the flight in the format 'YYYY-MM-DD', such as '2024-05-01'.\\n\\nReturns:\\n    A list of pairs of DirectFlight objects.\", \"returns\": \"list[tuple[DirectFlight, DirectFlight]]\", \"sig"
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "book_reservation(self, user_id: str, origin: str, destination: str, flight_type: FlightType, cabin: CabinClass, flights: List[FlightInfo | dict], passengers: List[Passenger | dict], payment_methods: List[Payment | dict], total_baggages: int, nonfree_baggages: int, insurance: Insurance)"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 3,
+        "rationale": "The balance and reservation discoveries precede pricing and the payment-limit decision. Cancellation eligibility and explicit confirmation precede cancellation; the selected replacement and another confirmed database update then depend on those findings. The documented $1786 charge supports continuing to booking rather than taking a threshold-based no-booking exit.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "- The booking was made within the last 24 hrs"
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "Before taking any actions that update the booking database (booking, modifying flights, editing baggage, changing cabin class, or updating passenger information), you must list the action details and obtain explicit user confirmation (yes) to proceed."
+          },
+          {
+            "source_id": "task_design_notes",
+            "excerpt": "The total cost of the new flight will be $2613. The correct split is to use first both gift cards for $327, the $500 certificate, and put the remaining $1786 dollars on the master card."
+          },
+          {
+            "source_id": "reference_001",
+            "excerpt": "{\"action_id\": \"14_0\", \"arguments\": {\"reservation_id\": \"K1NW8N\"}, \"info\": null, \"name\": \"cancel_reservation\"}"
+          }
+        ]
+      },
+      "information": {
+        "level": 3,
+        "rationale": "The agent must retrieve payment balances and the reservation, then compare flight availability and prices across direct and connecting possibilities. Judge-only records identify the designed case but are not facts already known to the agent.",
+        "evidence": [
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the details of a user, including their reservations."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the details of a reservation."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "The direct flights between the two cities on the specific date."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "A list of pairs of DirectFlight objects."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "Then you want to change your recent reservation. You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not."
+          }
+        ]
+      }
+    },
+    "overall_score": 75,
+    "intended_endpoint": {
+      "description": "Communicate $327 in gift-card balances and $1000 in certificate balances; after required checks and confirmations, cancel the basic-economy reservation and book the qualifying business round trip without baggage or insurance, communicating a $1786 Mastercard charge.",
+      "evidence": [
+        {
+          "source_id": "completion_design",
+          "excerpt": "2198526\"}], \"total_baggages\": 0, \"user_id\": \"mohamed_silva_9265\"}, \"info\": null, \"name\": \"book_reservation\"}], \"communicate_info\": [\"327\", \"1000\", \"1786\"], \"env_assertions\": null, \"nl_assertions\": [\"Agent communicates that total gift card balance is $327.\", \"Agent communicates that total certificate balance if $1000.\", \"Agent should cancel reservation K1NW8N.\", \"Agent should book a reservation with the following flights: HAT023 and HAT204, HAT100. No insurance. No baggage. Departure on 2024-05-26, return on 2024-05-28.\", \"Agent communicated that the $1786 will be charged to the mastercard.\"]}"
+        },
+        {
+          "source_id": "completion_design",
+          "excerpt": "Agent should book a reservation with the following flights: HAT023 and HAT204, HAT100. No insurance. No baggage. Departure on 2024-05-26, return on 2024-05-28."
+        },
+        {
+          "source_id": "completion_design",
+          "excerpt": "Agent communicated that the $1786 will be charged to the mastercard."
+        },
+        {
+          "source_id": "scenario",
+          "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+        }
+      ]
+    },
+    "dependency_reasoning": "A sufficient path starts by retrieving the user's profile and recent reservation, reporting the requested totals, and checking why the existing flights cannot be changed and whether cancellation is allowed. Search and compare same-date business itineraries, establish the permitted $500 certificate plus $327 gift-card split and $1786 Mastercard charge, and secure confirmation for each database update. The supported path ends after cancellation and replacement booking with the charge communicated; cabin-only modification, transfer, compensation and post-booking changes are not charged. Flight-search order is not prescribed.",
+    "score_rationale": "Levels 3+3+3+3+3 give 75. The score reflects linked multi-stage discovery, itinerary and payment decisions, and two confirmed writes, without treating reference calls as the whole workload or counting unrelated branches.",
+    "uncertainties": [
+      "The supplied records cover selected flights rather than the full searchable inventory; the documented intended itinerary supports a designed-complexity score but does not independently prove global cheapestness.",
+      "The scenario makes cancellation and rebooking conditional on the agent explaining the basic-economy restriction; the selected path uses that explanation and the documented reservation cabin.",
+      "The cancellation policy requires obtaining a reason, which the user's wish to replace the flight suggests but does not explicitly classify; it must be obtained before cancellation."
+    ],
+    "source_quality_flags": [
+      "Selected initial records are judge-only design context, not agent-visible discoveries.",
+      "Reference actions and completion assertions describe intended work, not observed execution or an authoritative tool order."
+    ],
+    "unscorable_reason": ""
+  },
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 75,
+    "computed_total": 75,
+    "reported_total_mismatch": false
+  },
+  "request_binding": {
+    "bound_case_key": "4052de4afd171be50d2045cf",
+    "model_reported_case_key": "4052de4afd171be50d2045cf",
+    "model_case_key_mismatch": false
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "7ad8aa378603b4114d7791844714c4a91bd79f3fab1886d09a180ffe75802783",
+  "finished_at": "2026-11-14T03:35:23.291540+00:00"
+}

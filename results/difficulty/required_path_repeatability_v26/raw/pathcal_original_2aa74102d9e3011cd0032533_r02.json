@@ -1,0 +1,846 @@
+{
+  "id": "resp_0652a280824c2c86016af7d6ce237c87d194758af9c1559d64",
+  "access_programs": null,
+  "created_at": 1794627278.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": null,
+  "metadata": {},
+  "model": "gpt-6-sol",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_0652a280824c2c86016af7d6cef07c87d1821255301083eeef",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq99bY8wo1YFf9y0JQIuzwR0k2ju1v5PfhVipkR5FjZZium-c24YFXrxeZUjvfHXKFWm3fFSeno2zoftpJscRThCSwFGg8dUHwBGzmN9813Ybs03OTbbi6fhcc3BFMnPjQjX94iF_kFXL7YPSlHXunfNncEvmVWZLcVubdiTsIbpnOG0bVzTJ6rd0SRUdnqYzSpNgrNL4d40auXVgk5A01v1M75CV7ZElM_e0BwRqpp0n-Gmhwh0_woz6M9f_RuJxFnbS3of3HgVt-WfkoX1ht79DOen9Mm_B6VJK4MRypl19ysWm1kk4H64BkcTYjhJxY3wW3YASu7XnRY142veHoJwMzAcxPuYQn3vKydc3orkyOdxNDH6_FlMr_99oeKFDFIFq3T-Qm1CTyZ4weWMRXXkXXU6kdyVoyveDtAfsjiRcjyRVLTKa95a31JOccPnnszf8Q6TWkOLUaz2bnPAC_su8O5SvzUwKanEsuzHVgf5f-IOSEYOePJcyiLTDh0gUaHssRfAJ8w9CsAC02moNKwM4JBDxIJnsl68RrsILbAkUubLe-vQ9KQbRhBSnh3z4Fr-c5AYxdqS2CKVZjgSpVm1kBZR0X7vxz4F1qPsWT1BMsrR8PpzOYXb12QhOTRrxlXsoiNK8bt0Z8Vrs0qmgxOKH0EbIbI-ysstFfLp7dzNseLfONfocA2HC1bVU7Y9sAaTybZQHODjsuGbpRavq9Utqt-YKd7Q6LkHSjT8cdeFz_hf5VBAwfCeEx-9wUrERZR2BhU1dGi18uInsP05fXZUhViYcEvzsYzCgK2CPwUJORnyJuSpIoBN_fm9WYMdN1VYDuwF-9XFNDS7iGeYDo69XYknf8D0TG7ZVergn_ZXLX5P9wzyQvp5ArRA9UI-bNr9Wp4hhtzU87koaNtcS7D_udRG0U0VD2B6tW22IYyJpeQdy11ETNyXYr_fY_2P_qCG8RwqcFsGbSaysCRaS-te0J4uEx60xB9Y3NOvJNe0AgI3-4dDu1oMp85XIRD7vZqoEaOTlDg5knn8KYMJ8-Wsv-c7JCrNzUoWc_d4y62bpjD97ruWPprNSY8y5OaUmWUF0MDUGltJRfX9xOOBYy0-Ya5PqUNAgDEpRiNHetBIOuhCKQ-zlH54e9QxMOlYqPyd8p_hyV1DHpCf9_NtdfvoFIJAxqSJv9srWUxbwjtQ6MENFrJWlzNIKTlQX3J6WFw3Q3bigjvwFRQKgsdJHWdI9ppI7A6Iu0GGw4Q5csB_RgNjdgIm0BVq2xJGw4UqQBJyf9bOHD7ij5nSnfQ-ufWQr_hEIwQC99CN3klABvs25mHHobB3u6bKeloifPqhrBw_el8siFnT-ZTJhTSJokA6_Udz_CLyLh6CrZelND_Ez_1W1z6h3AizqU-PGSbiq4ghbuUtRwkb7qN5G5ukUUxGSxiVOs24keKuTbECtlK_VgHLjy8iBAlNUUOQwu1CKwVtBmWn_gk_QjOd9IivzTHHEQUgZgL0J_wY2T4p1Lhk6Xh8Y2550nxYVE59YXdAEGVL98Wqh8b4XxKYLM9m66B7W7jqc8YmjBRUyXo79BV_6CYgBQdpGcK7_iAGiQOIwUMQqKfqp9DEjaMI9U5tSP9_6eCsWBA-M3dd03h7GMCHmy2HPdd4rSaCs5xfDwSSj5Sh8DeRScR6GFMu-p64W6uYgRQzh6Fap2aD6cwg1QtnAHsEfBvNRl0JYly3cmOWKGYdNR14HM-SgjmloTVBIYSHftcI7um9LFanI6pGFv6iRO-yGgROX1KBFUDxyIEMqfBejneXCt5YUgcHvRnxFd0M9FUzO7CyFqHeoN4xbMnkbj3rqbT3DM24BV5BlF9c2LR85bvhOx6vmnoqXgDe1PnNhXCqx5YJZuEgcWsvxlTVlTUTucV2TFGVh-Mgv4I3ETNYhwi5R7qRvsWR_h5Gmbsz2zKYVgSTSWDRmLgTUs9Wy1wH87e3euoxX8zLEvoYdczWD4PwZ3VKK_Ejpa8lyS8y7uXpcKzLUeM24Pn0Kaqyw0IbN9zgCh65e3eqcCHkh09RLm_7tbAUEjk5w6At-z0-1t7aoHdS93UsWQOXbDV8_T7m_mKVm3-yy4-k_Eg_1yr9zLFllhMoBuUE3L_-aGN2qvCnh8cGLXEb4tY0tpZwsStJpqpNQsQ0oZsH1zBlLag4vg_1xWWSmPjBOIlZ8QsjV6oeDzjlSGi21o_ZO_agki0Ng5X9Ee6bQjg6DCi-pAQPssq-MJ4dNvLo89S3An5GR1PDruEtDqAp69yvio2gpuFUyNd-9rg81muvn2OC6fnce8Yh9sWy3n1LdHkNRjJYx9qUpp5dOjparvfqya4BgjSOryz-QBiaWdm8XhF1l5ExOO9-TWguPy-KKQtf5A9T1oAXQfOtEgRnsgFaTIDN9boPFZgX3axv_K7YJ0jmeH32IZ1GF0eUWj0Z7uTRycJk9PPZ0JuwXC8n59BAPVhX33cXEd9hRo23LzVr0I5wWXhhp6s_oz96FGOwOV0scnUt7YA7vS50dbx6bR7WLOljoTq1PKfGuqEf-AdDguvD-E27iF998Qnlf_aKU3F53K71BJVmAKvvkU3RuS8epHRMkkrTHtUwrtEkWyvcTR8Qu1afIEAB38AVQqUT-eWvI3HJuRHn5tslMMklAzBxPFAizD9OfOe3Kv4988InDjJO-2xlkMY4HviuO8zjlkw2bz4eIj_dTUnc4hlYEiqbkypzwi2D749vgkB_OfReMOSr7lTj5OybSkgvxYTGINuOHSNX5rzI4lsv7EfrRTZ-b8J9bmLTH0gNc0DjB4HrwV-7_gZDbAdwTHpshIHRKMDGOGBz9SDFdk00Z7VdD5irr0K6leSkVdwsND-Msvgi_tv9iJwl5cOlvY95OSNm7xpwcqhd90ygZTVg0sIBhpDMw1UKnmhBWgNCutzjCH_QafZPkFm_mm2s__SOutU5zPULR_aEwbkvbz4ykd7K8a4IqnrAhQRh_hJhAK0MixTdMSmtKJF69-5sQe2362NnzBJDKYlulqUo5aWeC_be7jRJ3F6e5Gc3e1Ti01Xw4LjW2VXmNX86aSZtWFE5jJZ_l7VKbYwYWztSmuAS0s8NAc5mLN7eeQMbqW1hfbumEW8dVPKTgdle-j6uwz6uilE0r4eY0lloeGkJ-X_Mgy_5Wmdq3BqfDbDt0jpeMnsw9zhVyuB84ml5d8F6LWvMbj8nCgWwB5o7AYADImuKtY60F0AUjtB0YblSGYeTwWCx9a2CaQ6Xx3PAdEysKYMkmsqNzsPpBAg5Tx4rCSF6aGeLA1y8d5S1Ze8ZeKe_NJfrAbqg1Pt5HseyaeTSSGVxN-zw5lYovrIQNQTa-blHn1vuffMbYblFpFIMYjy7w-tGvDZAEvIuMwurojKwDUv4LiLD-F9Md7aN-kmwfCKZyyUJpj50oDGJysN5Q4iz6SRJt4aq71OtjsNqwcwgO-AlqEs-VgsFHIDnifUMU0Ze-BKLlJWkeGwoscCehhpdcUkWUjEpuRf6K__1Wu6qMfQbbEaKAZvfZDUxP65ivvWCc_E_avIMhr9X-CEsolOC2EdgZwEQJMjhGyXNnRW-Kxt92SOUwfF33EnKr-JffVsL1MV5jA29e6uyrM5a2HHbort5fVV_Eot95HAphkb4Tit0ff_LKaRZEOYhdPDSYmjB2gFa7xnaqLlsiqUxOiO_IELV4rDNiI4PJSa6H0_RMTkzUgnVhMeWnSBpS13jZ_fUDAwry87ojJs_ESdcsW8au_xjSFDXhudi2N-vX6N_FqBBVpBtneYw2X37dU_0mXnmZYNAcjJqSrqLx6wzFCRHaDe8RxPE1cfdkrWD-yCFzi0m6A_intKo-YDvp2mom4zCPWt0vsDbDvedGaCQg3qQ1HG6jIs-vgTDasvDdkyrcy6ApQbiP9xHGaM1xhTqq3otNVt8QXvo-QqvX4Mhx-ZvvGJ77kG3v4MkpBFqkBA-mpt4goMe0bfBA6R5v7gQ==",
+      "status": null
+    },
+    {
+      "id": "msg_0652a280824c2c86016af7d6d019f487d1a69ca0abbf0539ae",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"version\":\"design_judgment_v1\",\"case_key\":\"2aa74102d9e3011cd0032533\",\"status\":\"scored\",\"units\":[{\"unit_id\":\"task_requirements\",\"applicability_rationale\":\"Required authentication and discovery support the two requested exchanges; the same-specification boots request must be reconciled with exchange policy before using the stated fallback.\",\"evidence\":[{\"citation_id\":\"E0003\"},{\"citation_id\":\"E0005\"},{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0081\"}],\"rationale\":\"The user gives two product requests, lacks their email, and states a conditional boots preference. Resolving that preference requires interpreting the rule that an exchange changes a product option.\",\"applicability\":\"required\",\"levels\":{\"reasoning\":3,\"tool_use\":2,\"information\":2}},{\"unit_id\":\"reference_001\",\"applicability_rationale\":\"The selected boots exchange uses the user's stated fallback after the same-specification request conflicts with the different-option exchange rule.\",\"evidence\":[{\"citation_id\":\"E0003\"},{\"citation_id\":\"E0088\"},{\"citation_id\":\"E0254\"},{\"citation_id\":\"E0313\"},{\"citation_id\":\"E0081\"}],\"rationale\":\"Identify the delivered boots order, verify the available leather, size-9, waterproof variant, obtain a payment method and explicit confirmation, then bind the old and new item IDs to the order.\",\"applicability\":\"selected_conditional\",\"levels\":{\"reasoning\":3,\"tool_use\":2,\"information\":2}},{\"unit_id\":\"reference_002\",\"applicability_rationale\":\"The puzzle exchange is an independent requested change, included in the intended two-order endpoint.\",\"evidence\":[{\"citation_id\":\"E0003\"},{\"citation_id\":\"E0091\"},{\"citation_id\":\"E0261\"},{\"citation_id\":\"E0279\"}],\"rationale\":\"Identify the puzzle in its delivered order and match an available variant with 1,000 pieces and unchanged intermediate difficulty. Interpreting 'more fancy' as fantasy remains a qualitative choice to confirm with the user.\",\"applicability\":\"required\",\"levels\":{\"reasoning\":2,\"tool_use\":2,\"information\":2}}],\"dimensions\":{\"workload\":{\"level\":3,\"rationale\":\"Authentication, order and variant discovery, policy checks, payment and confirmation precede exchanges in two separate orders. This is substantial repeated work, without charging the unselected same-specification route as another exchange.\",\"evidence\":[{\"citation_id\":\"E0003\"},{\"citation_id\":\"E0087\"},{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0080\"}]},\"reasoning\":{\"level\":3,\"rationale\":\"The boots preference has a policy-dependent fallback, while puzzle selection must preserve difficulty and reduce the piece count; availability and same-product rules constrain both.\",\"evidence\":[{\"citation_id\":\"E0003\"},{\"citation_id\":\"E0081\"},{\"citation_id\":\"E0261\"},{\"citation_id\":\"E0279\"}]},\"tool_use\":{\"level\":3,\"rationale\":\"The agent must select authentication and lookup tools, then repeatedly bind distinct order, old-item and new-item identifiers into exchange arguments, with a payment method for each order.\",\"evidence\":[{\"citation_id\":\"E0102\"},{\"citation_id\":\"E0194\"},{\"citation_id\":\"E0160\"},{\"citation_id\":\"E0088\"},{\"citation_id\":\"E0091\"}]},\"dependencies\":{\"level\":3,\"rationale\":\"Authentication precedes access to orders; each exchange depends on its own delivered-status and variant checks and on explicit user confirmation. The two linked order updates require separate continuation, not a single combined write.\",\"evidence\":[{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0014\"},{\"citation_id\":\"E0080\"},{\"citation_id\":\"E0016\"},{\"citation_id\":\"E0087\"}]},\"information\":{\"level\":3,\"rationale\":\"The agent must discover the user's orders, distinguish the two purchased items and their product variants, and clarify the subjective puzzle theme and conditional boots preference. Judge-only baseline records are not information already supplied to the agent.\",\"evidence\":[{\"citation_id\":\"E0003\"},{\"citation_id\":\"E0005\"},{\"citation_id\":\"E0194\"},{\"citation_id\":\"E0183\"},{\"citation_id\":\"E0188\"}]}},\"overall_score\":75,\"intended_endpoint\":{\"description\":\"Following user confirmation, request the boots exchange to the available leather, size-9, waterproof variant and the puzzle exchange to the available intermediate, 1,000-piece fantasy variant, each in its own delivered order. This describes the intended endpoint, not an observed result.\",\"evidence\":[{\"citation_id\":\"E0087\"},{\"citation_id\":\"E0088\"},{\"citation_id\":\"E0091\"},{\"citation_id\":\"E0082\"}]},\"dependency_reasoning\":\"Name-and-zip authentication unlocks order lookup. Each order's status and purchased item identify the relevant product; variant and payment checks then support a detailed confirmation before that order's one-time exchange. Neither reference action proves execution order between the two orders.\",\"score_rationale\":\"Levels 3+3+3+3+3 yield 75. Breadth across two orders, a policy-dependent preference and repeated identifier binding drive the score; reasoning and information overlap where interpreting preferences requires retrieved product data.\",\"uncertainties\":[\"'More fancy' does not uniquely specify fantasy; confirm the selected puzzle theme rather than treating the reference as the user's explicit wording.\",\"The user's initial request for identical boots conflicts with the policy requirement for a different product option; the fallback supports the selected exchange, but the user's response is not observed.\",\"The payment method and reference item IDs appear in design records, not in information initially known to the task agent.\"],\"source_quality_flags\":[\"Reference actions specify intended writes but do not establish execution order or actual completion.\",\"Initial records are judge-only design context and must be retrieved through appropriate tools during the designed task.\"],\"unscorable_reason\":\"\"}",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [],
+  "top_p": 0.98,
+  "background": false,
+  "completed_at": 1794627288.0,
+  "conversation": null,
+  "max_output_tokens": 10000,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_diagnostics": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "name": "design_judgment",
+      "schema_": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "enum": [
+              "design_judgment_v1"
+            ]
+          },
+          "case_key": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "scored",
+              "unscorable"
+            ]
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit_id": {
+                      "type": "string",
+                      "enum": [
+                        "task_requirements",
+                        "reference_001",
+                        "reference_002"
+                      ]
+                    },
+                    "applicability_rationale": {
+                      "type": "string"
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/source_evidence"
+                      }
+                    },
+                    "rationale": {
+                      "type": "string"
+                    },
+                    "applicability": {
+                      "type": "string",
+                      "enum": [
+                        "required",
+                        "selected_conditional"
+                      ]
+                    },
+                    "levels": {
+                      "type": "object",
+                      "properties": {
+                        "reasoning": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        },
+                        "tool_use": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        },
+                        "information": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        }
+                      },
+                      "required": [
+                        "reasoning",
+                        "tool_use",
+                        "information"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "unit_id",
+                    "applicability_rationale",
+                    "evidence",
+                    "rationale",
+                    "applicability",
+                    "levels"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit_id": {
+                      "type": "string",
+                      "enum": [
+                        "task_requirements",
+                        "reference_001",
+                        "reference_002"
+                      ]
+                    },
+                    "applicability_rationale": {
+                      "type": "string"
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/source_evidence"
+                      }
+                    },
+                    "rationale": {
+                      "type": "string"
+                    },
+                    "applicability": {
+                      "type": "string",
+                      "enum": [
+                        "optional_not_selected",
+                        "context",
+                        "uncertain"
+                      ]
+                    },
+                    "levels": {
+                      "type": "object",
+                      "properties": {
+                        "reasoning": {
+                          "type": "null"
+                        },
+                        "tool_use": {
+                          "type": "null"
+                        },
+                        "information": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "reasoning",
+                        "tool_use",
+                        "information"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "unit_id",
+                    "applicability_rationale",
+                    "evidence",
+                    "rationale",
+                    "applicability",
+                    "levels"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "maxItems": 3
+          },
+          "dimensions": {
+            "type": "object",
+            "properties": {
+              "workload": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "reasoning": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "tool_use": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "dependencies": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "information": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "workload",
+              "reasoning",
+              "tool_use",
+              "dependencies",
+              "information"
+            ],
+            "additionalProperties": false
+          },
+          "overall_score": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "intended_endpoint": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source_evidence"
+                }
+              }
+            },
+            "required": [
+              "description",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "dependency_reasoning": {
+            "type": "string"
+          },
+          "score_rationale": {
+            "type": "string"
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_quality_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unscorable_reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "version",
+          "case_key",
+          "status",
+          "units",
+          "dimensions",
+          "overall_score",
+          "intended_endpoint",
+          "dependency_reasoning",
+          "score_rationale",
+          "uncertainties",
+          "source_quality_flags",
+          "unscorable_reason"
+        ],
+        "additionalProperties": false,
+        "$defs": {
+          "source_evidence": {
+            "type": "object",
+            "properties": {
+              "citation_id": {
+                "type": "string",
+                "enum": [
+                  "E0000",
+                  "E0001",
+                  "E0002",
+                  "E0003",
+                  "E0004",
+                  "E0005",
+                  "E0006",
+                  "E0007",
+                  "E0008",
+                  "E0009",
+                  "E0010",
+                  "E0011",
+                  "E0012",
+                  "E0013",
+                  "E0014",
+                  "E0015",
+                  "E0016",
+                  "E0017",
+                  "E0018",
+                  "E0019",
+                  "E0020",
+                  "E0021",
+                  "E0022",
+                  "E0023",
+                  "E0024",
+                  "E0025",
+                  "E0026",
+                  "E0027",
+                  "E0028",
+                  "E0029",
+                  "E0030",
+                  "E0031",
+                  "E0032",
+                  "E0033",
+                  "E0034",
+                  "E0035",
+                  "E0036",
+                  "E0037",
+                  "E0038",
+                  "E0039",
+                  "E0040",
+                  "E0041",
+                  "E0042",
+                  "E0043",
+                  "E0044",
+                  "E0045",
+                  "E0046",
+                  "E0047",
+                  "E0048",
+                  "E0049",
+                  "E0050",
+                  "E0051",
+                  "E0052",
+                  "E0053",
+                  "E0054",
+                  "E0055",
+                  "E0056",
+                  "E0057",
+                  "E0058",
+                  "E0059",
+                  "E0060",
+                  "E0061",
+                  "E0062",
+                  "E0063",
+                  "E0064",
+                  "E0065",
+                  "E0066",
+                  "E0067",
+                  "E0068",
+                  "E0069",
+                  "E0070",
+                  "E0071",
+                  "E0072",
+                  "E0073",
+                  "E0074",
+                  "E0075",
+                  "E0076",
+                  "E0077",
+                  "E0078",
+                  "E0079",
+                  "E0080",
+                  "E0081",
+                  "E0082",
+                  "E0083",
+                  "E0084",
+                  "E0085",
+                  "E0086",
+                  "E0087",
+                  "E0088",
+                  "E0089",
+                  "E0090",
+                  "E0091",
+                  "E0092",
+                  "E0093",
+                  "E0094",
+                  "E0095",
+                  "E0096",
+                  "E0097",
+                  "E0098",
+                  "E0099",
+                  "E0100",
+                  "E0101",
+                  "E0102",
+                  "E0103",
+                  "E0104",
+                  "E0105",
+                  "E0106",
+                  "E0107",
+                  "E0108",
+                  "E0109",
+                  "E0110",
+                  "E0111",
+                  "E0112",
+                  "E0113",
+                  "E0114",
+                  "E0115",
+                  "E0116",
+                  "E0117",
+                  "E0118",
+                  "E0119",
+                  "E0120",
+                  "E0121",
+                  "E0122",
+                  "E0123",
+                  "E0124",
+                  "E0125",
+                  "E0126",
+                  "E0127",
+                  "E0128",
+                  "E0129",
+                  "E0130",
+                  "E0131",
+                  "E0132",
+                  "E0133",
+                  "E0134",
+                  "E0135",
+                  "E0136",
+                  "E0137",
+                  "E0138",
+                  "E0139",
+                  "E0140",
+                  "E0141",
+                  "E0142",
+                  "E0143",
+                  "E0144",
+                  "E0145",
+                  "E0146",
+                  "E0147",
+                  "E0148",
+                  "E0149",
+                  "E0150",
+                  "E0151",
+                  "E0152",
+                  "E0153",
+                  "E0154",
+                  "E0155",
+                  "E0156",
+                  "E0157",
+                  "E0158",
+                  "E0159",
+                  "E0160",
+                  "E0161",
+                  "E0162",
+                  "E0163",
+                  "E0164",
+                  "E0165",
+                  "E0166",
+                  "E0167",
+                  "E0168",
+                  "E0169",
+                  "E0170",
+                  "E0171",
+                  "E0172",
+                  "E0173",
+                  "E0174",
+                  "E0175",
+                  "E0176",
+                  "E0177",
+                  "E0178",
+                  "E0179",
+                  "E0180",
+                  "E0181",
+                  "E0182",
+                  "E0183",
+                  "E0184",
+                  "E0185",
+                  "E0186",
+                  "E0187",
+                  "E0188",
+                  "E0189",
+                  "E0190",
+                  "E0191",
+                  "E0192",
+                  "E0193",
+                  "E0194",
+                  "E0195",
+                  "E0196",
+                  "E0197",
+                  "E0198",
+                  "E0199",
+                  "E0200",
+                  "E0201",
+                  "E0202",
+                  "E0203",
+                  "E0204",
+                  "E0205",
+                  "E0206",
+                  "E0207",
+                  "E0208",
+                  "E0209",
+                  "E0210",
+                  "E0211",
+                  "E0212",
+                  "E0213",
+                  "E0214",
+                  "E0215",
+                  "E0216",
+                  "E0217",
+                  "E0218",
+                  "E0219",
+                  "E0220",
+                  "E0221",
+                  "E0222",
+                  "E0223",
+                  "E0224",
+                  "E0225",
+                  "E0226",
+                  "E0227",
+                  "E0228",
+                  "E0229",
+                  "E0230",
+                  "E0231",
+                  "E0232",
+                  "E0233",
+                  "E0234",
+                  "E0235",
+                  "E0236",
+                  "E0237",
+                  "E0238",
+                  "E0239",
+                  "E0240",
+                  "E0241",
+                  "E0242",
+                  "E0243",
+                  "E0244",
+                  "E0245",
+                  "E0246",
+                  "E0247",
+                  "E0248",
+                  "E0249",
+                  "E0250",
+                  "E0251",
+                  "E0252",
+                  "E0253",
+                  "E0254",
+                  "E0255",
+                  "E0256",
+                  "E0257",
+                  "E0258",
+                  "E0259",
+                  "E0260",
+                  "E0261",
+                  "E0262",
+                  "E0263",
+                  "E0264",
+                  "E0265",
+                  "E0266",
+                  "E0267",
+                  "E0268",
+                  "E0269",
+                  "E0270",
+                  "E0271",
+                  "E0272",
+                  "E0273",
+                  "E0274",
+                  "E0275",
+                  "E0276",
+                  "E0277",
+                  "E0278",
+                  "E0279",
+                  "E0280",
+                  "E0281",
+                  "E0282",
+                  "E0283",
+                  "E0284",
+                  "E0285",
+                  "E0286",
+                  "E0287",
+                  "E0288",
+                  "E0289",
+                  "E0290",
+                  "E0291",
+                  "E0292",
+                  "E0293",
+                  "E0294",
+                  "E0295",
+                  "E0296",
+                  "E0297",
+                  "E0298",
+                  "E0299",
+                  "E0300",
+                  "E0301",
+                  "E0302",
+                  "E0303",
+                  "E0304",
+                  "E0305",
+                  "E0306",
+                  "E0307",
+                  "E0308",
+                  "E0309",
+                  "E0310",
+                  "E0311",
+                  "E0312",
+                  "E0313",
+                  "E0314",
+                  "E0315",
+                  "E0316",
+                  "E0317",
+                  "E0318",
+                  "E0319",
+                  "E0320",
+                  "E0321",
+                  "E0322",
+                  "E0323",
+                  "E0324",
+                  "E0325",
+                  "E0326",
+                  "E0327",
+                  "E0328",
+                  "E0329",
+                  "E0330",
+                  "E0331",
+                  "E0332",
+                  "E0333",
+                  "E0334",
+                  "E0335",
+                  "E0336",
+                  "E0337",
+                  "E0338",
+                  "E0339",
+                  "E0340"
+                ]
+              }
+            },
+            "required": [
+              "citation_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "type": "json_schema",
+      "description": null,
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 47072,
+    "input_tokens_details": {
+      "cache_write_tokens": 47069,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1349,
+    "output_tokens_details": {
+      "reasoning_tokens": 135
+    },
+    "total_tokens": 48421
+  },
+  "user": null,
+  "billing": {
+    "payer": "developer"
+  },
+  "frequency_penalty": 0.0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "input_transformations": [],
+  "presence_penalty": 0.0,
+  "store": false,
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  }
+}

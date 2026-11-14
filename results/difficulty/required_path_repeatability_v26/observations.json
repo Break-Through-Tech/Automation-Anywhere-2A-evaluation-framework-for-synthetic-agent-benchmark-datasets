@@ -1,0 +1,254 @@
+[
+  {
+    "role": "sim_exit",
+    "arm": "original",
+    "repeat": 0,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "sim_exit",
+    "arm": "original",
+    "repeat": 1,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "sim_exit",
+    "arm": "original",
+    "repeat": 2,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "sim_exit",
+    "arm": "clarified",
+    "repeat": 0,
+    "status": "scored",
+    "score": 50
+  },
+  {
+    "role": "sim_exit",
+    "arm": "clarified",
+    "repeat": 1,
+    "status": "scored",
+    "score": 55
+  },
+  {
+    "role": "sim_exit",
+    "arm": "clarified",
+    "repeat": 2,
+    "status": "scored",
+    "score": 50
+  },
+  {
+    "role": "airline_no_target_exit",
+    "arm": "original",
+    "repeat": 0,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "airline_no_target_exit",
+    "arm": "original",
+    "repeat": 1,
+    "status": "scored",
+    "score": 80
+  },
+  {
+    "role": "airline_no_target_exit",
+    "arm": "original",
+    "repeat": 2,
+    "status": "scored",
+    "score": 85
+  },
+  {
+    "role": "airline_no_target_exit",
+    "arm": "clarified",
+    "repeat": 0,
+    "status": "scored",
+    "score": 85
+  },
+  {
+    "role": "airline_no_target_exit",
+    "arm": "clarified",
+    "repeat": 1,
+    "status": "scored",
+    "score": 80
+  },
+  {
+    "role": "airline_no_target_exit",
+    "arm": "clarified",
+    "repeat": 2,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "retail_no_target_exit",
+    "arm": "original",
+    "repeat": 0,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "retail_no_target_exit",
+    "arm": "original",
+    "repeat": 1,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "retail_no_target_exit",
+    "arm": "original",
+    "repeat": 2,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "retail_no_target_exit",
+    "arm": "clarified",
+    "repeat": 0,
+    "status": "scored",
+    "score": 70
+  },
+  {
+    "role": "retail_no_target_exit",
+    "arm": "clarified",
+    "repeat": 1,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "retail_no_target_exit",
+    "arm": "clarified",
+    "repeat": 2,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "fraud_package_exit",
+    "arm": "original",
+    "repeat": 0,
+    "status": "scored",
+    "score": 70
+  },
+  {
+    "role": "fraud_package_exit",
+    "arm": "original",
+    "repeat": 1,
+    "status": "scored",
+    "score": 65
+  },
+  {
+    "role": "fraud_package_exit",
+    "arm": "original",
+    "repeat": 2,
+    "status": "scored",
+    "score": 70
+  },
+  {
+    "role": "fraud_package_exit",
+    "arm": "clarified",
+    "repeat": 0,
+    "status": "scored",
+    "score": 65
+  },
+  {
+    "role": "fraud_package_exit",
+    "arm": "clarified",
+    "repeat": 1,
+    "status": "scored",
+    "score": 65
+  },
+  {
+    "role": "fraud_package_exit",
+    "arm": "clarified",
+    "repeat": 2,
+    "status": "scored",
+    "score": 65
+  },
+  {
+    "role": "simple_control",
+    "arm": "original",
+    "repeat": 0,
+    "status": "scored",
+    "score": 40
+  },
+  {
+    "role": "simple_control",
+    "arm": "original",
+    "repeat": 1,
+    "status": "scored",
+    "score": 40
+  },
+  {
+    "role": "simple_control",
+    "arm": "original",
+    "repeat": 2,
+    "status": "scored",
+    "score": 40
+  },
+  {
+    "role": "simple_control",
+    "arm": "clarified",
+    "repeat": 0,
+    "status": "scored",
+    "score": 40
+  },
+  {
+    "role": "simple_control",
+    "arm": "clarified",
+    "repeat": 1,
+    "status": "scored",
+    "score": 40
+  },
+  {
+    "role": "simple_control",
+    "arm": "clarified",
+    "repeat": 2,
+    "status": "scored",
+    "score": 40
+  },
+  {
+    "role": "complex_control",
+    "arm": "original",
+    "repeat": 0,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "complex_control",
+    "arm": "original",
+    "repeat": 1,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "complex_control",
+    "arm": "original",
+    "repeat": 2,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "complex_control",
+    "arm": "clarified",
+    "repeat": 0,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "complex_control",
+    "arm": "clarified",
+    "repeat": 1,
+    "status": "scored",
+    "score": 75
+  },
+  {
+    "role": "complex_control",
+    "arm": "clarified",
+    "repeat": 2,
+    "status": "scored",
+    "score": 75
+  }
+]

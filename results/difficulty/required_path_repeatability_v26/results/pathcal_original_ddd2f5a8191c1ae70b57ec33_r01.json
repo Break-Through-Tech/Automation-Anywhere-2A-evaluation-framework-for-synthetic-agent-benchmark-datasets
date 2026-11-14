@@ -1,0 +1,476 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "probe_prompt_version": "design_prompt_v1.3",
+  "request_sha256": "6e7e9e278104d20e4bdb5b88d3c4eb95970807ad3b23dd305c9c2a1803dd95af",
+  "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-14T03:39:56.615859+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_0342d81e5c92277c016af7d80cdfc487d1a4602d8eeff87503",
+  "usage": {
+    "input_tokens": 68385,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 68382
+    },
+    "output_tokens": 1102,
+    "output_tokens_details": {
+      "reasoning_tokens": 59
+    },
+    "total_tokens": 69487
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "Required: the No Service request calls for customer identification and applicable cellular-service troubleshooting before escalation. The setup includes several service blockers, including a SIM lock that cannot be fixed with a user tool.",
+        "evidence": [
+          {
+            "citation_id": "E0004"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0011"
+          },
+          {
+            "citation_id": "E0141"
+          },
+          {
+            "citation_id": "E0564"
+          }
+        ],
+        "rationale": "Diagnosing the device and line requires distinguishing fixable blockers from the locked SIM, coordinating user-guided checks and fixes, and establishing when escalation is warranted. Setup actions themselves are not agent work.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 3
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "Selected conditional endpoint: the completion design calls for transfer while service remains unavailable, and the SIM-security policy supports escalation once that blocker is established.",
+        "evidence": [
+          {
+            "citation_id": "E0310"
+          },
+          {
+            "citation_id": "E0214"
+          },
+          {
+            "citation_id": "E0314"
+          }
+        ],
+        "rationale": "The transfer call has a simple summary argument, but its use depends on prior diagnosis and the policy's restriction against premature transfer. It is not the entire troubleshooting workflow.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 1,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "Customer identification, device and line diagnosis, applicable corrective guidance, verification, and escalation form substantial multi-stage work; the initialization actions are excluded.",
+        "evidence": [
+          {
+            "citation_id": "E0141"
+          },
+          {
+            "citation_id": "E0206"
+          },
+          {
+            "citation_id": "E0212"
+          },
+          {
+            "citation_id": "E0218"
+          },
+          {
+            "citation_id": "E0222"
+          },
+          {
+            "citation_id": "E0027"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "Several simultaneous causes must be distinguished. Billing suspension can be addressed under conditions, whereas a locked SIM calls for escalation; fixing one cause need not restore service.",
+        "evidence": [
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0011"
+          },
+          {
+            "citation_id": "E0115"
+          },
+          {
+            "citation_id": "E0214"
+          },
+          {
+            "citation_id": "E0564"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "The agent must select among customer, billing, line, and user-device checks, bind retrieved IDs to account actions where warranted, and use the transfer tool only after determining its condition is met.",
+        "evidence": [
+          {
+            "citation_id": "E0322"
+          },
+          {
+            "citation_id": "E0324"
+          },
+          {
+            "citation_id": "E0319"
+          },
+          {
+            "citation_id": "E0447"
+          },
+          {
+            "citation_id": "E0431"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 3,
+        "rationale": "Identification precedes support; payment and bill-status verification precede lifting an overdue-bill suspension, followed by reboot and service verification. User-guided diagnostics precede a justified handoff.",
+        "evidence": [
+          {
+            "citation_id": "E0141"
+          },
+          {
+            "citation_id": "E0106"
+          },
+          {
+            "citation_id": "E0115"
+          },
+          {
+            "citation_id": "E0117"
+          },
+          {
+            "citation_id": "E0026"
+          }
+        ]
+      },
+      "information": {
+        "level": 3,
+        "rationale": "The agent must retrieve and reconcile device status with customer, line, and bill information; the user's No Service report alone does not identify which concurrent blockers remain.",
+        "evidence": [
+          {
+            "citation_id": "E0004"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0011"
+          },
+          {
+            "citation_id": "E0212"
+          },
+          {
+            "citation_id": "E0222"
+          }
+        ]
+      }
+    },
+    "overall_score": 75,
+    "intended_endpoint": {
+      "description": "A justified transfer to a human agent with the issue still in No Service status, rather than a claim that signal was restored.",
+      "evidence": [
+        {
+          "citation_id": "E0310"
+        },
+        {
+          "citation_id": "E0214"
+        },
+        {
+          "citation_id": "E0026"
+        }
+      ]
+    },
+    "dependency_reasoning": "The documented escalation is conditional on trying applicable in-scope remedies and identifying the unfixable SIM-security issue. Billing and device remedies have their own ordered checks, but are not counted as independent alternative endpoints or as setup work.",
+    "score_rationale": "Levels 3+3+3+3+3 yield 75. The difficulty lies in multi-cause diagnosis and coordinated, policy-constrained escalation, not in the single reference transfer call.",
+    "uncertainties": [
+      "The reference lists only the transfer, so the precise order and extent of preceding troubleshooting are not specified.",
+      "The scenario names `get_status_bar`, while the supplied user tool and policy name `check_status_bar`; this naming mismatch does not prevent a source-based complexity assessment.",
+      "The supplied sources do not establish observed tool results or actual completion."
+    ],
+    "source_quality_flags": [
+      "Reference action is an intended endpoint, not an execution trace or complete workflow.",
+      "Baseline records precede initialization actions and are not facts supplied directly to the task agent.",
+      "Scenario status-bar tool name differs from the supplied tool contract."
+    ],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "ddd2f5a8191c1ae70b57ec33",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "Required: the No Service request calls for customer identification and applicable cellular-service troubleshooting before escalation. The setup includes several service blockers, including a SIM lock that cannot be fixed with a user tool.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Your phone has been showing 'No Service' for the past few hours."
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "{\"initialization_actions\": [{\"arguments\": {\"name\": \"John Smith\", \"phone_number\": \"555-123-2002\"}, \"env_type\": \"user\", \"func_name\": \"set_user_info\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"turn_airplane_mode_on\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"break_apn_settings\"}, {\"arguments\": {\"mode\": \"pin\"}, \"env_type\": \"user\", \"func_name\": \"lock_sim_card\"}, {\"arguments\": {\"contract_ended\": false, \"customer_id\": \"C1001\", \"line_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"use"
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "e_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"simulate_network_search\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"unseat_sim_card\"}], \"initialization_data\": null, \"message_history\": null}"
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You must first identify the customer."
+          },
+          {
+            "source_id": "setup_assertion_definitions_user",
+            "excerpt": "tr:\n        \"\"\"Locks the SIM card by setting the PIN. This cannot be fixed by calling a tool.\"\"\"\n        if mode == \"pin\":\n            self.device.sim_card_status = SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            self.device.sim_card_status = SimStatus.LOCKED_PUK\n        self.simulate_network_search()\n        if mode == \"pin\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PUK\n        return f\"SIM card locked successfully in {mode} mode.\"\n\ndef break_apn_settings(s"
+          }
+        ],
+        "rationale": "Diagnosing the device and line requires distinguishing fixable blockers from the locked SIM, coordinating user-guided checks and fixes, and establishing when escalation is warranted. Setup actions themselves are not agent work.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 3
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "Selected conditional endpoint: the completion design calls for transfer while service remains unavailable, and the SIM-security policy supports escalation once that blocker is established.",
+        "evidence": [
+          {
+            "source_id": "completion_design",
+            "excerpt": "{\"actions\": [{\"action_id\": \"transfer_to_human_agents\", \"arguments\": {\"summary\": \"I cannot fix the issue.\"}, \"compare_args\": [], \"info\": null, \"name\": \"transfer_to_human_agents\", \"requestor\": \"assistant\"}], \"communicate_info\": null, \"env_assertions\": [{\"arguments\": {\"expected_status\": \"no_service\"}, \"assert_value\": true, \"env_type\": \"user\", \"func_name\": \"assert_service_status\", \"message\": null}], \"nl_assertions\": null}"
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          },
+          {
+            "source_id": "reference_001",
+            "excerpt": "{\"action_id\": \"transfer_to_human_agents\", \"arguments\": {\"summary\": \"I cannot fix the issue.\"}, \"compare_args\": [], \"info\": null, \"name\": \"transfer_to_human_agents\", \"requestor\": \"assistant\"}"
+          }
+        ],
+        "rationale": "The transfer call has a simple summary argument, but its use depends on prior diagnosis and the policy's restriction against premature transfer. It is not the entire troubleshooting workflow.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 1,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "Customer identification, device and line diagnosis, applicable corrective guidance, verification, and escalation form substantial multi-stage work; the initialization actions are excluded.",
+        "evidence": [
+          {
+            "source_id": "policy_1",
+            "excerpt": "You must first identify the customer."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "You can check if Airplane Mode is ON by using `check_status_bar()` or `check_network_status()`."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If `check_apn_settings()` shows \"Incorrect\", guide the user to use `reset_apn_settings()` to reset the APN settings."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Investigate if the line is suspended. Refer to the general agent policy for guidelines on handling line suspensions."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You should try your best to resolve the issue for the user before transferring the user to a human agent."
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "Several simultaneous causes must be distinguished. Billing suspension can be addressed under conditions, whereas a locked SIM calls for escalation; fixing one cause need not restore service.",
+        "evidence": [
+          {
+            "source_id": "initial_state",
+            "excerpt": "{\"initialization_actions\": [{\"arguments\": {\"name\": \"John Smith\", \"phone_number\": \"555-123-2002\"}, \"env_type\": \"user\", \"func_name\": \"set_user_info\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"turn_airplane_mode_on\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"break_apn_settings\"}, {\"arguments\": {\"mode\": \"pin\"}, \"env_type\": \"user\", \"func_name\": \"lock_sim_card\"}, {\"arguments\": {\"contract_ended\": false, \"customer_id\": \"C1001\", \"line_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"use"
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "e_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"simulate_network_search\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"unseat_sim_card\"}], \"initialization_data\": null, \"message_history\": null}"
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You are allowed to lift the suspension after the user has paid all their overdue bills."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+          },
+          {
+            "source_id": "setup_assertion_definitions_user",
+            "excerpt": "tr:\n        \"\"\"Locks the SIM card by setting the PIN. This cannot be fixed by calling a tool.\"\"\"\n        if mode == \"pin\":\n            self.device.sim_card_status = SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            self.device.sim_card_status = SimStatus.LOCKED_PUK\n        self.simulate_network_search()\n        if mode == \"pin\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PIN\n        elif mode == \"puk\":\n            assert self.device.sim_card_status == SimStatus.LOCKED_PUK\n        return f\"SIM card locked successfully in {mode} mode.\"\n\ndef break_apn_settings(s"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "The agent must select among customer, billing, line, and user-device checks, bind retrieved IDs to account actions where warranted, and use the transfer tool only after determining its condition is met.",
+        "evidence": [
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "{\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Finds a customer by their primary contact or line phone number.\\n\\nArgs:\\n    phone_number: The phone number to search for.\\n\\nReturns:\\n    Customer object if found, None otherwise.\", \"returns\": \"Customer\", \"signature\": \"get_customer_by_phone(self, phone_number: str)\"}, \"get_data_usage\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Retrieves current billing cycle data usage for a line, including data\\nrefueling amount, data limit, and cycle end date.\\n\\nArgs:\\n    customer_id: ID of the customer who owns the line.\\n "
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": ": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Retrieves the details for a given ID.\\nThe ID must be a valid ID for a Customer, Line, Device, Bill, or Plan.\\n\\nArgs:\\n    id: The ID of the object to retrieve.\\n\\nReturns:\\n    The object corresponding to the ID.\\n\\nRaises:\\n    ValueError: If the ID is not found or if the ID format is invalid.\", \"returns\": \"Dict[str, Any]\", \"signature\": \"get_details_by_id(self, id: str)\"}, \"refuel_data\": {\"decorators\": [\"is_tool(ToolType.WRITE)\"], \"documentation\": \"Refuels data for a specific line, adding to the customer's bill.\\nChecks: Line status must be Ac"
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "str, line_id: str)\"}, \"get_bills_for_customer\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Retrieves a list of the customer's bills, most recent first.\\n\\nArgs:\\n    customer_id: ID of the customer.\\n    limit: Maximum number of bills to return.\\n\\nReturns:\\n    List of Bill objects, ordered by issue date (newest first).\\n\\nRaises:\\n    ValueError: If the customer is not found.\", \"returns\": \"List[Bill]\", \"signature\": \"get_bills_for_customer(self, customer_id: str, limit: int=12)\"}, \"get_customer_by_id\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Retrieves a "
+          },
+          {
+            "source_id": "tools_user",
+            "excerpt": "eck_payment_request(self)\"}, \"check_sim_status\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Checks if your SIM card is working correctly and displays its current status. Shows if the SIM is active, missing, or locked with a PIN or PUK code.\", \"returns\": \"str\", \"signature\": \"check_sim_status(self)\"}, \"check_status_bar\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Shows what icons are currently visible in your phone's status bar (the area at the top of the screen). Displays network signal strength, mobile data status (enabled, disabled, data saver), Wi-Fi statu"
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "-  given the policy and the available tools, you cannot solve the user's issue."
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 3,
+        "rationale": "Identification precedes support; payment and bill-status verification precede lifting an overdue-bill suspension, followed by reboot and service verification. User-guided diagnostics precede a justified handoff.",
+        "evidence": [
+          {
+            "source_id": "policy_1",
+            "excerpt": "You must first identify the customer."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "- Always check that the bill status is updated to PAID before informing the user that the bill has been paid."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You are allowed to lift the suspension after the user has paid all their overdue bills."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "After you resume the line, the user will have to reboot their device to get service."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+          }
+        ]
+      },
+      "information": {
+        "level": 3,
+        "rationale": "The agent must retrieve and reconcile device status with customer, line, and bill information; the user's No Service report alone does not identify which concurrent blockers remain.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Your phone has been showing 'No Service' for the past few hours."
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "{\"initialization_actions\": [{\"arguments\": {\"name\": \"John Smith\", \"phone_number\": \"555-123-2002\"}, \"env_type\": \"user\", \"func_name\": \"set_user_info\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"turn_airplane_mode_on\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"break_apn_settings\"}, {\"arguments\": {\"mode\": \"pin\"}, \"env_type\": \"user\", \"func_name\": \"lock_sim_card\"}, {\"arguments\": {\"contract_ended\": false, \"customer_id\": \"C1001\", \"line_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"use"
+          },
+          {
+            "source_id": "initial_state",
+            "excerpt": "e_id\": \"L1002\", \"new_bill_id\": \"B1234321\"}, \"env_type\": \"assistant\", \"func_name\": \"suspend_line_for_overdue_bill\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"simulate_network_search\"}, {\"arguments\": {}, \"env_type\": \"user\", \"func_name\": \"unseat_sim_card\"}], \"initialization_data\": null, \"message_history\": null}"
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+          },
+          {
+            "source_id": "policy_2",
+            "excerpt": "Investigate if the line is suspended. Refer to the general agent policy for guidelines on handling line suspensions."
+          }
+        ]
+      }
+    },
+    "overall_score": 75,
+    "intended_endpoint": {
+      "description": "A justified transfer to a human agent with the issue still in No Service status, rather than a claim that signal was restored.",
+      "evidence": [
+        {
+          "source_id": "completion_design",
+          "excerpt": "{\"actions\": [{\"action_id\": \"transfer_to_human_agents\", \"arguments\": {\"summary\": \"I cannot fix the issue.\"}, \"compare_args\": [], \"info\": null, \"name\": \"transfer_to_human_agents\", \"requestor\": \"assistant\"}], \"communicate_info\": null, \"env_assertions\": [{\"arguments\": {\"expected_status\": \"no_service\"}, \"assert_value\": true, \"env_type\": \"user\", \"func_name\": \"assert_service_status\", \"message\": null}], \"nl_assertions\": null}"
+        },
+        {
+          "source_id": "policy_2",
+          "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+        },
+        {
+          "source_id": "policy_1",
+          "excerpt": "You should transfer the user to a human agent if and only if the request cannot be handled within the scope of your actions. To transfer, first make a tool call to transfer_to_human_agents, and then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+        }
+      ]
+    },
+    "dependency_reasoning": "The documented escalation is conditional on trying applicable in-scope remedies and identifying the unfixable SIM-security issue. Billing and device remedies have their own ordered checks, but are not counted as independent alternative endpoints or as setup work.",
+    "score_rationale": "Levels 3+3+3+3+3 yield 75. The difficulty lies in multi-cause diagnosis and coordinated, policy-constrained escalation, not in the single reference transfer call.",
+    "uncertainties": [
+      "The reference lists only the transfer, so the precise order and extent of preceding troubleshooting are not specified.",
+      "The scenario names `get_status_bar`, while the supplied user tool and policy name `check_status_bar`; this naming mismatch does not prevent a source-based complexity assessment.",
+      "The supplied sources do not establish observed tool results or actual completion."
+    ],
+    "source_quality_flags": [
+      "Reference action is an intended endpoint, not an execution trace or complete workflow.",
+      "Baseline records precede initialization actions and are not facts supplied directly to the task agent.",
+      "Scenario status-bar tool name differs from the supplied tool contract."
+    ],
+    "unscorable_reason": ""
+  },
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 75,
+    "computed_total": 75,
+    "reported_total_mismatch": false
+  },
+  "request_binding": {
+    "bound_case_key": "ddd2f5a8191c1ae70b57ec33",
+    "model_reported_case_key": "ddd2f5a8191c1ae70b57ec33",
+    "model_case_key_mismatch": false
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "cf79eb87be3bdf9fc5288ef70b79383071f4ec68654961a4d6339b14516a9787",
+  "finished_at": "2026-11-14T03:40:05.931236+00:00"
+}

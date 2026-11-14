@@ -1,0 +1,60 @@
+{
+  "status": "paired_study_complete",
+  "new_api_calls_this_phase": 24,
+  "new_api_calls_prior_diverse_phase": 5,
+  "new_api_calls_study_total": 29,
+  "cached_judgments": 7,
+  "usable_judgments": 36,
+  "automatic_retries": 0,
+  "phase2_usage": {
+    "input_tokens": 729040,
+    "output_tokens": 28332,
+    "total_tokens": 757372
+  },
+  "model_config": {
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "low"
+    },
+    "max_output_tokens": 10000,
+    "store": false
+  },
+  "returned_models": [
+    "gpt-6-sol"
+  ],
+  "new_request_ids_this_phase": [
+    "pathcal_clarified_2aa74102d9e3011cd0032533_r01",
+    "pathcal_original_2aa74102d9e3011cd0032533_r02",
+    "pathcal_clarified_223d00bffbb05674e0efd936_r02",
+    "pathcal_original_4c78b9d919a09c14a6fe033a_r01",
+    "pathcal_clarified_4052de4afd171be50d2045cf_r02",
+    "pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02",
+    "pathcal_original_cfaeafa096c68dc6d8821159_r02",
+    "pathcal_original_223d00bffbb05674e0efd936_r01",
+    "pathcal_clarified_4c78b9d919a09c14a6fe033a_r02",
+    "pathcal_clarified_cfaeafa096c68dc6d8821159_r01",
+    "pathcal_original_2aa74102d9e3011cd0032533_r01",
+    "pathcal_original_4c78b9d919a09c14a6fe033a_r02",
+    "pathcal_clarified_4052de4afd171be50d2045cf_r01",
+    "pathcal_clarified_cfaeafa096c68dc6d8821159_r02",
+    "pathcal_original_ddd2f5a8191c1ae70b57ec33_r02",
+    "pathcal_original_223d00bffbb05674e0efd936_r02",
+    "pathcal_original_cfaeafa096c68dc6d8821159_r01",
+    "pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01",
+    "pathcal_clarified_4c78b9d919a09c14a6fe033a_r01",
+    "pathcal_clarified_223d00bffbb05674e0efd936_r01",
+    "pathcal_clarified_2aa74102d9e3011cd0032533_r02",
+    "pathcal_original_4052de4afd171be50d2045cf_r01",
+    "pathcal_original_ddd2f5a8191c1ae70b57ec33_r01",
+    "pathcal_original_4052de4afd171be50d2045cf_r02"
+  ],
+  "published_scores_changed": false,
+  "full_rescore_authorized": false,
+  "independent_validation": false,
+  "thresholds": {
+    "max_repeat_range": 10,
+    "max_mean_repeat_range": 5,
+    "min_authored_complexity_gap": 10,
+    "non_target_mean_shift_review_threshold": 10
+  }
+}

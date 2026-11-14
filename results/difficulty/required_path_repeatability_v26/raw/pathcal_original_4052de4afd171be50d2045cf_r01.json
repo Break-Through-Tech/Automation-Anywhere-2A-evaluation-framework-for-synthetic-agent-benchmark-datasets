@@ -1,0 +1,835 @@
+{
+  "id": "resp_09e90ff047f6079c016af7d800f8f487d182d52aea6689d257",
+  "access_programs": null,
+  "created_at": 1794627584.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": null,
+  "metadata": {},
+  "model": "gpt-6-sol",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_09e90ff047f6079c016af7d801b4e087d1be11ee02f06f0d12",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq99gLC0G4FYN3J5PQtuHpy6EKu4KZ39I0ghPY7oGw6TsY-WlfJM2y7nTDxdh6Wq26R4_vIPPuh3rtEOlsYX2XlNKyLil9p7iUmDGCwWKyl5EPLxgts2D8eVeyUUOtwM51AyGYU81MXKGY2djlujqA_Aoegp-Kwq9p17eQ5riuRzC_EAHvK9IE7BuVzEPKJb8R-r0kmUvjncLOWOkA0wtxD90F-GgrWnafrjb9bZfqD-0zhQfVRMyEPXILxZ8GIxCvSLHbIQJx7IvLTJnHLdM_AhGuEOBIUck5Fewk3Y41N1tIhZ_YX9NMLRkw15cDVP4N4zgDLVP7uJuCn4gjmTF2hUr0YRgX9izKyWoQaLnnDK9psU6BAL4RMYE3JKCqVMmTEEpBxoLpFEbWsqCRzmp08hAA0NlUw73z1PfjBQLTm6JpI3fuErPflOJkQXY5zWaBLYZFmqHJENhNYCvPiKc88qMDtITd5DzmPZHA4-s6noLLkF0-03Y1ZPbW6yVUVbLoQhuMpcUE1FZzrcFU1WBVQgp8587zK9z4oKvP5fO01T6trf2I6pmpO-yNJZIvuaFzOxRH9ak9Lm90PMv8gWREbZflWjeUSrPNyYrnD3wxTuMOMhD0_J8RjFjhqmv-v6fLvHZckTKHkf6BjWMMsuYGm5vqkPj0DZ8Y807HLGZS4mVuFni_akAE5G7wv3JR3EDvHEGBwn-LjRcXnhuPtrek6vazMVKPmatNqImi2RjpM6SQm58bPZUOPho6hUNiaVe7JrZqLnNPQ5yj5dHR0kdo646G1O3OG0_IHlC76QtDo5ZRthpGUJdqD3knzdULjKyCGblIT0-QwrFUaLTxkQtx5qHSjOM9_YRbW-vTZEiBHiGDrYg6KzCGbRcQOyJzyg5ZWDTwKRyvwFRL2sqBn9yObG9Iu-WZv1k65g8MMjwYqL7Lj3vGyZljt4H5QMcgEh3ROS1eZzuBpRac4mzK3BMAKHZ6GRiWRhS13GvplDnivDnkPatLTeZHxpi-09nPZeHbxll8JuHQy01XIQL8RDqS14Zf-IuhmGY6RBa-ZrMEvlrXYMZXxoqjs88zlxSP1S9slJdsvmqbp6lYsJ0rAkom1sTVYNzeSdugoCrmpuaRaV-tvy_R0Tx7jPHbrTMznw6nYEdfLPlgvN7bl5D54ujLpjINGM7kYoOe0dkujDMOayS7EuWoWVMZGyuskAfI3-MnsSZsc4MR0HZ3LGKtZTWjO2nklB7zmX7Nq8HKleXcZveK-2Wmr813poNPW_ETGtgZ8znORY7LSulcPhmMyeyMXhZKgn7wtXx6Y3Qagru2wgcWyVY2x3lBnVJ9HohIXb1fI4v7--2cU4DTa6j4ybLIrNmensomkn8W0gLU0x1uDiMnPsiell96lXDiEnSkNd8XOi-4eCneIu5TcWs3EaN2vFxt4hkV8DeC3YZxigInCF_iBBSObn0_4lt-nvG9IuvTEvRLlY05LXM065se5THwOLkxvmho0C5qYyslSfEJMtv7q6REiUXuDSWwMy9CET9cMVDCZbsw7RnAwFwG30i1ewv3nnckJR9s_ZEXw7y5xAIPEgek1htb2NcBe1_b2Ok5Rq8Sd3Kab41fz0TzSfNT1nR-AWrEpAK1wX48G-_XUR_nwpTMc03h4NyB91V8mDOMgVgWbYWCFun4Gt76MZs73nQR2VyWoYdRKlx3e0gCVZIZIZm_P-BsWdIQt6-p8dxqNaPCSNweJar75yQ861lsmgWXZd99VgXceJYLW4p0hlKxoLhtf0vD8bec2jYbhtjdf9LhBPs2DWgmRQ27xNIQ-zchxozQaGbmpDzdxRa6eJ7FHmT7HoMefhbSEqECYcO9sAc4jXZFF_vNSJrFTVBxRiJptrMH_4Nq0xmgCcrtE-lKaHytonJdYZV1RAREgIrCPA8AkcTJnrMQCHFr--7ymNpxuzLiBiUeXA45ehq46cVHeZ2YEAtDWQUZYsUcx53TCQonJ_7L_-pndqa8F9KHVX0qbFzX9kAaUVQ4TAfTest4_uOEyVj-FEw0Iaw_OZA7w1KotX45AWCYEjRqfJRAVJ_FX2qcLaJiDOS_NxznIODPt9y0_sk0N_t85zDOA05OyRZrEouCowolP9BzWrYEVR2G-Kc2Ttl-OO_CpXr7B05wNpfM1TPLCCNrIs0xv5N41Fi4IZVVc0avRl1X7sr51SyKgQzlUZ7Sz6qr0sBkoMbsweXj0m4c3nknI39UMfPOL9DLFy8DeeDQZCTyOzfZQ9XCw-odhcJPFbeZQ4Shvh81ujbtgV7M7-ZCTHnTgag-RZw9bwZ_cgSu8i5rgxPavrhHbECV8ND_SwxcQ7mm67BQzHN9vTiTmFQch83czUjG1uI6Jy1dY76HOrBD-vaKPWdyZkLd8Vm73Kk6aaKcXkn1elf6KAxCFfPWCogBNXJuVZupOz6SotE5kQKEMm0Cyzfur8A3YwXy-9qZ3DZ3EJygHXIcPh89t2JwoUkR_0liXKFhjCujNDL1VNfYWdg5mC2SpUZOl6FoLXBA67F9lZoF6MtRmXXKiqc2JrZwANGRdSski2e0kSq5vXW9l5ynuHgdWROhNvOVa0nvUOpSIs6Juq5qLGjq4HcJdvfmTi0VRHulCfYhjPj8jnP56w5CkCh4RkoUsTmV1a1-PQ9sg3AS6dd9M3Ix7t7sQHufdKmRQ5DsQM_laGPnJK0lCxGzV-5OMkA1q37p75I_RxTlMUZw6hl949BJXYVaZAlL8iLKO9p_0H_zdfzgEFzmc9mBzfSZjvnA9doam1Gcx5ttDGPRqk5bZhA1Ds2urn41K0CuKLEnOsnGda7RCFdxWWoulmD6aleCfikCly-Jp_BMjfo9ixZo6gO0Zw-WieFwL0xL5NH2avL_A6yddJA89ZgVUibXQ0wWGeJeW6d7jDfztyDCx4QahcdH0INgLmS8qa2abBafAML__4C0nodg6lqFUILNauPzFyhfLlbb1JASyI4jZVVthn_sVaLghsJXvPmqsLWJidHaoeEfREEJEpfPX4sWwUoqZs2Kyj-_m_6eKarbj4QcFRVskT9o-fgIn2wN0fFRNSBQyaG-Ehx_uvMxvAGzkcS4OScMTZPPksm5cX8aiNZU1sLCGXVhMrRo3j-pvdbkMv-qyFDNYXJeWrNlK1-sEgHJ3mW-pwzAzE6s0lihxZesaJNi8Hxg46o8cUla1gsCsltaA0oTxOApj5E_tgg1e4l-r_ZF6W7-UGnqM0J0vxPrs5PiU_HKVUmFtvqgKdYkT9AYAY3xCiq78EoGqf0ade9CnzBA5pbIQqqI6lphZAu8NZ2F4RDv0Bm147Kb7Fd2mMjwfESVl5kqSN0Tle3AZ6XxNXpJnVyzb5siebJdxQf3HW7VLBQS8lFTxr4gwJPkbwFV6H_odvjv753541uY2xRMObmuvkRwBF-Jls3SF797qVpSSk0aqWJe6aDk-jT2isdxJAvIlJpYWYtVBuxELEGJQNwB4KR2LX-lmZqkI3bimqNHfY0PdVZXFLTxaa_7",
+      "status": null
+    },
+    {
+      "id": "msg_09e90ff047f6079c016af7d802e52c87d1a9c5af7ddbd956a6",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"version\":\"design_judgment_v1\",\"case_key\":\"4052de4afd171be50d2045cf\",\"status\":\"scored\",\"units\":[{\"unit_id\":\"task_requirements\",\"applicability_rationale\":\"The balance totals, cheapest qualifying itinerary, payment limit, and payment disclosure are explicit user requirements.\",\"evidence\":[{\"citation_id\":\"E0006\"},{\"citation_id\":\"E0008\"},{\"citation_id\":\"E0010\"},{\"citation_id\":\"E0013\"}],\"rationale\":\"Requires retrieving and totaling several balances, comparing business itineraries, applying payment limits, and checking the card charge before booking.\",\"applicability\":\"required\",\"levels\":{\"reasoning\":4,\"tool_use\":3,\"information\":3}},{\"unit_id\":\"reference_001\",\"applicability_rationale\":\"The existing reservation is basic economy, and the documented intended path replaces it rather than changing its flights.\",\"evidence\":[{\"citation_id\":\"E0287\"},{\"citation_id\":\"E0094\"},{\"citation_id\":\"E0153\"}],\"rationale\":\"Cancellation requires locating and checking the reservation, establishing an applicable cancellation ground, obtaining the reason and confirmation, then binding its ID to the write action.\",\"applicability\":\"selected_conditional\",\"levels\":{\"reasoning\":3,\"tool_use\":2,\"information\":2}},{\"unit_id\":\"reference_002\",\"applicability_rationale\":\"The documented replacement booking is applicable after the basic-economy restriction and the less-than-$2000 card-charge condition are accounted for.\",\"evidence\":[{\"citation_id\":\"E0009\"},{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0155\"},{\"citation_id\":\"E0156\"}],\"rationale\":\"Booking binds three passengers, multiple flight segments, and four payment entries while respecting the one-certificate rule and the user's card-charge ceiling.\",\"applicability\":\"selected_conditional\",\"levels\":{\"reasoning\":4,\"tool_use\":3,\"information\":3}}],\"dimensions\":{\"workload\":{\"level\":3,\"rationale\":\"The required path spans balance reporting, reservation and flight discovery, itinerary comparison, cancellation, and a multi-passenger replacement booking; it is substantial but remains one trip objective.\",\"evidence\":[{\"citation_id\":\"E0005\"},{\"citation_id\":\"E0139\"},{\"citation_id\":\"E0155\"}]},\"reasoning\":{\"level\":4,\"rationale\":\"The agent must reconcile the basic-economy restriction and cancellation eligibility with cheapest-flight selection, the one-certificate limit, payment allocation, and the strict card-charge threshold.\",\"evidence\":[{\"citation_id\":\"E0094\"},{\"citation_id\":\"E0115\"},{\"citation_id\":\"E0068\"},{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0136\"}]},\"tool_use\":{\"level\":3,\"rationale\":\"Profile and reservation reads feed direct and connecting-flight searches, followed by a cancellation and a booking with nested flight, passenger, and payment arguments. This is substantial binding, without evidence of extensive recovery orchestration.\",\"evidence\":[{\"citation_id\":\"E0230\"},{\"citation_id\":\"E0224\"},{\"citation_id\":\"E0242\"},{\"citation_id\":\"E0248\"},{\"citation_id\":\"E0196\"}]},\"dependencies\":{\"level\":3,\"rationale\":\"The profile identifies the reservation and payment methods; reservation details establish the permissible path and travel constraints; flight prices and payment allocation determine whether booking may proceed. Write actions require user confirmation, and cancellation precedes the intended replacement.\",\"evidence\":[{\"citation_id\":\"E0226\"},{\"citation_id\":\"E0287\"},{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0019\"},{\"citation_id\":\"E0153\"},{\"citation_id\":\"E0155\"}]},\"information\":{\"level\":3,\"rationale\":\"The agent must discover balances and the saved Mastercard, retrieve the reservation's dates and passengers, and compare available direct and one-stop business fares. Judge-only records establish the design but are not agent-provided inputs.\",\"evidence\":[{\"citation_id\":\"E0293\"},{\"citation_id\":\"E0294\"},{\"citation_id\":\"E0287\"},{\"citation_id\":\"E0242\"},{\"citation_id\":\"E0248\"}]}},\"overall_score\":80,\"intended_endpoint\":{\"description\":\"Report $327 in gift cards and $1000 in certificates; after eligibility checks and explicit confirmation, cancel K1NW8N and book the documented business round trip without bags or insurance, disclosing a $1786 Mastercard charge before the conditional booking.\",\"evidence\":[{\"citation_id\":\"E0139\"},{\"citation_id\":\"E0151\"},{\"citation_id\":\"E0152\"},{\"citation_id\":\"E0013\"},{\"citation_id\":\"E0019\"}]},\"dependency_reasoning\":\"Balance and reservation retrieval precede payment planning and route selection. The basic-economy flight-change prohibition selects cancellation and rebooking; cancellation eligibility and confirmation must be checked before the write. The fare and allowable stored-payment split establish the card charge, which must be disclosed and remain below the user's threshold before the confirmed booking.\",\"score_rationale\":\"Levels 3 workload, 4 reasoning, 3 tool use, 3 dependencies, and 3 information sum to 16; 5 × 16 = 80. The nested payment and itinerary constraints drive reasoning, while the linked reads, confirmations, and writes drive coordination.\",\"uncertainties\":[\"The complete flight database is not supplied, so the cheapest-itinerary claim is an intended design target rather than independently established from all alternatives.\",\"Cancellation refunds return to original payment methods within 5–7 business days; the source does not establish that this refund becomes available toward the immediate replacement purchase.\",\"The scenario conditions the cancel-and-rebook request on the agent mentioning the basic-economy restriction; the selected path reflects the recorded cabin, policy, and intended endpoint, not an observed conversation.\"],\"source_quality_flags\":[\"Selected initial records are judge-only design context, not information already available to the task agent.\",\"Reference actions and completion assertions state intended work, not executed results or proof of feasibility.\"],\"unscorable_reason\":\"\"}",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [],
+  "top_p": 0.98,
+  "background": false,
+  "completed_at": 1794627595.0,
+  "conversation": null,
+  "max_output_tokens": 10000,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_diagnostics": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "name": "design_judgment",
+      "schema_": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "enum": [
+              "design_judgment_v1"
+            ]
+          },
+          "case_key": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "scored",
+              "unscorable"
+            ]
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit_id": {
+                      "type": "string",
+                      "enum": [
+                        "task_requirements",
+                        "reference_001",
+                        "reference_002"
+                      ]
+                    },
+                    "applicability_rationale": {
+                      "type": "string"
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/source_evidence"
+                      }
+                    },
+                    "rationale": {
+                      "type": "string"
+                    },
+                    "applicability": {
+                      "type": "string",
+                      "enum": [
+                        "required",
+                        "selected_conditional"
+                      ]
+                    },
+                    "levels": {
+                      "type": "object",
+                      "properties": {
+                        "reasoning": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        },
+                        "tool_use": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        },
+                        "information": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        }
+                      },
+                      "required": [
+                        "reasoning",
+                        "tool_use",
+                        "information"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "unit_id",
+                    "applicability_rationale",
+                    "evidence",
+                    "rationale",
+                    "applicability",
+                    "levels"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit_id": {
+                      "type": "string",
+                      "enum": [
+                        "task_requirements",
+                        "reference_001",
+                        "reference_002"
+                      ]
+                    },
+                    "applicability_rationale": {
+                      "type": "string"
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/source_evidence"
+                      }
+                    },
+                    "rationale": {
+                      "type": "string"
+                    },
+                    "applicability": {
+                      "type": "string",
+                      "enum": [
+                        "optional_not_selected",
+                        "context",
+                        "uncertain"
+                      ]
+                    },
+                    "levels": {
+                      "type": "object",
+                      "properties": {
+                        "reasoning": {
+                          "type": "null"
+                        },
+                        "tool_use": {
+                          "type": "null"
+                        },
+                        "information": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "reasoning",
+                        "tool_use",
+                        "information"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "unit_id",
+                    "applicability_rationale",
+                    "evidence",
+                    "rationale",
+                    "applicability",
+                    "levels"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "maxItems": 3
+          },
+          "dimensions": {
+            "type": "object",
+            "properties": {
+              "workload": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "reasoning": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "tool_use": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "dependencies": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "information": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "workload",
+              "reasoning",
+              "tool_use",
+              "dependencies",
+              "information"
+            ],
+            "additionalProperties": false
+          },
+          "overall_score": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "intended_endpoint": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source_evidence"
+                }
+              }
+            },
+            "required": [
+              "description",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "dependency_reasoning": {
+            "type": "string"
+          },
+          "score_rationale": {
+            "type": "string"
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_quality_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unscorable_reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "version",
+          "case_key",
+          "status",
+          "units",
+          "dimensions",
+          "overall_score",
+          "intended_endpoint",
+          "dependency_reasoning",
+          "score_rationale",
+          "uncertainties",
+          "source_quality_flags",
+          "unscorable_reason"
+        ],
+        "additionalProperties": false,
+        "$defs": {
+          "source_evidence": {
+            "type": "object",
+            "properties": {
+              "citation_id": {
+                "type": "string",
+                "enum": [
+                  "E0000",
+                  "E0001",
+                  "E0002",
+                  "E0003",
+                  "E0004",
+                  "E0005",
+                  "E0006",
+                  "E0007",
+                  "E0008",
+                  "E0009",
+                  "E0010",
+                  "E0011",
+                  "E0012",
+                  "E0013",
+                  "E0014",
+                  "E0015",
+                  "E0016",
+                  "E0017",
+                  "E0018",
+                  "E0019",
+                  "E0020",
+                  "E0021",
+                  "E0022",
+                  "E0023",
+                  "E0024",
+                  "E0025",
+                  "E0026",
+                  "E0027",
+                  "E0028",
+                  "E0029",
+                  "E0030",
+                  "E0031",
+                  "E0032",
+                  "E0033",
+                  "E0034",
+                  "E0035",
+                  "E0036",
+                  "E0037",
+                  "E0038",
+                  "E0039",
+                  "E0040",
+                  "E0041",
+                  "E0042",
+                  "E0043",
+                  "E0044",
+                  "E0045",
+                  "E0046",
+                  "E0047",
+                  "E0048",
+                  "E0049",
+                  "E0050",
+                  "E0051",
+                  "E0052",
+                  "E0053",
+                  "E0054",
+                  "E0055",
+                  "E0056",
+                  "E0057",
+                  "E0058",
+                  "E0059",
+                  "E0060",
+                  "E0061",
+                  "E0062",
+                  "E0063",
+                  "E0064",
+                  "E0065",
+                  "E0066",
+                  "E0067",
+                  "E0068",
+                  "E0069",
+                  "E0070",
+                  "E0071",
+                  "E0072",
+                  "E0073",
+                  "E0074",
+                  "E0075",
+                  "E0076",
+                  "E0077",
+                  "E0078",
+                  "E0079",
+                  "E0080",
+                  "E0081",
+                  "E0082",
+                  "E0083",
+                  "E0084",
+                  "E0085",
+                  "E0086",
+                  "E0087",
+                  "E0088",
+                  "E0089",
+                  "E0090",
+                  "E0091",
+                  "E0092",
+                  "E0093",
+                  "E0094",
+                  "E0095",
+                  "E0096",
+                  "E0097",
+                  "E0098",
+                  "E0099",
+                  "E0100",
+                  "E0101",
+                  "E0102",
+                  "E0103",
+                  "E0104",
+                  "E0105",
+                  "E0106",
+                  "E0107",
+                  "E0108",
+                  "E0109",
+                  "E0110",
+                  "E0111",
+                  "E0112",
+                  "E0113",
+                  "E0114",
+                  "E0115",
+                  "E0116",
+                  "E0117",
+                  "E0118",
+                  "E0119",
+                  "E0120",
+                  "E0121",
+                  "E0122",
+                  "E0123",
+                  "E0124",
+                  "E0125",
+                  "E0126",
+                  "E0127",
+                  "E0128",
+                  "E0129",
+                  "E0130",
+                  "E0131",
+                  "E0132",
+                  "E0133",
+                  "E0134",
+                  "E0135",
+                  "E0136",
+                  "E0137",
+                  "E0138",
+                  "E0139",
+                  "E0140",
+                  "E0141",
+                  "E0142",
+                  "E0143",
+                  "E0144",
+                  "E0145",
+                  "E0146",
+                  "E0147",
+                  "E0148",
+                  "E0149",
+                  "E0150",
+                  "E0151",
+                  "E0152",
+                  "E0153",
+                  "E0154",
+                  "E0155",
+                  "E0156",
+                  "E0157",
+                  "E0158",
+                  "E0159",
+                  "E0160",
+                  "E0161",
+                  "E0162",
+                  "E0163",
+                  "E0164",
+                  "E0165",
+                  "E0166",
+                  "E0167",
+                  "E0168",
+                  "E0169",
+                  "E0170",
+                  "E0171",
+                  "E0172",
+                  "E0173",
+                  "E0174",
+                  "E0175",
+                  "E0176",
+                  "E0177",
+                  "E0178",
+                  "E0179",
+                  "E0180",
+                  "E0181",
+                  "E0182",
+                  "E0183",
+                  "E0184",
+                  "E0185",
+                  "E0186",
+                  "E0187",
+                  "E0188",
+                  "E0189",
+                  "E0190",
+                  "E0191",
+                  "E0192",
+                  "E0193",
+                  "E0194",
+                  "E0195",
+                  "E0196",
+                  "E0197",
+                  "E0198",
+                  "E0199",
+                  "E0200",
+                  "E0201",
+                  "E0202",
+                  "E0203",
+                  "E0204",
+                  "E0205",
+                  "E0206",
+                  "E0207",
+                  "E0208",
+                  "E0209",
+                  "E0210",
+                  "E0211",
+                  "E0212",
+                  "E0213",
+                  "E0214",
+                  "E0215",
+                  "E0216",
+                  "E0217",
+                  "E0218",
+                  "E0219",
+                  "E0220",
+                  "E0221",
+                  "E0222",
+                  "E0223",
+                  "E0224",
+                  "E0225",
+                  "E0226",
+                  "E0227",
+                  "E0228",
+                  "E0229",
+                  "E0230",
+                  "E0231",
+                  "E0232",
+                  "E0233",
+                  "E0234",
+                  "E0235",
+                  "E0236",
+                  "E0237",
+                  "E0238",
+                  "E0239",
+                  "E0240",
+                  "E0241",
+                  "E0242",
+                  "E0243",
+                  "E0244",
+                  "E0245",
+                  "E0246",
+                  "E0247",
+                  "E0248",
+                  "E0249",
+                  "E0250",
+                  "E0251",
+                  "E0252",
+                  "E0253",
+                  "E0254",
+                  "E0255",
+                  "E0256",
+                  "E0257",
+                  "E0258",
+                  "E0259",
+                  "E0260",
+                  "E0261",
+                  "E0262",
+                  "E0263",
+                  "E0264",
+                  "E0265",
+                  "E0266",
+                  "E0267",
+                  "E0268",
+                  "E0269",
+                  "E0270",
+                  "E0271",
+                  "E0272",
+                  "E0273",
+                  "E0274",
+                  "E0275",
+                  "E0276",
+                  "E0277",
+                  "E0278",
+                  "E0279",
+                  "E0280",
+                  "E0281",
+                  "E0282",
+                  "E0283",
+                  "E0284",
+                  "E0285",
+                  "E0286",
+                  "E0287",
+                  "E0288",
+                  "E0289",
+                  "E0290",
+                  "E0291",
+                  "E0292",
+                  "E0293",
+                  "E0294",
+                  "E0295",
+                  "E0296",
+                  "E0297",
+                  "E0298",
+                  "E0299",
+                  "E0300",
+                  "E0301",
+                  "E0302",
+                  "E0303",
+                  "E0304",
+                  "E0305",
+                  "E0306",
+                  "E0307",
+                  "E0308",
+                  "E0309",
+                  "E0310",
+                  "E0311",
+                  "E0312",
+                  "E0313",
+                  "E0314",
+                  "E0315",
+                  "E0316",
+                  "E0317",
+                  "E0318",
+                  "E0319",
+                  "E0320",
+                  "E0321",
+                  "E0322",
+                  "E0323",
+                  "E0324",
+                  "E0325",
+                  "E0326",
+                  "E0327",
+                  "E0328",
+                  "E0329"
+                ]
+              }
+            },
+            "required": [
+              "citation_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "type": "json_schema",
+      "description": null,
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 35555,
+    "input_tokens_details": {
+      "cache_write_tokens": 35552,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1332,
+    "output_tokens_details": {
+      "reasoning_tokens": 102
+    },
+    "total_tokens": 36887
+  },
+  "user": null,
+  "billing": {
+    "payer": "developer"
+  },
+  "frequency_penalty": 0.0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "input_transformations": [],
+  "presence_penalty": 0.0,
+  "store": false,
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  }
+}

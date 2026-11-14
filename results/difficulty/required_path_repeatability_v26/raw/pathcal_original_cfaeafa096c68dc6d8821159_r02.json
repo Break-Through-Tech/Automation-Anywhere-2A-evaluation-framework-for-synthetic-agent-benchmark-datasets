@@ -1,0 +1,514 @@
+{
+  "id": "resp_0fe8165d0429a635016af7d713fedc87d1ba0360bd27409ab4",
+  "access_programs": null,
+  "created_at": 1794627348.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": null,
+  "metadata": {},
+  "model": "gpt-6-sol",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_0fe8165d0429a635016af7d714c44887d18be74800e05fbf65",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq99cZK-g8pvSJMbGcIflr40oEYJb12YZE1W1xypW8Xgbl7E8I6SHIU_GG9UpYUwchTNVQjCyZLNZvg5ooaJ9bv07O43myKvdzkVOqabJD-kiva-i-hyqudPKb6E6704bPUDGUuPKOjY-wmBU1kNIRM33e8yD4ahml27hygpukCv1BJCTH_GqES_ORg92bzgs6fgzglRoF6N_bQ2Cw2hq0ISwag04S369HfHzmIwnyh4nyueILp49wX0HAXb0xElP2VwI61UOKt68fc61Ic6mR-khSu6l7EKhPsKW-7U4_tatlmkSSj7p2UElTal7Vfgi2lfAe-9dY4DdzbpvcYhf2eyQkMd8HiZMlnJenxMp3YUQb6kXOFty9ikK6r1F3yr4GnXuxow5N9uutgjTiIJSqGci38pcLbYcb2X9HD3W0mRxZPfLgm6sVXNwZ7lhmnEJd8CqX7CCgr36s9i63IquEgOtwQLU3hF37FxZaYR4OTLdDMlVCm_4Cj90fQG2eji2hCIufsbd4KEduvQRk-z0apVsxmwrbHB6sEhAF3CIPIi5TfZk67fM60wbURwK5AdGX18Gsflo-GNyxJfdYU59zuy4gXtu_zzaI3aRIPdM5zccEWLJleVyuqKHyFPj9Tz7CIwXrfOb6J_W60ZDcTa05b8CeodmcGPcv7eHZvguYXHZ0QkmrwOPbG9tW9C2y2IAFPJ4Srm_SVezdDs2PiHGz_6Dn5BtMGckwKiKWZ_Ov_cCX5Va20kPqDJ3ZT0rEMlgqlxfKNvTnEVy_a1kRb6XhB_EVia81HZu8N_-Hlz_YUknZzkXkOABj9rSaT3nrjnZp5LbBQDSoyOlSKA99wvmD_dRITYZvfuN-ULIDOG7FrSeHND5uO3JxUwzYIde4FEIOppIDq6ipF8RQXWVv0wcV8du2ZYPU19bBzEGzAB-7F8LOAEDn1-iKjR9LXYHjJx4DDLenucqocFmyOxhW4eWjGBx0_B6NmNcehfqHVupqESEkg77GMOX0LaVFyGkw0oHDbjYwen6diz59I1GnUYG7ilnMfeE1iSHlvfKZn350gBXANJxuqzlkMd4Q04YO34PIeFV9vQzB-lNR4C3QsBSDUk7RNpwnYAnCJJbrtrGen2s7wwxQZHcSh55atRveNiLt6STflEEBkwOmRlfbsnvg7kiLfP4XCGj7GefO6U9QqRFcLnJqMJYQUAl4wCxXA6RGgzHjhX6BDD4bLYmXZlxIul5hudCXc-B4B4BlTKa9DhA8XmeW5piuiexAV8SSLnmah7cERhZQz54rcV3NtOvRfpdl-G2wCx3B-Vh-mMka3W3afHE2GPqkil6vGN8lAEaLnGgSXtAwzv9fywLEETvib5TWAMNlRtG_Jmpx7X2i1JFmmrKg3jFSbqf6hNdX-Qfz6oNeyOxN10m8oEoHH-DoJcneQYfdAqTJcRPXuM-9KAO7UyeRpj_I2zMM62oz676zCsgmKQGqYu_kXZHJY2hmRLKHpU1qg-vAArIXAMaBZZObG9-Z1BtkESbEHolzuLvEaWcBB8fWNzalMZKPmthH-PG4i_hJLaa1G4Cqdtce3VHIry77w9dyqhR5Q5UMxcFa9KmslnB6Wj1eHjiq9jYRUp1DA93XZRs5PuPSBdT4V8IA10bF0bhp9ka0QLt3FeMCmKjJXP2zS9w4Q1uDi5eNN5_oI4ubk5yLfohKIByECo9FoS_MzxDyolGC9sFuE8kYc2GjC2qknjj7H2AAMT6IJ1nn_NxKDm223b5euKl64HVlho56hn_aAgmPIHUx-U-nB9T_dK0FoVmwkmEvl1wvZZv0y-Nz-zuj3Xiuag0d6-8KDFTZKmqLIK_NmwmSGhzv23i-dDYadT94eFSp_U5Z0XSmvLF6waGITU2dic4xV9sHZz6gjtx9PsVKPYQcASXJ7CVKqotaxeqyqinJ0yqts-H81SSleafQ4mGiJkalS7pSQs1vki-lvNJZnYyoVsrP_aWUUIp20DLzY2sbsHLBlYMFefyfg2cy6O8AmtWedfWHR9VaRsqVvjmNom0uA4JSAfxVsOpJ2-Z7VRRNBasxyCrQEnP9eH6A4bXfXNHgIFyQQS7m1mRFNFuZeOcYblig6uD1RlldMJE5Wv5AXXFdvjz59XqMdhBdya4uya22f4SscA3HW4qMCUZbTvLtdU8kMB0hj_iaunqC9bKSV-m3qdbqRbdXfNEWdwkBIWwdly1GR8sz3iJoOpkxkVcrjVeeGFReyhhqrYr4Nso9VBkWwXcThrYV-2lx6aPC9WLi1AJrlvI_Cg7FR_B2q5Wvm7OiMIdodJ7VizY0-d9CrBzmUlrmlwWUt7Ej5tBQnQbru87a3JcBDQRRhB9rOPwLtPwdVY3oMoB8593cIKKPieRaeB-ArtKmDVYWnRzEFqZIATRz2gFSu3Ohf3qTt5PF3tZkQxhdDXBQn6Z2Al36kCA9hIFMWPxhpktfEZXKzk-ewGti3-6i4TSv_fqFyAFgnpFk3PGl3YGNiGnuJvwUPHbRYhHV1fiq3sZrbZiwvaSPPRVgGadxcv2Vo_eFxTDpoBK-3wVEgWGz-zEEfSMyCU8gb6PAYqNgOvu3LhohtaA5pVsjk0I__xHsS6hIm4ftA7ZTP5dTwzEpNIoXxmg_Iyuewc_jxG5liucqM3WRM4lKb5u0XV7iSZkko4imh2ANqx9b0P_Wqwv9-A6PMSZ4RnTDlwxISHAT3beeEqU7h22f3y2-aIG_-aKmvurZakBUq28cyOkWBxrmFkvWb__zQJltq5W9j8h6oZzWDXS8VTW1R9puvUjHM90s8Jv7tG485MXdAIbQe99AAkbtlG0R5PtehGKTo6V589uqXPcutV0Y6HLPJzJyKU_czvZntdubtBE_JD1wSn2CwlBSd9WGvSOW2PesTAXwmBr9ujXXJJd9GxZqk0rnKzprKLEbrDcjs70Lzhap3dveMLF0dNErUHNVNJ2PB86FsuQPW-szfgFsECZ3JgX9YMs9d2Fe8nBy-cFGUHAjp7URRbTq0Jg46ujZ6FIp7DYJlVHBIGwdJ8eB_IN2NsZ1LUKwksPt8QVx4SOVxrMqfFuMhHEEjdtrfId2Zgvoo9tkKk4ImtRWtuxfTdBUCViQ7CPEOeG19vlYIGHSnzV6UQno4cVg_cNu95_zMvWDmtaeqyVcM4TkVOVU2ZLR5pzgIHZLAlFk0C5Hc_qtcHjTl-4wtwaK7PuZkXe6ne1JrGecNCz_Q7jsOFpttgDzFFwDvghObO5c7V-PgdkKD7IG73EetapXQYeYaUq-aeSVuw==",
+      "status": null
+    },
+    {
+      "id": "msg_0fe8165d0429a635016af7d715752087d1a039fba0c1f77acf",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"version\":\"design_judgment_v1\",\"case_key\":\"cfaeafa096c68dc6d8821159\",\"status\":\"scored\",\"units\":[{\"unit_id\":\"step_1\",\"applicability_rationale\":\"Reading the current balance is required before it can be recorded.\",\"evidence\":[{\"citation_id\":\"E0009\"}],\"rationale\":\"A direct balance lookup retrieves the balance and currency; no account selection is specified as necessary.\",\"applicability\":\"required\",\"levels\":{\"reasoning\":1,\"tool_use\":1,\"information\":2}},{\"unit_id\":\"step_2\",\"applicability_rationale\":\"Recording the retrieved balance and currency is the requested outcome.\",\"evidence\":[{\"citation_id\":\"E0010\"},{\"citation_id\":\"E0005\"}],\"rationale\":\"A specified recording tool takes the customer and the values returned by the preceding lookup.\",\"applicability\":\"required\",\"levels\":{\"reasoning\":1,\"tool_use\":2,\"information\":1}}],\"dimensions\":{\"workload\":{\"level\":2,\"rationale\":\"Two routine stages—read and record—serve one objective.\",\"evidence\":[{\"citation_id\":\"E0009\"},{\"citation_id\":\"E0010\"}]},\"reasoning\":{\"level\":1,\"rationale\":\"The path is direct; the scenario rules out approval and conversion.\",\"evidence\":[{\"citation_id\":\"E0000\"}]},\"tool_use\":{\"level\":2,\"rationale\":\"The read result must be bound to the balance and currency arguments of the recording call.\",\"evidence\":[{\"citation_id\":\"E0004\"},{\"citation_id\":\"E0005\"}]},\"dependencies\":{\"level\":1,\"rationale\":\"Recording follows the lookup in a simple local sequence, without approval or another handoff.\",\"evidence\":[{\"citation_id\":\"E0009\"},{\"citation_id\":\"E0010\"},{\"citation_id\":\"E0000\"}]},\"information\":{\"level\":2,\"rationale\":\"The current balance and currency must be retrieved; no further discovery is documented.\",\"evidence\":[{\"citation_id\":\"E0009\"},{\"citation_id\":\"E0000\"}]}},\"overall_score\":40,\"intended_endpoint\":{\"description\":\"Customer K's current balance and currency are recorded, with a record confirmation.\",\"evidence\":[{\"citation_id\":\"E0008\"}]},\"dependency_reasoning\":\"The balance and currency obtained in step_1 supply the values for step_2; the scenario excludes approval and conversion.\",\"score_rationale\":\"Ratings of 2, 1, 2, 1, and 2 sum to 8; the provisional index is 5 × 8 = 40.\",\"uncertainties\":[],\"source_quality_flags\":[],\"unscorable_reason\":\"\"}",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [],
+  "top_p": 0.98,
+  "background": false,
+  "completed_at": 1794627353.0,
+  "conversation": null,
+  "max_output_tokens": 10000,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_diagnostics": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "name": "design_judgment",
+      "schema_": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "enum": [
+              "design_judgment_v1"
+            ]
+          },
+          "case_key": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "scored",
+              "unscorable"
+            ]
+          },
+          "units": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit_id": {
+                      "type": "string",
+                      "enum": [
+                        "step_1",
+                        "step_2"
+                      ]
+                    },
+                    "applicability_rationale": {
+                      "type": "string"
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/source_evidence"
+                      }
+                    },
+                    "rationale": {
+                      "type": "string"
+                    },
+                    "applicability": {
+                      "type": "string",
+                      "enum": [
+                        "required",
+                        "selected_conditional"
+                      ]
+                    },
+                    "levels": {
+                      "type": "object",
+                      "properties": {
+                        "reasoning": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        },
+                        "tool_use": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        },
+                        "information": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "maximum": 4
+                        }
+                      },
+                      "required": [
+                        "reasoning",
+                        "tool_use",
+                        "information"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "unit_id",
+                    "applicability_rationale",
+                    "evidence",
+                    "rationale",
+                    "applicability",
+                    "levels"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "unit_id": {
+                      "type": "string",
+                      "enum": [
+                        "step_1",
+                        "step_2"
+                      ]
+                    },
+                    "applicability_rationale": {
+                      "type": "string"
+                    },
+                    "evidence": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/source_evidence"
+                      }
+                    },
+                    "rationale": {
+                      "type": "string"
+                    },
+                    "applicability": {
+                      "type": "string",
+                      "enum": [
+                        "optional_not_selected",
+                        "context",
+                        "uncertain"
+                      ]
+                    },
+                    "levels": {
+                      "type": "object",
+                      "properties": {
+                        "reasoning": {
+                          "type": "null"
+                        },
+                        "tool_use": {
+                          "type": "null"
+                        },
+                        "information": {
+                          "type": "null"
+                        }
+                      },
+                      "required": [
+                        "reasoning",
+                        "tool_use",
+                        "information"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "unit_id",
+                    "applicability_rationale",
+                    "evidence",
+                    "rationale",
+                    "applicability",
+                    "levels"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "maxItems": 2
+          },
+          "dimensions": {
+            "type": "object",
+            "properties": {
+              "workload": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "reasoning": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "tool_use": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "dependencies": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              },
+              "information": {
+                "type": "object",
+                "properties": {
+                  "level": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0,
+                    "maximum": 4
+                  },
+                  "rationale": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/$defs/source_evidence"
+                    }
+                  }
+                },
+                "required": [
+                  "level",
+                  "rationale",
+                  "evidence"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "workload",
+              "reasoning",
+              "tool_use",
+              "dependencies",
+              "information"
+            ],
+            "additionalProperties": false
+          },
+          "overall_score": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "intended_endpoint": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string"
+              },
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/source_evidence"
+                }
+              }
+            },
+            "required": [
+              "description",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "dependency_reasoning": {
+            "type": "string"
+          },
+          "score_rationale": {
+            "type": "string"
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_quality_flags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "unscorable_reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "version",
+          "case_key",
+          "status",
+          "units",
+          "dimensions",
+          "overall_score",
+          "intended_endpoint",
+          "dependency_reasoning",
+          "score_rationale",
+          "uncertainties",
+          "source_quality_flags",
+          "unscorable_reason"
+        ],
+        "additionalProperties": false,
+        "$defs": {
+          "source_evidence": {
+            "type": "object",
+            "properties": {
+              "citation_id": {
+                "type": "string",
+                "enum": [
+                  "E0000",
+                  "E0001",
+                  "E0002",
+                  "E0003",
+                  "E0004",
+                  "E0005",
+                  "E0006",
+                  "E0007",
+                  "E0008",
+                  "E0009",
+                  "E0010"
+                ]
+              }
+            },
+            "required": [
+              "citation_id"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "type": "json_schema",
+      "description": null,
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 3255,
+    "input_tokens_details": {
+      "cache_write_tokens": 3252,
+      "cached_tokens": 0
+    },
+    "output_tokens": 625,
+    "output_tokens_details": {
+      "reasoning_tokens": 64
+    },
+    "total_tokens": 3880
+  },
+  "user": null,
+  "billing": {
+    "payer": "developer"
+  },
+  "frequency_penalty": 0.0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "input_transformations": [],
+  "presence_penalty": 0.0,
+  "store": false,
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  }
+}

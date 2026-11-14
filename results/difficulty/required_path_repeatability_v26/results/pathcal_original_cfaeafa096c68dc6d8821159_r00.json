@@ -1,0 +1,321 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "request_sha256": "3a6e7f23b20ea990d47683987a5ef58d7121dac0dcecc46e70bf305faef54616",
+  "input_sha256": "1bb6373ffe8849901cc981d2621ec7ab96f1aa7379e0299e21ef10953f87802e",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-13T23:16:12.267269+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_01c907b5c00fae5c016af79a3caf4087d183c80e3f01897e9f",
+  "usage": {
+    "input_tokens": 3255,
+    "input_tokens_details": {
+      "cache_write_tokens": 3252,
+      "cached_tokens": 0
+    },
+    "output_tokens": 672,
+    "output_tokens_details": {
+      "reasoning_tokens": 98
+    },
+    "total_tokens": 3927
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "cfaeafa096c68dc6d8821159",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "step_1",
+        "applicability_rationale": "Reading the current balance is required before it can be recorded.",
+        "evidence": [
+          {
+            "citation_id": "E0009"
+          }
+        ],
+        "rationale": "A direct balance lookup supplies the value and currency; no account selection is specified as necessary.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_2",
+        "applicability_rationale": "Recording the retrieved balance is the requested action.",
+        "evidence": [
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0008"
+          }
+        ],
+        "rationale": "Pass the retrieved balance and currency to the recording tool and obtain its confirmation.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 2,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 2,
+        "rationale": "One objective has two routine active stages: read, then record.",
+        "evidence": [
+          {
+            "citation_id": "E0009"
+          },
+          {
+            "citation_id": "E0010"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 1,
+        "rationale": "The scenario rules out approval and conversion, leaving a direct read-and-record path.",
+        "evidence": [
+          {
+            "citation_id": "E0000"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 2,
+        "rationale": "The balance and currency returned by the first tool must be bound to the second tool's inputs.",
+        "evidence": [
+          {
+            "citation_id": "E0004"
+          },
+          {
+            "citation_id": "E0005"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 1,
+        "rationale": "Recording depends on the preceding balance read, with no further handoff or approval.",
+        "evidence": [
+          {
+            "citation_id": "E0009"
+          },
+          {
+            "citation_id": "E0010"
+          },
+          {
+            "citation_id": "E0000"
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The current balance and currency require ordinary retrieval; the customer and account situation are otherwise specified.",
+        "evidence": [
+          {
+            "citation_id": "E0000"
+          },
+          {
+            "citation_id": "E0009"
+          }
+        ]
+      }
+    },
+    "overall_score": 40,
+    "intended_endpoint": {
+      "description": "Customer K's current balance and currency are recorded, and a record confirmation is obtained.",
+      "evidence": [
+        {
+          "citation_id": "E0008"
+        }
+      ]
+    },
+    "dependency_reasoning": "The read provides the balance and currency needed for the record. No conversion, approval, or reconciliation path applies.",
+    "score_rationale": "The ratings sum to 8: two routine stages, direct reasoning, output-to-input tool binding, a simple sequence, and an ordinary balance lookup. The provisional score is 5 × 8 = 40.",
+    "uncertainties": [],
+    "source_quality_flags": [],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "cfaeafa096c68dc6d8821159",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "step_1",
+        "applicability_rationale": "Reading the current balance is required before it can be recorded.",
+        "evidence": [
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          }
+        ],
+        "rationale": "A direct balance lookup supplies the value and currency; no account selection is specified as necessary.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_2",
+        "applicability_rationale": "Recording the retrieved balance is the requested action.",
+        "evidence": [
+          {
+            "source_id": "step_2",
+            "excerpt": "Record that balance and currency for Customer K using record_balance."
+          },
+          {
+            "source_id": "endpoint",
+            "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+          }
+        ],
+        "rationale": "Pass the retrieved balance and currency to the recording tool and obtain its confirmation.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 2,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 2,
+        "rationale": "One objective has two routine active stages: read, then record.",
+        "evidence": [
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          },
+          {
+            "source_id": "step_2",
+            "excerpt": "Record that balance and currency for Customer K using record_balance."
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 1,
+        "rationale": "The scenario rules out approval and conversion, leaving a direct read-and-record path.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 2,
+        "rationale": "The balance and currency returned by the first tool must be bound to the second tool's inputs.",
+        "evidence": [
+          {
+            "source_id": "tools",
+            "excerpt": "customer_id, optional account_id -> balance and currency"
+          },
+          {
+            "source_id": "tools",
+            "excerpt": "customer_id, balance, currency -> recorded confirmation"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 1,
+        "rationale": "Recording depends on the preceding balance read, with no further handoff or approval.",
+        "evidence": [
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          },
+          {
+            "source_id": "step_2",
+            "excerpt": "Record that balance and currency for Customer K using record_balance."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The current balance and currency require ordinary retrieval; the customer and account situation are otherwise specified.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed."
+          },
+          {
+            "source_id": "step_1",
+            "excerpt": "Read Customer K's current balance and currency using read_balance."
+          }
+        ]
+      }
+    },
+    "overall_score": 40,
+    "intended_endpoint": {
+      "description": "Customer K's current balance and currency are recorded, and a record confirmation is obtained.",
+      "evidence": [
+        {
+          "source_id": "endpoint",
+          "excerpt": "The current balance and currency are recorded for Customer K, with a record confirmation."
+        }
+      ]
+    },
+    "dependency_reasoning": "The read provides the balance and currency needed for the record. No conversion, approval, or reconciliation path applies.",
+    "score_rationale": "The ratings sum to 8: two routine stages, direct reasoning, output-to-input tool binding, a simple sequence, and an ordinary balance lookup. The provisional score is 5 × 8 = 40.",
+    "uncertainties": [],
+    "source_quality_flags": [],
+    "unscorable_reason": ""
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "4aa58c17a82fab8dc005277d39619ebc48cd837c419f46dafcae85901a9902de",
+  "finished_at": "2026-11-13T23:16:18.114387+00:00",
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 40,
+    "computed_total": 40,
+    "reported_total_mismatch": false
+  },
+  "offline_binding_provenance": {
+    "original_packet": ".cache/design_numeric_v1/tau2_final_refs_v18/controls",
+    "original_result_sha256": "015949725c15d1a55dbb779bce0d7c726b99652c19cd829e09bc9dd3f59a3d33",
+    "original_status": "validated",
+    "original_error": null,
+    "generation_request_unchanged": true,
+    "new_API_calls": 0,
+    "prior_binding": {
+      "original_packet": ".cache/design_numeric_v1/tau2_final_refs_v16/controls",
+      "original_result_sha256": "eac1e6d1bd230765f6190016da34a37a906235b7b0ad76fd9818343d81306501",
+      "original_status": "validated",
+      "original_error": null,
+      "generation_request_unchanged": true,
+      "new_API_calls": 0,
+      "prior_binding": null
+    }
+  },
+  "request_binding": {
+    "bound_case_key": "cfaeafa096c68dc6d8821159",
+    "model_reported_case_key": "cfaeafa096c68dc6d8821159",
+    "model_case_key_mismatch": false
+  },
+  "offline_cache_binding": {
+    "request_id": "pathcal_original_cfaeafa096c68dc6d8821159_r00",
+    "source_packet": ".cache/design_numeric_v1/tau2_final_refs_v19/controls",
+    "source_request_id": "cfaeafa096c68dc6d8821159_r00",
+    "new_api_calls": 0
+  }
+}

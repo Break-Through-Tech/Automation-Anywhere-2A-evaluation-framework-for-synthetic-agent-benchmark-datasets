@@ -1,0 +1,7 @@
+role,original_scores,original_mean,original_range,clarified_scores,clarified_mean,clarified_range,mean_shift
+airline_no_target_exit,"[75, 80, 85]",80,10,"[85, 80, 75]",80,10,0
+complex_control,"[75, 75, 75]",75,0,"[75, 75, 75]",75,0,0
+fraud_package_exit,"[70, 65, 70]",68.33333333333333,5,"[65, 65, 65]",65,0,-3.3333333333333286
+retail_no_target_exit,"[75, 75, 75]",75,0,"[70, 75, 75]",73.33333333333333,5,-1.6666666666666714
+sim_exit,"[75, 75, 75]",75,0,"[50, 55, 50]",51.666666666666664,5,-23.333333333333336
+simple_control,"[40, 40, 40]",40,0,"[40, 40, 40]",40,0,0
