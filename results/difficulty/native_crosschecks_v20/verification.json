@@ -1,0 +1,20 @@
+{
+  "api_calls": 0,
+  "scores_changed": false,
+  "n_tasks": 342,
+  "native_reference_features_available": 277,
+  "synthetic_reference_counts_match_existing_profiles": 64,
+  "missing_native_semantic_features": [
+    "proposed_operation_unit_count",
+    "business_check_groups",
+    "distinct_coordination_events"
+  ],
+  "files_sha256": {
+    "results/difficulty/tau2_final_v19/comparison.json": "7733dd4c7cf48440db3543abe18df439597eb08c832b391100090dc378f99cb9",
+    "results/difficulty/synthetic_final_v15/task_scores.json": "e078b4d935f495d29ec5d62ec86a3916151329e4f64b7d30e08c0635eb5453cb",
+    "docs/evaluation/native_design_crosschecks_v1.md": "5f5866eee2c9f09776c29c0e4649afa16977d34d9125a5811a31e6cb20c24af5",
+    "difficulty/native_design_crosschecks.py": "a34028ba31507a0295d21f1773ed38868f27ce9d24c4314076c353b4d2c37fd0"
+  },
+  "offline_tests_passed": 166,
+  "locked_sim_candidate_count": 18
+}

@@ -1,0 +1,493 @@
+{
+  "selection": "One listed transfer action and explicit lock_sim_card initialization; setup actions are not workload",
+  "api_calls": 0,
+  "scores_changed": false,
+  "tasks": [
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "786ebdc68e05e9b2d56c0dbe",
+      "saved_score": 75,
+      "input_sha256": "392f3ad05fd13f49f159ab41aba6a6d06b9f1c5adf5a97fc7a43b988adc1c0a5",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/296/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "6eee014970553d7226847a93",
+      "saved_score": 70,
+      "input_sha256": "69714bb70516cbfc17b2ee05f7756dbf2fa4e5c37b5cd5e3ae75c5c3efc8a5a7",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/300/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "88f3feb7ecafeeff70b785cc",
+      "saved_score": 55,
+      "input_sha256": "39b767f0330b169ee51a94b2b33edd75d249762a15f92991eb2fa29946b66ccc",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/278/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "case_key": "29e97cca516a76b19a606aad",
+      "saved_score": 50,
+      "input_sha256": "db5cd9006052dbc35db819872e6af710f1c4763cc7587d3a87f62646e2df7f17",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/295/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "case_key": "ddd2f5a8191c1ae70b57ec33",
+      "saved_score": 75,
+      "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/299/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+      "case_key": "b5e08ecc77f435a649f3e1af",
+      "saved_score": 65,
+      "input_sha256": "162cdcdda46187a3309692252a4f58c03bcc24b9a1d9cef460e46edd4d0d8c32",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/290/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "4aa79bebc87ae31faa216185",
+      "saved_score": 75,
+      "input_sha256": "994d50bdec9d70ede01eb9c81d2df95899cf8821667cacf638be216edda8af63",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/292/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "case_key": "207abcd686ea0348c46fa3c3",
+      "saved_score": 50,
+      "input_sha256": "0d889fc1f669a7d25c6ec01faabe6da7f198b224e5318943cd5e0ac69b13f177",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/261/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "55ebca441d1a97b5f834cc3c",
+      "saved_score": 55,
+      "input_sha256": "f9a7c0931de0a0563f44607f02d2815c29712ba3cccffa96d37dc19f678cc326",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/279/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "988e21ad137ffaac3e856aba",
+      "saved_score": 75,
+      "input_sha256": "0744bc314f2dcdfefc8c4a4093248d1928e489aa7173ab5e0f5aa5da2e6ea3cf",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/291/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "b4be13a9695d14f83f33d115",
+      "saved_score": 55,
+      "input_sha256": "da6c4652467df1421345f8da99b6a324bfacb0d7ba55fd1fc29e50764f27cbc4",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/274/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "case_key": "4f8a1784c0db6e4ed69c0b82",
+      "saved_score": 55,
+      "input_sha256": "6f433fcb7e9725e462e2ec83b5a641c53747623e451a2ef6f832611cba2eb45a",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/289/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "08de75f0bfd93ab5bc912101",
+      "saved_score": 75,
+      "input_sha256": "8112cb12dda9affa8a486356987333d0c9214461dcf799a623a303a96d8cbc25",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/298/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "96e9fd303766bd114f4da068",
+      "saved_score": 50,
+      "input_sha256": "cb6b6b46a888ff09fcb309d8085b1228c213e4f25e2114974b578b7e84a48ac0",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/269/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "1c2b7f4186c563085fce1b0e",
+      "saved_score": 55,
+      "input_sha256": "66208ebe5932934b4fa0985e366d54f405bcdd7f2002730995fa5046868f2b62",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/288/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "d14cd4c532ca798c4db5aad0",
+      "saved_score": 65,
+      "input_sha256": "79b002d7f3f4ffbb38850f380efb05f9e1bfc49806ae8d2ed16147ac62d7388b",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/297/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "case_key": "0af2eb10291137f2fe107daf",
+      "saved_score": 55,
+      "input_sha256": "2870e2ce2641c84778a980da2eff8726687095236860216eb089ad7b35c170c1",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/271/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    },
+    {
+      "task_id": "[service_issue]lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "1cd2224f9e59e94ec2172361",
+      "saved_score": 55,
+      "input_sha256": "cea1699441aa858cf4cfdb5d99a6bfc69fcd9491734f69ed03c07286f8baf242",
+      "setup_lock": [
+        {
+          "arguments": {
+            "mode": "pin"
+          },
+          "env_type": "user",
+          "func_name": "lock_sim_card"
+        }
+      ],
+      "initial_state_source": {
+        "path": "data/tau2/domains/telecom/tasks.json",
+        "locator": "#/270/initial_state",
+        "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+      },
+      "manual_source": {
+        "path": "data/tau2/domains/telecom/tech_support_manual.md",
+        "locator": "whole document",
+        "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+      },
+      "candidate_only_not_confirmed_error": true,
+      "review_question": "After locked-SIM escalation is established, does the judge count additional account/fault work not required before the mandatory transfer? Consider diagnostic discovery and other policy requirements; do not infer a correction from the presence of multiple setup faults."
+    }
+  ]
+}
