@@ -1,0 +1,5271 @@
+{
+  "version": "native_semantic_profiles_v1",
+  "api_calls": 0,
+  "agent_runs": 0,
+  "scores_changed": false,
+  "independent_validation": false,
+  "annotation_sha256": "76cd4d61a69a95fbcc4a7cdd82945ff6a9bc0bd352a762bcc24a4febdd42bd72",
+  "score_report_sha256": "a126c61c84fe5cecf91ea69ef0200a828c7ea1600e12045dd9973cd6f39a73c6",
+  "coverage": {
+    "not_authored": 275,
+    "provisional_complete": 2,
+    "unresolved_path": 1
+  },
+  "task_count": 278,
+  "tasks": [
+    {
+      "case_key": "a92858c4f27538e1c39c1d89",
+      "domain": "airline",
+      "task_id": "0",
+      "input_sha256": "6938d7f6094e8194bf08404dc740813a7d7edec0c2c0526ad53c8ad6aab9283c",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c54b91188a3db01082135099",
+      "domain": "airline",
+      "task_id": "1",
+      "input_sha256": "54ed8bff2db95c8ce79483d96aca5c0c2c2f1c04c4ab37b564bfb23e980a1cb7",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7be93b6e809bba9667a2274d",
+      "domain": "airline",
+      "task_id": "10",
+      "input_sha256": "fc964a87c98586d87f8bf378e8d3f1f92dbde6ad0562744dff8c459b5af6fd99",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3e2f5e5628ed8be6a874db49",
+      "domain": "airline",
+      "task_id": "11",
+      "input_sha256": "a339787dcfad73eb452d2cc6f99e1b8034ce1835f71ffbf4228b8a63e088f09f",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d9f37fc70550327d8fd89cb3",
+      "domain": "airline",
+      "task_id": "12",
+      "input_sha256": "efc612336197219df4d91e341ba7daee9548c5fbe4b4fe844e55f1c278f1cf05",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a360b134c31d1e47c55b5a97",
+      "domain": "airline",
+      "task_id": "13",
+      "input_sha256": "402af4d9537f3bcade42763d1efa22ccb98ec9c798e14a220b55d7f5c4323b70",
+      "score": 40,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4052de4afd171be50d2045cf",
+      "domain": "airline",
+      "task_id": "14",
+      "input_sha256": "d18df5d7a58b7acf42c4f36d7f58b79a48d563e3941ae3325a9c09754b3b1633",
+      "score": 75,
+      "status": "provisional_complete",
+      "features": {
+        "proposed_operation_unit_count": 15,
+        "business_check_groups": 5,
+        "distinct_coordination_events": 2
+      },
+      "documented_partial_counts": null,
+      "annotation": {
+        "case_key": "4052de4afd171be50d2045cf",
+        "input_sha256": "d18df5d7a58b7acf42c4f36d7f58b79a48d563e3941ae3325a9c09754b3b1633",
+        "status": "provisional_complete",
+        "scope_rationale": "Intended cancellation/rebooking path; the documented card charge is below the threshold. Applicable booking and cancellation policy is included; separate confirmation obligations are retained conservatively.",
+        "operations": [
+          {
+            "key": "balances_read",
+            "description": "Retrieve the profile payment balances",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "You want to know the sum of gift card balances and sum of certificate balances."
+              }
+            ]
+          },
+          {
+            "key": "balances_total",
+            "description": "Compute the two requested balance totals as one grouped calculation",
+            "business_check": false,
+            "rationale": "Arithmetic aggregation is active work, but not a separate policy evaluation or verification under the business-check definition.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "If the agent gives you individual balances, you want the sums."
+              }
+            ]
+          },
+          {
+            "key": "balances_report",
+            "description": "Communicate the balance totals",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "If the agent gives you individual balances, you want the sums."
+              }
+            ]
+          },
+          {
+            "key": "reservation_locate",
+            "description": "Locate the current reservation",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "If the user doesn't know their reservation id, the agent should help locate it using available tools."
+              }
+            ]
+          },
+          {
+            "key": "modification_eligibility",
+            "description": "Check whether the requested modification is allowed",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "Basic economy flights cannot be modified."
+              }
+            ]
+          },
+          {
+            "key": "itinerary_compare",
+            "description": "Compare eligible replacement itineraries against the user constraints",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not."
+              }
+            ]
+          },
+          {
+            "key": "cancellation_reason",
+            "description": "Obtain the cancellation reason",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons)"
+              }
+            ]
+          },
+          {
+            "key": "cancellation_eligibility",
+            "description": "Evaluate cancellation eligibility as one grouped policy check",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "The API does not check that cancellation rules are met, so the agent must make sure the rules apply before calling the API!"
+              }
+            ]
+          },
+          {
+            "key": "booking_constraints",
+            "description": "Verify the booking passenger/cabin/payment constraints as a grouped eligibility check",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "All passengers must fly the same flights in the same cabin."
+              }
+            ]
+          },
+          {
+            "key": "payment_allocation",
+            "description": "Calculate permissible payment allocation and apply the card-charge cutoff",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+              }
+            ]
+          },
+          {
+            "key": "card_charge_report",
+            "description": "Communicate the proposed card charge",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "But you want to know how much your master card will be charged."
+              }
+            ]
+          },
+          {
+            "key": "cancel_confirmation",
+            "description": "Request explicit confirmation for cancel",
+            "business_check": false,
+            "rationale": "Two distinct database actions; count confirmation once for each action, not once per passenger or flight.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          },
+          {
+            "key": "book_confirmation",
+            "description": "Request explicit confirmation for book",
+            "business_check": false,
+            "rationale": "Two distinct database actions; count confirmation once for each action, not once per passenger or flight.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          },
+          {
+            "key": "cancel",
+            "description": "Cancel the original reservation",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "you want the agent to cancel the current one and book a new one."
+              }
+            ]
+          },
+          {
+            "key": "book",
+            "description": "Book the replacement reservation",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "you want the agent to cancel the current one and book a new one."
+              }
+            ]
+          }
+        ],
+        "coordination_events": [
+          {
+            "key": "cancel_authorization",
+            "description": "Customer authorization for cancel",
+            "categories": [
+              "approval",
+              "external_response"
+            ],
+            "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          },
+          {
+            "key": "book_authorization",
+            "description": "Customer authorization for book",
+            "categories": [
+              "approval",
+              "external_response"
+            ],
+            "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          }
+        ],
+        "excluded_work": [
+          "Unused compensation, baggage purchase, insurance purchase and modification branches.",
+          "Passenger/flight multiplicity is retained as scope, not multiplied into operations.",
+          "Ordinary synchronous database returns and IDs are not coordination events."
+        ],
+        "uncertainties": [
+          "Confirmation could be gathered in one combined exchange for both writes; this annotation treats the distinct action authorizations separately.",
+          "Itinerary identifiers differ between the expected booking call and prose assertion; no source was repaired.",
+          "Grouped booking constraints and balance calculations are semantic conventions, not proven atomic operations."
+        ]
+      },
+      "source_bindings": {
+        "scenario": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/user_scenario",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        },
+        "initial_state": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/initial_state",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        },
+        "policy_1": {
+          "path": "data/tau2/domains/airline/policy.md",
+          "locator": "whole document",
+          "sha256": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4"
+        },
+        "task_design_notes": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/description",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        },
+        "completion_design": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/evaluation_criteria",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        },
+        "reference_001": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/evaluation_criteria/actions/0",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        },
+        "reference_002": {
+          "path": "data/tau2/domains/airline/tasks.json",
+          "locator": "#/14/evaluation_criteria/actions/1",
+          "sha256": "ccd8ba737b4cc371415af70151187788f728d6108d0916e73bb4317b40542052"
+        },
+        "tools_assistant": {
+          "path": "src/tau2/domains/airline/tools.py",
+          "locator": "@is_tool method signatures/docstrings",
+          "sha256": "3987f21c286314cb48764f97052934ff4fd60e27a0b2e4a43423911adf8eaa26"
+        },
+        "initial_record_000": {
+          "path": "data/tau2/domains/airline/db.json",
+          "locator": "#/flights/HAT021; dates=2024-05-26,2024-05-28",
+          "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b"
+        },
+        "initial_record_001": {
+          "path": "data/tau2/domains/airline/db.json",
+          "locator": "#/flights/HAT023; dates=2024-05-26,2024-05-28",
+          "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b"
+        },
+        "initial_record_002": {
+          "path": "data/tau2/domains/airline/db.json",
+          "locator": "#/flights/HAT100; dates=2024-05-26,2024-05-28",
+          "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b"
+        },
+        "initial_record_003": {
+          "path": "data/tau2/domains/airline/db.json",
+          "locator": "#/flights/HAT204; dates=2024-05-26,2024-05-28",
+          "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b"
+        },
+        "initial_record_004": {
+          "path": "data/tau2/domains/airline/db.json",
+          "locator": "#/reservations/K1NW8N",
+          "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b"
+        },
+        "initial_record_005": {
+          "path": "data/tau2/domains/airline/db.json",
+          "locator": "#/users/mohamed_silva_9265",
+          "sha256": "1af9fea6e03ca7ca15a22bb3fcaf3e351393e3fc9070b6777947da8996f7531b"
+        },
+        "types_data_model": {
+          "path": "src/tau2/domains/airline/data_model.py",
+          "locator": "whole source; types only",
+          "sha256": "a8083e2f590e4b9b66a65d7cd50b7a0247e4fa33d6961aaeb02e4d92488b3cff"
+        }
+      }
+    },
+    {
+      "case_key": "9a1bc0193d929be7d7d59fea",
+      "domain": "airline",
+      "task_id": "15",
+      "input_sha256": "9ec2d362f354ce4171e6625a5824841e8793b4852b40911132e64894d41e8a41",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c9124780ab121bfd4ac6d0b4",
+      "domain": "airline",
+      "task_id": "16",
+      "input_sha256": "a669c4ad1c5552af9a58471241b84224b17ee230fd99b1bc07d06442eb94244c",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5a0ab0f8bdfe83da6d756ae4",
+      "domain": "airline",
+      "task_id": "17",
+      "input_sha256": "c6d9c388d673860a9dfa168826c88aa5663c8788e590c5121facbace39e7e244",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ecdb5806f4e8e0d14212b151",
+      "domain": "airline",
+      "task_id": "18",
+      "input_sha256": "7bc22b955d80d17a3c159fda145d002f0f46d81b8d4dc5b4d922d02e9b26850d",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f166b24f83e349eacff9320d",
+      "domain": "airline",
+      "task_id": "19",
+      "input_sha256": "149e4fb8c7005a739d64d040326a31a897061494fabb4b8bd58db1f80ff71ab7",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "cf0b4a03054d98de051d2068",
+      "domain": "airline",
+      "task_id": "2",
+      "input_sha256": "4a1e65d775567c9a585e736002a980b11c8ec092ef565ca4b978ce97b7b1d55c",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9173f934f7daee1cafa3de6c",
+      "domain": "airline",
+      "task_id": "20",
+      "input_sha256": "a8e39533f02ff6a1e4d4bbf04e738944cc42a4f5f5472c3ef7a88ad8833db67c",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "19d3a4ec73dfdda9d3194175",
+      "domain": "airline",
+      "task_id": "21",
+      "input_sha256": "0b82edd0c34a57201f06aa4e78bffac7e37524bd64c131ab06e239b4d14b07a7",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "baee0ad879ca52841c98508a",
+      "domain": "airline",
+      "task_id": "22",
+      "input_sha256": "9c10aac8310371dfc8e52b6ce9425c1c112f11e3de7f23e34fa89e7968810dfe",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "8eeff12a0b275574fd6f02fd",
+      "domain": "airline",
+      "task_id": "23",
+      "input_sha256": "3af47a304266e941e98e4f4156d4df9fa43f278a0324c2ab5ee3c6f75d214606",
+      "score": 85,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "686f6fe4080293c934f32d1a",
+      "domain": "airline",
+      "task_id": "24",
+      "input_sha256": "f40e2e20bf61641d8141d0fef68f406b3d9034c911e03c471d84db358534e35e",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c18c0e73728a426987604a08",
+      "domain": "airline",
+      "task_id": "25",
+      "input_sha256": "5fe177cdec48e39c8a1ccf01abb14014a648b77b4d2b5c1131e866ada4c18e22",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f6c15e4b14e764adf6963ac2",
+      "domain": "airline",
+      "task_id": "26",
+      "input_sha256": "6ec9338b99221dc3efd53ea3ad8aecc700c180f1d853d3aec2fa367e1ca0d4d9",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b33bcc19973ef63fdddda077",
+      "domain": "airline",
+      "task_id": "27",
+      "input_sha256": "f56e73f7078675949add4c8d81c26c8ea09973c1f3aacb432d1a6fb09e89a25f",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "68989856d64b11ada169dcf9",
+      "domain": "airline",
+      "task_id": "28",
+      "input_sha256": "306bf4e463fe5dd6b6257291a326916122f838e929e154fc1f3dc89a586532a2",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "32af848964a7e615a9a01c06",
+      "domain": "airline",
+      "task_id": "29",
+      "input_sha256": "81d94b8b98d8d0770402617ec1deaaf913b5ff32af8a85fa9443f2598e9d911d",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9802310779faee95d933d75b",
+      "domain": "airline",
+      "task_id": "3",
+      "input_sha256": "e1a854d6d2f308348847dca4318d8a493ac2a5d9efab5717ed50e16405c76076",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "eaa5df2ed6a8b81d2fe705d7",
+      "domain": "airline",
+      "task_id": "30",
+      "input_sha256": "57a8488aa56bce230fda55548734acff131abf0c973b5ed30dc6736b1e4e2a8a",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "e879381640cd9b685a20c368",
+      "domain": "airline",
+      "task_id": "31",
+      "input_sha256": "2243d21810d66ccdd583c5373abfa35abead32b10dcada55c61512035bad520c",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c2577f7fa911cb487e2c6a4f",
+      "domain": "airline",
+      "task_id": "32",
+      "input_sha256": "2804e9761454d5f6663a4055f0a768d6fcf717bd189c25e70e17ef0c80053bfa",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "e072b8b362034d5b4469c599",
+      "domain": "airline",
+      "task_id": "33",
+      "input_sha256": "4bb477a2863eec487bdce1ed9645dbb4caf650e5a9014533e7f353ba2877b561",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "60158d81d71cb89f3d4f90d8",
+      "domain": "airline",
+      "task_id": "34",
+      "input_sha256": "851b8e106049d181c2873793f8af9c5468aba58315efd415fd893dc71740c849",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "290fed39ac5bfe9e92056441",
+      "domain": "airline",
+      "task_id": "35",
+      "input_sha256": "f11fb66ffeef9115c43af21d5cc4025ee307c5f18fad99108c636e4a60f4d152",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3b9aac219c1cc123ba4793cc",
+      "domain": "airline",
+      "task_id": "36",
+      "input_sha256": "619cbd5423955bc18f5ba0cce0c795501ab64cec63913e8ff41b2a1ebefd0c4f",
+      "score": 40,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5f85bda4eb9a8ab42fe50862",
+      "domain": "airline",
+      "task_id": "37",
+      "input_sha256": "d0231eec2869f56fdafcfb8debcbcdef8ba40c81910cabf1dcc766281c63471e",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "77d53b8595bac76a64a870be",
+      "domain": "airline",
+      "task_id": "38",
+      "input_sha256": "cbe2b7ff8717fad3d70483a398f8b29d186f71007e57c2a7e7a3472f03c4956c",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b8f68cdde3eb65aa2a77e3c2",
+      "domain": "airline",
+      "task_id": "39",
+      "input_sha256": "6ccb154c3fd0976087b425e0831470dc37f614b6d89d4367b75dca406feb6225",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c391b41ba15c062016bae1e3",
+      "domain": "airline",
+      "task_id": "4",
+      "input_sha256": "3436c1260325f7ae23e9fa779d0587268281e56c86dcb5d0c7cf560958d4accd",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "36974a35c9bf8a1f7b7b9103",
+      "domain": "airline",
+      "task_id": "40",
+      "input_sha256": "aef0a31fa7cee3a19828a2f3589d6e426240cb4daf086e1ce4aed42005626ab4",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "abfb51cb75c3bfe1cd40c061",
+      "domain": "airline",
+      "task_id": "41",
+      "input_sha256": "d752166729c63a1831cd7c50a3071f41905aa3f5674885f72bee7417b581513f",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0bf1d729badfeddbeaf0e813",
+      "domain": "airline",
+      "task_id": "42",
+      "input_sha256": "0713674b5509b89a9bb92c47f97f66a6236a81ce34c71f8f8df17be5319c15a9",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5129537d29b9323d1dba61c5",
+      "domain": "airline",
+      "task_id": "43",
+      "input_sha256": "c6dae697172fcd4b8108a0395a1f8ee673a55f10f6275514377f805cf6091451",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "dba996935d3d59ac08a5824b",
+      "domain": "airline",
+      "task_id": "44",
+      "input_sha256": "254ddbe65e7e19a0c2530239074c91a2939895167edef5eaeedcb8ed42042de2",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7950300632b0095b26e3e698",
+      "domain": "airline",
+      "task_id": "45",
+      "input_sha256": "5c98914c80a433103c9425d35dfce4191c58f1dad2435cbe6b1de0310e4f1cfc",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4195849d9fa77277675a6884",
+      "domain": "airline",
+      "task_id": "46",
+      "input_sha256": "c48c35d7ee6349824339aaf97499db0dbd611a1f6c13a5474d8ea3e2a02d8ce4",
+      "score": 30,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f688a88a8d6335e6eef5262b",
+      "domain": "airline",
+      "task_id": "47",
+      "input_sha256": "cdf3716a70976f58271df7ce2ece55b1993f6eaea820107f57831cae0696d0bb",
+      "score": 45,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "90346c97fc3adf63e3d5f64d",
+      "domain": "airline",
+      "task_id": "48",
+      "input_sha256": "0c124f8f335827108030dfa19f29ba890cb621fd3a75e723dd0627796a51ec16",
+      "score": 40,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "77864a1d272d313619916140",
+      "domain": "airline",
+      "task_id": "49",
+      "input_sha256": "d9f6df463e867da2eb822d47de8bb035ec908589d787d9adee21e5db2d141794",
+      "score": 40,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f1d565b1a144016477eb2edc",
+      "domain": "airline",
+      "task_id": "5",
+      "input_sha256": "086b9a6bbf7e692cb65f55d9fed01479a6c15153547d924c965ca8a50ed5d9fc",
+      "score": 40,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f59701d48b8bfd1ecd325ef6",
+      "domain": "airline",
+      "task_id": "6",
+      "input_sha256": "4058f6c4bb3991452491ba84659c3afa1fc8b6f53938068b2427fb7613f46d76",
+      "score": 40,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "46da96cf6eaf6244864be6fb",
+      "domain": "airline",
+      "task_id": "7",
+      "input_sha256": "9caa9e0123199f9e6485c13fa7a530afe491b9c8f0708f2b3ced7490cb130b10",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4c357bfe7e224c70f0ef1577",
+      "domain": "airline",
+      "task_id": "8",
+      "input_sha256": "5e8e2e71f46f8a14b3d73ad56a296c8f41e5fa7850451d0dec4e1a9824856cf4",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1e721f8d0a48b2968420e23d",
+      "domain": "airline",
+      "task_id": "9",
+      "input_sha256": "b633c0c944b7e016aedc6065ba72adfddb9660ceb11ce64dc791824f474e010c",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7f06f0875f72dc02bc3da2d7",
+      "domain": "retail",
+      "task_id": "0",
+      "input_sha256": "ad30c90fff5f152844209b2e9c193bda4dcc7e13c736ae10b458747a0d6ae83c",
+      "score": 66.66666666666667,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5a34b26f4e3e3aeb523654f0",
+      "domain": "retail",
+      "task_id": "1",
+      "input_sha256": "d5882c6b171dddd2ff98e83dc961d49aa85f803089dee037327ccbd39c831fc1",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "8b4afcd1f9114ea5823beafa",
+      "domain": "retail",
+      "task_id": "10",
+      "input_sha256": "cdc59e743575e741bef81deadfbbf81bb931021ba0a67bcffb1f2c272af38cd2",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5babc117df2f5339b49a44f5",
+      "domain": "retail",
+      "task_id": "100",
+      "input_sha256": "5e28200ab76681d76449af0c3a4f07af7028f54a98458ad4e32931c922293fb9",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f8dc7df860e91d4caf0ed328",
+      "domain": "retail",
+      "task_id": "101",
+      "input_sha256": "1532ae3ea9af31e769a85165d8b2f93d1911c7a1d4ad763ac81d69f6df010425",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "983a1b3ff6855c114e476217",
+      "domain": "retail",
+      "task_id": "102",
+      "input_sha256": "ba9238943175e401881509db6aa1a71ecefeafc566198d3dbc18cde59937e938",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "857a80159c7047d70d93f5a0",
+      "domain": "retail",
+      "task_id": "103",
+      "input_sha256": "4865b426d32e5df63fb3eada8a55ac5856c30e30d69ad72eca59a5efaf8253fc",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "183e62428f6b311559aee783",
+      "domain": "retail",
+      "task_id": "104",
+      "input_sha256": "ab4ca392eabd393cd89b58b32f4237159e25da629a4512b2ddafd642aae3540a",
+      "score": 85,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5c98b96f208ea0c370566a7b",
+      "domain": "retail",
+      "task_id": "105",
+      "input_sha256": "66a8f1a5331e83213eab3806655c6b291a490902773636a8080b327ee437d3af",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a1997a4a1505718cb3a2f6c2",
+      "domain": "retail",
+      "task_id": "106",
+      "input_sha256": "b27a18e5218f9a1fa6a1f09ff88bb6c5a28c64210c0d161eb01895a330a1e533",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2aa74102d9e3011cd0032533",
+      "domain": "retail",
+      "task_id": "107",
+      "input_sha256": "f3a3b69c8dda395cb414f270af415f5366e6aac8ae6a1556aeca58a4e6ed5136",
+      "score": 75,
+      "status": "provisional_complete",
+      "features": {
+        "proposed_operation_unit_count": 12,
+        "business_check_groups": 5,
+        "distinct_coordination_events": 2
+      },
+      "documented_partial_counts": null,
+      "annotation": {
+        "case_key": "2aa74102d9e3011cd0032533",
+        "input_sha256": "f3a3b69c8dda395cb414f270af415f5366e6aac8ae6a1556aeca58a4e6ed5136",
+        "status": "provisional_complete",
+        "scope_rationale": "Two delivered-order exchanges, with the allowed boot fallback replacing the prohibited same-option request. Separate per-order writes/checks, grouped shared discovery and payment collection.",
+        "operations": [
+          {
+            "key": "authenticate",
+            "description": "Authenticate the customer using name and ZIP",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "At the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code."
+              }
+            ]
+          },
+          {
+            "key": "orders_read",
+            "description": "Locate and retrieve both relevant orders as grouped discovery",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "Once the user has been authenticated, you can provide the user with information about order, product, profile information, e.g. help the user look up order id."
+              }
+            ]
+          },
+          {
+            "key": "boots_delivery",
+            "description": "Verify the relevant order is delivered",
+            "business_check": true,
+            "rationale": "Different orders require separate eligibility evaluations; fields within one order are not split.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action."
+              }
+            ]
+          },
+          {
+            "key": "puzzle_delivery",
+            "description": "Verify the relevant order is delivered",
+            "business_check": true,
+            "rationale": "Different orders require separate eligibility evaluations; fields within one order are not split.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action."
+              }
+            ]
+          },
+          {
+            "key": "boots_variant",
+            "description": "Evaluate the prohibited same-option request and select an eligible fallback variant",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option."
+              }
+            ]
+          },
+          {
+            "key": "boots_explanation",
+            "description": "Explain why the original same-specification request is disallowed",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof."
+              }
+            ]
+          },
+          {
+            "key": "puzzle_variant",
+            "description": "Select a puzzle satisfying reduced pieces, unchanged difficulty and clarified theme",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "scenario",
+                "excerpt": "You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+              }
+            ]
+          },
+          {
+            "key": "payment_method",
+            "description": "Obtain the payment method for the exchange differences",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "The user must provide a payment method to pay or receive refund of the price difference."
+              }
+            ]
+          },
+          {
+            "key": "boots_confirmation",
+            "description": "Confirm all exchange items and details for the boots order",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          },
+          {
+            "key": "boots_exchange",
+            "description": "Request exchange for the boots order",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "reference_001",
+                "excerpt": "{\"action_id\": \"108_0\", \"arguments\": {\"item_ids\": [\"1615379700\"], \"new_item_ids\": [\"8106223139\"], \"order_id\": \"#W1304208\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+              }
+            ]
+          },
+          {
+            "key": "puzzle_confirmation",
+            "description": "Confirm all exchange items and details for the puzzle order",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          },
+          {
+            "key": "puzzle_exchange",
+            "description": "Request exchange for the puzzle order",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "reference_002",
+                "excerpt": "{\"action_id\": \"108_1\", \"arguments\": {\"item_ids\": [\"6245746168\"], \"new_item_ids\": [\"3112842858\"], \"order_id\": \"#W8353027\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+              }
+            ]
+          }
+        ],
+        "coordination_events": [
+          {
+            "key": "boots_authorization",
+            "description": "Customer authorization for the boots order",
+            "categories": [
+              "approval",
+              "external_response"
+            ],
+            "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          },
+          {
+            "key": "puzzle_authorization",
+            "description": "Customer authorization for the puzzle order",
+            "categories": [
+              "approval",
+              "external_response"
+            ],
+            "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+              }
+            ]
+          }
+        ],
+        "excluded_work": [
+          "No new replacement order: the exchange policy explicitly says none is needed.",
+          "Automated return email is not an additional agent-send operation.",
+          "A single shared payment-method collection is not automatically doubled; no gift-card balance check is selected for the documented PayPal path."
+        ],
+        "uncertainties": [
+          "The subjective fancy-theme preference needs clarification; its exact conversational turns are unspecified.",
+          "Separate per-order authorizations may be collected in one conversation turn; event counts describe obligations, not turns.",
+          "Source operations are grouped conservatively and are not exact minimum tool calls."
+        ]
+      },
+      "source_bindings": {
+        "scenario": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/user_scenario",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        },
+        "initial_state": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/initial_state",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        },
+        "policy_1": {
+          "path": "data/tau2/domains/retail/policy.md",
+          "locator": "whole document",
+          "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467"
+        },
+        "task_design_notes": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/description",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        },
+        "completion_design": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/evaluation_criteria",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        },
+        "reference_001": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/evaluation_criteria/actions/0",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        },
+        "reference_002": {
+          "path": "data/tau2/domains/retail/tasks.json",
+          "locator": "#/107/evaluation_criteria/actions/1",
+          "sha256": "8e03ebce7901bd6218e7a7dc3105faa9324091a68058f7fe61c65262868812e8"
+        },
+        "tools_assistant": {
+          "path": "src/tau2/domains/retail/tools.py",
+          "locator": "@is_tool method signatures/docstrings",
+          "sha256": "34f4fe9702d36f0dd4697700fbcd63d0cf5386e6eb8e7499aaa336243bad8750"
+        },
+        "initial_record_000": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/orders/#W1304208",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_001": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/orders/#W8353027",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_002": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/products/1075968781",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_003": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/products/1808611083",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_004": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/products/1968349452",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_005": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/products/6819683148",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_006": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/products/7233192239",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_007": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/products/7363354090",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "initial_record_008": {
+          "path": "data/tau2/domains/retail/db.json",
+          "locator": "#/users/yara_ito_8499",
+          "sha256": "413a65160adbdb5fde0ffc0015c49b6d70250b10c18128de169b597af7766765"
+        },
+        "types_data_model": {
+          "path": "src/tau2/domains/retail/data_model.py",
+          "locator": "whole source; types only",
+          "sha256": "f5ad09590953855cc49d2ab2ad5c0594be408cae74d1500fb278e5a6bf2c50d6"
+        }
+      }
+    },
+    {
+      "case_key": "fc84d6699348ab707195e7db",
+      "domain": "retail",
+      "task_id": "108",
+      "input_sha256": "9bdf28a746cc61aa8bf8bf7ef1561f1e95f328ce331e690919abbb2974541066",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6c64488d90f055efeb14b4ee",
+      "domain": "retail",
+      "task_id": "109",
+      "input_sha256": "1496e7e8cb6ced6527b3a75255d9cfaefb91701e433610512eacca4d6e176f85",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "092c577ed62688e8e4b585b9",
+      "domain": "retail",
+      "task_id": "11",
+      "input_sha256": "fdb383ca07f55aad3ccf1a3ff4a95e72bf5f967446c93844d8504dec4a0eeba6",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d73ecdd7847a0cd9127b552a",
+      "domain": "retail",
+      "task_id": "110",
+      "input_sha256": "e5a3eff7ffb92c830cc85f7996b8fa71ccea47a00d69f31d3a041a500fcf92ab",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b1bbefe88b7fef77aeb9c323",
+      "domain": "retail",
+      "task_id": "111",
+      "input_sha256": "5abeebba7664804da178335a27d4417e5a25af78990a79a75a7e26bf643d66b7",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1c8301dd145323a24ea61655",
+      "domain": "retail",
+      "task_id": "112",
+      "input_sha256": "fb45f30a86fdb2cc9259a99d402f59ecf14e6f69be7ec342894b7a7c5bed0eea",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a1fe5ee804164fc69d4c86e4",
+      "domain": "retail",
+      "task_id": "113",
+      "input_sha256": "ddae81b4440c3eea24a30e29985a535bff711b9fc69b0b17d3821da630b9fe8c",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "cad1ce5aef697f8e9080c854",
+      "domain": "retail",
+      "task_id": "12",
+      "input_sha256": "68dcf953f950068a2f1b01fc6c6bb849e375ceaf8712a98016cc235bd4272967",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a42dc66fb6c779d730efd397",
+      "domain": "retail",
+      "task_id": "13",
+      "input_sha256": "85f9747be80b8f93d660af70b785444d25894b9e1024b1cf41ef1f2074c5aa8b",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6ad7fcddc3387e2db7a82eaf",
+      "domain": "retail",
+      "task_id": "14",
+      "input_sha256": "9412cf598cb3ffc7cc4296dd10e5cb5f66943767e1d3dc09be599603846dd8ea",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1a27c56ddc7bf584196f9095",
+      "domain": "retail",
+      "task_id": "15",
+      "input_sha256": "5c9a5303d8042ba47b2c15c54b0ba7462b669a37ffc8ce3f6631fa9a12ad5c2a",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a8d6266c20ef2c78127ff8a4",
+      "domain": "retail",
+      "task_id": "16",
+      "input_sha256": "e23098702bf9240462eb9db56202e06f869fd241e66d3e2f2fe1953e8803cf61",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0313170f4bb326354043fa26",
+      "domain": "retail",
+      "task_id": "17",
+      "input_sha256": "0adab458f159b997995dd52d067c1004a495adedcf1f2358cdc3a4dcd6107ace",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "386334e62190d4cd7b393191",
+      "domain": "retail",
+      "task_id": "18",
+      "input_sha256": "e522fe0f29b907abed662299fc8ab647dba1e2cfdf3b3c5a05418a8c3f7ef42a",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "56d5118f55558d509f75caf5",
+      "domain": "retail",
+      "task_id": "19",
+      "input_sha256": "a1914bf0b4d1d8fad5e6307bb03531bd6492a2aceb0522025557fc6a14fb855c",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "de6d40db385a67a755c95cfa",
+      "domain": "retail",
+      "task_id": "2",
+      "input_sha256": "7c6becbc3b1164596ab03c63f3601db60060477f189e79177718fdccbd504293",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3fd829bef568757f5748302c",
+      "domain": "retail",
+      "task_id": "20",
+      "input_sha256": "58dc8b300f1391298f12469139cd265cffbeb30b9768479edd2f0665eb86bb77",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "22e61b3f515eaab982365900",
+      "domain": "retail",
+      "task_id": "21",
+      "input_sha256": "8143299313d9218b7dd74c8c7da3ea6632296e6236eeca86efda66e133261ad6",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f602e440878e54a12dcb34ac",
+      "domain": "retail",
+      "task_id": "22",
+      "input_sha256": "46c60a3c38fa8b01d9a849e60cbf709006719335fd20cefb699339b9dfde8a91",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6abea04ea815462da28fe332",
+      "domain": "retail",
+      "task_id": "23",
+      "input_sha256": "4d102eda43494ac34711128bd77bdd4fbaae7d002bbd8ff7c49fcb544c4066a8",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "dbd4d184920f2cdced8fd12a",
+      "domain": "retail",
+      "task_id": "24",
+      "input_sha256": "71fb99ca4b36f9fc9a7891880b6e688775c463c36998be67d99d1bfc1a3bff32",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c5653310ba68f26d18e241be",
+      "domain": "retail",
+      "task_id": "25",
+      "input_sha256": "b0b6792159f8dffaad1d50e9e2fee17801ddac6efcb082b1185d802dcf973f18",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b8266c3afb8cad868d6f9708",
+      "domain": "retail",
+      "task_id": "26",
+      "input_sha256": "ad48f38c4b04a2e0b1d8dacf641c7701ad9c9765be3b420712f173c1a499741d",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "42e84b46cd9df3f5874ce6aa",
+      "domain": "retail",
+      "task_id": "27",
+      "input_sha256": "90b149868cf197e5a38c2a45575b229ffd4917ac92aba747063453a1caa39668",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b8d5eb7af542e27c84e0919f",
+      "domain": "retail",
+      "task_id": "28",
+      "input_sha256": "599f0fc51c57fbecc113b583a0cb47445b04ef23d9e6121478e6d7362d3fcb08",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "28aad677e3656fc3e0034b27",
+      "domain": "retail",
+      "task_id": "29",
+      "input_sha256": "239685aa035e8f317677884b638a30009ecd61d76099d90a3b0d3536720be470",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d5bae10cd4805380c4bf7dd2",
+      "domain": "retail",
+      "task_id": "3",
+      "input_sha256": "d65537a5f7bd2dbdc649d2deaa283ae5ba94da18d46d96777bd9c609848d1de9",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "552da67590ed2a4f623e5d11",
+      "domain": "retail",
+      "task_id": "30",
+      "input_sha256": "db8c00244b6dfd2116f25d8595d3221201a23c9c3a929093467f5e0edd3eff42",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a5b98381e82ed08fbacad849",
+      "domain": "retail",
+      "task_id": "31",
+      "input_sha256": "36409b8c724cd544b953f373a08d5847ad1f0aa60cb27ab079c130f8489f0c71",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a504879c1b97245f49328d9a",
+      "domain": "retail",
+      "task_id": "32",
+      "input_sha256": "e4f028eaa9adaa08878ba9ae9826e08aa09482f92ef91e6dfc6bcba61a3603c0",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a6b4ff091bb5112f4d335c54",
+      "domain": "retail",
+      "task_id": "33",
+      "input_sha256": "1b0e26928925d711653b145f5fc854db2e5cb3a7c5c62fcaf204566755c27a23",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "114ad4762ee1faea710908a7",
+      "domain": "retail",
+      "task_id": "34",
+      "input_sha256": "e8bb8082a0ec5e5aca714589433b9a746a5b216a2cdb4e1afa2c4a597114b32a",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c29e14d9165f92b2525d1f84",
+      "domain": "retail",
+      "task_id": "35",
+      "input_sha256": "760f8cd33564f1f2203c18f99fa9d3276e04d925810e854b7cefa12269e11440",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "e6e968120ecbf4e4bf96ac77",
+      "domain": "retail",
+      "task_id": "36",
+      "input_sha256": "7cefa6c5bd637c06316a928225262903efe478e44336d00138eb670fbb2dc70b",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "afc5f7116536d70a27951110",
+      "domain": "retail",
+      "task_id": "37",
+      "input_sha256": "7ea65de216eb4ccf5031c9412e433717857db6a9b7c1b2b4162e9c054e847c66",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "267581b5fb7ccf0f76674ab8",
+      "domain": "retail",
+      "task_id": "38",
+      "input_sha256": "570837940e2158e48cf48099d6a391ed43d90021ca9139b4d46e3749717fca8c",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5aa1b72cdedec079ccd3f33f",
+      "domain": "retail",
+      "task_id": "39",
+      "input_sha256": "a3517c8d58867c76df74e9f82aa3f6977888c1bedf1cd9a01787041807836b87",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3524ee91abe306bd6cd2336a",
+      "domain": "retail",
+      "task_id": "4",
+      "input_sha256": "f63e2ca6f9136b33bdf05f4d36518b943ed8673f6d46f5f7f91ccf008f937e72",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "754f44ace346ca9a30abea18",
+      "domain": "retail",
+      "task_id": "40",
+      "input_sha256": "6a4bd613439afd81dfc4ef4367dd2d44f90c84800acb0cfb9a20220ea96efb6c",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7018026dc4174c8ce0cb7bbb",
+      "domain": "retail",
+      "task_id": "41",
+      "input_sha256": "94a4c04b79afdbed7e9d9508d601b11b440e69aa16ded805b9b3cfcbb45f2c7f",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c6df8588dd5c0b6023519d85",
+      "domain": "retail",
+      "task_id": "42",
+      "input_sha256": "5f0ad0fb125a121a0824640bf3142b1cfbd2074fef5f67d559ec646b27bc48fa",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6b75001517d371948542e80e",
+      "domain": "retail",
+      "task_id": "43",
+      "input_sha256": "d6591ea498313b3e33a23083e643f2943ce7e56a78c7819f05ed4abb87a2bfcc",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4412244ad36b96f45d8b2f2b",
+      "domain": "retail",
+      "task_id": "44",
+      "input_sha256": "cd707c5c01be39116665b23555228c4284e24b815c165341f42e81e8d9fa4a56",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c61e73efec095349115c33c4",
+      "domain": "retail",
+      "task_id": "45",
+      "input_sha256": "81d44695a4f0f73cb417bc69c945ae204bd4c763b30ca1c8c72e7bad88513c58",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "867e7aa94da7edd91e8fc02a",
+      "domain": "retail",
+      "task_id": "46",
+      "input_sha256": "ab2c3ce88956451be26c4ef8f4a3604762346a13c18bbe86212940ea4570a430",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "879f834c303065baf36bf9d9",
+      "domain": "retail",
+      "task_id": "47",
+      "input_sha256": "3c2a8e8feec0ea4db65beb07f51215b518ff6df316d45cfbe7ba76e23ba02c08",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0bc7eada11ce6a29892854df",
+      "domain": "retail",
+      "task_id": "48",
+      "input_sha256": "2030a9341f021bde0c4a3306752f22f8531f12fccd25b854c33e2fee99de6877",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "95f53ffb0562a3ab50265171",
+      "domain": "retail",
+      "task_id": "49",
+      "input_sha256": "51cc1c17e52650586bdc17ea4b37a315329c6768dd7b6bd5947a9c4038be47f5",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6afd82ba4deb8cd3bb7c2c51",
+      "domain": "retail",
+      "task_id": "5",
+      "input_sha256": "a397c523db2ef9de2b16b35591dff6eef99f9f97588554c73be30a760d3a997a",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "cfc85e691af48e93f6cf9f19",
+      "domain": "retail",
+      "task_id": "50",
+      "input_sha256": "7d77936c5157adc56038d3d019c9d7bcbf8bd12d54bdb3fff22bbe0e2a6082ad",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ec68bba2fc5b7cd6d19d4e8d",
+      "domain": "retail",
+      "task_id": "51",
+      "input_sha256": "2d24c46a3013af2099ca645ee0ce813e7068427cc4ce3187f55579b1d464db74",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a68965936117b346a8031cf2",
+      "domain": "retail",
+      "task_id": "52",
+      "input_sha256": "52ca69fd2550d5ff42a5f1a8836979941a90eabb379cd03e082a634db1ce72e8",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b109d379483418c10291ea3c",
+      "domain": "retail",
+      "task_id": "53",
+      "input_sha256": "10f7d35ba98741b6e2e6c78e5517571532077f49b38fcbaa6871dc8fd144482c",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9b4f1c57bf529f8aef04fa25",
+      "domain": "retail",
+      "task_id": "54",
+      "input_sha256": "954ef0a9b161338bde90c8d996dfe494fb1e7b23dc63f9c6800e4cd480a2f71f",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "38200dffd675229a41ee5846",
+      "domain": "retail",
+      "task_id": "55",
+      "input_sha256": "916dae070e439478b287534f80a17ddc98782e5076dc990684d193451eba0606",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0eb7c0a00874db0fd42b1950",
+      "domain": "retail",
+      "task_id": "56",
+      "input_sha256": "9ba7549fdf28b0a2872efdc03e3da803d77ed1f8f65d929371986a1904c83eb1",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c7dd7d1c9a7b77af5708172c",
+      "domain": "retail",
+      "task_id": "57",
+      "input_sha256": "c898f1c7037d3510ea30a7f7ea97f543774e315c7439ab4258348fe1c6f7b340",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "bbce3daa52583c7dc974c9b3",
+      "domain": "retail",
+      "task_id": "58",
+      "input_sha256": "708788b3e1e3b6a162fa3201e3a0388d1b765d2ea34f223c4c2464b1c2ad23d5",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "fbc6d7abbe60e2fee6b04c49",
+      "domain": "retail",
+      "task_id": "59",
+      "input_sha256": "33ba3ab4405d507d0d81e17bb59337363115d7e3d077fa94bcdb2afad7f0f0ca",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a29f33c29351cdd1b4cf03d4",
+      "domain": "retail",
+      "task_id": "6",
+      "input_sha256": "df2ec29fbfc2a818cb887f306d45b3a345267c8e6cc491c5e49179c7b0a3feca",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c2a7c4fad585f581603f99c0",
+      "domain": "retail",
+      "task_id": "60",
+      "input_sha256": "a2c35b2b1eacd3f4d705c786c61e40d52fbd1e3f4ae07324b787ba7febf9dd6b",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "dedd117d96a8476a79fb0e4f",
+      "domain": "retail",
+      "task_id": "61",
+      "input_sha256": "0d82a04fa00598a052a32cc48e41c5419bf1cb31e928eae5191f3d3339a8675d",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d78cd9989a5c458bf5ef2d0b",
+      "domain": "retail",
+      "task_id": "62",
+      "input_sha256": "16f78a962d092dfe99514f750243c3a03877f1cb0ef9c124e1012e5fb2e4c1b0",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ead4c8b25640bdc97948c250",
+      "domain": "retail",
+      "task_id": "63",
+      "input_sha256": "3f177c8a780d9ff12c1ddb45d74a276eaa96faa5843d94dc4415d09a836ed280",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d0d4ff59f2a1f72911d01297",
+      "domain": "retail",
+      "task_id": "64",
+      "input_sha256": "3264a45e74e21084e6ddca6ae90660d92f20c930f341e130cae3049048ae28ef",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9b421af7909abee4c2c29daf",
+      "domain": "retail",
+      "task_id": "65",
+      "input_sha256": "1f28014631ff5d673b71c5066ac5b8ac9fca135852cfc1edb16fbe9689ade729",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f83d8d4aff1601e6b7127a50",
+      "domain": "retail",
+      "task_id": "66",
+      "input_sha256": "373df821ac704c167ed7c951ff6733c942e654ad15558c3c487c8e03916007f5",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c5b04f16aa1c02684ad2b2cb",
+      "domain": "retail",
+      "task_id": "67",
+      "input_sha256": "221a306660c02015e4356d40f3c2d8726b87637d19020924ecc1a7fe6afb16f4",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "cb22738a04f684975469183e",
+      "domain": "retail",
+      "task_id": "68",
+      "input_sha256": "1985f5d1317f2fdf3e15ff57ed9462556081c5d79a0f5ab7c5ff5e0ef01adfe4",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "306ed98fbd698aaef9d4849f",
+      "domain": "retail",
+      "task_id": "69",
+      "input_sha256": "41b77a48463bba0aef8783e7a56b84decea5b193a462f91191116ac4a7f4b694",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1ae972620d978a8bafd6181a",
+      "domain": "retail",
+      "task_id": "7",
+      "input_sha256": "b03858f6688e10b91eccce8610ccea2176e5a3eea31fefc8f76ae7ab85d58f4c",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d60ac0780c088f8d375ef3c8",
+      "domain": "retail",
+      "task_id": "70",
+      "input_sha256": "3945ce3fcb93247cdfb3f835b5329860b824364b02a3e88888f09ad64488e432",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ef8bc420b45dbb612861a41c",
+      "domain": "retail",
+      "task_id": "71",
+      "input_sha256": "4870866b7cac0d6356606c3e6a142f1fba5f376bc3362631da466865b95a12eb",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "238db86624d0d25dab24beee",
+      "domain": "retail",
+      "task_id": "72",
+      "input_sha256": "42696235a892b771bca59a52633119c7a9a9f6a17130e99abadc0e60861b1497",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3c08aea6fbb4d9440d185df1",
+      "domain": "retail",
+      "task_id": "73",
+      "input_sha256": "4909c255a08e28663be83c968f0feead9af088539653e273e3102e584c04431a",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "53645445eae3cd653a801236",
+      "domain": "retail",
+      "task_id": "74",
+      "input_sha256": "433172c4cd31be8030053360ad3aa2471cd25166145389911f8a3793e34bbeaa",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "733d9c09a2b97c06eb40c9e6",
+      "domain": "retail",
+      "task_id": "75",
+      "input_sha256": "b045b3a77a216b8f1d3e110b29f85db552f4447b454de8393799038c2bcfeab3",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a40c75cccb312707221effd8",
+      "domain": "retail",
+      "task_id": "76",
+      "input_sha256": "703b0d265201f69aea0f5e1efebc234ae2e504c57b62e8731b93523f9a9ce614",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "15cbb20537491c6e3165bc73",
+      "domain": "retail",
+      "task_id": "77",
+      "input_sha256": "3a466ab0b77930a7020ea46c82aa87ae0def16c90ee484ed6cc78184c8262879",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "8e9200cacda94840ce54f461",
+      "domain": "retail",
+      "task_id": "78",
+      "input_sha256": "095c2a78e3aec91d60332fcbdf20b680c89f18c3af0d06b633ebd2fbc5e53b46",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "58ffe0249741555b3b9f29fd",
+      "domain": "retail",
+      "task_id": "79",
+      "input_sha256": "cc7605d30b65f0865aea90b0b157c969291b643d9baf54516d396b9217991cd8",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "26c14d37333315c8921ec5fc",
+      "domain": "retail",
+      "task_id": "8",
+      "input_sha256": "f4cfcd54e5d09d934d85feb7735e5c392604e26641791e2f7b7f35aa60350582",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "613d8050043d69fdaddc65f4",
+      "domain": "retail",
+      "task_id": "80",
+      "input_sha256": "acc45c151034b79b299e3cb42bbf314c1960a0b28d255f061614036989d315a0",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0f8d959b4818117dc693a28f",
+      "domain": "retail",
+      "task_id": "81",
+      "input_sha256": "90bfa2a6bedbf7b0e7feabfb99f5fc7c38752077869d670b6f41ed51b84c83a3",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4f7399cff3e423339cea325b",
+      "domain": "retail",
+      "task_id": "82",
+      "input_sha256": "f503eda5d6871c6cd9179d23cd61933d81d100ddd1fd76c255467310aa44bbcf",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4dddfaa6a44461393a02c889",
+      "domain": "retail",
+      "task_id": "83",
+      "input_sha256": "72ab59bb2a28aaae03b03ac0514a1b3c36e4650fb131753a4436e3db3b5949fe",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "571a89e748d62d5500df9e70",
+      "domain": "retail",
+      "task_id": "84",
+      "input_sha256": "faa76b1e32a76974ddf2694a6d95910874d94072bd4bdd24f96cf82714c1c55f",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4c1cafb469c019ebd20d4321",
+      "domain": "retail",
+      "task_id": "85",
+      "input_sha256": "1dc4c9fc3de509a7d62a382ff6e5bf5f3197b0927d1f88fa478a242fb7746c0b",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7370a132053cff4f1c0786b2",
+      "domain": "retail",
+      "task_id": "86",
+      "input_sha256": "230fd6cd69e9c2a7346c22b5a4199ab79a47ba5038726c96eb5867a1194a5551",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9934c225dee62084bb62871f",
+      "domain": "retail",
+      "task_id": "87",
+      "input_sha256": "ecea0810486eaa1e5912a547613909a4c72bbde97639b941ffa56c024815c1ae",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c0cbd16471f34ff5e2c84b86",
+      "domain": "retail",
+      "task_id": "88",
+      "input_sha256": "1878cb5610a680d5de27c17a0aaa93522486031aa122df8225abdbaef8b3a6ba",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "78175995005069fa0be48a39",
+      "domain": "retail",
+      "task_id": "89",
+      "input_sha256": "641773805394d46ada417afa50f3374dbfa6d9dcb91e152cfaaf0ce84581c83b",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ea5e8e6f76676f4796e1e9ef",
+      "domain": "retail",
+      "task_id": "9",
+      "input_sha256": "182d5e5e00d41c2be4007a08e337742ff34557ae7a61467f2c7a321d6c8fb6fc",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d8a9ffba81af4a82435cd640",
+      "domain": "retail",
+      "task_id": "90",
+      "input_sha256": "8a876d62a89d17e21e87af69839e97326034098faa996eb4ee84afbf721e5244",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "30d237cef2b20c5e7aeee4a1",
+      "domain": "retail",
+      "task_id": "91",
+      "input_sha256": "0ea74f5ff115705e9be54e288b290f716f742e7fceef62b04940d434556e1966",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b9b1ac56a44dd399a983dfa7",
+      "domain": "retail",
+      "task_id": "92",
+      "input_sha256": "19b8b987ec0b0dc1e10afbaa1d7fedad347227bdc1c5e7bcd906ef3a950050b2",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "86a3b756833f80737c51f475",
+      "domain": "retail",
+      "task_id": "93",
+      "input_sha256": "bc50d1d5e8dc96b3d235e982f2a8910891c9af2ad4bc067af9a7eb7acd019b9a",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b6a72cab01f4436412b89a0c",
+      "domain": "retail",
+      "task_id": "94",
+      "input_sha256": "ac8fddbebb279ab01b4edff7cc876bb0b893a8bb24ecfdd22aacd88514761875",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c17d97258e5a66ed31d5d859",
+      "domain": "retail",
+      "task_id": "95",
+      "input_sha256": "a45a154b71455b3d07084bc47bafae67d9ad1bdcb2201a74c34a4ba0d9c662ee",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d0a6f4cce575fc1ef032e7cd",
+      "domain": "retail",
+      "task_id": "96",
+      "input_sha256": "298fa236b40dc0e3ee9aceee9f83d37357605345c421db3ccb587edc660eec05",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "8cfe4cf3dabe26555f769223",
+      "domain": "retail",
+      "task_id": "97",
+      "input_sha256": "e7400a6d0d3923bef6f6b57b29dddf7712bc4760f5a33af4f6df2e36cfd3c9d7",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "21ee13aabf46595d55e9dd98",
+      "domain": "retail",
+      "task_id": "98",
+      "input_sha256": "ff7827a9d343e77597585c2e7377922eb0b667febe24d84f310813054fac07ef",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6ce76ef65271d7ef58a87ef5",
+      "domain": "retail",
+      "task_id": "99",
+      "input_sha256": "0503ac56733c214c61214d75ab72a684169da98ab384f4c51a962e2ce55f4077",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3977fec8216115f983cf1d80",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "input_sha256": "e6ac13c2c436c7e61cd3b8fad48756eb0e6052a66224ad148f6fd2616c43a59d",
+      "score": 85,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "3a03a1c064828f22f3ba9a11",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "2f120a44e913e81a66b86bbdd0f9d6e70fb6092386af9e0184b307ea54340327",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4c21bbb95e23486f198234e2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "input_sha256": "ea51f5927fff9ef05d909108fc438bea83130b44e62f4fb8d8aba520e078deb7",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "99c7ef372d82918dbbecce77",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "ac3deb22f16ee285eea8281ac8b8b91fc62f17e83639b30ec09405b926d0f90d",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a3fe4952a055ad6baa1a5690",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "input_sha256": "a2a407dbc5d3372d32316108d1368e50b642b9e95b94dc5189b5d55b3c855e8c",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0fbc619244a61787a7837c9b",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "7d4af14261f21eb4c650011835de1d5d6b15e4e9c5227c1ab21d2a457a715b98",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "36ebaef2cabcdc4498c3ca1f",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "e08c8c2a41bcbc40ee8b975015329474b4c847cb01fe4b31ca5b828faf8028e0",
+      "score": 85,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7457137d6a183333c25e741a",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "input_sha256": "a0bb99ac3afce5bd8e214caa3ecdd13cae02594df09a5a55cdb9cc1643df122f",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "bac1a9e6345142d5160a634e",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "1b12120ee59177db71cfa4de00753618ddeacdb408f09719bae54545f8578da2",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "31953c555e5fef2e2103bd45",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "70e92745e5fd61db68f6e80355e97d7d9c40f3a53d117c420d336a1f30219834",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4fe2d66685a02a944b8f5a84",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "input_sha256": "3dea7cfb3d145df337298c364b6181673463c07f233db4dd16faf5b3f19717ad",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "37bd518812cd9f2a17cfa88e",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|unseat_sim_card[PERSONA:Hard]",
+      "input_sha256": "0714a5fb0e3ae979c9db654fe6e41509e6366a3846853b125d5addd1898ce033",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4640f0ae8306e12a5fd99b1b",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "input_sha256": "4498ffef3fc81cfaf11ec32d48fb792d6c38a6d0eaf4dcb33932b608776cdc28",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b572d27628d2c43a9e2fa04a",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "input_sha256": "3ba2748f86488f5da416d458c6df0ad6621db9d660ddef8b2df70e43eaa94a76",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6c9cc4dea62f1e6dffda4050",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]",
+      "input_sha256": "823ebaac4e2fb91b0e768a8e1b47137dc1fff911969d747a4d1581a4a79a7cca",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "e1f2be8086e9e9ae04b9b529",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "025d774f3d6d6fa25a517e6f608a9a181fedb149773cbb96ba11979096bb7f3f",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b18ac90eff0b74e76defe62a",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]",
+      "input_sha256": "aad906804d979ce246381604bf8dacbb2700c04d27798e794f3904600a1758ff",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c9ffc1e2eb804659e037bee9",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "23d1c8d77b307c0c589b2e8f56ca1f3f8f22bb87460d3fadf3e833a1d8cb8831",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1025b43ed332ed11146a46f7",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "1a624009aee923b60e5afbeeb5fb35f053df1c1145679d09efa64e22af5da30c",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2420f712afcd7f0558c9cbbb",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded[PERSONA:None]",
+      "input_sha256": "d1089eda1ead299d33e5e81e8166ddf96ad210acfe4d743a997c8257278f71a1",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5d0d8880133aff7453dca76a",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "input_sha256": "cc1a56b810080c36b15a4eb21bbeb2179895cf848f96adad988c43762f4f59a6",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "463e15a62852f040f9bb9368",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "a8fd38337cfd40bdaf8fd2f5bdaf3b94b68481651cf3583a2d78e5e2fa9dbd3d",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "24ecac1497ef9ce536565a06",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+      "input_sha256": "5581e04353461a335f797625cd25f1aa56d4ad527d7edb4bfbe4e999af8010bd",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a83cf032d74beaec729c1b76",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "a51234936cfbd323f5b4a77b19881ec0137029bde8598837a319cf50b207756c",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "668f7e69e8b304bfe3f86090",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "8cbb01f484d6bb48c62d6348d8235d7b7b7ef1b6a1eaea6bc35734e967f2a74a",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d3fad34dd3f7e418b0fe1480",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "7ded3f019f0cf8a6b490991fb1898b464cc56871fa3af309614ec7c6e1fd28b7",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2198b9ca52b1d98792fdb3ce",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "input_sha256": "5cd209822ed8d72adae282d1b115354956dcb3a112a9bcd1b4bddd73ede69583",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b7b9914e4f073aa4ab4adcdd",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "fb65a0b4eb9c803c90ab6ad60fbb45de9930c27a9e079c9dc9bb463c680f8e24",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "703e610127aa0b620435e2df",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "input_sha256": "d23ec74b948bfba0b0f1702e226d68bbae5aae34e9649c53195a57c66dc7424c",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "41a4b5554adf6af738ceab1b",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+      "input_sha256": "c2f74622695ab6e175962b8f060dfa3dae40b1fcae4fa209b47bc41bfbb8e021",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6cde01deca5f413b08ba6255",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "input_sha256": "435453c154ca19ff1a0bdf846efbbd70d068dc79a142820df239d1ffb9b61732",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "daf2673236d1a534150faf45",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "0d10b1c84858db05fb4f6dd761dd09dca280af464589622c5b171da34a249c11",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "072ec79b3dbf2f0f57991d4a",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "8c63a15e326daee1fbc5b94b6792c643309a425519184acaba07c7741ca2922c",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "e289feec77b0cabc65ce73ea",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "a4e50ec9b13ba86044c4b8bff99dfdb9f8f73978fedb9095680a77c64ca751a8",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7afd279f6f2cc56d33488170",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "fcb5822e8c8ef30e494636390fa348d81d802d7fa4bcd3c06cf3297a3898bcee",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "112b76b342113fc6b23ce1ce",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "83fb0d2c98e7b79ab90004c1a66994cc4b5a8c6eb0d95b23e5b6aeeba49e5a9b",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "54e99584098f16059a3fa4ce",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_usage_exceeded[PERSONA:Hard]",
+      "input_sha256": "4733deceefcf00edeff4808b7746627e525f7286358f92167878082193c99a76",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ce47ad7d1471cd19e18d0842",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:None]",
+      "input_sha256": "e04e212c005bbb756c7334aacff82649ffb879526348d739ef79af2affee4a20",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "08cb364a2aff36b6df63ec76",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "5df91fef6290a8e4523381f2851873f71dbb4bc3d9bb5e062e279e2bb6f1cf33",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "dd553f6f82c111a4235391b0",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|data_mode_off|data_usage_exceeded[PERSONA:Easy]",
+      "input_sha256": "517e8f7c367ea1672622facfb2b92e77dcb74b13a1da1bee104b8ff92c938242",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "927df2667bc67ef81e39a5d3",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "40579d5965d33637cae8d1b0278ae317177f1f961619d829d33aa641a7c57b82",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5ac7656082e118d6be163c47",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "11add9b55693eb2cdd4fdfe6627d3f8610f2c011a50f81745bb62faac17f9db0",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "24c96b45138f51f0b563c80e",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "input_sha256": "71e1f223aa5ccf60ba0378a0049cf8ad0eb19ab7b54dd8bd9c4594561bd675c6",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "7db9aac06b90c8bedbfdfd71",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_both_permissions|data_usage_exceeded[PERSONA:Hard]",
+      "input_sha256": "1c277ef4741c3788ac06759244d849ab2d6f24c1dff61bde396837c614cbc954",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "aa298206a38f7374e434a4ab",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_both_permissions|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "b337eb9ab15a47a8544af4a9d7bb04bf761e5c1d1a6309b7f84abf85fa5e4f32",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5f0a6e4ce52702a7e5eefaf2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+      "input_sha256": "edaac8f9fd051dd4d84bf60b151c53e2b611ac31fa9021e1336efafd4c8d1de4",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "44ad33c4d72fea3232fbd860",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_sms_permission|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "26552d7733e1d689e18eb0ee351b22d2d878fd41158315e735e7d11f8cf721d5",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c3f7cbebb9ce785854da063b",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_storage_permission|data_usage_exceeded[PERSONA:Easy]",
+      "input_sha256": "b1667175e7385d144cdcfd5bcaf0bf286e198a7b0e2d6493abffba8c75df941a",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "a085210288d29ba8aaf3720e",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_storage_permission|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "input_sha256": "b4f6e63ddb81fba861c26995e6ad305213eba3a76beac6967c70fbc7853716fa",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9bc45410495f6d0092d82165",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]",
+      "input_sha256": "2b22058cfdf37917a685e6d4aad4854c09f46d2481ce1522c017c3c7d572a202",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "00ec08c587f97b31a8f1e316",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "input_sha256": "891c564a964417e7545e89aa232d280c2c30d03aae0cc967e155c2aea430c255",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6c30c2259e0133a5165f40a1",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "ff703b1f21e936852208e4c9c86ff0539398c3f081334d0a87094613974f998c",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "be99a161c1f99ba47a240ad0",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "f37606deb9de661e1e5e3701d152271a482fc9d88afe87c4f4135a8f46fcc256",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2ecbe0cd2bc76ddab5704eb1",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "input_sha256": "23c64438abfdd4767d1803e7cd46c9ac8f566ff10eec89353ca6cd3c8d0c9151",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "76851d261fb9b2b249f226d4",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "6222e953f790d681da9eff806a07961d9ee736100d93b405e15162d0d3876361",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0b64c4b2cb0498c55e725ce2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "input_sha256": "5c6f568dca99c19cec6ad030d804a3b46f78cb8edd4596347c883aa566a00fc6",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6829acc8913f4436b339fa4e",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "input_sha256": "2f7bf822364ae0ae34d6525d5703ad23af126cc1ac344a257260e01104390f85",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d2d2075b3ad85f71de8df3d0",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+      "input_sha256": "046043097afa257363c9b4703c2af74fc8c6417a985fe69d6ed23f72101bd949",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2bac4bb6f7eb7f30ba0efb8d",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "f20aa7791b182fde9b282dd9afc7f50bc59b8b4ea6b23d43d65fc4ca7017b58d",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6ad89d3891ae216974a65a56",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "69a23b3b184c7575287b7f386fa59a81d86e98979de1009b52933185a3fdea96",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1623ff5dcb95bd02ed60e8ed",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "input_sha256": "97388b7756aae5612219523804c62183a755f2191cefdaded689b3200d36efdd",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b271504e40888c005446f4e9",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "5d6b12cb654c131b08bc5171f7c77a2917980c4a411d1c5c614b0f9b1d49eb5b",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "c41c4e55a467eae4d0e7a256",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "ab75ff4bfc2bb6a56d9a25c64ddbf0fcd4d6eb8e23da955189d32791170c8610",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "fe4c8bb376b2810be7f1ef7b",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "4b9010e2697c0b028e33ed7fe74942a3aebfa650bb8b96b1a1c6d6d30be79e6f",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f0bef18fad1c8eaa10f5415e",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+      "input_sha256": "24906a86f14fbfee78b605b2451b98883aeccb6866b4548652d88e2acd12f5f6",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d6b71ccbce142ed92dbc9258",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "input_sha256": "071ecdfdeeb430f04cdbf769651664111a96ecdb1064d3d80e4e169813a550ba",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5627bdfabecb71030a140f1c",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "ee7b6d6ae8a1f6ce5925ed363aa462e15464a793d72fbdf2531951c355cd02b6",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "5e728702a687c8b576874dbf",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "input_sha256": "fb60d101148a67636356da2d456a46fd4722fd74e3ba5445a95d1a574509b901",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6109271e45f9b9b14285c792",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on[PERSONA:None]",
+      "input_sha256": "ad28e5306ca09b7d1beccc784eb9c7ebbba51567531eff00978030700d0d3b57",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f9f75921809705affed7f19e",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "4c0f15e53fe3017c368cd8b87a4da5e9f2bbb3681ae50b414c5b36099ab04d11",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f259a8fc0f0d5d17fc9ae31f",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "bcb540c6c9191cfb8f1ff64d6ecd33684b2d691f632428a7755ef5701972544f",
+      "score": 80,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "abce088d5b8348660790aec5",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "d8e119a5108051edfc9cb99da39748950d9479d60f915df633f0c89c24a6d786",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2bd6a58bcbd6b57e8d856558",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "input_sha256": "9feaf5b349fc42c05f9e8643d13464d0c7570a6a642d53b2e4f49bb66023ca62",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4891aee7a39ead4285f50a12",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "8fe7f82ad07385d6f24ae4d8b4ad771e7d600ce8cf52c057738f31943986d25a",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "72c3cc16ac2b7f24ad674829",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "0dbf4ebef27bfec49144db1b1cccbcc2f917c913fcb93c953c4663a8e28cc6be",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "990117851c04d486b11b1b87",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "input_sha256": "f4726da353bd9549027bdd896a968975259afb8a3b45231b391c07055874a624",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "dbeca2f537a0785664b9f6ed",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]",
+      "input_sha256": "40b7c271a180f9cb68909a12607aa7b9d167c667d88381470831c63f439c47ba",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2eb8340d29ee3183b2eeea33",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "input_sha256": "e492d4c4f538ed9586b208957d0be951aa80fcd33cebb188c9859446b148e196",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "fe03e55fec7129545382b5a0",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "input_sha256": "ef1c92f5d60fab6fffbcb76367b30ba566a5b1267270f6206d8f7c953e0c6eaf",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "95272bdd2c73963132bf5c7b",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "input_sha256": "fef217aa22c37b1e5cff242a4553d7ed0fe00065f59ba92e0d57c157253dad2d",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "297b175a5a7a298c9ffc7333",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]",
+      "input_sha256": "a84433fb0b9d40084a0722151d578aba1fe1fe7238300d3c845289535dff8507",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f87ca2000e079ca81234151d",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "input_sha256": "7bf2547e026d66d169d1993b98ac5c6264f97a33cd376f095de266f1b70eda93",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "405c9bb4a1aba605f77c73b8",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]",
+      "input_sha256": "cdf044e09f70b63b6229725bafe4b5809a0ed8403872d7955c7b3bde2b75b8bd",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "e4e2e56ab59ad0547a8aa40b",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "0332c184e6e8a6fd478b599eabdf649bdbcafdd6b8b9f71612ca35bb5bc45a7d",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "952237af089f5ced79665f04",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "input_sha256": "7d037d8ed0bab26b5fa4654ab5bb3c221dbaf2366727a75a1c68c27d2200ad0c",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ab752fdaf5a0c55abb4077e3",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings[PERSONA:Hard]",
+      "input_sha256": "1fccf922a111429eac5640062970632ac1fe0a24aab8e69775edff73afbba49a",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "786ebdc68e05e9b2d56c0dbe",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "input_sha256": "392f3ad05fd13f49f159ab41aba6a6d06b9f1c5adf5a97fc7a43b988adc1c0a5",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "6eee014970553d7226847a93",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "69714bb70516cbfc17b2ee05f7756dbf2fa4e5c37b5cd5e3ae75c5c3efc8a5a7",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9f325cfec36875adf55a8695",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "a73bdf03a4cb665473e769d890937b70c890fb7cdfae88a6d9b9eac579d2eb14",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "88f3feb7ecafeeff70b785cc",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "input_sha256": "39b767f0330b169ee51a94b2b33edd75d249762a15f92991eb2fa29946b66ccc",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "29e97cca516a76b19a606aad",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "input_sha256": "db5cd9006052dbc35db819872e6af710f1c4763cc7587d3a87f62646e2df7f17",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "ddd2f5a8191c1ae70b57ec33",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+      "score": 75,
+      "status": "unresolved_path",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": {
+        "proposed_operation_unit_count": 6,
+        "business_check_groups": 2,
+        "distinct_coordination_events": 1
+      },
+      "annotation": {
+        "case_key": "ddd2f5a8191c1ae70b57ec33",
+        "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+        "status": "unresolved_path",
+        "scope_rationale": "Documented SIM discovery/reseating/escalation obligations only. Setup explicitly includes a missing SIM and a lock; setup is judge context, not agent knowledge. The complete pre-exit diagnostic path is unresolved.",
+        "operations": [
+          {
+            "key": "identify",
+            "description": "Identify the customer before technical support",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "You must first identify the customer."
+              }
+            ]
+          },
+          {
+            "key": "sim_inspect",
+            "description": "Inspect and evaluate SIM status",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_2",
+                "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+              }
+            ]
+          },
+          {
+            "key": "sim_reseat_request",
+            "description": "Guide the user to reseat the missing SIM",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_2",
+                "excerpt": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+              }
+            ]
+          },
+          {
+            "key": "sim_reinspect",
+            "description": "Reassess SIM status after reseating",
+            "business_check": true,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_2",
+                "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+              }
+            ]
+          },
+          {
+            "key": "transfer",
+            "description": "Transfer the locked-SIM problem to technical support",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_2",
+                "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+              }
+            ]
+          },
+          {
+            "key": "transfer_announce",
+            "description": "Tell the customer a transfer is taking place",
+            "business_check": false,
+            "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+            "evidence": [
+              {
+                "source_id": "policy_1",
+                "excerpt": "then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+              }
+            ]
+          }
+        ],
+        "coordination_events": [
+          {
+            "key": "technical_support_handoff",
+            "description": "Transfer for SIM security",
+            "categories": [
+              "handoff"
+            ],
+            "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+            "evidence": [
+              {
+                "source_id": "policy_2",
+                "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+              }
+            ]
+          }
+        ],
+        "excluded_work": [
+          "No bill payment, line resumption or APN repair is automatically required after the decisive locked-SIM exit.",
+          "Ordinary device-tool replies are not additional external-response coordination.",
+          "Do not treat initial_user_device as final effective state: initialization actions change it."
+        ],
+        "uncertainties": [
+          "General try-best policy and manual diagnostics do not specify one mandatory pre-SIM troubleshooting order; airplane-mode work might precede SIM discovery.",
+          "The listed six operations and two checks are documented partial counts, not a complete path or exact lower-bound tool count.",
+          "The source setup declares both unseating and locking; no private helper code was added or executed to certify a live path."
+        ]
+      },
+      "source_bindings": {
+        "scenario": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/user_scenario",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        },
+        "initial_state": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/initial_state",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        },
+        "policy_1": {
+          "path": "data/tau2/domains/telecom/main_policy.md",
+          "locator": "whole document",
+          "sha256": "95943844a0cf11fdf0e2842b483b81d9f9338aa53235712ed131db075d086ed7"
+        },
+        "policy_2": {
+          "path": "data/tau2/domains/telecom/tech_support_manual.md",
+          "locator": "whole document",
+          "sha256": "015a3ee49ec8c199c5e1a059c922081937b92cf3a5ea74fedbc4357816f389ba"
+        },
+        "task_design_notes": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/description",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        },
+        "completion_design": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/evaluation_criteria",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        },
+        "reference_001": {
+          "path": "data/tau2/domains/telecom/tasks.json",
+          "locator": "#/299/evaluation_criteria/actions/0",
+          "sha256": "37e562e1ae3242577407e1303b1548bc64e7ea68e37d36173e6747990ceaf8a4"
+        },
+        "tools_assistant": {
+          "path": "src/tau2/domains/telecom/tools.py",
+          "locator": "@is_tool method signatures/docstrings",
+          "sha256": "388552434d1b8225e33e7958bdb6efccfe92b49e11d1838568d9b559514e9d01"
+        },
+        "setup_assertion_definitions_assistant": {
+          "path": "src/tau2/domains/telecom/tools.py",
+          "locator": "AST methods: suspend_line_for_overdue_bill",
+          "sha256": "388552434d1b8225e33e7958bdb6efccfe92b49e11d1838568d9b559514e9d01"
+        },
+        "tools_user": {
+          "path": "src/tau2/domains/telecom/user_tools.py",
+          "locator": "@is_tool method signatures/docstrings",
+          "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d"
+        },
+        "setup_assertion_definitions_user": {
+          "path": "src/tau2/domains/telecom/user_tools.py",
+          "locator": "AST methods: assert_service_status,break_apn_settings,lock_sim_card,set_user_info,simulate_network_search,turn_airplane_mode_on,unseat_sim_card",
+          "sha256": "03fa751eeea3734313a3f5274223d42750fd5c1a28f2624265a678f271ac309d"
+        },
+        "initial_record_000": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/bills/0",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_record_001": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/bills/1",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_record_002": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/bills/2",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_record_003": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/customers/0",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_record_004": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/devices/1",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_record_005": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/lines/1",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_record_006": {
+          "path": "data/tau2/domains/telecom/db.toml",
+          "locator": "#/plans/1",
+          "sha256": "562d647ef9d7df8df91eafd8ee76036e707c8f9e32aaedc4a7fde06975aea2c0"
+        },
+        "initial_user_device": {
+          "path": "data/tau2/domains/telecom/user_db.toml",
+          "locator": "whole document; baseline before declared fixture setup",
+          "sha256": "4886107ea0c16f8e16d74bef91cfb557de61822afe9361f5a9b241806aea2e4c"
+        },
+        "types_data_model": {
+          "path": "src/tau2/domains/telecom/data_model.py",
+          "locator": "whole source; types only",
+          "sha256": "f868cbbd344cadf6c376f21976edfa38b8cfe199922748e31eee666f791a0628"
+        },
+        "types_user_data_model": {
+          "path": "src/tau2/domains/telecom/user_data_model.py",
+          "locator": "whole source; types only",
+          "sha256": "27be0006694e9a740dd378f42099d6d1afecbd445f7906aedcd1f800087377c2"
+        }
+      }
+    },
+    {
+      "case_key": "b5e08ecc77f435a649f3e1af",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+      "input_sha256": "162cdcdda46187a3309692252a4f58c03bcc24b9a1d9cef460e46edd4d0d8c32",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d57c826a499eced41b3da1d5",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]",
+      "input_sha256": "fd2a9c98339517f2efd55a0e4367c6d5c4c5643cbab73c55b076262fbadd66c5",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "cfff159ae4014d9500103b83",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "input_sha256": "cbb093b74b7348ca9b238e0c5eeb57fc0d4fa109105f3251b0b78e8ff501da17",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "9baa48c5ca5b7a6932af4fc4",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|unseat_sim_card[PERSONA:None]",
+      "input_sha256": "0ce37fa65f8d02454072138799bc4a09d14d6341c9edee1d2d92b443813e3948",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4aa79bebc87ae31faa216185",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "input_sha256": "994d50bdec9d70ede01eb9c81d2df95899cf8821667cacf638be216edda8af63",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "207abcd686ea0348c46fa3c3",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "input_sha256": "0d889fc1f669a7d25c6ec01faabe6da7f198b224e5318943cd5e0ac69b13f177",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "55ebca441d1a97b5f834cc3c",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "input_sha256": "f9a7c0931de0a0563f44607f02d2815c29712ba3cccffa96d37dc19f678cc326",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "988e21ad137ffaac3e856aba",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "0744bc314f2dcdfefc8c4a4093248d1928e489aa7173ab5e0f5aa5da2e6ea3cf",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "b4be13a9695d14f83f33d115",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "input_sha256": "da6c4652467df1421345f8da99b6a324bfacb0d7ba55fd1fc29e50764f27cbc4",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d515fc95de5e0dd7dedf86a8",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]",
+      "input_sha256": "4aa0c75e2c67ecde636be57e1c6947420d045670800b567d773d82c25c79d917",
+      "score": 70,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "2f57af30b7dd77a6d2fd055a",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "53711edff87e245977b5655d09f360c0ceddcdd44198e8667202b052df9891eb",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f2b89587496a232d32de15d7",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]",
+      "input_sha256": "a51113f238776174782dc913c7dea569756c9e32299b3c541c8dc5de72be0eab",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "4f8a1784c0db6e4ed69c0b82",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "input_sha256": "6f433fcb7e9725e462e2ec83b5a641c53747623e451a2ef6f832611cba2eb45a",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "08de75f0bfd93ab5bc912101",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "input_sha256": "8112cb12dda9affa8a486356987333d0c9214461dcf799a623a303a96d8cbc25",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "96e9fd303766bd114f4da068",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "input_sha256": "cb6b6b46a888ff09fcb309d8085b1228c213e4f25e2114974b578b7e84a48ac0",
+      "score": 50,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1c2b7f4186c563085fce1b0e",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "input_sha256": "66208ebe5932934b4fa0985e366d54f405bcdd7f2002730995fa5046868f2b62",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "d14cd4c532ca798c4db5aad0",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "79b002d7f3f4ffbb38850f380efb05f9e1bfc49806ae8d2ed16147ac62d7388b",
+      "score": 65,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "398a36481466fd5a7dff1601",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:Hard]",
+      "input_sha256": "5310496f589b7a5c8d3e322b99081087e254b7c92f1315e556199a415822c7c1",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "0af2eb10291137f2fe107daf",
+      "domain": "telecom",
+      "task_id": "[service_issue]contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "input_sha256": "2870e2ce2641c84778a980da2eff8726687095236860216eb089ad7b35c170c1",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "706c718f104127a7b876fff4",
+      "domain": "telecom",
+      "task_id": "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]",
+      "input_sha256": "da8caf2499375c946abaddcbe492945c6c2d543d5c49b89bd6e44ef0c5eac7eb",
+      "score": 60,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "1cd2224f9e59e94ec2172361",
+      "domain": "telecom",
+      "task_id": "[service_issue]lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "input_sha256": "cea1699441aa858cf4cfdb5d99a6bfc69fcd9491734f69ed03c07286f8baf242",
+      "score": 55,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    },
+    {
+      "case_key": "f1b94be1a97f78f1ca15213f",
+      "domain": "telecom",
+      "task_id": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "input_sha256": "d17f68da6ae9418f6a1b7f28e5ad61e2b2600011d5c999c2a8578b44401bffca",
+      "score": 75,
+      "status": "not_authored",
+      "features": {
+        "proposed_operation_unit_count": null,
+        "business_check_groups": null,
+        "distinct_coordination_events": null
+      },
+      "documented_partial_counts": null,
+      "annotation": null,
+      "source_bindings": null
+    }
+  ],
+  "correlations": null,
+  "correlation_reason": "Small selected development sample; no representative association claim."
+}
