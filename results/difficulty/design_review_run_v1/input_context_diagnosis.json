@@ -1,0 +1,31 @@
+{
+  "status": "input_omission_diagnosed_offline",
+  "first_review_preserved": true,
+  "first_review_retried": false,
+  "old_catalog": {},
+  "cause": "Named definitions are nested in YAML system_tools/domain_tools lists; the earlier filter treated top-level group keys as tool names.",
+  "fix": "Recursively collect named tool definitions; require all reference and selected-workflow tool names; reject an empty catalog.",
+  "rulebook_changed": false,
+  "new_packet_version": "design_feature_review_v0.3_tool_context",
+  "corrected_packet_coverage": [
+    {
+      "review_id": "D01",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "included_tool_definitions": 9,
+      "missing_reference_tools": []
+    },
+    {
+      "review_id": "D02",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "included_tool_definitions": 9,
+      "missing_reference_tools": []
+    },
+    {
+      "review_id": "D03",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "included_tool_definitions": 8,
+      "missing_reference_tools": []
+    }
+  ],
+  "additional_calls_allowed_within_original_budget": 2
+}

@@ -1,0 +1,123 @@
+{
+  "started_at": "2026-11-12T20:54:15.789715+00:00",
+  "config": {
+    "review_version": "design_feature_review_v0.3_tool_context",
+    "rulebook_version": "design_counting_rules_v0.1_frozen",
+    "rulebook_sha256": "185a81fa6818625f2080d1c98df0bf230d8493b7fd4f87fcd93b2c69d8abda72",
+    "requests_sha256": "197472c547f461efb901294423a99778970e13a1016ed2456b6fb03d7f790790",
+    "profiles_sha256": "69f6b7ba5f147d0340b167d0bf2f56abc3887e17a1d9c55ca2da0f81f6b9a4b7",
+    "validator_sha256": "0562d047bdca9b2e0e27edebf89aa9087180812cd55953a900bd01964807f2b5",
+    "model_requested": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 6000,
+    "max_retries": 0,
+    "max_requests": 2,
+    "prior_requests": 1,
+    "skipped_repeat": "D01 is retained with incomplete context; not retried",
+    "endpoint_sha256": "d9617135d6fdd0a2cde722d637a1dfcc3da37515708b3ea5d66ae607c8ac785e",
+    "runner_sha256": "2a92152e2698f65ac7ba88e37fa588f95560a39249e18a276c804383d42e0c28",
+    "purpose": "source-only design feature review, not agent-outcome judgment or independent validation"
+  },
+  "checks": [
+    {
+      "review_id": "D02",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "request_sha256": "01b189899ed6be12c30b4d938736927138395cf403ec091c973212c01cabf80f",
+      "model_returned": "gpt-6-astra",
+      "usage": {
+        "completion_tokens": 3000,
+        "prompt_tokens": 5347,
+        "total_tokens": 8347,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 229,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 5344,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      },
+      "request_id": "req_4c4284f957024fed94f92cca1b4233f7",
+      "received_at": "2026-11-12T20:55:08.240922+00:00",
+      "response_sha256": "86bca5a1441520389b58b4f2a4f1bbabdd548284881f0a3aaa5db2d20c1c8302",
+      "status": "citation_and_schema_valid",
+      "counts": {
+        "action_units": 8,
+        "business_check_groups": 3,
+        "coordination": {
+          "multi_party": 2,
+          "linked_records": 1,
+          "handoff": 2
+        },
+        "distinct_coordination_events": 3,
+        "n_uncertainties": 6
+      },
+      "semantic_inspection": {
+        "decision": "continue",
+        "reviewer": "Codex assistant, not independent human adjudication",
+        "basis": "Inspected all returned action/check/coordination descriptions and source citations. Eight operations, three checks, one linked-record, two multi-party and two handoff requirements agree with the candidate profile. Shared event keys prevent summing five category tags as five events.",
+        "uncertainties_preserved": "Opaque linked-claim creation, joint coverage representation, specialist dispatch support, escalation wording, missing inputs and grouped tool invocations remain source-level uncertainties. They do not establish a conflicting count or justify inventing operations.",
+        "profiles_changed": false,
+        "rulebook_changed": false
+      }
+    },
+    {
+      "review_id": "D03",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "request_sha256": "b153a50afbe934d30c2a81d724d05dde0138c875de57a5b586f531503794ec27",
+      "model_returned": "gpt-6-astra",
+      "usage": {
+        "completion_tokens": 3430,
+        "prompt_tokens": 5143,
+        "total_tokens": 8573,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 244,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 3375,
+          "cached_tokens": 1765,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      },
+      "request_id": "req_d72eeaad744049738995e9b2082d2118",
+      "received_at": "2026-11-12T20:56:43.598708+00:00",
+      "response_sha256": "42742d409573005843c70997f6af7126b1fef263e557f7eb0b56c12a623a9a60",
+      "status": "citation_and_schema_valid",
+      "counts": {
+        "action_units": 12,
+        "business_check_groups": 5,
+        "coordination": {
+          "linked_records": 1,
+          "external_response": 3
+        },
+        "distinct_coordination_events": 4,
+        "n_uncertainties": 6
+      },
+      "semantic_inspection": {
+        "decision": "stop",
+        "reviewer": "Codex assistant, not independent human adjudication",
+        "basis": "Model proposed 12 operations and five checks versus candidate eight and two. Extra operations correspond to initial/repeated field validation, duplicate detection and access logging from global guidelines. Scope and automation boundaries require clarification; no automatic acceptance.",
+        "coordination_scope_difference": "Model counted two payer API returns as external responses and an ordinary patient/provider scheduling relationship as linked records. These extend beyond the candidate profile and expose feature-boundary ambiguity.",
+        "source_issues_preserved": "Medical-history and slot acquisition, duplicate detection implementation, human escalation wording and confirmation-trigger behavior remain uncertainties.",
+        "profiles_changed": false,
+        "rulebook_changed": false
+      }
+    }
+  ],
+  "stop_reason": "Total three authorized requests used across both contexts; D03 substantive feature-scope disagreement requires offline diagnosis. No retries or expansion.",
+  "api_requests_attempted": 2,
+  "status": "completed_budget_with_unresolved_design_disagreements",
+  "unattempted_review_ids": []
+}

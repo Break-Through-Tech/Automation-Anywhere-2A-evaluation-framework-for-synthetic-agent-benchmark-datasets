@@ -1,0 +1,3488 @@
+{
+  "version": "designed_annotations_v0.1",
+  "status": "provisional_assistant_interpretation",
+  "source_sha256": {
+    "banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+    "banking_accounts_deposits/test_cases.json": "fcd7228764e32c35df5eefa15b6395a2bd7abd5017711f702552ee7b6fc67403",
+    "banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "banking_customer_onboarding/test_cases.json": "849d04f1e2c0c7a41e6f7af7424a8b4162353f72692e577ba50f5281d8f79c9f",
+    "banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+    "banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+    "banking_fraud_monitoring/test_cases.json": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94",
+    "healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "healthcare_patient_onboarding/test_cases.json": "c2a257396c615b71206c9b941a4b0328e2451a7a75db7f3fca04266e6d12930d",
+    "healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+    "healthcare_prior_authorization/test_cases.json": "251007e8148562cdeb561200cb333cf6a44f98eeb599f00c5f68e760381824d0",
+    "insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+    "insurance_claims_intake/test_cases.json": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd",
+    "manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c",
+    "manufacturing_purchase_to_pay/test_cases.json": "a46adedb99892fc44a48c9cadea9c9d96ab174c9267f49d674717595ecd728f7"
+  },
+  "tasks": [
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as premium",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Premium account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule with premium waivers applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Funding source linked and verified instantly",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened and confirmation sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as standard",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Standard account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule with standard fees applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Funding source linked and verified via micro-deposit",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened and confirmation sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity and student status validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as student",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Student account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule with student waivers applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Student disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Funding source linked and verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened and confirmation sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity and student status validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as student",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Student account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule with student waivers applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Student disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Funding source linked and verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened and confirmation sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "All business owners' identities validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear for business and owners",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as business_basic",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Business account limits configured for multi-signers",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule for business applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Business disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Wire funding source linked and verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened with all authorized signers",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "All owners' identities validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear for all owners",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated based on deposit and profile",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Joint account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule for joint account applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Joint account disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Funding source linked and verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Joint account opened with survivorship rights",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as standard",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Funding source linked, micro-deposit verification initiated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Restricted account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Account opened in restricted mode",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Disclosures including funding verification requirements delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity validated (in-person or digital)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "CTR filed for cash deposit",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Account tier calculated as premium",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Premium account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Fee schedule with premium waivers applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened and cash deposit processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Documents extracted",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Identity verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Sanctions screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "AML risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Core banking customer created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "CRM profile created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Welcome communication sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Documents extracted",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Identity verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Sanctions screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "AML risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Core banking customer created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "CRM profile created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Welcome communication sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Business and owner documents extracted",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Identities of all owners verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Business and owners screened for sanctions",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "AML risk score calculated for business",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Business account created in core banking",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "CRM business profile created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Welcome communication sent to business and owners",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Business and owner documents extracted",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Owner identity verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Business and owner screened for sanctions",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "AML risk score calculated for business",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Business account created in core banking",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "CRM business profile created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Welcome communication sent to business and owner",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Initial document extracted",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Document request sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Additional document received and extracted",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Identity verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Sanctions screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 6,
+          "expected_description": "AML risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 7,
+          "expected_description": "Core banking customer created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "CRM profile created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 9,
+          "expected_description": "Welcome communication sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Initial documents extracted, address mismatch detected",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Explanation and supporting document requested",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Supporting document extracted and address reconciled",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Identity and address verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Sanctions screening clear, AML risk calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 6,
+          "expected_description": "Core banking customer created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "CRM profile created with reconciled address",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Welcome communication sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Customer profile and transaction history analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Device intelligence checked",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Customer profile and transaction history analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Device intelligence checked",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Transaction history and device intelligence analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated and blacklist confirmed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Auto-decline transaction and block card/account",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Transaction history and device intelligence analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated and takeover confirmed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Auto-decline transaction and block account",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details, customer profile, and history retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Device intelligence and fraud database cross-referenced",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated and investigation package compiled",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Case routed to analyst",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details, customer profile, and history retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Device intelligence and fraud database cross-referenced",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated and investigation package compiled",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Case routed to analyst",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Transaction history and device intelligence analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Customer verification requested via SMS",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Transaction history and device intelligence analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Customer verification requested via email",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Login and transaction details, customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Device intelligence and recent account changes checked",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Account access blocked",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Case routed to analyst with urgent escalation",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and transaction history retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud databases cross-referenced for merchant risk",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Case routed to analyst",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Customer profile and identity details retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Device intelligence and identity databases checked",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Case routed to analyst",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Transaction history and device intelligence analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Evidence compiled and fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Case routed to analyst with evidence summary",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Transaction details and customer profile retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Transaction history and call recording context analyzed",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Fraud databases cross-referenced for beneficiary risk",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Fraud risk score calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Wire transfer held for review",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Case routed to analyst for urgent review",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics from intake form",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Extract insurance info from intake form",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Verify insurance eligibility using extracted info",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Extract medical history from intake form",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Create new patient record in EHR",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Check provider availability for initial appointment",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 7,
+          "expected_description": "Schedule appointment and send confirmation",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Signal successful onboarding",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics from intake form",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Extract insurance info from intake form",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Verify insurance eligibility using extracted info",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Extract medical history from intake form",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Create new patient record in EHR",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Check provider availability for annual physical",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 7,
+          "expected_description": "Schedule appointment and send confirmation",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Signal successful onboarding",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W2_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient and parent/guardian demographics",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Extract insurance info, verify parent/guardian as subscriber",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Verify insurance eligibility for dependent",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Extract medical history and immunization status",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Create pediatric patient record in EHR, link to parent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Schedule well-child appointment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Send confirmation and vaccine requirements to parent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Signal successful onboarding",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics and insurance info",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Attempt insurance eligibility verification (inactive)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Send request for updated insurance or self-pay",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Patient responds with updated insurance",
+          "role": "external_response_or_approval",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Re-attempt insurance verification (active)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 6,
+          "expected_description": "Create EHR record, schedule appointment, send confirmation",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Signal success",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W4_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics and referral details",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Verify insurance eligibility, check prior auth requirement",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Initiate prior authorization request",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Hold scheduling until prior auth approved",
+          "role": "wait_condition",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Schedule specialist appointment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Send communication with auth number and appointment details",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Signal success",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Extract medical history",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Create self-pay patient record in EHR",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Provide pricing estimate via communication",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Schedule appointment with payment required at visit",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Send appointment confirmation with payment instructions",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Signal successful onboarding",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Search EHR for matching records",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Update/merge existing record with new info",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Merge insurance info if new/updated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Schedule appointment under existing patient ID",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Send duplicate alert to staff for review",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Signal success",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Extract detailed medical history",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Verify insurance eligibility",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Create EHR record with high-risk flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Assign care coordinator (manual or system)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Check provider availability for extended visit",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 7,
+          "expected_description": "Schedule extended appointment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Send welcome packet and disease management resources",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 9,
+          "expected_description": "Signal successful onboarding",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W8_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Extract available demographics and insurance info",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Identify missing required fields",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Send request for missing information to patient/guardian",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Patient supplies missing info",
+          "role": "external_response_or_approval",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Extract updated data and re-verify insurance",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 6,
+          "expected_description": "Create EHR patient record and schedule appointment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Send confirmation communication",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Signal success",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirement checked for MRI",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Medical necessity criteria retrieved for MRI",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "All required clinical documentation gathered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Clinical criteria validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "PA submission prepared and assembled",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "PA request submitted via API/portal",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "PA status tracked; provider notified of approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirement checked for sleep study",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Medical necessity criteria retrieved for sleep study",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Alternate required documentation gathered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Clinical criteria validated using alternate documentation",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "PA submission prepared",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "PA request submitted via portal",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "PA status tracked; provider notified of approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W2_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirements and criteria checked",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Initial clinical documentation gathered; some documents missing",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Provider supplies missing documentation (imaging report)",
+          "role": "external_response_or_approval",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Clinical criteria validated after all docs present",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "PA submission prepared and sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "PA status tracked; provider notified of approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W3_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirement checked for specialty drug",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Detailed medical necessity criteria retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Extensive documentation gathered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Clinical criteria validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Comprehensive PA submission prepared",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "PA submitted via appropriate channel",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "PA status tracked; provider notified of approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W4_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA status tracked; denial reason obtained",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Supplemental documentation gathered for appeal",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Appeal submission prepared",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Appeal status tracked; appeal approved",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Provider notified of appeal approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W5_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirement checked for DME",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Medical necessity criteria for DME retrieved",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Required DME documentation gathered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Clinical criteria validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "PA submission prepared and sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "PA status tracked; supplier notified",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirement checked for urgent procedure",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Urgent clinical documentation (ER notes, labs) gathered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Expedited PA submission prepared",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "PA submitted via fastest method",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Expedited PA status tracked",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 6,
+          "expected_description": "Provider notified of urgent approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA requirement checked for bariatric surgery",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Medical necessity criteria retrieved (BMI, comorbidities, program)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Comprehensive documentation gathered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "All clinical criteria validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Large PA packet prepared for committee",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "PA submitted for committee review",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "PA status tracked; provider notified",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "PA status tracked for reference ID",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Results categorized as approved",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Provider notified of approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (storm, water intrusion)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as property, peril: storm/wind",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Policy coverage validated (active, peril covered)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Claim severity assessed (emergency)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created with emergency flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Emergency water mitigation vendor dispatched",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Claim routed to CAT team",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to customer",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (flood, alternate address)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as property, peril: water/storm",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Policy coverage validated (active, peril covered)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Claim severity assessed (emergency)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created with emergency flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Emergency water mitigation vendor dispatched (LocalVendor)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Claim routed to CAT team",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to customer",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (auto, injury)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as auto liability",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Policy coverage validated (active, liability covered)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Claim severity assessed (BI flag)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created with injury flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Claim routed to BI adjuster",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Claim acknowledgment sent to claimant",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (auto, multiple injuries)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as auto liability",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Policy coverage validated (active, liability covered)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Claim severity assessed (BI flag)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created with injury flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Claim routed to BI adjuster",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Claim acknowledgment sent to claimant",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Batch loss details extracted for all claims",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Each claim classified by type",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Batch policy coverage validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed; emergencies flagged",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Bulk claim records created, CAT event tagged",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "All claims routed to CAT team, emergencies prioritized",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Emergency vendors dispatched for flagged claims",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Batch claim acknowledgment sent to claimants",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (occupational injury)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as workers comp",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "WC policy validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed (medical management needed)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Claim routed to WC adjuster",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Medical provider dispatched (nurse case manager)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to employee",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (attorney letter, injury details)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as liability",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "GL policy and premises coverage validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed (litigation risk flagged)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "GL claim record created with litigation flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Claim routed to senior liability adjuster, legal team notified",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Document preservation request sent to insured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to attorney",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "ClaimsAgent_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (property, windstorm)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as property",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Policy status and coverage validated (lapsed, not covered)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed (denied flag)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created as denied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Coverage denial letter sent to customer",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (property, roof damage)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim type checked for duplication",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Communication linked to existing claim",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Duplicate notification sent to customer",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (fire, business interruption)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as commercial property + BI",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Property and BI coverage validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed (large loss, BI exposure)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "Linked claims created for property and BI",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Claim routed to large loss unit and BI specialist",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Forensic accountant and engineer dispatched",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to insured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Purchase requisition read and parsed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Budget validated and within limit",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Supplier contract checked and preferred",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "PO created with contract terms",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "PO sent to supplier via EDI",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Goods receipt recorded",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Invoice matched to PO and receipt (exact match)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Auto-approval routed for payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 9,
+          "expected_description": "Payment processed via ACH",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 10,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Purchase requisition read and parsed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Budget validated and within limit",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Supplier contract checked and preferred",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "PO created with contract terms",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "PO sent to supplier via EDI",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Goods receipt recorded",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Invoice matched to PO and receipt (small price variance)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Auto-approval routed for payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 9,
+          "expected_description": "Payment processed via ACH",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 10,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Purchase requisition read and parsed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Budget validated and exceeded",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Budget override approval granted by CFO",
+          "role": "external_response_or_approval",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Supplier contract checked for compliance",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 5,
+          "expected_description": "PO created and sent via email",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Invoice matched to PO and receipt (price mismatch > $500)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Exception routed to AP for review",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Payment processed after AP approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Partial goods receipt recorded",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Invoice matched to PO and receipt (quantity mismatch)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Payment approval routed for partial payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Partial payment processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Backorder received and reconciled",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Final payment processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Invoice matched to PO and payment history (duplicate detected)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Invoice rejected and supplier notified",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Invoice matched to PO and receipt (discount available)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 2,
+          "expected_description": "Payment approval routed recommending early payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 3,
+          "expected_description": "Payment processed on recommended schedule",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Blanket PO release requisition read",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Supplier contract checked for blanket status and limits",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "PO release created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 4,
+          "expected_description": "PO release sent to supplier",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "Goods receipt recorded",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Invoice matched to blanket PO and release",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 7,
+          "expected_description": "Auto-approval routed for payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 8,
+          "expected_description": "Payment processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 9,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+      "milestones": [
+        {
+          "step": 1,
+          "expected_description": "Emergency purchase requisition read",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 2,
+          "expected_description": "Budget validated for expedited purchase",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 3,
+          "expected_description": "Supplier contract checked (bidding bypassed)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 4,
+          "expected_description": "Expedited PO created with overnight shipping",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 5,
+          "expected_description": "PO sent to supplier via call and email",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 6,
+          "expected_description": "Goods receipt recorded",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 7,
+          "expected_description": "Invoice matched to PO including expedited charges",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives."
+        },
+        {
+          "step": 8,
+          "expected_description": "Payment approval routed for expedited payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 9,
+          "expected_description": "Payment processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null
+        },
+        {
+          "step": 10,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null
+        }
+      ],
+      "applicability_basis": "Task-specific supplied milestone path, not all shared workflow branches; conditional applicability and bundled work remain provisional.",
+      "review_type": "assistant source interpretation, not independent human validation"
+    }
+  ]
+}

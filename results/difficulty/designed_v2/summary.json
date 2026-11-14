@@ -1,0 +1,8 @@
+{
+  "n_tasks": 64,
+  "n_tasks_with_explicit_operation_splits": 29,
+  "n_tasks_with_documented_coordination": 29,
+  "n_tasks_with_unresolved_granularity": 46,
+  "combined_score": null,
+  "independent_validation": false
+}
