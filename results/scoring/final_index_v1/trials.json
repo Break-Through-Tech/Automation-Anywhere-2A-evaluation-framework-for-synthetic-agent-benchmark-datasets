@@ -1,0 +1,115 @@
+{
+  "status": "exploratory_candidates_not_final_selected_weights",
+  "rows": [
+    {
+      "trial": "zayd",
+      "dataset": "synthetic",
+      "coverage_weight": 0.7,
+      "difficulty_weight": 0.30000000000000004,
+      "coverage": 0.8795454878670201,
+      "difficulty_normalized": 0.6375,
+      "coverage_contribution_0_100": 61.56818415069141,
+      "difficulty_contribution_0_100": 19.125,
+      "combined_index_0_100": 80.69318415069141
+    },
+    {
+      "trial": "zayd",
+      "dataset": "tau2",
+      "coverage_weight": 0.7,
+      "difficulty_weight": 0.30000000000000004,
+      "coverage": 0.9518368271555027,
+      "difficulty_normalized": 0.641546762589928,
+      "coverage_contribution_0_100": 66.62857790088519,
+      "difficulty_contribution_0_100": 19.246402877697843,
+      "combined_index_0_100": 85.87498077858302
+    },
+    {
+      "trial": "ronnit",
+      "dataset": "synthetic",
+      "coverage_weight": 0.6,
+      "difficulty_weight": 0.4,
+      "coverage": 0.8795454878670201,
+      "difficulty_normalized": 0.6375,
+      "coverage_contribution_0_100": 52.77272927202121,
+      "difficulty_contribution_0_100": 25.5,
+      "combined_index_0_100": 78.2727292720212
+    },
+    {
+      "trial": "ronnit",
+      "dataset": "tau2",
+      "coverage_weight": 0.6,
+      "difficulty_weight": 0.4,
+      "coverage": 0.9518368271555027,
+      "difficulty_normalized": 0.641546762589928,
+      "coverage_contribution_0_100": 57.11020962933016,
+      "difficulty_contribution_0_100": 25.66187050359712,
+      "combined_index_0_100": 82.77208013292727
+    },
+    {
+      "trial": "divya",
+      "dataset": "synthetic",
+      "coverage_weight": 0.5,
+      "difficulty_weight": 0.5,
+      "coverage": 0.8795454878670201,
+      "difficulty_normalized": 0.6375,
+      "coverage_contribution_0_100": 43.97727439335101,
+      "difficulty_contribution_0_100": 31.874999999999996,
+      "combined_index_0_100": 75.85227439335101
+    },
+    {
+      "trial": "divya",
+      "dataset": "tau2",
+      "coverage_weight": 0.5,
+      "difficulty_weight": 0.5,
+      "coverage": 0.9518368271555027,
+      "difficulty_normalized": 0.641546762589928,
+      "coverage_contribution_0_100": 47.59184135777513,
+      "difficulty_contribution_0_100": 32.077338129496404,
+      "combined_index_0_100": 79.66917948727153
+    },
+    {
+      "trial": "sana",
+      "dataset": "synthetic",
+      "coverage_weight": 0.4,
+      "difficulty_weight": 0.6,
+      "coverage": 0.8795454878670201,
+      "difficulty_normalized": 0.6375,
+      "coverage_contribution_0_100": 35.181819514680804,
+      "difficulty_contribution_0_100": 38.25,
+      "combined_index_0_100": 73.43181951468081
+    },
+    {
+      "trial": "sana",
+      "dataset": "tau2",
+      "coverage_weight": 0.4,
+      "difficulty_weight": 0.6,
+      "coverage": 0.9518368271555027,
+      "difficulty_normalized": 0.641546762589928,
+      "coverage_contribution_0_100": 38.073473086220105,
+      "difficulty_contribution_0_100": 38.49280575539568,
+      "combined_index_0_100": 76.5662788416158
+    },
+    {
+      "trial": "mila",
+      "dataset": "synthetic",
+      "coverage_weight": 0.3,
+      "difficulty_weight": 0.7,
+      "coverage": 0.8795454878670201,
+      "difficulty_normalized": 0.6375,
+      "coverage_contribution_0_100": 26.386364636010605,
+      "difficulty_contribution_0_100": 44.625,
+      "combined_index_0_100": 71.01136463601058
+    },
+    {
+      "trial": "mila",
+      "dataset": "tau2",
+      "coverage_weight": 0.3,
+      "difficulty_weight": 0.7,
+      "coverage": 0.9518368271555027,
+      "difficulty_normalized": 0.641546762589928,
+      "coverage_contribution_0_100": 28.55510481466508,
+      "difficulty_contribution_0_100": 44.90827338129496,
+      "combined_index_0_100": 73.46337819596003
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "version": "relative_coverage_challenge_trials_v1",
+  "datasets": {
+    "synthetic": {
+      "n_tasks": 64,
+      "n_groups": 7,
+      "represented": 51,
+      "declared": 59,
+      "catalog_coverage": 0.864406779661017,
+      "mean_group_entropy": 0.8946841960730232,
+      "coverage": 0.8795454878670201,
+      "difficulty_normalized": 0.6375,
+      "difficulty_0_100": 63.74999999999999,
+      "singleton_workflows": 38
+    },
+    "tau2": {
+      "n_tasks": 278,
+      "n_groups": 3,
+      "represented": 21,
+      "declared": 21,
+      "catalog_coverage": 1.0,
+      "mean_group_entropy": 0.9036736543110052,
+      "coverage": 0.9518368271555027,
+      "difficulty_normalized": 0.641546762589928,
+      "difficulty_0_100": 64.15467625899281,
+      "singleton_workflows": 1
+    }
+  },
+  "groups": [
+    {
+      "dataset": "synthetic",
+      "group": "banking_accounts_deposits",
+      "tasks": 8,
+      "declared": 8,
+      "represented": 6,
+      "catalog_coverage": 0.75,
+      "entropy": 0.8333333333333333,
+      "singleton_workflows": 4
+    },
+    {
+      "dataset": "synthetic",
+      "group": "banking_customer_onboarding",
+      "tasks": 6,
+      "declared": 8,
+      "represented": 4,
+      "catalog_coverage": 0.5,
+      "entropy": 0.6394319446848299,
+      "singleton_workflows": 2
+    },
+    {
+      "dataset": "synthetic",
+      "group": "banking_fraud_monitoring",
+      "tasks": 13,
+      "declared": 9,
+      "represented": 9,
+      "catalog_coverage": 1.0,
+      "entropy": 0.9732265278682556,
+      "singleton_workflows": 5
+    },
+    {
+      "dataset": "synthetic",
+      "group": "healthcare_patient_onboarding",
+      "tasks": 9,
+      "declared": 8,
+      "represented": 8,
+      "catalog_coverage": 1.0,
+      "entropy": 0.9825675930733636,
+      "singleton_workflows": 7
+    },
+    {
+      "dataset": "synthetic",
+      "group": "healthcare_prior_authorization",
+      "tasks": 9,
+      "declared": 8,
+      "represented": 8,
+      "catalog_coverage": 1.0,
+      "entropy": 0.9825675930733636,
+      "singleton_workflows": 7
+    },
+    {
+      "dataset": "synthetic",
+      "group": "insurance_claims_intake",
+      "tasks": 10,
+      "declared": 9,
+      "represented": 8,
+      "catalog_coverage": 0.8888888888888888,
+      "entropy": 0.9217656864304008,
+      "singleton_workflows": 6
+    },
+    {
+      "dataset": "synthetic",
+      "group": "manufacturing_purchase_to_pay",
+      "tasks": 9,
+      "declared": 9,
+      "represented": 8,
+      "catalog_coverage": 0.8888888888888888,
+      "entropy": 0.9298966940476159,
+      "singleton_workflows": 7
+    },
+    {
+      "dataset": "tau2",
+      "group": "airline",
+      "tasks": 50,
+      "declared": 9,
+      "represented": 9,
+      "catalog_coverage": 1.0,
+      "entropy": 0.9229500227191649,
+      "singleton_workflows": 0
+    },
+    {
+      "dataset": "tau2",
+      "group": "retail",
+      "tasks": 114,
+      "declared": 9,
+      "represented": 9,
+      "catalog_coverage": 1.0,
+      "entropy": 0.8094107263975403,
+      "singleton_workflows": 1
+    },
+    {
+      "dataset": "tau2",
+      "group": "telecom",
+      "tasks": 114,
+      "declared": 3,
+      "represented": 3,
+      "catalog_coverage": 1.0,
+      "entropy": 0.9786602138163105,
+      "singleton_workflows": 0
+    }
+  ],
+  "interpretation": "Exploratory within-declared-scope coverage-and-challenge index; not validated universal dataset quality.",
+  "coverage_rule": "C = 0.5 * (sum represented workflows / sum declared workflows) + 0.5 * unweighted mean group entropy",
+  "difficulty_rule": "D = equal-task mean finalized difficulty / 100; original repeat means already applied",
+  "telecom_conditions": "Separate diagnostic; not double-counted as another group",
+  "vendi": "Separate diagnostic; not blended into the primary index",
+  "source_catalogs_comparable": false,
+  "higher_difficulty": "Positive for this challenge-oriented design convention; not a quality theorem",
+  "api_calls": 0
+}

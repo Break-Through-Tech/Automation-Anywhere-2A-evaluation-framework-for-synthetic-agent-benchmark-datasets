@@ -1,5 +1,7 @@
 # Weekend scoring and reporting plan
 
+Current handoff: all five reviews are consolidated. The selected project reporting convention is 50% Coverage / 50% Difficulty: τ² 79.67, synthetic 75.85. See [the results and selection rationale](../../results/scoring/final_index_v1/README.md). This is an operational convention, not advisor approval; the earlier instructions below document the original assignment.
+
 All deadlines are in **America/New_York, November 2026**. Saturday is **November 14**; Sunday is **November 15**. This plan follows Mila's revised schedule rather than the older dates in the assignment table.
 
 ## What is already ready
