@@ -5,6 +5,7 @@
 - [Designed difficulty v1.1](difficulty/designed_final_v27/README.md): all 342 tasks, dataset/domain scores, charts, uncertainty and replay archive. τ² **64.15/100**; synthetic **63.75/100**.
 - [Coverage/Difficulty weight trials](scoring/weekend_weight_trials_v1/README.md): frozen workflow coverage inputs and five candidate settings, with Vendi separate. These are exploratory index candidates, not final selected weights or a universal quality ranking.
 - [Mila’s completed 30/70 review](scoring/mila_weight_review_v1/README.md): checked scores and comparison with 50/50.
+- [Side-by-side comparison (#63)](comparison/side_by_side_v1/README.md): tables and figures for the selected 50/50 combined index, Coverage and Difficulty, plus all five sensitivity settings.
 
 ## Retained supporting evidence
 

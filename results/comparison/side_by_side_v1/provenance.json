@@ -1,0 +1,12 @@
+{
+  "api_calls": 0,
+  "selected_convention": "results/scoring/final_index_v1 (50/50)",
+  "sources": {
+    "results/scoring/final_index_v1/scores.json": "1061074880c33eeaa81e0a7c3d929696c89b9d9220cdae5832f1be5500a5ba5d",
+    "results/scoring/final_index_v1/trials.json": "28ecf22acd5a8918cef2ae0ad665745c275f85111364926a4f029f93a7912883",
+    "results/scoring/final_index_v1/inputs.json": "c0416f2620637195f1b3ad8d056495e802f7e2ecece73be3c62865ab53760ee1",
+    "results/difficulty/designed_final_v27/task_scores.json": "a4563611e88ae82c6837bb7d1c31e2a766bba1e1b63ed5ad7a5cd8f5975dfcc1"
+  },
+  "implementation_sha256": "01bb9969fb8dddc59d30de448b019f47f64730065a90c3701785c569f887dc83",
+  "matplotlib": "3.11.2"
+}
