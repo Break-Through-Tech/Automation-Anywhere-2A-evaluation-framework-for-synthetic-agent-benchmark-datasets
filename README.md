@@ -8,6 +8,7 @@ Evaluate **workflow coverage** and **designed task difficulty** for synthetic ta
 - **Method:** [designed-difficulty v1.1](docs/evaluation/designed_difficulty_metric_v1.1.md). Five evidence-backed dimensions, 20% each. These are interpretive complexity scores, not correctness or universal quality scores.
 - **Coverage and combined weighting:** [frozen workflow coverage inputs and five trial weights](results/scoring/weekend_weight_trials_v1/README.md). Vendi remains a separate diagnostic. The selected project reporting convention is 50% Coverage / 50% Difficulty; see [the combined scores and rationale](results/scoring/final_index_v1/README.md).
 - **Your completed review:** [Mila’s 30% Coverage / 70% Difficulty comparison](results/scoring/mila_weight_review_v1/README.md).
+- **Domain-difference review (#66):** [airline vs retail, sensitivity and limitations](results/domain_validation_v1/README.md).
 - **Team handoff:** [weekend scoring plan](docs/evaluation/weekend_scoring_plan.md) and [report template](docs/evaluation/weekend_final_report_template.md).
 
 ## Reproduce current difficulty without API credits

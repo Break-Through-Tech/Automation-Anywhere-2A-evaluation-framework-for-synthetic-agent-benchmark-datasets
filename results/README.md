@@ -6,6 +6,8 @@
 - [Coverage/Difficulty weight trials](scoring/weekend_weight_trials_v1/README.md): frozen workflow coverage inputs and five candidate settings, with Vendi separate. These are exploratory index candidates, not final selected weights or a universal quality ranking.
 - [Mila’s completed 30/70 review](scoring/mila_weight_review_v1/README.md): checked scores and comparison with 50/50.
 
+- [Domain-difference review (#66)](domain_validation_v1/README.md): checks of airline–retail coverage balance, difficulty dimensions and composite sensitivity using Ronnit’s #65 outputs.
+
 ## Retained supporting evidence
 
 `difficulty/native_crosschecks_v20` and `difficulty/native_semantic_v25` contain complementary structural diagnostics, not replacement numeric scores. `difficulty/structural_v1`, `designed_v1`, `designed_v2`, `designed_v3` and `design_review_run_v1` are retained because supported modules/tests consume those fixtures. Root-level difficulty CSVs and `framework/` describe the earlier structural/empirical report mode.

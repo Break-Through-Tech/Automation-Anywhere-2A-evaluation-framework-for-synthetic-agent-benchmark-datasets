@@ -1,0 +1,70 @@
+[
+  {
+    "domain": "airline",
+    "task_id": "0",
+    "score": 50,
+    "dimensions": {
+      "workload": 2,
+      "reasoning": 2,
+      "tool_use": 2,
+      "dependencies": 2,
+      "information": 2
+    },
+    "n_judgments": 3,
+    "repeat_range": 0,
+    "case_key": "a92858c4f27538e1c39c1d89",
+    "rationale": "Ratings 2+2+2+2+2 give 50. The task combines routine discovery with several explicit eligibility checks and a dependent refusal, without a multi-entity repair or payment workflow.",
+    "endpoint": {
+      "description": "Refuse to proceed with cancellation of EHGLP3 after verifying that no cancellation condition applies; do not cancel it merely because the user was reportedly advised that insurance was unnecessary.",
+      "evidence": [
+        {
+          "source_id": "completion_design",
+          "excerpt": "Agent should refuse to proceed with the cancellation."
+        },
+        {
+          "source_id": "task_design_notes",
+          "excerpt": "Testing that agent refuses to proceed with a cancellation that is not allowed even if User mentions that she had been told she didn't need insurance."
+        },
+        {
+          "source_id": "policy_1",
+          "excerpt": "The API does not check that cancellation rules are met, so the agent must make sure the rules apply before calling the API!"
+        }
+      ]
+    },
+    "interpretation": "Illustrative post-scoring examples, not an independent validation sample."
+  },
+  {
+    "domain": "retail",
+    "task_id": "0",
+    "score": 70,
+    "dimensions": {
+      "workload": 3,
+      "reasoning": 3,
+      "tool_use": 3,
+      "dependencies": 3,
+      "information": 2
+    },
+    "n_judgments": 3,
+    "repeat_range": 0,
+    "case_key": "7f06f0875f72dc02bc3da2d7",
+    "rationale": "Levels 3 workload, 3 reasoning, 3 tool use, 3 dependencies, and 2 information sum to 14; 5 \u00d7 14 = 70. Two-item coordination and the one-call constraint drive the score, not the number of reference calls alone.",
+    "endpoint": {
+      "description": "Following explicit confirmation, request one delivered-order exchange containing the keyboard and thermostat variants; the resulting status is exchange requested, with return instructions sent by email rather than a new order placed.",
+      "evidence": [
+        {
+          "source_id": "reference_005",
+          "excerpt": "{\"action_id\": \"0_4\", \"arguments\": {\"item_ids\": [\"1151293680\", \"4983901480\"], \"new_item_ids\": [\"7706410293\", \"7747408585\"], \"order_id\": \"#W2378156\", \"payment_method_id\": \"credit_card_9513926\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+        },
+        {
+          "source_id": "policy_1",
+          "excerpt": "After user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order."
+        },
+        {
+          "source_id": "policy_1",
+          "excerpt": "Before taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed."
+        }
+      ]
+    },
+    "interpretation": "Illustrative post-scoring examples, not an independent validation sample."
+  }
+]

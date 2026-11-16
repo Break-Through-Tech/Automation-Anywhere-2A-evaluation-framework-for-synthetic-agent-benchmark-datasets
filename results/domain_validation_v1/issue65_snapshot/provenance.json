@@ -1,0 +1,13 @@
+{
+  "api_calls": 0,
+  "selected_weights": "50% Coverage / 50% Difficulty (#62)",
+  "checks": "all checks passed",
+  "inputs": {
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_labels.csv": "78a25ddf9142d3c9bb4e5215c371e2b422beff8fc16b1511f754515c9f9634dd",
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_catalog.csv": "5afaa14e13efa4d1040ddd0327eab49763ada15195cddb7fcd21d5a7d19fec95",
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_coverage_scores.csv": "39847d880c9466d676fb27860871e75ec9b0620432b462c9f07b93d6da7f8f79",
+    "results/difficulty/designed_final_v27/task_scores.json": "a4563611e88ae82c6837bb7d1c31e2a766bba1e1b63ed5ad7a5cd8f5975dfcc1",
+    "results/difficulty/designed_final_v27/domain_summary.csv": "4167dd6ef3810f18c22b4d03095be1dc339be6602f69b031a0b9221f09dc7c55",
+    "results/framework/metrics_by_domain.csv": "e9b1fbaa550673cbe419ce30e589ec32e447e6a10d5a2b43a1218c207a575ad2"
+  }
+}
