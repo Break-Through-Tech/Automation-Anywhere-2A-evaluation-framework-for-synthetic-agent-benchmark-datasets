@@ -107,6 +107,10 @@ class JudgeEvidenceTests(unittest.TestCase):
                 message=SimpleNamespace(content=json.dumps(judgment)))])
             return SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(
                 create=lambda **kwargs: response)))
+        self.judgment.update(environment_assessment={'status': 'not_established',
+            'prevents_required_execution': False, 'rationale': 'No supported blocker.', 'evidence': []},
+            blocker_recognition={'status': 'not_established', 'rationale': 'No blocker.', 'evidence': []},
+            difficulty_eligible=True, difficulty_exclusion_reason='')
         result = _call_judge(self.task, self.transcript, 'offline-fake', client_for(self.judgment))
         self.assertEqual(result['task_judgment'], 'met')
         judgment = copy.deepcopy(self.judgment)

@@ -1,4 +1,4 @@
-"""Validate separate blocker, behavior, and eligibility findings for policy v0.2."""
+"""Validate versioned outcome, blocker, behavior, and eligibility findings."""
 import json
 
 if __package__:
@@ -7,7 +7,14 @@ else:
     from judge_evidence import check_evidence
 
 
-def validate_environment_assessment(raw, judgment, transcript):
+LEGACY_POLICY = "provisional_outcome_v0.2"
+CURRENT_POLICY = "provisional_outcome_v0.3"
+
+
+def validate_environment_assessment(raw, judgment, transcript, policy_version=LEGACY_POLICY):
+    # Default preserves old recorded runners; the current judge passes v0.3 explicitly.
+    if policy_version not in {LEGACY_POLICY, CURRENT_POLICY}:
+        raise ValueError("Unsupported environmental policy version")
     environment = raw.get('environment_assessment')
     recognition = raw.get('blocker_recognition')
     specifications = [
@@ -35,8 +42,10 @@ def validate_environment_assessment(raw, judgment, transcript):
     if environment['status'] == 'not_established' and prevents:
         raise ValueError('Unestablished blocker cannot assert prevented execution')
     blocked = environment['status'] == 'supported_blocker' and prevents
-    if blocked and judgment['task_judgment'] != 'unverifiable':
+    if blocked and policy_version == LEGACY_POLICY and judgment['task_judgment'] != 'unverifiable':
         raise ValueError('A supported blocker preventing execution requires an unverifiable outcome')
+    if blocked and policy_version == CURRENT_POLICY and judgment['task_judgment'] == 'met':
+        raise ValueError('A preventing blocker cannot coexist with a met outcome')
     if recognition['status'] == 'supported_positive' and not blocked:
         raise ValueError('Positive blocker recognition requires a supported execution blocker')
     eligible = raw.get('difficulty_eligible')

@@ -33,7 +33,9 @@ REPO = Path(__file__).resolve().parent.parent
 DATA_DIR = REPO / "data"
 RUBRIC_PATH = REPO / "docs" / "evaluation" / "synthetic_milestone_rubric.md"
 JUDGMENTS = {"met", "unmet", "unverifiable"}
-PROMPT_VERSION = "synthetic_judge_v0.2_exact_evidence"
+PROMPT_VERSION = "synthetic_judge_v0.7_outcome_eligibility"
+POLICY_VERSION = "provisional_outcome_v0.3"
+POLICY_PATH = REPO / "docs/evaluation/provisional_outcome_policy_v0.3.md"
 
 SYSTEM_PROMPT = """You are an impartial evaluator of an AI agent's attempt at a synthetic task.
 Apply the grading definitions in the supplied rubric. It is a proposed draft, not an
@@ -102,7 +104,14 @@ def load_rubric(path: Path = RUBRIC_PATH) -> Tuple[str, str, str]:
 
 
 def build_system_prompt(rubric_text: str) -> str:
-    return f"{SYSTEM_PROMPT}\n\nREFERENCE RUBRIC (apply as draft):\n{rubric_text}"
+    return (f"{SYSTEM_PROMPT}\n\nREFERENCE RUBRIC (apply as draft):\n{rubric_text}"
+            f"\n\nCURRENT OPERATIONAL POLICY (overrides earlier outcome/blocker wording):\n{POLICY_PATH.read_text()}"
+            "\nRequired additional top-level JSON fields: environment_assessment: "
+            "{status, prevents_required_execution, rationale, evidence}; blocker_recognition: "
+            "{status, rationale, evidence}; difficulty_eligible: boolean; "
+            "difficulty_exclusion_reason: string. Use statuses defined by the policy. "
+            "Evidence entries have locator and excerpt, exact and relative to agent_transcript. "
+            "For not_established evidence may be []. Never use empty citation placeholders.")
 
 
 def _literal_assignment(class_node: ast.ClassDef, name: str) -> Any:
@@ -333,6 +342,7 @@ def _call_judge(
     transcript: Any,
     model: str,
     client: Any = None,
+    evaluation_context: Any = None,
 ) -> Dict[str, Any]:
     if client is None:
         from openai import OpenAI
@@ -341,7 +351,7 @@ def _call_judge(
         base_url = os.getenv("BASE_URL")
         if base_url:
             kwargs["base_url"] = base_url
-        client = OpenAI(**kwargs)
+        client = OpenAI(**kwargs, max_retries=0)
     rubric_text, _, _ = load_rubric()
 
     user_payload = {
@@ -356,6 +366,8 @@ def _call_judge(
         },
         "agent_transcript": transcript,
     }
+    if evaluation_context is not None:
+        user_payload["evaluation_context"] = evaluation_context
     response = client.chat.completions.create(
         model=model,
         messages=[
@@ -370,7 +382,13 @@ def _call_judge(
         raise ValueError("Judge returned an empty response")
     judgment = _parse_judgment(content, task["milestones"])
     check_evidence(judgment, transcript)
-    return judgment
+    if __package__:
+        from .environment_policy import validate_environment_assessment
+    else:
+        from environment_policy import validate_environment_assessment
+    assessment = validate_environment_assessment(json.loads(content), judgment, transcript, POLICY_VERSION)
+    return {**judgment, **assessment, "policy_version": POLICY_VERSION,
+            "policy_sha256": file_hash(POLICY_PATH)}
 
 
 def resolve_trials(rows, cases):
@@ -412,6 +430,14 @@ def judge_trials(
             "task_id": task["test_case_id"],
             "trial": row.get("trial", ""),
             "model": model,
+            "policy_version": POLICY_VERSION if judge is _call_judge else "",
+            "policy_sha256": file_hash(POLICY_PATH) if judge is _call_judge else "",
+            "difficulty_eligible": 0,
+            "difficulty_exclusion_reason": "Trial could not be assessed",
+            "environment_assessment_json": "",
+            "blocker_recognition_json": "",
+            "environment_blocked": 0,
+            "blocker_recognition_status": "not_established",
             "prompt_version": PROMPT_VERSION,
             "prompt_sha256": prompt_hash,
             "rubric_version": rubric_version,
@@ -436,9 +462,17 @@ def judge_trials(
         if transcript is None or transcript == "":
             raise ValueError(f"Trial {key} has no transcript")
         judgment = judge(task, transcript, model)
+        policy_fields = {k: judgment[k] for k in ("policy_version", "policy_sha256",
+            "difficulty_eligible", "difficulty_exclusion_reason", "environment_assessment_json",
+            "blocker_recognition_json", "environment_blocked", "blocker_recognition_status") if k in judgment}
+        # Injected legacy test judges remain unversioned; current API results require explicit eligibility.
+        if not policy_fields:
+            policy_fields = {"difficulty_eligible": int(judgment["task_judgment"] in {"met", "unmet"}),
+                             "difficulty_exclusion_reason": "Unverifiable outcome" if judgment["task_judgment"] == "unverifiable" else ""}
         achieved = sum(milestone["judgment"] == "met" for milestone in judgment["milestones"])
         results.append({
             **common,
+            **policy_fields,
             "status": "valid",
             "task_judgment": judgment["task_judgment"],
             "milestones_met": achieved,
@@ -462,10 +496,21 @@ def compute_judge_difficulty(results: Iterable[Dict[str, Any]]) -> List[Dict[str
         if len(policy_versions) > 1:
             raise ValueError('Cannot combine different outcome policies for task difficulty')
         for trial in judged:
-            if trial.get('policy_version') == 'provisional_outcome_v0.2' and 'difficulty_eligible' not in trial:
-                raise ValueError('Policy v0.2 requires explicit difficulty eligibility')
+            if trial.get('policy_version') in {'provisional_outcome_v0.2', POLICY_VERSION} and 'difficulty_eligible' not in trial:
+                raise ValueError('Versioned policy requires explicit difficulty eligibility')
             if 'difficulty_eligible' in trial and str(trial['difficulty_eligible']) not in {'0', '1', 'True', 'False'}:
                 raise ValueError('Difficulty eligibility must be an explicit boolean or 0/1')
+        for trial in judged:
+            if trial.get('policy_version') == POLICY_VERSION:
+                is_eligible = str(trial['difficulty_eligible']) in {'1', 'True'}
+                blocked = str(trial.get('environment_blocked', 0)) in {'1', 'True'}
+                env = json.loads(trial.get('environment_assessment_json') or '{}')
+                if is_eligible and (blocked or env.get('status') == 'suspected_blocker'
+                                    or trial['task_judgment'] == 'unverifiable'):
+                    raise ValueError('Blocked, unresolved, or unverifiable attempts are not difficulty eligible')
+                reason = trial.get('difficulty_exclusion_reason')
+                if not isinstance(reason, str) or (is_eligible == bool(reason.strip())):
+                    raise ValueError('Eligibility and exclusion reason disagree')
         eligible = [trial for trial in judged if trial["task_judgment"] in {"met", "unmet"}
                     and str(trial.get('difficulty_eligible', 1)) in {'1', 'True'}]
         passed = sum(trial["task_judgment"] == "met" for trial in eligible)
@@ -482,7 +527,9 @@ def compute_judge_difficulty(results: Iterable[Dict[str, Any]]) -> List[Dict[str
             "c_passed": passed,
             "pass_rate": round(passed / n_eligible, 4) if n_eligible else "",
             "difficulty": round(1 - passed / n_eligible, 4) if n_eligible else "",
-            "denominator_policy": ("user_v0.2_exclude_blocked_and_unverifiable"
+            "denominator_policy": ("v0.3_observed_outcome_separate_eligibility"
+                                   if policy_versions == {POLICY_VERSION}
+                                   else "user_v0.2_exclude_blocked_and_unverifiable"
                                    if policy_versions == {'provisional_outcome_v0.2'}
                                    else "draft_proposed_exclude_unverifiable"),
         })
