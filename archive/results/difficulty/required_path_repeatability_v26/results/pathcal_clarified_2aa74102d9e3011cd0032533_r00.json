@@ -1,0 +1,500 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "probe_prompt_version": "design_prompt_v1.4_required_path_probe",
+  "request_sha256": "f94711fe151dfb79a4a3714a1c3a7f66e051b09a9b2cf539c5fc3def7bf165f8",
+  "input_sha256": "f3a3b69c8dda395cb414f270af415f5366e6aac8ae6a1556aeca58a4e6ed5136",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-14T03:10:02.082631+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_0b135746d0eb5d2c016af7d10a9e9887d1b25162fd56246a1f",
+  "usage": {
+    "input_tokens": 47334,
+    "input_tokens_details": {
+      "cache_write_tokens": 47331,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1375,
+    "output_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "total_tokens": 48709
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "2aa74102d9e3011cd0032533",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "The scenario requests exchanges for two products. Its same-specification boot request requires a policy check; the stated fallback is selected because a same-option exchange is not permitted.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0081"
+          },
+          {
+            "citation_id": "E0005"
+          }
+        ],
+        "rationale": "Authenticate using the supplied name and ZIP, find the orders and variants, explain why an identical boot variant cannot be exchanged, and clarify the desired puzzle theme before preparing the exchanges.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "The reference identifies the boot exchange matching the scenario's fallback, rather than an additional exchange after a same-specification replacement.",
+        "evidence": [
+          {
+            "citation_id": "E0088"
+          },
+          {
+            "citation_id": "E0313"
+          },
+          {
+            "citation_id": "E0081"
+          }
+        ],
+        "rationale": "Verify delivery, the original boot item, and the available leather, size-9, waterproof variant; obtain a payment method and explicit confirmation before binding the order and item IDs to the exchange call.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 3,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_002",
+        "applicability_rationale": "The scenario independently requests a puzzle exchange, and the completion design calls for exchanges in both orders.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0091"
+          },
+          {
+            "citation_id": "E0087"
+          }
+        ],
+        "rationale": "Identify the original puzzle's piece count and difficulty, resolve what the customer means by a fancier theme, verify the replacement variant, and confirm the exchange details before the separate order update.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 2
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "The sufficient path includes authentication, discovery across two orders and product catalogs, clarification and confirmation, then two distinct exchanges. The decisive boot-policy finding selects the fallback; an identical-variant exchange and any further repair after the two valid exchange requests are excluded.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0013"
+          },
+          {
+            "citation_id": "E0081"
+          },
+          {
+            "citation_id": "E0087"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "The agent must reconcile the same-option prohibition with the boot fallback, and match the puzzle's reduced piece count and unchanged difficulty while resolving the subjective theme preference.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0081"
+          },
+          {
+            "citation_id": "E0261"
+          },
+          {
+            "citation_id": "E0279"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "Authentication and record retrieval feed two exchange calls, each requiring the correct order, paired old/new item IDs, and payment-method ID; these are repeated entity bindings rather than extensive heterogeneous orchestration.",
+        "evidence": [
+          {
+            "citation_id": "E0102"
+          },
+          {
+            "citation_id": "E0194"
+          },
+          {
+            "citation_id": "E0160"
+          },
+          {
+            "citation_id": "E0088"
+          },
+          {
+            "citation_id": "E0091"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 3,
+        "rationale": "Authentication precedes order disclosure; each exchange depends on its order's status, variant and payment checks, and explicit customer confirmation. The two orders require separate updates. The decisive prohibition on a same-option boot exchange selects the fallback, so no same-specification exchange or subsequent alternative repair is charged.",
+        "evidence": [
+          {
+            "citation_id": "E0013"
+          },
+          {
+            "citation_id": "E0080"
+          },
+          {
+            "citation_id": "E0081"
+          },
+          {
+            "citation_id": "E0016"
+          },
+          {
+            "citation_id": "E0087"
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The agent must retrieve order IDs, statuses, existing options, available variants and a payment method; the unclear phrase 'more fancy' calls for customer clarification. The judge-only records describe the design, not facts already known to the agent.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0005"
+          },
+          {
+            "citation_id": "E0194"
+          },
+          {
+            "citation_id": "E0183"
+          },
+          {
+            "citation_id": "E0188"
+          }
+        ]
+      }
+    },
+    "overall_score": 70,
+    "intended_endpoint": {
+      "description": "After authenticating and obtaining the required confirmations, request the available leather, size-9, waterproof boot exchange in one delivered order and the clarified 1,000-piece puzzle exchange at the same difficulty in the other. These are exchange requests, not new orders or proof of completed physical exchanges.",
+      "evidence": [
+        {
+          "citation_id": "E0003"
+        },
+        {
+          "citation_id": "E0087"
+        },
+        {
+          "citation_id": "E0088"
+        },
+        {
+          "citation_id": "E0091"
+        },
+        {
+          "citation_id": "E0082"
+        }
+      ]
+    },
+    "dependency_reasoning": "A defensible sufficient path authenticates by name and ZIP because the email is unknown, retrieves both orders and relevant products, establishes that the identical boot option cannot be exchanged, and proceeds with the stated fallback. It clarifies the puzzle theme, checks both proposed variants and payment details, and obtains explicit confirmation before each order's one-time exchange. The exact diagnostic order between the two products is not prescribed.",
+    "score_rationale": "Ratings of workload 3, reasoning 3, tool use 3, dependencies 3 and information 2 sum to 14; 5 × 14 = 70. The score counts two linked exchanges and their prerequisites, not both boot alternatives as completed work.",
+    "uncertainties": [
+      "“More fancy” does not specify a catalog theme; customer clarification is needed before treating the reference fantasy variant as the confirmed choice.",
+      "The supplied records are judge-only context; live availability and order details still require retrieval.",
+      "The scenario does not specify when or how the user will provide payment-method consent or explicit confirmations."
+    ],
+    "source_quality_flags": [
+      "The completion references specify intended item IDs but do not demonstrate that the customer confirmed those choices.",
+      "The initial_state is null, and only task-relevant baseline records are supplied; this does not prevent a defensible designed-complexity rating."
+    ],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "2aa74102d9e3011cd0032533",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "task_requirements",
+        "applicability_rationale": "The scenario requests exchanges for two products. Its same-specification boot request requires a policy check; the stated fallback is selected because a same-option exchange is not permitted.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "You do not remember your email address"
+          }
+        ],
+        "rationale": "Authenticate using the supplied name and ZIP, find the orders and variants, explain why an identical boot variant cannot be exchanged, and clarify the desired puzzle theme before preparing the exchanges.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_001",
+        "applicability_rationale": "The reference identifies the boot exchange matching the scenario's fallback, rather than an additional exchange after a same-specification replacement.",
+        "evidence": [
+          {
+            "source_id": "reference_001",
+            "excerpt": "{\"action_id\": \"108_0\", \"arguments\": {\"item_ids\": [\"1615379700\"], \"new_item_ids\": [\"8106223139\"], \"order_id\": \"#W1304208\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+          },
+          {
+            "source_id": "initial_record_007",
+            "excerpt": "ze\": \"9\", \"waterproof\": \"no\"}, \"price\": 237.65}, \"7228247242\": {\"available\": false, \"item_id\": \"7228247242\", \"options\": {\"material\": \"leather\", \"size\": \"10\", \"waterproof\": \"yes\"}, \"price\": 251.38}, \"8106223139\": {\"available\": true, \"item_id\": \"8106223139\", \"options\": {\"material\": \"leather\", \"size\": \"9\", \"waterproof\": \"yes\"}, \"price\": 249.12}, \"8118291112\": {\"available\": false, \"item_id\": \"8118291112\", \"options\": {\"material\": \"leather\", \"size\": \"12\", \"waterproof\": \"no\"}, \"price\": 260.56}, \"8277474082\": {\"available\": true, \"item_id\": \"8277474082\", \"options\": {\"material\": \"leather\", \"size\": \"12\","
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe."
+          }
+        ],
+        "rationale": "Verify delivery, the original boot item, and the available leather, size-9, waterproof variant; obtain a payment method and explicit confirmation before binding the order and item IDs to the exchange call.",
+        "applicability": "selected_conditional",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 3,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "reference_002",
+        "applicability_rationale": "The scenario independently requests a puzzle exchange, and the completion design calls for exchanges in both orders.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+          },
+          {
+            "source_id": "reference_002",
+            "excerpt": "{\"action_id\": \"108_1\", \"arguments\": {\"item_ids\": [\"6245746168\"], \"new_item_ids\": [\"3112842858\"], \"order_id\": \"#W8353027\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+          },
+          {
+            "source_id": "completion_design",
+            "excerpt": "Agent should exchange items in both orders."
+          }
+        ],
+        "rationale": "Identify the original puzzle's piece count and difficulty, resolve what the customer means by a fancier theme, verify the replacement variant, and confirm the exchange details before the separate order update.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 2
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "The sufficient path includes authentication, discovery across two orders and product catalogs, clarification and confirmation, then two distinct exchanges. The decisive boot-policy finding selects the fallback; an identical-variant exchange and any further repair after the two valid exchange requests are excluded.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "At the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code. This has to be done even when the user already provides the user id."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe."
+          },
+          {
+            "source_id": "completion_design",
+            "excerpt": "Agent should exchange items in both orders."
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "The agent must reconcile the same-option prohibition with the boot fallback, and match the puzzle's reduced piece count and unchanged difficulty while resolving the subjective theme preference.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe."
+          },
+          {
+            "source_id": "initial_record_001",
+            "excerpt": "{\"item_id\": \"7717598293\", \"name\": \"Grill\", \"options\": {\"features\": \"rotisserie\", \"size\": \"medium\", \"type\": \"electric\"}, \"price\": 985.66, \"product_id\": \"6819683148\"}, {\"item_id\": \"6245746168\", \"name\": \"Jigsaw Puzzle\", \"options\": {\"difficulty level\": \"intermediate\", \"pieces\": \"1500\", \"theme\": \"animals\"}, \"price\": 46.0, \"product_id\": \"1808611083\"}, {\"item_id\": \"6130713659\", \"name\": \"Dumbbell Set\", \"options\": {\"material\": \"urethane\", \"set type\": \"adjustable\", \"weight range\": \"55-75 lbs\"}, \"price\": 483.66, \"product_id\": \"7233192239\"}, {\"item_id\": \"8176740019\", \"name\": \"Skateboard\", \"options\": {\"dec"
+          },
+          {
+            "source_id": "initial_record_003",
+            "excerpt": "{\"name\": \"Jigsaw Puzzle\", \"product_id\": \"1808611083\", \"variants\": {\"1008948180\": {\"available\": false, \"item_id\": \"1008948180\", \"options\": {\"difficulty level\": \"beginner\", \"pieces\": \"1000\", \"theme\": \"art\"}, \"price\": 54.34}, \"1096508426\": {\"available\": true, \"item_id\": \"1096508426\", \"options\": {\"difficulty level\": \"beginner\", \"pieces\": \"500\", \"theme\": \"art\"}, \"price\": 46.13}, \"3112842858\": {\"available\": true, \"item_id\": \"3112842858\", \"options\": {\"difficulty level\": \"intermediate\", \"pieces\": \"1000\", \"theme\": \"fantasy\"}, \"price\": 49.1}, \"3614853563\": {\"available\": false, \"item_id\": \"3614853563\", \""
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "Authentication and record retrieval feed two exchange calls, each requiring the correct order, paired old/new item IDs, and payment-method ID; these are repeated entity bindings rather than extensive heterogeneous orchestration.",
+        "evidence": [
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "zip\": {\"decorators\": [\"is_tool(ToolType.READ)\"], \"documentation\": \"Find user id by first name, last name, and zip code. If the user is not found, the function\\nwill return an error message. By default, find user id by email, and only call this function\\nif the user is not found by email or cannot remember email.\\n\\nArgs:\\n    first_name: The first name of the customer, such as 'John'.\\n    last_name: The last name of the customer, such as 'Doe'.\\n    zip: The zip code of the customer, such as '12345'.\\n\\nReturns:\\n    str: The user id if found, otherwise an error message.\\n\\nRaises:\\n    Value"
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the details of a user, including their orders."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "exchange_delivered_order_items(self, order_id: str, item_ids: List[str], new_item_ids: List[str], payment_method_id: str)"
+          },
+          {
+            "source_id": "reference_001",
+            "excerpt": "{\"action_id\": \"108_0\", \"arguments\": {\"item_ids\": [\"1615379700\"], \"new_item_ids\": [\"8106223139\"], \"order_id\": \"#W1304208\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+          },
+          {
+            "source_id": "reference_002",
+            "excerpt": "{\"action_id\": \"108_1\", \"arguments\": {\"item_ids\": [\"6245746168\"], \"new_item_ids\": [\"3112842858\"], \"order_id\": \"#W8353027\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 3,
+        "rationale": "Authentication precedes order disclosure; each exchange depends on its order's status, variant and payment checks, and explicit customer confirmation. The two orders require separate updates. The decisive prohibition on a same-option boot exchange selects the fallback, so no same-specification exchange or subsequent alternative repair is charged.",
+        "evidence": [
+          {
+            "source_id": "policy_1",
+            "excerpt": "At the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code. This has to be done even when the user already provides the user id."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action. In particular, remember to remind the customer to confirm they have provided all items to be exchanged."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe."
+          },
+          {
+            "source_id": "policy_1",
+            "excerpt": "Before taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed."
+          },
+          {
+            "source_id": "completion_design",
+            "excerpt": "Agent should exchange items in both orders."
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "The agent must retrieve order IDs, statuses, existing options, available variants and a payment method; the unclear phrase 'more fancy' calls for customer clarification. The judge-only records describe the design, not facts already known to the agent.",
+        "evidence": [
+          {
+            "source_id": "scenario",
+            "excerpt": "You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+          },
+          {
+            "source_id": "scenario",
+            "excerpt": "You do not remember your email address"
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the details of a user, including their orders."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the status and details of an order."
+          },
+          {
+            "source_id": "tools_assistant",
+            "excerpt": "Get the inventory details of a product."
+          }
+        ]
+      }
+    },
+    "overall_score": 70,
+    "intended_endpoint": {
+      "description": "After authenticating and obtaining the required confirmations, request the available leather, size-9, waterproof boot exchange in one delivered order and the clarified 1,000-piece puzzle exchange at the same difficulty in the other. These are exchange requests, not new orders or proof of completed physical exchanges.",
+      "evidence": [
+        {
+          "source_id": "scenario",
+          "excerpt": "You received hiking boots that seem like they were already worn, you are unhappy about it and want to ask for a new pair with the same specs. If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof. You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+        },
+        {
+          "source_id": "completion_design",
+          "excerpt": "Agent should exchange items in both orders."
+        },
+        {
+          "source_id": "reference_001",
+          "excerpt": "{\"action_id\": \"108_0\", \"arguments\": {\"item_ids\": [\"1615379700\"], \"new_item_ids\": [\"8106223139\"], \"order_id\": \"#W1304208\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+        },
+        {
+          "source_id": "reference_002",
+          "excerpt": "{\"action_id\": \"108_1\", \"arguments\": {\"item_ids\": [\"6245746168\"], \"new_item_ids\": [\"3112842858\"], \"order_id\": \"#W8353027\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+        },
+        {
+          "source_id": "policy_1",
+          "excerpt": "After user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order."
+        }
+      ]
+    },
+    "dependency_reasoning": "A defensible sufficient path authenticates by name and ZIP because the email is unknown, retrieves both orders and relevant products, establishes that the identical boot option cannot be exchanged, and proceeds with the stated fallback. It clarifies the puzzle theme, checks both proposed variants and payment details, and obtains explicit confirmation before each order's one-time exchange. The exact diagnostic order between the two products is not prescribed.",
+    "score_rationale": "Ratings of workload 3, reasoning 3, tool use 3, dependencies 3 and information 2 sum to 14; 5 × 14 = 70. The score counts two linked exchanges and their prerequisites, not both boot alternatives as completed work.",
+    "uncertainties": [
+      "“More fancy” does not specify a catalog theme; customer clarification is needed before treating the reference fantasy variant as the confirmed choice.",
+      "The supplied records are judge-only context; live availability and order details still require retrieval.",
+      "The scenario does not specify when or how the user will provide payment-method consent or explicit confirmations."
+    ],
+    "source_quality_flags": [
+      "The completion references specify intended item IDs but do not demonstrate that the customer confirmed those choices.",
+      "The initial_state is null, and only task-relevant baseline records are supplied; this does not prevent a defensible designed-complexity rating."
+    ],
+    "unscorable_reason": ""
+  },
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 70,
+    "computed_total": 70,
+    "reported_total_mismatch": false
+  },
+  "request_binding": {
+    "bound_case_key": "2aa74102d9e3011cd0032533",
+    "model_reported_case_key": "2aa74102d9e3011cd0032533",
+    "model_case_key_mismatch": false
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "a315440f635f6147b330370fa26c728ed4abd3fa1aca4e4d07c6f1d0527e38c4",
+  "finished_at": "2026-11-14T03:10:14.761989+00:00"
+}

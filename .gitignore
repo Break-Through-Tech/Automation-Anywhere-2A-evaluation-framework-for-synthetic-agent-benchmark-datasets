@@ -2,8 +2,16 @@
 .env
 .vscode/settings.json
 /venv
+/.venv/
+/.cache/
 *.pyc
 
 /data/__pycache__
 tau2-bench/
 .DS_Store
+TEAM_LEAD_DISCUSSION.md
+
+# Local Python caches and meeting preparation documents
+__pycache__/
+Team_Lead_Meeting_Brief.docx
+results/labeling/cache/

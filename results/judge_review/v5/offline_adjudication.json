@@ -1,0 +1,79 @@
+{
+  "status": "offline_working_adjudication_not_human_or_Sandra_approval",
+  "new_api_calls": 0,
+  "policy_version": "provisional_outcome_v0.2",
+  "human_answers_unchanged": true,
+  "reference_context_supplied": true,
+  "raw_packet_sha256": "be56eb919ffc041e7103639eb4f5193f0f435c70c7b51c467afe02b128bc6d5d",
+  "cases": [
+    {
+      "review_id": "R01",
+      "working_task_judgment": "unverifiable",
+      "difficulty_eligible": false,
+      "completion_observation": "No identity screening or account-opening operation is recorded; only an acknowledged handoff.",
+      "environment_assessment": "Unresolved input/contract sufficiency, not a proven missing tool or confirmed impossible task.",
+      "blocker_recognition": "Positive recognition of a necessary blocker is not established. The extra requested owner fields were not demonstrated mandatory.",
+      "basis": "Runtime schemas permit partial customer objects, but structural acceptance does not establish valid owner identity verification. Scenario data known to the simulator was not automatically visible to the agent.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/output/exit_status",
+          "excerpt": "escalated"
+        },
+        {
+          "locator": "#/conversation/4/content",
+          "excerpt": "I can provide their dates of birth and ID details through the secure application channel"
+        }
+      ],
+      "source_context": {
+        "runtime_schema_sha256": "cf7a9466b436c76f1bd4ccb2d30144ff04f0c38cf919e517943068534a021afd"
+      },
+      "next_resolution": "Specify minimum semantic identity information and the intended authorized collection channel. Do not infer feasibility merely from a permissive schema or agent fault merely from missing calls."
+    },
+    {
+      "review_id": "R15",
+      "working_task_judgment": "unverifiable",
+      "difficulty_eligible": false,
+      "completion_observation": "Investigation calls and an auto-approve decision are recorded; full intended case completion is not independently established.",
+      "environment_assessment": "Observed reference/mock disagreement; approval/case-state evidence contract remains ambiguous.",
+      "blocker_recognition": "The agent did not establish recognition of the scenario mismatch; do not award that diagnostic automatically.",
+      "basis": "Correct alert lookup returns fixed generic data, including a device different from the scenario; returned travel also differs. The runtime SUCCESS tool reports a decision without independently establishing case closure.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/arguments/alert_id",
+          "excerpt": "FA-883422"
+        },
+        {
+          "locator": "#/tool_events/0/output/device_id",
+          "excerpt": "DEV-998877"
+        },
+        {
+          "locator": "#/tool_events/1/output/recent_travel",
+          "excerpt": "New York"
+        },
+        {
+          "locator": "#/tool_events/6/output/data/decision",
+          "excerpt": "auto_approve"
+        }
+      ],
+      "reference_differences": {
+        "scenario_device": "DEV-200002",
+        "observed_device": "DEV-998877",
+        "scenario_recent_travel": [
+          "Miami, FL"
+        ],
+        "observed_recent_travel": [
+          "New York",
+          "Chicago"
+        ]
+      },
+      "source_context": {
+        "mock_file": "data/banking_fraud_monitoring/test_cases.py",
+        "mock_file_sha256": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+        "method_line": 184,
+        "literal_return_line": 206,
+        "literal_return_matches_observed_output": true
+      },
+      "next_resolution": "Specify whether a supported recorded decision is the entire accepted endpoint or whether case approval/closure must be observable. Keep scenario/mock disagreements as separate dataset-quality findings."
+    }
+  ]
+}

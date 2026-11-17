@@ -1,0 +1,73 @@
+{
+  "started_at": "2026-11-12T20:50:01.411496+00:00",
+  "config": {
+    "review_version": "design_feature_review_v0.2_rules_frozen",
+    "rulebook_version": "design_counting_rules_v0.1_frozen",
+    "rulebook_sha256": "185a81fa6818625f2080d1c98df0bf230d8493b7fd4f87fcd93b2c69d8abda72",
+    "requests_sha256": "89fe6cd60efabc91e27d7ef1eed676d3778b2bb78ba3d0e414be0c1ac6e426e0",
+    "profiles_sha256": "69f6b7ba5f147d0340b167d0bf2f56abc3887e17a1d9c55ca2da0f81f6b9a4b7",
+    "validator_sha256": "a094ddd499876b9786eb7116c9ee9dcc563fe4aecaec2c8d51c77c6ae707b713",
+    "model_requested": "gpt-6-astra",
+    "reasoning_effort": "medium",
+    "max_completion_tokens": 6000,
+    "max_retries": 0,
+    "max_requests": 3,
+    "endpoint_sha256": "d9617135d6fdd0a2cde722d637a1dfcc3da37515708b3ea5d66ae607c8ac785e",
+    "runner_sha256": "f71b03d112cb9a45107da575c69f6e942b80c4b7d8a2f03497a91605d1731ac4",
+    "purpose": "source-only design feature review, not agent-outcome judgment or independent validation"
+  },
+  "checks": [
+    {
+      "review_id": "D01",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "request_sha256": "c271b237d24aec5ecab7f1c665c6af32f21e1add0d5fee529832839d877ed9b0",
+      "model_returned": "gpt-6-astra",
+      "usage": {
+        "completion_tokens": 2002,
+        "prompt_tokens": 3374,
+        "total_tokens": 5376,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 268,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 3371,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      },
+      "request_id": "req_fe168e0af5eb4c0381d7151940c55572",
+      "received_at": "2026-11-12T20:50:52.222111+00:00",
+      "response_sha256": "c0051ca75dceeff720d5fc7dd9e35484cd42cfe40fe39371bd9a690f5a9a9c89",
+      "status": "citation_and_schema_valid",
+      "counts": {
+        "action_units": 8,
+        "business_check_groups": 3,
+        "coordination": {
+          "handoff": 2,
+          "multi_party": 1
+        },
+        "distinct_coordination_events": 3,
+        "n_uncertainties": 3
+      },
+      "semantic_inspection": {
+        "decision": "stop",
+        "reviewer": "Codex assistant",
+        "reason": "Tool contracts missing from prepared context, despite being present in source YAML. Preserve outcome; no retry of D01.",
+        "counts_not_validation": true
+      }
+    }
+  ],
+  "stop_reason": "D01 source catalog C was empty because nested YAML tool groups were not flattened; do not send remaining old packets.",
+  "api_requests_attempted": 1,
+  "status": "stopped_for_input_context_diagnosis",
+  "unattempted_review_ids": [
+    "D02",
+    "D03"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "upstream_profile_groups_checked": 10,
+  "upstream_input_hashes_checked": 6,
+  "exact_task_identity_join": 342,
+  "dimension_gap_decomposition": "exact",
+  "weighted_domain_difficulty_reconstructs_dataset_means": true,
+  "api_calls": 0,
+  "sha256": {
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_labels.csv": "78a25ddf9142d3c9bb4e5215c371e2b422beff8fc16b1511f754515c9f9634dd",
+    "results/scoring/weekend_weight_trials_v1/inputs/workflow_catalog.csv": "5afaa14e13efa4d1040ddd0327eab49763ada15195cddb7fcd21d5a7d19fec95",
+    "results/difficulty/designed_final_v27/task_scores.json": "a4563611e88ae82c6837bb7d1c31e2a766bba1e1b63ed5ad7a5cd8f5975dfcc1",
+    "results/difficulty/designed_final_v27/audit/judgment_evidence.json": "982b266c0febbde6217073afe925b402bc6210043b19e7f9da9924b867f5ee33",
+    "results/domain_validation_v1/issue65_snapshot/domain_profiles.csv": "bb7f29c4713695b2fbe3882467a89d07a33f1081dd9fc9ed631db6b221a3b128"
+  }
+}

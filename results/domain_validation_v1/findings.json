@@ -1,0 +1,302 @@
+{
+  "status": "descriptive_consistency_check_completed_not_independent_validity",
+  "api_calls": 0,
+  "matched_tasks": 342,
+  "checked_upstream_domains": 10,
+  "groups": {
+    "synthetic/banking_accounts_deposits": {
+      "n": 8,
+      "workflow_memberships": 8,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 0.75,
+      "entropy": 0.8333333333333333,
+      "coverage": 0.7916666666666666,
+      "difficulty": 66.25,
+      "composite": 72.70833333333333,
+      "dimension_means": {
+        "workload": 3,
+        "reasoning": 2.375,
+        "tool_use": 3,
+        "dependencies": 2.875,
+        "information": 2
+      },
+      "min": 60,
+      "max": 70,
+      "median": 65.0
+    },
+    "synthetic/banking_customer_onboarding": {
+      "n": 6,
+      "workflow_memberships": 6,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 0.5,
+      "entropy": 0.6394319446848299,
+      "coverage": 0.569715972342415,
+      "difficulty": 67.5,
+      "composite": 62.23579861712075,
+      "dimension_means": {
+        "workload": 3,
+        "reasoning": 2.5,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      "min": 65,
+      "max": 70,
+      "median": 67.5
+    },
+    "synthetic/banking_fraud_monitoring": {
+      "n": 13,
+      "workflow_memberships": 13,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 1.0,
+      "entropy": 0.9732265278682556,
+      "coverage": 0.9866132639341278,
+      "difficulty": 63.46153846153846,
+      "composite": 81.06143242747562,
+      "dimension_means": {
+        "workload": 2.8461538461538463,
+        "reasoning": 2.4615384615384617,
+        "tool_use": 3.076923076923077,
+        "dependencies": 2.3076923076923075,
+        "information": 2
+      },
+      "min": 55,
+      "max": 75,
+      "median": 65
+    },
+    "synthetic/healthcare_patient_onboarding": {
+      "n": 9,
+      "workflow_memberships": 9,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 1.0,
+      "entropy": 0.9825675930733636,
+      "coverage": 0.9912837965366819,
+      "difficulty": 65.55555555555556,
+      "composite": 82.34196760461188,
+      "dimension_means": {
+        "workload": 3,
+        "reasoning": 2.4444444444444446,
+        "tool_use": 2.888888888888889,
+        "dependencies": 2.7777777777777777,
+        "information": 2
+      },
+      "min": 55,
+      "max": 70,
+      "median": 65
+    },
+    "synthetic/healthcare_prior_authorization": {
+      "n": 9,
+      "workflow_memberships": 9,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 1.0,
+      "entropy": 0.9825675930733636,
+      "coverage": 0.9912837965366819,
+      "difficulty": 58.333333333333336,
+      "composite": 78.73085649350077,
+      "dimension_means": {
+        "workload": 2.6666666666666665,
+        "reasoning": 2,
+        "tool_use": 2.7777777777777777,
+        "dependencies": 2.2222222222222223,
+        "information": 2
+      },
+      "min": 45,
+      "max": 65,
+      "median": 60
+    },
+    "synthetic/insurance_claims_intake": {
+      "n": 10,
+      "workflow_memberships": 10,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 0.8888888888888888,
+      "entropy": 0.9217656864304008,
+      "coverage": 0.9053272876596448,
+      "difficulty": 65,
+      "composite": 77.76636438298223,
+      "dimension_means": {
+        "workload": 2.9,
+        "reasoning": 2.3,
+        "tool_use": 3,
+        "dependencies": 2.5,
+        "information": 2.3
+      },
+      "min": 55,
+      "max": 80,
+      "median": 65.0
+    },
+    "synthetic/manufacturing_purchase_to_pay": {
+      "n": 9,
+      "workflow_memberships": 9,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 0.8888888888888888,
+      "entropy": 0.9298966940476159,
+      "coverage": 0.9093927914682524,
+      "difficulty": 61.666666666666664,
+      "composite": 76.30297290674595,
+      "dimension_means": {
+        "workload": 2.6666666666666665,
+        "reasoning": 2.2222222222222223,
+        "tool_use": 2.7777777777777777,
+        "dependencies": 2.6666666666666665,
+        "information": 2
+      },
+      "min": 50,
+      "max": 70,
+      "median": 65
+    },
+    "tau2/airline": {
+      "n": 50,
+      "workflow_memberships": 89,
+      "tasks_with_multiple_workflows": 25,
+      "completeness": 1.0,
+      "entropy": 0.9229500227191649,
+      "coverage": 0.9614750113595825,
+      "difficulty": 59.1,
+      "composite": 77.62375056797913,
+      "dimension_means": {
+        "workload": 2.46,
+        "reasoning": 2.64,
+        "tool_use": 2.32,
+        "dependencies": 2.12,
+        "information": 2.28
+      },
+      "min": 30,
+      "max": 90,
+      "median": 60.0
+    },
+    "tau2/retail": {
+      "n": 114,
+      "workflow_memberships": 214,
+      "tasks_with_multiple_workflows": 67,
+      "completeness": 1.0,
+      "entropy": 0.8094107263975403,
+      "coverage": 0.9047053631987702,
+      "difficulty": 64.86842105263158,
+      "composite": 77.6694786862543,
+      "dimension_means": {
+        "workload": 2.692982456140351,
+        "reasoning": 2.6666666666666665,
+        "tool_use": 2.6403508771929824,
+        "dependencies": 2.543859649122807,
+        "information": 2.4298245614035086
+      },
+      "min": 50,
+      "max": 80,
+      "median": 67.5
+    },
+    "tau2/telecom": {
+      "n": 114,
+      "workflow_memberships": 114,
+      "tasks_with_multiple_workflows": 0,
+      "completeness": 1.0,
+      "entropy": 0.9786602138163105,
+      "coverage": 0.9893301069081553,
+      "difficulty": 65.65789473684211,
+      "composite": 82.29545271382881,
+      "dimension_means": {
+        "workload": 2.9210526315789473,
+        "reasoning": 2.6491228070175437,
+        "tool_use": 2.5701754385964914,
+        "dependencies": 2.543859649122807,
+        "information": 2.4473684210526314
+      },
+      "min": 50,
+      "max": 85,
+      "median": 70.0
+    }
+  },
+  "retail_minus_airline": {
+    "difficulty_points": 5.768421052631574,
+    "coverage_points": -5.676964816081231,
+    "composite_points_at_50_50": 0.045728118275171425,
+    "equalizing_coverage_weight": 0.5039953321626468,
+    "dimension_contributions": [
+      {
+        "dimension": "workload",
+        "retail_minus_airline_level": 0.23298245614035107,
+        "difficulty_point_difference": 1.1649122807017553
+      },
+      {
+        "dimension": "reasoning",
+        "retail_minus_airline_level": 0.026666666666666394,
+        "difficulty_point_difference": 0.13333333333333197
+      },
+      {
+        "dimension": "tool_use",
+        "retail_minus_airline_level": 0.3203508771929826,
+        "difficulty_point_difference": 1.601754385964913
+      },
+      {
+        "dimension": "dependencies",
+        "retail_minus_airline_level": 0.4238596491228068,
+        "difficulty_point_difference": 2.119298245614034
+      },
+      {
+        "dimension": "information",
+        "retail_minus_airline_level": 0.14982456140350875,
+        "difficulty_point_difference": 0.7491228070175437
+      }
+    ],
+    "leave_one_task_out_difficulty_gap_range": [
+      5.1745435016111685,
+      6.3990332975295345
+    ],
+    "pairwise_retail_higher_with_half_ties": 0.6344736842105263,
+    "pairwise_count": 5700,
+    "airline_single_5_point_rating_counterfactual_composite": 77.67375056797913,
+    "counterfactual_modifies_saved_scores": false
+  },
+  "weight_sensitivity": [
+    {
+      "coverage_weight": 0.3,
+      "airline": 70.21425034078747,
+      "retail": 72.5490556328052,
+      "retail_minus_airline": 2.3348052920177325
+    },
+    {
+      "coverage_weight": 0.4,
+      "airline": 73.91900045438331,
+      "retail": 75.10926715952975,
+      "retail_minus_airline": 1.1902667051464517
+    },
+    {
+      "coverage_weight": 0.5,
+      "airline": 77.62375056797913,
+      "retail": 77.6694786862543,
+      "retail_minus_airline": 0.045728118275171425
+    },
+    {
+      "coverage_weight": 0.6,
+      "airline": 81.32850068157495,
+      "retail": 80.22969021297884,
+      "retail_minus_airline": -1.0988104685961089
+    },
+    {
+      "coverage_weight": 0.7,
+      "airline": 85.03325079517077,
+      "retail": 82.78990173970338,
+      "retail_minus_airline": -2.243349055467389
+    }
+  ],
+  "aggregations": {
+    "tau2": {
+      "equal_task_difficulty": 64.15467625899281,
+      "task_weighted_domain_composites": 79.55823635974255,
+      "published_dataset_composite": 79.66917948727153,
+      "note": "Domain composite averages are not the dataset formula: dataset entropy averages groups, and completeness pools workflow counts."
+    },
+    "synthetic": {
+      "equal_task_difficulty": 63.75,
+      "task_weighted_domain_composites": 76.92071713750194,
+      "published_dataset_composite": 75.85227439335101,
+      "note": "Domain composite averages are not the dataset formula: dataset entropy averages groups, and completeness pools workflow counts."
+    }
+  },
+  "limitations": [
+    "Shared sources and same judge; no independent gold difficulty or causal effect.",
+    "Task variants/workflows are dependent; no task-level IID p-values or confidence intervals claimed.",
+    "Task counts 50/114/114 and distinct own-catalog definitions.",
+    "Most tasks have one judgment; domain uncertainty is not estimated by the few development repeats.",
+    "Higher designed difficulty and higher composite are not proven higher benchmark quality."
+  ]
+}

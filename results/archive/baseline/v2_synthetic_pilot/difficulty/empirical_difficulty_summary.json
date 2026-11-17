@@ -1,0 +1,26 @@
+{
+  "banking_accounts_deposits": {
+    "n_tasks": 2,
+    "n_scored": 2,
+    "mean_difficulty": 1.0,
+    "never_solved (difficulty=1)": 2,
+    "always_solved (difficulty=0)": 0,
+    "mixed": 0,
+    "distinct_difficulty_values": 1,
+    "tasks_with_infra_errors": 0,
+    "min_valid_trials_per_task": 1,
+    "max_valid_trials_per_task": 1
+  },
+  "ALL": {
+    "n_tasks": 2,
+    "n_scored": 2,
+    "mean_difficulty": 1.0,
+    "never_solved (difficulty=1)": 2,
+    "always_solved (difficulty=0)": 0,
+    "mixed": 0,
+    "distinct_difficulty_values": 1,
+    "tasks_with_infra_errors": 0,
+    "min_valid_trials_per_task": 1,
+    "max_valid_trials_per_task": 1
+  }
+}

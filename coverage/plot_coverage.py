@@ -34,7 +34,7 @@ def label(text):
 
 def load_inputs():
     labels = {}
-    paths = [FOLDER / "attribute_scores.csv", FOLDER / "vendi_scores.csv",
+    paths = [ROOT / "results/coverage/attribute_scores.csv", ROOT / "results/coverage/vendi_scores.csv",
              ROOT / "data/processed/tasks.jsonl"]
     tasks = [json.loads(line) for line in paths[-1].read_text().splitlines() if line.strip()]
     vendi = pd.read_csv(paths[1])
@@ -189,7 +189,7 @@ def main():
     args = parser.parse_args()
     labels, attributes, vendi, paths = load_inputs()
     data = distributions(labels)
-    counts_path = FOLDER / "attribute_counts.csv"
+    counts_path = ROOT / "results/coverage/attribute_counts.csv"
     keys = ["dataset", "attribute", "category"]
     saved_counts = pd.read_csv(counts_path).set_index(keys)["count"].sort_index()
     current_counts = data[data.domain == "all"].set_index(keys)["count"].sort_index()

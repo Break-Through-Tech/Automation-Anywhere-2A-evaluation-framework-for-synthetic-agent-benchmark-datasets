@@ -1,0 +1,30 @@
+{
+  "status": "single_retry_validated_not_full_calibration",
+  "n_model_calls": 1,
+  "prompt_version": "design_prompt_v1.1",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "model": "gpt-6-sol",
+  "packet_manifest_sha256": "c73acbf98ddca8580bb862f4ce1a7c2ba6e8a07f496969228d07327642aa14ac",
+  "rubric_weights_or_anchors_changed": false,
+  "score": 70,
+  "usage": {
+    "input_tokens": 8862,
+    "input_tokens_details": {
+      "cache_write_tokens": 8859,
+      "cached_tokens": 0,
+      "cache_write_tokens_details": {
+        "ttl_12h_tokens": 0,
+        "ttl_30m_tokens": 8859
+      }
+    },
+    "output_tokens": 2459,
+    "output_tokens_details": {
+      "reasoning_tokens": 60
+    },
+    "total_tokens": 11321
+  },
+  "independent_validation": false,
+  "repeat_reliability": "not_run",
+  "prior_prompt_scores_pooled": false,
+  "raw_responses_preserved_locally": ".cache/design_numeric_v1/insurance_retry_v11/raw"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "pilot_incomplete_due_to_response_contract_failure",
+  "original_implementation_commit": "9fa564001cc93fa98cf2a33b9c2b3017a29417dd",
+  "packet_manifest_sha256": "830bd3ba60971ba9331a3a40b300bda11bd52a3cb8b4d82ee0a78c8789b1eeac",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "prompt_version": "design_prompt_v1",
+  "requested_model": "gpt-6-sol",
+  "model_requests": 3,
+  "validated_judgments": 2,
+  "format_rejections": 1,
+  "usage_totals": {
+    "input_tokens": 26670,
+    "output_tokens": 7461,
+    "total_tokens": 34131
+  },
+  "rubric_weights_or_anchors_changed": false,
+  "independent_validation": false,
+  "repeat_reliability": "not_run",
+  "raw_responses_preserved_locally": ".cache/design_numeric_v1/pilot_gpt6_sol_v1/raw",
+  "score_scope": "Two selected original synthetic cases only; 62.5 is not a dataset difficulty estimate."
+}

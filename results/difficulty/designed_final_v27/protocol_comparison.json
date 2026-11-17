@@ -1,0 +1,3095 @@
+{
+  "note": "Full same-inventory rerun; differences combine wording effects and model variation, not a causal prompt-effect estimate. No selective score replacements.",
+  "datasets": {
+    "synthetic": {
+      "original": 64.296875,
+      "clarified": 63.75,
+      "difference": -0.546875
+    },
+    "tau2": {
+      "original": 65.34772182254197,
+      "clarified": 64.15467625899281,
+      "difference": -1.1930455635491626
+    }
+  },
+  "tasks": [
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "0",
+      "case_key": "a92858c4f27538e1c39c1d89",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "1",
+      "case_key": "c54b91188a3db01082135099",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "10",
+      "case_key": "7be93b6e809bba9667a2274d",
+      "original_score": 70,
+      "clarified_score": 55,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "11",
+      "case_key": "3e2f5e5628ed8be6a874db49",
+      "original_score": 55,
+      "clarified_score": 60,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "12",
+      "case_key": "d9f37fc70550327d8fd89cb3",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "13",
+      "case_key": "a360b134c31d1e47c55b5a97",
+      "original_score": 40,
+      "clarified_score": 40,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "14",
+      "case_key": "4052de4afd171be50d2045cf",
+      "original_score": 75,
+      "clarified_score": 85,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "15",
+      "case_key": "9a1bc0193d929be7d7d59fea",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "16",
+      "case_key": "c9124780ab121bfd4ac6d0b4",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "17",
+      "case_key": "5a0ab0f8bdfe83da6d756ae4",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "18",
+      "case_key": "ecdb5806f4e8e0d14212b151",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "19",
+      "case_key": "f166b24f83e349eacff9320d",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "2",
+      "case_key": "cf0b4a03054d98de051d2068",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "20",
+      "case_key": "9173f934f7daee1cafa3de6c",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "21",
+      "case_key": "19d3a4ec73dfdda9d3194175",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "22",
+      "case_key": "baee0ad879ca52841c98508a",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "23",
+      "case_key": "8eeff12a0b275574fd6f02fd",
+      "original_score": 85,
+      "clarified_score": 90,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "24",
+      "case_key": "686f6fe4080293c934f32d1a",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "25",
+      "case_key": "c18c0e73728a426987604a08",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "26",
+      "case_key": "f6c15e4b14e764adf6963ac2",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "27",
+      "case_key": "b33bcc19973ef63fdddda077",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "28",
+      "case_key": "68989856d64b11ada169dcf9",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "29",
+      "case_key": "32af848964a7e615a9a01c06",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "3",
+      "case_key": "9802310779faee95d933d75b",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "30",
+      "case_key": "eaa5df2ed6a8b81d2fe705d7",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "31",
+      "case_key": "e879381640cd9b685a20c368",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "32",
+      "case_key": "c2577f7fa911cb487e2c6a4f",
+      "original_score": 75,
+      "clarified_score": 55,
+      "difference": -20
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "33",
+      "case_key": "e072b8b362034d5b4469c599",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "34",
+      "case_key": "60158d81d71cb89f3d4f90d8",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "35",
+      "case_key": "290fed39ac5bfe9e92056441",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "36",
+      "case_key": "3b9aac219c1cc123ba4793cc",
+      "original_score": 40,
+      "clarified_score": 40,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "37",
+      "case_key": "5f85bda4eb9a8ab42fe50862",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "38",
+      "case_key": "77d53b8595bac76a64a870be",
+      "original_score": 60,
+      "clarified_score": 50,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "39",
+      "case_key": "b8f68cdde3eb65aa2a77e3c2",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "4",
+      "case_key": "c391b41ba15c062016bae1e3",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "40",
+      "case_key": "36974a35c9bf8a1f7b7b9103",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "41",
+      "case_key": "abfb51cb75c3bfe1cd40c061",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "42",
+      "case_key": "0bf1d729badfeddbeaf0e813",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "43",
+      "case_key": "5129537d29b9323d1dba61c5",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "44",
+      "case_key": "dba996935d3d59ac08a5824b",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "45",
+      "case_key": "7950300632b0095b26e3e698",
+      "original_score": 50,
+      "clarified_score": 40,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "46",
+      "case_key": "4195849d9fa77277675a6884",
+      "original_score": 30,
+      "clarified_score": 30,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "47",
+      "case_key": "f688a88a8d6335e6eef5262b",
+      "original_score": 45,
+      "clarified_score": 45,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "48",
+      "case_key": "90346c97fc3adf63e3d5f64d",
+      "original_score": 40,
+      "clarified_score": 40,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "49",
+      "case_key": "77864a1d272d313619916140",
+      "original_score": 40,
+      "clarified_score": 40,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "5",
+      "case_key": "f1d565b1a144016477eb2edc",
+      "original_score": 40,
+      "clarified_score": 35,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "6",
+      "case_key": "f59701d48b8bfd1ecd325ef6",
+      "original_score": 40,
+      "clarified_score": 50,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "7",
+      "case_key": "46da96cf6eaf6244864be6fb",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "8",
+      "case_key": "4c357bfe7e224c70f0ef1577",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "airline",
+      "task_id": "9",
+      "case_key": "1e721f8d0a48b2968420e23d",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "0",
+      "case_key": "7f06f0875f72dc02bc3da2d7",
+      "original_score": 66.66666666666667,
+      "clarified_score": 70,
+      "difference": 3.3333333333333286
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "1",
+      "case_key": "5a34b26f4e3e3aeb523654f0",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "10",
+      "case_key": "8b4afcd1f9114ea5823beafa",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "100",
+      "case_key": "5babc117df2f5339b49a44f5",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "101",
+      "case_key": "f8dc7df860e91d4caf0ed328",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "102",
+      "case_key": "983a1b3ff6855c114e476217",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "103",
+      "case_key": "857a80159c7047d70d93f5a0",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "104",
+      "case_key": "183e62428f6b311559aee783",
+      "original_score": 85,
+      "clarified_score": 80,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "105",
+      "case_key": "5c98b96f208ea0c370566a7b",
+      "original_score": 70,
+      "clarified_score": 55,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "106",
+      "case_key": "a1997a4a1505718cb3a2f6c2",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "107",
+      "case_key": "2aa74102d9e3011cd0032533",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "108",
+      "case_key": "fc84d6699348ab707195e7db",
+      "original_score": 50,
+      "clarified_score": 55,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "109",
+      "case_key": "6c64488d90f055efeb14b4ee",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "11",
+      "case_key": "092c577ed62688e8e4b585b9",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "110",
+      "case_key": "d73ecdd7847a0cd9127b552a",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "111",
+      "case_key": "b1bbefe88b7fef77aeb9c323",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "112",
+      "case_key": "1c8301dd145323a24ea61655",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "113",
+      "case_key": "a1fe5ee804164fc69d4c86e4",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "12",
+      "case_key": "cad1ce5aef697f8e9080c854",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "13",
+      "case_key": "a42dc66fb6c779d730efd397",
+      "original_score": 55,
+      "clarified_score": 65,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "14",
+      "case_key": "6ad7fcddc3387e2db7a82eaf",
+      "original_score": 75,
+      "clarified_score": 60,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "15",
+      "case_key": "1a27c56ddc7bf584196f9095",
+      "original_score": 60,
+      "clarified_score": 70,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "16",
+      "case_key": "a8d6266c20ef2c78127ff8a4",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "17",
+      "case_key": "0313170f4bb326354043fa26",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "18",
+      "case_key": "386334e62190d4cd7b393191",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "19",
+      "case_key": "56d5118f55558d509f75caf5",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "2",
+      "case_key": "de6d40db385a67a755c95cfa",
+      "original_score": 75,
+      "clarified_score": 65,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "20",
+      "case_key": "3fd829bef568757f5748302c",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "21",
+      "case_key": "22e61b3f515eaab982365900",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "22",
+      "case_key": "f602e440878e54a12dcb34ac",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "23",
+      "case_key": "6abea04ea815462da28fe332",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "24",
+      "case_key": "dbd4d184920f2cdced8fd12a",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "25",
+      "case_key": "c5653310ba68f26d18e241be",
+      "original_score": 65,
+      "clarified_score": 55,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "26",
+      "case_key": "b8266c3afb8cad868d6f9708",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "27",
+      "case_key": "42e84b46cd9df3f5874ce6aa",
+      "original_score": 70,
+      "clarified_score": 60,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "28",
+      "case_key": "b8d5eb7af542e27c84e0919f",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "29",
+      "case_key": "28aad677e3656fc3e0034b27",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "3",
+      "case_key": "d5bae10cd4805380c4bf7dd2",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "30",
+      "case_key": "552da67590ed2a4f623e5d11",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "31",
+      "case_key": "a5b98381e82ed08fbacad849",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "32",
+      "case_key": "a504879c1b97245f49328d9a",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "33",
+      "case_key": "a6b4ff091bb5112f4d335c54",
+      "original_score": 60,
+      "clarified_score": 50,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "34",
+      "case_key": "114ad4762ee1faea710908a7",
+      "original_score": 60,
+      "clarified_score": 50,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "35",
+      "case_key": "c29e14d9165f92b2525d1f84",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "36",
+      "case_key": "e6e968120ecbf4e4bf96ac77",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "37",
+      "case_key": "afc5f7116536d70a27951110",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "38",
+      "case_key": "267581b5fb7ccf0f76674ab8",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "39",
+      "case_key": "5aa1b72cdedec079ccd3f33f",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "4",
+      "case_key": "3524ee91abe306bd6cd2336a",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "40",
+      "case_key": "754f44ace346ca9a30abea18",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "41",
+      "case_key": "7018026dc4174c8ce0cb7bbb",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "42",
+      "case_key": "c6df8588dd5c0b6023519d85",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "43",
+      "case_key": "6b75001517d371948542e80e",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "44",
+      "case_key": "4412244ad36b96f45d8b2f2b",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "45",
+      "case_key": "c61e73efec095349115c33c4",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "46",
+      "case_key": "867e7aa94da7edd91e8fc02a",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "47",
+      "case_key": "879f834c303065baf36bf9d9",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "48",
+      "case_key": "0bc7eada11ce6a29892854df",
+      "original_score": 55,
+      "clarified_score": 65,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "49",
+      "case_key": "95f53ffb0562a3ab50265171",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "5",
+      "case_key": "6afd82ba4deb8cd3bb7c2c51",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "50",
+      "case_key": "cfc85e691af48e93f6cf9f19",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "51",
+      "case_key": "ec68bba2fc5b7cd6d19d4e8d",
+      "original_score": 75,
+      "clarified_score": 50,
+      "difference": -25
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "52",
+      "case_key": "a68965936117b346a8031cf2",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "53",
+      "case_key": "b109d379483418c10291ea3c",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "54",
+      "case_key": "9b4f1c57bf529f8aef04fa25",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "55",
+      "case_key": "38200dffd675229a41ee5846",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "56",
+      "case_key": "0eb7c0a00874db0fd42b1950",
+      "original_score": 75,
+      "clarified_score": 60,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "57",
+      "case_key": "c7dd7d1c9a7b77af5708172c",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "58",
+      "case_key": "bbce3daa52583c7dc974c9b3",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "59",
+      "case_key": "fbc6d7abbe60e2fee6b04c49",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "6",
+      "case_key": "a29f33c29351cdd1b4cf03d4",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "60",
+      "case_key": "c2a7c4fad585f581603f99c0",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "61",
+      "case_key": "dedd117d96a8476a79fb0e4f",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "62",
+      "case_key": "d78cd9989a5c458bf5ef2d0b",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "63",
+      "case_key": "ead4c8b25640bdc97948c250",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "64",
+      "case_key": "d0d4ff59f2a1f72911d01297",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "65",
+      "case_key": "9b421af7909abee4c2c29daf",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "66",
+      "case_key": "f83d8d4aff1601e6b7127a50",
+      "original_score": 50,
+      "clarified_score": 55,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "67",
+      "case_key": "c5b04f16aa1c02684ad2b2cb",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "68",
+      "case_key": "cb22738a04f684975469183e",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "69",
+      "case_key": "306ed98fbd698aaef9d4849f",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "7",
+      "case_key": "1ae972620d978a8bafd6181a",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "70",
+      "case_key": "d60ac0780c088f8d375ef3c8",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "71",
+      "case_key": "ef8bc420b45dbb612861a41c",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "72",
+      "case_key": "238db86624d0d25dab24beee",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "73",
+      "case_key": "3c08aea6fbb4d9440d185df1",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "74",
+      "case_key": "53645445eae3cd653a801236",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "75",
+      "case_key": "733d9c09a2b97c06eb40c9e6",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "76",
+      "case_key": "a40c75cccb312707221effd8",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "77",
+      "case_key": "15cbb20537491c6e3165bc73",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "78",
+      "case_key": "8e9200cacda94840ce54f461",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "79",
+      "case_key": "58ffe0249741555b3b9f29fd",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "8",
+      "case_key": "26c14d37333315c8921ec5fc",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "80",
+      "case_key": "613d8050043d69fdaddc65f4",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "81",
+      "case_key": "0f8d959b4818117dc693a28f",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "82",
+      "case_key": "4f7399cff3e423339cea325b",
+      "original_score": 70,
+      "clarified_score": 55,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "83",
+      "case_key": "4dddfaa6a44461393a02c889",
+      "original_score": 70,
+      "clarified_score": 60,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "84",
+      "case_key": "571a89e748d62d5500df9e70",
+      "original_score": 60,
+      "clarified_score": 70,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "85",
+      "case_key": "4c1cafb469c019ebd20d4321",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "86",
+      "case_key": "7370a132053cff4f1c0786b2",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "87",
+      "case_key": "9934c225dee62084bb62871f",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "88",
+      "case_key": "c0cbd16471f34ff5e2c84b86",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "89",
+      "case_key": "78175995005069fa0be48a39",
+      "original_score": 50,
+      "clarified_score": 60,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "9",
+      "case_key": "ea5e8e6f76676f4796e1e9ef",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "90",
+      "case_key": "d8a9ffba81af4a82435cd640",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "91",
+      "case_key": "30d237cef2b20c5e7aeee4a1",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "92",
+      "case_key": "b9b1ac56a44dd399a983dfa7",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "93",
+      "case_key": "86a3b756833f80737c51f475",
+      "original_score": 50,
+      "clarified_score": 65,
+      "difference": 15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "94",
+      "case_key": "b6a72cab01f4436412b89a0c",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "95",
+      "case_key": "c17d97258e5a66ed31d5d859",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "96",
+      "case_key": "d0a6f4cce575fc1ef032e7cd",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "97",
+      "case_key": "8cfe4cf3dabe26555f769223",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "98",
+      "case_key": "21ee13aabf46595d55e9dd98",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "retail",
+      "task_id": "99",
+      "case_key": "6ce76ef65271d7ef58a87ef5",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "case_key": "3977fec8216115f983cf1d80",
+      "original_score": 85,
+      "clarified_score": 85,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "3a03a1c064828f22f3ba9a11",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "case_key": "4c21bbb95e23486f198234e2",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "99c7ef372d82918dbbecce77",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "case_key": "a3fe4952a055ad6baa1a5690",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "0fbc619244a61787a7837c9b",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "36ebaef2cabcdc4498c3ca1f",
+      "original_score": 85,
+      "clarified_score": 85,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "case_key": "7457137d6a183333c25e741a",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "bac1a9e6345142d5160a634e",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "31953c555e5fef2e2103bd45",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "case_key": "4fe2d66685a02a944b8f5a84",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_app_storage_permission|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "37bd518812cd9f2a17cfa88e",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "case_key": "4640f0ae8306e12a5fd99b1b",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "case_key": "b572d27628d2c43a9e2fa04a",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|break_app_storage_permission[PERSONA:None]",
+      "case_key": "6c9cc4dea62f1e6dffda4050",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_mode_off|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "e1f2be8086e9e9ae04b9b529",
+      "original_score": 70,
+      "clarified_score": 80,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_apn_mms_setting|data_usage_exceeded[PERSONA:Hard]",
+      "case_key": "b18ac90eff0b74e76defe62a",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "c9ffc1e2eb804659e037bee9",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|break_app_storage_permission|data_mode_off|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "1025b43ed332ed11146a46f7",
+      "original_score": 60,
+      "clarified_score": 70,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded[PERSONA:None]",
+      "case_key": "2420f712afcd7f0558c9cbbb",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "case_key": "5d0d8880133aff7453dca76a",
+      "original_score": 75,
+      "clarified_score": 80,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|bad_wifi_calling|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "463e15a62852f040f9bb9368",
+      "original_score": 55,
+      "clarified_score": 60,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions[PERSONA:Hard]",
+      "case_key": "24ecac1497ef9ce536565a06",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]airplane_mode_on|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "a83cf032d74beaec729c1b76",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_storage_permission|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "668f7e69e8b304bfe3f86090",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "d3fad34dd3f7e418b0fe1480",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_both_permissions|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "case_key": "2198b9ca52b1d98792fdb3ce",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "b7b9914e4f073aa4ab4adcdd",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|bad_wifi_calling|break_app_sms_permission|data_mode_off|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "case_key": "703e610127aa0b620435e2df",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_both_permissions[PERSONA:Easy]",
+      "case_key": "41a4b5554adf6af738ceab1b",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "case_key": "6cde01deca5f413b08ba6255",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|break_app_sms_permission|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "daf2673236d1a534150faf45",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "072ec79b3dbf2f0f57991d4a",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "e289feec77b0cabc65ce73ea",
+      "original_score": 55,
+      "clarified_score": 65,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_network_preference|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "7afd279f6f2cc56d33488170",
+      "original_score": 50,
+      "clarified_score": 55,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "112b76b342113fc6b23ce1ce",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|break_app_sms_permission|data_usage_exceeded[PERSONA:Hard]",
+      "case_key": "54e99584098f16059a3fa4ce",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|data_mode_off|data_usage_exceeded|unseat_sim_card[PERSONA:None]",
+      "case_key": "ce47ad7d1471cd19e18d0842",
+      "original_score": 75,
+      "clarified_score": 80,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|break_apn_mms_setting|unseat_sim_card|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "08cb364a2aff36b6df63ec76",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]bad_wifi_calling|data_mode_off|data_usage_exceeded[PERSONA:Easy]",
+      "case_key": "dd553f6f82c111a4235391b0",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "927df2667bc67ef81e39a5d3",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "5ac7656082e118d6be163c47",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_apn_mms_setting|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "case_key": "24c96b45138f51f0b563c80e",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_both_permissions|data_usage_exceeded[PERSONA:Hard]",
+      "case_key": "7db9aac06b90c8bedbfdfd71",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_both_permissions|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "aa298206a38f7374e434a4ab",
+      "original_score": 75,
+      "clarified_score": 60,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_sms_permission|data_mode_off[PERSONA:None]",
+      "case_key": "5f0a6e4ce52702a7e5eefaf2",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_sms_permission|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "44ad33c4d72fea3232fbd860",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_storage_permission|data_usage_exceeded[PERSONA:Easy]",
+      "case_key": "c3f7cbebb9ce785854da063b",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mms_issue]break_app_storage_permission|unseat_sim_card|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "case_key": "a085210288d29ba8aaf3720e",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference[PERSONA:Hard]",
+      "case_key": "9bc45410495f6d0092d82165",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "case_key": "00ec08c587f97b31a8f1e316",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "6c30c2259e0133a5165f40a1",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "be99a161c1f99ba47a240ad0",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "case_key": "2ecbe0cd2bc76ddab5704eb1",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "76851d261fb9b2b249f226d4",
+      "original_score": 80,
+      "clarified_score": 75,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "case_key": "0b64c4b2cb0498c55e725ce2",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:Easy]",
+      "case_key": "6829acc8913f4436b339fa4e",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on[PERSONA:Hard]",
+      "case_key": "d2d2075b3ad85f71de8df3d0",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "2bac4bb6f7eb7f30ba0efb8d",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "6ad89d3891ae216974a65a56",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_mode_off|user_abroad_roaming_disabled_on[PERSONA:Hard]",
+      "case_key": "1623ff5dcb95bd02ed60e8ed",
+      "original_score": 55,
+      "clarified_score": 60,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "b271504e40888c005446f4e9",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "c41c4e55a467eae4d0e7a256",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "fe4c8bb376b2810be7f1ef7b",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off[PERSONA:None]",
+      "case_key": "f0bef18fad1c8eaa10f5415e",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "case_key": "d6b71ccbce142ed92dbc9258",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "5627bdfabecb71030a140f1c",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]airplane_mode_on|user_abroad_roaming_enabled_off[PERSONA:None]",
+      "case_key": "5e728702a687c8b576874dbf",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on[PERSONA:None]",
+      "case_key": "6109271e45f9b9b14285c792",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "f9f75921809705affed7f19e",
+      "original_score": 80,
+      "clarified_score": 75,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "f259a8fc0f0d5d17fc9ae31f",
+      "original_score": 80,
+      "clarified_score": 80,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "abce088d5b8348660790aec5",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "case_key": "2bd6a58bcbd6b57e8d856558",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "4891aee7a39ead4285f50a12",
+      "original_score": 75,
+      "clarified_score": 65,
+      "difference": -10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|bad_vpn|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "72c3cc16ac2b7f24ad674829",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|data_mode_off|data_saver_mode_on|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Easy]",
+      "case_key": "990117851c04d486b11b1b87",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|data_saver_mode_on|data_usage_exceeded[PERSONA:Hard]",
+      "case_key": "dbeca2f537a0785664b9f6ed",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_network_preference|user_abroad_roaming_enabled_off[PERSONA:Hard]",
+      "case_key": "2eb8340d29ee3183b2eeea33",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_vpn|data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:None]",
+      "case_key": "fe03e55fec7129545382b5a0",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]bad_vpn|data_saver_mode_on|user_abroad_roaming_disabled_on[PERSONA:None]",
+      "case_key": "95272bdd2c73963132bf5c7b",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded[PERSONA:None]",
+      "case_key": "297b175a5a7a298c9ffc7333",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_mode_off|data_usage_exceeded|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+      "case_key": "f87ca2000e079ca81234151d",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|data_usage_exceeded[PERSONA:Easy]",
+      "case_key": "405c9bb4a1aba605f77c73b8",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_saver_mode_on|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "e4e2e56ab59ad0547a8aa40b",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[mobile_data_issue]data_usage_exceeded|user_abroad_roaming_enabled_off[PERSONA:Easy]",
+      "case_key": "952237af089f5ced79665f04",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings[PERSONA:Hard]",
+      "case_key": "ab752fdaf5a0c55abb4077e3",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "786ebdc68e05e9b2d56c0dbe",
+      "original_score": 75,
+      "clarified_score": 50,
+      "difference": -25
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "6eee014970553d7226847a93",
+      "original_score": 70,
+      "clarified_score": 55,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|contract_end_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "9f325cfec36875adf55a8695",
+      "original_score": 75,
+      "clarified_score": 55,
+      "difference": -20
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "88f3feb7ecafeeff70b785cc",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard]",
+      "case_key": "29e97cca516a76b19a606aad",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "case_key": "ddd2f5a8191c1ae70b57ec33",
+      "original_score": 75,
+      "clarified_score": 50,
+      "difference": -25
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|unseat_sim_card[PERSONA:None]",
+      "case_key": "b5e08ecc77f435a649f3e1af",
+      "original_score": 65,
+      "clarified_score": 50,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension[PERSONA:None]",
+      "case_key": "d57c826a499eced41b3da1d5",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:None]",
+      "case_key": "cfff159ae4014d9500103b83",
+      "original_score": 70,
+      "clarified_score": 80,
+      "difference": 10
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|break_apn_settings|unseat_sim_card[PERSONA:None]",
+      "case_key": "9baa48c5ca5b7a6932af4fc4",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "4aa79bebc87ae31faa216185",
+      "original_score": 75,
+      "clarified_score": 55,
+      "difference": -20
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin[PERSONA:Easy]",
+      "case_key": "207abcd686ea0348c46fa3c3",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "55ebca441d1a97b5f834cc3c",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "988e21ad137ffaac3e856aba",
+      "original_score": 75,
+      "clarified_score": 50,
+      "difference": -25
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "b4be13a9695d14f83f33d115",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension[PERSONA:None]",
+      "case_key": "d515fc95de5e0dd7dedf86a8",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "2f57af30b7dd77a6d2fd055a",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]airplane_mode_on|unseat_sim_card[PERSONA:None]",
+      "case_key": "f2b89587496a232d32de15d7",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "case_key": "4f8a1784c0db6e4ed69c0b82",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|contract_end_suspension|lock_sim_card_pin|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "08de75f0bfd93ab5bc912101",
+      "original_score": 75,
+      "clarified_score": 55,
+      "difference": -20
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin[PERSONA:None]",
+      "case_key": "96e9fd303766bd114f4da068",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "1c2b7f4186c563085fce1b0e",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "d14cd4c532ca798c4db5aad0",
+      "original_score": 65,
+      "clarified_score": 50,
+      "difference": -15
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]break_apn_settings|overdue_bill_suspension|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "398a36481466fd5a7dff1601",
+      "original_score": 75,
+      "clarified_score": 80,
+      "difference": 5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]contract_end_suspension|lock_sim_card_pin[PERSONA:Hard]",
+      "case_key": "0af2eb10291137f2fe107daf",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]contract_end_suspension|unseat_sim_card[PERSONA:Hard]",
+      "case_key": "706c718f104127a7b876fff4",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]lock_sim_card_pin|overdue_bill_suspension[PERSONA:Easy]",
+      "case_key": "1cd2224f9e59e94ec2172361",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "tau2",
+      "domain": "telecom",
+      "task_id": "[service_issue]overdue_bill_suspension|unseat_sim_card[PERSONA:Easy]",
+      "case_key": "f1b94be1a97f78f1ca15213f",
+      "original_score": 75,
+      "clarified_score": 75,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "case_key": "361b11e6b936a53224004c3c",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+      "case_key": "3beaf8c8c9e772f6b66899fd",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+      "case_key": "b5e6c6984e19b53bd012f0fd",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "case_key": "29b417f9f9da91fea99de3c8",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+      "case_key": "79c2f39378c232a77c0dc80b",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+      "case_key": "c78119624d432c2f4f4937eb",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W8_TC1",
+      "case_key": "be6f326d73f4eceed3374392",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "case_key": "601c9160105d3fa75b2d0622",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "case_key": "bbbe7c5c1490603dab7d5982",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+      "case_key": "0c88268c1d9b33cdb300efdc",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1",
+      "case_key": "a9968a98bcf8a35e17f7ec59",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+      "case_key": "f5ccb41530858a04e7abbfdb",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+      "case_key": "32bcaa9518e9bf441fee4d40",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "case_key": "d02081ec5868c95f77624903",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+      "case_key": "2151381fb07273b9a8240041",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+      "case_key": "42a11d016aada3934bb6b78c",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+      "case_key": "20be36268c046c3431a55efd",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "case_key": "8c109e7aeb788bdc0fffec82",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2",
+      "case_key": "4c78b9d919a09c14a6fe033a",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "case_key": "c0104d0c068cb704eff1b67e",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC1",
+      "case_key": "0ac88751d59f3539f7385aa7",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W4_TC2",
+      "case_key": "608376cdf98aa947ea6ead6f",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+      "case_key": "b2ea695f78d9fa64f698b6e1",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W6_TC1",
+      "case_key": "3f8c434695e8ec25c2c0cb75",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W7_TC1",
+      "case_key": "4add88518a146733a255e5e0",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W8_TC1",
+      "case_key": "ff30119638e158060cfd78c6",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W9_TC1",
+      "case_key": "799afa5b8ad39e5bd9340627",
+      "original_score": 70,
+      "clarified_score": 75,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "case_key": "4267da5e057e3d1b2d9dba80",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W2_TC1",
+      "case_key": "c2126a86d6a2033ac530b53e",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W4_TC1",
+      "case_key": "fd62b60e36864e78dee47e99",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "case_key": "96a3108259d52d574118371c",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W6_TC1",
+      "case_key": "dd84c041e1728831e5a83007",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W7_TC1",
+      "case_key": "be77c8cc139e8d7d842b991a",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W8_TC1",
+      "case_key": "6bf69cb1ff149e0606454c62",
+      "original_score": 70,
+      "clarified_score": 70,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+      "case_key": "4e837a3a6cf57ae94b085f3e",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "case_key": "fd1e88310078fd869836eb5c",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC1",
+      "case_key": "abf5c2cba1a7d7bef0138481",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W1_TC2",
+      "case_key": "0e274b9ee6d7b057705ac79a",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W2_TC1",
+      "case_key": "a8edf4678891e1d8bd8fa93e",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W3_TC1",
+      "case_key": "ef21f2e431018808b0b071f3",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W4_TC1",
+      "case_key": "c0a1bf1e8253d1a4fd5b6383",
+      "original_score": 55,
+      "clarified_score": 50,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W5_TC1",
+      "case_key": "1a02a71691295fbba0ad4c7d",
+      "original_score": 60,
+      "clarified_score": 60,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W6_TC1",
+      "case_key": "594374cea8b696c0580153b8",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W7_TC1",
+      "case_key": "ac3c684379c5f07b165337cc",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "case_key": "597efb34784a109105ff2f41",
+      "original_score": 40,
+      "clarified_score": 45,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "ClaimsAgent_W6_TC1",
+      "case_key": "45be0e269d480fa8646b63e5",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "case_key": "e50c62586ed96cecf4eb230c",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+      "case_key": "b2db36f78e3bef642150089d",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+      "case_key": "00d5bc810f61f0be3cf3dc5d",
+      "original_score": 60,
+      "clarified_score": 65,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+      "case_key": "50f2e05f611609430edefb27",
+      "original_score": 70,
+      "clarified_score": 60,
+      "difference": -10
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "case_key": "3c6bd6037fd7f2b02178229a",
+      "original_score": 75,
+      "clarified_score": 80,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+      "case_key": "78bdc86635840c1450eb6769",
+      "original_score": 65,
+      "clarified_score": 60,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+      "case_key": "55bb7fa612dc3ba0dedb648d",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W7_TC1",
+      "case_key": "7157a7b871e22202230dc60d",
+      "original_score": 60,
+      "clarified_score": 55,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "case_key": "a2fed07b3b66388f64a03b9f",
+      "original_score": 75,
+      "clarified_score": 70,
+      "difference": -5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+      "case_key": "81c0e2c48776458fe9942301",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+      "case_key": "a385ba8898b0130a4cc3bf0e",
+      "original_score": 65,
+      "clarified_score": 70,
+      "difference": 5
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+      "case_key": "b84a1ebfc178797e69d3b835",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "case_key": "8d831891ce42cebabb865a4a",
+      "original_score": 55,
+      "clarified_score": 55,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "case_key": "fd655e1771a9e35090280720",
+      "original_score": 60,
+      "clarified_score": 70,
+      "difference": 10
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "case_key": "7a1025ec30383759918db5c3",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "case_key": "302f23213b33e299edd15b3a",
+      "original_score": 50,
+      "clarified_score": 50,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1",
+      "case_key": "c0d0f2acdd96a52f80c3efdd",
+      "original_score": 65,
+      "clarified_score": 65,
+      "difference": 0
+    },
+    {
+      "dataset": "synthetic",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1",
+      "case_key": "1f5807f876b0ac66b5c17e82",
+      "original_score": 70,
+      "clarified_score": 65,
+      "difference": -5
+    }
+  ]
+}

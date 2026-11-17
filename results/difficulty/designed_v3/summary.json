@@ -1,0 +1,18 @@
+{
+  "n_tasks": 64,
+  "n_domains": 7,
+  "tasks_with_added_global_operations": 12,
+  "added_operations": 22,
+  "global_obligation_dispositions": {
+    "added": 22,
+    "conditional_not_selected": 51,
+    "constraint_only": 15,
+    "covered": 107,
+    "not_applicable": 27,
+    "uncertain": 39
+  },
+  "tasks_with_uncertain_global_obligations": 25,
+  "combined_score": null,
+  "new_api_calls": 0,
+  "prior_versions_unchanged": true
+}

@@ -1,0 +1,65 @@
+domain,task_id,title,operations,reference_calls,additional_coordination_events,uncertain_global_requirements,operations_only_index,operations_only_rank,workload_only_index,workload_only_rank,workload_coord20_index,workload_coord20_rank
+banking_accounts_deposits,DigitalAccountOpening_DigitalAccountOpening_W1_TC1,"Premium Savings Account - Individual, Large Deposit, Instant Funding",11,8,0,0,100.0,60.5,67.391304,59.0,53.913043,54.5
+banking_accounts_deposits,DigitalAccountOpeningAgent_W1_TC2,"Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding",11,8,0,0,100.0,60.5,67.391304,59.0,53.913043,54.5
+banking_accounts_deposits,DigitalAccountOpeningAgent_W2_TC1,"Student Checking - Verified Student, Parent Account Funding",11,8,0,0,100.0,60.5,67.391304,59.0,53.913043,54.5
+banking_accounts_deposits,DigitalAccountOpeningAgent_W2_TC2,"Student Checking - Verified Student, External Bank Funding",11,8,0,0,100.0,60.5,67.391304,59.0,53.913043,54.5
+banking_accounts_deposits,DigitalAccountOpeningAgent_W3_TC1,"Business Checking - Multi-Owner, Wire Funding",10,8,2,0,90.909091,53.5,62.84585,53.0,63.610013,63.0
+banking_accounts_deposits,DigitalAccountOpeningAgent_W6_TC1,"Joint Savings Account - Two Owners, Transfer Funding",10,8,1,0,90.909091,53.5,62.84585,53.0,56.943347,58.0
+banking_accounts_deposits,DigitalAccountOpeningAgent_W7_TC1,Restricted Account - Pending Micro-Deposit Funding Verification,8,7,0,0,72.727273,38.0,51.581028,37.0,41.264822,33.0
+banking_accounts_deposits,DigitalAccountOpeningAgent_W8_TC1,"Same-Day Account Opening - Cash Deposit >= $10,000",10,7,0,0,90.909091,53.5,60.671937,50.0,48.537549,47.0
+banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W1_TC1,"Low-Risk Personal Account: Standard KYC, Driver License",7,7,0,0,63.636364,26.5,47.035573,28.0,37.628458,26.5
+banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W1_TC2,"Medium-Risk Personal Account: Passport KYC, Foreign National, Higher Volume",7,7,0,0,63.636364,26.5,47.035573,28.0,37.628458,26.5
+banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W4_TC1,"Business Account: Multiple Owners, All Pass Screening",7,8,1,0,63.636364,26.5,49.209486,31.5,46.034256,42.5
+banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W4_TC2,"Business Account: Single Owner, Medium AML Risk",7,7,1,0,63.636364,26.5,47.035573,28.0,44.295125,41.0
+banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W6_TC1,"Personal Account: Missing Proof of Address, Provided After Request",9,9,0,0,81.818182,48.0,60.474308,49.0,48.379447,46.0
+banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W7_TC1,Address Mismatch: Customer Provides Explanation and Valid New Document,11,9,0,0,100.0,60.5,69.565217,62.5,55.652174,57.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1,Low-Risk Card Present Transaction with Typical Device,4,5,0,0,36.363636,7.5,29.051383,7.5,23.241107,6.5
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2,Low-Risk Card Not Present Transaction with Recent Customer Travel,4,5,0,0,36.363636,7.5,29.051383,7.5,23.241107,6.5
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1,"Obvious Fraud - Blacklisted Merchant, Card Not Present",6,7,0,0,54.545455,19.5,42.490119,21.0,33.992095,21.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W2_TC2,Obvious Fraud - Account Takeover Detected on ATM Transaction,6,7,0,0,54.545455,19.5,42.490119,21.0,33.992095,21.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1,High-Risk Online Transaction with Device Mismatch,5,7,0,0,45.454545,14.0,37.944664,17.0,30.355731,16.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2,High-Risk Card Present Transaction with Location Anomaly,5,7,0,0,45.454545,14.0,37.944664,17.0,30.355731,16.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W4_TC1,"Moderate-Risk Transaction, Customer Verifies via SMS",4,6,0,0,36.363636,7.5,31.225296,10.5,24.980237,9.5
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W4_TC2,"Moderate-Risk Transaction, Customer Verifies via Email",4,6,0,0,36.363636,7.5,31.225296,10.5,24.980237,9.5
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W5_TC1,Account Takeover - Immediate Block and Escalation,5,7,0,0,45.454545,14.0,37.944664,17.0,30.355731,16.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W6_TC1,Velocity Fraud - Rapid Transactions Across States,4,5,0,0,36.363636,7.5,29.051383,7.5,23.241107,6.5
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W7_TC1,Synthetic Identity - New Account Device and Identity Anomalies,4,5,0,0,36.363636,7.5,29.051383,7.5,23.241107,6.5
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W8_TC1,"Friendly Fraud - Chargeback Investigation, Evidence Provided",5,6,0,0,45.454545,14.0,35.770751,13.0,28.616601,12.0
+banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_W9_TC1,APP Fraud - Large Wire Transfer Held and Escalated,6,7,0,0,54.545455,19.5,42.490119,21.0,33.992095,21.0
+healthcare_patient_onboarding,HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1,"Adult patient with active insurance, initial visit, and preferred dates",10,8,0,2,90.909091,53.5,62.84585,53.0,50.27668,49.0
+healthcare_patient_onboarding,HealthcareOnboarding_W1_TC2,"Adult patient with active insurance, annual physical, no preferred dates",10,8,0,2,90.909091,53.5,62.84585,53.0,50.27668,49.0
+healthcare_patient_onboarding,HealthcareOnboarding_W2_TC1,"Pediatric patient (<18) with parent as subscriber, well-child visit",11,7,1,2,100.0,60.5,65.217391,56.0,58.84058,59.0
+healthcare_patient_onboarding,HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1,Patient provides updated insurance after initial inactive coverage,11,8,1,2,100.0,60.5,67.391304,59.0,60.57971,60.0
+healthcare_patient_onboarding,HealthcareOnboarding_W4_TC1,Specialty referral with prior auth approved,8,4,0,2,72.727273,38.0,45.059289,24.5,36.047431,24.0
+healthcare_patient_onboarding,HealthcareOnboarding_W5_TC1,Self-pay patient onboarding with initial visit,8,6,0,2,72.727273,38.0,49.407115,33.0,39.525692,29.0
+healthcare_patient_onboarding,HealthcareOnboarding_W6_TC1,"Duplicate patient detected by SSN and DOB, records merged",8,4,1,2,72.727273,38.0,45.059289,24.5,42.714097,37.0
+healthcare_patient_onboarding,HealthcareOnboarding_W7_TC1,High-risk patient with >2 chronic conditions and >5 medications,10,8,0,2,90.909091,53.5,62.84585,53.0,50.27668,49.0
+healthcare_patient_onboarding,HealthcareOnboarding_W8_TC1,"Missing insurance fields, patient supplies info on request",11,9,1,2,100.0,60.5,69.565217,62.5,62.318841,61.0
+healthcare_prior_authorization,HealthcarePA_W1_TC1,"Standard MRI PA - All Documentation Present, Criteria Met",8,7,0,0,72.727273,38.0,51.581028,37.0,41.264822,33.0
+healthcare_prior_authorization,HealthcarePA_W1_TC2,Standard Sleep Study PA - Alternate Documentation Path,8,7,0,0,72.727273,38.0,51.581028,37.0,41.264822,33.0
+healthcare_prior_authorization,HealthcarePA_W2_TC1,Documentation Completion After Initial EHR Deficiency,7,8,1,0,63.636364,26.5,49.209486,31.5,46.034256,42.5
+healthcare_prior_authorization,HealthcarePA_W3_TC1,"Specialty Drug PA - High-Cost Medication, All Criteria Met",8,7,0,0,72.727273,38.0,51.581028,37.0,41.264822,33.0
+healthcare_prior_authorization,HealthcarePA_W4_TC1,Appeal After Initial PA Denial - Additional Evidence Provided,6,4,0,1,54.545455,19.5,35.968379,14.5,28.774704,13.5
+healthcare_prior_authorization,HealthcarePA_W5_TC1,"DME PA - Home Oxygen, All Clinical Criteria Met",8,7,0,0,72.727273,38.0,51.581028,37.0,41.264822,33.0
+healthcare_prior_authorization,HealthcarePA_W6_TC1,Urgent Cardiac Cath PA - Expedited Approval,7,5,0,0,63.636364,26.5,42.687747,23.0,34.150198,23.0
+healthcare_prior_authorization,HealthcarePA_W7_TC1,Bariatric Surgery PA - All Multi-Step Criteria Met,8,7,0,0,72.727273,38.0,51.581028,37.0,41.264822,33.0
+healthcare_prior_authorization,HealthcarePA_W8_TC1,Status Check for Approved PA,3,1,0,0,27.272727,2.0,15.810277,1.0,12.648221,1.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W1_TC1,"Emergency Property Claim – Water Intrusion, Storm Peril, Coverage Confirmed",8,8,0,1,72.727273,38.0,53.754941,42.5,43.003953,39.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W1_TC2,"Emergency Property Claim – Water Intrusion, Storm Peril, Local Vendor, Alternate Address",8,8,0,1,72.727273,38.0,53.754941,42.5,43.003953,39.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W2_TC1,"Auto Accident with Bodily Injury – Standard BI, Coverage Confirmed",7,7,0,0,63.636364,26.5,47.035573,28.0,37.628458,26.5
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W2_TC2,"Auto Accident with Bodily Injury – Multiple Injuries, Coverage Confirmed",7,7,0,0,63.636364,26.5,47.035573,28.0,37.628458,26.5
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W3_TC1,"Catastrophe Event – Batch Processing, Emergencies Flagged",8,23,0,1,72.727273,38.0,86.363636,64.0,69.090909,64.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W4_TC1,"Workers Comp Claim – Lost Time Injury, Medical Dispatch",8,8,0,1,72.727273,38.0,53.754941,42.5,43.003953,39.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W5_TC1,"Attorney-Represented Slip & Fall – Liability, Legal Notification",9,8,1,1,81.818182,48.0,58.300395,46.5,53.306983,51.5
+insurance_claims_intake,ClaimsAgent_W6_TC1,"Denied Claim – Policy Lapsed, Coverage Not Confirmed",6,6,0,0,54.545455,19.5,40.316206,19.0,32.252964,18.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W7_TC1,"Duplicate Claim – FNOL Already Reported, Link and Notify",4,4,1,0,36.363636,7.5,26.87747,5.0,28.168643,11.0
+insurance_claims_intake,InsuranceClaimsIntakeAndTriageAgent_W8_TC1,"Complex Commercial Property Claim – Business Interruption, Large Loss",8,8,3,2,72.727273,38.0,53.754941,42.5,63.003953,62.0
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1,"Standard requisition, preferred supplier, exact invoice match",9,8,0,2,81.818182,48.0,58.300395,46.5,46.640316,44.5
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2,"Standard requisition, preferred supplier, small price variance within tolerance",9,8,0,2,81.818182,48.0,58.300395,46.5,46.640316,44.5
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1,"Budget exceeded, CFO override granted, PO created and sent",5,5,1,1,45.454545,14.0,33.596838,12.0,33.544137,19.0
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1,"Invoice price mismatch > $500, AP resolves and payment processed",3,3,1,1,27.272727,2.0,20.158103,3.0,22.793149,4.0
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1,"Partial receipt, quantity mismatch, backorder received and payments processed",6,4,0,1,54.545455,19.5,35.968379,14.5,28.774704,13.5
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1,"Duplicate invoice detected and rejected, supplier notified",3,2,0,1,27.272727,2.0,17.98419,2.0,14.387352,2.0
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1,"Early payment discount available, cash sufficient, payment processed early",4,3,0,1,36.363636,7.5,24.703557,4.0,19.762846,3.0
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1,"Blanket PO release, within limits, auto-approval and payment",8,7,0,2,72.727273,38.0,51.581028,37.0,41.264822,33.0
+manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1,"Urgent requisition, expedited PO and payment, production resumes",9,8,1,2,81.818182,48.0,58.300395,46.5,53.306983,51.5

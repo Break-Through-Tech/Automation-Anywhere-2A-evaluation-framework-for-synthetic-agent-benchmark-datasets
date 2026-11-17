@@ -1,0 +1,51 @@
+{
+  "rubric_version": "synthetic_milestones_v0.1_draft",
+  "rubric_sha256": "69ad3055a576848ea76949b8cc6d3ee3c1380c76e1f79d76f58da7d096b553f1",
+  "scope": "purposive development sample; not held-out judge validation",
+  "expected_reviews": 16,
+  "independent_review_not_verified_by_software": true,
+  "comparison_level": "task",
+  "received_task_reviews": 16,
+  "milestone_agreement_computed": false,
+  "human_evidence_validation": "Structured citations checked if provided; submitted prose is not exact-excerpt validated.",
+  "status": "development_comparison_complete",
+  "agreement_metrics_computed": true,
+  "unassessed_judge_review_ids": [],
+  "task_comparison": {
+    "n_compared": 16,
+    "n_agree": 10,
+    "agreement": 0.625,
+    "confusion_counts": [
+      {
+        "human": "met",
+        "judge": "unverifiable",
+        "count": 2
+      },
+      {
+        "human": "unmet",
+        "judge": "unmet",
+        "count": 9
+      },
+      {
+        "human": "unmet",
+        "judge": "unverifiable",
+        "count": 2
+      },
+      {
+        "human": "unverifiable",
+        "judge": "unmet",
+        "count": 2
+      },
+      {
+        "human": "unverifiable",
+        "judge": "unverifiable",
+        "count": 1
+      }
+    ]
+  },
+  "milestone_comparison": null,
+  "policy_version": "provisional_outcome_v0.1",
+  "prompt_version": "synthetic_judge_v0.3_provisional_outcome",
+  "policy_caveat": "Descriptive agreement with original human labels; model uses a provisional clarification not applied to the original human submissions. Not accuracy or approved final scoring.",
+  "human_independence_caveat": "Not certified; R04 submission referenced historical grader output. Optional overlapping reviews were not supplied."
+}

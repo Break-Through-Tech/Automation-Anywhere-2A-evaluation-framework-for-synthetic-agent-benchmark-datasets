@@ -1,0 +1,736 @@
+{
+  "validator_version": "design_validation_v1.5_request_bound_metadata",
+  "probe_prompt_version": "design_prompt_v1.4_required_path_probe",
+  "request_sha256": "0cc4fe21092afe00dff998f84da9e06fbfe77bd32b2fdbc9589770b414be2907",
+  "input_sha256": "1e47357bb266d8f3b8e8f0e86d5dfd11f78d0d2243b09f1cc3bae8ac5eaa20f6",
+  "requested_model": "gpt-6-sol",
+  "started_at": "2026-11-14T03:36:02.586476+00:00",
+  "returned_model": "gpt-6-sol",
+  "response_id": "resp_0cf49c996c347ea6016af7d722d6d087d18895b31d22ea1bb1",
+  "usage": {
+    "input_tokens": 24075,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 24072
+    },
+    "output_tokens": 1710,
+    "output_tokens_details": {
+      "reasoning_tokens": 74
+    },
+    "total_tokens": 25785
+  },
+  "decoding_metadata": {
+    "temperature": 1.0,
+    "top_p": 0.98,
+    "reasoning": {
+      "context": "all_turns",
+      "effort": "low",
+      "generate_summary": null,
+      "mode": "standard",
+      "summary": null
+    },
+    "max_output_tokens": 10000
+  },
+  "model_judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "4c78b9d919a09c14a6fe033a",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "step_001",
+        "applicability_rationale": "Initial enrichment is required before scoring.",
+        "evidence": [
+          {
+            "citation_id": "E0055"
+          }
+        ],
+        "rationale": "Retrieve three related records using supplied alert, customer, and lookback inputs; compare transaction and historical geography.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_002",
+        "applicability_rationale": "The documented path checks device and fraud-list signals before scoring.",
+        "evidence": [
+          {
+            "citation_id": "E0060"
+          },
+          {
+            "citation_id": "E0101"
+          }
+        ],
+        "rationale": "Bind the transaction's device and details to two checks, distinguishing a matching device from the location anomaly.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_003",
+        "applicability_rationale": "The risk score and package are prerequisites to high-risk routing.",
+        "evidence": [
+          {
+            "citation_id": "E0064"
+          },
+          {
+            "citation_id": "E0206"
+          },
+          {
+            "citation_id": "E0104"
+          }
+        ],
+        "rationale": "Combine retrieved objects for scoring and synthesize a complete package despite mixed device and geographic signals.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_004",
+        "applicability_rationale": "A score of 90 selects analyst escalation.",
+        "evidence": [
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0129"
+          },
+          {
+            "citation_id": "E0130"
+          },
+          {
+            "citation_id": "E0067"
+          }
+        ],
+        "rationale": "Route the assembled package with an allowed analyst action and verify the routing result.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 3,
+          "information": 1
+        }
+      },
+      {
+        "unit_id": "step_005",
+        "applicability_rationale": "The workflow explicitly requires confirmation and a logged summary after routing.",
+        "evidence": [
+          {
+            "citation_id": "E0070"
+          },
+          {
+            "citation_id": "E0174"
+          }
+        ],
+        "rationale": "Report the completed escalation; this is modest follow-through, not another investigation.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 0
+        }
+      },
+      {
+        "unit_id": "milestone_001",
+        "applicability_rationale": "This is the required state produced by step 1, not an additional operation.",
+        "evidence": [
+          {
+            "citation_id": "E0072"
+          }
+        ],
+        "rationale": "Its retrieved identifiers and history are accounted for in step 1.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "milestone_002",
+        "applicability_rationale": "This restates the required outputs of step 2.",
+        "evidence": [
+          {
+            "citation_id": "E0074"
+          }
+        ],
+        "rationale": "No separate check beyond the device and database work is specified.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "milestone_003",
+        "applicability_rationale": "This states the expected result of step 3.",
+        "evidence": [
+          {
+            "citation_id": "E0076"
+          }
+        ],
+        "rationale": "Score calculation and package compilation are already charged to step 3.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "milestone_004",
+        "applicability_rationale": "This states the expected routing result of step 4.",
+        "evidence": [
+          {
+            "citation_id": "E0078"
+          }
+        ],
+        "rationale": "The case ID and escalation level are outputs to check, not another routing operation.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "global_requirements",
+        "applicability_rationale": "Applicable enrichment, threshold, and package rules constrain the selected path; alternative workflows and failure recoveries are not selected.",
+        "evidence": [
+          {
+            "citation_id": "E0101"
+          },
+          {
+            "citation_id": "E0129"
+          },
+          {
+            "citation_id": "E0130"
+          },
+          {
+            "citation_id": "E0104"
+          }
+        ],
+        "rationale": "Apply the 90-point threshold and completeness rule across existing steps without counting duplicate work.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 0,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "The sufficient path spans three-source retrieval, device and fraud checks, scoring and package synthesis, analyst routing, and confirmation. The decisive exit is a successfully routed, full-context analyst case; no verification, decline, repair, or human-in-the-loop failure branch is required afterward.",
+        "evidence": [
+          {
+            "citation_id": "E0055"
+          },
+          {
+            "citation_id": "E0060"
+          },
+          {
+            "citation_id": "E0064"
+          },
+          {
+            "citation_id": "E0067"
+          },
+          {
+            "citation_id": "E0070"
+          },
+          {
+            "citation_id": "E0083"
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "The agent must reconcile an anomalous in-person location with a matching device, interpret the computed score under routing thresholds, and recommend analyst contact.",
+        "evidence": [
+          {
+            "citation_id": "E0012"
+          },
+          {
+            "citation_id": "E0003"
+          },
+          {
+            "citation_id": "E0130"
+          },
+          {
+            "citation_id": "E0016"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "Several retrieval tools feed a multi-object scoring call, whose results must be bound into a structured analyst-routing package.",
+        "evidence": [
+          {
+            "citation_id": "E0055"
+          },
+          {
+            "citation_id": "E0060"
+          },
+          {
+            "citation_id": "E0206"
+          },
+          {
+            "citation_id": "E0250"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 2,
+        "rationale": "Enrichment precedes scoring; the score and complete package precede routing; confirmation follows routing. The analyst handoff is the decisive exit, so no downstream analyst response or alternative recovery is charged.",
+        "evidence": [
+          {
+            "citation_id": "E0101"
+          },
+          {
+            "citation_id": "E0064"
+          },
+          {
+            "citation_id": "E0067"
+          },
+          {
+            "citation_id": "E0083"
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "Identifiers and lookback are supplied, but the agent must retrieve and verify transaction, customer, history, device, and fraud-list data before compiling the case.",
+        "evidence": [
+          {
+            "citation_id": "E0008"
+          },
+          {
+            "citation_id": "E0055"
+          },
+          {
+            "citation_id": "E0060"
+          },
+          {
+            "citation_id": "E0104"
+          }
+        ]
+      }
+    },
+    "overall_score": 65,
+    "intended_endpoint": {
+      "description": "Escalate the high-risk location-anomaly transaction to an analyst with a complete investigation package and contact-customer recommendation, then confirm the escalation.",
+      "evidence": [
+        {
+          "citation_id": "E0013"
+        },
+        {
+          "citation_id": "E0083"
+        },
+        {
+          "citation_id": "E0070"
+        }
+      ]
+    },
+    "dependency_reasoning": "A defensible sufficient order retrieves transaction, profile, and history; checks device and fraud databases; scores and packages the evidence; then routes and confirms. The supplied score describes the scenario, but the workflow still calls for enrichment and calculation. Other diagnostic orders may be feasible; none requires customer verification or a failure escalation on the documented available-data path.",
+    "score_rationale": "Ratings 3 + 3 + 3 + 2 + 2 yield 65. Multi-stage enrichment and structured handoff dominate, while supplied identifiers and explicit thresholds limit discovery and branching.",
+    "uncertainties": [
+      "The expected investigation package is abbreviated, while the routing contract calls for transaction, customer, device, history, risk score, and notes; the completeness requirement is scored, without assuming the abbreviated example alone suffices.",
+      "The scenario specifies a score of 90, but the agent's scoring tool still must establish the routing score; the reference sequence does not prove a unique call order."
+    ],
+    "source_quality_flags": [
+      "Reference calls show intended inputs, not observed execution or guaranteed tool results.",
+      "Global notification and regulatory goals do not specify an additional action for this particular analyst-escalation endpoint."
+    ],
+    "unscorable_reason": ""
+  },
+  "status": "validated",
+  "judgment": {
+    "version": "design_judgment_v1",
+    "case_key": "4c78b9d919a09c14a6fe033a",
+    "status": "scored",
+    "units": [
+      {
+        "unit_id": "step_001",
+        "applicability_rationale": "Initial enrichment is required before scoring.",
+        "evidence": [
+          {
+            "source_id": "step_001",
+            "excerpt": "{\"description\": \"Retrieve transaction details, customer profile, and transaction history.\", \"step\": 1, \"tools_used\": [\"retrieve_transaction_details\", \"get_customer_profile\", \"analyze_transaction_history\"]}"
+          }
+        ],
+        "rationale": "Retrieve three related records using supplied alert, customer, and lookback inputs; compare transaction and historical geography.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_002",
+        "applicability_rationale": "The documented path checks device and fraud-list signals before scoring.",
+        "evidence": [
+          {
+            "source_id": "step_002",
+            "excerpt": "{\"description\": \"Check device intelligence and cross-reference fraud databases.\", \"step\": 2, \"tools_used\": [\"check_device_intelligence\", \"cross_reference_fraud_databases\"]}"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "Always enrich alerts with data from all relevant systems before scoring."
+          }
+        ],
+        "rationale": "Bind the transaction's device and details to two checks, distinguishing a matching device from the location anomaly.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 2,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_003",
+        "applicability_rationale": "The risk score and package are prerequisites to high-risk routing.",
+        "evidence": [
+          {
+            "source_id": "step_003",
+            "excerpt": "{\"description\": \"Calculate fraud risk score and compile investigation package.\", \"step\": 3, \"tools_used\": [\"calculate_fraud_risk_score\"]}"
+          },
+          {
+            "source_id": "tool_contracts",
+            "excerpt": "calculate_fraud_risk_score(transaction_details, customer_profile, transaction_history, device_intelligence, fraud_database_hits?)"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "All escalated cases include complete investigation packages and recommended actions."
+          }
+        ],
+        "rationale": "Combine retrieved objects for scoring and synthesize a complete package despite mixed device and geographic signals.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 3,
+          "tool_use": 3,
+          "information": 2
+        }
+      },
+      {
+        "unit_id": "step_004",
+        "applicability_rationale": "A score of 90 selects analyst escalation.",
+        "evidence": [
+          {
+            "source_id": "case_input_conditions",
+            "excerpt": "fraud_risk_score = 90"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "if 70 < fraud_risk_score <= 95"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "Escalate to analyst with full investigation package and recommended actions."
+          },
+          {
+            "source_id": "step_004",
+            "excerpt": "{\"description\": \"Route to analyst with recommended actions.\", \"step\": 4, \"tools_used\": [\"route_to_analyst\"]}"
+          }
+        ],
+        "rationale": "Route the assembled package with an allowed analyst action and verify the routing result.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 3,
+          "information": 1
+        }
+      },
+      {
+        "unit_id": "step_005",
+        "applicability_rationale": "The workflow explicitly requires confirmation and a logged summary after routing.",
+        "evidence": [
+          {
+            "source_id": "step_005",
+            "excerpt": "{\"description\": \"Confirm escalation and log summary.\", \"step\": 5, \"tools_used\": [\"SUCCESS\"]}"
+          },
+          {
+            "source_id": "tool_contracts",
+            "excerpt": "SUCCESS(message, result_data?)"
+          }
+        ],
+        "rationale": "Report the completed escalation; this is modest follow-through, not another investigation.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 1,
+          "tool_use": 1,
+          "information": 0
+        }
+      },
+      {
+        "unit_id": "milestone_001",
+        "applicability_rationale": "This is the required state produced by step 1, not an additional operation.",
+        "evidence": [
+          {
+            "source_id": "milestone_001",
+            "excerpt": "{\"description\": \"Transaction details, customer profile, and history retrieved\", \"expected_state\": {\"states_visited\": [\"CA\", \"NV\"], \"transaction_id\": \"TX-60006\"}, \"step\": 1}"
+          }
+        ],
+        "rationale": "Its retrieved identifiers and history are accounted for in step 1.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "milestone_002",
+        "applicability_rationale": "This restates the required outputs of step 2.",
+        "evidence": [
+          {
+            "source_id": "milestone_002",
+            "excerpt": "{\"description\": \"Device intelligence and fraud database cross-referenced\", \"expected_state\": {\"device_risk_score\": 25, \"merchant_blacklist_hit\": false}, \"step\": 2}"
+          }
+        ],
+        "rationale": "No separate check beyond the device and database work is specified.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "milestone_003",
+        "applicability_rationale": "This states the expected result of step 3.",
+        "evidence": [
+          {
+            "source_id": "milestone_003",
+            "excerpt": "{\"description\": \"Fraud risk score calculated and investigation package compiled\", \"expected_state\": {\"fraud_risk_score\": 90}, \"step\": 3}"
+          }
+        ],
+        "rationale": "Score calculation and package compilation are already charged to step 3.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "milestone_004",
+        "applicability_rationale": "This states the expected routing result of step 4.",
+        "evidence": [
+          {
+            "source_id": "milestone_004",
+            "excerpt": "{\"description\": \"Case routed to analyst\", \"expected_state\": {\"case_id\": \"CASE-60006\", \"escalation_level\": \"normal\"}, \"step\": 4}"
+          }
+        ],
+        "rationale": "The case ID and escalation level are outputs to check, not another routing operation.",
+        "applicability": "context",
+        "levels": {
+          "reasoning": null,
+          "tool_use": null,
+          "information": null
+        }
+      },
+      {
+        "unit_id": "global_requirements",
+        "applicability_rationale": "Applicable enrichment, threshold, and package rules constrain the selected path; alternative workflows and failure recoveries are not selected.",
+        "evidence": [
+          {
+            "source_id": "global_plan",
+            "excerpt": "Always enrich alerts with data from all relevant systems before scoring."
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "if 70 < fraud_risk_score <= 95"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "Escalate to analyst with full investigation package and recommended actions."
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "All escalated cases include complete investigation packages and recommended actions."
+          }
+        ],
+        "rationale": "Apply the 90-point threshold and completeness rule across existing steps without counting duplicate work.",
+        "applicability": "required",
+        "levels": {
+          "reasoning": 2,
+          "tool_use": 0,
+          "information": 1
+        }
+      }
+    ],
+    "dimensions": {
+      "workload": {
+        "level": 3,
+        "rationale": "The sufficient path spans three-source retrieval, device and fraud checks, scoring and package synthesis, analyst routing, and confirmation. The decisive exit is a successfully routed, full-context analyst case; no verification, decline, repair, or human-in-the-loop failure branch is required afterward.",
+        "evidence": [
+          {
+            "source_id": "step_001",
+            "excerpt": "{\"description\": \"Retrieve transaction details, customer profile, and transaction history.\", \"step\": 1, \"tools_used\": [\"retrieve_transaction_details\", \"get_customer_profile\", \"analyze_transaction_history\"]}"
+          },
+          {
+            "source_id": "step_002",
+            "excerpt": "{\"description\": \"Check device intelligence and cross-reference fraud databases.\", \"step\": 2, \"tools_used\": [\"check_device_intelligence\", \"cross_reference_fraud_databases\"]}"
+          },
+          {
+            "source_id": "step_003",
+            "excerpt": "{\"description\": \"Calculate fraud risk score and compile investigation package.\", \"step\": 3, \"tools_used\": [\"calculate_fraud_risk_score\"]}"
+          },
+          {
+            "source_id": "step_004",
+            "excerpt": "{\"description\": \"Route to analyst with recommended actions.\", \"step\": 4, \"tools_used\": [\"route_to_analyst\"]}"
+          },
+          {
+            "source_id": "step_005",
+            "excerpt": "{\"description\": \"Confirm escalation and log summary.\", \"step\": 5, \"tools_used\": [\"SUCCESS\"]}"
+          },
+          {
+            "source_id": "exit_conditions",
+            "excerpt": "Case escalated to analyst with full context."
+          }
+        ]
+      },
+      "reasoning": {
+        "level": 3,
+        "rationale": "The agent must reconcile an anomalous in-person location with a matching device, interpret the computed score under routing thresholds, and recommend analyst contact.",
+        "evidence": [
+          {
+            "source_id": "case_success_path_differences",
+            "excerpt": "Escalation due to location anomaly; device matches but transaction is physically out of pattern."
+          },
+          {
+            "source_id": "case_input_conditions",
+            "excerpt": "fraud_risk_score = 90"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "Escalate to analyst with full investigation package and recommended actions."
+          },
+          {
+            "source_id": "case_expected_success_outcome",
+            "excerpt": "contact_customer"
+          }
+        ]
+      },
+      "tool_use": {
+        "level": 3,
+        "rationale": "Several retrieval tools feed a multi-object scoring call, whose results must be bound into a structured analyst-routing package.",
+        "evidence": [
+          {
+            "source_id": "step_001",
+            "excerpt": "{\"description\": \"Retrieve transaction details, customer profile, and transaction history.\", \"step\": 1, \"tools_used\": [\"retrieve_transaction_details\", \"get_customer_profile\", \"analyze_transaction_history\"]}"
+          },
+          {
+            "source_id": "step_002",
+            "excerpt": "{\"description\": \"Check device intelligence and cross-reference fraud databases.\", \"step\": 2, \"tools_used\": [\"check_device_intelligence\", \"cross_reference_fraud_databases\"]}"
+          },
+          {
+            "source_id": "tool_contracts",
+            "excerpt": "calculate_fraud_risk_score(transaction_details, customer_profile, transaction_history, device_intelligence, fraud_database_hits?)"
+          },
+          {
+            "source_id": "tool_contracts",
+            "excerpt": "route_to_analyst(alert_id, investigation_package, recommended_action)"
+          }
+        ]
+      },
+      "dependencies": {
+        "level": 2,
+        "rationale": "Enrichment precedes scoring; the score and complete package precede routing; confirmation follows routing. The analyst handoff is the decisive exit, so no downstream analyst response or alternative recovery is charged.",
+        "evidence": [
+          {
+            "source_id": "global_plan",
+            "excerpt": "Always enrich alerts with data from all relevant systems before scoring."
+          },
+          {
+            "source_id": "step_003",
+            "excerpt": "{\"description\": \"Calculate fraud risk score and compile investigation package.\", \"step\": 3, \"tools_used\": [\"calculate_fraud_risk_score\"]}"
+          },
+          {
+            "source_id": "step_004",
+            "excerpt": "{\"description\": \"Route to analyst with recommended actions.\", \"step\": 4, \"tools_used\": [\"route_to_analyst\"]}"
+          },
+          {
+            "source_id": "exit_conditions",
+            "excerpt": "Case escalated to analyst with full context."
+          }
+        ]
+      },
+      "information": {
+        "level": 2,
+        "rationale": "Identifiers and lookback are supplied, but the agent must retrieve and verify transaction, customer, history, device, and fraud-list data before compiling the case.",
+        "evidence": [
+          {
+            "source_id": "case_representative_input",
+            "excerpt": "{\"additional_context\": {\"device_id\": \"DEV-600006\", \"ip_address\": \"198.51.100.55\", \"location\": \"Las Vegas, NV\"}, \"alert_id\": \"FA-883426\", \"alert_type\": \"card_present\", \"customer_id\": \"CUST-102345\", \"lookback_days\": 120, \"transaction_type\": \"card_present\"}"
+          },
+          {
+            "source_id": "step_001",
+            "excerpt": "{\"description\": \"Retrieve transaction details, customer profile, and transaction history.\", \"step\": 1, \"tools_used\": [\"retrieve_transaction_details\", \"get_customer_profile\", \"analyze_transaction_history\"]}"
+          },
+          {
+            "source_id": "step_002",
+            "excerpt": "{\"description\": \"Check device intelligence and cross-reference fraud databases.\", \"step\": 2, \"tools_used\": [\"check_device_intelligence\", \"cross_reference_fraud_databases\"]}"
+          },
+          {
+            "source_id": "global_plan",
+            "excerpt": "All escalated cases include complete investigation packages and recommended actions."
+          }
+        ]
+      }
+    },
+    "overall_score": 65,
+    "intended_endpoint": {
+      "description": "Escalate the high-risk location-anomaly transaction to an analyst with a complete investigation package and contact-customer recommendation, then confirm the escalation.",
+      "evidence": [
+        {
+          "source_id": "case_expected_success_outcome",
+          "excerpt": "{\"final_status\": \"escalated\", \"key_outputs\": {\"case_status\": \"escalated\", \"fraud_risk_score\": 90, \"investigation_package\": {\"risk_factors\": [\"location_anomaly\"], \"summary\": \"High-risk in-person transaction in new location for customer.\", \"transaction_id\": \"TX-60006\"}, \"recommended_action\": \"contact_customer\"}}"
+        },
+        {
+          "source_id": "exit_conditions",
+          "excerpt": "Case escalated to analyst with full context."
+        },
+        {
+          "source_id": "step_005",
+          "excerpt": "{\"description\": \"Confirm escalation and log summary.\", \"step\": 5, \"tools_used\": [\"SUCCESS\"]}"
+        }
+      ]
+    },
+    "dependency_reasoning": "A defensible sufficient order retrieves transaction, profile, and history; checks device and fraud databases; scores and packages the evidence; then routes and confirms. The supplied score describes the scenario, but the workflow still calls for enrichment and calculation. Other diagnostic orders may be feasible; none requires customer verification or a failure escalation on the documented available-data path.",
+    "score_rationale": "Ratings 3 + 3 + 3 + 2 + 2 yield 65. Multi-stage enrichment and structured handoff dominate, while supplied identifiers and explicit thresholds limit discovery and branching.",
+    "uncertainties": [
+      "The expected investigation package is abbreviated, while the routing contract calls for transaction, customer, device, history, risk score, and notes; the completeness requirement is scored, without assuming the abbreviated example alone suffices.",
+      "The scenario specifies a score of 90, but the agent's scoring tool still must establish the routing score; the reference sequence does not prove a unique call order."
+    ],
+    "source_quality_flags": [
+      "Reference calls show intended inputs, not observed execution or guaranteed tool results.",
+      "Global notification and regulatory goals do not specify an additional action for this particular analyst-escalation endpoint."
+    ],
+    "unscorable_reason": ""
+  },
+  "score_arithmetic": {
+    "rule": "5_times_sum_of_unchanged_dimension_levels",
+    "model_reported_total": 65,
+    "computed_total": 65,
+    "reported_total_mismatch": false
+  },
+  "request_binding": {
+    "bound_case_key": "4c78b9d919a09c14a6fe033a",
+    "model_reported_case_key": "4c78b9d919a09c14a6fe033a",
+    "model_case_key_mismatch": false
+  },
+  "evidence_diagnostics": [],
+  "raw_sha256": "46ba661e7f40245ff14adcc96cc9dbac3961da7970a5f72dac38cfb4cef0db8a",
+  "finished_at": "2026-11-14T03:36:15.667955+00:00"
+}

@@ -1,0 +1,13 @@
+dataset,domain,n_tasks,vendi_score,vendi_score_norm
+tau2,all,278,23.01329041,0.08278162
+tau2,airline,50,15.4401226,0.30880245
+tau2,retail,114,27.04415321,0.23722941
+tau2,telecom,114,2.49874592,0.02191882
+synthetic,all,64,29.13591576,0.45524868
+synthetic,banking_accounts_deposits,8,4.72184372,0.59023046
+synthetic,banking_customer_onboarding,6,3.86558628,0.64426438
+synthetic,banking_fraud_monitoring,13,7.00637865,0.5389522
+synthetic,healthcare_patient_onboarding,9,5.79950619,0.64438958
+synthetic,healthcare_prior_authorization,9,5.78086519,0.64231835
+synthetic,insurance_claims_intake,10,6.73964024,0.67396402
+synthetic,manufacturing_purchase_to_pay,9,6.02838135,0.66982015

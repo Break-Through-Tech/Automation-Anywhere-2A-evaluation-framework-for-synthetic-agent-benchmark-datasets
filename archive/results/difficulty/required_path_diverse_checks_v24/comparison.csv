@@ -1,0 +1,7 @@
+role,dataset,domain,task_id,original_score,clarified_score,change,clarified_is_new_call
+sim_exit,tau2,telecom,[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None],75,50,-25,False
+airline_no_target_exit,tau2,airline,14,75,85,10,True
+retail_no_target_exit,tau2,retail,107,75,70,-5,True
+fraud_package_exit,synthetic,banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2,70,65,-5,True
+simple_control,validation_fixture,control,C01,40,40,0,True
+complex_control,validation_fixture,control,C02,75,75,0,True

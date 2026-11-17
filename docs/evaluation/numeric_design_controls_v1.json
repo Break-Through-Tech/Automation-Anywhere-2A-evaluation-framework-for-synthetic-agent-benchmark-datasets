@@ -1,0 +1,37 @@
+{
+  "version": "design_controls_v1",
+  "notice": "Separate source-only validation fixtures, not edits to benchmark data or real model judgments.",
+  "tool_contracts": {
+    "read_balance": "customer_id, optional account_id -> balance and currency",
+    "record_balance": "customer_id, balance, currency -> recorded confirmation",
+    "get_linked_accounts": "customer_id -> account identifiers and currencies",
+    "get_fx_rate": "source_currency, target_currency, date -> conversion rate",
+    "request_approval": "customer_id, proposed_reconciliation, supporting_records -> approval or rejection",
+    "record_reconciliation": "customer_id, account_ids, original_balances, converted_balances, approval_id -> linked record confirmation"
+  },
+  "cases": [
+    {
+      "id": "C01",
+      "scenario": "Customer K has one USD account. Its identity is already verified. Record the current balance; no approval or conversion is needed.",
+      "steps": ["Read Customer K's current balance and currency using read_balance.", "Record that balance and currency for Customer K using record_balance."],
+      "endpoint": "The current balance and currency are recorded for Customer K, with a record confirmation."
+    },
+    {
+      "id": "C02",
+      "scenario": "Customer K has several linked accounts in different currencies. Reconcile the exposure in USD as of 2026-04-16; approval is required if converted exposure exceeds USD 100000. Preserve all original and converted balances.",
+      "steps": ["Resolve Customer K's linked accounts, read each balance, obtain the applicable dated currency rates, reconcile inconsistent currency identifiers and compute the combined USD exposure.", "Compare the exposure against the supplied threshold, request approval when required, and only after approval record a reconciliation linking the original balances, conversions and approval identifier; on rejection do not record it."],
+      "endpoint": "A linked reconciliation with correct source records and required approval is recorded, or a rejected approval is reported without recording a reconciliation."
+    },
+    {
+      "id": "C03",
+      "scenario": "Customer K's identity has been verified. There is a single account denominated in USD. Save its present balance; neither conversion nor approval is required.",
+      "steps": ["Use read_balance to obtain the current balance and currency of Customer K.", "Use record_balance to save that balance and currency for Customer K."],
+      "endpoint": "The current balance and currency are recorded for Customer K, with a record confirmation."
+    }
+  ],
+  "comparison_only": {
+    "controlled_complexity": {"baseline": "C01", "variant": "C02", "expected_direction": "variant_higher", "minimum_gap": 10},
+    "paraphrase": {"baseline": "C01", "variant": "C03", "maximum_absolute_difference": 10},
+    "catalog_order": {"baseline": "C01", "variant": "C04", "maximum_absolute_difference": 10}
+  }
+}

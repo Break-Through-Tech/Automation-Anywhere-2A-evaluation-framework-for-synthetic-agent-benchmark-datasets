@@ -1,0 +1,68 @@
+{
+  "status": "three_attempt_retry_complete",
+  "scope": "purposive development retry under a new provisional policy, not held-out validation",
+  "attempts": 3,
+  "responses_accepted": 3,
+  "responses_rejected": 0,
+  "actual_returned_models": {
+    "gpt-6-astra": 3
+  },
+  "policy_version": "provisional_outcome_v0.1",
+  "policy_sha256": "8ba7545b0c7947f0776e3e207f11fa6e632c0e7d34ed6e76606e85f8ced5799a",
+  "policy_status": "user_authorized_exploratory_Sandra_pending",
+  "prompt_version": "synthetic_judge_v0.3_provisional_outcome",
+  "prompt_sha256": "1175b671ce98c05e3fe32604acf15fff21496c6a874a1f97e3a010cc4be7bcbb",
+  "rubric_sha256": "69ad3055a576848ea76949b8cc6d3ee3c1380c76e1f79d76f58da7d096b553f1",
+  "packet_sha256": "be56eb919ffc041e7103639eb4f5193f0f435c70c7b51c467afe02b128bc6d5d",
+  "original_human_answers_unchanged": true,
+  "historical_scores_unchanged": true,
+  "agreement_or_accuracy_metric_computed": false,
+  "difficulty_computed": false,
+  "token_usage_from_received_responses": {
+    "prompt_tokens": 21651,
+    "completion_tokens": 7364,
+    "total_tokens": 29015
+  },
+  "assessments": [
+    {
+      "review_id": "R01",
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+      "trial": 0,
+      "status": "format_and_evidence_checks_passed",
+      "model_judgment": "unmet",
+      "original_human_judgment": "unverifiable",
+      "different_from_original_human_label": true,
+      "model_rationale": "The intended entity, account type, owners, funding branch, and required opening endpoint are clear. The execution expressly leaves screening and opening incomplete and performs an acknowledged escalation instead. These material unmet conditions are decisive under the provisional outcome rule; the other unobserved conditions remain unverifiable. The transfer marker is not treated as proof of completion. Escalation and avoiding invented secure-channel instructions may be reasonable behavior, but neither completes this task. The evidence does not establish that the additional information requested was contractually necessary, that the agent could access all scenario inputs, or that an environmental blocker made completion impossible. Accordingly, noncompletion is established without assigning definitive fault or an empirical difficulty classification.",
+      "environment_findings_count": 3,
+      "raw_response_sha256": "32fe34b7eb5fd59a26f2ddb3548a33b8c9f84c9e6c80d70ba13feb6c3b4065a0"
+    },
+    {
+      "review_id": "R06",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+      "trial": 2,
+      "status": "format_and_evidence_checks_passed",
+      "model_judgment": "unverifiable",
+      "original_human_judgment": "unverifiable",
+      "different_from_original_human_label": false,
+      "model_rationale": "Material conflicts remain between the specified ATM/takeover case and the execution data returned for the correct alert and device identifiers. The transcript establishes correct-customer profile retrieval, 90-day history analysis, device queries, risk calculation on the returned transaction, and analyst routing. It does not resolve the intended transaction identity or establish decline, account blocking, or notification. Under the provisional rule, uncertainty rather than a pending policy decision determines this judgment: there is no conclusive final-state failure for the intended ATM transaction. The agent reasonably surfaced the conflicts and avoided claiming completion, but that behavior does not satisfy the requested business outcome. The transcript does not independently establish the claimed lack of blocking or status-query tools.",
+      "environment_findings_count": 3,
+      "raw_response_sha256": "9ce0c037d17f3969989c1836506234178e806a08529d091e9055717b987bdc91"
+    },
+    {
+      "review_id": "R07",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "trial": 0,
+      "status": "format_and_evidence_checks_passed",
+      "model_judgment": "unmet",
+      "original_human_judgment": "unmet",
+      "different_from_original_human_label": false,
+      "model_rationale": "The requested self-pay onboarding outcome is clear despite uncertainty about the alleged tool limitations and the availability date. Demographic and medical-history extraction are supported. Pricing delivery and appointment scheduling are conclusively incomplete in the recorded attempt, and the resulting staff handoff is not an accepted completion endpoint. Under the provisional outcome rule and proposed aggregation, those material unmet conditions determine the overall judgment while the EHR creation state remains unverifiable. The agent's refusal to invent pricing or claim a booking is reasonable, but this does not complete the business outcome. The evidence does not establish that environmental limitations caused every shortfall or that a feasible supported completion path was available.",
+      "environment_findings_count": 3,
+      "raw_response_sha256": "e390bbe92cfd403d555070330422167babca4210a49fa470439c9c0118dc49e1"
+    }
+  ],
+  "next_step": "Inspect R01 policy-dependent difference; obtain Sandra clarification before final scoring. Do not auto-expand to sixteen."
+}

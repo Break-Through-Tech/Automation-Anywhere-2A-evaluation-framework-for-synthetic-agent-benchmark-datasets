@@ -56,6 +56,12 @@ Each run replaces the CSV and metadata files in the output directory. Use
 file with `--tasks`, set `--split-label` to describe its split; this label does
 not change which tasks are selected.
 
+
+Standalone score exports also live under `results/coverage/`:
+`attribute_counts.csv`, `attribute_scores.csv`, and `vendi_scores.csv`.
+Run `python coverage/attribute_diversity.py` or `python coverage/vendi_score.py`
+to regenerate them. The combined report remains in `results/framework/`.
+
 ## Coverage summaries (issue #18)
 
 With the virtual environment active and requirements installed, run:
@@ -66,7 +72,7 @@ python coverage/plot_coverage.py
 
 This reads the merged `coverage/labels/labels_tau2.csv` and
 `coverage/labels/labels_synthetic.csv`, along with `attribute_scores.csv`
-and `vendi_scores.csv` in this folder. It uses the existing scores and makes
+and `vendi_scores.csv` in `results/coverage/`. It uses the existing scores and makes
 no API calls. The current inputs contain 278 tau2 base tasks and 64 synthetic
 tasks. Labels from other splits or expanded datasets should not be combined
 with these scores; update the task file, labels, and scores together first.

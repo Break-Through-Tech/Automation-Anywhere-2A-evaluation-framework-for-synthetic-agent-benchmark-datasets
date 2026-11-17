@@ -1,0 +1,32 @@
+{
+  "status": "stopped_early_for_offline_diagnosis",
+  "planned_max_requests": 3,
+  "new_api_requests": 2,
+  "not_run_review_ids": [
+    "R07"
+  ],
+  "expanded_to_sixteen": false,
+  "stop_reason": "Two consecutive non-success judgments: stop and diagnose; this does not prove agent failure.",
+  "responses_accepted": 2,
+  "responses_rejected": 0,
+  "outcomes": {
+    "unverifiable": 2
+  },
+  "returned_models": {
+    "gpt-6-astra": 2
+  },
+  "token_usage": {
+    "prompt_tokens": 46101,
+    "completion_tokens": 5600,
+    "total_tokens": 51701
+  },
+  "human_answers_changed": false,
+  "supplied_dataset_changed": false,
+  "difficulty_computed": false,
+  "policy_version": "provisional_outcome_v0.2",
+  "policy_sha256": "e7b43dbc18f361138019a84e1ed53f6b083d50dd5426aa0ca95d4d86e1e4d55f",
+  "prompt_version": "synthetic_judge_v0.5_runtime_context_canary",
+  "prompt_sha256": "fee70dbf8fda97dba85dea85721a6559dc1def28e521b502e1d4240c0547ea39",
+  "context_sha256": "cf7a9466b436c76f1bd4ccb2d30144ff04f0c38cf919e517943068534a021afd",
+  "diagnosis": "Adding runtime and reference context did not resolve the two chosen cases. R01 remains semantically under-specified despite permissive schemas. R15 has directly observed scenario/mock mismatches and an ambiguous SUCCESS approval endpoint. Do not force labels or continue a broad paid run."
+}

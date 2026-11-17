@@ -1,0 +1,5 @@
+case,role,task_id,baseline_score,probe_score,delta
+1,explicit_chain_concern,[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:None],75,50,-25
+2,explicit_chain_concern,[service_issue]airplane_mode_on|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy],75,50,-25
+3,explicit_exclusion_contrast,[service_issue]airplane_mode_on|break_apn_settings|lock_sim_card_pin|overdue_bill_suspension[PERSONA:Hard],50,50,0
+4,explicit_exclusion_contrast,[service_issue]break_apn_settings|lock_sim_card_pin|overdue_bill_suspension|unseat_sim_card[PERSONA:Easy],65,50,-15

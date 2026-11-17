@@ -1,0 +1,43 @@
+{
+  "status": "sixteen_policy_v02_assessments_complete",
+  "scope": "purposive development sample; model proposals, not final adjudication",
+  "policy_version": "provisional_outcome_v0.2",
+  "policy_sha256": "e7b43dbc18f361138019a84e1ed53f6b083d50dd5426aa0ca95d4d86e1e4d55f",
+  "prompt_version": "synthetic_judge_v0.4_environment_policy",
+  "prompt_sha256": "3b3fa71e8e078fa60f6f3b3c9ed334c29007432aeace0ec10250b5b6e5b5139c",
+  "new_api_requests": 16,
+  "responses_validated": 16,
+  "responses_rejected": 0,
+  "api_errors": 0,
+  "returned_models": {
+    "gpt-6-astra": 16
+  },
+  "task_judgment_counts": {
+    "unverifiable": 16
+  },
+  "environment_assessment_counts": {
+    "not_established": 1,
+    "suspected_blocker": 5,
+    "supported_blocker": 10
+  },
+  "blocker_recognition_counts": {
+    "unsupported_claim": 7,
+    "supported_positive": 8,
+    "not_established": 1
+  },
+  "eligible_attempts": 0,
+  "excluded_attempts": 16,
+  "difficulty_status": "unavailable_no_eligible_attempts",
+  "numeric_difficulty_score": null,
+  "positive_behavior_contributes_to_difficulty": false,
+  "labels_changed_from_v01": 11,
+  "human_answers_unchanged": true,
+  "historical_scores_unchanged": true,
+  "model_accuracy_claimed": false,
+  "token_usage": {
+    "prompt_tokens": 108488,
+    "completion_tokens": 44646,
+    "total_tokens": 153134
+  },
+  "material_limitation": "Judge requests lack full authoritative tool contracts and complete workflow guidelines; some unverifiable judgments reflect missing judge context rather than proven dataset blockers."
+}

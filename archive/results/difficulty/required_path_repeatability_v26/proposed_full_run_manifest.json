@@ -1,0 +1,15 @@
+{
+  "status": "prepared_only_not_authorized_not_adopted",
+  "n_tasks": 342,
+  "n_requests": 348,
+  "cached_requests": 7,
+  "proposed_new_call_cap": 341,
+  "api_calls": 0,
+  "full_rescore_authorized": false,
+  "primary_scores_changed": false,
+  "requests_sha256": "88000e539350fe91e5244e628199f28f3426874a3bb9e5fb3fc81cfd8a29b9fb",
+  "inventory_sha256": "60ad91c59289d5885244e7697e2ef85d588f4150fab5f9618b91d4ec52556fc9",
+  "bindings_sha256": "844db2e94d66b5e345422644697dba50bf04427b4bbaa8b6c72c63c266beb595",
+  "repeat_convention": "Same per-task repeat plan as published baseline; only repeat-index-matching exact requests reused",
+  "clarification": "Identical to the tested frozen addendum; no weight, anchor, input or schema changes"
+}

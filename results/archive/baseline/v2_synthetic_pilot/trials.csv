@@ -1,0 +1,3 @@
+domain,task_id,trial,seed,reward,passed,termination_reason,evaluation_status,steps,duration_s,agent_calls,user_calls,agent_prompt_tokens,agent_completion_tokens,user_prompt_tokens,user_completion_tokens,agent_cost,user_cost,trace_file
+banking_accounts_deposits,DigitalAccountOpeningAgent_W1_TC2,0,670487,0,0,user_stop,failed_reference,8,20.3867,4,4,29791,405,2725,162,,,traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W1_TC2_trial0.json.gz
+banking_accounts_deposits,DigitalAccountOpeningAgent_W2_TC1,0,116739,0,0,user_stop,failed_reference,8,15.4383,4,4,29612,348,2515,143,,,traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC1_trial0.json.gz

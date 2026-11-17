@@ -1,0 +1,511 @@
+{
+  "version": "original_subset_v1",
+  "api_calls": 0,
+  "new_tool_executions": 0,
+  "task_count_deeply_inspected": 3,
+  "additional_trials_inventoried": 9,
+  "ready_task_count": 0,
+  "new_task_judgments": 0,
+  "source_hashes": {
+    "results/baseline/v2_synthetic_full/trials.csv": "67294ce684b69ba6e898fbd48029846faaa8a9262bdce65afd07297321d53fa0",
+    "results/judge_review/v1/sample/human_reviews.json": "5b23132bda36fca14a9aef434e4942d2cba3ef44f2c645f1963441b472212360",
+    "baseline/synthetic_environment.py": "cbea03d898c273e9bb4a43498c7eb91eecb8969661f9ce24d8627d6acb17ad7b",
+    "baseline/run_synthetic_baseline.py": "e7b5aeb5ddc5ff30e706d8736f41cbb6c32ba1af1c302c5d2be2f06eefaa83bd",
+    "results/baseline/v2_full/prompt.txt": "b9ddd0cbf1792ad351a867f715b7f5c4aa019b1977c52283e0b29f8057875bc9",
+    "data/banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "data/banking_customer_onboarding/test_cases.json": "849d04f1e2c0c7a41e6f7af7424a8b4162353f72692e577ba50f5281d8f79c9f",
+    "data/banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "data/healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "data/healthcare_patient_onboarding/test_cases.json": "c2a257396c615b71206c9b941a4b0328e2451a7a75db7f3fca04266e6d12930d",
+    "data/healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "data/manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "data/manufacturing_purchase_to_pay/test_cases.json": "a46adedb99892fc44a48c9cadea9c9d96ab174c9267f49d674717595ecd728f7",
+    "data/manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c"
+  },
+  "evidence_citations_checked": true,
+  "source_and_human_inputs_unchanged": true,
+  "tasks": [
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+      "trial": 0,
+      "selection_basis": "First saved trial of one task from each of three domains in unflagged audit group; chosen before inspection, not for outcome diversity.",
+      "deep_review_scope": "trial 0 source, requirements, tool contracts and conversation; other trials inventoried only",
+      "disposition": "hold_document_and_identity_reference_conflicts",
+      "finding": "Two extractions label utility_bill.jpg as passport. The filename heuristic also returns Sarah Chen, whereas the expected call arguments describe Alice Smith. These conflicts were not detected by the narrow literal audit.",
+      "required_inputs": "Supplied filenames are available in the conversation. Material applicant profile data and acceptable proof-of-address interpretation still need reconciliation; do not import Alice Smith from reference-only expected calls into execution.",
+      "endpoint": "Core account and CRM creation methods return created statuses and communication returns sent; these could support simulated completion after verified mandatory prerequisites. They were not reached in trial 0.",
+      "limitation": "This establishes contradictory document/reference data, not that every valid route is impossible. The task does not fully settle whether the extracted address on a passport could satisfy proof-of-address requirements.",
+      "next_action": "Ask the dataset owner to adjudicate the document classification and authoritative applicant identity; preserve the original fixture and report any future revised variant separately.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/0/output/documents/1/document_type",
+          "excerpt": "passport"
+        },
+        {
+          "locator": "#/tool_events/1/output/documents/0/file",
+          "excerpt": "utility_bill.jpg"
+        },
+        {
+          "locator": "#/tool_events/1/output/documents/0/document_type",
+          "excerpt": "passport"
+        },
+        {
+          "locator": "#/tool_events/0/output/documents/0/name",
+          "excerpt": "Sarah Chen"
+        },
+        {
+          "locator": "#/tool_events/2/output/exit_status",
+          "excerpt": "escalated"
+        }
+      ],
+      "task_judgment": null,
+      "difficulty_eligible": null,
+      "independent_human_label": false,
+      "ready_for_clean_completion_canary": false,
+      "saved_source": {
+        "format": "baseline_csv_trace_v1",
+        "csv_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/trials.csv",
+        "csv_sha256": "67294ce684b69ba6e898fbd48029846faaa8a9262bdce65afd07297321d53fa0",
+        "trace_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz",
+        "trace_sha256": "8a3bbb4a395953f99fbb72630b6c8c1753f02cbfa86b01993161f23c8643566b",
+        "original_evaluation": {
+          "reward": 0,
+          "status": "failed_reference",
+          "missing_tool": "validate_identity",
+          "matched_calls": 1,
+          "required_calls": 8
+        },
+        "termination_reason": "user_stop",
+        "manifest_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/manifest.json",
+        "manifest_sha256": "7a233318afe7e582a432911c2458ea5624d86eacf8fbf7c9ae80d10fad386771"
+      },
+      "schema_input_checks": [
+        {
+          "event_index": 0,
+          "name": "extract_kyc_documents",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 1,
+          "name": "extract_kyc_documents",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 2,
+          "name": "HUMAN_IN_THE_LOOP",
+          "saved_inputs_accept_current_schema": true
+        }
+      ],
+      "tool_inventory": [
+        "CANCELLED",
+        "FAILED",
+        "HUMAN_IN_THE_LOOP",
+        "SUCCESS",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "extract_kyc_documents",
+        "screen_sanctions_lists",
+        "send_welcome_communication",
+        "validate_identity"
+      ],
+      "source_methods": [
+        {
+          "name": "extract_kyc_documents",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 118
+        },
+        {
+          "name": "validate_identity",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 154
+        },
+        {
+          "name": "screen_sanctions_lists",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 192
+        },
+        {
+          "name": "calculate_aml_risk_score",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 228
+        },
+        {
+          "name": "create_core_banking_customer",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 269
+        },
+        {
+          "name": "create_crm_profile",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 316
+        },
+        {
+          "name": "send_welcome_communication",
+          "source_file": "data/banking_customer_onboarding/test_cases.py",
+          "line": 363
+        },
+        {
+          "name": "SUCCESS",
+          "source_file": "baseline/synthetic_environment.py",
+          "line": 31
+        },
+        {
+          "name": "HUMAN_IN_THE_LOOP",
+          "source_file": "baseline/synthetic_environment.py",
+          "line": 43
+        }
+      ],
+      "other_trial_inventory": [
+        {
+          "trial": 1,
+          "tool_names": []
+        },
+        {
+          "trial": 2,
+          "tool_names": [
+            "extract_kyc_documents",
+            "extract_kyc_documents",
+            "HUMAN_IN_THE_LOOP"
+          ]
+        },
+        {
+          "trial": 3,
+          "tool_names": []
+        }
+      ]
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W1_TC2",
+      "trial": 0,
+      "selection_basis": "First saved trial of one task from each of three domains in unflagged audit group; chosen before inspection, not for outcome diversity.",
+      "deep_review_scope": "trial 0 source, requirements, tool contracts and conversation; other trials inventoried only",
+      "disposition": "hold_duplicate_check_contract_and_time_context",
+      "finding": "Demographics, insurance, active eligibility and medical history were returned. Global YAML guidance requires duplicate detection, but the runtime tool inventory has no patient-search tool. The agent escalated; the acknowledgement provides no duplicate-check result. The availability mock returns a fixed 2024-02-12 slot.",
+      "required_inputs": "Form/provider IDs and tool-extracted patient data are available. The duplicate-check mechanism and historical scenario date remain unresolved. Do not declare the slot invalid using today’s review date or rely on the agent’s claim alone.",
+      "endpoint": "EHR creation returns created/updated, scheduling returns scheduled with echoed patient/provider/slot, and communication returns sent. These are meaningful simulated endpoints, but no record creation or scheduling occurred in trial 0.",
+      "limitation": "A missing search tool is evidence of a contract gap under the duplicate guideline, not proof that no authorized workflow can handle it. Clarify whether staff escalation suffices and how simulation time should be interpreted. Literal patient identifiers in the expected calls differ from tool-returned identifiers; do not exact-match those references.",
+      "next_action": "Resolve the duplicate-check requirement and historical clock convention before selecting this attempt for paid outcome validation.",
+      "evidence": [
+        {
+          "locator": "#/tool_events/2/output/status",
+          "excerpt": "active"
+        },
+        {
+          "locator": "#/tool_events/4/output/human_response",
+          "excerpt": "Request acknowledged and escalated to human supervisor."
+        },
+        {
+          "locator": "#/tool_events/5/output/slots/0/date",
+          "excerpt": "2024-02-12"
+        },
+        {
+          "locator": "#/conversation/10/content",
+          "excerpt": "Your appointment has not yet been booked."
+        }
+      ],
+      "task_judgment": null,
+      "difficulty_eligible": null,
+      "independent_human_label": false,
+      "ready_for_clean_completion_canary": false,
+      "saved_source": {
+        "format": "baseline_csv_trace_v1",
+        "csv_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/trials.csv",
+        "csv_sha256": "67294ce684b69ba6e898fbd48029846faaa8a9262bdce65afd07297321d53fa0",
+        "trace_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W1_TC2_trial0.json.gz",
+        "trace_sha256": "96ab26d33da73baff0af26d7f44970ceae405e72896f0238e79296dce8213a32",
+        "original_evaluation": {
+          "reward": 0,
+          "status": "failed_reference",
+          "missing_tool": "verify_insurance_eligibility",
+          "matched_calls": 2,
+          "required_calls": 9
+        },
+        "termination_reason": "user_stop",
+        "manifest_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/manifest.json",
+        "manifest_sha256": "7a233318afe7e582a432911c2458ea5624d86eacf8fbf7c9ae80d10fad386771"
+      },
+      "schema_input_checks": [
+        {
+          "event_index": 0,
+          "name": "extract_patient_demographics",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 1,
+          "name": "extract_insurance_info",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 2,
+          "name": "verify_insurance_eligibility",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 3,
+          "name": "extract_medical_history",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 4,
+          "name": "HUMAN_IN_THE_LOOP",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 5,
+          "name": "check_provider_availability",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 6,
+          "name": "HUMAN_IN_THE_LOOP",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 7,
+          "name": "HUMAN_IN_THE_LOOP",
+          "saved_inputs_accept_current_schema": true
+        }
+      ],
+      "tool_inventory": [
+        "CANCELLED",
+        "FAILED",
+        "HUMAN_IN_THE_LOOP",
+        "SUCCESS",
+        "check_provider_availability",
+        "create_ehr_patient_record",
+        "extract_insurance_info",
+        "extract_medical_history",
+        "extract_patient_demographics",
+        "schedule_appointment",
+        "send_patient_communication",
+        "verify_insurance_eligibility"
+      ],
+      "source_methods": [
+        {
+          "name": "extract_patient_demographics",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 153
+        },
+        {
+          "name": "extract_insurance_info",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 180
+        },
+        {
+          "name": "verify_insurance_eligibility",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 205
+        },
+        {
+          "name": "extract_medical_history",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 243
+        },
+        {
+          "name": "create_ehr_patient_record",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 268
+        },
+        {
+          "name": "check_provider_availability",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 302
+        },
+        {
+          "name": "schedule_appointment",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 332
+        },
+        {
+          "name": "send_patient_communication",
+          "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+          "line": 375
+        },
+        {
+          "name": "SUCCESS",
+          "source_file": "baseline/synthetic_environment.py",
+          "line": 31
+        },
+        {
+          "name": "HUMAN_IN_THE_LOOP",
+          "source_file": "baseline/synthetic_environment.py",
+          "line": 43
+        }
+      ],
+      "other_trial_inventory": [
+        {
+          "trial": 1,
+          "tool_names": [
+            "extract_patient_demographics",
+            "extract_insurance_info",
+            "verify_insurance_eligibility",
+            "extract_medical_history",
+            "check_provider_availability",
+            "HUMAN_IN_THE_LOOP",
+            "HUMAN_IN_THE_LOOP"
+          ]
+        },
+        {
+          "trial": 2,
+          "tool_names": [
+            "extract_patient_demographics",
+            "extract_insurance_info",
+            "verify_insurance_eligibility",
+            "extract_medical_history",
+            "HUMAN_IN_THE_LOOP",
+            "check_provider_availability",
+            "check_provider_availability",
+            "HUMAN_IN_THE_LOOP"
+          ]
+        },
+        {
+          "trial": 3,
+          "tool_names": [
+            "extract_patient_demographics",
+            "extract_insurance_info",
+            "verify_insurance_eligibility",
+            "extract_medical_history",
+            "check_provider_availability",
+            "HUMAN_IN_THE_LOOP"
+          ]
+        }
+      ]
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+      "trial": 0,
+      "selection_basis": "First saved trial of one task from each of three domains in unflagged audit group; chosen before inspection, not for outcome diversity.",
+      "deep_review_scope": "trial 0 source, requirements, tool contracts and conversation; other trials inventoried only",
+      "disposition": "hold_required_existing_purchase_order_reference",
+      "finding": "The customer cannot supply the existing PO ID, the requisition result contains no po_id and returns amount 500.0 rather than the scenario’s 7000.0, and no lookup tool is exposed to retrieve the existing PO from the invoice/requisition. Expected calls privately assume PO-100001, which the agent was not given.",
+      "required_inputs": "Invoice and receipt IDs are supplied, but match_invoice_to_po requires po_id. A create_purchase_order tool exists; creating a new order is not evidence of locating the existing order for this invoice and could introduce an unsupported procurement action.",
+      "endpoint": "Matching returns discount terms, approval returns approved plus payment date, and payment returns completed plus the supplied amount. These can support simulated completion if the actual existing PO and payment prerequisites are established. Trial 0 never reached them.",
+      "limitation": "The missing existing PO is demonstrated in this saved attempt, not a universal impossibility claim for every trial. No amount or PO was repaired and no private expected inputs were supplied to the agent.",
+      "next_action": "Request a source-owner decision on how the existing PO should be obtainable. Keep this attempt outside a clean completion canary; it can remain a blocker-analysis example.",
+      "evidence": [
+        {
+          "locator": "#/conversation/2/content",
+          "excerpt": "I don’t have the purchase order ID available"
+        },
+        {
+          "locator": "#/tool_events/0/output",
+          "excerpt": "{\"items\": [{\"item_code\": \"RM-1001\", \"quantity\": 10, \"unit_price\": 50.0}], \"requester\": \"John Doe\", \"cost_center\": \"CC-50100\", \"GL_account\": \"GL-50100\", \"amount\": 500.0, \"priority\": \"normal\", \"date\": \"2024-06-01\"}"
+        },
+        {
+          "locator": "#/tool_events/1/output/exit_status",
+          "excerpt": "escalated"
+        }
+      ],
+      "task_judgment": null,
+      "difficulty_eligible": null,
+      "independent_human_label": false,
+      "ready_for_clean_completion_canary": false,
+      "saved_source": {
+        "format": "baseline_csv_trace_v1",
+        "csv_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/trials.csv",
+        "csv_sha256": "67294ce684b69ba6e898fbd48029846faaa8a9262bdce65afd07297321d53fa0",
+        "trace_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1_trial0.json.gz",
+        "trace_sha256": "f7d75099fac363b5b5c0c9bc99ac27671769d2c7d8aede3e0769b03a742b05aa",
+        "original_evaluation": {
+          "reward": 0,
+          "status": "failed_reference",
+          "missing_tool": "match_invoice_to_po",
+          "matched_calls": 0,
+          "required_calls": 4
+        },
+        "termination_reason": "user_stop",
+        "manifest_file": "/Users/milabond/Documents/MLE/btt_course/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/results/baseline/v2_synthetic_full/manifest.json",
+        "manifest_sha256": "7a233318afe7e582a432911c2458ea5624d86eacf8fbf7c9ae80d10fad386771"
+      },
+      "schema_input_checks": [
+        {
+          "event_index": 0,
+          "name": "read_purchase_requisition",
+          "saved_inputs_accept_current_schema": true
+        },
+        {
+          "event_index": 1,
+          "name": "HUMAN_IN_THE_LOOP",
+          "saved_inputs_accept_current_schema": true
+        }
+      ],
+      "tool_inventory": [
+        "CANCELLED",
+        "FAILED",
+        "HUMAN_IN_THE_LOOP",
+        "SUCCESS",
+        "check_supplier_contracts",
+        "create_purchase_order",
+        "match_invoice_to_po",
+        "process_payment",
+        "read_purchase_requisition",
+        "route_payment_approval",
+        "send_po_to_supplier",
+        "validate_budget_availability"
+      ],
+      "source_methods": [
+        {
+          "name": "match_invoice_to_po",
+          "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+          "line": 1929
+        },
+        {
+          "name": "route_payment_approval",
+          "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+          "line": 1948
+        },
+        {
+          "name": "process_payment",
+          "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+          "line": 1978
+        },
+        {
+          "name": "SUCCESS",
+          "source_file": "baseline/synthetic_environment.py",
+          "line": 31
+        },
+        {
+          "name": "read_purchase_requisition",
+          "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+          "line": 208
+        },
+        {
+          "name": "HUMAN_IN_THE_LOOP",
+          "source_file": "baseline/synthetic_environment.py",
+          "line": 43
+        }
+      ],
+      "other_trial_inventory": [
+        {
+          "trial": 1,
+          "tool_names": [
+            "HUMAN_IN_THE_LOOP"
+          ]
+        },
+        {
+          "trial": 2,
+          "tool_names": [
+            "read_purchase_requisition",
+            "HUMAN_IN_THE_LOOP"
+          ]
+        },
+        {
+          "trial": 3,
+          "tool_names": [
+            "read_purchase_requisition",
+            "HUMAN_IN_THE_LOOP"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Purposive three-task inspection, not a representative sample or failure-rate estimate.",
+    "Readiness holds are assistant source-review findings, not independent human judgments or new benchmark scores.",
+    "No proof that all original tasks are impossible; no extrapolation to all 64."
+  ]
+}

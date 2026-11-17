@@ -1,0 +1,184 @@
+{
+  "status": "three_requests_completed_no_score_updates",
+  "api_requests_attempted": 3,
+  "automatic_retries": 0,
+  "original_task_agent_runs": 0,
+  "profiles_changed": false,
+  "scores_changed": false,
+  "human_validation_claimed": false,
+  "first_task_retried": false,
+  "n_responses_passing_citation_and_schema_checks": 3,
+  "n_reviews_with_corrected_tool_context": 2,
+  "total_tokens": 22296,
+  "reviews": [
+    {
+      "review_id": "D01",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "context": "incomplete_tool_context",
+      "citation_and_schema_valid": true,
+      "model_counts": {
+        "action_units": 8,
+        "business_check_groups": 3,
+        "coordination": {
+          "handoff": 2,
+          "multi_party": 1
+        },
+        "distinct_coordination_events": 3,
+        "n_uncertainties": 3
+      },
+      "candidate_operation_units": 8,
+      "candidate_check_groups": 3,
+      "candidate_coordination": {
+        "approval": 0,
+        "external_response": 0,
+        "handoff": 2,
+        "linked_records": 0,
+        "multi_channel": 0,
+        "multi_party": 0
+      },
+      "source_inspection": {
+        "decision": "stop",
+        "reviewer": "Codex assistant",
+        "reason": "Tool contracts missing from prepared context, despite being present in source YAML. Preserve outcome; no retry of D01.",
+        "counts_not_validation": true
+      },
+      "model_returned": "gpt-6-astra",
+      "request_sha256": "c271b237d24aec5ecab7f1c665c6af32f21e1add0d5fee529832839d877ed9b0",
+      "response_sha256": "c0051ca75dceeff720d5fc7dd9e35484cd42cfe40fe39371bd9a690f5a9a9c89",
+      "usage": {
+        "completion_tokens": 2002,
+        "prompt_tokens": 3374,
+        "total_tokens": 5376,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 268,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 3371,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      }
+    },
+    {
+      "review_id": "D02",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "context": "corrected_tool_context",
+      "citation_and_schema_valid": true,
+      "model_counts": {
+        "action_units": 8,
+        "business_check_groups": 3,
+        "coordination": {
+          "multi_party": 2,
+          "linked_records": 1,
+          "handoff": 2
+        },
+        "distinct_coordination_events": 3,
+        "n_uncertainties": 6
+      },
+      "candidate_operation_units": 8,
+      "candidate_check_groups": 3,
+      "candidate_coordination": {
+        "approval": 0,
+        "external_response": 0,
+        "handoff": 2,
+        "linked_records": 1,
+        "multi_channel": 0,
+        "multi_party": 2
+      },
+      "source_inspection": {
+        "decision": "continue",
+        "reviewer": "Codex assistant, not independent human adjudication",
+        "basis": "Inspected all returned action/check/coordination descriptions and source citations. Eight operations, three checks, one linked-record, two multi-party and two handoff requirements agree with the candidate profile. Shared event keys prevent summing five category tags as five events.",
+        "uncertainties_preserved": "Opaque linked-claim creation, joint coverage representation, specialist dispatch support, escalation wording, missing inputs and grouped tool invocations remain source-level uncertainties. They do not establish a conflicting count or justify inventing operations.",
+        "profiles_changed": false,
+        "rulebook_changed": false
+      },
+      "model_returned": "gpt-6-astra",
+      "request_sha256": "01b189899ed6be12c30b4d938736927138395cf403ec091c973212c01cabf80f",
+      "response_sha256": "86bca5a1441520389b58b4f2a4f1bbabdd548284881f0a3aaa5db2d20c1c8302",
+      "usage": {
+        "completion_tokens": 3000,
+        "prompt_tokens": 5347,
+        "total_tokens": 8347,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 229,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 5344,
+          "cached_tokens": 0,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      }
+    },
+    {
+      "review_id": "D03",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "context": "corrected_tool_context",
+      "citation_and_schema_valid": true,
+      "model_counts": {
+        "action_units": 12,
+        "business_check_groups": 5,
+        "coordination": {
+          "linked_records": 1,
+          "external_response": 3
+        },
+        "distinct_coordination_events": 4,
+        "n_uncertainties": 6
+      },
+      "candidate_operation_units": 8,
+      "candidate_check_groups": 2,
+      "candidate_coordination": {
+        "approval": 0,
+        "external_response": 1,
+        "handoff": 0,
+        "linked_records": 0,
+        "multi_channel": 0,
+        "multi_party": 0
+      },
+      "source_inspection": {
+        "decision": "stop",
+        "reviewer": "Codex assistant, not independent human adjudication",
+        "basis": "Model proposed 12 operations and five checks versus candidate eight and two. Extra operations correspond to initial/repeated field validation, duplicate detection and access logging from global guidelines. Scope and automation boundaries require clarification; no automatic acceptance.",
+        "coordination_scope_difference": "Model counted two payer API returns as external responses and an ordinary patient/provider scheduling relationship as linked records. These extend beyond the candidate profile and expose feature-boundary ambiguity.",
+        "source_issues_preserved": "Medical-history and slot acquisition, duplicate detection implementation, human escalation wording and confirmation-trigger behavior remain uncertainties.",
+        "profiles_changed": false,
+        "rulebook_changed": false
+      },
+      "model_returned": "gpt-6-astra",
+      "request_sha256": "b153a50afbe934d30c2a81d724d05dde0138c875de57a5b586f531503794ec27",
+      "response_sha256": "42742d409573005843c70997f6af7126b1fef263e557f7eb0b56c12a623a9a60",
+      "usage": {
+        "completion_tokens": 3430,
+        "prompt_tokens": 5143,
+        "total_tokens": 8573,
+        "completion_tokens_details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 244,
+          "rejected_prediction_tokens": 0,
+          "text_tokens": null
+        },
+        "prompt_tokens_details": {
+          "audio_tokens": 0,
+          "cache_write_tokens": 3375,
+          "cached_tokens": 1765,
+          "image_tokens": null,
+          "text_tokens": null
+        }
+      }
+    }
+  ],
+  "next_step": "Clarify globally applicable prerequisites, ambient implementation duties and coordination boundaries offline; do not broaden the paid review."
+}

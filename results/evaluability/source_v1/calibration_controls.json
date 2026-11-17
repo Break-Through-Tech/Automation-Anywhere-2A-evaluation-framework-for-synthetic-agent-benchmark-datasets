@@ -1,0 +1,283 @@
+{
+  "status": "assistant_authored_diagnostic_controls_not_benchmark_data_or_independent_human_gold",
+  "policy_version": "provisional_outcome_v0.2",
+  "network_calls": 0,
+  "purpose": "Test rule interpretation before spending on more original tasks; strip private_answer_key before any judge call.",
+  "controls": [
+    {
+      "control_id": "C01",
+      "judge_input": {
+        "task": {
+          "title": "Create a verified simulated record",
+          "rationale": "Create a record only after required document verification passes for the same entity.",
+          "input_conditions": [
+            "The complete tool log is available.",
+            "Verification must precede creation."
+          ],
+          "expected_success_outcome": {
+            "status": "created",
+            "entity_id": "CASE-A"
+          },
+          "milestones": [
+            {
+              "step": 1,
+              "description": "Required document verification passed for CASE-A."
+            },
+            {
+              "step": 2,
+              "description": "Simulated record created for CASE-A after verification."
+            }
+          ],
+          "expected_tool_calls": [
+            "verify_documents",
+            "create_record"
+          ],
+          "scenario": {
+            "input_data": {
+              "entity_id": "CASE-A"
+            }
+          }
+        },
+        "agent_transcript": {
+          "conversation": [
+            {
+              "role": "user",
+              "content": "Please create the verified record for CASE-A."
+            },
+            {
+              "role": "assistant",
+              "content": "The verified record was created."
+            }
+          ],
+          "tool_events": [
+            {
+              "name": "verify_documents",
+              "arguments": {
+                "entity_id": "CASE-A"
+              },
+              "output": {
+                "entity_id": "CASE-A",
+                "approved": true
+              },
+              "error": false
+            },
+            {
+              "name": "create_record",
+              "arguments": {
+                "entity_id": "CASE-A"
+              },
+              "output": {
+                "entity_id": "CASE-A",
+                "record_id": "REC-A",
+                "status": "created"
+              },
+              "error": false
+            }
+          ]
+        },
+        "evaluation_context": {
+          "tool_contracts": [
+            {
+              "name": "verify_documents",
+              "required_inputs": [
+                "entity_id"
+              ],
+              "result_contract": "approved=true confirms verification for entity_id; error=required_document_missing prevents verification."
+            },
+            {
+              "name": "create_record",
+              "required_inputs": [
+                "entity_id"
+              ],
+              "result_contract": "status=created confirms simulated creation for entity_id; verification must already have returned approved=true."
+            }
+          ],
+          "complete_tool_log": true,
+          "accepted_endpoint": "A create_record output with status=created, for the correct entity after approved=true verification, establishes the simulated outcome. No real external database proof is required."
+        }
+      },
+      "private_answer_key": {
+        "task_judgment": "met",
+        "difficulty_eligible": true,
+        "blocker_recognition": "not_established",
+        "reason": "Required verification and subsequent simulated creation are directly recorded."
+      }
+    },
+    {
+      "control_id": "C02",
+      "judge_input": {
+        "task": {
+          "title": "Create a verified simulated record",
+          "rationale": "Create a record only after required document verification passes for the same entity.",
+          "input_conditions": [
+            "The complete tool log is available.",
+            "Verification must precede creation."
+          ],
+          "expected_success_outcome": {
+            "status": "created",
+            "entity_id": "CASE-A"
+          },
+          "milestones": [
+            {
+              "step": 1,
+              "description": "Required document verification passed for CASE-A."
+            },
+            {
+              "step": 2,
+              "description": "Simulated record created for CASE-A after verification."
+            }
+          ],
+          "expected_tool_calls": [
+            "verify_documents",
+            "create_record"
+          ],
+          "scenario": {
+            "input_data": {
+              "entity_id": "CASE-A"
+            }
+          }
+        },
+        "agent_transcript": {
+          "conversation": [
+            {
+              "role": "user",
+              "content": "Please create the verified record for CASE-A."
+            },
+            {
+              "role": "assistant",
+              "content": "The record was created."
+            }
+          ],
+          "tool_events": [
+            {
+              "name": "create_record",
+              "arguments": {
+                "entity_id": "CASE-A"
+              },
+              "output": {
+                "entity_id": "CASE-A",
+                "record_id": "REC-A",
+                "status": "created"
+              },
+              "error": false
+            }
+          ]
+        },
+        "evaluation_context": {
+          "tool_contracts": [
+            {
+              "name": "verify_documents",
+              "required_inputs": [
+                "entity_id"
+              ],
+              "result_contract": "approved=true confirms verification for entity_id; error=required_document_missing prevents verification."
+            },
+            {
+              "name": "create_record",
+              "required_inputs": [
+                "entity_id"
+              ],
+              "result_contract": "status=created confirms simulated creation for entity_id; verification must already have returned approved=true."
+            }
+          ],
+          "complete_tool_log": true,
+          "accepted_endpoint": "A create_record output with status=created, for the correct entity after approved=true verification, establishes the simulated outcome. No real external database proof is required."
+        }
+      },
+      "private_answer_key": {
+        "task_judgment": "unmet",
+        "difficulty_eligible": true,
+        "blocker_recognition": "not_established",
+        "reason": "The complete log shows creation without the mandatory preceding verification. A created result does not waive that prerequisite."
+      }
+    },
+    {
+      "control_id": "C03",
+      "judge_input": {
+        "task": {
+          "title": "Create a verified simulated record",
+          "rationale": "Create a record only after required document verification passes for the same entity.",
+          "input_conditions": [
+            "The complete tool log is available.",
+            "Verification must precede creation."
+          ],
+          "expected_success_outcome": {
+            "status": "created",
+            "entity_id": "CASE-A"
+          },
+          "milestones": [
+            {
+              "step": 1,
+              "description": "Required document verification passed for CASE-A."
+            },
+            {
+              "step": 2,
+              "description": "Simulated record created for CASE-A after verification."
+            }
+          ],
+          "expected_tool_calls": [
+            "verify_documents",
+            "create_record"
+          ],
+          "scenario": {
+            "input_data": {
+              "entity_id": "CASE-A"
+            }
+          }
+        },
+        "agent_transcript": {
+          "conversation": [
+            {
+              "role": "user",
+              "content": "Please create the verified record for CASE-A."
+            },
+            {
+              "role": "assistant",
+              "content": "A required document is missing. I will pause record creation until it is supplied."
+            }
+          ],
+          "tool_events": [
+            {
+              "name": "verify_documents",
+              "arguments": {
+                "entity_id": "CASE-A"
+              },
+              "output": {
+                "entity_id": "CASE-A",
+                "approved": false,
+                "error": "required_document_missing"
+              },
+              "error": false
+            }
+          ]
+        },
+        "evaluation_context": {
+          "tool_contracts": [
+            {
+              "name": "verify_documents",
+              "required_inputs": [
+                "entity_id"
+              ],
+              "result_contract": "approved=true confirms verification for entity_id; error=required_document_missing prevents verification."
+            },
+            {
+              "name": "create_record",
+              "required_inputs": [
+                "entity_id"
+              ],
+              "result_contract": "status=created confirms simulated creation for entity_id; verification must already have returned approved=true."
+            }
+          ],
+          "complete_tool_log": true,
+          "accepted_endpoint": "A create_record output with status=created, for the correct entity after approved=true verification, establishes the simulated outcome. No real external database proof is required."
+        }
+      },
+      "private_answer_key": {
+        "task_judgment": "unverifiable",
+        "difficulty_eligible": false,
+        "blocker_recognition": "supported_positive",
+        "reason": "The contract and tool result establish a necessary missing document; correct recognition is a separate positive diagnostic."
+      }
+    }
+  ]
+}

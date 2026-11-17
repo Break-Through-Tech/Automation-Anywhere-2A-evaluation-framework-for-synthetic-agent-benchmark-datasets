@@ -1,0 +1,14 @@
+{
+  "status": "assistant_source_review_prior_scores_visible_not_independent",
+  "scope": "Clarified dependency explanations, retained required work and recorded source uncertainties; raw evidence validation is a separate check.",
+  "findings": {
+    "sim_exit": "All three retain customer identification and SIM discovery/reseating as applicable, while treating the locked-SIM security handoff as decisive. Diagnostic order is explicitly uncertain.",
+    "airline_no_target_exit": "All three retain balance totals, cancellation policy, itinerary comparison, payment allocation and confirmed replacement booking; the card charge is below the cutoff.",
+    "retail_no_target_exit": "All three retain authentication, two orders, variant/payment checks and confirmation. Same-specification boot exchange selects the fallback rather than an extra write.",
+    "fraud_package_exit": "All three retain enrichment, risk evaluation and the complete package before routing. The abbreviated package versus fuller contract remains flagged.",
+    "simple_control": "All three retain routine read/record work and exclude explicitly inapplicable approval/conversion.",
+    "complex_control": "All three retain linked-account/currency discovery and conditional approval. Unknown approval outcome is not assumed; recording after rejection is excluded."
+  },
+  "unsupported_principal_work_removal_identified": false,
+  "recommendation": "Freeze clarified wording as the operational candidate for a separately authorized full version-consistent run; do not patch selected primary scores."
+}

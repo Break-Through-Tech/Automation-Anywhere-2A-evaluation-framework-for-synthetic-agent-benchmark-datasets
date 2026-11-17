@@ -1,0 +1,101 @@
+{
+  "method_version": "designed_difficulty_v0.1_provisional",
+  "status": "complete_provisional_measure_not_validated",
+  "all": {
+    "n_tasks": 64,
+    "mean_score": 53.416239,
+    "min_score": 18.639291,
+    "max_score": 87.962963
+  },
+  "domains": {
+    "banking_accounts_deposits": {
+      "n_tasks": 8,
+      "mean_score": 72.690217,
+      "min_score": 64.774557,
+      "max_score": 74.557166
+    },
+    "banking_customer_onboarding": {
+      "n_tasks": 6,
+      "mean_score": 65.519323,
+      "min_score": 61.070853,
+      "max_score": 76.006441
+    },
+    "banking_fraud_monitoring": {
+      "n_tasks": 13,
+      "mean_score": 43.177877,
+      "min_score": 38.727858,
+      "max_score": 57.36715
+    },
+    "healthcare_patient_onboarding": {
+      "n_tasks": 9,
+      "mean_score": 47.329576,
+      "min_score": 30.917874,
+      "max_score": 57.890499
+    },
+    "healthcare_prior_authorization": {
+      "n_tasks": 9,
+      "mean_score": 47.011988,
+      "min_score": 20.89372,
+      "max_score": 55.112721
+    },
+    "insurance_claims_intake": {
+      "n_tasks": 10,
+      "mean_score": 62.608696,
+      "min_score": 28.94525,
+      "max_score": 87.962963
+    },
+    "manufacturing_purchase_to_pay": {
+      "n_tasks": 9,
+      "mean_score": 45.280909,
+      "min_score": 18.639291,
+      "max_score": 69.927536
+    }
+  },
+  "labels_descriptive_only_not_validation": {
+    "easy": {
+      "n_tasks": 43,
+      "mean_score": 54.84028,
+      "min_score": 18.639291,
+      "max_score": 76.006441
+    },
+    "hard": {
+      "n_tasks": 3,
+      "mean_score": 51.060118,
+      "min_score": 41.626409,
+      "max_score": 66.223833
+    },
+    "medium": {
+      "n_tasks": 18,
+      "mean_score": 50.40705,
+      "min_score": 23.792271,
+      "max_score": 87.962963
+    }
+  },
+  "weight_sensitivity": {
+    "variants": {
+      "equal": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "action_heavy": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "tool_heavy": [
+        0.25,
+        0.5,
+        0.25
+      ],
+      "without_checks": [
+        0.5,
+        0.5,
+        0
+      ]
+    },
+    "max_rank_change": 20.5
+  },
+  "score_is_not_failure_probability": true,
+  "no_independent_validation": true
+}

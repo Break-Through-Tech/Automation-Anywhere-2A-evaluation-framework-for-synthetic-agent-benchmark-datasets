@@ -1,0 +1,2047 @@
+{
+  "version": 1,
+  "source_branch": "my-new-branch",
+  "pre_cleanup_commit": "08fd04f940d1437c90a772edf67cbd7c6c951f74",
+  "integrated_scoring_commit": "9cc181450fa0950e3a7f3e5bd09b1a0d917bc826",
+  "historical_paths_preserved_inside_artifacts": true,
+  "moves": [
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12",
+      "new": "archive/results/difficulty/numeric_design_domains_v12"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_context_v1",
+      "new": "archive/results/difficulty/design_review_rules_context_v1"
+    },
+    {
+      "old": "results/difficulty/designed_audit_v1",
+      "new": "archive/results/difficulty/designed_audit_v1"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11"
+    },
+    {
+      "old": "results/difficulty/scoring_options_v1",
+      "new": "archive/results/difficulty/scoring_options_v1"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13"
+    },
+    {
+      "old": "results/difficulty/numeric_design_source_bound_probe_v14",
+      "new": "archive/results/difficulty/numeric_design_source_bound_probe_v14"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26",
+      "new": "archive/results/difficulty/required_path_repeatability_v26"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19",
+      "new": "archive/results/difficulty/tau2_final_v19"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_v1",
+      "new": "archive/results/difficulty/design_review_rules_v1"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21",
+      "new": "archive/results/difficulty/required_path_review_v21"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15",
+      "new": "archive/results/difficulty/synthetic_final_v15"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23",
+      "new": "archive/results/difficulty/required_path_calibration_v23"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24"
+    },
+    {
+      "old": "results/difficulty/design_review_v1",
+      "new": "archive/results/difficulty/design_review_v1"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18"
+    },
+    {
+      "old": "results/difficulty/designed_review_six_v1",
+      "new": "archive/results/difficulty/designed_review_six_v1"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22",
+      "new": "archive/results/difficulty/required_path_probe_v22"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11",
+      "new": "archive/results/difficulty/numeric_design_controls_v11"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_assistant_review.md",
+      "new": "archive/docs/evaluation/designed_difficulty_assistant_review.md"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_independent_review.md",
+      "new": "archive/docs/evaluation/designed_difficulty_independent_review.md"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_six_examples.md",
+      "new": "archive/docs/evaluation/designed_difficulty_six_examples.md"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_v0.1.md",
+      "new": "archive/docs/evaluation/designed_difficulty_v0.1.md"
+    },
+    {
+      "old": "docs/evaluation/designed_profiles_v0.2.md",
+      "new": "archive/docs/evaluation/designed_profiles_v0.2.md"
+    },
+    {
+      "old": "docs/evaluation/difficulty_methodology_v0.3.md",
+      "new": "archive/docs/evaluation/difficulty_methodology_v0.3.md"
+    },
+    {
+      "old": "docs/evaluation/evaluation_expectations_v0.1.md",
+      "new": "archive/docs/evaluation/evaluation_expectations_v0.1.md"
+    },
+    {
+      "old": "docs/evaluation/numeric_design_calibration_v1.md",
+      "new": "archive/docs/evaluation/numeric_design_calibration_v1.md"
+    },
+    {
+      "old": "docs/evaluation/numeric_design_reporting_handoff.md",
+      "new": "archive/docs/evaluation/numeric_design_reporting_handoff.md"
+    },
+    {
+      "old": "docs/evaluation/provisional_outcome_policy.md",
+      "new": "archive/docs/evaluation/provisional_outcome_policy.md"
+    },
+    {
+      "old": "docs/evaluation/provisional_outcome_policy_v0.2.md",
+      "new": "archive/docs/evaluation/provisional_outcome_policy_v0.2.md"
+    },
+    {
+      "old": "docs/evaluation/sandra_designed_difficulty_recommendation.md",
+      "new": "archive/docs/evaluation/sandra_designed_difficulty_recommendation.md"
+    },
+    {
+      "old": "difficulty/meeting_metrics.py",
+      "new": "archive/difficulty/meeting_metrics.py"
+    },
+    {
+      "old": "difficulty/audit_designed_difficulty.py",
+      "new": "archive/difficulty/audit_designed_difficulty.py"
+    },
+    {
+      "old": "tests/test_meeting_metrics.py",
+      "new": "archive/tests/test_meeting_metrics.py"
+    },
+    {
+      "old": "tests/test_audit_designed_difficulty.py",
+      "new": "archive/tests/test_audit_designed_difficulty.py"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_finalization_decision.md",
+      "new": "archive/docs/evaluation/designed_difficulty_finalization_decision.md"
+    }
+  ],
+  "files": [
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/README.md",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/README.md",
+      "sha256": "c380d6d35f7e2303b9b9d782a3dbb08821acb0c9edb18d5a5d32ff75628c6432"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/attempt_outcomes.json",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/attempt_outcomes.json",
+      "sha256": "742500ab9d686368b23c2610b103e55fbff4e447c7b55a8194a09540ad84b507"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/designed_profiles.csv",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/designed_profiles.csv",
+      "sha256": "0a8282271172a442604ac260123394c706c0ed781f79766c3ce852e74d591e51"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/designed_profiles.json",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/designed_profiles.json",
+      "sha256": "c8054759053ebae35a587789020a55cd36053904622dea6a5e7389e4a965626c"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/execution_by_task.csv",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/execution_by_task.csv",
+      "sha256": "aaa594962ca7ff672d81c9712b743da74fa193bc18ee6468b0c92175568e802b"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/execution_by_task.json",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/execution_by_task.json",
+      "sha256": "cc433808c6e33b168a630236355b5a84b449ab51acb4bc96fa3987e413953a0c"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/meeting_examples.json",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/meeting_examples.json",
+      "sha256": "2fef3329eb2a56a3d74b8e419dacf19387f140eb7689c49a407e48e8c67f07f6"
+    },
+    {
+      "old": "results/difficulty/lab_v3_2026_11_11/summary.json",
+      "new": "archive/results/difficulty/lab_v3_2026_11_11/summary.json",
+      "sha256": "64245fdf1fb1e609d46ec288c976beb468a7831bf05194938896ad41e32454f2"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/README.md",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/README.md",
+      "sha256": "613a018353bc745b887aa57e4d5561c76ea5926ec186e437a0f91c6b6e781d3d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/crosschecks.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/crosschecks.json",
+      "sha256": "dcb6b5a8ff7dd0aa2dbe2edf8189eb60d1b5abb1dacec6fbf604c65ee5145eff"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/domain_calibration_summary.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/domain_calibration_summary.json",
+      "sha256": "fdbb2f2454ff64bd619e67c439e75a3263f1a894bdb6ebd13bd4b0244abb2d6f"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/executed_plan.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/executed_plan.json",
+      "sha256": "7705ecfb64119313fefb799e75343b1776284dd3e0ddefcb8f39f62799b308d4"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/judgment_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/judgment_evidence.json",
+      "sha256": "715c9b22146e54f3c4f436228517a3c25a0044e7ba2e0517b0ce24c0491e085d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/reliability.json",
+      "sha256": "1e3a53bb79a8e527effe179553aef51e46f0aab43f0c6c6a96b31c898d412a8d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/revalidated_controls.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/revalidated_controls.json",
+      "sha256": "3fd964b59ec9b3e4cdd90cbd59c1421108d82799b7083ef99074b08c83b5d511"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/run_manifest.json",
+      "sha256": "b792988a5dc5426f90ad47121036458755be629c5471b34b65f84cacc780c536"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/source_bindings.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/source_bindings.json",
+      "sha256": "196c2218c14cc770244d9d21264ac82e8ed338c7fcc0fda88e574df7a928c98b"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/summary.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/summary.json",
+      "sha256": "58239c6c69927339ab9736df4816dc276a6dd43bd2c3b60b32f135d80796eb62"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/task_scores.csv",
+      "sha256": "ff981a5fc6c4e386a1b08b22f7da68e051a58203e1870535194e65dceb854119"
+    },
+    {
+      "old": "results/difficulty/numeric_design_domains_v12/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_domains_v12/task_scores.json",
+      "sha256": "ab219e3e671d3f2366c0972286c4b1096dedd501c532975104aebc6345b24edb"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/PILOT_REVIEW.md",
+      "sha256": "844e9ef01e28dd70f3a3b009514f342f9c5d57e283e6398377007f040e6a3e86"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/README.md",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/README.md",
+      "sha256": "56db7f5a28fc604f8d4ee58fe07ea9ff5e49d46ba70b533a4cdab110097278be"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/crosschecks.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/crosschecks.json",
+      "sha256": "9b42e7b984ae49bb87d4fdb117339e4086a1a24876134d4a2474a070aba6648c"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/pilot_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/pilot_evidence.json",
+      "sha256": "944496d44d2fe5f6770b68396e1eb3cc5ed36d4e9b0ed37f45a4630fb3a854b0"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/reliability.json",
+      "sha256": "674667b9eb0f6af2fca679f0164c511273f33bd89fc3e6274f0e7e7681915e98"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/run_manifest.json",
+      "sha256": "3bcccff6bdac77103d3b8ec7894bf44409f4dfe5c4d511ca01ca1e8f16eb9269"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/source_bindings.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/source_bindings.json",
+      "sha256": "e6112020dfedfe29cdce7c24db4c3c0ee85bd97507449c19d5574e70776bbebf"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/summary.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/summary.json",
+      "sha256": "f9b5fd76e1a03ad8bf78b1bd594a58c5f2c614d814634ce8d9151893c7d1ace3"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/task_scores.csv",
+      "sha256": "8fcf1daf8d762577aed65fbb13bb88a66d887b39c8f4bee5a325b821a186546a"
+    },
+    {
+      "old": "results/difficulty/numeric_design_pilot_v1/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_pilot_v1/task_scores.json",
+      "sha256": "b7a5adc1e3166cc9cf13c26da46fe864c910db99fc987842a6ea46e5c8eb8682"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_context_v1/README.md",
+      "new": "archive/results/difficulty/design_review_rules_context_v1/README.md",
+      "sha256": "4866bc29792584846f994d0ab8966761d42e7565e785c8fa7f449c56f0e0ffff"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_context_v1/comparison_targets_NOT_FOR_MODEL.json",
+      "new": "archive/results/difficulty/design_review_rules_context_v1/comparison_targets_NOT_FOR_MODEL.json",
+      "sha256": "0f343a6ffe00ef61013b292d360481ae304e89c5401edadeb4d6282e8cf33368"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_context_v1/manifest.json",
+      "new": "archive/results/difficulty/design_review_rules_context_v1/manifest.json",
+      "sha256": "a3ef29c5ccf34f80ee1c6baa8643a871513f9a18457ccd84e072763cb662ab84"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_context_v1/requests.json",
+      "new": "archive/results/difficulty/design_review_rules_context_v1/requests.json",
+      "sha256": "197472c547f461efb901294423a99778970e13a1016ed2456b6fb03d7f790790"
+    },
+    {
+      "old": "results/difficulty/designed_audit_v1/README.md",
+      "new": "archive/results/difficulty/designed_audit_v1/README.md",
+      "sha256": "9d5426c1cfba5d2922c71d6a8182331705dc952ac23175aaf0d3c4b4b2c2ec2e"
+    },
+    {
+      "old": "results/difficulty/designed_audit_v1/audit.json",
+      "new": "archive/results/difficulty/designed_audit_v1/audit.json",
+      "sha256": "aa71c5f058794d05113820c0283bcf103444a317fe8630df5c2194541084b837"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/README.md",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/README.md",
+      "sha256": "7c6205112db4207a3654e1063723fb2039a9cb2104ea7bbecbecf1ccd445c14f"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/crosschecks.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/crosschecks.json",
+      "sha256": "d890fe8da80b8375aa6014546d31f6d9727f9a32bcc07298c1c5cd6a993e242f"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/reliability.json",
+      "sha256": "22c1698fb3387c1b4d897d188b320dbdb11dd5e639369eeb73bc6bcb38ebbb6d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/repeat_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/repeat_evidence.json",
+      "sha256": "f21aada87a9dfcba479131a13b3c18027bab62c63f97956d2740f8f72c73b2e6"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/repeat_summary.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/repeat_summary.json",
+      "sha256": "95d629e762b8db92a34107cfeb0d48812f7031910a69b7b181323df20d9208ee"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/run_manifest.json",
+      "sha256": "d1b517d89108ccb062e022a532c1cfb158eee7e44da0d51f614a8b83bfdbf143"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/summary.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/summary.json",
+      "sha256": "2966b0f4979ebdf61b6f9c47261e23678ac2aa0146ff64eb030945991059e8ba"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/task_scores.csv",
+      "sha256": "b2b0bf38e3510b3d4ab955d2296a9a2e37822847be0ae2d9c99cf98228a12e8f"
+    },
+    {
+      "old": "results/difficulty/numeric_design_repeatability_v11/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_repeatability_v11/task_scores.json",
+      "sha256": "43261338210b28bfc89371fb45211f12456a5b24482016a4e64d1c295416942b"
+    },
+    {
+      "old": "results/difficulty/scoring_options_v1/README.md",
+      "new": "archive/results/difficulty/scoring_options_v1/README.md",
+      "sha256": "c0930cf24c4230c78dfecb87ab4ed0360e2e91aa3c2a553ceeb216bd386afd5e"
+    },
+    {
+      "old": "results/difficulty/scoring_options_v1/comparison.json",
+      "new": "archive/results/difficulty/scoring_options_v1/comparison.json",
+      "sha256": "3f3c79679464996bcbbeed6a333156bd3c9e2de82c99d4eda525d97dc7d7f43e"
+    },
+    {
+      "old": "results/difficulty/scoring_options_v1/scoring_options.csv",
+      "new": "archive/results/difficulty/scoring_options_v1/scoring_options.csv",
+      "sha256": "5536ea7c3f8993bf83d92cdd42ca7a6eef365bd1f53d9daab617c280a8cb8afa"
+    },
+    {
+      "old": "results/difficulty/scoring_options_v1/weight_sensitivity.csv",
+      "new": "archive/results/difficulty/scoring_options_v1/weight_sensitivity.csv",
+      "sha256": "fa399f999f06b198abb05c7b12253392c526f5f6a8be307ac08ecaf578a793f5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/README.md",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/README.md",
+      "sha256": "63f2f293aa9b47aff01598b344bb146bdc4ae4e631a5658fb3aa6c5f1760711d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/calibration_sample.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/calibration_sample.json",
+      "sha256": "e5f8b672e29fd474a5236be4c45ea1f4cc574ca6d6870f84c9df8a7532f4a5d3"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/calibration_scores.png",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/calibration_scores.png",
+      "sha256": "297d85c7c1976e216c6be99be1285ad1cd00f191c07415456a0723cd7394595c"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/calibration_scores.svg",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/calibration_scores.svg",
+      "sha256": "5135590f559efedbf07fcdbb866dc59817d71c77a18a60d213d4f0b24930b22a"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/crosschecks.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/crosschecks.json",
+      "sha256": "149b4df9fe7bce0d284be6513028cfce4674a7ed2b93e1c162a00d25cd3aa392"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/executed_plan.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/executed_plan.json",
+      "sha256": "29ab8748d46d55892c2b0178e016394185c8e3ef845303a5c368f407874d4b1a"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/judgment_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/judgment_evidence.json",
+      "sha256": "7a74a818e83dd38d8ce67d2601224596b8dfe8d9473a01c72c3b362a0078ed80"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/reliability.json",
+      "sha256": "b96be63780321a5c1a83ab4d6c13d6cbc492901c5c8c774aa551aa1d4ac85da9"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/repeat_interpretation.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/repeat_interpretation.json",
+      "sha256": "53f1c439e10864ddac529e55a802f6ade0e45c7ed95c53cce08ba4a5fb4d5cea"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/run_manifest.json",
+      "sha256": "58d7427f24aa35a1a46a370a91ee9b793a10664aa4dbcb3ecb4b9d90d1629560"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/source_bindings.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/source_bindings.json",
+      "sha256": "a3920170047be776692d76c1a5cd808349ce3b38c21450bfa9576f6723774501"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/summary.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/summary.json",
+      "sha256": "b249cd7edc4e80e80b80fe6798e1cf19d29695d010f91bb0f4a9ee78e2b79868"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/task_scores.csv",
+      "sha256": "13d89b846761265f1617421eb7854121629555eae58e6a99dffc65d01c2dc7dc"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v13/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v13/task_scores.json",
+      "sha256": "d33cf8fa7f02b8332429269e1e0b9c3b9c77dfa8bd9137a99377ba63ee0577ea"
+    },
+    {
+      "old": "results/difficulty/numeric_design_source_bound_probe_v14/README.md",
+      "new": "archive/results/difficulty/numeric_design_source_bound_probe_v14/README.md",
+      "sha256": "125b98bec7848cf2cab898ec00b32633618d9165d5749dd9e6133e6fc15f8528"
+    },
+    {
+      "old": "results/difficulty/numeric_design_source_bound_probe_v14/evidence.json",
+      "new": "archive/results/difficulty/numeric_design_source_bound_probe_v14/evidence.json",
+      "sha256": "87da6939e633dfcb51f8f1b290fe2a98937f8267c9b5be2a93fbe824d108dd07"
+    },
+    {
+      "old": "results/difficulty/numeric_design_source_bound_probe_v14/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_source_bound_probe_v14/run_manifest.json",
+      "sha256": "8dc79606f20ea542f55f40b0bf23112430374bad38b8fb02a7ecefd4ad5d4431"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/README.md",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/README.md",
+      "sha256": "1ca70a359e1f2cf058e811fa843d1c95729b9ec4955419951cd5c69f8fc00956"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/comparison.csv",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/comparison.csv",
+      "sha256": "461d9485a39e42b657e9d82d0fe2e2657373e5b3cb864b7abe80cb39fcef35d2"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "8729efd406a7216692888a7a403bd989b075f32d1b0a9bb708d5aa47509dd4fa"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_223d00bffbb05674e0efd936_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_223d00bffbb05674e0efd936_r01.json",
+      "sha256": "e125efc4656965f5d136f56ef52b1d8b7eb0fe12f820ab63917bd0787768a782"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_223d00bffbb05674e0efd936_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_223d00bffbb05674e0efd936_r02.json",
+      "sha256": "bcb6fe52c51087ce6f6a1edb036a418786be1cc5bf28fb946eabda96f5bb513c"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "99f331bdd5be75d5b4791982bdabdd46aa4e1fde310d3da2376e1b3e804435ec"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r01.json",
+      "sha256": "196b1bb904811085cec8074e27cba2188df9e5d35b12f7a40c55f9e4242285d3"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r02.json",
+      "sha256": "53907ba812aad7878e53543854f2df6be08de0181ee88ae245549bca35d628fd"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "b41d829f6d93c43018f24504ae8e120cec2e2cff3c1cc50669930d3d126aa968"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4052de4afd171be50d2045cf_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4052de4afd171be50d2045cf_r01.json",
+      "sha256": "25817eff2a9797309cd0e6f2c7943a0715884ed4eabddbb610a9905d9c946831"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4052de4afd171be50d2045cf_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4052de4afd171be50d2045cf_r02.json",
+      "sha256": "d1a3a04b198b18602b3b3f48ac5ac85db1426f160bfc5061373cf83690bd2455"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "eea42199468a1b558a20882520f9ac44a44cabd5a8bb945a0ba6bab944549e2b"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r01.json",
+      "sha256": "0bb50178719de32e4b81c9a94f31f0c9813d30545fc46f7897b1be1aa7081471"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r02.json",
+      "sha256": "62efbd85e223c9d68bb42756171870ded7616e3c14874cfd0e1b9675b5fd0299"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "7da863da89309d5bf8dc2995b7d0392ec02d47d1220806f39cd0cbba62b4dd2d"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r01.json",
+      "sha256": "1dbc478fd2ac23d655e83b044f772bebda3ba8debf266738597841e4c8a813ef"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r02.json",
+      "sha256": "7b52f592b171172f39618b10223b329336a2416511def531fb8e83f192f7765d"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "sha256": "75cc4854c6bf0901596803b3b26ae7b50afd8af88a6031b84bb68c284129efd1"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "sha256": "b8aafa79c8d52288cb7ade77277662383814590424413904b61d4c0439ea07ef"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_223d00bffbb05674e0efd936_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_223d00bffbb05674e0efd936_r01.json",
+      "sha256": "6ce8f93558ad58a276ddef4c57a3bb860d020eaf9c4ba1f8c72926b2990c8792"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_223d00bffbb05674e0efd936_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_223d00bffbb05674e0efd936_r02.json",
+      "sha256": "00eb88eefc294174c8b4ed2c286c94be5d5a456442d338a4931c4918a0b6326f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_2aa74102d9e3011cd0032533_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_2aa74102d9e3011cd0032533_r01.json",
+      "sha256": "0f43ca0aff4488febc13003f434385a8e00bcdd859a7178ddd22ce152fe73b8d"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_2aa74102d9e3011cd0032533_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_2aa74102d9e3011cd0032533_r02.json",
+      "sha256": "773a00d5e9455d0d8ea2405762cbe96bcaae549eaba1a2a5a18b5dd1efb333ea"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4052de4afd171be50d2045cf_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4052de4afd171be50d2045cf_r01.json",
+      "sha256": "ca82b2f03aec12bd2a7669bac516cb3866bfa984b1d2ecc5e62f3b34a18e386d"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4052de4afd171be50d2045cf_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4052de4afd171be50d2045cf_r02.json",
+      "sha256": "3adc53fc2c02add3f4d1a08de9affc083ce10831a6f6f8569e5c21e4f9bc6062"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4c78b9d919a09c14a6fe033a_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4c78b9d919a09c14a6fe033a_r01.json",
+      "sha256": "9523aab5f5d26dcfa30690845e739da9486361f1760d94b09d25aa4f14241ed4"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4c78b9d919a09c14a6fe033a_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_4c78b9d919a09c14a6fe033a_r02.json",
+      "sha256": "820d83e3006735530eca2dfae454da7ef72f672a70e376763a173ba94e565981"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_cfaeafa096c68dc6d8821159_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_cfaeafa096c68dc6d8821159_r01.json",
+      "sha256": "0fc6fa77a9971918d04055ad5709a1858b51892164bbd8ebd62b161b3354e647"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_cfaeafa096c68dc6d8821159_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_cfaeafa096c68dc6d8821159_r02.json",
+      "sha256": "b83f9c8e4bf89f0c487cf4f6e8f6b2c75dacd34ae6554ed38b7aac1268c3a177"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "sha256": "63b7521f27f5575c923d0597b1e43da1fe59d94b60f72f2a2b20a8c10cd0fdb2"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/intents/pathcal_original_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/intents/pathcal_original_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "sha256": "486d7d4e7c21796003ca0b99cbe7dcd8816bc559d26e17634cf5a737dd6c9c2f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/inventory_PRIVATE_COMPARISON.json.gz",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/inventory_PRIVATE_COMPARISON.json.gz",
+      "sha256": "38aa6dc43f7a6d59ea6fb5c501a3aa111312c960e1e156f56b67075c1d017914"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/observations.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/observations.json",
+      "sha256": "b250eaa1acf59c602fd0ebd795aa4a4d222eede7e6b8c86d744631a21a3d74f5"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/paired_scores.png",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/paired_scores.png",
+      "sha256": "a5bf88a1a05b22aaf64d1a4c5c0b65483fdad6b378fe96585229442015d3dc2f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/paired_scores.svg",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/paired_scores.svg",
+      "sha256": "fbd9c5163158834a93f9e38eaae8d21584e1c34deaa09976379846abc89c8efb"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/prepared_cache_bindings.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/prepared_cache_bindings.json",
+      "sha256": "5f683ab42ba32a592db84ebac30758dd5d606dc077cbc911645b8c7c37741232"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/prepared_manifest.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/prepared_manifest.json",
+      "sha256": "326cff8942578b338e3efb2ef23012528f8fb8390cafbd7211c895fb8a19df5a"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/prepared_selection.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/prepared_selection.json",
+      "sha256": "34d63c314d7e4be41eaeefb8b9695ab2e76a46be6cdf37ca69066ce5cb96caa4"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/proposed_full_run_cache_bindings.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/proposed_full_run_cache_bindings.json",
+      "sha256": "cbbddc2e1f764abb5737bd82fc3485e10d261dd0e6c18f75c3070a3141a003d5"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/proposed_full_run_manifest.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/proposed_full_run_manifest.json",
+      "sha256": "1d4a723b1fe5bd07332e95eb998492990a24deecb20f25f177889642634e08c8"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "805ddfa4076f504607e4127d85bc2d6cd2af7be52cc48986709c15bb7e618fd1"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_223d00bffbb05674e0efd936_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_223d00bffbb05674e0efd936_r01.json",
+      "sha256": "9b075cd982b54b7aa9c0d376abfd906ac3f842263316b7e57dceeb9606afaf5e"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_223d00bffbb05674e0efd936_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_223d00bffbb05674e0efd936_r02.json",
+      "sha256": "ddda720681cb14c9d2604e58087a26c7286e1f0e7e1440fcfee4644cdec8da35"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "a315440f635f6147b330370fa26c728ed4abd3fa1aca4e4d07c6f1d0527e38c4"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r01.json",
+      "sha256": "fe950d7ea35f9bf6e49ae7895b4c6796f0fcaf5f36976a1751a6479087cf9081"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r02.json",
+      "sha256": "969fd1b207616194662c36e1cb630347c8ed8c269aafe4f9cfd7c03f2efbc1c6"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "bc09f3c5e5d72cdfa7fb760674b9586b00a00a938928c711924cabeff5745c24"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4052de4afd171be50d2045cf_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4052de4afd171be50d2045cf_r01.json",
+      "sha256": "0f239e16fd8a8941f6749a07ce83fedb66199fa92784ec53116b3208284f0512"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4052de4afd171be50d2045cf_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4052de4afd171be50d2045cf_r02.json",
+      "sha256": "7ad8aa378603b4114d7791844714c4a91bd79f3fab1886d09a180ffe75802783"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "3edb3f2b86aa25faa0502ad6ecba0af6e0402f37661a41a9e6c6590aca2258e5"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r01.json",
+      "sha256": "4fd9615a340bfbc25d0f84522235c2ab1db43bfcce65cb2b93c2e61b288374c2"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r02.json",
+      "sha256": "46ba661e7f40245ff14adcc96cc9dbac3961da7970a5f72dac38cfb4cef0db8a"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "517ff52989871cbc44be573bdc6a53003c8dbc36ed6639aa56b52054feb4b76f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r01.json",
+      "sha256": "fbcc82f8b5eea2d67e7b02b19434320d296af4dcaf96a4180660cf3f779061b7"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r02.json",
+      "sha256": "c926e69670014cb3e7484a82c3084454210faf8cb36acd48151bcfc5411166f1"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "2c225f4dd1281024ce2ac16b95ab51ae965f22447327484906889fda16f97a57"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "sha256": "81c83ae38d5a83e9e8214e4e4f5b03a55af5e00c0ddafe879fa6661494164a3e"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "sha256": "4c6377b61041cc56be2a25e254bdea1d9fb264b9266824ef1e056357e96350b7"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "6b5858d0920b582dfd1867aa3ac570ccff718c1fec94ee2618367508bfa67ba3"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_223d00bffbb05674e0efd936_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_223d00bffbb05674e0efd936_r01.json",
+      "sha256": "7078a3ea32ae5e5c875dfa3dede350e36fa0b21b5e21d0417763306e5b53a12f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_223d00bffbb05674e0efd936_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_223d00bffbb05674e0efd936_r02.json",
+      "sha256": "2ac7edc08c03cd9c4bef840f0f57f200f84dcc833b2958d6846a4d3423740722"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "2464de4b7f17f51479cd9db043eeab65d10e7a6b589ae5a704dcdce2838ff0c2"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_2aa74102d9e3011cd0032533_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_2aa74102d9e3011cd0032533_r01.json",
+      "sha256": "235b811b2b77d8f525b175260a13fa19789f002b12396684548347d390297969"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_2aa74102d9e3011cd0032533_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_2aa74102d9e3011cd0032533_r02.json",
+      "sha256": "8a30a3fc52b6dd2a569cac3029ffed3a58d93891caed5a61f238fed30ab95f68"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "642cb31731cd06b91193892b9a706314cf01db979289e37446339a1558b45389"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4052de4afd171be50d2045cf_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4052de4afd171be50d2045cf_r01.json",
+      "sha256": "d7ff0ba1989bebaaf8957c487ae234662939a96ab39ccd19301bbd58bdf632b8"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4052de4afd171be50d2045cf_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4052de4afd171be50d2045cf_r02.json",
+      "sha256": "586935742ae1bb23b6ea63ff18dbed2d8343f3fddabf679f9b8e84ce7900c2f6"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "795940d2166169c41643e7b7b13ac5d2f9465f97e55f95e9fc06ee5aa95bfeac"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r01.json",
+      "sha256": "b1c236c97982bed44fb3430a8c762d5b4dd09b85549d4e1a83ea8f6e0b5a53c2"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r02.json",
+      "sha256": "0dd2e5578e21f4018014481e2c1a7fb6e618267e3bbd7e75c35efece43de27e0"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "4aa58c17a82fab8dc005277d39619ebc48cd837c419f46dafcae85901a9902de"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_cfaeafa096c68dc6d8821159_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_cfaeafa096c68dc6d8821159_r01.json",
+      "sha256": "a38c2c1b59174a70da21b4ad7bd708ad280f0397a9dd3f02cf659d724b7390cc"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_cfaeafa096c68dc6d8821159_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_cfaeafa096c68dc6d8821159_r02.json",
+      "sha256": "c9aa360826bab3675630fe0b9f79c9926ef024e7c6e170d9f7600fb70162183f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "860d33c92cb774b9c0be3423400198e484f8026d2481f58b95542be2daaa207d"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "sha256": "cf79eb87be3bdf9fc5288ef70b79383071f4ec68654961a4d6339b14516a9787"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "sha256": "1c2d5846c286b9d73b4eef38d8e26c60b0e20fc8a5441101845a00837838b704"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/reliability.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/reliability.json",
+      "sha256": "943f90efb036667639deab16a4b007fc6b076f7cc54c0ab83d106956dddc1a5a"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/requests.json.gz",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/requests.json.gz",
+      "sha256": "db5ae44f584efec079611a5e1b40059343362330e8b62001a76ad64fb83fd7a5"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "72fbabee91b60a5e5cb06a19d178fc564bc76602f78f7f2d60e7030138f21832"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_223d00bffbb05674e0efd936_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_223d00bffbb05674e0efd936_r01.json",
+      "sha256": "af02eae81e680479c0937632e325f7ada72ddb8daa7cf0b83d059ad0dd3eb8e3"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_223d00bffbb05674e0efd936_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_223d00bffbb05674e0efd936_r02.json",
+      "sha256": "166901dab68affd415feabfc419fd8e5dd5a14c815cd5f9c5423331e0a757881"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "53c7787ca9582ddf3757ee5b52f5e419edcfe539bb84d483be084593361a8b0c"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_2aa74102d9e3011cd0032533_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_2aa74102d9e3011cd0032533_r01.json",
+      "sha256": "1d7d8ad56ded325f08aab2db68fad4bf1261e1fac9c4862644bbbefbb68a2862"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_2aa74102d9e3011cd0032533_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_2aa74102d9e3011cd0032533_r02.json",
+      "sha256": "43efee51e44637fc1e9132ec92614c74fa995d13bfc2cc26a082ec6f267b0628"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "2a117f3aae0dedab9cb7cd3e3206087651ae5b2d57724c1615ec790c143892f7"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4052de4afd171be50d2045cf_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4052de4afd171be50d2045cf_r01.json",
+      "sha256": "413a1caa726e366ada7cd44d0a95c3d704c48f1fc541a56706ef3038cf7cae88"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4052de4afd171be50d2045cf_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4052de4afd171be50d2045cf_r02.json",
+      "sha256": "feedf551af500eed7aa4abbb46a44ca779830db1a6aeb07df6ebeb68f21bfbad"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "cf7a8e76280db98d8a9b7ea49a2caf9b7d5d1e208f31d45780a214b022a782e8"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r01.json",
+      "sha256": "fcecb8ed691518ddc8cf3c54bafacce7f5208a277b27d4ef641dead0512052f1"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r02.json",
+      "sha256": "cf62df0eb0522b3fb3b177625689551546bd9fa65c2c60132c6b255b2126c89b"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "0d62a2846f19a16eca921ab6b24630054086287d1148e38019387cac3ebed472"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r01.json",
+      "sha256": "c90d2461ee09a971867e011d4d71d4e6e00c9354545ef69096a976168f35331e"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r02.json",
+      "sha256": "74cc90446896e7aa7bc776d5de5877ecf0a25d5be2d86973eaaaa8426a55ce3e"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "c4e48324b5239a6bb3e66236392e876157daa17ef5d32eef36e7a313cec0e777"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "sha256": "fac110e9a1e15dedfcaae2cefa836e32c847d5be93f78e8e7f969f54fef9e396"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "sha256": "77f43b6c615e72fba7425ddc42de14f5558b715917a979746ec09b64d5e4297c"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "f985e3780ab38bd5de4d0d261168ac2ff527da95c3c272b2bca7534a7d9dfc42"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_223d00bffbb05674e0efd936_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_223d00bffbb05674e0efd936_r01.json",
+      "sha256": "f48b77173bfba312cdf45a1f06bae33e65476854c7408cce8a0d4d965e224f16"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_223d00bffbb05674e0efd936_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_223d00bffbb05674e0efd936_r02.json",
+      "sha256": "769a685b4c4d080e5aa5025b7d508049e478ccd6566124315990e14a50e0c58b"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "61c75a94c8208b21ea97ab682d766869f8bd0aeaa60eb2ce8badc532a4742b98"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_2aa74102d9e3011cd0032533_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_2aa74102d9e3011cd0032533_r01.json",
+      "sha256": "c4a512d4d15c732efaa98fec4187b44bb3c9cfddde86e1a7b67badf68ade115d"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_2aa74102d9e3011cd0032533_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_2aa74102d9e3011cd0032533_r02.json",
+      "sha256": "2ec69b820075e0d5ec4de8bfdaffe330d6dbe5bc826e1152cc79ca17bb43b7e6"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "27ace1826075e4e46fcda6f0c96f4d053b43eb523b86375b01337059deb62982"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_4052de4afd171be50d2045cf_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_4052de4afd171be50d2045cf_r01.json",
+      "sha256": "1da8a85c4592143027678f612f95fc540bf15ef0167725991b51cbf8e6f90578"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_4052de4afd171be50d2045cf_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_4052de4afd171be50d2045cf_r02.json",
+      "sha256": "9654ebcbb2fa303367135cec7050d01ddc500223a63029c3c2a9b6d234cf152e"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "7aa218949e79f158765e8c6ea78f0d36d64d567cd6bdc44cb3fe991d6c5ccf20"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_4c78b9d919a09c14a6fe033a_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_4c78b9d919a09c14a6fe033a_r01.json",
+      "sha256": "ada597f6c30f33f3864a76a9b0a8f6b0ca4451a346e4160f3567913ccb93606b"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_4c78b9d919a09c14a6fe033a_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_4c78b9d919a09c14a6fe033a_r02.json",
+      "sha256": "533c5eaeb6b8bc40b240f285756fc5d77c65ee620fe167503a79a0e9acc053a9"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "465d67f85cc00ce491c6f94f37c10c4b7bdd102a70ead27828c6dd6a139f912a"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_cfaeafa096c68dc6d8821159_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_cfaeafa096c68dc6d8821159_r01.json",
+      "sha256": "c6e6a2fdc979a44586c0a6edff823a0ed3d5a685baeab6d1a66fc9465e04f6f6"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_cfaeafa096c68dc6d8821159_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_cfaeafa096c68dc6d8821159_r02.json",
+      "sha256": "f317af97bdbe6861efbac14f2c13969bb3fa778eb9574a895e8d5bde5320891f"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "b6c09d62c65c02b2ae113c1aaf59ad349e269475407871903e5588e4e6e083c7"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r01.json",
+      "sha256": "8c18db4a47d21b793c21944001cf14e4e9230802e612873b937549f278b774d4"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r02.json",
+      "sha256": "bb835a6e3a19dee827af82a81ce0d5e22f2ab8b2771380cb25f6547ed6b10095"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/run_manifest.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/run_manifest.json",
+      "sha256": "4f0d5f77b026bf9ba480e3ea283ab82a308d21d359c7fea5faf5cc3ca617accb"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/semantic_review.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/semantic_review.json",
+      "sha256": "4a36aec1ae7f769406c502655136276805ccdb888b23022fae11a97928a6bab6"
+    },
+    {
+      "old": "results/difficulty/required_path_repeatability_v26/verification.json",
+      "new": "archive/results/difficulty/required_path_repeatability_v26/verification.json",
+      "sha256": "3a5647724dafa73a9a5a2ac4d28439e62054d5d17e964c28b2571fb920da1aaa"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/README.md",
+      "new": "archive/results/difficulty/tau2_final_v19/README.md",
+      "sha256": "5aea89eed5fbe668ee1a74becc2e36787702cbd9c2b450f64e6377febaf40fe7"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/archive_replay_verification.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/archive_replay_verification.json",
+      "sha256": "936a046c639c7c069378ac6d3a69e05c57f9bc97899e78f494e5f92a74dfa20e"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/framework_verification.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/framework_verification.json",
+      "sha256": "4bcc0ee00fd5df10d5f22213ea4302048e11eeda48732bca9ae1dc424dd25cb7"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/frozen_packets.jsonl.gz",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/frozen_packets.jsonl.gz",
+      "sha256": "f46df0156490fd9bbcfe25b15514e2108ef151f94ed02c994b5d37cbf20a6476"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/historical_validation_failures.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/historical_validation_failures.json",
+      "sha256": "c3caa471c9b60786952ca8585880611f3c8ce4f594b06b2a88e3003e28f555a4"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/judgment_evidence.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/judgment_evidence.json",
+      "sha256": "5c77fb1ba59f23448cbbaf06cf46f569afa5c14852c0f88ee406aef34c6db2ae"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/offline_binding_audit.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/offline_binding_audit.json",
+      "sha256": "72f31436671888c7798f0302f531bba3d929ddc182cc1401ef467fe437a9a113"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/run_manifest.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/run_manifest.json",
+      "sha256": "2ced7b20baba4197e340b8d97fcfbf1694ea9b4ffcc5c36dceaad1458fb557b7"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/audit/source_bindings.json",
+      "new": "archive/results/difficulty/tau2_final_v19/audit/source_bindings.json",
+      "sha256": "ccf0ae13d19570a58b6e1b5966aefd14694e8673277b7196f1c6eb8a164dc99e"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/comparison.json",
+      "new": "archive/results/difficulty/tau2_final_v19/comparison.json",
+      "sha256": "7733dd4c7cf48440db3543abe18df439597eb08c832b391100090dc378f99cb9"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/crosschecks.json",
+      "new": "archive/results/difficulty/tau2_final_v19/crosschecks.json",
+      "sha256": "dfac2967c6da41aa2a433492aabf60cd57309e6bc755b662671b2841838bb733"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/dimension_contributions.png",
+      "new": "archive/results/difficulty/tau2_final_v19/dimension_contributions.png",
+      "sha256": "44c3ae0c8a77c9fc603c26a91337edd6a105b72e1e21e912385c0fead2e5f07c"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/dimension_contributions.svg",
+      "new": "archive/results/difficulty/tau2_final_v19/dimension_contributions.svg",
+      "sha256": "625b31bf3b1fc4a22954b4fa4b65862f669dcc8ef18c60f5186bdd9ced16a5fe"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/domain_summary.csv",
+      "new": "archive/results/difficulty/tau2_final_v19/domain_summary.csv",
+      "sha256": "567e56756b998189f0ed278e71106c0fb155c83f942f1791fefddc1e6954d89c"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/score_comparison.png",
+      "new": "archive/results/difficulty/tau2_final_v19/score_comparison.png",
+      "sha256": "8d323b5bb8c1de9c7b8ed4f61d33a757dd2581236483915b4afd5486583fbdb7"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/score_comparison.svg",
+      "new": "archive/results/difficulty/tau2_final_v19/score_comparison.svg",
+      "sha256": "fb14637d4c8adcd3654bc6747957386aad441876ce4092c87692b6169aff3a78"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/score_distribution.png",
+      "new": "archive/results/difficulty/tau2_final_v19/score_distribution.png",
+      "sha256": "03c43feffd3ce9bdffbcfdd693bf6fc25e14cf33ec015790e5787fe0d44acf99"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/score_distribution.svg",
+      "new": "archive/results/difficulty/tau2_final_v19/score_distribution.svg",
+      "sha256": "74f2138558b2b4d2275fe2afd9c76a85ba2d750004127c59a71b38f715d35ebf"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/summary.json",
+      "new": "archive/results/difficulty/tau2_final_v19/summary.json",
+      "sha256": "41722ad326d857dda660c0239f14f3a9ef6b92324bf4f1b38519b679d28130ec"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/task_scores.csv",
+      "new": "archive/results/difficulty/tau2_final_v19/task_scores.csv",
+      "sha256": "d2e87af246a1ecca823b4c527e70402c79310b45711e9fff7a504957dc07cc33"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/task_scores.json",
+      "new": "archive/results/difficulty/tau2_final_v19/task_scores.json",
+      "sha256": "0355242bf759e7c89002dc2a7473840418c38643d9f2248df25d52b7dbad0c55"
+    },
+    {
+      "old": "results/difficulty/tau2_final_v19/task_scores_readable.csv",
+      "new": "archive/results/difficulty/tau2_final_v19/task_scores_readable.csv",
+      "sha256": "7c5bc55799e2b9f935a2546d8f0928d4481c20db9e2a5ea0b75f9725aed81f15"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_v1/README.md",
+      "new": "archive/results/difficulty/design_review_rules_v1/README.md",
+      "sha256": "4866bc29792584846f994d0ab8966761d42e7565e785c8fa7f449c56f0e0ffff"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_v1/comparison_targets_NOT_FOR_MODEL.json",
+      "new": "archive/results/difficulty/design_review_rules_v1/comparison_targets_NOT_FOR_MODEL.json",
+      "sha256": "0f343a6ffe00ef61013b292d360481ae304e89c5401edadeb4d6282e8cf33368"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_v1/manifest.json",
+      "new": "archive/results/difficulty/design_review_rules_v1/manifest.json",
+      "sha256": "7877b5a23ee5b86a30adeac507c009419a260f46aafdb6a5bb7b23e52ca2db57"
+    },
+    {
+      "old": "results/difficulty/design_review_rules_v1/requests.json",
+      "new": "archive/results/difficulty/design_review_rules_v1/requests.json",
+      "sha256": "89fe6cd60efabc91e27d7ef1eed676d3778b2bb78ba3d0e414be0c1ac6e426e0"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/README.md",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/README.md",
+      "sha256": "df3777a411d09dc6b887cc5df85f2ee9fbfe9df972718558214276c4d0731c91"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/crosschecks.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/crosschecks.json",
+      "sha256": "67ec0daa6c2f4979eb0c16579b7413ab0ed149c69ee13c027e55c07969049800"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/reliability.json",
+      "sha256": "674667b9eb0f6af2fca679f0164c511273f33bd89fc3e6274f0e7e7681915e98"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/retry_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/retry_evidence.json",
+      "sha256": "2db6c04c334cfb882e7b60b843196a64b6a6e1f157c3af680b67bbf91c9840f3"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/run_manifest.json",
+      "sha256": "ec77f71602578c4a6a9b0c09e1e0fa1ebf47079bb8ef384846621c1772a9d2dc"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/source_bindings.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/source_bindings.json",
+      "sha256": "2291115ac963b0b0c22bac064dfaa3644ba9e1bb4cdd0a6e7f34d9f534c7b81f"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/summary.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/summary.json",
+      "sha256": "432d4c9b765827ec50e04189bbe5a016b7a26c8cdbfb30e740663f12a6168c87"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/task_scores.csv",
+      "sha256": "c724cf5c9a48e271619a82a7ed9f0b3e046f5d27e6471ef83f51318cc686b043"
+    },
+    {
+      "old": "results/difficulty/numeric_design_insurance_retry_v11/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_insurance_retry_v11/task_scores.json",
+      "sha256": "5933f56853c40fe01d04ed4b94cf382b17a902ca6775e783f35bb31ea4c6c4c8"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/README.md",
+      "new": "archive/results/difficulty/required_path_review_v21/README.md",
+      "sha256": "9854018271217e6340f55e82005b9d99fc5158a05b0d4bc77bd651156d0f0f93"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/pilot_manifest.json",
+      "new": "archive/results/difficulty/required_path_review_v21/pilot_manifest.json",
+      "sha256": "e55452b222bd9ebb45aeabf5f684f9a5442e77c601b1a78fd039190617ea6d2c"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/pilot_selection.json",
+      "new": "archive/results/difficulty/required_path_review_v21/pilot_selection.json",
+      "sha256": "0a8401065765c558df817338bda1a8ac635774de953387fc7bdd4f885d673661"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/request_summary.json",
+      "new": "archive/results/difficulty/required_path_review_v21/request_summary.json",
+      "sha256": "339de7d541a2af96a2d37af575356cf336edb854e4a28b8d53fcfe0b5f80efb5"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/review.csv",
+      "new": "archive/results/difficulty/required_path_review_v21/review.csv",
+      "sha256": "7ceb076512aef3c54f31caa5904db76dd1bedae9541e8a3d9c00c7e3c76a3b80"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/review.json",
+      "new": "archive/results/difficulty/required_path_review_v21/review.json",
+      "sha256": "fbaf9fe1de5335071b4c325657bf5d87ce2db2932ca16a2a4d1ed7f0bdb60497"
+    },
+    {
+      "old": "results/difficulty/required_path_review_v21/verification.json",
+      "new": "archive/results/difficulty/required_path_review_v21/verification.json",
+      "sha256": "8a49376710a2b91fd3876acd55fb81ebdead5ad9275dd09fd87b7bfccabf57f5"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/README.md",
+      "new": "archive/results/difficulty/synthetic_final_v15/README.md",
+      "sha256": "677955d2bdae4426fd400288cfea53af8d8f1e105b24ab6e986e9e09b8d60317"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/audit/api_schema_diagnosis.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/audit/api_schema_diagnosis.json",
+      "sha256": "4cc161ee0b17de3c045759d8d35d4ed54dd1a12971ec79a22854df96141901be"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/audit/judgment_evidence.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/audit/judgment_evidence.json",
+      "sha256": "badfc42f00a720f1a0a0b91730c9238ccb51c1a0c1132750e85b69e845757ec5"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/audit/run_manifest.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/audit/run_manifest.json",
+      "sha256": "46f541a4d8be0afe4110bee1b4e531554851852a3f7906514b12f367f47a09eb"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/audit/source_bindings.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/audit/source_bindings.json",
+      "sha256": "03fc3ad30a3d0b982c1968265457cefa1d55fb5ddd1162bc6e3381781902c1a8"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/crosschecks.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/crosschecks.json",
+      "sha256": "54e040ec6366d09fd7b799b1445590c76c8f12d610170a040f6aabe5c482645e"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/domain_presentation.png",
+      "new": "archive/results/difficulty/synthetic_final_v15/domain_presentation.png",
+      "sha256": "b5c663453eb963d8a0f0953e7acc379cc2b94831933c0da681dab696476a3fd0"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/domain_presentation.svg",
+      "new": "archive/results/difficulty/synthetic_final_v15/domain_presentation.svg",
+      "sha256": "5a7714e45bc4e011843a608d4287b7ef1771e7f13369d4fc65aaa56917bf912f"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/domain_presentation_notes.md",
+      "new": "archive/results/difficulty/synthetic_final_v15/domain_presentation_notes.md",
+      "sha256": "09aade70dfc5ab77b9b8bcfdfee944ed44f48cabdafc581b9cb6b95bc5479119"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/domain_summary.csv",
+      "new": "archive/results/difficulty/synthetic_final_v15/domain_summary.csv",
+      "sha256": "8c1f58f06dea4b5507d78ab5943dbe3037580bd8542187963c7d04d91f77186b"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/score_overview.png",
+      "new": "archive/results/difficulty/synthetic_final_v15/score_overview.png",
+      "sha256": "246f572c4fcf82431a5f9826a891734dc0bac1c9212627719d1b4a6141311e11"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/score_overview.svg",
+      "new": "archive/results/difficulty/synthetic_final_v15/score_overview.svg",
+      "sha256": "4dd6ec87e2f225aba3dfeadd8d07aca3ba9dca6c73fe81e935c8a341fec4dad7"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/summary.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/summary.json",
+      "sha256": "ad949bf4d29bd6f01697446c727435cf860c5cb28321ab418c61282fb0a4e1aa"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/task_scores.csv",
+      "new": "archive/results/difficulty/synthetic_final_v15/task_scores.csv",
+      "sha256": "eb8e62e5f82c2e7fd442f4e566980ad251c8c198fe5ba0fbd3320a27f5ad9451"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/task_scores.json",
+      "new": "archive/results/difficulty/synthetic_final_v15/task_scores.json",
+      "sha256": "e078b4d935f495d29ec5d62ec86a3916151329e4f64b7d30e08c0635eb5453cb"
+    },
+    {
+      "old": "results/difficulty/synthetic_final_v15/task_scores_readable.csv",
+      "new": "archive/results/difficulty/synthetic_final_v15/task_scores_readable.csv",
+      "sha256": "1778960249b12b327322933587a47889068c8df79934cb941c9efb4c3732a923"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/README.md",
+      "new": "archive/results/difficulty/required_path_calibration_v23/README.md",
+      "sha256": "875945f0bc6f8d615ba49ebbed804a8247420deea487b1016c9c761a31ea4782"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/cache_bindings.json",
+      "new": "archive/results/difficulty/required_path_calibration_v23/cache_bindings.json",
+      "sha256": "5f683ab42ba32a592db84ebac30758dd5d606dc077cbc911645b8c7c37741232"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/case_inventory.csv",
+      "new": "archive/results/difficulty/required_path_calibration_v23/case_inventory.csv",
+      "sha256": "9b5b2d82cb805b3e9bbd4ef178d5443d25e86d03a2d24894063d4dfb1f2d0906"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/case_inventory.json",
+      "new": "archive/results/difficulty/required_path_calibration_v23/case_inventory.json",
+      "sha256": "f33b741eb6b3ef498c10e0eb15657f8e2928bf0b81c246fabe8fe7f323774587"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/manifest.json",
+      "new": "archive/results/difficulty/required_path_calibration_v23/manifest.json",
+      "sha256": "326cff8942578b338e3efb2ef23012528f8fb8390cafbd7211c895fb8a19df5a"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/planned_requests.csv",
+      "new": "archive/results/difficulty/required_path_calibration_v23/planned_requests.csv",
+      "sha256": "b8e60b43c9fd0b8a85379219bb225a6295aed899a6df77ede6047aa39c8d4b50"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/selection.json",
+      "new": "archive/results/difficulty/required_path_calibration_v23/selection.json",
+      "sha256": "34d63c314d7e4be41eaeefb8b9695ab2e76a46be6cdf37ca69066ce5cb96caa4"
+    },
+    {
+      "old": "results/difficulty/required_path_calibration_v23/verification.json",
+      "new": "archive/results/difficulty/required_path_calibration_v23/verification.json",
+      "sha256": "f6ec06bab73d95164e3f13e195bf9b4a6bd54a321980c080591401e239b5df59"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/README.md",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/README.md",
+      "sha256": "320c9fb411de1af926c93330a39829a18009be4bf6efd80733e55a2291fdb03e"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/comparison.csv",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/comparison.csv",
+      "sha256": "283a54e17b650cae525af0baab0f106bb42035ed3e8fee4b197367ffbde5fb44"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/comparison.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/comparison.json",
+      "sha256": "27259f74d941a00b491e52fd7edbd1502dee88bef702ae49c7d43162fddc2d97"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "8729efd406a7216692888a7a403bd989b075f32d1b0a9bb708d5aa47509dd4fa"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "99f331bdd5be75d5b4791982bdabdd46aa4e1fde310d3da2376e1b3e804435ec"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "b41d829f6d93c43018f24504ae8e120cec2e2cff3c1cc50669930d3d126aa968"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "eea42199468a1b558a20882520f9ac44a44cabd5a8bb945a0ba6bab944549e2b"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/intents/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "7da863da89309d5bf8dc2995b7d0392ec02d47d1220806f39cd0cbba62b4dd2d"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/inventory_PRIVATE_COMPARISON.json.gz",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/inventory_PRIVATE_COMPARISON.json.gz",
+      "sha256": "98ba2db1788d230a2027a34263b75e99839b2a708cce9d3f2b4f368078452d47"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/prepared_cache_bindings.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/prepared_cache_bindings.json",
+      "sha256": "5f683ab42ba32a592db84ebac30758dd5d606dc077cbc911645b8c7c37741232"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/prepared_manifest.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/prepared_manifest.json",
+      "sha256": "326cff8942578b338e3efb2ef23012528f8fb8390cafbd7211c895fb8a19df5a"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/prepared_selection.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/prepared_selection.json",
+      "sha256": "34d63c314d7e4be41eaeefb8b9695ab2e76a46be6cdf37ca69066ce5cb96caa4"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "805ddfa4076f504607e4127d85bc2d6cd2af7be52cc48986709c15bb7e618fd1"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "a315440f635f6147b330370fa26c728ed4abd3fa1aca4e4d07c6f1d0527e38c4"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "bc09f3c5e5d72cdfa7fb760674b9586b00a00a938928c711924cabeff5745c24"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "3edb3f2b86aa25faa0502ad6ecba0af6e0402f37661a41a9e6c6590aca2258e5"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "517ff52989871cbc44be573bdc6a53003c8dbc36ed6639aa56b52054feb4b76f"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "2c225f4dd1281024ce2ac16b95ab51ae965f22447327484906889fda16f97a57"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "6b5858d0920b582dfd1867aa3ac570ccff718c1fec94ee2618367508bfa67ba3"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "2464de4b7f17f51479cd9db043eeab65d10e7a6b589ae5a704dcdce2838ff0c2"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "642cb31731cd06b91193892b9a706314cf01db979289e37446339a1558b45389"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "795940d2166169c41643e7b7b13ac5d2f9465f97e55f95e9fc06ee5aa95bfeac"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "4aa58c17a82fab8dc005277d39619ebc48cd837c419f46dafcae85901a9902de"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/raw/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "860d33c92cb774b9c0be3423400198e484f8026d2481f58b95542be2daaa207d"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/requests.json.gz",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/requests.json.gz",
+      "sha256": "5356378538af5e29db085e3d27f1b2ee7e67476ba693dc6b915f34d6cba58c99"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "72fbabee91b60a5e5cb06a19d178fc564bc76602f78f7f2d60e7030138f21832"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "53c7787ca9582ddf3757ee5b52f5e419edcfe539bb84d483be084593361a8b0c"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "2a117f3aae0dedab9cb7cd3e3206087651ae5b2d57724c1615ec790c143892f7"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "cf7a8e76280db98d8a9b7ea49a2caf9b7d5d1e208f31d45780a214b022a782e8"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "0d62a2846f19a16eca921ab6b24630054086287d1148e38019387cac3ebed472"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_clarified_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "c4e48324b5239a6bb3e66236392e876157daa17ef5d32eef36e7a313cec0e777"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_223d00bffbb05674e0efd936_r00.json",
+      "sha256": "f985e3780ab38bd5de4d0d261168ac2ff527da95c3c272b2bca7534a7d9dfc42"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_2aa74102d9e3011cd0032533_r00.json",
+      "sha256": "61c75a94c8208b21ea97ab682d766869f8bd0aeaa60eb2ce8badc532a4742b98"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_4052de4afd171be50d2045cf_r00.json",
+      "sha256": "27ace1826075e4e46fcda6f0c96f4d053b43eb523b86375b01337059deb62982"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_4c78b9d919a09c14a6fe033a_r00.json",
+      "sha256": "7aa218949e79f158765e8c6ea78f0d36d64d567cd6bdc44cb3fe991d6c5ccf20"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_cfaeafa096c68dc6d8821159_r00.json",
+      "sha256": "465d67f85cc00ce491c6f94f37c10c4b7bdd102a70ead27828c6dd6a139f912a"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/results/pathcal_original_ddd2f5a8191c1ae70b57ec33_r00.json",
+      "sha256": "b6c09d62c65c02b2ae113c1aaf59ad349e269475407871903e5588e4e6e083c7"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/run_manifest.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/run_manifest.json",
+      "sha256": "ed11fc88d4eb22946878c97cdecea051d0327cb757d4519c70cb9cae19553919"
+    },
+    {
+      "old": "results/difficulty/required_path_diverse_checks_v24/verification.json",
+      "new": "archive/results/difficulty/required_path_diverse_checks_v24/verification.json",
+      "sha256": "0813852a6e4dbd702df03d2ca03431dbc3f84e225cdd4e35d51bf03827e3e0da"
+    },
+    {
+      "old": "results/difficulty/design_review_v1/README.md",
+      "new": "archive/results/difficulty/design_review_v1/README.md",
+      "sha256": "be37a90a2cbbb546f57581a100c787a5097e1c31e8cf6f6e38d7e27144366f76"
+    },
+    {
+      "old": "results/difficulty/design_review_v1/comparison_targets_NOT_FOR_MODEL.json",
+      "new": "archive/results/difficulty/design_review_v1/comparison_targets_NOT_FOR_MODEL.json",
+      "sha256": "0f343a6ffe00ef61013b292d360481ae304e89c5401edadeb4d6282e8cf33368"
+    },
+    {
+      "old": "results/difficulty/design_review_v1/manifest.json",
+      "new": "archive/results/difficulty/design_review_v1/manifest.json",
+      "sha256": "02f948f05b054f96f2f0963e47c19deb1d46b5872320b7700c76a2383e1c93f3"
+    },
+    {
+      "old": "results/difficulty/design_review_v1/requests.json",
+      "new": "archive/results/difficulty/design_review_v1/requests.json",
+      "sha256": "60b362a37378c22d083f2fea888600ec42ecd4872f0e603549933524732102aa"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/README.md",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/README.md",
+      "sha256": "29ccfb383b2a99237f4400ada9b38fcdd9043bf17dbd393ac62a13a922e0fca6"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/control_comparisons.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/control_comparisons.json",
+      "sha256": "c63404fd55fa852be72a224876f79f207c409f6fc8ac2a02f1d001c6092af7fe"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/controls.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/controls.json",
+      "sha256": "d0d99c1550a03f7d879f411afc00a3692fbba90e73337560b8d9225cb4f9a40b"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/reliability.json",
+      "sha256": "7c0284aeda7b655fe64695b1048194c2e2aa87fcea0f3477cb7ae22d1e16d0a9"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/summary.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/summary.json",
+      "sha256": "480d5a3b9487f26d44a82d9c46ffdc425c8351b27c96e68c06b89c8efd4552ae"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/task_scores.csv",
+      "sha256": "fe7fd4ae717cab4b9b7c6a8f8b3a6c26d8d776fb7cc13ac40e0f61fb1478bde5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v18/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v18/task_scores.json",
+      "sha256": "feeb48ae080d21ee4564a64866b103ce6d381cb9d251bb45bc1f04c464e800b1"
+    },
+    {
+      "old": "results/difficulty/designed_review_six_v1/assistant_assessment.json",
+      "new": "archive/results/difficulty/designed_review_six_v1/assistant_assessment.json",
+      "sha256": "d75edadc64caba6162e8b81de0e51546a8a340c928a7c186c1eeeec0161097fb"
+    },
+    {
+      "old": "results/difficulty/designed_review_six_v1/review.json",
+      "new": "archive/results/difficulty/designed_review_six_v1/review.json",
+      "sha256": "7ad27a2b6df999719e4ec3faf3cb187b71b96e98b2cfd85a2a9239adeed02268"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/README.md",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/README.md",
+      "sha256": "674bd9650262224b319f5411cadfc87d2c4c624782db10850f2d09e29877859e"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/control_comparisons.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/control_comparisons.json",
+      "sha256": "c63404fd55fa852be72a224876f79f207c409f6fc8ac2a02f1d001c6092af7fe"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/controls.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/controls.json",
+      "sha256": "5cf1d184863dc6d5893d951f2df56598c84c1b93f51de97a55e6384e2da88708"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/reliability.json",
+      "sha256": "7c0284aeda7b655fe64695b1048194c2e2aa87fcea0f3477cb7ae22d1e16d0a9"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/summary.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/summary.json",
+      "sha256": "9a2b393d50945c9ecf3bff47d04eb2acc4e49c36c9258723470863b753b11ca5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/task_scores.csv",
+      "sha256": "fe7fd4ae717cab4b9b7c6a8f8b3a6c26d8d776fb7cc13ac40e0f61fb1478bde5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v16/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v16/task_scores.json",
+      "sha256": "ac5dab5d8853593e264715034d19842a07f68b7eb7f27eb12eaabab9b7b8a94d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/README.md",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/README.md",
+      "sha256": "db434e1560ee6289be59aa27f4a4089f0048fbf543787aba3b2d8d190b4acb5c"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/evidence.json",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/evidence.json",
+      "sha256": "6f210e06b84b093d3f68ec80d8c1a233197fc554449fdcde675473bfddfb3fda"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/next_calibration_plan.json",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/next_calibration_plan.json",
+      "sha256": "7bbbd4d8a219f2758bdc4146e403b9cc01f250d9fdb265865a6138b5ca955d54"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/reliability.json",
+      "sha256": "057fca4821dfe9574f03e219a511d24fefc49383d2de863c117345005b54619e"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/run_manifest.json",
+      "sha256": "563458e1f40637cf02df09f26d6923871d3b7ed71cafc831cdb7ea78a3143a22"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/summary.json",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/summary.json",
+      "sha256": "45465af725c8a8c2c86690b125af56babd6e9c41daff5aa9e9345c59d09c22f7"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/task_scores.csv",
+      "sha256": "557a50b6896306c109139a99e8358f1747ec2bd9c0c032ced00f556233160682"
+    },
+    {
+      "old": "results/difficulty/numeric_design_airline_repeats_v13/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_airline_repeats_v13/task_scores.json",
+      "sha256": "e264a1fbb1cd29fcba4941598710d333280c11a78d878de74b5feb0021cf9278"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/README.md",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/README.md",
+      "sha256": "1bff684408d714d1715535d19ee42ad422076925cc7753496493083d1309c266"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/crosschecks.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/crosschecks.json",
+      "sha256": "0120ebab5dcf640c671ee3963c8e1e3389098cf75c88bc5e82bb94dc08e4c6c2"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/matched_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/matched_evidence.json",
+      "sha256": "177d4c8d952c61201ff9ef8162cc5ba51bee6f739db4bcb979a7a36205ad1c26"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/reliability.json",
+      "sha256": "674667b9eb0f6af2fca679f0164c511273f33bd89fc3e6274f0e7e7681915e98"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/run_manifest.json",
+      "sha256": "4b6dec9ea4bd2d621ee6fddac272ffb896e405b9070e2938edd17399a0922c4f"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/source_bindings.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/source_bindings.json",
+      "sha256": "2d6916d2d9dc9c7f188ef35ca827abe5c02ca958eb2e623e0b6bc712856b82a7"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/summary.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/summary.json",
+      "sha256": "74f585968af9453e3d4cea2151d2c0219f31f129c2a336db1d97cd6943764427"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/task_scores.csv",
+      "sha256": "06e2221398b4a51124387b52ae906397be1c49d8aa398e703b75354f15d9b1e9"
+    },
+    {
+      "old": "results/difficulty/numeric_design_matched_pilot_v11/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_matched_pilot_v11/task_scores.json",
+      "sha256": "56a7c4645bfa1c3a0c413ffa79b851a40c589675ba319ca6e51a921adf8aaae9"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12/README.md",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12/README.md",
+      "sha256": "cf144d4517d9e98e985df1bb8b767e4ca360588565bc7842b2ceb3f32ecb8a7d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12/evidence.json",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12/evidence.json",
+      "sha256": "6f2c3818f224fc3757f27f7bea0a66460f808324961aefbfd251ef365e5a404d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12/run_manifest.json",
+      "sha256": "a8692e8209dd8cc3d95b5df83d9e525ee4443e0dd21177d123e40150a473105e"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12/summary.json",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12/summary.json",
+      "sha256": "ee202f7e064d3a0d11c9ecfa9f7a41061df6018192477a6a3952edf4bd7f37e5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12/task_scores.csv",
+      "sha256": "e8ec6d1a4656071e5a0e3972012784802a649f7bf46eb0a545aee2e5dd6920ce"
+    },
+    {
+      "old": "results/difficulty/numeric_design_schema_guard_v12/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_schema_guard_v12/task_scores.json",
+      "sha256": "0e56f3e4602322194f4d390d80c4194dd5824a2d2f32abdae5ee944cc3f8cddd"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/README.md",
+      "new": "archive/results/difficulty/required_path_probe_v22/README.md",
+      "sha256": "2cee8707790c6e684b24d0492bb6784e312235dcfa1a78b0bf494517a4833191"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/comparison.csv",
+      "new": "archive/results/difficulty/required_path_probe_v22/comparison.csv",
+      "sha256": "034e24e8663544fd20c269f8c25ccacb65fa0f83a07601cb6e37aebd552839e5"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/comparisons.json",
+      "new": "archive/results/difficulty/required_path_probe_v22/comparisons.json",
+      "sha256": "c5e132f23f352a39332fac274640854b3b248d4687dadb7a96646cac0af72159"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/judgment_evidence.json",
+      "new": "archive/results/difficulty/required_path_probe_v22/judgment_evidence.json",
+      "sha256": "b550496b2dfbbe64ee636b6c5a2627828d6680217529c7dc4b935898f68579c0"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/preparation_manifest.json",
+      "new": "archive/results/difficulty/required_path_probe_v22/preparation_manifest.json",
+      "sha256": "e55452b222bd9ebb45aeabf5f684f9a5442e77c601b1a78fd039190617ea6d2c"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/run_manifest.json",
+      "new": "archive/results/difficulty/required_path_probe_v22/run_manifest.json",
+      "sha256": "80300d48ecb6979603eacb920eaf329c1829f9aad809e75282ec032285ebd997"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/score_comparison.png",
+      "new": "archive/results/difficulty/required_path_probe_v22/score_comparison.png",
+      "sha256": "2f4b3886c42af27dbf31ceba272d5e108dbc5a2ed2418a576688c7d0386f5aed"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/score_comparison.svg",
+      "new": "archive/results/difficulty/required_path_probe_v22/score_comparison.svg",
+      "sha256": "70c20ee1f03e875fdf150cc512a8f47f9e51778c2a3428efa8e2fd104abb9c52"
+    },
+    {
+      "old": "results/difficulty/required_path_probe_v22/uniform_inspection.json",
+      "new": "archive/results/difficulty/required_path_probe_v22/uniform_inspection.json",
+      "sha256": "2d1a768939dfd7ee49cb53228d333494afc7e5d48572750892cb05f1cb57b5ee"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/README.md",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/README.md",
+      "sha256": "7422a71bb7181f0ee92a2de4e960b344f67fd947135045b17613aef496c642e7"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/control_comparisons.json",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/control_comparisons.json",
+      "sha256": "6caaeaf9df7a7085d2fc1041f61422742cfbd9667adba0695f9cdb04a98b2667"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/control_evidence.json",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/control_evidence.json",
+      "sha256": "4a09cf3667ebbda8bf729fb3b9dd41a72b9cbf71aeb7742ea10214476cde37f2"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/domain_calibration_plan.json",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/domain_calibration_plan.json",
+      "sha256": "d88ce1529576da4da96bf6e9a684f0021b61f066d0d6bbcb85bbba62da60ce4e"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/run_manifest.json",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/run_manifest.json",
+      "sha256": "ed3cfe267d072df8145da575185f3e9a76f7a3e70b1271e220a3917393400ad0"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/summary.json",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/summary.json",
+      "sha256": "32d51510682260ac95da956ad459dbe121cba4e1e10aedb49317280b4e4b8818"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/task_scores.csv",
+      "sha256": "288e8ef2121de1b202a56d60146ee7734d96f9937ff1c475651fc0b4dc09d2b4"
+    },
+    {
+      "old": "results/difficulty/numeric_design_controls_v11/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_controls_v11/task_scores.json",
+      "sha256": "36c73a194872aa2e54b5bada59791b64c853fee5d2d88cd5ac665be0733af3c4"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/README.md",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/README.md",
+      "sha256": "db420e08335446f9407f1155b7e025cb7c458dafb27356adc48bb8d981196b7d"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/control_comparisons.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/control_comparisons.json",
+      "sha256": "c63404fd55fa852be72a224876f79f207c409f6fc8ac2a02f1d001c6092af7fe"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/controls.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/controls.json",
+      "sha256": "c98a59597c781d98a140bac18d60dc87b2de766382940a2cebf4f9144acb0ed5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/reliability.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/reliability.json",
+      "sha256": "7c0284aeda7b655fe64695b1048194c2e2aa87fcea0f3477cb7ae22d1e16d0a9"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/summary.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/summary.json",
+      "sha256": "ae68b3c74bb23900a366fefd1f42faaafa98f5f1a4aee1818f5266fb0a3bf37a"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/task_scores.csv",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/task_scores.csv",
+      "sha256": "fe7fd4ae717cab4b9b7c6a8f8b3a6c26d8d776fb7cc13ac40e0f61fb1478bde5"
+    },
+    {
+      "old": "results/difficulty/numeric_design_calibration_v19/task_scores.json",
+      "new": "archive/results/difficulty/numeric_design_calibration_v19/task_scores.json",
+      "sha256": "ccb9892585fe6bdce7c8d11400bc5edc2914913053a9624a421954b29f4a7788"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_assistant_review.md",
+      "new": "archive/docs/evaluation/designed_difficulty_assistant_review.md",
+      "sha256": "53bb5f61c87d74eac1f3ce446fe759423ea28ae97e8db6e5d3907d26dcbb5379"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_independent_review.md",
+      "new": "archive/docs/evaluation/designed_difficulty_independent_review.md",
+      "sha256": "580d500a58b2a8d1badba4af45280ce35ff903cf90df99e8647d461813dcc0fe"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_six_examples.md",
+      "new": "archive/docs/evaluation/designed_difficulty_six_examples.md",
+      "sha256": "74c5485199cc4a28f713f52b26d37897fe10dc58d1c9290a850cc38773b86f0c"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_v0.1.md",
+      "new": "archive/docs/evaluation/designed_difficulty_v0.1.md",
+      "sha256": "7ecc7dd7a71c6724f2fd28d9dd88ac3d89131a11e50804d218d8db2c9c57b123"
+    },
+    {
+      "old": "docs/evaluation/designed_profiles_v0.2.md",
+      "new": "archive/docs/evaluation/designed_profiles_v0.2.md",
+      "sha256": "c9085584db892dcd09acb2ed183a0217c4d3b6011e9eb2dc6a27ce678bd0e424"
+    },
+    {
+      "old": "docs/evaluation/difficulty_methodology_v0.3.md",
+      "new": "archive/docs/evaluation/difficulty_methodology_v0.3.md",
+      "sha256": "fe1e0d3ee9c913ac6a52b72128b493acee5664a6e4bcc8406487aa7a9b13d82b"
+    },
+    {
+      "old": "docs/evaluation/evaluation_expectations_v0.1.md",
+      "new": "archive/docs/evaluation/evaluation_expectations_v0.1.md",
+      "sha256": "6d14ddb2b4c7f71282baa4eed29fac4dff1531fdbe0514ca22109e8292974639"
+    },
+    {
+      "old": "docs/evaluation/numeric_design_calibration_v1.md",
+      "new": "archive/docs/evaluation/numeric_design_calibration_v1.md",
+      "sha256": "aa32a0c893829da615e0ca43838ebd329b6f587037e457025de61acfe5cefc5c"
+    },
+    {
+      "old": "docs/evaluation/numeric_design_reporting_handoff.md",
+      "new": "archive/docs/evaluation/numeric_design_reporting_handoff.md",
+      "sha256": "da25a68893c7ed5b383b7ba92cfcb3ab4013bbf9397a8880a137a5cf578579d1"
+    },
+    {
+      "old": "docs/evaluation/provisional_outcome_policy.md",
+      "new": "archive/docs/evaluation/provisional_outcome_policy.md",
+      "sha256": "8ba7545b0c7947f0776e3e207f11fa6e632c0e7d34ed6e76606e85f8ced5799a"
+    },
+    {
+      "old": "docs/evaluation/provisional_outcome_policy_v0.2.md",
+      "new": "archive/docs/evaluation/provisional_outcome_policy_v0.2.md",
+      "sha256": "e7b43dbc18f361138019a84e1ed53f6b083d50dd5426aa0ca95d4d86e1e4d55f"
+    },
+    {
+      "old": "docs/evaluation/sandra_designed_difficulty_recommendation.md",
+      "new": "archive/docs/evaluation/sandra_designed_difficulty_recommendation.md",
+      "sha256": "204faeb5554f483472f193a71d2b0a1cfcfb9cb9fcebd65facbbfe8cb5a80938"
+    },
+    {
+      "old": "difficulty/meeting_metrics.py",
+      "new": "archive/difficulty/meeting_metrics.py",
+      "sha256": "ada39c913625c7e84ee25f8ef252ff8f78ed67f7f7083a152508e6c39f5589fc"
+    },
+    {
+      "old": "difficulty/audit_designed_difficulty.py",
+      "new": "archive/difficulty/audit_designed_difficulty.py",
+      "sha256": "ab8339136d064c45ddec3aae13fef72a2c750811b338fc57f9b9fd94932760c1"
+    },
+    {
+      "old": "tests/test_meeting_metrics.py",
+      "new": "archive/tests/test_meeting_metrics.py",
+      "sha256": "c55dd9a1b449951c636cea4e3e5fb908e008146f7b4d57774bd3dee97193137c"
+    },
+    {
+      "old": "tests/test_audit_designed_difficulty.py",
+      "new": "archive/tests/test_audit_designed_difficulty.py",
+      "sha256": "0ef36f907b819c81d4fb8f2fa12993622c6781bd90d84cc65655445e94d8ee9c"
+    },
+    {
+      "old": "docs/evaluation/designed_difficulty_finalization_decision.md",
+      "new": "archive/docs/evaluation/designed_difficulty_finalization_decision.md",
+      "sha256": "69f0c835c45f00112e31c7cf21f7598b299cba79550468754165b9cf53928219"
+    }
+  ]
+}

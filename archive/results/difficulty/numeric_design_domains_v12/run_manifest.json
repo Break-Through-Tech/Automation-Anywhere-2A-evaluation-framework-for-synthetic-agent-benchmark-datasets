@@ -1,0 +1,22 @@
+{
+  "validator_version": "design_evidence_validation_v1.2",
+  "generation_prompt_version": "design_prompt_v1.1",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "model": "gpt-6-sol",
+  "approved_domain_call_cap": 31,
+  "actual_domain_calls": 30,
+  "unused_authorized_calls": 1,
+  "domain_call_usage": {
+    "input_tokens": 301696,
+    "output_tokens": 65193,
+    "total_tokens": 366889
+  },
+  "cached_prior_calls": 13,
+  "new_calls_for_revalidation": 0,
+  "all_original_raw_responses_unchanged": true,
+  "airline_repeats_skipped": "Original input: unscorable because reservation facts omitted. Enriched input: first judgment validated 55; second invented units and was rejected; stopped without third call. Original responses retained.",
+  "independent_validation": false,
+  "full_calibration": "incomplete_airline_unit_identity_failure",
+  "reproducibility": "Frozen packet manifests, source bindings, original raw outputs and result provenance retained. No supplied data changed.",
+  "stop_reason": "Unknown or duplicate assessed unit on second airline-context judgment; no paid retries."
+}

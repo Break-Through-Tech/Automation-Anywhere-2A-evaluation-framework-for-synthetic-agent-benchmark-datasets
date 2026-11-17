@@ -1,0 +1,9 @@
+dataset,attribute,score
+tau2,domain,0.9463
+tau2,task_type,0.6712
+tau2,tools,0.9247
+tau2,average,0.8474
+synthetic,domain,0.9282
+synthetic,task_type,0.4772
+synthetic,tools,0.9855
+synthetic,average,0.797

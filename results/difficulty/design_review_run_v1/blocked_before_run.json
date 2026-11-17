@@ -1,0 +1,9 @@
+{
+  "status": "blocked_before_first_api_call",
+  "api_requests_attempted": 0,
+  "api_destination_origin": "https://api.openai.com",
+  "planned_requests": 3,
+  "reason": "Automatic approval review requires explicit authorization for the payload and external destination.",
+  "payload_scope": "Frozen counting rulebook and source-only references for two insurance tasks and one patient-onboarding task; no prior scores or human labels.",
+  "request_attempt_record_exists": false
+}

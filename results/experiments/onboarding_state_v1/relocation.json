@@ -1,0 +1,41 @@
+{
+  "current_results_path": "results/experiments/onboarding_state_v1",
+  "current_sources": {
+    "baseline/baseline_config.yaml": "efe6e42850030102f9f372f6483d4363d671eebb69842aab70d2710577372ea3",
+    "baseline/run_synthetic_baseline.py": "e7b5aeb5ddc5ff30e706d8736f41cbb6c32ba1af1c302c5d2be2f06eefaa83bd",
+    "baseline/synthetic_environment.py": "cbea03d898c273e9bb4a43498c7eb91eecb8969661f9ce24d8627d6acb17ad7b",
+    "baseline/synthetic_user_guidelines.md": "740a29dfa64d7bc08eea3bf7493575b914a63f744acbaf7f199ee07eddaf72d3",
+    "experiments/onboarding_pilot/cases.json": "8f01b029b42bd35e209635fb5e2b2fa287858ad1c460776084978fea2f7594e5",
+    "experiments/onboarding_pilot/environment.py": "bb24f2a1d9f2b5d625ea89a163b82c7e94e4f67989bc9c44f954364bbe4d7ab4",
+    "experiments/onboarding_pilot/grader.py": "2f5d837dbb1f25310b3c459485e6b03e12683dcd38bfdcb1530debb5c4f812a8",
+    "experiments/onboarding_pilot/policy.md": "bad3773c9dfa2d7d285fe99de29cfb542e28a781edffab5b736011e97162c1cc",
+    "experiments/onboarding_pilot/run.py": "7f7b4f6fde0372ab76d828e2febc9f563c278453eb937865654ce75c1b5c7a43",
+    "experiments/onboarding_pilot/validation.py": "8a556d3280e5804da7d996b0728d1c8a90672239e035ed677540efd9a80bb4f0",
+    "results/baseline/v2_full/prompt.txt": "b9ddd0cbf1792ad351a867f715b7f5c4aa019b1977c52283e0b29f8057875bc9"
+  },
+  "original_manifest_sha256": "c6315a069fe23272be01c702fcd9c9c6f6cef93e47ca0a1ccc8cd1cb530a8c4e",
+  "original_results_path": "results/pilots/onboarding_state_v1",
+  "original_sources": {
+    "baseline/baseline_config.yaml": "efe6e42850030102f9f372f6483d4363d671eebb69842aab70d2710577372ea3",
+    "baseline/onboarding_pilot/cases.json": "8f01b029b42bd35e209635fb5e2b2fa287858ad1c460776084978fea2f7594e5",
+    "baseline/onboarding_pilot/environment.py": "bb24f2a1d9f2b5d625ea89a163b82c7e94e4f67989bc9c44f954364bbe4d7ab4",
+    "baseline/onboarding_pilot/grader.py": "2f5d837dbb1f25310b3c459485e6b03e12683dcd38bfdcb1530debb5c4f812a8",
+    "baseline/onboarding_pilot/policy.md": "bad3773c9dfa2d7d285fe99de29cfb542e28a781edffab5b736011e97162c1cc",
+    "baseline/onboarding_pilot/run.py": "b91ba32f38bbe6a75eae5d029d3e27a8c49e89e4fc54a6be35666b3447496dd1",
+    "baseline/onboarding_pilot/validation.py": "51393f63ac047867c6cc2edfdbad6289d3238b465b824471c0928260f167c5e3",
+    "baseline/run_synthetic_baseline.py": "e7b5aeb5ddc5ff30e706d8736f41cbb6c32ba1af1c302c5d2be2f06eefaa83bd",
+    "baseline/synthetic_environment.py": "cbea03d898c273e9bb4a43498c7eb91eecb8969661f9ce24d8627d6acb17ad7b",
+    "baseline/synthetic_user_guidelines.md": "740a29dfa64d7bc08eea3bf7493575b914a63f744acbaf7f199ee07eddaf72d3",
+    "results/baseline/v2_full/prompt.txt": "b9ddd0cbf1792ad351a867f715b7f5c4aa019b1977c52283e0b29f8057875bc9"
+  },
+  "path_mapping": {
+    "baseline/onboarding_pilot/cases.json": "experiments/onboarding_pilot/cases.json",
+    "baseline/onboarding_pilot/environment.py": "experiments/onboarding_pilot/environment.py",
+    "baseline/onboarding_pilot/grader.py": "experiments/onboarding_pilot/grader.py",
+    "baseline/onboarding_pilot/policy.md": "experiments/onboarding_pilot/policy.md",
+    "baseline/onboarding_pilot/run.py": "experiments/onboarding_pilot/run.py",
+    "baseline/onboarding_pilot/validation.py": "experiments/onboarding_pilot/validation.py"
+  },
+  "reason": "Repository organization only. Pilot imports and runner provenance checks updated; fixtures, policy, environment, grader, trial rows and traces preserved.",
+  "snapshot_directory": "source_snapshot"
+}

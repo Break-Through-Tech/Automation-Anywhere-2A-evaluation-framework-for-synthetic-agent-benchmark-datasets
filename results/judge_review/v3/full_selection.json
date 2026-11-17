@@ -1,0 +1,98 @@
+[
+  {
+    "review_id": "R01",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "trial": 0
+  },
+  {
+    "review_id": "R02",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+    "trial": 1
+  },
+  {
+    "review_id": "R03",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "trial": 0
+  },
+  {
+    "review_id": "R04",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "trial": 0
+  },
+  {
+    "review_id": "R05",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+    "trial": 1
+  },
+  {
+    "review_id": "R06",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+    "trial": 2
+  },
+  {
+    "review_id": "R07",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "trial": 0
+  },
+  {
+    "review_id": "R08",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W7_TC1",
+    "trial": 1
+  },
+  {
+    "review_id": "R09",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC2",
+    "trial": 0
+  },
+  {
+    "review_id": "R10",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC1",
+    "trial": 3
+  },
+  {
+    "review_id": "R11",
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "trial": 0
+  },
+  {
+    "review_id": "R12",
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+    "trial": 3
+  },
+  {
+    "review_id": "R13",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "trial": 0
+  },
+  {
+    "review_id": "R14",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+    "trial": 1
+  },
+  {
+    "review_id": "R15",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 2
+  },
+  {
+    "review_id": "R16",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trial": 3
+  }
+]

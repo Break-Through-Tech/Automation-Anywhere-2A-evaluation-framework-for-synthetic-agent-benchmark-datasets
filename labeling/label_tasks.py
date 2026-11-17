@@ -7,10 +7,10 @@ Design choices (write these in your report):
                            so a rerun gives identical labels (reproducibility criterion).
 
 Usage:
-  python scripts/label_tasks.py --dataset tau2 --tau2-root external/tau2-bench --no-llm      # free dry run
-  python scripts/label_tasks.py --dataset tau2 --tau2-root external/tau2-bench --limit 10    # tiny paid test
-  python scripts/label_tasks.py --dataset tau2 --tau2-root external/tau2-bench               # full run
-  python scripts/label_tasks.py --dataset synthetic --synthetic-path data/                   # after load_synthetic is filled in
+  python labeling/label_tasks.py --dataset tau2 --tau2-root external/tau2-bench --no-llm      # free dry run
+  python labeling/label_tasks.py --dataset tau2 --tau2-root external/tau2-bench --limit 10    # tiny paid test
+  python labeling/label_tasks.py --dataset tau2 --tau2-root external/tau2-bench               # full run
+  python labeling/label_tasks.py --dataset synthetic --synthetic-path data/                   # after load_synthetic is filled in
 """
 import argparse, hashlib, json, os, re, sys
 from pathlib import Path
@@ -24,7 +24,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from classification import TASK_TYPES
 
 TAU2_DOMAINS = ["airline", "retail", "telecom", "banking_knowledge"]
-CACHE = Path("outputs/cache/labels_cache.jsonl")
+OUTPUT = Path(__file__).resolve().parents[1] / "results" / "labeling"
+CACHE = OUTPUT / "cache/labels_cache.jsonl"
 
 
 # ---------------------------------------------------------------- loaders
@@ -271,7 +272,8 @@ def main():
     print(f"{len(rows)} tasks loaded")
     df = pd.DataFrame(label(rows, a.model, not a.no_llm))
     df["tools"] = df["tools"].apply(lambda t: "|".join(t))
-    out = Path(f"outputs/labels_{a.dataset}.csv")
+    out = OUTPUT / f"labels_{a.dataset}.csv"
+    out.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(out, index=False)
     print(f"wrote {out}")
     print(df.groupby("domain").size().to_string())

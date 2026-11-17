@@ -17,5 +17,8 @@ PyYAML>=6.0.0
 numpy
 sentence-transformers
 pandas
+scipy
 matplotlib
 seaborn
+openai>=1.0.0
+jsonschema>=4.0.0

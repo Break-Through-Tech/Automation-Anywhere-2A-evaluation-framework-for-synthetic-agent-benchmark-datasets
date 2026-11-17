@@ -1,0 +1,74 @@
+{
+  "status": "all_sixteen_saved_responses_valid_after_json_whitespace_checker_fix",
+  "attempts": 16,
+  "new_api_requests": 13,
+  "reused_responses": 3,
+  "extra_api_calls_for_revalidation": 0,
+  "accepted_after_revalidation": 16,
+  "initial_validation_accepted": 15,
+  "initial_validation_rejected": 1,
+  "api_errors": 0,
+  "validator_source_sha256": "e680e37d243207ef1217bdff09b35ef9fe736140eaaff26b9ca8f7e464c66f8c",
+  "policy_version": "provisional_outcome_v0.1",
+  "policy_sha256": "8ba7545b0c7947f0776e3e207f11fa6e632c0e7d34ed6e76606e85f8ced5799a",
+  "prompt_version": "synthetic_judge_v0.3_provisional_outcome",
+  "prompt_sha256": "1175b671ce98c05e3fe32604acf15fff21496c6a874a1f97e3a010cc4be7bcbb",
+  "raw_responses_changed": false,
+  "human_answers_changed": false,
+  "difficulty_computed": false,
+  "milestone_agreement_computed": false,
+  "returned_models": {
+    "gpt-6-astra": 16
+  },
+  "new_request_token_usage": {
+    "prompt_tokens": 77269,
+    "completion_tokens": 31020,
+    "total_tokens": 108289
+  },
+  "all_response_token_usage": {
+    "prompt_tokens": 98920,
+    "completion_tokens": 38384,
+    "total_tokens": 137304
+  },
+  "descriptive_task_comparison": {
+    "n_compared": 16,
+    "n_agree": 10,
+    "agreement": 0.625,
+    "confusion_counts": [
+      {
+        "human": "met",
+        "judge": "unverifiable",
+        "count": 2
+      },
+      {
+        "human": "unmet",
+        "judge": "unmet",
+        "count": 9
+      },
+      {
+        "human": "unmet",
+        "judge": "unverifiable",
+        "count": 2
+      },
+      {
+        "human": "unverifiable",
+        "judge": "unmet",
+        "count": 2
+      },
+      {
+        "human": "unverifiable",
+        "judge": "unverifiable",
+        "count": 1
+      }
+    ]
+  },
+  "different_label_review_ids": [
+    "R01",
+    "R03",
+    "R05",
+    "R08",
+    "R15",
+    "R16"
+  ],
+  "not_accuracy_or_final_policy_approval": true
+}

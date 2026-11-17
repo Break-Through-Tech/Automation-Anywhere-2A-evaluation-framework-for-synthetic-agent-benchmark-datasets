@@ -1,0 +1,27 @@
+{
+  "agreement_metrics_computed": false,
+  "expected_reviews": 16,
+  "independent_review_not_verified_by_software": true,
+  "pending_review_ids": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16"
+  ],
+  "rubric_sha256": "69ad3055a576848ea76949b8cc6d3ee3c1380c76e1f79d76f58da7d096b553f1",
+  "rubric_version": "synthetic_milestones_v0.1_draft",
+  "scope": "purposive development sample; not held-out judge validation",
+  "status": "awaiting_human_review"
+}

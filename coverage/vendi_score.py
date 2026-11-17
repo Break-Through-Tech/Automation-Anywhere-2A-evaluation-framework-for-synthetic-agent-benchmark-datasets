@@ -8,7 +8,7 @@ tasks": 1 if all tasks are identical, n if all are orthogonal. VS/n puts it in [
 Note VS/n is not size-invariant (fewer tasks tend to score higher), so compare
 groups of similar size or look at VS alongside it.
 
-    python coverage/vendi_score.py      # writes coverage/vendi_scores.csv
+    python coverage/vendi_score.py      # writes results/coverage/vendi_scores.csv
 """
 
 import csv
@@ -22,14 +22,17 @@ sys.path.insert(0, str(path / "data"))
 
 from loaders import load_tasks
 
-output_path = path / "coverage" / "vendi_scores.csv"
+output_path = path / "results" / "coverage" / "vendi_scores.csv"
 MODEL_NAME = "all-MiniLM-L6-v2"
 
 
-def embed(texts, model_name=MODEL_NAME):
+def embed(texts, model_name=MODEL_NAME, seed=42, revision=None):
+    import torch
     from sentence_transformers import SentenceTransformer
 
-    return SentenceTransformer(model_name).encode(texts, normalize_embeddings=True)
+    torch.manual_seed(seed)
+    model = SentenceTransformer(model_name, device="cpu", revision=revision)
+    return model.encode(texts, normalize_embeddings=True, show_progress_bar=False)
 
 
 def vendi_score(embeddings):
@@ -64,6 +67,7 @@ if __name__ == "__main__":
             "vendi_score_norm": round(vs / len(idx), 4),
         })
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=["dataset", "domain", "n", "vendi_score", "vendi_score_norm"])
         writer.writeheader()

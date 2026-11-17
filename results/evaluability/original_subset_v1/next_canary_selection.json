@@ -1,0 +1,7 @@
+{
+  "status": "no_clean_completion_candidates_in_inspected_subset",
+  "max_future_requests": 3,
+  "automatic_api_expansion": false,
+  "selected_trials": [],
+  "reason": "Resolve documented contracts or source-check other original tasks; do not send these three merely to repeat uncertain labels."
+}

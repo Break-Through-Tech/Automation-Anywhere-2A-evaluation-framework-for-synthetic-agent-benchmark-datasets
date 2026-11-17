@@ -1,0 +1,564 @@
+[
+  {
+    "adjudication_question": "Resolve the business-identity contract and what information was accessible. Does a justified handoff count as behavior quality while the opening task remains incomplete?",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W3_TC1_trial0.json.gz#/tool_events/0"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Reference identity validation supplies business_license, which the mock rejects. The saved attempt performs only a human handoff; owner screening and account opening are not evidenced.",
+    "review_id": "R01",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_accounts_deposits/test_cases.py",
+    "source_lines": {
+      "class": 1755,
+      "description": 2134,
+      "difficulty": 2135,
+      "difficulty_reasoning": 2136,
+      "expected_tool_calls": 1819,
+      "input_data": 1765,
+      "milestones": 2062,
+      "test_case_id": 1762,
+      "title": 1763,
+      "workflow": 1764
+    },
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W3_TC1_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "Determine the run date/age convention and whether clear AML supports low risk. Do not treat the executed tier call as absent or infer account completion from the user STOP marker.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "grader_limitation",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz#/tool_events/3",
+      "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz#/tool_events/4"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Identity and AML calls return verified/clear and the tier call returns student. The old grader reports calculate_account_tier missing even though it is event 2; the reference age is 22 while the attempt uses 24. The agent escalates because risk_level is not explicit and never opens an account.",
+    "review_id": "R02",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_accounts_deposits/test_cases.py",
+    "source_lines": {
+      "class": 1455,
+      "description": 1744,
+      "difficulty": 1748,
+      "difficulty_reasoning": 1749,
+      "expected_tool_calls": 1489,
+      "input_data": 1465,
+      "milestones": 1673,
+      "test_case_id": 1461,
+      "title": 1462,
+      "workflow": 1463
+    },
+    "task_id": "DigitalAccountOpeningAgent_W2_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_accounts_deposits/DigitalAccountOpeningAgent_W2_TC2_trial1.json.gz",
+    "trial": 1
+  },
+  {
+    "adjudication_question": "Adjudicate extraction and business identity semantics before judging opening completion. A handoff does not establish account creation.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W4_TC2_trial0.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W4_TC2_trial0.json.gz#/tool_events/1"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The business-document extraction returns unrelated personal identity records and types. The agent escalates that discrepancy. Separate reference schema errors concern null business dates of birth.",
+    "review_id": "R03",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_customer_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 1078,
+      "description": 1274,
+      "difficulty": 1275,
+      "difficulty_reasoning": 1276,
+      "expected_tool_calls": 1102,
+      "input_data": 1087,
+      "milestones": 1217,
+      "test_case_id": 1084,
+      "title": 1085,
+      "workflow": 1086
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W4_TC2_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "Can any supported action resolve the document mismatch? Evaluate the escalation separately from the requested account outcome.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz#/tool_events/2"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The requested utility bill is returned as a passport, including after a repeat extraction. The agent requests manual review and stops before identity verification or account creation.",
+    "review_id": "R04",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_customer_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 414,
+      "description": 606,
+      "difficulty": 607,
+      "difficulty_reasoning": 608,
+      "expected_tool_calls": 436,
+      "input_data": 424,
+      "milestones": 549,
+      "test_case_id": 420,
+      "title": 421,
+      "workflow": 422
+    },
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_customer_onboarding/BankingCustomerOnboardingAgent_BankOnboard_W1_TC1_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "Determine the intended scope of the blocking milestone and whether the agent should have used the transaction operation. Do not accept the agent claim of a missing tool without checking the contract.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "candidate_agent_interpretation",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W5_TC1_trial1.json.gz#/tool_events/0"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The sole event is an urgent escalation asserting no account-access blocking tool. The tool set does include auto_decline_transaction, which the reference uses and whose mock returns block_status. Transaction blocking and account-access blocking are not automatically equivalent.",
+    "review_id": "R05",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 2058,
+      "description": 2251,
+      "difficulty": 2254,
+      "difficulty_reasoning": 2255,
+      "expected_tool_calls": 2078,
+      "input_data": 2065,
+      "milestones": 2211,
+      "test_case_id": 2061,
+      "title": 2062,
+      "workflow": 2063
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W5_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W5_TC1_trial1.json.gz",
+    "trial": 1
+  },
+  {
+    "adjudication_question": "Resolve entity linkage and low-risk mock outputs versus the takeover narrative before assigning task eligibility or attributing the omitted block.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz#/tool_events/4",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz#/tool_events/7",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz#/tool_events/9",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz#/tool_events/11",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz#/tool_events/12"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Returned transaction/device details conflict with the takeover scenario and its expected high device risk. The trace contains a risk calculation, an analyst route, and repeated escalations, but no auto_decline_transaction.",
+    "review_id": "R06",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 1055,
+      "description": 1252,
+      "difficulty": 1256,
+      "difficulty_reasoning": 1257,
+      "expected_tool_calls": 1077,
+      "input_data": 1065,
+      "milestones": 1215,
+      "test_case_id": 1062,
+      "title": 1063,
+      "workflow": 1064
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_W2_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_W2_TC2_trial2.json.gz",
+    "trial": 2
+  },
+  {
+    "adjudication_question": "Review how self-pay is represented and whether required pricing/duplicate-review information is available. Judge dated availability against the recorded run context.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz#/tool_events/3",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz#/tool_events/4",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz#/tool_events/5"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Self-pay reference creation passes insurance=None, rejected by the declared schema. The agent escalates self-pay registration, receives a frozen 2024 appointment slot, and requests help with pricing; no record creation or booking is executed.",
+    "review_id": "R07",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 1621,
+      "description": 1782,
+      "difficulty": 1785,
+      "difficulty_reasoning": 1786,
+      "expected_tool_calls": 1634,
+      "input_data": 1628,
+      "milestones": 1731,
+      "test_case_id": 1625,
+      "title": 1626,
+      "workflow": 1627
+    },
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W5_TC1_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "Separate the frozen scheduling response from the agent interpretation of duplicate-review requirements. The STOP marker does not mean a booking was completed.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "candidate_agent_interpretation",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/3",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/4",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/5",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/6",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/7",
+      "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz#/tool_events/8"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Insurance eligibility is active and history is extracted. The agent requests duplicate-record review and twice receives the same 2024 availability, including after a 2026 date request. It explicitly says the appointment is not booked.",
+    "review_id": "R08",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/healthcare_patient_onboarding/test_cases.py",
+    "source_lines": {
+      "class": 1969,
+      "description": 2194,
+      "difficulty": 2195,
+      "difficulty_reasoning": 2196,
+      "expected_tool_calls": 1985,
+      "input_data": 1978,
+      "milestones": 2125,
+      "test_case_id": 1974,
+      "title": 1975,
+      "workflow": 1976
+    },
+    "task_id": "HealthcareOnboarding_W7_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_patient_onboarding/HealthcareOnboarding_W7_TC1_trial1.json.gz",
+    "trial": 1
+  },
+  {
+    "adjudication_question": "Decide how to interpret documented format examples versus accepted tool inputs. A later invalid reference does not establish that the first check was unavailable.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "candidate_agent_interpretation",
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC2_trial0.json.gz#/tool_events/0"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The agent escalates payer/plan formatting without executing the requirements check. Offline reference replay shows that check accepts the supplied IDs; the mock contains no corresponding format rejection. Later reference calls independently fail structured-schema validation.",
+    "review_id": "R09",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/healthcare_prior_authorization/test_cases.py",
+    "source_lines": {
+      "class": 648,
+      "description": 829,
+      "difficulty": 833,
+      "difficulty_reasoning": 834,
+      "expected_tool_calls": 668,
+      "input_data": 660,
+      "milestones": 769,
+      "test_case_id": 657,
+      "title": 658,
+      "workflow": 659
+    },
+    "task_id": "HealthcarePA_W1_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC2_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "Decide whether this environment blocks the intended happy path. The agent must not fabricate the missing document to satisfy the reference.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC1_trial3.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC1_trial3.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC1_trial3.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC1_trial3.json.gz#/tool_events/3"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The scenario title says all documentation is present, but the criteria response requires an imaging report and both document-retrieval attempts report it missing. The mock always places imaging report in docs_missing. The user ends OUT-OF-SCOPE.",
+    "review_id": "R10",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/healthcare_prior_authorization/test_cases.py",
+    "source_lines": {
+      "class": 451,
+      "description": 639,
+      "difficulty": 642,
+      "difficulty_reasoning": 643,
+      "expected_tool_calls": 470,
+      "input_data": 461,
+      "milestones": 578,
+      "test_case_id": 457,
+      "title": 458,
+      "workflow": 459
+    },
+    "task_id": "HealthcarePA_W1_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/healthcare_prior_authorization/HealthcarePA_W1_TC1_trial3.json.gz",
+    "trial": 3
+  },
+  {
+    "adjudication_question": "Review whether required loss details are recoverable from the scenario/tools and whether escalation is the acceptable endpoint for this case.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W2_TC2_trial0.json.gz#/tool_events/0"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The reference supplies null contact strings rejected by the schema. The saved attempt escalates missing incident information and does not create a claim.",
+    "review_id": "R11",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/insurance_claims_intake/test_cases.py",
+    "source_lines": {
+      "class": 1182,
+      "description": 1400,
+      "difficulty": 1401,
+      "difficulty_reasoning": 1402,
+      "expected_tool_calls": 1206,
+      "input_data": 1191,
+      "milestones": 1334,
+      "test_case_id": 1188,
+      "title": 1189,
+      "workflow": 1190
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W2_TC2_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "Establish whether the available tools and supplied information support the legal-notification milestones. Generic human acknowledgements do not prove notification or preservation occurred.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W5_TC1_trial3.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W5_TC1_trial3.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W5_TC1_trial3.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W5_TC1_trial3.json.gz#/tool_events/3"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Coverage is confirmed by a tool, while repeated handoffs request legal notification and preservation. No claim-creation or acknowledgment operation is executed; the user ends OUT-OF-SCOPE.",
+    "review_id": "R12",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/insurance_claims_intake/test_cases.py",
+    "source_lines": {
+      "class": 2043,
+      "description": 2285,
+      "difficulty": 2288,
+      "difficulty_reasoning": 2289,
+      "expected_tool_calls": 2064,
+      "input_data": 2052,
+      "milestones": 2214,
+      "test_case_id": 2049,
+      "title": 2050,
+      "workflow": 2051
+    },
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/insurance_claims_intake/InsuranceClaimsIntakeAndTriageAgent_W5_TC1_trial3.json.gz",
+    "trial": 3
+  },
+  {
+    "adjudication_question": "Resolve amount/entity consistency and approval status vocabulary. No payment-completion evidence follows from a handoff request.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1_trial0.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1_trial0.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1_trial0.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1_trial0.json.gz#/tool_events/3"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "Two requisition reads return a 500 total against a 10000 scenario amount. The agent escalates reconciliation. Independently, reference quantity_mismatch is rejected by route_payment_approval.",
+    "review_id": "R13",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+    "source_lines": {
+      "class": 1420,
+      "description": 1578,
+      "difficulty": 1579,
+      "difficulty_reasoning": 1580,
+      "expected_tool_calls": 1442,
+      "input_data": 1430,
+      "milestones": 1519,
+      "test_case_id": 1426,
+      "title": 1427,
+      "workflow": 1428
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1_trial0.json.gz",
+    "trial": 0
+  },
+  {
+    "adjudication_question": "What establishes the override and authoritative amount? An acknowledgement must not count as CFO approval or supplier delivery.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/1",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/3",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/4",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/5",
+      "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz#/tool_events/6"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The requisition mock returns a 500 amount against a 22000 scenario. The agent routes the discrepancy for review, checks a supplier contract, and does not create/send a PO. The reference assumes a CFO override; the system tool provides only a generic escalation acknowledgement.",
+    "review_id": "R14",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+    "source_lines": {
+      "class": 954,
+      "description": 1115,
+      "difficulty": 1119,
+      "difficulty_reasoning": 1120,
+      "expected_tool_calls": 973,
+      "input_data": 964,
+      "milestones": 1067,
+      "test_case_id": 961,
+      "title": 962,
+      "workflow": 963
+    },
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/manufacturing_purchase_to_pay/ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1_trial1.json.gz",
+    "trial": 1
+  },
+  {
+    "adjudication_question": "Determine whether the trace supports the correct alert/entity. Completion of the reference-shaped analysis does not automatically establish correct approval.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "grader_limitation",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz#/tool_events/3",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz#/tool_events/5",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz#/tool_events/6"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The original grader reports check_device_intelligence missing, although it is executed at event 3. The returned device/transaction differ from reference IDs. The tool returns risk 15 while the reference expects 25; SUCCESS echoes the agent conclusion with no independent approval state.",
+    "review_id": "R15",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 689,
+      "description": 845,
+      "difficulty": 850,
+      "difficulty_reasoning": 851,
+      "expected_tool_calls": 714,
+      "input_data": 699,
+      "milestones": 806,
+      "test_case_id": 696,
+      "title": 697,
+      "workflow": 698
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial2.json.gz",
+    "trial": 2
+  },
+  {
+    "adjudication_question": "Separate harmless read reordering from consequential entity/risk discrepancies. This is not yet a confirmed valid alternative solution.",
+    "adjudicator": null,
+    "classification_candidates": [
+      "dataset_reference_inconsistency",
+      "grader_limitation",
+      "unresolved"
+    ],
+    "evidence": [
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz#/tool_events/0",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz#/tool_events/2",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz#/tool_events/4",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz#/tool_events/5",
+      "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz#/tool_events/6"
+    ],
+    "human_reviewer": null,
+    "new_reward": null,
+    "observation": "The same task in trial 3 also reaches SUCCESS but performs history after device/database checks. These independent reads need not have the reference total order. Entity and risk-output conflicts remain.",
+    "review_id": "R16",
+    "review_status": "author_draft_pending_independent_review",
+    "source_file": "data/banking_fraud_monitoring/test_cases.py",
+    "source_lines": {
+      "class": 689,
+      "description": 845,
+      "difficulty": 850,
+      "difficulty_reasoning": 851,
+      "expected_tool_calls": 714,
+      "input_data": 699,
+      "milestones": 806,
+      "test_case_id": 696,
+      "title": 697,
+      "workflow": 698
+    },
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2",
+    "trace_file": "results/baseline/v2_synthetic_full/traces/banking_fraud_monitoring/BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2_trial3.json.gz",
+    "trial": 3
+  }
+]

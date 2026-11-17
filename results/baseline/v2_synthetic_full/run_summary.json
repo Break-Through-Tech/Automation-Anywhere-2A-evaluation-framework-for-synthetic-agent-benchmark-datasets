@@ -1,0 +1,23 @@
+{
+  "evaluation": "reference trajectory and structured-outcome proxy; not equivalent to tau2 native evaluation",
+  "original_connection_errors_archived": 13,
+  "recorded_trials": 256,
+  "remaining_api_errors": 0,
+  "served_models": {
+    "gpt-6.1-terra": 2968
+  },
+  "source_hashes_verified": true,
+  "status_counts": {
+    "failed_reference": 188,
+    "invalid_reference": 68
+  },
+  "tasks": 64,
+  "tasks_scored": 47,
+  "tasks_unscored_invalid_reference": 17,
+  "termination_reasons": {
+    "user_stop": 254,
+    "workflow_terminal": 2
+  },
+  "trace_rewards_reproduced": true,
+  "trials_per_task": 4
+}

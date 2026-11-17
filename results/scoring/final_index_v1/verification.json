@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "review_count": 5,
+  "csvs_checked_against_recalculation": [
+    "zayd",
+    "ronnit",
+    "divya"
+  ],
+  "comment_scores_checked_at_display_precision": [
+    "sana",
+    "mila"
+  ],
+  "sana_raw_trial_csv_supplied": false,
+  "all_contribution_sums_match": true,
+  "api_calls": 0,
+  "zayd_pr": 83,
+  "zayd_pr_merged": false,
+  "weights_selected_by": "Mila delegated operational choice to assistant; this is not reviewer consensus or Sandra approval"
+}

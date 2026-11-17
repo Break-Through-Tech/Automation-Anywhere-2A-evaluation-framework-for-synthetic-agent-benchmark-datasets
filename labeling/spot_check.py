@@ -1,14 +1,16 @@
 """Spot-check the LLM labels.
 
-Step 1 (make the sheet):   python scripts/spot_check.py make --labels outputs/labels_tau2.csv --n 30
-Step 2: open outputs/spot_check_sheet.csv, read each task_text, fill in `task_type_ok`
+Step 1 (make the sheet):   python labeling/spot_check.py make --labels coverage/labels/labels_tau2.csv --n 30
+Step 2: open results/labeling/spot_check_sheet.csv, read each task_text, fill in `task_type_ok`
         with y or n (and write the right label in `correct_task_type` when n).
-Step 3 (score it):         python scripts/spot_check.py score
+Step 3 (score it):         python labeling/spot_check.py score
 """
 import argparse
+from pathlib import Path
 import pandas as pd
 
-SHEET = "outputs/spot_check_sheet.csv"
+ROOT = Path(__file__).resolve().parents[1]
+SHEET = ROOT / "results/labeling/spot_check_sheet.csv"
 
 
 def make(labels, n, seed):
@@ -22,6 +24,7 @@ def make(labels, n, seed):
     s = s[["task_id", "domain"] + (["given_category"] if "given_category" in s.columns else []) + ["text", "tools", "task_type", "llm_rationale"]].rename(columns={"text": "task_text"})
     for c in ["task_type_ok", "correct_task_type", "notes"]:
         s[c] = ""
+    SHEET.parent.mkdir(parents=True, exist_ok=True)
     s.to_csv(SHEET, index=False)
     print(f"wrote {SHEET} with {len(s)} rows")
 
@@ -41,7 +44,7 @@ def score():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("cmd", choices=["make", "score"])
-    ap.add_argument("--labels", default="outputs/labels_tau2.csv")
+    ap.add_argument("--labels", default=str(ROOT / "coverage/labels/labels_tau2.csv"))
     ap.add_argument("--n", type=int, default=30)
     ap.add_argument("--seed", type=int, default=42)
     a = ap.parse_args()

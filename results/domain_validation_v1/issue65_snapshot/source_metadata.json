@@ -1,0 +1,20 @@
+{
+  "README.md": {
+    "sha": "2af2e6663a63678159376ec1ae36be9df9f4e633",
+    "url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/65-conduct-intra-dataset-analysis/results/domain_analysis/README.md"
+  },
+  "domain_profiles.csv": {
+    "sha": "ffe64401cf1639c1cf5892b458c089dad1f46dea",
+    "url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/65-conduct-intra-dataset-analysis/results/domain_analysis/domain_profiles.csv"
+  },
+  "provenance.json": {
+    "sha": "7a30dc3ded32566e5d37737530d6cfed62ee4f54",
+    "url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/blob/65-conduct-intra-dataset-analysis/results/domain_analysis/provenance.json"
+  },
+  "issue65": [
+    {
+      "url": "https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/issues/65#issuecomment-6901086486",
+      "body": "Issue #65: Conduct intra-dataset analysis\n\nLink: https://github.com/Break-Through-Tech/Automation-Anywhere-2A-evaluation-framework-for-synthetic-agent-benchmark-datasets/tree/65-conduct-intra-dataset-analysis/results/domain_analysis\n\n- Domain profiles for all 3 τ²-bench domains and 7 synthetic agents: workflow completeness, entropy, Coverage, v1.1 designed Difficulty and the #62 50/50 composite\n- Airline vs retail: Coverage favors airline (0.962 vs 0.905), Difficulty favors retail (64.87 vs 59.10), and the composites are nearly equal (77.62 vs 77.67)\n- Checked against the frozen coverage CSV, the 342 task scores, and the 50/114/114 dataset mean (64.1547)\n- Outputs for #66: domain_profiles.csv, tau2_domain_profiles.png, provenance.json and a README with findings and limitations\n\n@bondmila @sanagrao6 @anjanakummetha this is ready for #66."
+    }
+  ]
+}

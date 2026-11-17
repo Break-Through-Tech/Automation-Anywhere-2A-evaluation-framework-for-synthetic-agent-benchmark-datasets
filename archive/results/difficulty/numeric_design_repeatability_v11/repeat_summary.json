@@ -1,0 +1,177 @@
+{
+  "status": "initial_development_sample_repeatability_pass",
+  "cases": [
+    {
+      "task_id": "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+      "scores": [
+        65,
+        65,
+        65
+      ],
+      "mean": 65,
+      "range": 0,
+      "dimension_levels_by_repeat": [
+        {
+          "workload": 3,
+          "reasoning": 2,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        },
+        {
+          "workload": 3,
+          "reasoning": 2,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        },
+        {
+          "workload": 3,
+          "reasoning": 2,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        }
+      ],
+      "active_unit_sets_match": true,
+      "distinct_applicability_count_patterns": 2,
+      "active_workflow_step_sets_match": true,
+      "classification_variations": [
+        {
+          "unit_id": "step_007",
+          "applicability_by_repeat": [
+            "required",
+            "selected_conditional",
+            "required"
+          ],
+          "rationale_by_repeat": [
+            "Bind funding details, choose instant verification, and check status.",
+            "Select the instant alternative, bind bank details, and check verification.",
+            "Select instant verification and check the resulting funding status."
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "scores": [
+        65,
+        65,
+        65
+      ],
+      "mean": 65,
+      "range": 0,
+      "dimension_levels_by_repeat": [
+        {
+          "workload": 3,
+          "reasoning": 2,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        },
+        {
+          "workload": 3,
+          "reasoning": 2,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        },
+        {
+          "workload": 3,
+          "reasoning": 2,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        }
+      ],
+      "active_unit_sets_match": true,
+      "distinct_applicability_count_patterns": 2,
+      "active_workflow_step_sets_match": true,
+      "classification_variations": [
+        {
+          "unit_id": "step_007",
+          "applicability_by_repeat": [
+            "selected_conditional",
+            "required",
+            "required"
+          ],
+          "rationale_by_repeat": [
+            "Select the specified verification method and check whether funding becomes verified.",
+            "Choose micro-deposit verification, bind the bank details, and establish verified status before the successful exit.",
+            "Select micro-deposit verification and establish its result before the successful opening."
+          ]
+        }
+      ]
+    },
+    {
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "scores": [
+        70,
+        70,
+        75
+      ],
+      "mean": 71.66666666666667,
+      "range": 5,
+      "dimension_levels_by_repeat": [
+        {
+          "workload": 3,
+          "reasoning": 3,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        },
+        {
+          "workload": 3,
+          "reasoning": 3,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        },
+        {
+          "workload": 4,
+          "reasoning": 3,
+          "tool_use": 3,
+          "dependencies": 3,
+          "information": 2
+        }
+      ],
+      "active_unit_sets_match": false,
+      "distinct_applicability_count_patterns": 2,
+      "active_workflow_step_sets_match": true,
+      "classification_variations": [
+        {
+          "unit_id": "global_requirements",
+          "applicability_by_repeat": [
+            "context",
+            "context",
+            "required"
+          ],
+          "rationale_by_repeat": [
+            "Applies as constraints, not an additional bundle of active steps or unselected recovery work.",
+            "The coverage prerequisite informs dependencies; failure recovery is not selected by the supplied case.",
+            "These rules constrain sequencing and dispatch but do not add an independent workflow step."
+          ]
+        }
+      ]
+    }
+  ],
+  "prespecified_check": {
+    "version": "design_calibration_v1",
+    "thresholds": {
+      "max_repeat_range": 10,
+      "max_mean_repeat_range": 5,
+      "max_perturbation_delta": 10,
+      "min_control_pair_delta": 10
+    },
+    "n_repeated_tasks": 3,
+    "max_observed_repeat_range": 5,
+    "mean_observed_repeat_range": 1.6666666666666667,
+    "repeat_check": "pass",
+    "perturbation_check": "not_run",
+    "control_pair_check": "not_run",
+    "held_out_check": "not_run",
+    "go_no_go": "not_established",
+    "independent_human_validation": false,
+    "note": "A valid response or a three-task pilot is not full calibration. Repeat, controlled-pair, paraphrase/order and held-out source checks remain separate requirements."
+  }
+}

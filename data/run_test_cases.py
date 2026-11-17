@@ -26,9 +26,6 @@ sys.path.insert(0, str(current_dir))
 # Load configuration before agent_runner checks credentials during import.
 load_dotenv(dotenv_path=current_dir.parent / ".env")
 
-from agent_runner import run_test_case_local
-
-
 def load_test_case_classes(agent_name: str):
     """
     Dynamically import test case classes for a given agent.
@@ -37,7 +34,7 @@ def load_test_case_classes(agent_name: str):
         agent_name: Name of the agent (e.g., "insurance_claims")
         
     Returns:
-        Dictionary mapping test_id to test case class
+        Dictionary keyed by the supplied Python test_case_id
     """
     module_path = f"{agent_name}.test_cases"
     
@@ -54,14 +51,14 @@ def load_test_case_classes(agent_name: str):
         if name.startswith("TestCase") and obj.__module__ == module_path
     ]
     
-    # Build a dict keyed by test_id or class name
+    # Use the same supplied identifier as the saved baseline and judge outputs.
     test_cases_by_id = {}
     for cls in test_case_classes:
-        # Try to get test_id from class attributes
-        test_id = getattr(cls, 'test_id', None)
-        if not test_id:
-            # Fallback to class name
-            test_id = cls.__name__
+        test_id = getattr(cls, 'test_case_id', None)
+        if not isinstance(test_id, str) or not test_id.strip():
+            raise ValueError(f"Missing test_case_id on {cls.__name__}")
+        if test_id in test_cases_by_id:
+            raise ValueError(f"Duplicate test_case_id {test_id!r} in {agent_name}")
         test_cases_by_id[test_id] = cls
     
     print(f"✓ Loaded {len(test_case_classes)} test case classes from {module_path}")
@@ -192,6 +189,9 @@ def run_local_testcases(
     test_instance = test_cls()
     
     # try:
+    # Load execution dependencies only when actually running an agent.
+    from agent_runner import run_test_case_local
+
     # Run the test case using agent_runner
     agent_result, tools = run_test_case_local(
         test_case_instance=test_instance,
@@ -323,6 +323,54 @@ async def main(agent_names: List[str], max_turns: int = 20, verbose: bool = True
     return results
 
 
+def _json_safe(value):
+    if value is None or isinstance(value, (str, int, float, bool)):
+        return value
+    if isinstance(value, dict):
+        return {str(key): _json_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_json_safe(item) for item in value]
+    if hasattr(value, "model_dump"):
+        return _json_safe(value.model_dump())
+    raise TypeError(f"Cannot serialize trial transcript value of type {type(value).__name__}")
+
+
+def _serialize_message(message):
+    if isinstance(message, dict):
+        role = message.get("role") or message.get("type")
+        content = message.get("content", "")
+        tool_calls = message.get("tool_calls")
+    else:
+        role = getattr(message, "type", None) or getattr(message, "role", None)
+        content = getattr(message, "content", "")
+        tool_calls = getattr(message, "tool_calls", None)
+    if not role:
+        raise ValueError(f"Transcript message has no role/type: {type(message).__name__}")
+    return {
+        "role": role,
+        "content": _json_safe(content),
+        "tool_calls": _json_safe(tool_calls) if tool_calls else [],
+    }
+
+
+def save_judge_trials(results, output_path, trial=0):
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("w", encoding="utf-8") as output:
+        for entry in results:
+            inputs = entry["inputs"]
+            row = {
+                "domain": inputs["agent_name"],
+                "task_id": inputs["test_id"],
+                "trial": trial,
+            }
+            if "error" in entry:
+                row["error"] = entry["error"]
+            else:
+                row["transcript"] = [_serialize_message(message) for message in entry["result"].messages]
+            output.write(json.dumps(row, ensure_ascii=False) + "\n")
+
+
 if __name__ == "__main__":
     # Parse command-line arguments
     parser = argparse.ArgumentParser(
@@ -356,6 +404,17 @@ if __name__ == "__main__":
         action='store_true',
         help='Disable verbose output'
     )
+    parser.add_argument(
+        '--save-results',
+        type=Path,
+        help='Optionally save agent transcripts as JSONL for difficulty/llm_judge.py'
+    )
+    parser.add_argument(
+        '--trial',
+        type=int,
+        default=0,
+        help='Trial number written to saved JSONL results (default: 0)'
+    )
 
     args = parser.parse_args()
 
@@ -363,10 +422,12 @@ if __name__ == "__main__":
     verbose = args.verbose and not args.quiet
 
     # Run the async main function with parsed arguments
-    asyncio.run(main(
+    results = asyncio.run(main(
         agent_names=args.agents,
         max_turns=args.max_turns,
         verbose=verbose
     ))
-
+    if args.save_results and results:
+        save_judge_trials(results, args.save_results, args.trial)
+        print(f"Saved judge input transcripts to {args.save_results}")
 

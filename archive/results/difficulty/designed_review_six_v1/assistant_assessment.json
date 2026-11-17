@@ -1,0 +1,72 @@
+{
+  "review_type": "assistant assessment, not independent human validation",
+  "reviewer": "Codex assistant",
+  "date": "2026-11-11",
+  "prior_exposure_to_tags_and_counts": true,
+  "ranking": "A < B < (C = D = E) < F",
+  "ties_mean": "strict comparison unresolved, not equal true difficulty",
+  "numeric_difficulty_score": null,
+  "source_review": "results/difficulty/designed_review_six_v1/review.json",
+  "assessments": [
+    {
+      "example": "A",
+      "task_id": "HealthcarePA_W8_TC1",
+      "group": 1,
+      "actions": "Look up the authorization, interpret the returned status, and communicate the approval to the provider.",
+      "choices": "Choose the status-specific response from the lookup result. Approval is fixed by this scenario; this does not establish an independent branching count.",
+      "reason": "The narrowest requested outcome, with no intended recovery loop, payment approval dependency, or linked records.",
+      "confidence": "Moderate for its placement as simplest; action granularity remains provisional.",
+      "issues": "The scenario omits the reference ID. That is a separate feasibility issue. The workflow also bundles EHR updating with notification, so the exact action count needs confirmation."
+    },
+    {
+      "example": "B",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "group": 2,
+      "actions": "Match the invoice against the order and receipt, evaluate the variance, route it to accounts payable, and process payment after approval.",
+      "choices": "Determine whether the variance requires review and whether approval permits payment. The scenario fixes a resolved review; do not count an unused escalation as performed work.",
+      "reason": "Adds exception handling and an approval dependency beyond A, but the intended path is narrower than the broader multi-system tasks in the next group.",
+      "confidence": "Moderate; if approval is entirely handled outside the agent, its contribution should be reduced.",
+      "issues": "Receiving an already supplied invoice and signaling completion are not automatically substantive actions. Human review dependency should not be confused with the agent making the approval decision."
+    },
+    {
+      "example": "C",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "group": 3,
+      "actions": "Extract demographics and insurance, check coverage, request and incorporate updated insurance, recheck coverage, create the patient record, schedule the appointment, and send confirmation.",
+      "choices": "React to inactive coverage, select the updated-insurance route rather than self-pay, and proceed after a successful recheck. Some choices are fixed by the scenario, and a final success decision may duplicate the recheck.",
+      "reason": "The recovery loop and state update add complexity. There is not enough agreed weighting to place it strictly above or below D and E.",
+      "confidence": "Moderate that it belongs above B; low for a strict ordering within C, D and E.",
+      "issues": "Separate passive waiting from active work. Whether updated insurance is actually delivered by the environment is a data issue, not an extra designed action."
+    },
+    {
+      "example": "D",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "group": 3,
+      "actions": "Gather transaction, customer and history information; cross-check device and fraud data; calculate risk; assemble the investigation package; and route the case to an analyst.",
+      "choices": "Determine the appropriate risk route and ensure the package supports the handoff. The workflow is already selected in the reference, so do not assume all route selection is left to the agent.",
+      "reason": "Combines several information sources and a justified handoff. This differs from C\u2019s recovery loop and E\u2019s dispatch workflow, without establishing which is harder.",
+      "confidence": "Moderate for the middle group; low for ordering it against C or E.",
+      "issues": "The risk threshold is in workflow trigger conditions. The current wording detector does not inspect those conditions. Tool-failure handling is separate from business decision complexity."
+    },
+    {
+      "example": "E",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "group": 3,
+      "actions": "Extract the loss, classify it, validate coverage, assess emergency severity, create the claim, dispatch mitigation, assign the team, and acknowledge the customer.",
+      "choices": "Use coverage, severity and claim classification to select appropriate actions. The scenario already specifies active coverage and emergency severity, which limits the choices remaining open.",
+      "reason": "Requires several operational actions and coordination. Its linear intended path does not obviously outweigh C\u2019s recovery or D\u2019s evidence gathering.",
+      "confidence": "Moderate for the middle group; low for a strict ordering against C and D.",
+      "issues": "The input marks catastrophe_event false while the reference assigns the CAT team. Resolve that source tension separately rather than raising the designed difficulty score."
+    },
+    {
+      "example": "F",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "group": 4,
+      "actions": "Extract and classify the loss, validate property and business interruption coverage, assess the loss, create linked claims, coordinate the large loss team and specialists, dispatch experts, and acknowledge the insured.",
+      "choices": "Apply both coverage scopes and select the specialist route while preserving links between claims. The exact independent choices remain unconfirmed because the scenario fixes the intended path.",
+      "reason": "Provisional highest complexity because it adds linked claim entities and multiple specialist roles to the insurance workflow in E. Equal tool counts do not express those additional requirements.",
+      "confidence": "Moderate relative to E; lower for claiming it is definitively harder than every other domain.",
+      "issues": "One tool may encapsulate several outputs or actions. Linked entities and coordination need consistent definitions before they become numerical features."
+    }
+  ]
+}

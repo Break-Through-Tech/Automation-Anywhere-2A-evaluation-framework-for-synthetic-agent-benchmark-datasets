@@ -1,0 +1,45 @@
+{
+  "status": "all_three_authored_controls_passed",
+  "new_api_requests": 3,
+  "controls_attempted": 3,
+  "private_answer_keys_hidden": true,
+  "outcomes": [
+    {
+      "control_id": "C01",
+      "judgment": "met",
+      "difficulty_eligible": true,
+      "blocker_recognition": "not_established",
+      "expected_fields_match": true
+    },
+    {
+      "control_id": "C02",
+      "judgment": "unmet",
+      "difficulty_eligible": true,
+      "blocker_recognition": "not_established",
+      "expected_fields_match": true
+    },
+    {
+      "control_id": "C03",
+      "judgment": "unverifiable",
+      "difficulty_eligible": false,
+      "blocker_recognition": "supported_positive",
+      "expected_fields_match": true
+    }
+  ],
+  "returned_models": {
+    "gpt-6-astra": 3
+  },
+  "token_usage": {
+    "prompt_tokens": 14261,
+    "completion_tokens": 2778,
+    "total_tokens": 17039
+  },
+  "policy_version": "provisional_outcome_v0.2",
+  "prompt_sha256": "fee70dbf8fda97dba85dea85721a6559dc1def28e521b502e1d4240c0547ea39",
+  "control_source_sha256": "bf2d64466326b75c02f5ce52c3d16642734a976af6e0c6751445afa4cf4daf11",
+  "human_answers_unchanged": true,
+  "benchmark_tasks_run": 0,
+  "benchmark_difficulty_computed": false,
+  "limitation": "Three simple assistant-authored controls are not independent human gold or benchmark validation.",
+  "termination": "Three-control test completed; no automatic expansion. The final two expected labels are non-success, not control failures."
+}

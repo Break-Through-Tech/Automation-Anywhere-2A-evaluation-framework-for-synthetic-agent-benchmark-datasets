@@ -1,0 +1,12 @@
+{
+  "status": "verified_real_local_framework_run",
+  "tasks": 342,
+  "synthetic_tasks_with_features": 64,
+  "tau_tasks_with_blank_synthetic_features": 278,
+  "historical_empirical_and_write_counts_preserved": true,
+  "new_model_calls": 0,
+  "new_feature_correlations_computed": false,
+  "new_difficulty_scores_from_judge": false,
+  "coverage_embedding_model_downloaded": true,
+  "api_test_gate": "waiting for issue 51 / group 1; no API test run"
+}

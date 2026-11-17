@@ -1,0 +1,338 @@
+[
+  {
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W3_TC1",
+    "issues": [
+      {
+        "step": 0,
+        "tool": "validate_customer_identity",
+        "error": "ValueError",
+        "message": "Invalid id_type: business_license. Must be one of [\"driver's_license\", 'passport', 'state_id']"
+      }
+    ]
+  },
+  {
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W6_TC1",
+    "issues": [
+      {
+        "step": 0,
+        "tool": "validate_customer_identity",
+        "error": "ValueError",
+        "message": "Invalid id_type: joint. Must be one of [\"driver's_license\", 'passport', 'state_id']"
+      }
+    ]
+  },
+  {
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W7_TC1",
+    "issues": [
+      {
+        "step": 2,
+        "tool": "calculate_account_tier",
+        "error": "ValidationError",
+        "message": "1 validation error for calculate_account_tier_arguments\ncustomer_profile.student_status\n  Input should be a valid boolean [type=bool_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/bool_type"
+      }
+    ]
+  },
+  {
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+    "issues": [
+      {
+        "step": 2,
+        "tool": "screen_sanctions_lists",
+        "error": "ValidationError",
+        "message": "1 validation error for screen_sanctions_lists_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      },
+      {
+        "step": 4,
+        "tool": "create_core_banking_customer",
+        "error": "ValidationError",
+        "message": "1 validation error for create_core_banking_customer_arguments\ncustomer_data.dob\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      }
+    ]
+  },
+  {
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1",
+    "issues": [
+      {
+        "step": 1,
+        "tool": "send_welcome_communication",
+        "error": "ValidationError",
+        "message": "1 validation error for send_welcome_communication_arguments\ncustomer_id\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      }
+    ]
+  },
+  {
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+    "issues": [
+      {
+        "step": 1,
+        "tool": "send_welcome_communication",
+        "error": "ValidationError",
+        "message": "1 validation error for send_welcome_communication_arguments\ncustomer_id\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W5_TC1",
+    "issues": [
+      {
+        "step": 2,
+        "tool": "create_ehr_patient_record",
+        "error": "ValidationError",
+        "message": "1 validation error for create_ehr_patient_record_arguments\ninsurance\n  Input should be a valid dictionary [type=dict_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W8_TC1",
+    "issues": [
+      {
+        "step": 6,
+        "tool": "create_ehr_patient_record",
+        "error": "ValidationError",
+        "message": "2 validation errors for create_ehr_patient_record_arguments\ndemographics\n  Input should be a valid dictionary [type=dict_type, input_value='extracted-demographics', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nmedical_history\n  Input should be a valid dictionary [type=dict_type, input_value='extracted-medical-history', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC2",
+    "issues": [
+      {
+        "step": 3,
+        "tool": "validate_clinical_criteria",
+        "error": "ValidationError",
+        "message": "3 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Sleep ...ome sleep test report']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='home sleep test report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W2_TC1",
+    "issues": [
+      {
+        "step": 5,
+        "tool": "validate_clinical_criteria",
+        "error": "ValidationError",
+        "message": "2 validation errors for validate_clinical_criteria_arguments\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='clinical note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='imaging report', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W3_TC1",
+    "issues": [
+      {
+        "step": 3,
+        "tool": "validate_clinical_criteria",
+        "error": "ValidationError",
+        "message": "3 validation errors for validate_clinical_criteria_arguments\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='labs', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='treatment history', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='provider notes', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W4_TC1",
+    "issues": [
+      {
+        "step": 2,
+        "tool": "appeal_pa_denial",
+        "error": "ValidationError",
+        "message": "2 validation errors for appeal_pa_denial_arguments\nadditional_docs.0\n  Input should be a valid dictionary [type=dict_type, input_value='additional labs', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nadditional_docs.1\n  Input should be a valid dictionary [type=dict_type, input_value='specialist note', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W5_TC1",
+    "issues": [
+      {
+        "step": 3,
+        "tool": "validate_clinical_criteria",
+        "error": "ValidationError",
+        "message": "4 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'DME cr...is', 'pulse ox', 'ABG']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 4,
+        "tool": "prepare_pa_submission",
+        "error": "ValidationError",
+        "message": "3 validation errors for prepare_pa_submission_arguments\nattachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 5,
+        "tool": "submit_pa_request",
+        "error": "ValidationError",
+        "message": "3 validation errors for submit_pa_request_arguments\npa_submission.attachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='diagnosis', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='pulse ox', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='ABG', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W7_TC1",
+    "issues": [
+      {
+        "step": 3,
+        "tool": "validate_clinical_criteria",
+        "error": "ValidationError",
+        "message": "4 validation errors for validate_clinical_criteria_arguments\ncriteria_object.decision_tree\n  Field required [type=missing, input_value={'criteria_text': 'Bariat...', 'cardiac clearance']}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\nclinical_data.docs_found.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nclinical_data.docs_found.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 4,
+        "tool": "prepare_pa_submission",
+        "error": "ValidationError",
+        "message": "3 validation errors for prepare_pa_submission_arguments\nattachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nattachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 5,
+        "tool": "submit_pa_request",
+        "error": "ValidationError",
+        "message": "3 validation errors for submit_pa_request_arguments\npa_submission.attachments.0\n  Input should be a valid dictionary [type=dict_type, input_value='nutrition eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.1\n  Input should be a valid dictionary [type=dict_type, input_value='psych eval', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\npa_submission.attachments.2\n  Input should be a valid dictionary [type=dict_type, input_value='cardiac clearance', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W2_TC2",
+    "issues": [
+      {
+        "step": 1,
+        "tool": "classify_claim_type",
+        "error": "ValidationError",
+        "message": "2 validation errors for classify_claim_type_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      },
+      {
+        "step": 3,
+        "tool": "assess_claim_severity",
+        "error": "ValidationError",
+        "message": "2 validation errors for assess_claim_severity_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      },
+      {
+        "step": 4,
+        "tool": "create_claim_record",
+        "error": "ValidationError",
+        "message": "2 validation errors for create_claim_record_arguments\nloss_details.contact_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nloss_details.contact_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      },
+      {
+        "step": 6,
+        "tool": "send_claim_acknowledgment",
+        "error": "ValidationError",
+        "message": "2 validation errors for send_claim_acknowledgment_arguments\nrecipient_info.email\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type\nrecipient_info.phone\n  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type"
+      }
+    ]
+  },
+  {
+    "domain": "insurance_claims_intake",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+    "issues": [
+      {
+        "step": 3,
+        "tool": "classify_claim_type",
+        "error": "ValidationError",
+        "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 4,
+        "tool": "classify_claim_type",
+        "error": "ValidationError",
+        "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 5,
+        "tool": "classify_claim_type",
+        "error": "ValidationError",
+        "message": "1 validation error for classify_claim_type_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 9,
+        "tool": "assess_claim_severity",
+        "error": "ValidationError",
+        "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 10,
+        "tool": "assess_claim_severity",
+        "error": "ValidationError",
+        "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 11,
+        "tool": "assess_claim_severity",
+        "error": "ValidationError",
+        "message": "2 validation errors for assess_claim_severity_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 12,
+        "tool": "create_claim_record",
+        "error": "ValidationError",
+        "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 13,
+        "tool": "create_claim_record",
+        "error": "ValidationError",
+        "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 14,
+        "tool": "create_claim_record",
+        "error": "ValidationError",
+        "message": "3 validation errors for create_claim_record_arguments\nloss_details\n  Input should be a valid dictionary [type=dict_type, input_value='<extracted_loss_details_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\ncoverage_info\n  Input should be a valid dictionary [type=dict_type, input_value='<coverage_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 15,
+        "tool": "route_to_adjuster",
+        "error": "ValidationError",
+        "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 16,
+        "tool": "route_to_adjuster",
+        "error": "ValidationError",
+        "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 17,
+        "tool": "route_to_adjuster",
+        "error": "ValidationError",
+        "message": "1 validation error for route_to_adjuster_arguments\nseverity_info\n  Input should be a valid dictionary [type=dict_type, input_value='<severity_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 20,
+        "tool": "send_claim_acknowledgment",
+        "error": "ValidationError",
+        "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_1>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 21,
+        "tool": "send_claim_acknowledgment",
+        "error": "ValidationError",
+        "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_2>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      },
+      {
+        "step": 22,
+        "tool": "send_claim_acknowledgment",
+        "error": "ValidationError",
+        "message": "1 validation error for send_claim_acknowledgment_arguments\nrecipient_info\n  Input should be a valid dictionary [type=dict_type, input_value='<recipient_info_3>', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.11/v/dict_type"
+      }
+    ]
+  },
+  {
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+    "issues": [
+      {
+        "step": 1,
+        "tool": "route_payment_approval",
+        "error": "ValueError",
+        "message": "Invalid match_status: quantity_mismatch. Must be one of ['exact', 'small_variance', 'medium_variance', 'large_variance', 'exception', 'duplicate']"
+      }
+    ]
+  }
+]

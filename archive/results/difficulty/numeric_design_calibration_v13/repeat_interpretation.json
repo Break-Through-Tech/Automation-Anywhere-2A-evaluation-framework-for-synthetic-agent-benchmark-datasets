@@ -1,0 +1,422 @@
+[
+  {
+    "dataset": "synthetic",
+    "domain": "banking_accounts_deposits",
+    "task_id": "DigitalAccountOpeningAgent_W2_TC1",
+    "scores": [
+      65,
+      70,
+      65
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": false,
+    "active_unit_counts": [
+      9,
+      8,
+      9
+    ],
+    "rationales": [
+      "Levels 3 + 2 + 3 + 3 + 2 yield 65. The score reflects substantial staged work and linked tool outputs, moderated by structured inputs and an explicitly indicated success path.",
+      "Ratings of workload 3, reasoning 3, tool use 3, dependencies 3, and information 2 yield 5 × 14 = 70. Cross-step reasoning exceeds individual unit ratings because several independently produced states must jointly justify opening.",
+      "Ratings of 3 workload, 2 reasoning, 3 tool use, 3 dependencies and 2 information sum to 13; 5 × 13 = 65."
+    ]
+  },
+  {
+    "dataset": "synthetic",
+    "domain": "banking_customer_onboarding",
+    "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+    "scores": [
+      65,
+      65,
+      65
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      9,
+      9,
+      9
+    ],
+    "rationales": [
+      "Ratings 3 + 2 + 3 + 3 + 2 = 13; provisional score 65. The path has substantial cross-system work but explicit rules and no case-specific reconciliation.",
+      "Ratings of workload 3, reasoning 2, tool use 3, dependencies 3 and information 2 give 5 × 13 = 65. This reflects linked multi-system onboarding without charging for unselected exception paths.",
+      "Levels 3 + 2 + 3 + 3 + 2 give a provisional index of 65. Breadth and linked records drive difficulty; the specified clear case limits reasoning and discovery. Tool use and dependencies overlap in their shared cross-system binding."
+    ]
+  },
+  {
+    "dataset": "synthetic",
+    "domain": "banking_fraud_monitoring",
+    "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+    "scores": [
+      60,
+      55,
+      60
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      6,
+      6,
+      6
+    ],
+    "rationales": [
+      "Ratings of workload 3, reasoning 2, tool use 3, dependencies 2, and information 2 sum to 12; 5 × 12 = 60. The score excludes unselected fraud, verification, and escalation work.",
+      "Levels 2 + 2 + 3 + 2 + 2 give a provisional score of 55. The principal burden is binding enriched records into scoring, not handling alternative high-risk routes.",
+      "Ratings of 3, 2, 3, 2, and 2 sum to 12; 5 × 12 = 60. The task combines several routine enrichment stages with a multi-object scoring call and a straightforward approval rule."
+    ]
+  },
+  {
+    "dataset": "synthetic",
+    "domain": "healthcare_patient_onboarding",
+    "task_id": "HealthcareOnboarding_W1_TC2",
+    "scores": [
+      70,
+      65,
+      65
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      9,
+      9,
+      9
+    ],
+    "rationales": [
+      "Ratings of workload 3, reasoning 3, tool use 3, dependencies 3, and information 2 sum to 14; 5 × 14 = 70. The score excludes unselected failure and escalation paths.",
+      "Levels 3 + 2 + 3 + 3 + 2 yield a provisional score of 65. Breadth and linked records drive difficulty; supplied complete inputs and a straightforward success path limit reasoning and discovery.",
+      "Ratings 3+2+3+3+2 give the provisional index 65. Breadth and linked records drive the score; the specified active-insurance, complete-form path limits branching."
+    ]
+  },
+  {
+    "dataset": "synthetic",
+    "domain": "healthcare_prior_authorization",
+    "task_id": "HealthcarePA_W1_TC1",
+    "scores": [
+      60,
+      60,
+      60
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      7,
+      7,
+      7
+    ],
+    "rationales": [
+      "Workload 3 + reasoning 2 + tool use 3 + dependencies 2 + information 2 = 12; 5 × 12 = 60. The score covers the standard approved path, not unselected recovery or appeal branches.",
+      "Ratings 3 + 2 + 3 + 2 + 2 give a provisional score of 60. The breadth and nested tool handoffs matter more than clinical ambiguity in this specified straightforward case.",
+      "Levels 3 + 2 + 3 + 2 + 2 yield a provisional score of 60. Multi-stage work and structured tool binding dominate; explicit favorable scenario conditions limit reasoning and discovery."
+    ]
+  },
+  {
+    "dataset": "synthetic",
+    "domain": "insurance_claims_intake",
+    "task_id": "ClaimsAgent_W6_TC1",
+    "scores": [
+      60,
+      55,
+      55
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 2,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": false,
+    "active_unit_counts": [
+      7,
+      7,
+      7
+    ],
+    "rationales": [
+      "Ratings of workload 3, reasoning 2, tool use 3, dependencies 2, and information 2 sum to 12; 5 × 12 = 60. The score covers the selected denial path, not unrelated workflows or hypothetical failures.",
+      "Ratings of 2 + 2 + 3 + 2 + 2 yield 55. The task is a routine multi-stage denial with structured argument binding, not a multi-party investigation.",
+      "Ratings of workload 2, reasoning 2, tool use 3, dependencies 2 and information 2 sum to 11; 5 × 11 = 55. No unselected recovery or emergency path is charged."
+    ]
+  },
+  {
+    "dataset": "synthetic",
+    "domain": "manufacturing_purchase_to_pay",
+    "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+    "scores": [
+      65,
+      65,
+      65
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 2,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": false,
+    "active_unit_counts": [
+      10,
+      9,
+      10
+    ],
+    "rationales": [
+      "Five ratings of 3, 2, 3, 3 and 2 sum to 13; 5 × 13 = 65. Breadth and linked records drive the index, while explicit happy-path conditions limit reasoning and discovery.",
+      "Ratings 3+2+3+3+2 yield 65. This is substantial linked procurement work with structured calls, but the supplied conditions select the routine exact-match path rather than exception handling.",
+      "Ratings of workload 3, reasoning 2, tool use 3, dependencies 3, and information 2 yield 5 × 13 = 65. The score excludes unselected exception paths and duplicate milestone states."
+    ]
+  },
+  {
+    "dataset": "tau2",
+    "domain": "retail",
+    "task_id": "0",
+    "scores": [
+      70,
+      75,
+      70
+    ],
+    "dimension_levels": [
+      {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      },
+      {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      },
+      {
+        "workload": 3,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      6,
+      6,
+      6
+    ],
+    "rationales": [
+      "Levels 3+3+3+3+2 give a provisional score of 70: substantial two-item coordination and argument binding, with ordinary rather than extensive information discovery.",
+      "Levels 3+3+3+3+3 give a provisional score of 75: a linked two-item exchange with conditional selection and a single confirmed write, without charging for unrelated alternative workflows.",
+      "Levels 3, 3, 3, 3, and 2 sum to 14; 5 × 14 = 70. The conditional preference and paired exchange add complexity, while discovery remains bounded to ordinary order and product retrieval."
+    ]
+  },
+  {
+    "dataset": "tau2",
+    "domain": "telecom",
+    "task_id": "[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard]",
+    "scores": [
+      80
+    ],
+    "dimension_levels": [
+      {
+        "workload": 4,
+        "reasoning": 3,
+        "tool_use": 3,
+        "dependencies": 3,
+        "information": 3
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      13
+    ],
+    "rationales": [
+      "Levels 4+3+3+3+3 yield a provisional score of 80. Multiple independent initialized faults make the path extensive, but individual repairs use documented rules rather than substantial nested reconciliation."
+    ]
+  },
+  {
+    "dataset": "tau2",
+    "domain": "airline",
+    "task_id": "0",
+    "scores": [
+      50,
+      50,
+      50
+    ],
+    "dimension_levels": [
+      {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      },
+      {
+        "workload": 2,
+        "reasoning": 2,
+        "tool_use": 2,
+        "dependencies": 2,
+        "information": 2
+      }
+    ],
+    "active_unit_sets_equal": true,
+    "active_unit_counts": [
+      1,
+      1,
+      1
+    ],
+    "rationales": [
+      "Ratings of workload 2, reasoning 2, tool use 2, dependencies 2 and information 2 yield 5 × 10 = 50.",
+      "Ratings of 2 for workload, reasoning, tool use, dependencies, and information yield 5 × 10 = 50. The score covers verification and refusal, not alternative cancellation or escalation paths.",
+      "Five dimension levels of 2 sum to 10; 5 × 10 = 50. The task requires several checks and an ordinary lookup, but no booking update on its intended path."
+    ]
+  }
+]

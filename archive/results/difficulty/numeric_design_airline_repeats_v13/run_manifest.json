@@ -1,0 +1,30 @@
+{
+  "schema_version": "design_schema_v1.2_task_bound_units",
+  "validator_version": "design_evidence_validation_v1.3",
+  "prompt_version": "design_prompt_v1.1",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "authorized_batch_cap": 33,
+  "total_batch_calls": 33,
+  "remaining_calls": 0,
+  "new_calls_after_cached_seed": 2,
+  "offline_revalidation_new_calls": 0,
+  "scores": [
+    50,
+    50,
+    50
+  ],
+  "maximum_repeat_range": 0,
+  "source_data_edited": false,
+  "all_raw_responses_unchanged": true,
+  "original_rejected_record_preserved": true,
+  "returned_model": "gpt-6-sol",
+  "independent_validation": false,
+  "calibration": "single_new_schema_case_only_not_full_cross_dataset_calibration",
+  "signature_evidence_policy": "Exact literal/decoded quotation or exact signature + returns rendering from one structured tool object; derived renderings explicitly flagged. No fuzzy matching or arbitrary joining.",
+  "offline_tests_passed": 146,
+  "total_batch_usage": {
+    "input_tokens": 332257,
+    "output_tokens": 69098,
+    "total_tokens": 401355
+  }
+}

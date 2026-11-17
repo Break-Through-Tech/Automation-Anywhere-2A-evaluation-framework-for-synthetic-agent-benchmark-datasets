@@ -1,0 +1,9 @@
+{
+  "status": "prepared_offline_not_used_in_completed_v02_run",
+  "domains": 7,
+  "attempts": 16,
+  "supplement_sha256": "28a445c5de388e5457d625d5f27bad010a7f826f79c9062e1f98b3969591faba",
+  "supplement_local_path": ".cache/judge_review/v4/reference_context_supplement.json",
+  "network_calls": 0,
+  "next_step": "Version judge input/prompt, attach the relevant authoritative tool contracts and workflow, then test a small sample. Do not label missing judge context as a confirmed dataset blocker."
+}

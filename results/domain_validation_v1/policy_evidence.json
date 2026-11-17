@@ -1,0 +1,58 @@
+{
+  "airline": {
+    "source": "tau2-bench/data/tau2/domains/airline/policy.md",
+    "sha256": "10dc0525421521208be39cee235bba84a16e2bcba9899eb93d92cd81d2f62fc4",
+    "excerpts": [
+      {
+        "line": 139,
+        "text": "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons)"
+      },
+      {
+        "line": 143,
+        "text": "Otherwise, flight can be cancelled if any of the following is true:"
+      },
+      {
+        "line": 147,
+        "text": "- The user has travel insurance and the reason for cancellation is covered by insurance."
+      },
+      {
+        "line": 149,
+        "text": "The API does not check that cancellation rules are met, so the agent must make sure the rules apply before calling the API!"
+      }
+    ]
+  },
+  "retail": {
+    "source": "tau2-bench/data/tau2/domains/retail/policy.md",
+    "sha256": "2c9652afbce57d6e087768d37cda64d31c53d50b3e3225cfdb791bac66466467",
+    "excerpts": [
+      {
+        "line": 12,
+        "text": "Once the user has been authenticated, you can provide the user with information about order, product, profile information, e.g. help the user look up order id."
+      },
+      {
+        "line": 16,
+        "text": "Before taking any action that updates the database (cancel, modify, return, exchange), you must list the action details and obtain explicit user confirmation (yes) to proceed."
+      },
+      {
+        "line": 130,
+        "text": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action. In particular, remember to remind the customer to confirm they have provided all items to be exchanged."
+      },
+      {
+        "line": 132,
+        "text": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option. There cannot be any change of product types, e.g. modify shirt to shoe."
+      },
+      {
+        "line": 134,
+        "text": "The user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference."
+      },
+      {
+        "line": 136,
+        "text": "After user confirmation, the order status will be changed to 'exchange requested', and the user will receive an email regarding how to return items. There is no need to place a new order."
+      },
+      {
+        "line": 84,
+        "text": "Exchange or modify order tools can only be called once per order. Be sure that all items to be changed are collected into a list before making the tool call!!!"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+dataset,domain,task_id,workflow_id,status,score,reason,n_planned_judgments,n_saved_judgments,repeat_score_range
+validation_fixture,control,C01,fixture_two_steps,scored,35,All planned repeat judgments usable,1,1,0
+validation_fixture,control,C02,fixture_two_steps,scored,75,All planned repeat judgments usable,1,1,0
+validation_fixture,control,C03,fixture_two_steps,scored,40,All planned repeat judgments usable,1,1,0
+validation_fixture,control,C04,fixture_two_steps,scored,40,All planned repeat judgments usable,1,1,0

@@ -1,0 +1,44 @@
+[
+  {
+    "review_id": "D01",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+    "assistant_operation_units": 8,
+    "assistant_business_check_groups": 3,
+    "assistant_coordination": {
+      "approval": 0,
+      "external_response": 0,
+      "handoff": 2,
+      "linked_records": 0,
+      "multi_channel": 0,
+      "multi_party": 0
+    }
+  },
+  {
+    "review_id": "D02",
+    "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+    "assistant_operation_units": 8,
+    "assistant_business_check_groups": 3,
+    "assistant_coordination": {
+      "approval": 0,
+      "external_response": 0,
+      "handoff": 2,
+      "linked_records": 1,
+      "multi_channel": 0,
+      "multi_party": 2
+    }
+  },
+  {
+    "review_id": "D03",
+    "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+    "assistant_operation_units": 8,
+    "assistant_business_check_groups": 2,
+    "assistant_coordination": {
+      "approval": 0,
+      "external_response": 1,
+      "handoff": 0,
+      "linked_records": 0,
+      "multi_channel": 0,
+      "multi_party": 0
+    }
+  }
+]

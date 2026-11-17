@@ -1,0 +1,1930 @@
+{
+  "audit_version": "designed_difficulty_audit_v0.1",
+  "score_method": "designed_difficulty_v0.1_provisional",
+  "status": "offline_internal_review_not_independent_validation",
+  "n_tasks": 64,
+  "n_distinct_component_profiles": 35,
+  "n_tied_profile_groups": 11,
+  "n_tasks_in_tied_profiles": 40,
+  "profile_groups": [
+    {
+      "counts": {
+        "action_groups": 2,
+        "reference_tool_interactions": 2,
+        "business_check_groups": 1
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1"
+      ],
+      "domains": [
+        "manufacturing_purchase_to_pay"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 3,
+        "reference_tool_interactions": 1,
+        "business_check_groups": 1
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcarePA_W8_TC1"
+      ],
+      "domains": [
+        "healthcare_prior_authorization"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 3,
+        "reference_tool_interactions": 3,
+        "business_check_groups": 1
+      },
+      "n_tasks": 2,
+      "task_ids": [
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1"
+      ],
+      "domains": [
+        "manufacturing_purchase_to_pay"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy",
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 4,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 1
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "InsuranceClaimsIntakeAndTriageAgent_W7_TC1"
+      ],
+      "domains": [
+        "insurance_claims_intake"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 4,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 2
+      },
+      "n_tasks": 3,
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_W6_TC1",
+        "BankingFraudMonitoringSupportAgent_W7_TC1",
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W2_TC1"
+      ],
+      "domains": [
+        "banking_fraud_monitoring",
+        "manufacturing_purchase_to_pay"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 4,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 3
+      },
+      "n_tasks": 2,
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1",
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC2"
+      ],
+      "domains": [
+        "banking_fraud_monitoring"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 4,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 2
+      },
+      "n_tasks": 3,
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_W4_TC1",
+        "BankingFraudMonitoringSupportAgent_W4_TC2",
+        "BankingFraudMonitoringSupportAgent_W8_TC1"
+      ],
+      "domains": [
+        "banking_fraud_monitoring"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy",
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 4,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2
+      },
+      "n_tasks": 4,
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W2_TC1",
+        "BankingFraudMonitoringSupportAgent_W2_TC2",
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+        "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC2"
+      ],
+      "domains": [
+        "banking_fraud_monitoring"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy",
+        "hard",
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 5,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 1
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcareOnboarding_W4_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 5,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcarePA_W4_TC1"
+      ],
+      "domains": [
+        "healthcare_prior_authorization"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 5,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_W5_TC1"
+      ],
+      "domains": [
+        "banking_fraud_monitoring"
+      ],
+      "supplied_tags_comparison_only": [
+        "hard"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 5,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 5,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcarePA_W2_TC1"
+      ],
+      "domains": [
+        "healthcare_prior_authorization"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 1
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1"
+      ],
+      "domains": [
+        "manufacturing_purchase_to_pay"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 4,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcareOnboarding_W6_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 5,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcarePA_W6_TC1"
+      ],
+      "domains": [
+        "healthcare_prior_authorization"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 0
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcareOnboarding_W5_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 6,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "ClaimsAgent_W6_TC1"
+      ],
+      "domains": [
+        "insurance_claims_intake"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcarePA_W5_TC1"
+      ],
+      "domains": [
+        "healthcare_prior_authorization"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "BankingFraudMonitoringSupportAgent_W9_TC1"
+      ],
+      "domains": [
+        "banking_fraud_monitoring"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 6,
+        "reference_tool_interactions": 9,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcareOnboarding_W8_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2
+      },
+      "n_tasks": 5,
+      "task_ids": [
+        "HealthcareOnboarding_W2_TC1",
+        "HealthcarePA_W1_TC1",
+        "HealthcarePA_W1_TC2",
+        "HealthcarePA_W3_TC1",
+        "HealthcarePA_W7_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding",
+        "healthcare_prior_authorization"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3
+      },
+      "n_tasks": 5,
+      "task_ids": [
+        "BankingCustomerOnboardingAgent_BankOnboard_W1_TC1",
+        "BankingCustomerOnboardingAgent_BankOnboard_W1_TC2",
+        "BankingCustomerOnboardingAgent_BankOnboard_W4_TC2",
+        "InsuranceClaimsIntakeAndTriageAgent_W2_TC1",
+        "InsuranceClaimsIntakeAndTriageAgent_W2_TC2"
+      ],
+      "domains": [
+        "banking_customer_onboarding",
+        "insurance_claims_intake"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy",
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 7,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 4
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "DigitalAccountOpeningAgent_W7_TC1"
+      ],
+      "domains": [
+        "banking_accounts_deposits"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 7,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 2
+      },
+      "n_tasks": 2,
+      "task_ids": [
+        "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W1_TC1",
+        "HealthcareOnboarding_W1_TC2"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 7,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "BankingCustomerOnboardingAgent_BankOnboard_W4_TC1"
+      ],
+      "domains": [
+        "banking_customer_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W7_TC1"
+      ],
+      "domains": [
+        "manufacturing_purchase_to_pay"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 7,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "DigitalAccountOpeningAgent_W8_TC1"
+      ],
+      "domains": [
+        "banking_accounts_deposits"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 2
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "HealthcareOnboarding_W7_TC1"
+      ],
+      "domains": [
+        "healthcare_patient_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3
+      },
+      "n_tasks": 5,
+      "task_ids": [
+        "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+        "InsuranceClaimsIntakeAndTriageAgent_W1_TC2",
+        "InsuranceClaimsIntakeAndTriageAgent_W4_TC1",
+        "InsuranceClaimsIntakeAndTriageAgent_W5_TC1",
+        "InsuranceClaimsIntakeAndTriageAgent_W8_TC1"
+      ],
+      "domains": [
+        "insurance_claims_intake"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy",
+        "hard",
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 4
+      },
+      "n_tasks": 6,
+      "task_ids": [
+        "DigitalAccountOpening_DigitalAccountOpening_W1_TC1",
+        "DigitalAccountOpeningAgent_W1_TC2",
+        "DigitalAccountOpeningAgent_W2_TC1",
+        "DigitalAccountOpeningAgent_W2_TC2",
+        "DigitalAccountOpeningAgent_W3_TC1",
+        "DigitalAccountOpeningAgent_W6_TC1"
+      ],
+      "domains": [
+        "banking_accounts_deposits"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy",
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 9,
+        "business_check_groups": 4
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1"
+      ],
+      "domains": [
+        "banking_customer_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 8,
+        "reference_tool_interactions": 23,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "InsuranceClaimsIntakeAndTriageAgent_W3_TC1"
+      ],
+      "domains": [
+        "insurance_claims_intake"
+      ],
+      "supplied_tags_comparison_only": [
+        "medium"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 9,
+        "reference_tool_interactions": 8,
+        "business_check_groups": 3
+      },
+      "n_tasks": 3,
+      "task_ids": [
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1",
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC2",
+        "ManufacturingPurchaseToPayAutomationAgent_P2P_W8_TC1"
+      ],
+      "domains": [
+        "manufacturing_purchase_to_pay"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    },
+    {
+      "counts": {
+        "action_groups": 9,
+        "reference_tool_interactions": 9,
+        "business_check_groups": 3
+      },
+      "n_tasks": 1,
+      "task_ids": [
+        "BankingCustomerOnboardingAgent_BankOnboard_W6_TC1"
+      ],
+      "domains": [
+        "banking_customer_onboarding"
+      ],
+      "supplied_tags_comparison_only": [
+        "easy"
+      ]
+    }
+  ],
+  "weight_sensitivity": {
+    "action_heavy": {
+      "comparison_type": "weight_change",
+      "max_absolute_rank_change": 10.0,
+      "mean_absolute_rank_change": 1.78125,
+      "tasks_moving_at_least_10_places": 1
+    },
+    "tool_heavy": {
+      "comparison_type": "weight_change",
+      "max_absolute_rank_change": 6.0,
+      "mean_absolute_rank_change": 0.71875,
+      "tasks_moving_at_least_10_places": 0
+    },
+    "without_checks": {
+      "comparison_type": "component_removal",
+      "max_absolute_rank_change": 20.5,
+      "mean_absolute_rank_change": 5.203125,
+      "tasks_moving_at_least_10_places": 7
+    }
+  },
+  "points_for_one_more_unit": {
+    "action_groups": 3.7037037037037033,
+    "reference_tool_interactions": 1.4492753623188404,
+    "business_check_groups": 8.333333333333332
+  },
+  "component_correlations": [
+    {
+      "first": "action_groups",
+      "second": "reference_tool_interactions",
+      "spearman_rho": 0.7803323779747624,
+      "interpretation": "Descriptive feature overlap; not outcome validation or independent-task inference."
+    },
+    {
+      "first": "action_groups",
+      "second": "business_check_groups",
+      "spearman_rho": 0.6807273596678877,
+      "interpretation": "Descriptive feature overlap; not outcome validation or independent-task inference."
+    },
+    {
+      "first": "reference_tool_interactions",
+      "second": "business_check_groups",
+      "spearman_rho": 0.6501792813618201,
+      "interpretation": "Descriptive feature overlap; not outcome validation or independent-task inference."
+    }
+  ],
+  "top_band_with_boundary_ties": [
+    "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+    "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+    "DigitalAccountOpeningAgent_W1_TC2",
+    "DigitalAccountOpeningAgent_W2_TC1",
+    "DigitalAccountOpeningAgent_W2_TC2",
+    "DigitalAccountOpeningAgent_W3_TC1",
+    "DigitalAccountOpeningAgent_W6_TC1",
+    "DigitalAccountOpening_DigitalAccountOpening_W1_TC1"
+  ],
+  "bottom_band_with_boundary_ties": [
+    "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+    "HealthcarePA_W8_TC1",
+    "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+    "ManufacturingPurchaseToPayAutomationAgent_P2P_W6_TC1",
+    "InsuranceClaimsIntakeAndTriageAgent_W7_TC1"
+  ],
+  "reviewed_examples": [
+    {
+      "domain": "banking_accounts_deposits",
+      "task_id": "DigitalAccountOpeningAgent_W1_TC2",
+      "title": "Standard Checking Account - Individual, Small Deposit, Micro-Deposit Funding",
+      "workflow_id": "W1",
+      "supplied_tag_comparison_only": "easy",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 8,
+      "reference_tool_interactions": 8,
+      "business_check_groups": 4,
+      "score": 74.557166,
+      "normalized_components": {
+        "action_groups": 0.8888888888888888,
+        "reference_tool_interactions": 0.34782608695652173,
+        "business_check_groups": 1.0
+      },
+      "weighted_points": {
+        "action_groups": 29.629629629629623,
+        "reference_tool_interactions": 11.594202898550723,
+        "business_check_groups": 33.33333333333333
+      },
+      "shared_workflow_steps_comparison_only": 8,
+      "excluded_terminal_groups": 0,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Customer identity validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "AML screening clear",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Account tier calculated as standard",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Standard account limits configured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Fee schedule with standard fees applied",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "Disclosures generated and delivered",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "Funding source linked and verified via micro-deposit",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/6/description"
+        },
+        {
+          "step": 8,
+          "expected_description": "Account opened and confirmation sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_accounts_deposits/test_cases.json",
+          "locator": "#/workflows/0/test_cases/1/milestones/7/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "validate_customer_identity",
+        "perform_aml_screening",
+        "calculate_account_tier",
+        "configure_account_limits",
+        "configure_fee_schedule",
+        "generate_account_disclosures",
+        "link_funding_source",
+        "open_account",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "banking_accounts_deposits/test_cases.py",
+        "python_class_line": 878,
+        "yaml_file": "banking_accounts_deposits/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "banking_accounts_deposits/test_cases.json",
+        "canonical_task_id": "DigitalAccountOpeningAgent_W1_TC2",
+        "json_case_pointer": "#/workflows/0/test_cases/1"
+      },
+      "score_variants": {
+        "equal": 74.557166,
+        "action_heavy": 78.140097,
+        "tool_heavy": 64.613527,
+        "without_checks": 61.835749
+      },
+      "variant_ranks": {
+        "equal": 59.5,
+        "action_heavy": 58.5,
+        "tool_heavy": 59.5,
+        "without_checks": 52.5
+      },
+      "rank_easy_first": 59.5,
+      "max_rank_change_under_alternative_weights": 7.0,
+      "audit_category": "high_tied_profile",
+      "assistant_interpretation": "Identity, AML, tier and funding verification give four check groups. Six account tasks share (8,8,4), including a multi-owner business task; depth and entity multiplicity are not resolved."
+    },
+    {
+      "domain": "banking_customer_onboarding",
+      "task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+      "title": "Address Mismatch: Customer Provides Explanation and Valid New Document",
+      "workflow_id": "W7",
+      "supplied_tag_comparison_only": "easy",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 8,
+      "reference_tool_interactions": 9,
+      "business_check_groups": 4,
+      "score": 76.006441,
+      "normalized_components": {
+        "action_groups": 0.8888888888888888,
+        "reference_tool_interactions": 0.391304347826087,
+        "business_check_groups": 1.0
+      },
+      "weighted_points": {
+        "action_groups": 29.629629629629623,
+        "reference_tool_interactions": 13.043478260869565,
+        "business_check_groups": 33.33333333333333
+      },
+      "shared_workflow_steps_comparison_only": 9,
+      "excluded_terminal_groups": 0,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Initial documents extracted, address mismatch detected",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Explanation and supporting document requested",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Supporting document extracted and address reconciled",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Identity and address verified",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Sanctions screening clear, AML risk calculated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "Core banking customer created",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "CRM profile created with reconciled address",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/6/description"
+        },
+        {
+          "step": 8,
+          "expected_description": "Welcome communication sent",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "banking_customer_onboarding/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/7/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "extract_kyc_documents",
+        "send_welcome_communication",
+        "extract_kyc_documents",
+        "validate_identity",
+        "screen_sanctions_lists",
+        "calculate_aml_risk_score",
+        "create_core_banking_customer",
+        "create_crm_profile",
+        "send_welcome_communication",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "banking_customer_onboarding/test_cases.py",
+        "python_class_line": 1513,
+        "yaml_file": "banking_customer_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/6",
+        "json_file": "banking_customer_onboarding/test_cases.json",
+        "canonical_task_id": "BankingCustomerOnboardingAgent_BankOnboard_W7_TC1",
+        "json_case_pointer": "#/workflows/3/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 76.006441,
+        "action_heavy": 79.227053,
+        "tool_heavy": 66.78744,
+        "without_checks": 64.009662
+      },
+      "variant_ranks": {
+        "equal": 63.0,
+        "action_heavy": 63.0,
+        "tool_heavy": 63.0,
+        "without_checks": 59.0
+      },
+      "rank_easy_first": 63.0,
+      "max_rank_change_under_alternative_weights": 4.0,
+      "audit_category": "near_highest",
+      "assistant_interpretation": "Address mismatch recovery includes two extraction and two communication calls. Four evaluative milestone groups contribute a full 33.33 points; their independence is not established."
+    },
+    {
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcareOnboarding_W5_TC1",
+      "title": "Self-pay patient onboarding with initial visit",
+      "workflow_id": "W5",
+      "supplied_tag_comparison_only": "easy",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 6,
+      "reference_tool_interactions": 6,
+      "business_check_groups": 0,
+      "score": 30.917874,
+      "normalized_components": {
+        "action_groups": 0.6666666666666666,
+        "reference_tool_interactions": 0.2608695652173913,
+        "business_check_groups": 0.0
+      },
+      "weighted_points": {
+        "action_groups": 22.222222222222218,
+        "reference_tool_interactions": 8.695652173913041,
+        "business_check_groups": 0.0
+      },
+      "shared_workflow_steps_comparison_only": 7,
+      "excluded_terminal_groups": 1,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Extract patient demographics",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Extract medical history",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Create self-pay patient record in EHR",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Provide pricing estimate via communication",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Schedule appointment with payment required at visit",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "Send appointment confirmation with payment instructions",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "Signal successful onboarding",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_patient_onboarding/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/6/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "extract_patient_demographics",
+        "extract_medical_history",
+        "create_ehr_patient_record",
+        "send_patient_communication",
+        "schedule_appointment",
+        "send_patient_communication",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1621,
+        "yaml_file": "healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "healthcare_patient_onboarding/test_cases.json",
+        "canonical_task_id": "HealthcareOnboarding_W5_TC1",
+        "json_case_pointer": "#/workflows/4/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 30.917874,
+        "action_heavy": 39.855072,
+        "tool_heavy": 29.710145,
+        "without_checks": 46.376812
+      },
+      "variant_ranks": {
+        "equal": 6.0,
+        "action_heavy": 7.0,
+        "tool_heavy": 7.0,
+        "without_checks": 26.5
+      },
+      "rank_easy_first": 6.0,
+      "max_rank_change_under_alternative_weights": 20.5,
+      "audit_category": "largest_component_removal_mover",
+      "assistant_interpretation": "Six active groups and six reference calls, but no annotated check group. Rank moves from 6 to 26.5 only when checks are removed; ordinary weight changes move it from 6 to 7. Zero annotated checks is not proof of zero reasoning."
+    },
+    {
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "title": "Status Check for Approved PA",
+      "workflow_id": "W8",
+      "supplied_tag_comparison_only": "easy",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 3,
+      "reference_tool_interactions": 1,
+      "business_check_groups": 1,
+      "score": 20.89372,
+      "normalized_components": {
+        "action_groups": 0.3333333333333333,
+        "reference_tool_interactions": 0.043478260869565216,
+        "business_check_groups": 0.25
+      },
+      "weighted_points": {
+        "action_groups": 11.111111111111109,
+        "reference_tool_interactions": 1.4492753623188404,
+        "business_check_groups": 8.333333333333332
+      },
+      "shared_workflow_steps_comparison_only": 5,
+      "excluded_terminal_groups": 0,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "PA status tracked for reference ID",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_prior_authorization/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Results categorized as approved",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "healthcare_prior_authorization/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Provider notified of approval",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "healthcare_prior_authorization/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/2/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "track_pa_status",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1886,
+        "yaml_file": "healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "healthcare_prior_authorization/test_cases.json",
+        "canonical_task_id": "HealthcarePA_W8_TC1",
+        "json_case_pointer": "#/workflows/7/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 20.89372,
+        "action_heavy": 24.003623,
+        "tool_heavy": 16.757246,
+        "without_checks": 18.84058
+      },
+      "variant_ranks": {
+        "equal": 2.0,
+        "action_heavy": 2.0,
+        "tool_heavy": 2.0,
+        "without_checks": 2.0
+      },
+      "rank_easy_first": 2.0,
+      "max_rank_change_under_alternative_weights": 0.0,
+      "audit_category": "near_lowest",
+      "assistant_interpretation": "The approved status path has three milestones and one lookup call, not all five shared workflow steps. Missing reference_id is a separate feasibility concern and is not a complexity penalty."
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "title": "Emergency Property Claim \u2013 Water Intrusion, Storm Peril, Coverage Confirmed",
+      "workflow_id": "W1",
+      "supplied_tag_comparison_only": "easy",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 8,
+      "reference_tool_interactions": 8,
+      "business_check_groups": 3,
+      "score": 66.223833,
+      "normalized_components": {
+        "action_groups": 0.8888888888888888,
+        "reference_tool_interactions": 0.34782608695652173,
+        "business_check_groups": 0.75
+      },
+      "weighted_points": {
+        "action_groups": 29.629629629629623,
+        "reference_tool_interactions": 11.594202898550723,
+        "business_check_groups": 24.999999999999996
+      },
+      "shared_workflow_steps_comparison_only": 9,
+      "excluded_terminal_groups": 0,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (storm, water intrusion)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as property, peril: storm/wind",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Policy coverage validated (active, peril covered)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Claim severity assessed (emergency)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Claim record created with emergency flag",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "Emergency water mitigation vendor dispatched",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "Claim routed to CAT team",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/6/description"
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to customer",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/0/test_cases/0/milestones/7/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "trigger_emergency_services",
+        "route_to_adjuster",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 451,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/0",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+        "json_case_pointer": "#/workflows/0/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 66.223833,
+        "action_heavy": 71.890097,
+        "tool_heavy": 58.363527,
+        "without_checks": 61.835749
+      },
+      "variant_ranks": {
+        "equal": 49.0,
+        "action_heavy": 50.0,
+        "tool_heavy": 49.0,
+        "without_checks": 52.5
+      },
+      "rank_easy_first": 49.0,
+      "max_rank_change_under_alternative_weights": 3.5,
+      "audit_category": "semantic_tie",
+      "assistant_interpretation": "Emergency property intake has profile (8,8,3). It ties the commercial-interruption task despite different required entities and specialist coordination."
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+      "title": "Catastrophe Event \u2013 Batch Processing, Emergencies Flagged",
+      "workflow_id": "W3",
+      "supplied_tag_comparison_only": "medium",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 8,
+      "reference_tool_interactions": 23,
+      "business_check_groups": 3,
+      "score": 87.962963,
+      "normalized_components": {
+        "action_groups": 0.8888888888888888,
+        "reference_tool_interactions": 1.0,
+        "business_check_groups": 0.75
+      },
+      "weighted_points": {
+        "action_groups": 29.629629629629623,
+        "reference_tool_interactions": 33.33333333333333,
+        "business_check_groups": 24.999999999999996
+      },
+      "shared_workflow_steps_comparison_only": 9,
+      "excluded_terminal_groups": 0,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Batch loss details extracted for all claims",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Each claim classified by type",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Batch policy coverage validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed; emergencies flagged",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Bulk claim records created, CAT event tagged",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "All claims routed to CAT team, emergencies prioritized",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "Emergency vendors dispatched for flagged claims",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/6/description"
+        },
+        {
+          "step": 8,
+          "expected_description": "Batch claim acknowledgment sent to claimants",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/2/test_cases/0/milestones/7/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "extract_loss_details",
+        "extract_loss_details",
+        "classify_claim_type",
+        "classify_claim_type",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "validate_policy_coverage",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "assess_claim_severity",
+        "assess_claim_severity",
+        "create_claim_record",
+        "create_claim_record",
+        "create_claim_record",
+        "route_to_adjuster",
+        "route_to_adjuster",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "send_claim_acknowledgment",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 1408,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/2",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W3_TC1",
+        "json_case_pointer": "#/workflows/2/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 87.962963,
+        "action_heavy": 88.194444,
+        "tool_heavy": 90.972222,
+        "without_checks": 94.444444
+      },
+      "variant_ranks": {
+        "equal": 64.0,
+        "action_heavy": 64.0,
+        "tool_heavy": 64.0,
+        "without_checks": 64.0
+      },
+      "rank_easy_first": 64.0,
+      "max_rank_change_under_alternative_weights": 0.0,
+      "audit_category": "highest",
+      "assistant_interpretation": "Three claims and two emergency dispatches explain the 23 reference business calls. High volume is supported by the intended reference, not proof of hardest reasoning."
+    },
+    {
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "title": "Complex Commercial Property Claim \u2013 Business Interruption, Large Loss",
+      "workflow_id": "W8",
+      "supplied_tag_comparison_only": "hard",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 8,
+      "reference_tool_interactions": 8,
+      "business_check_groups": 3,
+      "score": 66.223833,
+      "normalized_components": {
+        "action_groups": 0.8888888888888888,
+        "reference_tool_interactions": 0.34782608695652173,
+        "business_check_groups": 0.75
+      },
+      "weighted_points": {
+        "action_groups": 29.629629629629623,
+        "reference_tool_interactions": 11.594202898550723,
+        "business_check_groups": 24.999999999999996
+      },
+      "shared_workflow_steps_comparison_only": 9,
+      "excluded_terminal_groups": 0,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Loss details extracted (fire, business interruption)",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Claim classified as commercial property + BI",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Property and BI coverage validated",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Severity assessed (large loss, BI exposure)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Linked claims created for property and BI",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "Claim routed to large loss unit and BI specialist",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "Forensic accountant and engineer dispatched",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/6/description"
+        },
+        {
+          "step": 8,
+          "expected_description": "Claim acknowledgment sent to insured",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "insurance_claims_intake/test_cases.json",
+          "locator": "#/workflows/7/test_cases/0/milestones/7/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "extract_loss_details",
+        "classify_claim_type",
+        "validate_policy_coverage",
+        "assess_claim_severity",
+        "create_claim_record",
+        "route_to_adjuster",
+        "trigger_emergency_services",
+        "send_claim_acknowledgment",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "insurance_claims_intake/test_cases.py",
+        "python_class_line": 2632,
+        "yaml_file": "insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/7",
+        "json_file": "insurance_claims_intake/test_cases.json",
+        "canonical_task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+        "json_case_pointer": "#/workflows/7/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 66.223833,
+        "action_heavy": 71.890097,
+        "tool_heavy": 58.363527,
+        "without_checks": 61.835749
+      },
+      "variant_ranks": {
+        "equal": 49.0,
+        "action_heavy": 50.0,
+        "tool_heavy": 49.0,
+        "without_checks": 52.5
+      },
+      "rank_easy_first": 49.0,
+      "max_rank_change_under_alternative_weights": 3.5,
+      "audit_category": "semantic_tie",
+      "assistant_interpretation": "The milestones require property and business-interruption coverage, linked claims, large-loss and BI specialists, and accountant/engineer dispatch. Grouped counts collapse those requirements to the same (8,8,3) profile as ordinary emergency property intake."
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+      "title": "Partial receipt, quantity mismatch, backorder received and payments processed",
+      "workflow_id": "W4",
+      "supplied_tag_comparison_only": "medium",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 6,
+      "reference_tool_interactions": 4,
+      "business_check_groups": 1,
+      "score": 36.352657,
+      "normalized_components": {
+        "action_groups": 0.6666666666666666,
+        "reference_tool_interactions": 0.17391304347826086,
+        "business_check_groups": 0.25
+      },
+      "weighted_points": {
+        "action_groups": 22.222222222222218,
+        "reference_tool_interactions": 5.797101449275361,
+        "business_check_groups": 8.333333333333332
+      },
+      "shared_workflow_steps_comparison_only": 7,
+      "excluded_terminal_groups": 1,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Partial goods receipt recorded",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Invoice matched to PO and receipt (quantity mismatch)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Payment approval routed for partial payment",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/2/description"
+        },
+        {
+          "step": 4,
+          "expected_description": "Partial payment processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/3/description"
+        },
+        {
+          "step": 5,
+          "expected_description": "Backorder received and reconciled",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/4/description"
+        },
+        {
+          "step": 6,
+          "expected_description": "Final payment processed",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/5/description"
+        },
+        {
+          "step": 7,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/3/test_cases/0/milestones/6/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "process_payment",
+        "process_payment",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1420,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/3",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W4_TC1",
+        "json_case_pointer": "#/workflows/3/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 36.352657,
+        "action_heavy": 43.931159,
+        "tool_heavy": 31.612319,
+        "without_checks": 42.028986
+      },
+      "variant_ranks": {
+        "equal": 8.0,
+        "action_heavy": 18.0,
+        "tool_heavy": 8.0,
+        "without_checks": 20.5
+      },
+      "rank_easy_first": 8.0,
+      "max_rank_change_under_alternative_weights": 12.5,
+      "audit_category": "largest_weight_change_mover",
+      "assistant_interpretation": "Partial receipt and a backorder lead to partial and final payments. Rank moves from 8 to 18 with action-heavy weights; the four-call reference includes two payment calls. This supports a dependency/repetition feature discussion, not a proven correct rank."
+    },
+    {
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+      "title": "Duplicate invoice detected and rejected, supplier notified",
+      "workflow_id": "W5",
+      "supplied_tag_comparison_only": "easy",
+      "status": "designed_difficulty_v0.1_provisional",
+      "action_groups": 2,
+      "reference_tool_interactions": 2,
+      "business_check_groups": 1,
+      "score": 18.639291,
+      "normalized_components": {
+        "action_groups": 0.2222222222222222,
+        "reference_tool_interactions": 0.08695652173913043,
+        "business_check_groups": 0.25
+      },
+      "weighted_points": {
+        "action_groups": 7.407407407407406,
+        "reference_tool_interactions": 2.8985507246376807,
+        "business_check_groups": 8.333333333333332
+      },
+      "shared_workflow_steps_comparison_only": 5,
+      "excluded_terminal_groups": 1,
+      "excluded_external_groups": 0,
+      "excluded_wait_groups": 0,
+      "exact_atomic_action_count": null,
+      "exact_independent_decision_count": null,
+      "review_type": "assistant source interpretation, not independent human validation",
+      "uncertainty_flags": [
+        "provisional_not_independently_validated",
+        "reference_path_assumed_intended",
+        "checks_are_not_independent_decisions",
+        "runtime_feasibility_not_scored",
+        "component_overlap_possible",
+        "milestone_groups_may_bundle_multiple_actions_or_entities"
+      ],
+      "milestone_evidence": [
+        {
+          "step": 1,
+          "expected_description": "Invoice matched to PO and payment history (duplicate detected)",
+          "role": "active_action_group",
+          "business_check": true,
+          "business_check_basis": "This requirement group describes assessing, classifying, verifying or reconciling task information. Count one evaluative group, not individual decisions or alternatives.",
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/0/description"
+        },
+        {
+          "step": 2,
+          "expected_description": "Invoice rejected and supplier notified",
+          "role": "active_action_group",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/1/description"
+        },
+        {
+          "step": 3,
+          "expected_description": "Workflow completion signaled",
+          "role": "terminal_signal",
+          "business_check": false,
+          "business_check_basis": null,
+          "source": "manufacturing_purchase_to_pay/test_cases.json",
+          "locator": "#/workflows/4/test_cases/0/milestones/2/description"
+        }
+      ],
+      "reference_tool_sequence": [
+        "match_invoice_to_po",
+        "route_payment_approval",
+        "SUCCESS"
+      ],
+      "sources": {
+        "python_file": "manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1619,
+        "yaml_file": "manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_pointer": "#/agent/workflows/4",
+        "json_file": "manufacturing_purchase_to_pay/test_cases.json",
+        "canonical_task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W5_TC1",
+        "json_case_pointer": "#/workflows/4/test_cases/0"
+      },
+      "score_variants": {
+        "equal": 18.639291,
+        "action_heavy": 19.535024,
+        "tool_heavy": 16.153382,
+        "without_checks": 15.458937
+      },
+      "variant_ranks": {
+        "equal": 1.0,
+        "action_heavy": 1.0,
+        "tool_heavy": 1.0,
+        "without_checks": 1.0
+      },
+      "rank_easy_first": 1.0,
+      "max_rank_change_under_alternative_weights": 0.0,
+      "audit_category": "lowest",
+      "assistant_interpretation": "A short duplicate-invoice branch has two active milestone groups and two business calls. Rejection is the intended endpoint. Notification is bundled into a milestone and terminal result; a short reference does not establish that notification is fully implemented."
+    }
+  ],
+  "recommendation": "Retain v0.1 as an exploratory baseline, lead with its component profile, and revise requirement granularity and explicit coordination/dependencies before promoting a scalar to the final metric. Weight tuning alone cannot separate identical profiles.",
+  "no_api_calls": true,
+  "scores_changed": false,
+  "validation_claimed": false,
+  "inputs": {
+    "scores_sha256": "aeb08fbf598846d75709ba6d69d5523d14f8ab37f573209a7a82cdd25e89664f",
+    "annotations_sha256": "3376a76b1a347c755c16252991174925e72723dbbcbdb54bbe9b850be449b949",
+    "method_sha256": "9a5489ee4a3f10bbcd88c62b15387d9027b0dd6fdd579c632f578ced4dfe4319",
+    "audit_implementation_sha256": "ab8339136d064c45ddec3aae13fef72a2c750811b338fc57f9b9fd94932760c1"
+  }
+}

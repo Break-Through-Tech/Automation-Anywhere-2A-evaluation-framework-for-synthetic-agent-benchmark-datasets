@@ -1,0 +1,8 @@
+domain,n_total,n_scored,mean,median,min,max
+banking_accounts_deposits,8,8,66.25,65.0,60,70
+banking_customer_onboarding,6,6,69.16666666666667,67.5,65,75
+banking_fraud_monitoring,13,13,64.23076923076923,65,55,75
+healthcare_patient_onboarding,9,9,64.44444444444444,65,60,70
+healthcare_prior_authorization,9,9,60,60,40,70
+insurance_claims_intake,10,10,67,65.0,60,75
+manufacturing_purchase_to_pay,9,9,60.55555555555556,65,50,70

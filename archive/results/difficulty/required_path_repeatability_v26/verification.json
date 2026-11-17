@@ -1,0 +1,17 @@
+{
+  "raw_and_canonical_results_revalidated": 36,
+  "unique_response_ids": 36,
+  "phase2_intents": 24,
+  "new_phase2_api_errors": 0,
+  "new_phase2_format_errors": 0,
+  "protected_user_files_unchanged": 80,
+  "new_offline_repeatability_tests_passed": 8,
+  "production_judge_core_changed": false,
+  "exact_offline_summary_replay": true,
+  "primary_files_unchanged": {
+    "results/difficulty/tau2_final_v19/comparison.json": true,
+    "results/difficulty/synthetic_final_v15/task_scores.json": true
+  },
+  "full_run_calls_since_conditional_reply": 0,
+  "full_run_permission_condition_met": false
+}

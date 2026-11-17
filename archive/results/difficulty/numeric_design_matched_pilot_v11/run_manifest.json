@@ -1,0 +1,17 @@
+{
+  "status": "three_matched_protocol_responses_not_full_calibration",
+  "model": "gpt-6-sol",
+  "prompt_version": "design_prompt_v1.1",
+  "rubric_version": "design_numeric_v1.0_provisional",
+  "n_unique_tasks": 3,
+  "n_accepted_responses": 3,
+  "new_calls_this_follow_up": 2,
+  "cohort_usage": {
+    "input_tokens": 27189,
+    "output_tokens": 7020,
+    "total_tokens": 34209
+  },
+  "independent_validation": false,
+  "repeat_reliability": "not_run",
+  "old_prompt_scores_pooled": false
+}

@@ -1,0 +1,540 @@
+{
+  "version": "native_semantic_annotations_v1",
+  "status": "assistant_authored_prior_scores_visible_not_independent",
+  "rulebooks": [
+    "design_counting_rulebook_v0.1.md",
+    "design_counting_rulebook_v0.2.md"
+  ],
+  "tasks": [
+    {
+      "case_key": "ddd2f5a8191c1ae70b57ec33",
+      "input_sha256": "6c855cfec35405e5edb638118b4b2814bf354f4aba8c3f2dfea8144407a16c55",
+      "status": "unresolved_path",
+      "scope_rationale": "Documented SIM discovery/reseating/escalation obligations only. Setup explicitly includes a missing SIM and a lock; setup is judge context, not agent knowledge. The complete pre-exit diagnostic path is unresolved.",
+      "operations": [
+        {
+          "key": "identify",
+          "description": "Identify the customer before technical support",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "You must first identify the customer."
+            }
+          ]
+        },
+        {
+          "key": "sim_inspect",
+          "description": "Inspect and evaluate SIM status",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_2",
+              "excerpt": "Use `check_sim_status()` to check the status of the SIM card."
+            }
+          ]
+        },
+        {
+          "key": "sim_reseat_request",
+          "description": "Guide the user to reseat the missing SIM",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_2",
+              "excerpt": "If it shows \"Missing\", guide the user to use `reseat_sim_card()` to ensure the SIM card is correctly inserted."
+            }
+          ]
+        },
+        {
+          "key": "sim_reinspect",
+          "description": "Reassess SIM status after reseating",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_2",
+              "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+            }
+          ]
+        },
+        {
+          "key": "transfer",
+          "description": "Transfer the locked-SIM problem to technical support",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_2",
+              "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+            }
+          ]
+        },
+        {
+          "key": "transfer_announce",
+          "description": "Tell the customer a transfer is taking place",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "then send the message 'YOU ARE BEING TRANSFERRED TO A HUMAN AGENT. PLEASE HOLD ON.' to the user."
+            }
+          ]
+        }
+      ],
+      "coordination_events": [
+        {
+          "key": "technical_support_handoff",
+          "description": "Transfer for SIM security",
+          "categories": [
+            "handoff"
+          ],
+          "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+          "evidence": [
+            {
+              "source_id": "policy_2",
+              "excerpt": "If it shows \"Locked\" (due to incorrect PIN or PUK entries), **escalate to technical support for assistance with SIM security**."
+            }
+          ]
+        }
+      ],
+      "excluded_work": [
+        "No bill payment, line resumption or APN repair is automatically required after the decisive locked-SIM exit.",
+        "Ordinary device-tool replies are not additional external-response coordination.",
+        "Do not treat initial_user_device as final effective state: initialization actions change it."
+      ],
+      "uncertainties": [
+        "General try-best policy and manual diagnostics do not specify one mandatory pre-SIM troubleshooting order; airplane-mode work might precede SIM discovery.",
+        "The listed six operations and two checks are documented partial counts, not a complete path or exact lower-bound tool count.",
+        "The source setup declares both unseating and locking; no private helper code was added or executed to certify a live path."
+      ]
+    },
+    {
+      "case_key": "4052de4afd171be50d2045cf",
+      "input_sha256": "d18df5d7a58b7acf42c4f36d7f58b79a48d563e3941ae3325a9c09754b3b1633",
+      "status": "provisional_complete",
+      "scope_rationale": "Intended cancellation/rebooking path; the documented card charge is below the threshold. Applicable booking and cancellation policy is included; separate confirmation obligations are retained conservatively.",
+      "operations": [
+        {
+          "key": "balances_read",
+          "description": "Retrieve the profile payment balances",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "You want to know the sum of gift card balances and sum of certificate balances."
+            }
+          ]
+        },
+        {
+          "key": "balances_total",
+          "description": "Compute the two requested balance totals as one grouped calculation",
+          "business_check": false,
+          "rationale": "Arithmetic aggregation is active work, but not a separate policy evaluation or verification under the business-check definition.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "If the agent gives you individual balances, you want the sums."
+            }
+          ]
+        },
+        {
+          "key": "balances_report",
+          "description": "Communicate the balance totals",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "If the agent gives you individual balances, you want the sums."
+            }
+          ]
+        },
+        {
+          "key": "reservation_locate",
+          "description": "Locate the current reservation",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "If the user doesn't know their reservation id, the agent should help locate it using available tools."
+            }
+          ]
+        },
+        {
+          "key": "modification_eligibility",
+          "description": "Check whether the requested modification is allowed",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "Basic economy flights cannot be modified."
+            }
+          ]
+        },
+        {
+          "key": "itinerary_compare",
+          "description": "Compare eligible replacement itineraries against the user constraints",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "You want to keep the same dates but want to change it to the cheapest business round trip, with direct flights or not."
+            }
+          ]
+        },
+        {
+          "key": "cancellation_reason",
+          "description": "Obtain the cancellation reason",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "The agent must also obtain the reason for cancellation (change of plan, airline cancelled flight, or other reasons)"
+            }
+          ]
+        },
+        {
+          "key": "cancellation_eligibility",
+          "description": "Evaluate cancellation eligibility as one grouped policy check",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "The API does not check that cancellation rules are met, so the agent must make sure the rules apply before calling the API!"
+            }
+          ]
+        },
+        {
+          "key": "booking_constraints",
+          "description": "Verify the booking passenger/cabin/payment constraints as a grouped eligibility check",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "All passengers must fly the same flights in the same cabin."
+            }
+          ]
+        },
+        {
+          "key": "payment_allocation",
+          "description": "Calculate permissible payment allocation and apply the card-charge cutoff",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "You want to minimize master card payment so you will only book the new flight if the mastercard charges are less than $2000."
+            }
+          ]
+        },
+        {
+          "key": "card_charge_report",
+          "description": "Communicate the proposed card charge",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "But you want to know how much your master card will be charged."
+            }
+          ]
+        },
+        {
+          "key": "cancel_confirmation",
+          "description": "Request explicit confirmation for cancel",
+          "business_check": false,
+          "rationale": "Two distinct database actions; count confirmation once for each action, not once per passenger or flight.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        },
+        {
+          "key": "book_confirmation",
+          "description": "Request explicit confirmation for book",
+          "business_check": false,
+          "rationale": "Two distinct database actions; count confirmation once for each action, not once per passenger or flight.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        },
+        {
+          "key": "cancel",
+          "description": "Cancel the original reservation",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "you want the agent to cancel the current one and book a new one."
+            }
+          ]
+        },
+        {
+          "key": "book",
+          "description": "Book the replacement reservation",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "you want the agent to cancel the current one and book a new one."
+            }
+          ]
+        }
+      ],
+      "coordination_events": [
+        {
+          "key": "cancel_authorization",
+          "description": "Customer authorization for cancel",
+          "categories": [
+            "approval",
+            "external_response"
+          ],
+          "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        },
+        {
+          "key": "book_authorization",
+          "description": "Customer authorization for book",
+          "categories": [
+            "approval",
+            "external_response"
+          ],
+          "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        }
+      ],
+      "excluded_work": [
+        "Unused compensation, baggage purchase, insurance purchase and modification branches.",
+        "Passenger/flight multiplicity is retained as scope, not multiplied into operations.",
+        "Ordinary synchronous database returns and IDs are not coordination events."
+      ],
+      "uncertainties": [
+        "Confirmation could be gathered in one combined exchange for both writes; this annotation treats the distinct action authorizations separately.",
+        "Itinerary identifiers differ between the expected booking call and prose assertion; no source was repaired.",
+        "Grouped booking constraints and balance calculations are semantic conventions, not proven atomic operations."
+      ]
+    },
+    {
+      "case_key": "2aa74102d9e3011cd0032533",
+      "input_sha256": "f3a3b69c8dda395cb414f270af415f5366e6aac8ae6a1556aeca58a4e6ed5136",
+      "status": "provisional_complete",
+      "scope_rationale": "Two delivered-order exchanges, with the allowed boot fallback replacing the prohibited same-option request. Separate per-order writes/checks, grouped shared discovery and payment collection.",
+      "operations": [
+        {
+          "key": "authenticate",
+          "description": "Authenticate the customer using name and ZIP",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "At the beginning of the conversation, you have to authenticate the user identity by locating their user id via email, or via name + zip code."
+            }
+          ]
+        },
+        {
+          "key": "orders_read",
+          "description": "Locate and retrieve both relevant orders as grouped discovery",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "Once the user has been authenticated, you can provide the user with information about order, product, profile information, e.g. help the user look up order id."
+            }
+          ]
+        },
+        {
+          "key": "boots_delivery",
+          "description": "Verify the relevant order is delivered",
+          "business_check": true,
+          "rationale": "Different orders require separate eligibility evaluations; fields within one order are not split.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action."
+            }
+          ]
+        },
+        {
+          "key": "puzzle_delivery",
+          "description": "Verify the relevant order is delivered",
+          "business_check": true,
+          "rationale": "Different orders require separate eligibility evaluations; fields within one order are not split.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "An order can only be exchanged if its status is 'delivered', and you should check its status before taking the action."
+            }
+          ]
+        },
+        {
+          "key": "boots_variant",
+          "description": "Evaluate the prohibited same-option request and select an eligible fallback variant",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "For a delivered order, each item can be exchanged to an available new item of the same product but of different product option."
+            }
+          ]
+        },
+        {
+          "key": "boots_explanation",
+          "description": "Explain why the original same-specification request is disallowed",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "If the agent doesn't allow the exchange, get the hiking boots with a size 9 but made of leather, they also need to be waterproof."
+            }
+          ]
+        },
+        {
+          "key": "puzzle_variant",
+          "description": "Select a puzzle satisfying reduced pieces, unchanged difficulty and clarified theme",
+          "business_check": true,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "scenario",
+              "excerpt": "You also want to exchange your jigsaw to a more fancy theme, with 500 pieces less. But you want to keep the same difficulty level."
+            }
+          ]
+        },
+        {
+          "key": "payment_method",
+          "description": "Obtain the payment method for the exchange differences",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "The user must provide a payment method to pay or receive refund of the price difference."
+            }
+          ]
+        },
+        {
+          "key": "boots_confirmation",
+          "description": "Confirm all exchange items and details for the boots order",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        },
+        {
+          "key": "boots_exchange",
+          "description": "Request exchange for the boots order",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "reference_001",
+              "excerpt": "{\"action_id\": \"108_0\", \"arguments\": {\"item_ids\": [\"1615379700\"], \"new_item_ids\": [\"8106223139\"], \"order_id\": \"#W1304208\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+            }
+          ]
+        },
+        {
+          "key": "puzzle_confirmation",
+          "description": "Confirm all exchange items and details for the puzzle order",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        },
+        {
+          "key": "puzzle_exchange",
+          "description": "Request exchange for the puzzle order",
+          "business_check": false,
+          "rationale": "Distinct applicable work explicitly required by the cited task or policy; not a tool-call count.",
+          "evidence": [
+            {
+              "source_id": "reference_002",
+              "excerpt": "{\"action_id\": \"108_1\", \"arguments\": {\"item_ids\": [\"6245746168\"], \"new_item_ids\": [\"3112842858\"], \"order_id\": \"#W8353027\", \"payment_method_id\": \"paypal_1679017\"}, \"info\": null, \"name\": \"exchange_delivered_order_items\"}"
+            }
+          ]
+        }
+      ],
+      "coordination_events": [
+        {
+          "key": "boots_authorization",
+          "description": "Customer authorization for the boots order",
+          "categories": [
+            "approval",
+            "external_response"
+          ],
+          "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        },
+        {
+          "key": "puzzle_authorization",
+          "description": "Customer authorization for the puzzle order",
+          "categories": [
+            "approval",
+            "external_response"
+          ],
+          "rationale": "One distinct response/transfer obligation; category tags are not added together.",
+          "evidence": [
+            {
+              "source_id": "policy_1",
+              "excerpt": "you must list the action details and obtain explicit user confirmation (yes) to proceed."
+            }
+          ]
+        }
+      ],
+      "excluded_work": [
+        "No new replacement order: the exchange policy explicitly says none is needed.",
+        "Automated return email is not an additional agent-send operation.",
+        "A single shared payment-method collection is not automatically doubled; no gift-card balance check is selected for the documented PayPal path."
+      ],
+      "uncertainties": [
+        "The subjective fancy-theme preference needs clarification; its exact conversational turns are unspecified.",
+        "Separate per-order authorizations may be collected in one conversation turn; event counts describe obligations, not turns.",
+        "Source operations are grouped conservatively and are not exact minimum tool calls."
+      ]
+    }
+  ]
+}

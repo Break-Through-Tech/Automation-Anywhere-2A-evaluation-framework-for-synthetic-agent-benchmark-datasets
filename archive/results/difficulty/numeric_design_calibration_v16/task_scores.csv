@@ -1,0 +1,11 @@
+dataset,domain,task_id,workflow_id,status,score,reason,n_planned_judgments,n_saved_judgments,repeat_score_range
+tau2,airline,0,,scored,50,All planned repeat judgments usable,3,3,0
+tau2,retail,0,,scored,66.66666666666667,All planned repeat judgments usable,3,3,5
+tau2,telecom,[mms_issue]airplane_mode_on|bad_network_preference|bad_wifi_calling|break_apn_mms_setting|break_app_both_permissions|data_mode_off|data_usage_exceeded|unseat_sim_card|user_abroad_roaming_disabled_off[PERSONA:Hard],,scored,85,All planned repeat judgments usable,3,3,0
+synthetic,banking_accounts_deposits,DigitalAccountOpeningAgent_W2_TC1,W2,scored,61.666666666666664,All planned repeat judgments usable,3,3,5
+synthetic,banking_customer_onboarding,BankingCustomerOnboardingAgent_BankOnboard_W1_TC1,W1,scored,65,All planned repeat judgments usable,3,3,0
+synthetic,banking_fraud_monitoring,BankingFraudMonitoringSupportAgent_BankingFraud_W1_TC1,W1,scored,56.666666666666664,All planned repeat judgments usable,3,3,5
+synthetic,healthcare_patient_onboarding,HealthcareOnboarding_W1_TC2,W1,scored,60,All planned repeat judgments usable,3,3,0
+synthetic,healthcare_prior_authorization,HealthcarePA_W1_TC1,W1,scored,63.333333333333336,All planned repeat judgments usable,3,3,5
+synthetic,insurance_claims_intake,ClaimsAgent_W6_TC1,W6,scored,60,All planned repeat judgments usable,3,3,0
+synthetic,manufacturing_purchase_to_pay,ManufacturingPurchaseToPayAutomationAgent_P2P_W1_TC1,W1,scored,63.333333333333336,All planned repeat judgments usable,3,3,5

@@ -1,0 +1,1338 @@
+{
+  "version": "designed_feature_review_six_v1",
+  "date": "2026-11-11",
+  "scope": "Designed task complexity only; no agent grading or API calls. Assistant proposals are not human labels.",
+  "counting_rule": "Applicable description count selects YAML descriptions for the intended scenario, retaining input receipt, waiting and terminal descriptions for a like-for-like comparison. It is not an exact action count or final scoring feature. Decisions remain unconfirmed.",
+  "source_sha256": {
+    "banking_accounts_deposits/test_cases.py": "0262923d8bfc190a2395a129f053fb83c046e6339740a1eb92b789153df70628",
+    "banking_accounts_deposits/agent_definition.yaml": "b91ed50d09e0c3fc39b68c5482aef90643bd11e4fdf6a639cee3f8a695182323",
+    "banking_accounts_deposits/test_cases.json": "fcd7228764e32c35df5eefa15b6395a2bd7abd5017711f702552ee7b6fc67403",
+    "banking_customer_onboarding/test_cases.py": "a0f4b42dade33478b32d33c7dc3d78b1ee38820aa2ade51006febbbeb36c9776",
+    "banking_customer_onboarding/agent_definition.yaml": "c379a54700aed54fa062e7890ef90f8f14ef85f4bc2a95f2c783432afcd107c3",
+    "banking_customer_onboarding/test_cases.json": "849d04f1e2c0c7a41e6f7af7424a8b4162353f72692e577ba50f5281d8f79c9f",
+    "banking_fraud_monitoring/test_cases.py": "3ba276becffd2c778b15f292685c3bfcd65452323e70c797b9433ba0152c733b",
+    "banking_fraud_monitoring/agent_definition.yaml": "ca9a6d423a726405a20d1ca2a4c0e2971e0614faccae425e0ba53b09b3d55310",
+    "banking_fraud_monitoring/test_cases.json": "9c94a3143ff085e591ce51c4926f9575e347bfd60cd01535399f482a5831ce94",
+    "healthcare_patient_onboarding/test_cases.py": "c0c3efbf9a41c239736d3821d8568cde0337ba14bfc12b7d2b21e3986ad29947",
+    "healthcare_patient_onboarding/agent_definition.yaml": "80c78fa76b19cca07d0fbcd9d69ed10b93a940424d10a658369678a47ca15684",
+    "healthcare_patient_onboarding/test_cases.json": "c2a257396c615b71206c9b941a4b0328e2451a7a75db7f3fca04266e6d12930d",
+    "healthcare_prior_authorization/test_cases.py": "fe4096e05408edd7fac67d81c5895bdf839b932a77963e48d8ecaeb6dc7b0760",
+    "healthcare_prior_authorization/agent_definition.yaml": "2680eac1f8e8d71393ec34b509d99464187f35914cf08342763af3791116a01f",
+    "healthcare_prior_authorization/test_cases.json": "251007e8148562cdeb561200cb333cf6a44f98eeb599f00c5f68e760381824d0",
+    "insurance_claims_intake/test_cases.py": "a69b9bb8b5ce56b55ce73d0936e5dabab67e265cc8bfa5f529520c12d464a83a",
+    "insurance_claims_intake/agent_definition.yaml": "5c5e159369e55c72b4443662320aa2f462d20b0a8c2f9a9fb13b0153417ce304",
+    "insurance_claims_intake/test_cases.json": "bac038fac6f889f830f41279304906fc2d0de2bacdb5f742f68e4741e866d0cd",
+    "manufacturing_purchase_to_pay/test_cases.py": "567b892a1534a400e838e651ad5a5aacdbdf87593f377354db8820bdb99fc12c",
+    "manufacturing_purchase_to_pay/agent_definition.yaml": "c6310c3840607a8e67507277e1892364c09eeb18fe962a756ceefb69de2cf93c",
+    "manufacturing_purchase_to_pay/test_cases.json": "a46adedb99892fc44a48c9cadea9c9d96ab174c9267f49d674717595ecd728f7"
+  },
+  "sample": [
+    {
+      "example": "A",
+      "selection_reason": "Purposive feature review; two supplied easy, two medium, two hard; five domains, including one within-domain comparison. Not representative validation.",
+      "id": "HealthcarePA_W8_TC1",
+      "short": "A Check an approved authorization",
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "outline": "Look up the authorization status, identify the approved result, and notify the provider. The approved scenario does not require an appeal or delayed-request follow-up.",
+      "comparison": "The code counts all five workflow descriptions. For this approved scenario, steps 4 and 5 describe other outcomes. Three descriptions appear applicable; provider notification and EHR update are bundled into step 3 and are not established by the single expected lookup call.",
+      "decisions": "Categorizing the returned status is a choice even though the wording rule flags zero descriptions. Whether this counts as a decision when approval is fixed in the scenario needs an agreed rule.",
+      "question": "Count the approved path as three described steps? Is categorization a decision, and how should bundled notification and EHR work be represented?",
+      "issue": "The scenario input omits reference_id, although the intended lookup assumes one. Record this separately as a data feasibility issue; do not inflate designed complexity.",
+      "domain": "healthcare_prior_authorization",
+      "task_id": "HealthcarePA_W8_TC1",
+      "supplied_tag": "easy",
+      "computed": {
+        "workflow_step_count": 5,
+        "reference_domain_tool_call_count": 1,
+        "reference_unique_domain_tool_count": 1,
+        "reference_milestone_count": 3,
+        "workflow_decision_cue_step_count": 0
+      },
+      "proposed_applicable_description_count": 3,
+      "proposed_excluded_workflow_steps": [
+        4,
+        5
+      ],
+      "review_status": "assistant_proposal_pending_independent_review",
+      "exact_required_action_count": null,
+      "exact_independent_decision_count": null,
+      "source": {
+        "python_file": "data/healthcare_prior_authorization/test_cases.py",
+        "python_class_line": 1886,
+        "yaml_file": "data/healthcare_prior_authorization/agent_definition.yaml",
+        "yaml_workflow_line": 528,
+        "yaml_pointer": "#/agent/workflows/7",
+        "json_file": "data/healthcare_prior_authorization/test_cases.json",
+        "json_pointers": [
+          "/workflows/7/test_cases/0"
+        ]
+      },
+      "workflow": {
+        "id": "W8",
+        "name": "PA Status Tracking and Follow-Up Workflow",
+        "purpose": "Monitor and follow up on pending, approved, denied, or delayed PA requests.",
+        "trigger_conditions": [
+          "Provider requests status check for pending PA"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "description": "Track PA status for all pending requests.",
+            "tools_used": [
+              "track_pa_status"
+            ]
+          },
+          {
+            "step": 2,
+            "description": "Categorize results: approved, denied, pended, delayed.",
+            "tools_used": []
+          },
+          {
+            "step": 3,
+            "description": "Update EHR and notify providers for approved requests.",
+            "tools_used": [
+              "SUCCESS"
+            ]
+          },
+          {
+            "step": 4,
+            "description": "Notify providers of denied requests; offer appeal option.",
+            "tools_used": [
+              "FAILED",
+              "appeal_pa_denial"
+            ]
+          },
+          {
+            "step": 5,
+            "description": "Follow up with payers for pended or delayed requests.",
+            "tools_used": [
+              "HUMAN_IN_THE_LOOP"
+            ]
+          }
+        ],
+        "exit_conditions": {
+          "success": "All PA statuses updated; providers notified.",
+          "escalation": "Requests delayed beyond SLA or payer non-responsive; escalate to HUMAN_IN_THE_LOOP.",
+          "failure": "Unable to retrieve status; notify provider via FAILED."
+        }
+      },
+      "reference": {
+        "test_case_id": "HealthcarePA_W8_TC1",
+        "title": "Status Check for Approved PA",
+        "rationale": "Validates agent's ability to track and report approved PA status upon provider request.",
+        "input_conditions": [
+          "pa_status_check = true",
+          "reference_id corresponds to approved PA"
+        ],
+        "expected_success_outcome": {
+          "final_status": "approved",
+          "key_outputs": {
+            "pa_status": "approved",
+            "auth_number": "AUTH-556677",
+            "decision_notes": "Approved for 90 days, MRI criteria met.",
+            "reference_id": "PA-778899",
+            "valid_through": "2024-09-10"
+          }
+        },
+        "milestones": [
+          {
+            "step": 1,
+            "description": "PA status tracked for reference ID",
+            "expected_state": {
+              "pa_status": "approved",
+              "auth_number": "AUTH-556677"
+            }
+          },
+          {
+            "step": 2,
+            "description": "Results categorized as approved",
+            "expected_state": {
+              "final_status": "approved"
+            }
+          },
+          {
+            "step": 3,
+            "description": "Provider notified of approval",
+            "expected_state": {
+              "final_status": "approved"
+            }
+          }
+        ],
+        "expected_tool_calls": [
+          "track_pa_status",
+          "SUCCESS"
+        ],
+        "scenario": {
+          "input_data": {
+            "patient_id": "PAT-445566",
+            "payer_id": "PAYER-ANTHEM",
+            "plan_id": "PLAN-BCBS-01",
+            "cpt_code": "72148",
+            "diagnosis_code": "M54.5",
+            "service_type": "standard",
+            "pa_status_check": true
+          }
+        }
+      },
+      "independent_review": {
+        "reviewer": null,
+        "necessary_steps_agreed": null,
+        "decision_notes": null,
+        "rank_or_tied_group": null,
+        "rationale": null
+      }
+    },
+    {
+      "example": "B",
+      "selection_reason": "Purposive feature review; two supplied easy, two medium, two hard; five domains, including one within-domain comparison. Not representative validation.",
+      "id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "short": "B Resolve an invoice mismatch",
+      "path": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "outline": "Receive the invoice, match it to the order and receipt, identify the excessive price variance, obtain accounts payable approval, process payment, and signal completion.",
+      "comparison": "Seven shared descriptions include escalation if accounts payable cannot resolve the mismatch. This scenario explicitly resolves it, so step 5 is an alternative. Six descriptions appear applicable, including receiving the invoice and signaling completion; the reference contains only three business-tool calls.",
+      "decisions": "Inspect the variance threshold and whether accounts payable resolves the exception. The two flagged descriptions are review leads, not a verified count. Decide whether the threshold is a workflow-entry condition or an in-task choice.",
+      "question": "Exclude the unused escalation step? Should receiving an already supplied invoice and signaling completion contribute to complexity?",
+      "issue": "Do not treat human approval as an agent tool call or ignore the approval dependency simply because the reference has only three business calls.",
+      "domain": "manufacturing_purchase_to_pay",
+      "task_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+      "supplied_tag": "medium",
+      "computed": {
+        "workflow_step_count": 7,
+        "reference_domain_tool_call_count": 3,
+        "reference_unique_domain_tool_count": 3,
+        "reference_milestone_count": 4,
+        "workflow_decision_cue_step_count": 2
+      },
+      "proposed_applicable_description_count": 6,
+      "proposed_excluded_workflow_steps": [
+        5
+      ],
+      "review_status": "assistant_proposal_pending_independent_review",
+      "exact_required_action_count": null,
+      "exact_independent_decision_count": null,
+      "source": {
+        "python_file": "data/manufacturing_purchase_to_pay/test_cases.py",
+        "python_class_line": 1196,
+        "yaml_file": "data/manufacturing_purchase_to_pay/agent_definition.yaml",
+        "yaml_workflow_line": 397,
+        "yaml_pointer": "#/agent/workflows/2",
+        "json_file": "data/manufacturing_purchase_to_pay/test_cases.json",
+        "json_pointers": [
+          "/workflows/2/test_cases/0"
+        ]
+      },
+      "workflow": {
+        "id": "W3",
+        "name": "Invoice Price Mismatch - Exception Routing",
+        "purpose": "Identify invoice price mismatches, flag exceptions, and route for AP review and resolution.",
+        "trigger_conditions": [
+          "invoice_match_status == \"price_mismatch\"",
+          "variance_amount > 500"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "description": "Receive supplier invoice.",
+            "tools_used": []
+          },
+          {
+            "step": 2,
+            "description": "Match invoice to PO and receipt.",
+            "tools_used": [
+              "match_invoice_to_po"
+            ]
+          },
+          {
+            "step": 3,
+            "description": "Identify price variance exceeding tolerance.",
+            "tools_used": []
+          },
+          {
+            "step": 4,
+            "description": "Route exception to accounts payable for review.",
+            "tools_used": [
+              "route_payment_approval"
+            ]
+          },
+          {
+            "step": 5,
+            "description": "Escalate to HUMAN_IN_THE_LOOP if AP cannot resolve.",
+            "tools_used": [
+              "HUMAN_IN_THE_LOOP"
+            ]
+          },
+          {
+            "step": 6,
+            "description": "Approve payment after resolution.",
+            "tools_used": [
+              "process_payment"
+            ]
+          },
+          {
+            "step": 7,
+            "description": "Signal workflow completion.",
+            "tools_used": [
+              "SUCCESS"
+            ]
+          }
+        ],
+        "exit_conditions": {
+          "success": "Exception resolved, payment processed, workflow logged.",
+          "escalation": "Unresolved variance or dispute; escalate to manager.",
+          "failure": "AP review failed, invoice rejected, or payment not processed."
+        }
+      },
+      "reference": {
+        "test_case_id": "ManufacturingPurchaseToPayAutomationAgent_P2P_W3_TC1",
+        "title": "Invoice price mismatch > $500, AP resolves and payment processed",
+        "rationale": "Validates successful exception handling for price variance above tolerance, resolved by AP.",
+        "input_conditions": [
+          "invoice_match_status: price_mismatch",
+          "variance_amount: 800",
+          "AP review: resolved"
+        ],
+        "expected_success_outcome": {
+          "final_status": "completed",
+          "key_outputs": {
+            "workflow_status": "completed",
+            "audit_log": {
+              "steps": [
+                "match_invoice_to_po",
+                "route_payment_approval",
+                "process_payment"
+              ],
+              "approvals": [
+                "AP"
+              ],
+              "exceptions": [
+                {
+                  "type": "price_mismatch",
+                  "variance_amount": 800,
+                  "resolution": "approved by AP"
+                }
+              ]
+            },
+            "payment_details": {
+              "invoice_id": "INV-999888",
+              "payment_status": "completed",
+              "amount": 12800.0,
+              "scheduled_date": "2024-04-01",
+              "method": "ach"
+            },
+            "approval_status": "approved"
+          }
+        },
+        "milestones": [
+          {
+            "step": 1,
+            "description": "Invoice matched to PO and receipt (price mismatch > $500)",
+            "expected_state": {
+              "match_status": "price_mismatch",
+              "variance_amount": 800
+            }
+          },
+          {
+            "step": 2,
+            "description": "Exception routed to AP for review",
+            "expected_state": {
+              "approval_status": "approved",
+              "approver": "AP"
+            }
+          },
+          {
+            "step": 3,
+            "description": "Payment processed after AP approval",
+            "expected_state": {
+              "payment_status": "completed",
+              "method": "ach"
+            }
+          },
+          {
+            "step": 4,
+            "description": "Workflow completion signaled",
+            "expected_state": {
+              "workflow_status": "completed"
+            }
+          }
+        ],
+        "expected_tool_calls": [
+          "match_invoice_to_po",
+          "route_payment_approval",
+          "process_payment",
+          "SUCCESS"
+        ],
+        "scenario": {
+          "input_data": {
+            "requisition_id": "REQ-445700",
+            "requisition_type": "standard",
+            "amount": 12000.0,
+            "cost_center": "CC-60500",
+            "GL_account": "GL-60500",
+            "supplier_id": "SUP-XYZ789",
+            "priority": "normal",
+            "invoice_id": "INV-999888",
+            "receipt_id": "GR-123456"
+          }
+        }
+      },
+      "independent_review": {
+        "reviewer": null,
+        "necessary_steps_agreed": null,
+        "decision_notes": null,
+        "rank_or_tied_group": null,
+        "rationale": null
+      }
+    },
+    {
+      "example": "C",
+      "selection_reason": "Purposive feature review; two supplied easy, two medium, two hard; five domains, including one within-domain comparison. Not representative validation.",
+      "id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "short": "C Recover from inactive insurance",
+      "path": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "outline": "Extract patient and insurance information, check coverage, request an update after inactive coverage, receive the response, recheck coverage, create the patient record, schedule the visit, and send confirmation.",
+      "comparison": "All seven workflow descriptions appear relevant, but they bundle different amounts of work. Step 1 has two extraction tools; step 6 has record creation, scheduling, and communication. Eight expected business-tool interactions use six distinct tools because verification and communication each repeat.",
+      "decisions": "Inspect the initial coverage result, updated insurance versus self-pay, and the recheck result. The three wording hits include a final success/escalation description that may repeat an earlier choice. Do not equate three hits with three independent decisions.",
+      "question": "Count retries separately from distinct tools? Does waiting for the response contribute to difficulty, and how should bundled work be split?",
+      "issue": "The intended reference includes updated insurance. Whether the runtime supplies it properly is a separate environment question, not an extra designed step.",
+      "domain": "healthcare_patient_onboarding",
+      "task_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+      "supplied_tag": "medium",
+      "computed": {
+        "workflow_step_count": 7,
+        "reference_domain_tool_call_count": 8,
+        "reference_unique_domain_tool_count": 6,
+        "reference_milestone_count": 7,
+        "workflow_decision_cue_step_count": 3
+      },
+      "proposed_applicable_description_count": 7,
+      "proposed_excluded_workflow_steps": [],
+      "review_status": "assistant_proposal_pending_independent_review",
+      "exact_required_action_count": null,
+      "exact_independent_decision_count": null,
+      "source": {
+        "python_file": "data/healthcare_patient_onboarding/test_cases.py",
+        "python_class_line": 1107,
+        "yaml_file": "data/healthcare_patient_onboarding/agent_definition.yaml",
+        "yaml_workflow_line": 387,
+        "yaml_pointer": "#/agent/workflows/2",
+        "json_file": "data/healthcare_patient_onboarding/test_cases.json",
+        "json_pointers": [
+          "/workflows/2/test_cases/0"
+        ]
+      },
+      "workflow": {
+        "id": "W3",
+        "name": "Insurance Eligibility Failure - Request Update",
+        "purpose": "Handles onboarding when insurance is inactive or terminated; requests updated info or self-pay arrangement.",
+        "trigger_conditions": [
+          "Insurance eligibility status is inactive or terminated"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "description": "Extract patient demographics and insurance info",
+            "tools_used": [
+              "extract_patient_demographics",
+              "extract_insurance_info"
+            ]
+          },
+          {
+            "step": 2,
+            "description": "Attempt insurance eligibility verification",
+            "tools_used": [
+              "verify_insurance_eligibility"
+            ]
+          },
+          {
+            "step": 3,
+            "description": "If coverage inactive, send request for updated insurance or self-pay",
+            "tools_used": [
+              "send_patient_communication"
+            ]
+          },
+          {
+            "step": 4,
+            "description": "Wait for patient response (manual or automated)",
+            "tools_used": []
+          },
+          {
+            "step": 5,
+            "description": "Re-attempt insurance verification or update payment type",
+            "tools_used": [
+              "verify_insurance_eligibility"
+            ]
+          },
+          {
+            "step": 6,
+            "description": "If new insurance active, proceed with onboarding; else escalate",
+            "tools_used": [
+              "create_ehr_patient_record",
+              "schedule_appointment",
+              "send_patient_communication"
+            ]
+          },
+          {
+            "step": 7,
+            "description": "Signal success or escalate as needed",
+            "tools_used": [
+              "SUCCESS",
+              "HUMAN_IN_THE_LOOP"
+            ]
+          }
+        ],
+        "exit_conditions": {
+          "success": "Patient record created, appointment scheduled after insurance resolved",
+          "escalation": "Patient does not respond or coverage remains inactive",
+          "failure": "No valid insurance or self-pay arrangement provided"
+        }
+      },
+      "reference": {
+        "test_case_id": "HealthcarePatientOnboardingAgent_HealthcareOnboarding_W3_TC1",
+        "title": "Patient provides updated insurance after initial inactive coverage",
+        "rationale": "Tests successful resolution after patient supplies new insurance following a coverage failure.",
+        "input_conditions": [
+          "Initial insurance eligibility inactive",
+          "Patient responds with updated insurance",
+          "New insurance eligibility active"
+        ],
+        "expected_success_outcome": {
+          "final_status": "success",
+          "key_outputs": {
+            "patient_record": {
+              "patient_id": "920001",
+              "status": "created",
+              "ehr_system": "Epic"
+            },
+            "insurance_eligibility": {
+              "status": "active",
+              "copay": 20,
+              "deductible": 400,
+              "deductible_met": 100,
+              "prior_auth_required": false
+            },
+            "appointment": {
+              "appointment_id": "APPT-30101",
+              "provider_id": "PROV-13579",
+              "slot": {
+                "date": "2024-06-05",
+                "time": "11:00",
+                "duration": 30
+              },
+              "status": "scheduled"
+            },
+            "communication_status": {
+              "message_id": "MSG-50001",
+              "delivery_status": "sent",
+              "timestamp": "2024-05-01T09:00:00Z"
+            },
+            "escalation_flag": false
+          }
+        },
+        "milestones": [
+          {
+            "step": 1,
+            "description": "Extract patient demographics and insurance info",
+            "expected_state": {
+              "demographics_status": "extracted",
+              "insurance_fields_status": "extracted"
+            }
+          },
+          {
+            "step": 2,
+            "description": "Attempt insurance eligibility verification (inactive)",
+            "expected_state": {
+              "insurance_eligibility_status": "inactive"
+            }
+          },
+          {
+            "step": 3,
+            "description": "Send request for updated insurance or self-pay",
+            "expected_state": {
+              "request_sent": true
+            }
+          },
+          {
+            "step": 4,
+            "description": "Patient responds with updated insurance",
+            "expected_state": {
+              "insurance_update_received": true
+            }
+          },
+          {
+            "step": 5,
+            "description": "Re-attempt insurance verification (active)",
+            "expected_state": {
+              "insurance_eligibility_status": "active"
+            }
+          },
+          {
+            "step": 6,
+            "description": "Create EHR record, schedule appointment, send confirmation",
+            "expected_state": {
+              "patient_record_status": "created",
+              "appointment_status": "scheduled",
+              "confirmation_sent": true
+            }
+          },
+          {
+            "step": 7,
+            "description": "Signal success",
+            "expected_state": {
+              "final_status": "success"
+            }
+          }
+        ],
+        "expected_tool_calls": [
+          "extract_patient_demographics",
+          "extract_insurance_info",
+          "verify_insurance_eligibility",
+          "send_patient_communication",
+          "verify_insurance_eligibility",
+          "create_ehr_patient_record",
+          "schedule_appointment",
+          "send_patient_communication",
+          "SUCCESS"
+        ],
+        "scenario": {
+          "input_data": {
+            "form_id": "PAT-30001",
+            "appointment_type": "initial_visit",
+            "provider_id": "PROV-13579",
+            "self_pay": false,
+            "insurance_update": {
+              "carrier": "NewHealth",
+              "policy_number": "NH-55555",
+              "group_number": "NHG-8888",
+              "subscriber_name": "John Doe",
+              "dob": "1990-06-15"
+            }
+          }
+        }
+      },
+      "independent_review": {
+        "reviewer": null,
+        "necessary_steps_agreed": null,
+        "decision_notes": null,
+        "rank_or_tied_group": null,
+        "rationale": null
+      }
+    },
+    {
+      "example": "D",
+      "selection_reason": "Purposive feature review; two supplied easy, two medium, two hard; five domains, including one within-domain comparison. Not representative validation.",
+      "id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "short": "D Escalate a high risk transaction",
+      "path": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "outline": "Gather transaction, customer, and history information; inspect device and fraud data; calculate risk and compile an investigation package; route it to an analyst; confirm escalation.",
+      "comparison": "All five descriptions appear relevant. The first contains three business-tool calls and the second two, giving seven business calls overall. A five-step workflow is therefore not necessarily less work than a longer workflow with fewer tools.",
+      "decisions": "The risk threshold 70 < score <= 95 is in trigger_conditions, which the current wording rule does not scan. Package completeness appears in exit conditions. Separate business routing choices from generic tool-failure handling.",
+      "question": "Include workflow trigger conditions in the decision feature? Does the agent select the route or merely execute an already selected escalation workflow?",
+      "issue": "The supplied hard tag is a comparison annotation. Neither the tag nor seven calls independently proves this task is hard.",
+      "domain": "banking_fraud_monitoring",
+      "task_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+      "supplied_tag": "hard",
+      "computed": {
+        "workflow_step_count": 5,
+        "reference_domain_tool_call_count": 7,
+        "reference_unique_domain_tool_count": 7,
+        "reference_milestone_count": 4,
+        "workflow_decision_cue_step_count": 1
+      },
+      "proposed_applicable_description_count": 5,
+      "proposed_excluded_workflow_steps": [],
+      "review_status": "assistant_proposal_pending_independent_review",
+      "exact_required_action_count": null,
+      "exact_independent_decision_count": null,
+      "source": {
+        "python_file": "data/banking_fraud_monitoring/test_cases.py",
+        "python_class_line": 1262,
+        "yaml_file": "data/banking_fraud_monitoring/agent_definition.yaml",
+        "yaml_workflow_line": 351,
+        "yaml_pointer": "#/agent/workflows/2",
+        "json_file": "data/banking_fraud_monitoring/test_cases.json",
+        "json_pointers": [
+          "/workflows/2/test_cases/0"
+        ]
+      },
+      "workflow": {
+        "id": "W3",
+        "name": "High-Risk Case Escalation to Analyst",
+        "purpose": "Escalate medium/high-risk transactions to fraud analysts with a complete investigation package.",
+        "trigger_conditions": [
+          "70 < fraud_risk_score <= 95",
+          "Multiple fraud signals detected"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "description": "Retrieve transaction details, customer profile, and transaction history.",
+            "tools_used": [
+              "retrieve_transaction_details",
+              "get_customer_profile",
+              "analyze_transaction_history"
+            ]
+          },
+          {
+            "step": 2,
+            "description": "Check device intelligence and cross-reference fraud databases.",
+            "tools_used": [
+              "check_device_intelligence",
+              "cross_reference_fraud_databases"
+            ]
+          },
+          {
+            "step": 3,
+            "description": "Calculate fraud risk score and compile investigation package.",
+            "tools_used": [
+              "calculate_fraud_risk_score"
+            ]
+          },
+          {
+            "step": 4,
+            "description": "Route to analyst with recommended actions.",
+            "tools_used": [
+              "route_to_analyst"
+            ]
+          },
+          {
+            "step": 5,
+            "description": "Confirm escalation and log summary.",
+            "tools_used": [
+              "SUCCESS"
+            ]
+          }
+        ],
+        "exit_conditions": {
+          "success": "Case escalated to analyst with full context.",
+          "escalation": "If investigation package is incomplete, escalate to HUMAN_IN_THE_LOOP.",
+          "failure": "If routing fails, escalate to HUMAN_IN_THE_LOOP."
+        }
+      },
+      "reference": {
+        "test_case_id": "BankingFraudMonitoringSupportAgent_BankingFraud_W3_TC1",
+        "title": "High-Risk Online Transaction with Device Mismatch",
+        "rationale": "Covers escalation for a high-risk transaction with device anomaly and multiple fraud signals.",
+        "input_conditions": [
+          "fraud_risk_score = 85",
+          "alert_type = card_not_present",
+          "transaction_type = online",
+          "Device mismatch and velocity anomaly",
+          "Cross-referenced fraud database shows no blacklist"
+        ],
+        "expected_success_outcome": {
+          "final_status": "escalated",
+          "key_outputs": {
+            "fraud_risk_score": 85,
+            "case_status": "escalated",
+            "recommended_action": "block_card",
+            "investigation_package": {
+              "transaction_id": "TX-50005",
+              "risk_factors": [
+                "device_mismatch",
+                "velocity_anomaly"
+              ],
+              "summary": "High-risk online purchase with device mismatch and rapid transaction velocity."
+            }
+          }
+        },
+        "milestones": [
+          {
+            "step": 1,
+            "description": "Transaction details, customer profile, and history retrieved",
+            "expected_state": {
+              "transaction_id": "TX-50005",
+              "total_transactions": 50
+            }
+          },
+          {
+            "step": 2,
+            "description": "Device intelligence and fraud database cross-referenced",
+            "expected_state": {
+              "device_risk_score": 80,
+              "merchant_blacklist_hit": false
+            }
+          },
+          {
+            "step": 3,
+            "description": "Fraud risk score calculated and investigation package compiled",
+            "expected_state": {
+              "fraud_risk_score": 85
+            }
+          },
+          {
+            "step": 4,
+            "description": "Case routed to analyst",
+            "expected_state": {
+              "case_id": "CASE-50005",
+              "escalation_level": "normal"
+            }
+          }
+        ],
+        "expected_tool_calls": [
+          "retrieve_transaction_details",
+          "get_customer_profile",
+          "analyze_transaction_history",
+          "check_device_intelligence",
+          "cross_reference_fraud_databases",
+          "calculate_fraud_risk_score",
+          "route_to_analyst",
+          "SUCCESS"
+        ],
+        "scenario": {
+          "input_data": {
+            "alert_id": "FA-883425",
+            "customer_id": "CUST-334899",
+            "alert_type": "card_not_present",
+            "transaction_type": "online",
+            "lookback_days": 180,
+            "additional_context": {
+              "device_id": "DEV-500005",
+              "location": "Dallas, TX",
+              "ip_address": "203.0.113.20"
+            }
+          }
+        }
+      },
+      "independent_review": {
+        "reviewer": null,
+        "necessary_steps_agreed": null,
+        "decision_notes": null,
+        "rank_or_tied_group": null,
+        "rationale": null
+      }
+    },
+    {
+      "example": "E",
+      "selection_reason": "Purposive feature review; two supplied easy, two medium, two hard; five domains, including one within-domain comparison. Not representative validation.",
+      "id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "short": "E Handle an emergency property claim",
+      "path": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "outline": "Extract loss details, classify the claim, verify coverage, assess severity, create the claim, dispatch emergency mitigation, assign a team, acknowledge the customer, and signal completion.",
+      "comparison": "All nine descriptions appear relevant to the intended reference. The code finds eight business calls, eight distinct tools, eight milestones, and zero wording hits. Those counts are identical to example F even though the supplied tags differ.",
+      "decisions": "Coverage, emergency severity, and team assignment are potential business choices. They are written as actions rather than using the wording detector keywords. The workflow may already fix some choices; do not invent an exact count.",
+      "question": "How much difficulty comes from selecting a route versus following the scenario route? What evidence would justify distinguishing this task from F?",
+      "issue": "The input has catastrophe_event=false but the reference assigns the CAT team. Flag this source tension for review without deciding that the whole task is invalid.",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+      "supplied_tag": "easy",
+      "computed": {
+        "workflow_step_count": 9,
+        "reference_domain_tool_call_count": 8,
+        "reference_unique_domain_tool_count": 8,
+        "reference_milestone_count": 8,
+        "workflow_decision_cue_step_count": 0
+      },
+      "proposed_applicable_description_count": 9,
+      "proposed_excluded_workflow_steps": [],
+      "review_status": "assistant_proposal_pending_independent_review",
+      "exact_required_action_count": null,
+      "exact_independent_decision_count": null,
+      "source": {
+        "python_file": "data/insurance_claims_intake/test_cases.py",
+        "python_class_line": 451,
+        "yaml_file": "data/insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_line": 313,
+        "yaml_pointer": "#/agent/workflows/0",
+        "json_file": "data/insurance_claims_intake/test_cases.json",
+        "json_pointers": [
+          "/workflows/0/test_cases/0"
+        ]
+      },
+      "workflow": {
+        "id": "W1",
+        "name": "Storm Damage - Emergency Water Mitigation",
+        "purpose": "Process urgent property claims with active water intrusion and dispatch emergency vendor.",
+        "trigger_conditions": [
+          "claim_type == 'property'",
+          "severity_level == 'emergency'"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "description": "Extract loss details from FNOL submission.",
+            "tools_used": [
+              "extract_loss_details"
+            ]
+          },
+          {
+            "step": 2,
+            "description": "Classify claim type as property damage, storm/wind peril.",
+            "tools_used": [
+              "classify_claim_type"
+            ]
+          },
+          {
+            "step": 3,
+            "description": "Validate policy coverage for storm peril.",
+            "tools_used": [
+              "validate_policy_coverage"
+            ]
+          },
+          {
+            "step": 4,
+            "description": "Assess claim severity and flag as emergency.",
+            "tools_used": [
+              "assess_claim_severity"
+            ]
+          },
+          {
+            "step": 5,
+            "description": "Create claim record with emergency flag.",
+            "tools_used": [
+              "create_claim_record"
+            ]
+          },
+          {
+            "step": 6,
+            "description": "Trigger emergency water mitigation vendor dispatch.",
+            "tools_used": [
+              "trigger_emergency_services"
+            ]
+          },
+          {
+            "step": 7,
+            "description": "Route claim to CAT team for catastrophe event.",
+            "tools_used": [
+              "route_to_adjuster"
+            ]
+          },
+          {
+            "step": 8,
+            "description": "Send claim acknowledgment to customer.",
+            "tools_used": [
+              "send_claim_acknowledgment"
+            ]
+          },
+          {
+            "step": 9,
+            "description": "Signal successful claim intake and triage.",
+            "tools_used": [
+              "SUCCESS"
+            ]
+          }
+        ],
+        "exit_conditions": {
+          "success": "Claim created, vendor dispatched, CAT team assigned, customer notified.",
+          "escalation": "If emergency vendor unavailable or ambiguous coverage, escalate to HUMAN_IN_THE_LOOP.",
+          "failure": "If policy not active or claim creation fails, use FAILED."
+        }
+      },
+      "reference": {
+        "test_case_id": "InsuranceClaimsIntakeAndTriageAgent_W1_TC1",
+        "title": "Emergency Property Claim \u2013 Water Intrusion, Storm Peril, Coverage Confirmed",
+        "rationale": "Covers urgent property claim with water damage, storm peril, policy active, emergency vendor dispatch via ServiceMaster.",
+        "input_conditions": [
+          "claim_type = property",
+          "severity = emergency",
+          "cause = storm/wind",
+          "policy_status = active",
+          "coverage_confirmed = true",
+          "emergency_services_needed = true"
+        ],
+        "expected_success_outcome": {
+          "final_status": "success",
+          "key_outputs": {
+            "claim_number": "2026-445521",
+            "claim_status": "created",
+            "assigned_team": "CAT team",
+            "customer_acknowledgment_status": "sent"
+          }
+        },
+        "milestones": [
+          {
+            "step": 1,
+            "description": "Loss details extracted (storm, water intrusion)",
+            "expected_state": {
+              "loss_details": "complete",
+              "cause": "storm/wind"
+            }
+          },
+          {
+            "step": 2,
+            "description": "Claim classified as property, peril: storm/wind",
+            "expected_state": {
+              "claim_type": "property",
+              "peril": "storm/wind"
+            }
+          },
+          {
+            "step": 3,
+            "description": "Policy coverage validated (active, peril covered)",
+            "expected_state": {
+              "coverage_confirmed": true,
+              "policy_status": "active"
+            }
+          },
+          {
+            "step": 4,
+            "description": "Claim severity assessed (emergency)",
+            "expected_state": {
+              "severity_level": "emergency",
+              "emergency_services_needed": true
+            }
+          },
+          {
+            "step": 5,
+            "description": "Claim record created with emergency flag",
+            "expected_state": {
+              "claim_status": "created",
+              "flags": [
+                "emergency"
+              ]
+            }
+          },
+          {
+            "step": 6,
+            "description": "Emergency water mitigation vendor dispatched",
+            "expected_state": {
+              "dispatch_status": "dispatched",
+              "emergency_type": "water_mitigation",
+              "vendor_network": "ServiceMaster"
+            }
+          },
+          {
+            "step": 7,
+            "description": "Claim routed to CAT team",
+            "expected_state": {
+              "assigned_team": "CAT team",
+              "assignment_status": "assigned"
+            }
+          },
+          {
+            "step": 8,
+            "description": "Claim acknowledgment sent to customer",
+            "expected_state": {
+              "delivery_status": "sent",
+              "message_type": "acknowledgment"
+            }
+          }
+        ],
+        "expected_tool_calls": [
+          "extract_loss_details",
+          "classify_claim_type",
+          "validate_policy_coverage",
+          "assess_claim_severity",
+          "create_claim_record",
+          "trigger_emergency_services",
+          "route_to_adjuster",
+          "send_claim_acknowledgment",
+          "SUCCESS"
+        ],
+        "scenario": {
+          "input_data": {
+            "source_text": "Tree fell on my roof during last night's storm. Water leaking into bedroom. Need help ASAP.",
+            "policy_number": "HO-887766",
+            "claim_type": "property",
+            "severity": "emergency",
+            "injury_reported": false,
+            "catastrophe_event": false,
+            "batch_size": 1,
+            "policy_status": "active",
+            "coverage_confirmed": true,
+            "business_interruption": false,
+            "duplicate_claim_found": false,
+            "data_incomplete": false
+          }
+        }
+      },
+      "independent_review": {
+        "reviewer": null,
+        "necessary_steps_agreed": null,
+        "decision_notes": null,
+        "rank_or_tied_group": null,
+        "rationale": null
+      }
+    },
+    {
+      "example": "F",
+      "selection_reason": "Purposive feature review; two supplied easy, two medium, two hard; five domains, including one within-domain comparison. Not representative validation.",
+      "id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "short": "F Handle a commercial interruption claim",
+      "path": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "outline": "Extract and classify the loss, validate property and business interruption coverage, assess severity, create linked claims, involve the large loss team and specialist, dispatch experts, acknowledge the insured, and signal completion.",
+      "comparison": "The same nine descriptions and eight business calls as E conceal richer outputs: two linked claims, property and business interruption coverage, and several specialists. This is a candidate source of complexity that raw step and tool counts miss.",
+      "decisions": "Coverage scope, large loss routing, and specialist involvement deserve inspection. Zero wording hits does not establish zero choices. Multiple output entities and coordination could be separate features if defined consistently.",
+      "question": "Should linked entities and coordination be added as a feature? Can reviewers justify a higher difficulty than E from the requirements without seeing the tags?",
+      "issue": "The source reference expects linked claims and multiple specialists through a small set of tools. Do not assume one tool call represents one elementary action.",
+      "domain": "insurance_claims_intake",
+      "task_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+      "supplied_tag": "hard",
+      "computed": {
+        "workflow_step_count": 9,
+        "reference_domain_tool_call_count": 8,
+        "reference_unique_domain_tool_count": 8,
+        "reference_milestone_count": 8,
+        "workflow_decision_cue_step_count": 0
+      },
+      "proposed_applicable_description_count": 9,
+      "proposed_excluded_workflow_steps": [],
+      "review_status": "assistant_proposal_pending_independent_review",
+      "exact_required_action_count": null,
+      "exact_independent_decision_count": null,
+      "source": {
+        "python_file": "data/insurance_claims_intake/test_cases.py",
+        "python_class_line": 2632,
+        "yaml_file": "data/insurance_claims_intake/agent_definition.yaml",
+        "yaml_workflow_line": 564,
+        "yaml_pointer": "#/agent/workflows/7",
+        "json_file": "data/insurance_claims_intake/test_cases.json",
+        "json_pointers": [
+          "/workflows/7/test_cases/0"
+        ]
+      },
+      "workflow": {
+        "id": "W8",
+        "name": "Complex Commercial Claim - Business Interruption",
+        "purpose": "Process large commercial property claims with business interruption, engage specialists.",
+        "trigger_conditions": [
+          "claim_type == 'commercial_property'",
+          "business_interruption == true"
+        ],
+        "steps": [
+          {
+            "step": 1,
+            "description": "Extract loss details from FNOL.",
+            "tools_used": [
+              "extract_loss_details"
+            ]
+          },
+          {
+            "step": 2,
+            "description": "Classify claim as commercial property + business interruption.",
+            "tools_used": [
+              "classify_claim_type"
+            ]
+          },
+          {
+            "step": 3,
+            "description": "Validate property and BI coverage.",
+            "tools_used": [
+              "validate_policy_coverage"
+            ]
+          },
+          {
+            "step": 4,
+            "description": "Assess severity (large loss, BI exposure).",
+            "tools_used": [
+              "assess_claim_severity"
+            ]
+          },
+          {
+            "step": 5,
+            "description": "Create linked claims for property and BI.",
+            "tools_used": [
+              "create_claim_record"
+            ]
+          },
+          {
+            "step": 6,
+            "description": "Route to large loss unit and BI specialist.",
+            "tools_used": [
+              "route_to_adjuster"
+            ]
+          },
+          {
+            "step": 7,
+            "description": "Engage forensic accountant and engineer (via vendor dispatch).",
+            "tools_used": [
+              "trigger_emergency_services"
+            ]
+          },
+          {
+            "step": 8,
+            "description": "Send claim acknowledgment to insured with contact info for all parties.",
+            "tools_used": [
+              "send_claim_acknowledgment"
+            ]
+          },
+          {
+            "step": 9,
+            "description": "Signal successful intake.",
+            "tools_used": [
+              "SUCCESS"
+            ]
+          }
+        ],
+        "exit_conditions": {
+          "success": "Linked claims created, specialists engaged, insured notified.",
+          "escalation": "If coverage limits unclear or BI calculation complex, escalate to HUMAN_IN_THE_LOOP.",
+          "failure": "If claim creation or notification fails, use FAILED."
+        }
+      },
+      "reference": {
+        "test_case_id": "InsuranceClaimsIntakeAndTriageAgent_W8_TC1",
+        "title": "Complex Commercial Property Claim \u2013 Business Interruption, Large Loss",
+        "rationale": "Covers large commercial property claim with BI, triggers specialists and linked claims.",
+        "input_conditions": [
+          "claim_type = commercial_property",
+          "business_interruption = true",
+          "cause = fire",
+          "policy_status = active",
+          "coverage_confirmed = true"
+        ],
+        "expected_success_outcome": {
+          "final_status": "success",
+          "key_outputs": {
+            "claim_number": "2026-CP-7788",
+            "claim_status": "created",
+            "assigned_team": "Large loss unit",
+            "customer_acknowledgment_status": "sent"
+          }
+        },
+        "milestones": [
+          {
+            "step": 1,
+            "description": "Loss details extracted (fire, business interruption)",
+            "expected_state": {
+              "loss_details": "complete",
+              "cause": "fire"
+            }
+          },
+          {
+            "step": 2,
+            "description": "Claim classified as commercial property + BI",
+            "expected_state": {
+              "claim_type": "commercial_property",
+              "sub_type": "business_interruption"
+            }
+          },
+          {
+            "step": 3,
+            "description": "Property and BI coverage validated",
+            "expected_state": {
+              "coverage_confirmed": true,
+              "policy_status": "active"
+            }
+          },
+          {
+            "step": 4,
+            "description": "Severity assessed (large loss, BI exposure)",
+            "expected_state": {
+              "severity_level": "large_loss",
+              "flags": [
+                "BI"
+              ]
+            }
+          },
+          {
+            "step": 5,
+            "description": "Linked claims created for property and BI",
+            "expected_state": {
+              "claim_status": "created",
+              "linked_claims": [
+                "2026-CP-7788",
+                "2026-BI-7788"
+              ]
+            }
+          },
+          {
+            "step": 6,
+            "description": "Claim routed to large loss unit and BI specialist",
+            "expected_state": {
+              "assigned_team": "Large loss unit",
+              "assignment_status": "assigned"
+            }
+          },
+          {
+            "step": 7,
+            "description": "Forensic accountant and engineer dispatched",
+            "expected_state": {
+              "dispatch_status": "dispatched",
+              "emergency_type": "salvage"
+            }
+          },
+          {
+            "step": 8,
+            "description": "Claim acknowledgment sent to insured",
+            "expected_state": {
+              "delivery_status": "sent",
+              "message_type": "acknowledgment"
+            }
+          }
+        ],
+        "expected_tool_calls": [
+          "extract_loss_details",
+          "classify_claim_type",
+          "validate_policy_coverage",
+          "assess_claim_severity",
+          "create_claim_record",
+          "route_to_adjuster",
+          "trigger_emergency_services",
+          "send_claim_acknowledgment",
+          "SUCCESS"
+        ],
+        "scenario": {
+          "input_data": {
+            "source_text": "Fire in warehouse disrupted operations, lost inventory and halted business.",
+            "policy_number": "CP-445566",
+            "claim_type": "commercial_property",
+            "severity": "large_loss",
+            "business_interruption": true,
+            "policy_status": "active",
+            "coverage_confirmed": true,
+            "duplicate_claim_found": false,
+            "data_incomplete": false
+          }
+        }
+      },
+      "independent_review": {
+        "reviewer": null,
+        "necessary_steps_agreed": null,
+        "decision_notes": null,
+        "rank_or_tied_group": null,
+        "rationale": null
+      }
+    }
+  ],
+  "validation_plan": [
+    "Agree units for necessary actions and business decisions; separate generic failure handling and data quality.",
+    "Have independent reviewers rank A-F with ties allowed using the requirements, without tags or assistant recommendations. Capture reasons and disagreements.",
+    "Freeze candidate features and score rule, then evaluate on additional held-out tasks. Six selected cases only support initial content review.",
+    "If a scalar is required, agree normalization and weights before inspecting validation rankings. Compare feature-only baselines and a simple equal-weight candidate on the same held-out set. Report uncertainty and limitations; do not tune weights to these six tags."
+  ]
+}
